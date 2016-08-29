@@ -1,0 +1,186 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY i18n-kapplication "<application>Sieve Editor</application>">
+  <!ENTITY kappname "&i18n-kapplication;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE"> 
+]>
+
+<book id="sieveeditor" lang="&language;">
+
+<bookinfo id="sieveeditorinfo">
+
+<title>The &i18n-kapplication; Handbook</title>
+
+<authorgroup>
+<author>
+<personname>
+<firstname>Laurent</firstname>
+<surname>Montel</surname>
+</personname>
+<email>montel@kde.org</email>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<copyright>
+<year>2013</year>
+<holder>Laurent Montel</holder>
+</copyright>
+
+<legalnotice>&FDLNotice;</legalnotice>
+
+<date>2016-04-14</date>
+<releaseinfo>Applications 16.04</releaseinfo>
+
+<abstract>
+<para>
+&i18n-kapplication; is an editor for Sieve scripts used for email filtering on a mail server.
+</para>
+</abstract>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Sieve</keyword>
+</keywordset>
+</bookinfo>
+
+<!-- info + screenshots from http://www.aegiap.eu/kdeblog/2014/01/new-in-kdepim-4-13-sieveeditor/ -->
+
+<chapter id="introduction">
+<title>Introduction</title>
+<para>&i18n-kapplication; is an editor for
+<ulink url="https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)">Sieve</ulink>
+scripts used for email filtering on a mail server.</para>
+
+<sect1 id="using-kapp">
+<title>Using &i18n-kapplication;</title>
+
+<para>&i18n-kapplication; provides a &GUI; to perform these tasks:</para>
+
+<itemizedlist>
+<listitem><para>Manage your Sieve servers</para></listitem>
+<listitem><para>Upload, import and deactivate scripts, refresh the list with scripts</para></listitem>
+<listitem><para>Create and edit Sieve scripts</para></listitem>
+<listitem><para>Import and share scripts</para></listitem>
+<listitem><para>Check the script syntax, autogenerate and debug scripts</para></listitem>
+</itemizedlist>
+
+<para>&i18n-kapplication; can be used independent from Akonadi or &kmail;,
+you only need a mail server with support for Sieve scripts.</para>
+
+<para>In a &plasma-desktop; the passwords are stored in &kwallet5;</para>
+
+<sect2 id="first-start">
+<title>First Start</title>
+<para>At the first start of &i18n-kapplication; the server configuration dialog is displayed.</para>
+<screenshot>
+<screeninfo>Server Configuration</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="first-start.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Server Configuration</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+<para>In this dialog you can add, modify and remove your mails servers.</para>
+<para>Later you can use <menuchoice><guimenu>File</guimenu><guimenuitem>Add Server</guimenuitem></menuchoice>
+or the configuration dialog for these tasks.</para>
+<para>On the next start &i18n-kapplication; automatically fetches all available scripts from the servers.</para>
+</sect2>
+
+<sect2 id="script-edit">
+<title>Script Editing</title>
+<para>The editor supports autocompletion and syntax highlighting.</para>
+<screenshot>
+<screeninfo>Script Editing</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-edit.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Script Editing</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="script-tools">
+<title>Script Tools</title>
+
+<para>The actions in the <guimenu>Tools</guimenu> menu enable you to check the syntax of your scripts, autogenerate and debug scripts.</para>
+
+<screenshot>
+<screeninfo>Autogenerate scripts</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-tools.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Autogenerate scripts</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="script-help">
+<title>Integrated Help</title>
+
+<para>You can use the integrated help support and click with the &RMB; on a keyword of the Sieve language.
+Then the corresponding section of the documentation is downloaded from the Internet and displayed in the <guilabel>Help</guilabel> tab.</para>
+<screenshot>
+<screeninfo>Integrated Help</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-help.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Integrated Help</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+
+<title>Credits and License</title>
+
+<para>&i18n-kapplication;</para>
+<para>
+Program copyright 2013 &Laurent.Montel; &Laurent.Montel.mail;
+</para>
+<para>
+Documentation Copyright &copy; &Laurent.Montel; &Laurent.Montel.mail;
+</para>
+
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+
+&underFDL;               <!-- FDL: do not remove -->
+&underGPL;        	 <!-- GPL License -->
+</chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->
