@@ -37,8 +37,7 @@ ServerSieveSettingsDialog::ServerSieveSettingsDialog(QWidget *parent)
     lay->addWidget(mServerSieveSettings);
     lay->setMargin(0);
     w->setLayout(lay);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(w);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
