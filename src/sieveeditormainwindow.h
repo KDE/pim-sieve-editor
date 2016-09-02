@@ -62,6 +62,7 @@ private Q_SLOTS:
     void slotRedoAvailable(bool);
     void slotCopyAvailable(bool b);
     void slotOpenBookmarkUrl(const QUrl &url);
+    void slotImportImapSettings();
 private:
     void initStatusBar();
     void readConfig();

@@ -237,6 +237,14 @@ void SieveEditorMainWindow::setupActions()
     mPrintAction = KStandardAction::print(mMainWidget->sieveEditorMainWidget(), SLOT(slotPrint()), ac);
 
     mPrintPreviewAction = KStandardAction::printPreview(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotPrintPreview, ac);
+
+    act = ac->addAction(QStringLiteral("import_imap_settings"), this, SLOT(slotImportImapSettings()));
+    act->setText(i18n("Import IMAP Settings..."));
+}
+
+void SieveEditorMainWindow::slotImportImapSettings()
+{
+    //TODO open wizard
 }
 
 void SieveEditorMainWindow::slotRefreshList()
