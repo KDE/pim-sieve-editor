@@ -32,6 +32,7 @@ set(sieveeditor_SRCS
 set(sieveeditor_importimapsettings_SRCS
     importwizard/importimapsettingwizard.cpp
     importwizard/importimapsettingsearchpage.cpp
+    importwizard/importimapsettingnofoundpage.cpp
     )
 
 ki18n_wrap_ui(sieveeditor_SRCS
