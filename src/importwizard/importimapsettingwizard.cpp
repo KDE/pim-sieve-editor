@@ -19,11 +19,12 @@
 
 
 #include "importimapsettingwizard.h"
+#include <KLocalizedString>
 
 ImportImapSettingWizard::ImportImapSettingWizard(QWidget *parent)
     : KAssistantDialog(parent)
 {
-
+    setWindowTitle(i18n("Import IMAP Settings"));
 }
 
 ImportImapSettingWizard::~ImportImapSettingWizard()
