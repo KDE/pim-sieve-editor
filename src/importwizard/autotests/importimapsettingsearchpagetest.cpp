@@ -19,7 +19,10 @@
 
 
 #include "importimapsettingsearchpagetest.h"
+#include "../importimapsettingsearchpage.h"
 
+#include <QLabel>
+#include <QListWidget>
 #include <QTest>
 
 ImportImapSettingSearchPageTest::ImportImapSettingSearchPageTest(QObject *parent)
@@ -35,7 +38,13 @@ ImportImapSettingSearchPageTest::~ImportImapSettingSearchPageTest()
 
 void ImportImapSettingSearchPageTest::shouldHaveDefaultValue()
 {
+    ImportImapSettingSearchPage w;
+    QLabel *label = w.findChild<QLabel *>(QStringLiteral("label"));
+    QVERIFY(label);
+    QVERIFY(!label->text().isEmpty());
 
+    QListWidget *mFoundProgramList = w.findChild<QListWidget *>(QStringLiteral("foundprogramlist"));
+    QVERIFY(mFoundProgramList);
 }
 
 QTEST_MAIN(ImportImapSettingSearchPageTest)

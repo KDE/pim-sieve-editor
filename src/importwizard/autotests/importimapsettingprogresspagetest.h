@@ -17,28 +17,19 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "importimapsettingnofoundpagetest.h"
-#include "../importimapsettingnofoundpage.h"
-#include <QLabel>
-#include <QTest>
+#ifndef IMPORTIMAPSETTINGPROGRESSPAGETEST_H
+#define IMPORTIMAPSETTINGPROGRESSPAGETEST_H
 
-ImportImapSettingNoFoundPageTest::ImportImapSettingNoFoundPageTest(QObject *parent)
-    : QObject(parent)
+#include <QObject>
+
+class ImportImapSettingProgressPageTest : public QObject
 {
+    Q_OBJECT
+public:
+    explicit ImportImapSettingProgressPageTest(QObject *parent = Q_NULLPTR);
+    ~ImportImapSettingProgressPageTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
+};
 
-}
-
-ImportImapSettingNoFoundPageTest::~ImportImapSettingNoFoundPageTest()
-{
-
-}
-
-void ImportImapSettingNoFoundPageTest::shouldHaveDefaultValue()
-{
-    ImportImapSettingNoFoundPage w;
-    QLabel *lab = w.findChild<QLabel *>(QStringLiteral("label"));
-    QVERIFY(lab);
-    QVERIFY(!lab->text().isEmpty());
-}
-
-QTEST_MAIN(ImportImapSettingNoFoundPageTest)
+#endif // IMPORTIMAPSETTINGPROGRESSPAGETEST_H
