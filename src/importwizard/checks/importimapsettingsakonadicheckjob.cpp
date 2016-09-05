@@ -29,3 +29,8 @@ ImportImapSettingsAkonadiCheckJob::~ImportImapSettingsAkonadiCheckJob()
 {
 
 }
+
+void ImportImapSettingsAkonadiCheckJob::start()
+{
+    //TODO
+}

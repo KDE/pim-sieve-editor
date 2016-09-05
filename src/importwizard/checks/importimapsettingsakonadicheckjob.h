@@ -28,6 +28,8 @@ class ImportImapSettingsAkonadiCheckJob : public QObject
 public:
     explicit ImportImapSettingsAkonadiCheckJob(QObject *parent = Q_NULLPTR);
     ~ImportImapSettingsAkonadiCheckJob();
+
+    void start();
 };
 
 #endif // IMPORTIMAPSETTINGSAKONADICHECKJOB_H
