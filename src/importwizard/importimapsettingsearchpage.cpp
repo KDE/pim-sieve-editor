@@ -42,3 +42,8 @@ ImportImapSettingSearchPage::~ImportImapSettingSearchPage()
 {
 
 }
+
+void ImportImapSettingSearchPage::setProgramList(const QStringList &lst)
+{
+    //TODO
+}

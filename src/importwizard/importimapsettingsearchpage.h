@@ -31,6 +31,8 @@ public:
     ImportImapSettingSearchPage(QWidget *parent = Q_NULLPTR);
     ~ImportImapSettingSearchPage();
 
+    void setProgramList(const QStringList &lst);
+
 private:
     QListWidget *mFoundProgramList;
 };
