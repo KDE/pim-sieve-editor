@@ -22,6 +22,7 @@
 #define IMPORTIMAPSETTINGSEARCHPAGE_H
 
 #include <QWidget>
+class QListWidget;
 
 class ImportImapSettingSearchPage : public QWidget
 {
@@ -29,6 +30,9 @@ class ImportImapSettingSearchPage : public QWidget
 public:
     ImportImapSettingSearchPage(QWidget *parent = Q_NULLPTR);
     ~ImportImapSettingSearchPage();
+
+private:
+    QListWidget *mFoundProgramList;
 };
 
 #endif // IMPORTIMAPSETTINGSEARCHPAGE_H

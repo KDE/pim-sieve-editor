@@ -20,10 +20,22 @@
 
 #include "importimapsettingsearchpage.h"
 
+#include <QLabel>
+#include <QListWidget>
+#include <QVBoxLayout>
+#include <KLocalizedString>
+
 ImportImapSettingSearchPage::ImportImapSettingSearchPage(QWidget *parent)
     : QWidget(parent)
 {
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    QLabel *label = new QLabel(i18n("Please select the program from which you like to import IMAP Settings:"), this);
+    label->setObjectName(QStringLiteral("label"));
+    mainLayout->addWidget(label);
 
+    mFoundProgramList = new QListWidget(this);
+    mFoundProgramList->setObjectName(QStringLiteral("foundprogramlist"));
+    mainLayout->addWidget(mFoundProgramList);
 }
 
 ImportImapSettingSearchPage::~ImportImapSettingSearchPage()

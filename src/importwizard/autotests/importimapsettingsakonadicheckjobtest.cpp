@@ -17,25 +17,19 @@
    Boston, MA 02110-1301, USA.
 */
 
-
-#include "importimapsettingsearchpagetest.h"
+#include "importimapsettingsakonadicheckjobtest.h"
 
 #include <QTest>
 
-ImportImapSettingSearchPageTest::ImportImapSettingSearchPageTest(QObject *parent)
+ImportImapSettingsAkonadiCheckJobTest::ImportImapSettingsAkonadiCheckJobTest(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-ImportImapSettingSearchPageTest::~ImportImapSettingSearchPageTest()
+ImportImapSettingsAkonadiCheckJobTest::~ImportImapSettingsAkonadiCheckJobTest()
 {
 
 }
 
-void ImportImapSettingSearchPageTest::shouldHaveDefaultValue()
-{
-
-}
-
-QTEST_MAIN(ImportImapSettingSearchPageTest)
+QTEST_MAIN(ImportImapSettingsAkonadiCheckJobTest)

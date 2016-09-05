@@ -35,6 +35,10 @@ set(sieveeditor_importimapsettings_SRCS
     importwizard/importimapsettingnofoundpage.cpp
     )
 
+set(sieveeditor_importimapsettings_check_SRCS
+    importwizard/checks/importimapsettingsakonadicheckjob.cpp
+    )
+
 ki18n_wrap_ui(sieveeditor_SRCS
     ui/serversievesettings.ui
     ui/sieveeditorconfigureserverwidget.ui
@@ -44,7 +48,11 @@ qt5_add_resources(sieveeditor_SRCS sieveeditor.qrc)
 
 ecm_qt_declare_logging_category(sieveeditor_SRCS HEADER sieveeditor_debug.h IDENTIFIER SIEVEEDITOR_LOG CATEGORY_NAME log_sieveeditor)
 
-add_executable(sieveeditor ${sieveeditor_SRCS} ${sieveeditor_importimapsettings_SRCS})
+add_executable(sieveeditor ${sieveeditor_SRCS} 
+                           ${sieveeditor_importimapsettings_SRCS}
+                           ${sieveeditor_importimapsettings_check_SRCS}
+)
+
 target_link_libraries(sieveeditor
     KF5::MailTransport
     KF5::Bookmarks

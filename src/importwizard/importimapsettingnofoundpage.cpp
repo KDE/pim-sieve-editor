@@ -19,11 +19,17 @@
 
 
 #include "importimapsettingnofoundpage.h"
+#include <QVBoxLayout>
+#include <QLabel>
+#include <KLocalizedString>
 
 ImportImapSettingNoFoundPage::ImportImapSettingNoFoundPage(QWidget *parent)
     : QWidget(parent)
 {
-
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    QLabel *lab = new QLabel(i18n("No Settings found to import"));
+    lab->setObjectName(QStringLiteral("label"));
+    mainLayout->addWidget(lab);
 }
 
 ImportImapSettingNoFoundPage::~ImportImapSettingNoFoundPage()

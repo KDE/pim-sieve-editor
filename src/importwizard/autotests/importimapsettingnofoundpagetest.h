@@ -17,25 +17,19 @@
    Boston, MA 02110-1301, USA.
 */
 
+#ifndef IMPORTIMAPSETTINGNOFOUNDPAGETEST_H
+#define IMPORTIMAPSETTINGNOFOUNDPAGETEST_H
 
-#include "importimapsettingsearchpagetest.h"
+#include <QObject>
 
-#include <QTest>
-
-ImportImapSettingSearchPageTest::ImportImapSettingSearchPageTest(QObject *parent)
-    : QObject(parent)
+class ImportImapSettingNoFoundPageTest : public QObject
 {
+    Q_OBJECT
+public:
+    explicit ImportImapSettingNoFoundPageTest(QObject *parent = Q_NULLPTR);
+    ~ImportImapSettingNoFoundPageTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
+};
 
-}
-
-ImportImapSettingSearchPageTest::~ImportImapSettingSearchPageTest()
-{
-
-}
-
-void ImportImapSettingSearchPageTest::shouldHaveDefaultValue()
-{
-
-}
-
-QTEST_MAIN(ImportImapSettingSearchPageTest)
+#endif // IMPORTIMAPSETTINGNOFOUNDPAGETEST_H
