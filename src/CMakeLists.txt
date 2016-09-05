@@ -60,3 +60,6 @@ add_subdirectory(kconf_update)
 
 install(FILES settings/sieveeditorglobalconfig.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 
+if (BUILD_TESTING)
+   add_subdirectory(importwizard/autotests)
+endif()
