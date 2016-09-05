@@ -30,6 +30,9 @@ public:
     ~ImportImapSettingsAkonadiCheckJob();
 
     void start();
+
+    bool settingsCanBeImported() const;
+
 };
 
 #endif // IMPORTIMAPSETTINGSAKONADICHECKJOB_H

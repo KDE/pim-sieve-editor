@@ -34,3 +34,8 @@ void ImportImapSettingsAkonadiCheckJob::start()
 {
     //TODO
 }
+
+bool ImportImapSettingsAkonadiCheckJob::settingsCanBeImported() const
+{
+    return false;
+}
