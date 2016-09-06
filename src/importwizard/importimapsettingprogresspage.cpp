@@ -18,6 +18,8 @@
 */
 
 #include "importimapsettingprogresspage.h"
+#include <QVBoxLayout>
+#include <KLocalizedString>
 
 ImportImapSettingProgressPage::ImportImapSettingProgressPage(QWidget *parent)
     : QWidget(parent)
