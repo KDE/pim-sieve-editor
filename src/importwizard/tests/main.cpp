@@ -18,10 +18,13 @@
 */
 
 #include <QApplication>
+#include "../importimapsettingwizard.h"
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
+    ImportImapSettingWizard wizard;
+    wizard.exec();
     return app.exec();
 }
 
