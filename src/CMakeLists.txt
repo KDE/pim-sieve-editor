@@ -34,6 +34,7 @@ set(sieveeditor_importimapsettings_SRCS
     importwizard/importimapsettingsearchpage.cpp
     importwizard/importimapsettingnofoundpage.cpp
     importwizard/importimapsettingprogresspage.cpp
+    importwizard/importimapsettingfinishpage.cpp
     )
 
 set(sieveeditor_importimapsettings_check_SRCS
