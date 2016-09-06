@@ -30,15 +30,15 @@ set(sieveeditor_SRCS
     )
 
 set(sieveeditor_importimapsettings_SRCS
-    importwizard/importimapsettingwizard.cpp
-    importwizard/importimapsettingsearchpage.cpp
-    importwizard/importimapsettingnofoundpage.cpp
-    importwizard/importimapsettingprogresspage.cpp
-    importwizard/importimapsettingfinishpage.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/importimapsettingwizard.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/importimapsettingsearchpage.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/importimapsettingnofoundpage.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/importimapsettingprogresspage.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/importimapsettingfinishpage.cpp
     )
 
 set(sieveeditor_importimapsettings_check_SRCS
-    importwizard/checks/importimapsettingsakonadicheckjob.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/checks/importimapsettingsakonadicheckjob.cpp
     )
 
 ki18n_wrap_ui(sieveeditor_SRCS
