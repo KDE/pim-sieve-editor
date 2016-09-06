@@ -28,6 +28,8 @@ class ImportImapSettingFinishPageTest : public QObject
 public:
     explicit ImportImapSettingFinishPageTest(QObject *parent = Q_NULLPTR);
     ~ImportImapSettingFinishPageTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // IMPORTIMAPSETTINGFINISHPAGETEST_H

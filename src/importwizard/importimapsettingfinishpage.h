@@ -21,13 +21,18 @@
 #define IMPORTIMAPSETTINGFINISHPAGE_H
 
 #include <QWidget>
-
+class QTextEdit;
 class ImportImapSettingFinishPage : public QWidget
 {
     Q_OBJECT
 public:
     explicit ImportImapSettingFinishPage(QWidget *parent = Q_NULLPTR);
     ~ImportImapSettingFinishPage();
+
+    void setImportResult(const QString &result);
+
+private:
+    QTextEdit *mTextEdit;
 };
 
 #endif // IMPORTIMAPSETTINGFINISHPAGE_H

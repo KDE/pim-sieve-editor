@@ -18,8 +18,11 @@
 */
 
 #include "importimapsettingfinishpagetest.h"
+#include "../importimapsettingfinishpage.h"
 
+#include <QLabel>
 #include <QTest>
+#include <QTextEdit>
 
 ImportImapSettingFinishPageTest::ImportImapSettingFinishPageTest(QObject *parent)
     : QObject(parent)
@@ -30,6 +33,19 @@ ImportImapSettingFinishPageTest::ImportImapSettingFinishPageTest(QObject *parent
 ImportImapSettingFinishPageTest::~ImportImapSettingFinishPageTest()
 {
 
+}
+
+void ImportImapSettingFinishPageTest::shouldHaveDefaultValue()
+{
+    ImportImapSettingFinishPage w;
+    QLabel *label = w.findChild<QLabel *>(QStringLiteral("label"));
+    QVERIFY(label);
+    QVERIFY(!label->text().isEmpty());
+
+    QTextEdit *mTextEdit = w.findChild<QTextEdit *>(QStringLiteral("textedit"));
+    QVERIFY(mTextEdit);
+    QVERIFY(mTextEdit->isReadOnly());
+    QVERIFY(mTextEdit->document()->isEmpty());
 }
 
 QTEST_MAIN(ImportImapSettingFinishPageTest)

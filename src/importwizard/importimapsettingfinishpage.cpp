@@ -20,15 +20,31 @@
 #include "importimapsettingfinishpage.h"
 #include <QVBoxLayout>
 #include <KLocalizedString>
+#include <QTextEdit>
+#include <QLabel>
 
 
 ImportImapSettingFinishPage::ImportImapSettingFinishPage(QWidget *parent)
     : QWidget(parent)
 {
+    QVBoxLayout *layout = new QVBoxLayout(this);
 
+    QLabel *label = new QLabel(i18n("IMAP settings were imported:"), this);
+    label->setObjectName(QStringLiteral("label"));
+    layout->addWidget(label);
+
+    mTextEdit = new QTextEdit(this);
+    mTextEdit->setObjectName(QStringLiteral("textedit"));
+    mTextEdit->setReadOnly(true);
+    layout->addWidget(mTextEdit);
 }
 
 ImportImapSettingFinishPage::~ImportImapSettingFinishPage()
 {
 
+}
+
+void ImportImapSettingFinishPage::setImportResult(const QString &result)
+{
+    //TODO
 }
