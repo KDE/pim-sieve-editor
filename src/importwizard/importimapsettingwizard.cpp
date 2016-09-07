@@ -19,15 +19,62 @@
 
 
 #include "importimapsettingwizard.h"
+#include "importimapsettingsearchpage.h"
+#include "importimapsettingnofoundpage.h"
+#include "importimapsettingfinishpage.h"
+#include "importimapsettingprogresspage.h"
 #include <KLocalizedString>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 ImportImapSettingWizard::ImportImapSettingWizard(QWidget *parent)
     : KAssistantDialog(parent)
 {
     setWindowTitle(i18n("Import IMAP Settings"));
+
+    mSearchPage = new ImportImapSettingSearchPage(this);
+    mSearchPageItem = new KPageWidgetItem(mSearchPage, i18n("Select Import Settings"));
+    addPage(mSearchPageItem);
+
+
+    mNoFoundPage = new ImportImapSettingNoFoundPage(this);
+    mNoFoundPageItem = new KPageWidgetItem(mNoFoundPage, i18n("No IMAP Settings Found."));
+    addPage(mNoFoundPageItem);
+
+    mProgressPage = new ImportImapSettingProgressPage(this);
+    mProgressPageItem = new KPageWidgetItem(mProgressPage, i18n("Import in Progress..."));
+    addPage(mProgressPageItem);
+
+    mFinishPage = new ImportImapSettingFinishPage(this);
+    mFinishPageItem = new KPageWidgetItem(mFinishPage, i18n("Finish"));
+    addPage(mFinishPageItem);
+
+    readConfig();
 }
 
 ImportImapSettingWizard::~ImportImapSettingWizard()
 {
-
+    writeConfig();
 }
+
+void ImportImapSettingWizard::next()
+{
+    KAssistantDialog::next();
+}
+
+void ImportImapSettingWizard::readConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "SieveEditorConfigureDialog");
+    const QSize size = group.readEntry("Size", QSize(600, 400));
+    if (size.isValid()) {
+        resize(size);
+    }
+}
+
+void ImportImapSettingWizard::writeConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "SieveEditorConfigureDialog");
+    group.writeEntry("Size", size());
+    group.sync();
+}
+

@@ -24,13 +24,35 @@
 #include <KAssistantDialog>
 
 
-
+class ImportImapSettingSearchPage;
+class ImportImapSettingNoFoundPage;
+class ImportImapSettingProgressPage;
+class ImportImapSettingFinishPage;
+class KPageWidgetItem;
 class ImportImapSettingWizard : public KAssistantDialog
 {
     Q_OBJECT
 public:
     explicit ImportImapSettingWizard(QWidget *parent = Q_NULLPTR);
     ~ImportImapSettingWizard();
+
+    void next() Q_DECL_OVERRIDE;
+
+private:
+    void readConfig();
+    void writeConfig();
+
+    ImportImapSettingSearchPage *mSearchPage;
+    KPageWidgetItem *mSearchPageItem;
+
+    ImportImapSettingNoFoundPage *mNoFoundPage;
+    KPageWidgetItem *mNoFoundPageItem;
+
+    ImportImapSettingProgressPage *mProgressPage;
+    KPageWidgetItem *mProgressPageItem;
+
+    ImportImapSettingFinishPage *mFinishPage;
+    KPageWidgetItem *mFinishPageItem;
 };
 
 #endif // IMPORTIMAPSETTINGWIZARD_H
