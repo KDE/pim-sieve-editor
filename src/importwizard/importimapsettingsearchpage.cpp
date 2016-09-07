@@ -45,5 +45,10 @@ ImportImapSettingSearchPage::~ImportImapSettingSearchPage()
 
 void ImportImapSettingSearchPage::setProgramList(const QStringList &lst)
 {
+    Q_FOREACH(const QString &prog, lst) {
+        //TODO
+    }
+
+    mFoundProgramList->addItems(lst);
     //TODO
 }
