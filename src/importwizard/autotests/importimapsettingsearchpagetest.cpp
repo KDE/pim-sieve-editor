@@ -45,6 +45,7 @@ void ImportImapSettingSearchPageTest::shouldHaveDefaultValue()
 
     QListWidget *mFoundProgramList = w.findChild<QListWidget *>(QStringLiteral("foundprogramlist"));
     QVERIFY(mFoundProgramList);
+    QCOMPARE(mFoundProgramList->count(), 0);
 }
 
 QTEST_MAIN(ImportImapSettingSearchPageTest)

@@ -46,9 +46,7 @@ ImportImapSettingSearchPage::~ImportImapSettingSearchPage()
 void ImportImapSettingSearchPage::setProgramList(const QStringList &lst)
 {
     Q_FOREACH(const QString &prog, lst) {
-        //TODO
+        QListWidgetItem *item = new QListWidgetItem(prog, mFoundProgramList);
+        item->setFlags(item->flags() &~ Qt::ItemIsUserCheckable);
     }
-
-    mFoundProgramList->addItems(lst);
-    //TODO
 }

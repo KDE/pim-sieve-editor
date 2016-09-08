@@ -35,6 +35,7 @@ ImportImapSettingProgressPageTest::~ImportImapSettingProgressPageTest()
 
 void ImportImapSettingProgressPageTest::shouldHaveDefaultValue()
 {
+    ImportImapSettingProgressPage w;
     //TODO
 }
 
