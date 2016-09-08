@@ -32,7 +32,7 @@ public:
     void start();
 
     bool settingsCanBeImported() const;
-
+    QString name() const;
 };
 
 #endif // IMPORTIMAPSETTINGSAKONADICHECKJOB_H

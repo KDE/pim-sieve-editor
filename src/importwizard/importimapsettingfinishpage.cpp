@@ -46,5 +46,7 @@ ImportImapSettingFinishPage::~ImportImapSettingFinishPage()
 
 void ImportImapSettingFinishPage::setImportResult(const QString &result)
 {
+    //Use Html ?
+    mTextEdit->setPlainText(result);
     //TODO
 }

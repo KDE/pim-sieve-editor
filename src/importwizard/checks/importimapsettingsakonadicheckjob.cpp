@@ -18,6 +18,7 @@
 */
 
 #include "importimapsettingsakonadicheckjob.h"
+#include <KLocalizedString>
 
 ImportImapSettingsAkonadiCheckJob::ImportImapSettingsAkonadiCheckJob(QObject *parent)
     : QObject(parent)
@@ -38,4 +39,9 @@ void ImportImapSettingsAkonadiCheckJob::start()
 bool ImportImapSettingsAkonadiCheckJob::settingsCanBeImported() const
 {
     return false;
+}
+
+QString ImportImapSettingsAkonadiCheckJob::name() const
+{
+    return i18n("Akonadi IMAP Settings");
 }
