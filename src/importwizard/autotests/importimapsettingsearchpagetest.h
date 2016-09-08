@@ -31,6 +31,7 @@ public:
     ~ImportImapSettingSearchPageTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldAddCheckPrograms();
 };
 
 #endif // IMPORTIMAPSETTINGSEARCHPAGETEST_H

@@ -48,4 +48,15 @@ void ImportImapSettingSearchPageTest::shouldHaveDefaultValue()
     QCOMPARE(mFoundProgramList->count(), 0);
 }
 
+void ImportImapSettingSearchPageTest::shouldAddCheckPrograms()
+{
+    ImportImapSettingSearchPage w;
+    const QStringList lst { QStringLiteral("foo"), QStringLiteral("bla"), QStringLiteral("do") };
+
+    w.setProgramList(lst);
+    QListWidget *mFoundProgramList = w.findChild<QListWidget *>(QStringLiteral("foundprogramlist"));
+    QCOMPARE(mFoundProgramList->count(), lst.count());
+
+}
+
 QTEST_MAIN(ImportImapSettingSearchPageTest)
