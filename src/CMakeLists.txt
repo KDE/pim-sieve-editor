@@ -48,7 +48,7 @@ ki18n_wrap_ui(sieveeditor_SRCS
 
 qt5_add_resources(sieveeditor_SRCS sieveeditor.qrc)
 
-ecm_qt_declare_logging_category(sieveeditor_SRCS HEADER sieveeditor_debug.h IDENTIFIER SIEVEEDITOR_LOG CATEGORY_NAME log_sieveeditor)
+ecm_qt_declare_logging_category(sieveeditor_SRCS HEADER sieveeditor_debug.h IDENTIFIER SIEVEEDITOR_LOG CATEGORY_NAME org.kde.pim.sieveeditor)
 
 add_executable(sieveeditor ${sieveeditor_SRCS} 
                            ${sieveeditor_importimapsettings_SRCS}
