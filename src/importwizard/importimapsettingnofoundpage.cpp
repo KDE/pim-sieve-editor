@@ -27,7 +27,7 @@ ImportImapSettingNoFoundPage::ImportImapSettingNoFoundPage(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    QLabel *lab = new QLabel(i18n("No settings found to import"));
+    QLabel *lab = new QLabel(i18n("No settings found to import."));
     lab->setObjectName(QStringLiteral("label"));
     mainLayout->addWidget(lab);
 }
