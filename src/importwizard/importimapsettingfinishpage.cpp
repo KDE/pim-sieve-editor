@@ -35,6 +35,7 @@ ImportImapSettingFinishPage::ImportImapSettingFinishPage(QWidget *parent)
 
     mTextEdit = new QTextEdit(this);
     mTextEdit->setObjectName(QStringLiteral("textedit"));
+    mTextEdit->setAcceptRichText(true);
     mTextEdit->setReadOnly(true);
     layout->addWidget(mTextEdit);
 }
@@ -46,7 +47,5 @@ ImportImapSettingFinishPage::~ImportImapSettingFinishPage()
 
 void ImportImapSettingFinishPage::setImportResult(const QString &result)
 {
-    //Use Html ?
     mTextEdit->setPlainText(result);
-    //TODO
 }

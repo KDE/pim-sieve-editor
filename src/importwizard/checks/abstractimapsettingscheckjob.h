@@ -17,32 +17,17 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "importimapsettingsakonadicheckjob.h"
-#include <KLocalizedString>
+#ifndef ABSTRACTIMAPSETTINGSCHECKJOB_H
+#define ABSTRACTIMAPSETTINGSCHECKJOB_H
 
-ImportImapSettingsAkonadiCheckJob::ImportImapSettingsAkonadiCheckJob(QObject *parent)
-    : QObject(parent)
+#include <QObject>
+
+class AbstractImapSettingsCheckJob : public QObject
 {
+    Q_OBJECT
+public:
+    explicit AbstractImapSettingsCheckJob(QObject *parent = Q_NULLPTR);
+    ~AbstractImapSettingsCheckJob();
+};
 
-}
-
-ImportImapSettingsAkonadiCheckJob::~ImportImapSettingsAkonadiCheckJob()
-{
-
-}
-
-void ImportImapSettingsAkonadiCheckJob::start()
-{
-    //TODO
-}
-
-bool ImportImapSettingsAkonadiCheckJob::settingsCanBeImported() const
-{
-    //TODO look at if we have imap akonadi account
-    return false;
-}
-
-QString ImportImapSettingsAkonadiCheckJob::name() const
-{
-    return i18n("Akonadi IMAP Settings");
-}
+#endif // ABSTRACTIMAPSETTINGSCHECKJOB_H
