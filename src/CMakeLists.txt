@@ -39,6 +39,8 @@ set(sieveeditor_importimapsettings_SRCS
 
 set(sieveeditor_importimapsettings_check_SRCS
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/checks/importimapsettingsakonadicheckjob.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/checks/abstractimapsettingscheckjob.cpp
     )
 
 ki18n_wrap_ui(sieveeditor_SRCS
