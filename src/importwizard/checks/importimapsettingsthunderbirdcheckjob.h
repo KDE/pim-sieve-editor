@@ -28,6 +28,10 @@ class ImportImapSettingsThunderbirdCheckJob : public AbstractImapSettingsCheckJo
 public:
     explicit ImportImapSettingsThunderbirdCheckJob(QObject *parent = Q_NULLPTR);
     ~ImportImapSettingsThunderbirdCheckJob();
+
+    void start() Q_DECL_OVERRIDE;
+    bool settingsCanBeImported() const Q_DECL_OVERRIDE;
+    QString name() const Q_DECL_OVERRIDE;
 };
 
 #endif // IMPORTIMAPSETTINGSTHUNDERBIRDCHECKJOB_H

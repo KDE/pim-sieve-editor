@@ -29,3 +29,18 @@ ImportImapSettingsThunderbirdCheckJob::~ImportImapSettingsThunderbirdCheckJob()
 {
 
 }
+
+
+void ImportImapSettingsThunderbirdCheckJob::start()
+{
+}
+
+bool ImportImapSettingsThunderbirdCheckJob::settingsCanBeImported() const
+{
+    return false;
+}
+
+QString ImportImapSettingsThunderbirdCheckJob::name() const
+{
+    return {};
+}

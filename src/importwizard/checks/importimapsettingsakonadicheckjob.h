@@ -29,10 +29,10 @@ public:
     explicit ImportImapSettingsAkonadiCheckJob(QObject *parent = Q_NULLPTR);
     ~ImportImapSettingsAkonadiCheckJob();
 
-    void start();
+    void start() Q_DECL_OVERRIDE;
 
-    bool settingsCanBeImported() const;
-    QString name() const;
+    bool settingsCanBeImported() const Q_DECL_OVERRIDE;
+    QString name() const Q_DECL_OVERRIDE;
 };
 
 #endif // IMPORTIMAPSETTINGSAKONADICHECKJOB_H

@@ -28,6 +28,10 @@ class AbstractImapSettingsCheckJob : public QObject
 public:
     explicit AbstractImapSettingsCheckJob(QObject *parent = Q_NULLPTR);
     ~AbstractImapSettingsCheckJob();
+    virtual void start() = 0;
+
+    virtual bool settingsCanBeImported() const = 0;
+    virtual QString name() const = 0;
 };
 
 #endif // ABSTRACTIMAPSETTINGSCHECKJOB_H
