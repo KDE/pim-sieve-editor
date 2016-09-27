@@ -20,9 +20,9 @@
 #ifndef IMPORTIMAPSETTINGSAKONADICHECKJOB_H
 #define IMPORTIMAPSETTINGSAKONADICHECKJOB_H
 
-#include <QObject>
+#include "abstractimapsettingscheckjob.h"
 
-class ImportImapSettingsAkonadiCheckJob : public QObject
+class ImportImapSettingsAkonadiCheckJob : public AbstractImapSettingsCheckJob
 {
     Q_OBJECT
 public:

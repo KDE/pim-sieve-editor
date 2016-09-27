@@ -11,6 +11,6 @@ endmacro()
 
 add_sieveeditor_importwizard_unittest(importimapsettingsearchpagetest.cpp "../importimapsettingsearchpage.cpp")
 add_sieveeditor_importwizard_unittest(importimapsettingnofoundpagetest.cpp "../importimapsettingnofoundpage.cpp")
-add_sieveeditor_importwizard_unittest(importimapsettingsakonadicheckjobtest.cpp "../checks/importimapsettingsakonadicheckjob.cpp")
+add_sieveeditor_importwizard_unittest(importimapsettingsakonadicheckjobtest.cpp "../checks/importimapsettingsakonadicheckjob.cpp;../checks/abstractimapsettingscheckjob.cpp")
 add_sieveeditor_importwizard_unittest(importimapsettingprogresspagetest.cpp "../importimapsettingprogresspage.cpp")
 add_sieveeditor_importwizard_unittest(importimapsettingfinishpagetest.cpp "../importimapsettingfinishpage.cpp")

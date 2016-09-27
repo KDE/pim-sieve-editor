@@ -21,7 +21,7 @@
 #include <KLocalizedString>
 
 ImportImapSettingsAkonadiCheckJob::ImportImapSettingsAkonadiCheckJob(QObject *parent)
-    : QObject(parent)
+    : AbstractImapSettingsCheckJob(parent)
 {
 
 }

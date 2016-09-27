@@ -20,9 +20,9 @@
 #ifndef IMPORTIMAPSETTINGSTHUNDERBIRDCHECKJOB_H
 #define IMPORTIMAPSETTINGSTHUNDERBIRDCHECKJOB_H
 
-#include <QObject>
+#include "abstractimapsettingscheckjob.h"
 
-class ImportImapSettingsThunderbirdCheckJob : public QObject
+class ImportImapSettingsThunderbirdCheckJob : public AbstractImapSettingsCheckJob
 {
     Q_OBJECT
 public:

@@ -20,7 +20,7 @@
 #include "importimapsettingsthunderbirdcheckjob.h"
 
 ImportImapSettingsThunderbirdCheckJob::ImportImapSettingsThunderbirdCheckJob(QObject *parent)
-    : QObject(parent)
+    : AbstractImapSettingsCheckJob(parent)
 {
 
 }
