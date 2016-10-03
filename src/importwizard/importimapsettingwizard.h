@@ -29,6 +29,7 @@ class ImportImapSettingNoFoundPage;
 class ImportImapSettingProgressPage;
 class ImportImapSettingFinishPage;
 class KPageWidgetItem;
+class AbstractImapSettingsCheckJob;
 class ImportImapSettingWizard : public KAssistantDialog
 {
     Q_OBJECT
@@ -42,6 +43,7 @@ private:
     void readConfig();
     void writeConfig();
     void initializeWizard();
+    QList<AbstractImapSettingsCheckJob *> mListCheckJob;
 
     ImportImapSettingSearchPage *mSearchPage;
     KPageWidgetItem *mSearchPageItem;

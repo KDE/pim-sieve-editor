@@ -23,6 +23,9 @@
 #include "importimapsettingnofoundpage.h"
 #include "importimapsettingfinishpage.h"
 #include "importimapsettingprogresspage.h"
+#include "checks/importimapsettingsakonadicheckjob.h"
+#include "checks/importimapsettingsthunderbirdcheckjob.h"
+
 #include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -60,7 +63,12 @@ ImportImapSettingWizard::~ImportImapSettingWizard()
 
 void ImportImapSettingWizard::initializeWizard()
 {
+    mListCheckJob.append(new ImportImapSettingsThunderbirdCheckJob(this));
+    mListCheckJob.append(new ImportImapSettingsAkonadiCheckJob(this));
 
+    Q_FOREACH (AbstractImapSettingsCheckJob *job, mListCheckJob) {
+        //TODO
+    }
 }
 
 void ImportImapSettingWizard::next()
