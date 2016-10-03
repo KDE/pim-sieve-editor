@@ -18,6 +18,7 @@
 */
 
 #include "importimapsettingsthunderbirdcheckjob.h"
+#include <KLocalizedString>
 
 ImportImapSettingsThunderbirdCheckJob::ImportImapSettingsThunderbirdCheckJob(QObject *parent)
     : AbstractImapSettingsCheckJob(parent)
@@ -42,5 +43,5 @@ bool ImportImapSettingsThunderbirdCheckJob::settingsCanBeImported() const
 
 QString ImportImapSettingsThunderbirdCheckJob::name() const
 {
-    return {};
+    return i18n("Thunderbird IMAP Settings");
 }
