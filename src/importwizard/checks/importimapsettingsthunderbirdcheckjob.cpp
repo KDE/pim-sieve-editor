@@ -38,6 +38,7 @@ void ImportImapSettingsThunderbirdCheckJob::start()
 
 bool ImportImapSettingsThunderbirdCheckJob::settingsCanBeImported() const
 {
+    //TODO verify
     return false;
 }
 

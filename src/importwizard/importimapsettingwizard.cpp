@@ -50,11 +50,17 @@ ImportImapSettingWizard::ImportImapSettingWizard(QWidget *parent)
     addPage(mFinishPageItem);
 
     readConfig();
+    initializeWizard();
 }
 
 ImportImapSettingWizard::~ImportImapSettingWizard()
 {
     writeConfig();
+}
+
+void ImportImapSettingWizard::initializeWizard()
+{
+
 }
 
 void ImportImapSettingWizard::next()

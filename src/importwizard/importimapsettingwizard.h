@@ -41,6 +41,7 @@ public:
 private:
     void readConfig();
     void writeConfig();
+    void initializeWizard();
 
     ImportImapSettingSearchPage *mSearchPage;
     KPageWidgetItem *mSearchPageItem;
