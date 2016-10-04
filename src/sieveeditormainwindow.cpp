@@ -125,17 +125,20 @@ void SieveEditorMainWindow::setupActions()
     mUploadScript->setText(i18n("Upload"));
     mUploadScript->setEnabled(false);
 
-    QAction *act = ac->addAction(QStringLiteral("add_server_sieve"), this, SLOT(slotAddServerSieve()));
-    act->setText(i18n("Add Sieve Server..."));
+    QAction *act = new QAction(i18n("Add Sieve Server..."), this);
+    connect(act, &QAction::triggered, this, &SieveEditorMainWindow::slotAddServerSieve);
+    ac->addAction(QStringLiteral("add_server_sieve"), act);
 
-    mDeleteScript = ac->addAction(QStringLiteral("delete_script"), this, SLOT(slotDeleteScript()));
-    mDeleteScript->setText(i18n("Delete Script"));
+    mDeleteScript = new QAction(i18n("Delete Script"), this);
+    connect(mDeleteScript, &QAction::triggered, this, &SieveEditorMainWindow::slotDeleteScript);
+    ac->addAction(QStringLiteral("delete_script"), mDeleteScript);
     ac->setDefaultShortcut(mDeleteScript, QKeySequence(Qt::Key_Delete));
     mDeleteScript->setEnabled(false);
 
-    mNewScript = ac->addAction(QStringLiteral("create_new_script"), this, SLOT(slotCreateNewScript()));
+    mNewScript = new QAction(i18n("Create New Script..."), this);
+    connect(mNewScript, &QAction::triggered, this, &SieveEditorMainWindow::slotCreateNewScript);
+    ac->addAction(QStringLiteral("create_new_script"), mNewScript);
     ac->setDefaultShortcut(mNewScript, QKeySequence(Qt::CTRL + Qt::Key_N));
-    mNewScript->setText(i18n("Create New Script..."));
     mNewScript->setEnabled(false);
 
     mEditScript = ac->addAction(QStringLiteral("edit_script"), this, SLOT(slotEditScript()));
@@ -234,7 +237,7 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("wordwrap"), mWrapTextAction);
     connect(mWrapTextAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotWordWrap);
 
-    mPrintAction = KStandardAction::print(mMainWidget->sieveEditorMainWidget(), SLOT(slotPrint()), ac);
+    mPrintAction = KStandardAction::print(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotPrint, ac);
 
     mPrintPreviewAction = KStandardAction::printPreview(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotPrintPreview, ac);
 
