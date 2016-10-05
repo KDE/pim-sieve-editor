@@ -66,8 +66,25 @@ void ImportImapSettingWizard::initializeWizard()
     mListCheckJob.append(new ImportImapSettingsThunderbirdCheckJob(this));
     mListCheckJob.append(new ImportImapSettingsAkonadiCheckJob(this));
 
+    bool hasSettingToImport = false;
     Q_FOREACH (AbstractImapSettingsCheckJob *job, mListCheckJob) {
-        //TODO
+        if (job->settingsCanBeImported()) {
+            hasSettingToImport = true;
+            break;
+        }
+    }
+    if (hasSettingToImport) {
+        setAppropriate(mNoFoundPageItem, false);
+        setAppropriate(mSearchPageItem, true);
+        setAppropriate(mProgressPageItem, true);
+        setAppropriate(mFinishPageItem, true);
+        setCurrentPage(mSearchPageItem);
+    } else {
+        setCurrentPage(mNoFoundPageItem);
+        setAppropriate(mNoFoundPageItem, true);
+        setAppropriate(mSearchPageItem, false);
+        setAppropriate(mProgressPageItem, false);
+        setAppropriate(mFinishPageItem, false);
     }
 }
 
