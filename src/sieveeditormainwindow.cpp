@@ -141,16 +141,19 @@ void SieveEditorMainWindow::setupActions()
     ac->setDefaultShortcut(mNewScript, QKeySequence(Qt::CTRL + Qt::Key_N));
     mNewScript->setEnabled(false);
 
-    mEditScript = ac->addAction(QStringLiteral("edit_script"), this, SLOT(slotEditScript()));
-    mEditScript->setText(i18n("Edit Script..."));
+    mEditScript =  new QAction(i18n("Edit Script..."), this);
+    connect(mEditScript, &QAction::triggered, this, &SieveEditorMainWindow::slotEditScript);
+    ac->addAction(QStringLiteral("edit_script"), mEditScript);
     mEditScript->setEnabled(false);
 
-    mDesactivateScript = ac->addAction(QStringLiteral("desactivate_script"), this, SLOT(slotDesactivateScript()));
-    mDesactivateScript->setText(i18n("Deactivate Script"));
+    mDesactivateScript = new QAction(i18n("Deactivate Script"), this);
+    connect(mDesactivateScript, &QAction::triggered, this, &SieveEditorMainWindow::slotDesactivateScript);
+    ac->addAction(QStringLiteral("desactivate_script"), mDesactivateScript);
     mDesactivateScript->setEnabled(false);
 
-    mRefreshList = ac->addAction(QStringLiteral("refresh_list"), this, SLOT(slotRefreshList()));
-    mRefreshList->setText(i18n("Refresh List"));
+    mRefreshList = new QAction( i18n("Refresh List"), this);
+    connect(mRefreshList, &QAction::triggered, this, &SieveEditorMainWindow::slotRefreshList);
+    ac->addAction(QStringLiteral("refresh_list"), mRefreshList);
     mRefreshList->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
     ac->setDefaultShortcut(mRefreshList, QKeySequence(Qt::Key_F5));
 
@@ -170,36 +173,43 @@ void SieveEditorMainWindow::setupActions()
     mSelectAllAction = KStandardAction::selectAll(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotSelectAll, ac);
     mSaveAsAction = KStandardAction::saveAs(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotSaveAs, ac);
 
-    mImportAction = ac->addAction(QStringLiteral("import_script"), mMainWidget->sieveEditorMainWidget(), SLOT(slotImport()));
-    mImportAction->setText(i18n("Import..."));
+    mImportAction = new QAction(i18n("Import..."), this);
+    connect(mImportAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotImport);
+    ac->addAction(QStringLiteral("import_script"), mImportAction);
     mImportAction->setEnabled(false);
 
-    mShareAction = ac->addAction(QStringLiteral("share_script"), mMainWidget->sieveEditorMainWidget(), SLOT(slotShareScript()));
-    mShareAction->setText(i18n("Share..."));
+    mShareAction = new QAction(i18n("Share..."), this);
+    connect(mShareAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotShareScript);
+    ac->addAction(QStringLiteral("share_script"), mShareAction);
     const QStringList overlays = QStringList() << QStringLiteral("list-add");
     mShareAction->setIcon(QIcon(new KIconEngine(QStringLiteral("get-hot-new-stuff"), KIconLoader::global(), overlays)));
     mShareAction->setEnabled(false);
 
-    mSpellCheckAction = ac->addAction(QStringLiteral("check_spelling"), mMainWidget->sieveEditorMainWidget(), SLOT(slotCheckSpelling()));
+    mSpellCheckAction = new QAction(i18n("Check Spelling..."), this);
+    connect(mSpellCheckAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotCheckSpelling);
+    ac->addAction(QStringLiteral("check_spelling"), mSpellCheckAction);
     mSpellCheckAction->setIcon(QIcon::fromTheme(QStringLiteral("tools-check-spelling")));
-    mSpellCheckAction->setText(i18n("Check Spelling..."));
     mSpellCheckAction->setEnabled(false);
 
-    mCheckSyntaxAction = ac->addAction(QStringLiteral("check_syntax"), mMainWidget->sieveEditorMainWidget(), SLOT(slotCheckSyntax()));
-    mCheckSyntaxAction->setText(i18n("Check Syntax"));
+    mCheckSyntaxAction = new QAction(i18n("Check Syntax"), this);
+    connect(mCheckSyntaxAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotCheckSyntax);
+    ac->addAction(QStringLiteral("check_syntax"), mCheckSyntaxAction);
     mCheckSyntaxAction->setEnabled(false);
 
-    mCreateRulesGraphicallyAction = ac->addAction(QStringLiteral("autogenerate_script"), mMainWidget->sieveEditorMainWidget(), SLOT(slotCreateRulesGraphically()));
-    mCreateRulesGraphicallyAction->setText(i18n("Create Rules Graphically..."));
+    mCreateRulesGraphicallyAction = new QAction(i18n("Create Rules Graphically..."), this);
+    connect(mCreateRulesGraphicallyAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotCreateRulesGraphically);
+    ac->addAction(QStringLiteral("autogenerate_script"), mCreateRulesGraphicallyAction);
     mCreateRulesGraphicallyAction->setEnabled(false);
 
-    mCommentAction = ac->addAction(QStringLiteral("comment_code"), mMainWidget->sieveEditorMainWidget(), SLOT(slotComment()));
+    mCommentAction = new QAction(i18n("Comment"), this);
+    connect(mCommentAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotComment);
+    ac->addAction(QStringLiteral("comment_code"), mCommentAction);
     ac->setDefaultShortcut(mCommentAction, Qt::CTRL + Qt::Key_D);
-    mCommentAction->setText(i18n("Comment"));
 
-    mUncommentAction = ac->addAction(QStringLiteral("uncomment_code"), mMainWidget->sieveEditorMainWidget(), SLOT(slotUncomment()));
+    mUncommentAction = new QAction(i18n("Uncomment"), this);
+    connect(mUncommentAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotUncomment);
+    ac->addAction(QStringLiteral("uncomment_code"), mUncommentAction);
     ac->setDefaultShortcut(mUncommentAction, Qt::CTRL + Qt::SHIFT + Qt::Key_D);
-    mUncommentAction->setText(i18n("Uncomment"));
 
     mZoomInAction = new QAction(QIcon::fromTheme(QStringLiteral("zoom-in")), i18n("&Zoom In"), this);
     ac->addAction(QStringLiteral("zoom_in"), mZoomInAction);
@@ -211,9 +221,10 @@ void SieveEditorMainWindow::setupActions()
     connect(mZoomOutAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotZoomOut);
     ac->setDefaultShortcut(mZoomOutAction, QKeySequence(Qt::CTRL + Qt::Key_Minus));
 
-    mZoomResetAction = ac->addAction(QStringLiteral("zoom_reset"), mMainWidget->sieveEditorMainWidget(), SLOT(slotZoomReset()));
+    mZoomResetAction = new QAction(i18nc("Reset the zoom", "Reset"), this);
+    connect(mZoomResetAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotZoomReset);
+    ac->addAction(QStringLiteral("zoom_reset"), mZoomResetAction);
     ac->setDefaultShortcut(mZoomResetAction, QKeySequence(Qt::CTRL + Qt::Key_0));
-    mZoomResetAction->setText(i18nc("Reset the zoom", "Reset"));
 
     mMenuChangeCaseAction = new PimCommon::KActionMenuChangeCase(this);
     ac->addAction(QStringLiteral("change_case_menu"), mMenuChangeCaseAction);
@@ -228,8 +239,9 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("bookmark"), mBookmarkMenu);
     connect(mSieveEditorBookmarks, &SieveEditorBookmarks::openUrl, this, &SieveEditorMainWindow::slotOpenBookmarkUrl);
 
-    mDebugSieveScriptAction = ac->addAction(QStringLiteral("debug_sieve"), mMainWidget->sieveEditorMainWidget(), SLOT(slotDebugSieveScript()));
-    mDebugSieveScriptAction->setText(i18n("Debug Sieve Script..."));
+    mDebugSieveScriptAction = new QAction(i18n("Debug Sieve Script..."), this);
+    connect(mDebugSieveScriptAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotDebugSieveScript);
+    ac->addAction(QStringLiteral("debug_sieve"), mDebugSieveScriptAction);
     ac->setDefaultShortcut(mDebugSieveScriptAction, QKeySequence(Qt::SHIFT + Qt::ALT + Qt::Key_D));
 
     mWrapTextAction = new QAction(i18n("Wordwarp"), this);
