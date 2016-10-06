@@ -21,6 +21,7 @@
 #include "../importimapsettingprogresspage.h"
 
 #include <QTest>
+#include <QTextEdit>
 
 ImportImapSettingProgressPageTest::ImportImapSettingProgressPageTest(QObject *parent)
     : QObject(parent)
@@ -36,7 +37,11 @@ ImportImapSettingProgressPageTest::~ImportImapSettingProgressPageTest()
 void ImportImapSettingProgressPageTest::shouldHaveDefaultValue()
 {
     ImportImapSettingProgressPage w;
-    //TODO
+
+    QTextEdit *mProgressTextEdit = w.findChild<QTextEdit *>(QStringLiteral("textedit"));
+    QVERIFY(mProgressTextEdit);
+    QVERIFY(mProgressTextEdit->isReadOnly());
+    QVERIFY(mProgressTextEdit->document()->isEmpty());
 }
 
 QTEST_MAIN(ImportImapSettingProgressPageTest)

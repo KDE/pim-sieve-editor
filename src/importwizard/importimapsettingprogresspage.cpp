@@ -20,14 +20,24 @@
 #include "importimapsettingprogresspage.h"
 #include <QVBoxLayout>
 #include <KLocalizedString>
+#include <QTextEdit>
 
 ImportImapSettingProgressPage::ImportImapSettingProgressPage(QWidget *parent)
     : QWidget(parent)
 {
-
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mProgressTextEdit = new QTextEdit(this);
+    mProgressTextEdit->setObjectName(QStringLiteral("textedit"));
+    mProgressTextEdit->setReadOnly(true);
+    mainLayout->addWidget(mProgressTextEdit);
 }
 
 ImportImapSettingProgressPage::~ImportImapSettingProgressPage()
+{
+
+}
+
+void ImportImapSettingProgressPage::addProgressInfo(const QString &str)
 {
 
 }

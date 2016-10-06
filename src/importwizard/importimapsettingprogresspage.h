@@ -21,13 +21,16 @@
 #define IMPORTIMAPSETTINGPROGRESSPAGE_H
 
 #include <QWidget>
-
+class QTextEdit;
 class ImportImapSettingProgressPage : public QWidget
 {
     Q_OBJECT
 public:
     explicit ImportImapSettingProgressPage(QWidget *parent = Q_NULLPTR);
     ~ImportImapSettingProgressPage();
+    void addProgressInfo(const QString &str);
+private:
+    QTextEdit *mProgressTextEdit;
 };
 
 #endif // IMPORTIMAPSETTINGPROGRESSPAGE_H
