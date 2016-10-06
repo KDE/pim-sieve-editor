@@ -41,7 +41,7 @@ ImportImapSettingWizard::ImportImapSettingWizard(QWidget *parent)
 
 
     mNoFoundPage = new ImportImapSettingNoFoundPage(this);
-    mNoFoundPageItem = new KPageWidgetItem(mNoFoundPage, i18n("No IMAP Settings Found."));
+    mNoFoundPageItem = new KPageWidgetItem(mNoFoundPage);
     addPage(mNoFoundPageItem);
 
     mProgressPage = new ImportImapSettingProgressPage(this);
