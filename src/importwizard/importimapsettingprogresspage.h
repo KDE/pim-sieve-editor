@@ -29,6 +29,7 @@ public:
     explicit ImportImapSettingProgressPage(QWidget *parent = Q_NULLPTR);
     ~ImportImapSettingProgressPage();
     void addProgressInfo(const QString &str);
+    void setSelectedPrograms(const QStringList &programs);
 private:
     QTextEdit *mProgressTextEdit;
 };

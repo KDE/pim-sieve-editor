@@ -32,7 +32,7 @@ public:
     ~ImportImapSettingSearchPage();
 
     void setProgramList(const QStringList &lst);
-    QStringList selectedProgram() const;
+    QStringList selectedPrograms() const;
 
 private:
     QListWidget *mFoundProgramList;

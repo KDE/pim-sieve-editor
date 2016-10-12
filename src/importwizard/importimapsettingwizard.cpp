@@ -90,6 +90,15 @@ void ImportImapSettingWizard::initializeWizard()
 
 void ImportImapSettingWizard::next()
 {
+    if (currentPage() == mSearchPageItem) {
+        const QStringList programs = mSearchPage->selectedPrograms();
+        if (programs.isEmpty()) {
+            //Go to end
+            setAppropriate(mProgressPageItem, false);
+        } else {
+            mProgressPage->setSelectedPrograms(programs);
+        }
+    }
     KAssistantDialog::next();
 }
 

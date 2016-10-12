@@ -51,7 +51,7 @@ void ImportImapSettingSearchPage::setProgramList(const QStringList &lst)
     }
 }
 
-QStringList ImportImapSettingSearchPage::selectedProgram() const
+QStringList ImportImapSettingSearchPage::selectedPrograms() const
 {
     QStringList checkedItems;
     for (int i = 0; i < mFoundProgramList->count(); ++i) {
