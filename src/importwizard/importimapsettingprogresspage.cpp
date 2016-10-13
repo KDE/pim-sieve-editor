@@ -44,5 +44,7 @@ void ImportImapSettingProgressPage::addProgressInfo(const QString &str)
 
 void ImportImapSettingProgressPage::setSelectedPrograms(const QStringList &programs)
 {
- //TODO
+    mSelectedPrograms = programs;
+
+ //TODO start check
 }

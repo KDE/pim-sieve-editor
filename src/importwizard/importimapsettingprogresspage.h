@@ -31,6 +31,7 @@ public:
     void addProgressInfo(const QString &str);
     void setSelectedPrograms(const QStringList &programs);
 private:
+    QStringList mSelectedPrograms;
     QTextEdit *mProgressTextEdit;
 };
 

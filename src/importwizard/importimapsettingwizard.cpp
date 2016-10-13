@@ -63,11 +63,15 @@ ImportImapSettingWizard::~ImportImapSettingWizard()
 
 void ImportImapSettingWizard::initializeWizard()
 {
-    mListCheckJob.append(new ImportImapSettingsThunderbirdCheckJob(this));
-    mListCheckJob.append(new ImportImapSettingsAkonadiCheckJob(this));
+    ImportImapSettingsThunderbirdCheckJob *thjob = new ImportImapSettingsThunderbirdCheckJob(this);
+    thjob->name();
+    mListCheckJob.insert(thjob->name(), thjob);
+    ImportImapSettingsAkonadiCheckJob *akonadiJob = new ImportImapSettingsAkonadiCheckJob(this);
+    mListCheckJob.insert(akonadiJob->name(), akonadiJob);
+
 
     bool hasSettingToImport = false;
-    Q_FOREACH (AbstractImapSettingsCheckJob *job, mListCheckJob) {
+    Q_FOREACH (AbstractImapSettingsCheckJob *job, mListCheckJob.values()) {
         if (job->settingsCanBeImported()) {
             hasSettingToImport = true;
             break;

@@ -43,7 +43,7 @@ private:
     void readConfig();
     void writeConfig();
     void initializeWizard();
-    QList<AbstractImapSettingsCheckJob *> mListCheckJob;
+    QMap<QString, AbstractImapSettingsCheckJob *> mListCheckJob;
 
     ImportImapSettingSearchPage *mSearchPage;
     KPageWidgetItem *mSearchPageItem;
