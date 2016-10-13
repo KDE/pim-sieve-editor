@@ -94,7 +94,11 @@ void ImportImapSettingWizard::initializeWizard()
 
 void ImportImapSettingWizard::next()
 {
-    if (currentPage() == mSearchPageItem) {
+    if (currentPage() == mNoFoundPageItem) {
+        if (isAppropriate(mSearchPageItem)) {
+            mSearchPage->setProgramList(mListCheckJob.keys());
+        }
+    } else if (currentPage() == mSearchPageItem) {
         const QStringList programs = mSearchPage->selectedPrograms();
         if (programs.isEmpty()) {
             //Go to end
