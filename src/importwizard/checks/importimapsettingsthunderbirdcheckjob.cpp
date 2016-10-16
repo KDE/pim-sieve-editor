@@ -31,7 +31,6 @@ ImportImapSettingsThunderbirdCheckJob::~ImportImapSettingsThunderbirdCheckJob()
 
 }
 
-
 void ImportImapSettingsThunderbirdCheckJob::start()
 {
 }

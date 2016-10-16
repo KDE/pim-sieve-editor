@@ -151,7 +151,7 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("desactivate_script"), mDesactivateScript);
     mDesactivateScript->setEnabled(false);
 
-    mRefreshList = new QAction( i18n("Refresh List"), this);
+    mRefreshList = new QAction(i18n("Refresh List"), this);
     connect(mRefreshList, &QAction::triggered, this, &SieveEditorMainWindow::slotRefreshList);
     ac->addAction(QStringLiteral("refresh_list"), mRefreshList);
     mRefreshList->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));

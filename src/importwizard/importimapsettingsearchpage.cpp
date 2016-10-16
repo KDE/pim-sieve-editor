@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "importimapsettingsearchpage.h"
 
 #include <QLabel>
@@ -45,9 +44,9 @@ ImportImapSettingSearchPage::~ImportImapSettingSearchPage()
 
 void ImportImapSettingSearchPage::setProgramList(const QStringList &lst)
 {
-    Q_FOREACH(const QString &prog, lst) {
+    Q_FOREACH (const QString &prog, lst) {
         QListWidgetItem *item = new QListWidgetItem(prog, mFoundProgramList);
-        item->setFlags(item->flags() &~ Qt::ItemIsUserCheckable);
+        item->setFlags(item->flags() & ~ Qt::ItemIsUserCheckable);
     }
 }
 

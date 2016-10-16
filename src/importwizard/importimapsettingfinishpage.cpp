@@ -23,7 +23,6 @@
 #include <QTextEdit>
 #include <QLabel>
 
-
 ImportImapSettingFinishPage::ImportImapSettingFinishPage(QWidget *parent)
     : QWidget(parent)
 {

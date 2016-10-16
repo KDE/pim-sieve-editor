@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "importimapsettingwizard.h"
 #include "importimapsettingsearchpage.h"
 #include "importimapsettingnofoundpage.h"
@@ -38,7 +37,6 @@ ImportImapSettingWizard::ImportImapSettingWizard(QWidget *parent)
     mSearchPage = new ImportImapSettingSearchPage(this);
     mSearchPageItem = new KPageWidgetItem(mSearchPage, i18n("Select Import Settings"));
     addPage(mSearchPageItem);
-
 
     mNoFoundPage = new ImportImapSettingNoFoundPage(this);
     mNoFoundPageItem = new KPageWidgetItem(mNoFoundPage);
@@ -68,7 +66,6 @@ void ImportImapSettingWizard::initializeWizard()
     mListCheckJob.insert(thjob->name(), thjob);
     ImportImapSettingsAkonadiCheckJob *akonadiJob = new ImportImapSettingsAkonadiCheckJob(this);
     mListCheckJob.insert(akonadiJob->name(), akonadiJob);
-
 
     bool hasSettingToImport = false;
     Q_FOREACH (AbstractImapSettingsCheckJob *job, mListCheckJob.values()) {

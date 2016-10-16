@@ -17,12 +17,10 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef IMPORTIMAPSETTINGWIZARD_H
 #define IMPORTIMAPSETTINGWIZARD_H
 
 #include <KAssistantDialog>
-
 
 class ImportImapSettingSearchPage;
 class ImportImapSettingNoFoundPage;
