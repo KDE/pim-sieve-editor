@@ -69,6 +69,7 @@ SieveEditorMainWidget::SieveEditorMainWidget(QWidget *parent)
 
 SieveEditorMainWidget::~SieveEditorMainWidget()
 {
+    disconnect(mScriptManagerWidget, &SieveEditorScriptManagerWidget::updateButtons, this, &SieveEditorMainWidget::updateButtons);
     KConfigGroup myGroup(KSharedConfig::openConfig(), "SieveEditorMainWidget");
     myGroup.writeEntry("mainSplitter", sizes());
     myGroup.sync();
