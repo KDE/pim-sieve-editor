@@ -28,7 +28,7 @@
 
 #include "sieveeditor_debug.h"
 #include <QVBoxLayout>
-
+//#define USE_CHECK_SIEVE_METHOD 1
 SieveEditorPageWidget::SieveEditorPageWidget(QWidget *parent)
     : QWidget(parent),
       mWasActive(false),
@@ -59,8 +59,14 @@ void SieveEditorPageWidget::slotCheckSyntaxClicked()
 
     }
     mSieveEditorWidget->addNormalMessage(i18n("Uploading script to server for checking it, please wait..."));
+
+#ifdef USE_CHECK_SIEVE_METHOD
+    KManageSieve::SieveJob *job = KManageSieve::SieveJob::check(mCurrentURL, script);
+    connect(job, &KManageSieve::SieveJob::result, this, &SieveEditorPageWidget::slotPutResultDebug);
+#else
     KManageSieve::SieveJob *job = KManageSieve::SieveJob::put(mCurrentURL, script, mWasActive, mWasActive);
     connect(job, &KManageSieve::SieveJob::result, this, &SieveEditorPageWidget::slotPutResultDebug);
+#endif
 }
 
 void SieveEditorPageWidget::slotPutResultDebug(KManageSieve::SieveJob *job, bool success)
@@ -75,8 +81,10 @@ void SieveEditorPageWidget::slotPutResultDebug(KManageSieve::SieveJob *job, bool
             mSieveEditorWidget->addFailedMessage(errorMsg);
         }
     }
+#ifndef USE_CHECK_SIEVE_METHOD
     //Put original script after check otherwise we will put a script even if we don't click on ok
     KManageSieve::SieveJob *restoreJob = KManageSieve::SieveJob::put(mCurrentURL, mSieveEditorWidget->originalScript(), mWasActive, mWasActive);
+#endif
     mSieveEditorWidget->resultDone();
 }
 
