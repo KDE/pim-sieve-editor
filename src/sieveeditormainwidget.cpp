@@ -57,6 +57,7 @@ SieveEditorMainWidget::SieveEditorMainWidget(QWidget *parent)
     connect(mScriptManagerWidget, &SieveEditorScriptManagerWidget::updateButtons, this, &SieveEditorMainWidget::updateButtons);
     connect(mScriptManagerWidget, &SieveEditorScriptManagerWidget::scriptDeleted, this, &SieveEditorMainWidget::slotScriptDeleted);
     connect(mScriptManagerWidget, &SieveEditorScriptManagerWidget::serverSieveFound, this, &SieveEditorMainWidget::serverSieveFound);
+    connect(mScriptManagerWidget, &SieveEditorScriptManagerWidget::scriptRenamed, this, &SieveEditorMainWidget::slotScriptRenamed);
     connect(this, &SieveEditorMainWidget::updateScriptList, mScriptManagerWidget, &SieveEditorScriptManagerWidget::slotRefreshList);
     addWidget(mScriptManagerWidget);
     setChildrenCollapsible(false);
@@ -105,6 +106,18 @@ void SieveEditorMainWidget::slotScriptDeleted(const QUrl &url)
         delete page;
     }
     updateStackedWidget();
+}
+
+void SieveEditorMainWidget::slotScriptRenamed(const QUrl &oldUrl, const QUrl &newUrl)
+{
+    /*
+    QWidget *page = hasExistingPage(url);
+    if (page) {
+        mTabWidget->removeTab(mTabWidget->indexOf(page));
+        delete page;
+    }
+    updateStackedWidget();
+    */
 }
 
 void SieveEditorMainWidget::slotCreateScriptPage(const QUrl &url, const QStringList &capabilities, bool isNewScript)

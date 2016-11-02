@@ -102,6 +102,7 @@ Q_SIGNALS:
 private Q_SLOTS:
     void slotCreateScriptPage(const QUrl &url, const QStringList &capabilities, bool isNewScript);
     void slotScriptDeleted(const QUrl &url);
+    void slotScriptRenamed(const QUrl &oldUrl, const QUrl &newUrl);
     void slotScriptModified(bool modified, SieveEditorPageWidget *page);
     void slotGeneralPaletteChanged();
     void slotTabCloseRequested(int index);

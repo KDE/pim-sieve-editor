@@ -34,6 +34,7 @@ SieveEditorScriptManagerWidget::SieveEditorScriptManagerWidget(QWidget *parent)
     connect(mTreeView, &SieveEditorManageSieveWidget::updateButtons, this, &SieveEditorScriptManagerWidget::slotUpdateButtons);
     connect(mTreeView, &SieveEditorManageSieveWidget::scriptDeleted, this, &SieveEditorScriptManagerWidget::scriptDeleted);
     connect(mTreeView, &SieveEditorManageSieveWidget::serverSieveFound, this, &SieveEditorScriptManagerWidget::serverSieveFound);
+    connect(mTreeView, &SieveEditorManageSieveWidget::scriptRenamed, this, &SieveEditorScriptManagerWidget::scriptRenamed);
     hbox->addWidget(mTreeView);
 }
 
