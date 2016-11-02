@@ -108,6 +108,11 @@ QUrl SieveEditorPageWidget::currentUrl() const
     return mCurrentURL;
 }
 
+void SieveEditorPageWidget::setCurrentUrl(const QUrl &url)
+{
+    mCurrentURL = url;
+}
+
 void SieveEditorPageWidget::slotGetResult(KManageSieve::SieveJob *, bool success, const QString &script, bool isActive)
 {
     mSieveEditorWidget->setReadOnly(false);

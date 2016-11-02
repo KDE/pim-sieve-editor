@@ -110,14 +110,14 @@ void SieveEditorMainWidget::slotScriptDeleted(const QUrl &url)
 
 void SieveEditorMainWidget::slotScriptRenamed(const QUrl &oldUrl, const QUrl &newUrl)
 {
-    /*
-    QWidget *page = hasExistingPage(url);
+    QWidget *page = hasExistingPage(oldUrl);
     if (page) {
-        mTabWidget->removeTab(mTabWidget->indexOf(page));
-        delete page;
+        if (SieveEditorPageWidget *editor = qobject_cast<SieveEditorPageWidget *>(page)) {
+            editor->setCurrentUrl(newUrl);
+            mTabWidget->setTabText(mTabWidget->indexOf(page), newUrl.fileName());
+        }
     }
     updateStackedWidget();
-    */
 }
 
 void SieveEditorMainWidget::slotCreateScriptPage(const QUrl &url, const QStringList &capabilities, bool isNewScript)

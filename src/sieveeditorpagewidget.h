@@ -40,6 +40,7 @@ public:
 
     void loadScript(const QUrl &url, const QStringList &capabilities);
     QUrl currentUrl() const;
+    void setCurrentUrl(const QUrl &url);
     void setIsNewScript(bool isNewScript);
     void uploadScript(bool showInformation = true, bool forceSave = false);
     bool needToSaveScript();
