@@ -31,7 +31,7 @@
 #include <KSharedConfig>
 #include <KIconEngine>
 #include <KIconLoader>
-#include <KSieveUi/SieveNetworkManager>
+#include <PimCommon/NetworkManager>
 
 #include <KLocalizedString>
 #include <KConfigGroup>
@@ -57,12 +57,12 @@ SieveEditorMainWindow::SieveEditorMainWindow()
     setupGUI();
     readConfig();
     initStatusBar();
-    connect(KSieveUi::SieveNetworkManager::self()->networkConfigureManager(), &QNetworkConfigurationManager::onlineStateChanged,
+    connect(PimCommon::NetworkManager::self()->networkConfigureManager(), &QNetworkConfigurationManager::onlineStateChanged,
             this, &SieveEditorMainWindow::slotSystemNetworkOnlineStateChanged);
 
     connect(mMainWidget->sieveEditorMainWidget()->tabWidget(), &QTabWidget::currentChanged, this, &SieveEditorMainWindow::slotUpdateActions);
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::modeEditorChanged, this, &SieveEditorMainWindow::slotUpdateActions);
-    slotSystemNetworkOnlineStateChanged(KSieveUi::SieveNetworkManager::self()->networkConfigureManager()->isOnline());
+    slotSystemNetworkOnlineStateChanged(PimCommon::NetworkManager::self()->networkConfigureManager()->isOnline());
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::undoAvailable, this, &SieveEditorMainWindow::slotUndoAvailable);
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::redoAvailable, this, &SieveEditorMainWindow::slotRedoAvailable);
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::copyAvailable, this, &SieveEditorMainWindow::slotCopyAvailable);
@@ -265,7 +265,7 @@ void SieveEditorMainWindow::slotImportImapSettings()
 
 void SieveEditorMainWindow::slotRefreshList()
 {
-    if (KSieveUi::SieveNetworkManager::self()->networkConfigureManager()->isOnline()) {
+    if (PimCommon::NetworkManager::self()->networkConfigureManager()->isOnline()) {
         mMainWidget->sieveEditorMainWidget()->refreshList();
     }
 }
