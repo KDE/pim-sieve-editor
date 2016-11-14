@@ -46,8 +46,8 @@
 #include <QCloseEvent>
 #include <QNetworkConfigurationManager>
 
-SieveEditorMainWindow::SieveEditorMainWindow()
-    : KXmlGuiWindow()
+SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
+    : KXmlGuiWindow(parent)
 {
     mMainWidget = new SieveEditorCentralWidget(this);
     connect(mMainWidget, &SieveEditorCentralWidget::configureClicked, this, &SieveEditorMainWindow::slotConfigure);
