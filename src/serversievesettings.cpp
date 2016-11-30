@@ -82,6 +82,7 @@ ServerSieveSettings::ServerSieveSettings(QWidget *parent) :
     ui(new Ui::ServerSieveSettings)
 {
     ui->setupUi(this);
+    ui->serversievelabel->setMinimumSize(ui->serversievelabel->sizeHint());
     populateDefaultAuthenticationOptions();
     connect(ui->serverName, &QLineEdit::textChanged, this, &ServerSieveSettings::slotUserServerNameChanged);
     connect(ui->userName, &QLineEdit::textChanged, this, &ServerSieveSettings::slotUserServerNameChanged);
