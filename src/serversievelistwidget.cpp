@@ -107,6 +107,6 @@ SieveEditorUtil::SieveServerConfig ServerSieveListWidgetItem::serverConfig() con
 void ServerSieveListWidgetItem::setServerConfig(const SieveEditorUtil::SieveServerConfig &conf)
 {
     setCheckState(conf.enabled ? Qt::Checked : Qt::Unchecked);
-    setText(conf.serverName);
+    setText(i18nc("server name (username)", "%1 (%2)", conf.serverName, conf.userName));
     mServerConfig = conf;
 }
