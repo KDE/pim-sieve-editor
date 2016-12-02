@@ -35,7 +35,7 @@
 #include <QStackedWidget>
 #include <QTabBar>
 
-SieveEditorMainWidget::SieveEditorMainWidget(QWidget *parent)
+SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *parent)
     : QSplitter(parent)
 {
     mStackedWidget = new QStackedWidget(this);
@@ -43,7 +43,7 @@ SieveEditorMainWidget::SieveEditorMainWidget(QWidget *parent)
 
     mEditorEmptyLabel = new SieveEditorEmptyTabWidgetLabel;
 
-    mTabWidget = new SieveEditorTabWidget;
+    mTabWidget = new SieveEditorTabWidget(ac);
     connect(mTabWidget, &SieveEditorTabWidget::tabCloseRequestedIndex, this, &SieveEditorMainWidget::slotTabCloseRequested);
     connect(mTabWidget, &SieveEditorTabWidget::tabRemoveAllExclude, this, &SieveEditorMainWidget::slotTabRemoveAllExclude);
     connect(mTabWidget, &SieveEditorTabWidget::tabCloseAllTab, this, &SieveEditorMainWidget::slotTabCloseAllRequested);

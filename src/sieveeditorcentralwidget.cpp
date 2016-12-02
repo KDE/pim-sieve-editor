@@ -21,13 +21,13 @@
 #include "sieveeditormainwidget.h"
 #include "sieveeditorconfigureserverpage.h"
 
-SieveEditorCentralWidget::SieveEditorCentralWidget(QWidget *parent)
+SieveEditorCentralWidget::SieveEditorCentralWidget(QWidget *parent, KActionCollection *ac)
     : QStackedWidget(parent)
 {
     mConfigureWidget = new SieveEditorConfigureServerPage;
     connect(mConfigureWidget, &SieveEditorConfigureServerPage::configureClicked, this, &SieveEditorCentralWidget::configureClicked);
     addWidget(mConfigureWidget);
-    mSieveEditorMainWidget = new SieveEditorMainWidget;
+    mSieveEditorMainWidget = new SieveEditorMainWidget(ac);
     connect(mSieveEditorMainWidget, &SieveEditorMainWidget::serverSieveFound, this, &SieveEditorCentralWidget::slotServerSieveFound);
     addWidget(mSieveEditorMainWidget);
     setCurrentWidget(mConfigureWidget);

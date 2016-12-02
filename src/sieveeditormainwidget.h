@@ -29,11 +29,12 @@ class SieveEditorTabWidget;
 class SieveEditorScriptManagerWidget;
 class SieveEditorPageWidget;
 class SieveEditorEmptyTabWidgetLabel;
+class KActionCollection;
 class SieveEditorMainWidget : public QSplitter
 {
     Q_OBJECT
 public:
-    explicit SieveEditorMainWidget(QWidget *parent = Q_NULLPTR);
+    explicit SieveEditorMainWidget(KActionCollection *ac, QWidget *parent = Q_NULLPTR);
     ~SieveEditorMainWidget();
 
     void createNewScript();

@@ -49,7 +49,7 @@
 SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     : KXmlGuiWindow(parent)
 {
-    mMainWidget = new SieveEditorCentralWidget(this);
+    mMainWidget = new SieveEditorCentralWidget(this, actionCollection());
     connect(mMainWidget, &SieveEditorCentralWidget::configureClicked, this, &SieveEditorMainWindow::slotConfigure);
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::updateButtons, this, &SieveEditorMainWindow::slotUpdateButtons);
     setCentralWidget(mMainWidget);

@@ -20,15 +20,17 @@
 #include "sieveeditortabwidget.h"
 
 #include <KLocalizedString>
+#include <KActionCollection>
 #include <QMenu>
 #include <QIcon>
 
 #include <QTabBar>
 #include <QAction>
 
-SieveEditorTabWidget::SieveEditorTabWidget(QWidget *parent)
+SieveEditorTabWidget::SieveEditorTabWidget(KActionCollection *ac, QWidget *parent)
     : QTabWidget(parent)
 {
+    initActions(ac);
     setMovable(true);
     setTabsClosable(true);
     connect(this, &QTabWidget::tabCloseRequested, this, &SieveEditorTabWidget::tabCloseRequestedIndex);
@@ -73,5 +75,24 @@ void SieveEditorTabWidget::slotTabContextMenuRequest(const QPoint &pos)
         Q_EMIT tabCloseRequestedIndex(indexBar);
     } else if (action == allTab) {
         Q_EMIT tabCloseAllTab();
+    }
+}
+
+void SieveEditorTabWidget::initActions(KActionCollection *ac)
+{
+    QAction *closeCurrentTabAct = new QAction(i18nc("@action:inmenu", "Close Tab"), this);
+    if (ac) {
+        ac->addAction(QStringLiteral("close_current_tab"), closeCurrentTabAct);
+        ac->setDefaultShortcut(closeCurrentTabAct, QKeySequence(Qt::CTRL + Qt::Key_W));
+    }
+    closeCurrentTabAct->setIcon(QIcon::fromTheme(QStringLiteral("tab-close")));
+    connect(closeCurrentTabAct, &QAction::triggered, this, &SieveEditorTabWidget::slotCloseCurrentTab);
+}
+
+void SieveEditorTabWidget::slotCloseCurrentTab()
+{
+    const int curIndex = currentIndex();
+    if (curIndex != -1) {
+        Q_EMIT tabCloseRequestedIndex(curIndex);
     }
 }

@@ -20,12 +20,12 @@
 #ifndef SIEVEEDITORTABWIDGET_H
 #define SIEVEEDITORTABWIDGET_H
 #include <QTabWidget>
-
+class KActionCollection;
 class SieveEditorTabWidget : public QTabWidget
 {
     Q_OBJECT
 public:
-    explicit SieveEditorTabWidget(QWidget *parent = Q_NULLPTR);
+    explicit SieveEditorTabWidget(KActionCollection *ac, QWidget *parent = Q_NULLPTR);
     ~SieveEditorTabWidget();
 
 Q_SIGNALS:
@@ -35,6 +35,10 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void slotTabContextMenuRequest(const QPoint &pos);
+    void slotCloseCurrentTab();
+
+private:
+    void initActions(KActionCollection *ac);
 };
 
 #endif // SIEVEEDITORTABWIDGET_H
