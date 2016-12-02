@@ -23,11 +23,12 @@
 #include <QStackedWidget>
 class SieveEditorConfigureServerPage;
 class SieveEditorMainWidget;
+class KActionCollection;
 class SieveEditorCentralWidget : public QStackedWidget
 {
     Q_OBJECT
 public:
-    explicit SieveEditorCentralWidget(QWidget *parent = Q_NULLPTR);
+    explicit SieveEditorCentralWidget(QWidget *parent = Q_NULLPTR, KActionCollection *ac = Q_NULLPTR);
     ~SieveEditorCentralWidget();
 
     SieveEditorMainWidget *sieveEditorMainWidget() const;
