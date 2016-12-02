@@ -59,12 +59,13 @@ void SieveEditorTabWidget::slotTabContextMenuRequest(const QPoint &pos)
     QAction *closeTab = menu.addAction(i18nc("@action:inmenu", "Close Tab"));
     closeTab->setIcon(QIcon::fromTheme(QStringLiteral("tab-close")));
 
+    const bool hasSeveralTabs = (count() > 1);
     QAction *allOther = menu.addAction(i18nc("@action:inmenu", "Close All Other Tabs"));
-    allOther->setEnabled(count() > 1);
+    allOther->setEnabled(hasSeveralTabs);
     allOther->setIcon(QIcon::fromTheme(QStringLiteral("tab-close-other")));
 
     QAction *allTab = menu.addAction(i18nc("@action:inmenu", "Close All Tabs"));
-    allTab->setEnabled(count() > 1);
+    allTab->setEnabled(hasSeveralTabs);
     allTab->setIcon(QIcon::fromTheme(QStringLiteral("tab-close")));
 
     QAction *action = menu.exec(mapToGlobal(pos));
@@ -80,13 +81,13 @@ void SieveEditorTabWidget::slotTabContextMenuRequest(const QPoint &pos)
 
 void SieveEditorTabWidget::initActions(KActionCollection *ac)
 {
-    QAction *closeCurrentTabAct = new QAction(i18nc("@action:inmenu", "Close Tab"), this);
     if (ac) {
+        QAction *closeCurrentTabAct = new QAction(i18nc("@action:inmenu", "Close Tab"), this);
         ac->addAction(QStringLiteral("close_current_tab"), closeCurrentTabAct);
         ac->setDefaultShortcut(closeCurrentTabAct, QKeySequence(Qt::CTRL + Qt::Key_W));
+        closeCurrentTabAct->setIcon(QIcon::fromTheme(QStringLiteral("tab-close")));
+        connect(closeCurrentTabAct, &QAction::triggered, this, &SieveEditorTabWidget::slotCloseCurrentTab);
     }
-    closeCurrentTabAct->setIcon(QIcon::fromTheme(QStringLiteral("tab-close")));
-    connect(closeCurrentTabAct, &QAction::triggered, this, &SieveEditorTabWidget::slotCloseCurrentTab);
 }
 
 void SieveEditorTabWidget::slotCloseCurrentTab()
