@@ -23,7 +23,7 @@
 #include <QString>
 #include <QUrl>
 #include <MailTransport/mailtransport/transport.h>
-
+#include <KSieveUi/SieveAccount>
 namespace KWallet
 {
 class Wallet;
@@ -32,20 +32,13 @@ namespace SieveEditorUtil
 {
 struct SieveServerConfig {
     SieveServerConfig()
-        : authenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN),
-          port(-1),
-          enabled(true)
+        : enabled(true)
     {
 
     }
 
     QUrl url() const;
-
-    QString userName;
-    QString password;
-    QString serverName;
-    MailTransport::Transport::EnumAuthenticationType::type authenticationType;
-    int port;
+    KSieveUi::SieveAccount account;
     bool enabled;
 };
 

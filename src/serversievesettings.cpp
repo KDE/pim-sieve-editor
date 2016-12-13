@@ -153,21 +153,21 @@ void ServerSieveSettings::setPassword(const QString &pass)
 
 void ServerSieveSettings::setServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf)
 {
-    setPassword(conf.password);
-    setPort(conf.port);
-    setServerName(conf.serverName);
-    setUserName(conf.userName);
-    setCurrentAuthMode(ui->authenticationCombo, conf.authenticationType);
+    setPassword(conf.account.password());
+    setPort(conf.account.port());
+    setServerName(conf.account.server());
+    setUserName(conf.account.userName());
+    setCurrentAuthMode(ui->authenticationCombo, conf.account.authenticationType());
 }
 
 SieveEditorUtil::SieveServerConfig ServerSieveSettings::serverSieveConfig() const
 {
     SieveEditorUtil::SieveServerConfig conf;
-    conf.password = password();
-    conf.port = port();
-    conf.serverName = serverName();
-    conf.userName = userName();
+    conf.account.setPassword(password());
+    conf.account.setPort(port());
+    conf.account.setServer(serverName());
+    conf.account.setUserName(userName());
     const MailTransport::Transport::EnumAuthenticationType::type authtype = getCurrentAuthMode(ui->authenticationCombo);
-    conf.authenticationType = authtype;
+    conf.account.setAuthenticationType(authtype);
     return conf;
 }

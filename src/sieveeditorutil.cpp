@@ -33,13 +33,13 @@
 QUrl SieveEditorUtil::SieveServerConfig::url() const
 {
     QUrl u;
-    u.setHost(serverName);
-    u.setUserName(userName);
-    u.setPassword(password);
-    u.setPort(port);
+    u.setHost(account.server());
+    u.setUserName(account.userName());
+    u.setPassword(account.password());
+    u.setPort(account.port());
 
     QString authStr;
-    switch (authenticationType) {
+    switch (account.authenticationType()) {
     case MailTransport::Transport::EnumAuthenticationType::CLEAR:
     case MailTransport::Transport::EnumAuthenticationType::PLAIN:
         authStr = QStringLiteral("PLAIN");
@@ -84,15 +84,17 @@ QVector<SieveEditorUtil::SieveServerConfig> SieveEditorUtil::readServerSieveConf
     Q_FOREACH (const QString &conf, groups) {
         SieveServerConfig sieve;
         KConfigGroup group = cfg->group(conf);
-        sieve.port = group.readEntry(QStringLiteral("Port"), 0);
-        sieve.serverName = group.readEntry(QStringLiteral("ServerName"));
-        sieve.userName = group.readEntry(QStringLiteral("UserName"));
+        sieve.account.setPort(group.readEntry(QStringLiteral("Port"), 0));
+        sieve.account.setServer(group.readEntry(QStringLiteral("ServerName")));
+        sieve.account.setUserName(group.readEntry(QStringLiteral("UserName")));
         sieve.enabled = group.readEntry(QStringLiteral("Enabled"), true);
-        const QString walletEntry = sieve.userName + QLatin1Char('@') + sieve.serverName;
+        const QString walletEntry = sieve.account.userName() + QLatin1Char('@') + sieve.account.server();
         if (wallet && wallet->hasEntry(walletEntry)) {
-            wallet->readPassword(walletEntry, sieve.password);
+            QString passwd;
+            wallet->readPassword(walletEntry, passwd);
+            sieve.account.setPassword(passwd);
         }
-        sieve.authenticationType = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(group.readEntry(QStringLiteral("Authentication"), static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
+        sieve.account.setAuthenticationType(static_cast<MailTransport::Transport::EnumAuthenticationType::type>(group.readEntry(QStringLiteral("Authentication"), static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN))));
         lstConfig.append(sieve);
     }
     return lstConfig;
@@ -129,15 +131,15 @@ void SieveEditorUtil::writeServerSieveConfig(const QVector<SieveServerConfig> &l
 void SieveEditorUtil::writeSieveSettings(KWallet::Wallet *wallet, KSharedConfigPtr cfg, const SieveEditorUtil::SieveServerConfig &conf, int index)
 {
     KConfigGroup group = cfg->group(QStringLiteral("ServerSieve %1").arg(index));
-    group.writeEntry(QStringLiteral("Port"), conf.port);
-    group.writeEntry(QStringLiteral("ServerName"), conf.serverName);
-    group.writeEntry(QStringLiteral("UserName"), conf.userName);
+    group.writeEntry(QStringLiteral("Port"), conf.account.port());
+    group.writeEntry(QStringLiteral("ServerName"), conf.account.server());
+    group.writeEntry(QStringLiteral("UserName"), conf.account.userName());
     group.writeEntry(QStringLiteral("Enabled"), conf.enabled);
-    const QString walletEntry = conf.userName + QLatin1Char('@') + conf.serverName;
+    const QString walletEntry = conf.account.userName() + QLatin1Char('@') + conf.account.server();
     if (wallet) {
-        wallet->writePassword(walletEntry, conf.password);
+        wallet->writePassword(walletEntry, conf.account.password());
     }
-    group.writeEntry(QStringLiteral("Authentication"), static_cast<int>(conf.authenticationType));
+    group.writeEntry(QStringLiteral("Authentication"), static_cast<int>(conf.account.authenticationType()));
 }
 
 void SieveEditorUtil::addServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf)
