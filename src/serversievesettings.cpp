@@ -155,7 +155,7 @@ void ServerSieveSettings::setServerSieveConfig(const SieveEditorUtil::SieveServe
 {
     setPassword(conf.account.password());
     setPort(conf.account.port());
-    setServerName(conf.account.server());
+    setServerName(conf.account.serverName());
     setUserName(conf.account.userName());
     setCurrentAuthMode(ui->authenticationCombo, conf.account.authenticationType());
 }
@@ -165,7 +165,7 @@ SieveEditorUtil::SieveServerConfig ServerSieveSettings::serverSieveConfig() cons
     SieveEditorUtil::SieveServerConfig conf;
     conf.account.setPassword(password());
     conf.account.setPort(port());
-    conf.account.setServer(serverName());
+    conf.account.setServerName(serverName());
     conf.account.setUserName(userName());
     const MailTransport::Transport::EnumAuthenticationType::type authtype = getCurrentAuthMode(ui->authenticationCombo);
     conf.account.setAuthenticationType(authtype);

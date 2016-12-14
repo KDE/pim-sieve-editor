@@ -33,7 +33,7 @@
 QUrl SieveEditorUtil::SieveServerConfig::url() const
 {
     QUrl u;
-    u.setHost(account.server());
+    u.setHost(account.serverName());
     u.setUserName(account.userName());
     u.setPassword(account.password());
     u.setPort(account.port());
@@ -85,10 +85,10 @@ QVector<SieveEditorUtil::SieveServerConfig> SieveEditorUtil::readServerSieveConf
         SieveServerConfig sieve;
         KConfigGroup group = cfg->group(conf);
         sieve.account.setPort(group.readEntry(QStringLiteral("Port"), 0));
-        sieve.account.setServer(group.readEntry(QStringLiteral("ServerName")));
+        sieve.account.setServerName(group.readEntry(QStringLiteral("ServerName")));
         sieve.account.setUserName(group.readEntry(QStringLiteral("UserName")));
         sieve.enabled = group.readEntry(QStringLiteral("Enabled"), true);
-        const QString walletEntry = sieve.account.userName() + QLatin1Char('@') + sieve.account.server();
+        const QString walletEntry = sieve.account.userName() + QLatin1Char('@') + sieve.account.serverName();
         if (wallet && wallet->hasEntry(walletEntry)) {
             QString passwd;
             wallet->readPassword(walletEntry, passwd);
@@ -132,10 +132,10 @@ void SieveEditorUtil::writeSieveSettings(KWallet::Wallet *wallet, KSharedConfigP
 {
     KConfigGroup group = cfg->group(QStringLiteral("ServerSieve %1").arg(index));
     group.writeEntry(QStringLiteral("Port"), conf.account.port());
-    group.writeEntry(QStringLiteral("ServerName"), conf.account.server());
+    group.writeEntry(QStringLiteral("ServerName"), conf.account.serverName());
     group.writeEntry(QStringLiteral("UserName"), conf.account.userName());
     group.writeEntry(QStringLiteral("Enabled"), conf.enabled);
-    const QString walletEntry = conf.account.userName() + QLatin1Char('@') + conf.account.server();
+    const QString walletEntry = conf.account.userName() + QLatin1Char('@') + conf.account.serverName();
     if (wallet) {
         wallet->writePassword(walletEntry, conf.account.password());
     }
