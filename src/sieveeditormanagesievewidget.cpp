@@ -61,6 +61,7 @@ bool SieveEditorManageSieveWidget::refreshList()
             last->setText(0, i18n("(Disabled) %1", last->text(0)));
         } else {
             KManageSieve::SieveJob *job = KManageSieve::SieveJob::list(u);
+            job->setProperty("sieveaccount", QVariant::fromValue(conf.account));
             connect(job, &KManageSieve::SieveJob::gotList, this, &SieveEditorManageSieveWidget::slotGotList);
             mJobs.insert(job, last);
             mUrls.insert(last, u);

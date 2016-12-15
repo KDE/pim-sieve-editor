@@ -27,7 +27,9 @@ namespace Ui
 {
 class ServerSieveSettings;
 }
-
+namespace MailTransport {
+class ServerTest;
+}
 class ServerSieveSettings : public QWidget
 {
     Q_OBJECT
@@ -56,10 +58,14 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void slotUserServerNameChanged();
+    void slotTest();
 
+    void slotFinished(const QList<int> &testResult);
+    void slotEncryptionRadioChanged();
 private:
     void populateDefaultAuthenticationOptions();
     Ui::ServerSieveSettings *ui;
+    MailTransport::ServerTest *mServerTest;
 };
 
 #endif // SERVERSIEVESETTINGS_H

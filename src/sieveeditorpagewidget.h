@@ -38,7 +38,7 @@ public:
     explicit SieveEditorPageWidget(QWidget *parent = Q_NULLPTR);
     ~SieveEditorPageWidget();
 
-    void loadScript(const QUrl &url, const QStringList &capabilities);
+    void loadScript(const QUrl &url, const QStringList &capabilities, const KSieveUi::SieveImapAccountSettings &sieveAccount);
     QUrl currentUrl() const;
     void setCurrentUrl(const QUrl &url);
     void setIsNewScript(bool isNewScript);

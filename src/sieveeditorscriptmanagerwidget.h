@@ -25,6 +25,10 @@
 
 class SieveEditorManageSieveWidget;
 class QTreeWidgetItem;
+namespace KSieveUi
+{
+class SieveImapAccountSettings;
+}
 class SieveEditorScriptManagerWidget : public QWidget
 {
     Q_OBJECT
@@ -38,7 +42,7 @@ public:
     void refreshList();
 
 Q_SIGNALS:
-    void createScriptPage(const QUrl &url, const QStringList &capabilities, bool isNewScript);
+    void createScriptPage(const QUrl &url, const QStringList &capabilities, bool isNewScript, const KSieveUi::SieveImapAccountSettings &sieveAccount);
     void updateButtons(bool newScriptAction, bool editScriptAction, bool deleteScriptAction, bool desactivateScriptAction);
     void scriptDeleted(const QUrl &url);
     void serverSieveFound(bool hasServerSieve);
@@ -50,8 +54,8 @@ public Q_SLOTS:
     void slotRefreshList();
 
 private Q_SLOTS:
-    void slotNewScript(const QUrl &url, const QStringList &capabilities);
-    void slotEditScript(const QUrl &url, const QStringList &capabilities);
+    void slotNewScript(const QUrl &url, const QStringList &capabilities, const KSieveUi::SieveImapAccountSettings &sieveAccount);
+    void slotEditScript(const QUrl &url, const QStringList &capabilities, const KSieveUi::SieveImapAccountSettings &sieveAccount);
     void slotUpdateButtons(QTreeWidgetItem *item);
 
 private:

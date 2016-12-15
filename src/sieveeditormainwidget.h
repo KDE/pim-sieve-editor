@@ -101,7 +101,7 @@ Q_SIGNALS:
     void sieveEditorTabCurrentChanged();
 
 private Q_SLOTS:
-    void slotCreateScriptPage(const QUrl &url, const QStringList &capabilities, bool isNewScript);
+    void slotCreateScriptPage(const QUrl &url, const QStringList &capabilities, bool isNewScript, const KSieveUi::SieveImapAccountSettings &sieveAccount);
     void slotScriptDeleted(const QUrl &url);
     void slotScriptRenamed(const QUrl &oldUrl, const QUrl &newUrl);
     void slotScriptModified(bool modified, SieveEditorPageWidget *page);

@@ -23,7 +23,7 @@
 #include <QString>
 #include <QUrl>
 #include <MailTransport/mailtransport/transport.h>
-#include <KSieveUi/SieveAccount>
+#include <KSieveUi/SieveImapAccountSettings>
 namespace KWallet
 {
 class Wallet;
@@ -38,7 +38,7 @@ struct SieveServerConfig {
     }
 
     QUrl url() const;
-    KSieveUi::SieveAccount account;
+    KSieveUi::SieveImapAccountSettings account;
     bool enabled;
 };
 

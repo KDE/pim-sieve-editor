@@ -20,8 +20,9 @@
 #include "serversievesettings.h"
 #include "ui_serversievesettings.h"
 #include <MailTransport/mailtransport/transport.h>
-
+#include <MailTransport/ServerTest>
 #include <KLocalizedString>
+#include <KMessageBox>
 #include "sieveeditor_debug.h"
 
 /** static helper functions **/
@@ -79,10 +80,17 @@ static void setCurrentAuthMode(QComboBox *authCombo, MailTransport::Transport::E
 
 ServerSieveSettings::ServerSieveSettings(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::ServerSieveSettings)
+    ui(new Ui::ServerSieveSettings),
+    mServerTest(Q_NULLPTR)
 {
     ui->setupUi(this);
     ui->serversievelabel->setMinimumSize(ui->serversievelabel->sizeHint());
+    ui->testInfo->clear();
+    ui->testInfo->hide();
+    ui->testProgress->hide();
+
+    connect(ui->testButton, &QPushButton::pressed, this, &ServerSieveSettings::slotTest);
+
     populateDefaultAuthenticationOptions();
     connect(ui->serverName, &QLineEdit::textChanged, this, &ServerSieveSettings::slotUserServerNameChanged);
     connect(ui->userName, &QLineEdit::textChanged, this, &ServerSieveSettings::slotUserServerNameChanged);
@@ -170,4 +178,98 @@ SieveEditorUtil::SieveServerConfig ServerSieveSettings::serverSieveConfig() cons
     const MailTransport::Transport::EnumAuthenticationType::type authtype = getCurrentAuthMode(ui->authenticationCombo);
     conf.account.setAuthenticationType(authtype);
     return conf;
+}
+
+void ServerSieveSettings::slotTest()
+{
+    //qCDebug(SIEVEEDITOR_LOG) << ui->imapServer->text();
+    ui->testButton->setEnabled(false);
+    ui->safeImap->setEnabled(false);
+    ui->authenticationCombo->setEnabled(false);
+
+    ui->testInfo->clear();
+    ui->testInfo->hide();
+
+    delete mServerTest;
+    mServerTest = new MailTransport::ServerTest(this);
+#ifndef QT_NO_CURSOR
+    qApp->setOverrideCursor(Qt::BusyCursor);
+#endif
+
+
+    const QString server = serverName();
+    const int portValue = ui->portSpin->value();
+    qCDebug(SIEVEEDITOR_LOG) << "server: " << server << "port: " << portValue;
+
+    mServerTest->setServer(server);
+
+    if (portValue != 143 && portValue != 993) {
+        mServerTest->setPort(MailTransport::Transport::EnumEncryption::None, portValue);
+        mServerTest->setPort(MailTransport::Transport::EnumEncryption::SSL, portValue);
+    }
+
+    mServerTest->setProtocol(QStringLiteral("imap"));
+    mServerTest->setProgressBar(ui->testProgress);
+    connect(mServerTest, &MailTransport::ServerTest::finished, this, &ServerSieveSettings::slotFinished);
+    mServerTest->start();
+}
+
+void ServerSieveSettings::slotFinished(const QList<int> &testResult)
+{
+    qCDebug(SIEVEEDITOR_LOG) << testResult;
+
+#ifndef QT_NO_CURSOR
+    qApp->restoreOverrideCursor();
+#endif
+    using namespace MailTransport;
+
+    if (!mServerTest->isNormalPossible() && !mServerTest->isSecurePossible()) {
+        KMessageBox::sorry(this, i18n("Unable to connect to the server, please verify the server address."));
+    }
+
+    ui->testInfo->show();
+
+    ui->sslRadio->setEnabled(testResult.contains(Transport::EnumEncryption::SSL));
+    ui->tlsRadio->setEnabled(testResult.contains(Transport::EnumEncryption::TLS));
+    ui->noRadio->setEnabled(testResult.contains(Transport::EnumEncryption::None));
+
+    QString text;
+    if (testResult.contains(Transport::EnumEncryption::TLS)) {
+        ui->tlsRadio->setChecked(true);
+        text = i18n("<qt><b>TLS is supported and recommended.</b></qt>");
+    } else if (testResult.contains(Transport::EnumEncryption::SSL)) {
+        ui->sslRadio->setChecked(true);
+        text = i18n("<qt><b>SSL is supported and recommended.</b></qt>");
+    } else if (testResult.contains(Transport::EnumEncryption::None)) {
+        ui->noRadio->setChecked(true);
+        text = i18n("<qt><b>No security is supported. It is not "
+                    "recommended to connect to this server.</b></qt>");
+    } else {
+        text = i18n("<qt><b>It is not possible to use this server.</b></qt>");
+    }
+    ui->testInfo->setText(text);
+
+    ui->testButton->setEnabled(true);
+    ui->safeImap->setEnabled(true);
+    ui->authenticationCombo->setEnabled(true);
+    //slotEncryptionRadioChanged();
+    //slotSafetyChanged();
+}
+
+void ServerSieveSettings::slotEncryptionRadioChanged()
+{
+#if 0
+    // TODO these really should be defined somewhere else
+    switch (ui->safeImapGroup->checkedId()) {
+    case KIMAP::LoginJob::Unencrypted:
+    case KIMAP::LoginJob::TlsV1:
+        m_ui->portSpin->setValue(143);
+        break;
+    case KIMAP::LoginJob::AnySslVersion:
+        m_ui->portSpin->setValue(993);
+        break;
+    default:
+        qFatal("Shouldn't happen");
+    }
+#endif
 }

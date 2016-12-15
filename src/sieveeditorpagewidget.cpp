@@ -85,10 +85,11 @@ void SieveEditorPageWidget::setIsNewScript(bool isNewScript)
     mIsNewScript = isNewScript;
 }
 
-void SieveEditorPageWidget::loadScript(const QUrl &url, const QStringList &capabilities)
+void SieveEditorPageWidget::loadScript(const QUrl &url, const QStringList &capabilities, const KSieveUi::SieveImapAccountSettings &sieveAccount)
 {
     mCurrentURL = url;
     mSieveEditorWidget->setSieveCapabilities(capabilities);
+    mSieveEditorWidget->setSieveImapAccountSettings(sieveAccount);
     mSieveEditorWidget->setReadOnly(true);
     mSieveEditorWidget->wordWrap(SieveEditorGlobalConfig::self()->wrapText());
     KManageSieve::SieveJob *job = KManageSieve::SieveJob::get(url);
