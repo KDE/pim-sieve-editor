@@ -30,6 +30,22 @@ class Wallet;
 }
 namespace SieveEditorUtil
 {
+struct SieveAccountSettings
+{
+    SieveAccountSettings()
+        : authenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN),
+          port(-1)
+    {
+
+    }
+
+    QString serverName;
+    QString userName;
+    QString password;
+    MailTransport::Transport::EnumAuthenticationType::type authenticationType;
+    int port;
+};
+
 struct SieveServerConfig {
     SieveServerConfig()
         : enabled(true)
@@ -38,7 +54,8 @@ struct SieveServerConfig {
     }
 
     QUrl url() const;
-    KSieveUi::SieveImapAccountSettings account;
+    SieveAccountSettings sieveSettings;
+    KSieveUi::SieveImapAccountSettings sieveImapAccountSettings;
     bool enabled;
 };
 

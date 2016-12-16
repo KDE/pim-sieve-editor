@@ -33,13 +33,13 @@
 QUrl SieveEditorUtil::SieveServerConfig::url() const
 {
     QUrl u;
-    u.setHost(account.serverName());
-    u.setUserName(account.userName());
-    u.setPassword(account.password());
-    u.setPort(account.port());
+    u.setHost(sieveSettings.serverName);
+    u.setUserName(sieveSettings.userName);
+    u.setPassword(sieveSettings.password);
+    u.setPort(sieveSettings.port);
 
     QString authStr;
-    switch (account.authenticationType()) {
+    switch (sieveSettings.authenticationType) {
     case MailTransport::Transport::EnumAuthenticationType::CLEAR:
     case MailTransport::Transport::EnumAuthenticationType::PLAIN:
         authStr = QStringLiteral("PLAIN");
@@ -84,17 +84,17 @@ QVector<SieveEditorUtil::SieveServerConfig> SieveEditorUtil::readServerSieveConf
     Q_FOREACH (const QString &conf, groups) {
         SieveServerConfig sieve;
         KConfigGroup group = cfg->group(conf);
-        sieve.account.setPort(group.readEntry(QStringLiteral("Port"), 0));
-        sieve.account.setServerName(group.readEntry(QStringLiteral("ServerName")));
-        sieve.account.setUserName(group.readEntry(QStringLiteral("UserName")));
+        sieve.sieveSettings.port = group.readEntry(QStringLiteral("Port"), 0);
+        sieve.sieveSettings.serverName = group.readEntry(QStringLiteral("ServerName"));
+        sieve.sieveSettings.userName = group.readEntry(QStringLiteral("UserName"));
         sieve.enabled = group.readEntry(QStringLiteral("Enabled"), true);
-        const QString walletEntry = sieve.account.userName() + QLatin1Char('@') + sieve.account.serverName();
+        const QString walletEntry = sieve.sieveSettings.userName + QLatin1Char('@') + sieve.sieveSettings.serverName;
         if (wallet && wallet->hasEntry(walletEntry)) {
             QString passwd;
             wallet->readPassword(walletEntry, passwd);
-            sieve.account.setPassword(passwd);
+            sieve.sieveSettings.password = passwd;
         }
-        sieve.account.setAuthenticationType(static_cast<MailTransport::Transport::EnumAuthenticationType::type>(group.readEntry(QStringLiteral("Authentication"), static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN))));
+        sieve.sieveSettings.authenticationType = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(group.readEntry(QStringLiteral("Authentication"), static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
         lstConfig.append(sieve);
     }
     return lstConfig;
@@ -131,15 +131,15 @@ void SieveEditorUtil::writeServerSieveConfig(const QVector<SieveServerConfig> &l
 void SieveEditorUtil::writeSieveSettings(KWallet::Wallet *wallet, KSharedConfigPtr cfg, const SieveEditorUtil::SieveServerConfig &conf, int index)
 {
     KConfigGroup group = cfg->group(QStringLiteral("ServerSieve %1").arg(index));
-    group.writeEntry(QStringLiteral("Port"), conf.account.port());
-    group.writeEntry(QStringLiteral("ServerName"), conf.account.serverName());
-    group.writeEntry(QStringLiteral("UserName"), conf.account.userName());
+    group.writeEntry(QStringLiteral("Port"), conf.sieveSettings.port);
+    group.writeEntry(QStringLiteral("ServerName"), conf.sieveSettings.serverName);
+    group.writeEntry(QStringLiteral("UserName"), conf.sieveSettings.userName);
     group.writeEntry(QStringLiteral("Enabled"), conf.enabled);
-    const QString walletEntry = conf.account.userName() + QLatin1Char('@') + conf.account.serverName();
+    const QString walletEntry = conf.sieveSettings.userName + QLatin1Char('@') + conf.sieveSettings.serverName;
     if (wallet) {
-        wallet->writePassword(walletEntry, conf.account.password());
+        wallet->writePassword(walletEntry, conf.sieveSettings.password);
     }
-    group.writeEntry(QStringLiteral("Authentication"), static_cast<int>(conf.account.authenticationType()));
+    group.writeEntry(QStringLiteral("Authentication"), static_cast<int>(conf.sieveSettings.authenticationType));
 }
 
 void SieveEditorUtil::addServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf)

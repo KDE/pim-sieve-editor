@@ -35,11 +35,11 @@ SieveEditorUtilTest::~SieveEditorUtilTest()
 void SieveEditorUtilTest::shouldHaveDefaultValue()
 {
     SieveEditorUtil::SieveServerConfig config;
-    QVERIFY(config.account.userName().isEmpty());
-    QVERIFY(config.account.password().isEmpty());
-    QVERIFY(config.account.serverName().isEmpty());
-    QCOMPARE(config.account.authenticationType(), MailTransport::Transport::EnumAuthenticationType::PLAIN);
-    QCOMPARE(config.account.port(), -1);
+    QVERIFY(config.sieveSettings.userName.isEmpty());
+    QVERIFY(config.sieveSettings.password.isEmpty());
+    QVERIFY(config.sieveSettings.serverName.isEmpty());
+    QCOMPARE(config.sieveSettings.authenticationType, MailTransport::Transport::EnumAuthenticationType::PLAIN);
+    QCOMPARE(config.sieveSettings.port, -1);
     QVERIFY(config.enabled);
 }
 

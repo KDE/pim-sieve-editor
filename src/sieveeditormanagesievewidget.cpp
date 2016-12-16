@@ -47,7 +47,7 @@ bool SieveEditorManageSieveWidget::refreshList()
     const QVector<SieveEditorUtil::SieveServerConfig> listConfig = SieveEditorUtil::readServerSieveConfig();
     Q_FOREACH (const SieveEditorUtil::SieveServerConfig &conf, listConfig) {
         last = new SieveTreeWidgetItem(treeView(), last);
-        last->setText(0, conf.account.serverName() + QStringLiteral(" (%1)").arg(conf.account.userName()));
+        last->setText(0, conf.sieveSettings.serverName + QStringLiteral(" (%1)").arg(conf.sieveSettings.userName));
         last->setIcon(0, QIcon::fromTheme(QStringLiteral("network-server")));
 
         const QUrl u = conf.url();
@@ -61,7 +61,7 @@ bool SieveEditorManageSieveWidget::refreshList()
             last->setText(0, i18n("(Disabled) %1", last->text(0)));
         } else {
             KManageSieve::SieveJob *job = KManageSieve::SieveJob::list(u);
-            job->setProperty("sieveimapaccountsettings", QVariant::fromValue(conf.account));
+            job->setProperty("sieveimapaccountsettings", QVariant::fromValue(conf.sieveImapAccountSettings));
             connect(job, &KManageSieve::SieveJob::gotList, this, &SieveEditorManageSieveWidget::slotGotList);
             mJobs.insert(job, last);
             mUrls.insert(last, u);
