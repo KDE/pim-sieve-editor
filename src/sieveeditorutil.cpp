@@ -100,17 +100,24 @@ QVector<SieveEditorUtil::SieveServerConfig> SieveEditorUtil::readServerSieveConf
         //Imap Account Settings
         sieve.sieveImapAccountSettings.setPort(group.readEntry(QStringLiteral("ImapPort"), 0));
         sieve.sieveImapAccountSettings.setServerName(group.readEntry(QStringLiteral("ImapServerName")));
-        sieve.sieveImapAccountSettings.setUserName(group.readEntry(QStringLiteral("UserName")));
+        sieve.sieveImapAccountSettings.setUserName(group.readEntry(QStringLiteral("ImapUserName")));
         sieve.sieveImapAccountSettings.setAuthenticationType(
                     static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(group.readEntry(QStringLiteral("ImapAuthentication"), static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
         sieve.sieveImapAccountSettings.setEncryptionMode(
                     static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(KSieveUi::SieveImapAccountSettings::TlsV1))));
 
-        const QString imapWalletEntry = QLatin1String("Imap") + sieve.sieveImapAccountSettings.userName() + QLatin1Char('@') + sieve.sieveImapAccountSettings.serverName();
-        if (wallet && wallet->hasEntry(imapWalletEntry)) {
-            QString passwd;
-            wallet->readPassword(imapWalletEntry, passwd);
-            sieve.sieveImapAccountSettings.setPassword(passwd);
+        if (!sieve.sieveImapAccountSettings.userName().isEmpty() && !sieve.sieveImapAccountSettings.serverName().isEmpty()) {
+            const QString imapWalletEntry = QLatin1String("Imap") + sieve.sieveImapAccountSettings.userName() + QLatin1Char('@') + sieve.sieveImapAccountSettings.serverName();
+            if (wallet && wallet->hasEntry(imapWalletEntry)) {
+                QString passwd;
+                wallet->readPassword(imapWalletEntry, passwd);
+                sieve.sieveImapAccountSettings.setPassword(passwd);
+            }
+        } else {
+            //Use Sieve Account Settings
+            sieve.sieveImapAccountSettings.setUserName(sieve.sieveSettings.userName);
+            sieve.sieveImapAccountSettings.setServerName(sieve.sieveSettings.serverName);
+            sieve.sieveImapAccountSettings.setPassword(sieve.sieveSettings.password);
         }
         lstConfig.append(sieve);
     }
@@ -160,15 +167,19 @@ void SieveEditorUtil::writeSieveSettings(KWallet::Wallet *wallet, KSharedConfigP
 
 
     //Imap Account Settings
-    group.readEntry(QStringLiteral("ImapPort"), conf.sieveImapAccountSettings.port());
-    group.readEntry(QStringLiteral("ImapServerName"), conf.sieveImapAccountSettings.serverName());
-    group.readEntry(QStringLiteral("UserName"), conf.sieveImapAccountSettings.userName());
-    group.readEntry(QStringLiteral("ImapAuthentication"), static_cast<int>(conf.sieveImapAccountSettings.authenticationType()));
-    group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(conf.sieveImapAccountSettings.encryptionMode()));
+    group.writeEntry(QStringLiteral("ImapPort"), conf.sieveImapAccountSettings.port());
+    group.writeEntry(QStringLiteral("ImapAuthentication"), static_cast<int>(conf.sieveImapAccountSettings.authenticationType()));
+    group.writeEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(conf.sieveImapAccountSettings.encryptionMode()));
 
-    const QString imapWalletEntry = QLatin1String("Imap") + conf.sieveImapAccountSettings.userName() + QLatin1Char('@') + conf.sieveImapAccountSettings.serverName();
-    if (wallet) {
-        wallet->writePassword(imapWalletEntry, conf.sieveImapAccountSettings.password());
+    if ((conf.sieveImapAccountSettings.serverName() != conf.sieveSettings.serverName) && (conf.sieveImapAccountSettings.userName() != conf.sieveSettings.userName)) {
+        group.writeEntry(QStringLiteral("ImapServerName"), conf.sieveImapAccountSettings.serverName());
+        group.writeEntry(QStringLiteral("ImapUserName"), conf.sieveImapAccountSettings.userName());
+        if (!conf.sieveImapAccountSettings.serverName().isEmpty() && !conf.sieveImapAccountSettings.userName().isEmpty()) {
+            const QString imapWalletEntry = QLatin1String("Imap") + conf.sieveImapAccountSettings.userName() + QLatin1Char('@') + conf.sieveImapAccountSettings.serverName();
+            if (wallet) {
+                wallet->writePassword(imapWalletEntry, conf.sieveImapAccountSettings.password());
+            }
+        }
     }
 }
 
