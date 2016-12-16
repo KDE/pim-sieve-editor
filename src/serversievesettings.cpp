@@ -159,6 +159,46 @@ void ServerSieveSettings::setPassword(const QString &pass)
     ui->password->setText(pass);
 }
 
+QString ServerSieveSettings::imapServerName() const
+{
+    return ui->imapServerName->text().trimmed();
+}
+
+void ServerSieveSettings::setImapServerName(const QString &name)
+{
+    ui->imapServerName->setText(name);
+}
+
+int ServerSieveSettings::imapPort() const
+{
+    return ui->imapPort->value();
+}
+
+void ServerSieveSettings::setImapPort(int value)
+{
+    ui->imapPort->setValue(value);
+}
+
+QString ServerSieveSettings::imapSerName() const
+{
+    return ui->imapUserName->text().trimmed();
+}
+
+void ServerSieveSettings::setImapUserName(const QString &name)
+{
+    ui->imapUserName->setText(name);
+}
+
+QString ServerSieveSettings::imapPassword() const
+{
+    return ui->imapPassword->text();
+}
+
+void ServerSieveSettings::setImapPassword(const QString &pass)
+{
+    ui->imapPassword->setText(pass);
+}
+
 void ServerSieveSettings::setServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf)
 {
     setPassword(conf.sieveSettings.password);
@@ -177,6 +217,11 @@ SieveEditorUtil::SieveServerConfig ServerSieveSettings::serverSieveConfig() cons
     conf.sieveSettings.userName = userName();
     const MailTransport::Transport::EnumAuthenticationType::type authtype = getCurrentAuthMode(ui->authenticationCombo);
     conf.sieveSettings.authenticationType = authtype;
+
+    if (ui->alternateServer->isChecked()) {
+        //conf.sieveImapAccountSettings.setPassword();
+    }
+
     return conf;
 }
 
@@ -197,8 +242,9 @@ void ServerSieveSettings::slotTest()
 #endif
 
 
-    const QString server = serverName();
-    const int portValue = ui->portSpin->value();
+    //TODO use sieve setting if necessary
+    const QString server = imapServerName();
+    const int portValue = ui->imapPort->value();
     qCDebug(SIEVEEDITOR_LOG) << "server: " << server << "port: " << portValue;
 
     mServerTest->setServer(server);

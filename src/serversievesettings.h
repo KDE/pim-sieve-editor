@@ -53,6 +53,18 @@ public:
     void setServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf);
     SieveEditorUtil::SieveServerConfig serverSieveConfig() const;
 
+    QString imapServerName() const;
+    void setImapServerName(const QString &name);
+
+    int imapPort() const;
+    void setImapPort(int value);
+
+    QString imapSerName() const;
+    void setImapUserName(const QString &name);
+
+    QString imapPassword() const;
+    void setImapPassword(const QString &pass);
+
 Q_SIGNALS:
     void enableOkButton(bool enabled);
 
