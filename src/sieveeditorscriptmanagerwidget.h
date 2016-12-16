@@ -42,7 +42,7 @@ public:
     void refreshList();
 
 Q_SIGNALS:
-    void createScriptPage(const QUrl &url, const QStringList &capabilities, bool isNewScript, const KSieveUi::SieveImapAccountSettings &sieveAccount);
+    void createScriptPage(const QUrl &url, const QStringList &capabilities, bool isNewScript, const KSieveUi::SieveImapAccountSettings &sieveImapAccountSettings);
     void updateButtons(bool newScriptAction, bool editScriptAction, bool deleteScriptAction, bool desactivateScriptAction);
     void scriptDeleted(const QUrl &url);
     void serverSieveFound(bool hasServerSieve);
@@ -54,8 +54,8 @@ public Q_SLOTS:
     void slotRefreshList();
 
 private Q_SLOTS:
-    void slotNewScript(const QUrl &url, const QStringList &capabilities, const KSieveUi::SieveImapAccountSettings &sieveAccount);
-    void slotEditScript(const QUrl &url, const QStringList &capabilities, const KSieveUi::SieveImapAccountSettings &sieveAccount);
+    void slotNewScript(const QUrl &url, const QStringList &capabilities, const KSieveUi::SieveImapAccountSettings &sieveImapAccountSettings);
+    void slotEditScript(const QUrl &url, const QStringList &capabilities, const KSieveUi::SieveImapAccountSettings &sieveImapAccountSettings);
     void slotUpdateButtons(QTreeWidgetItem *item);
 
 private:

@@ -120,7 +120,7 @@ void SieveEditorMainWidget::slotScriptRenamed(const QUrl &oldUrl, const QUrl &ne
     updateStackedWidget();
 }
 
-void SieveEditorMainWidget::slotCreateScriptPage(const QUrl &url, const QStringList &capabilities, bool isNewScript, const KSieveUi::SieveImapAccountSettings &sieveAccount)
+void SieveEditorMainWidget::slotCreateScriptPage(const QUrl &url, const QStringList &capabilities, bool isNewScript, const KSieveUi::SieveImapAccountSettings &sieveImapAccountSettings)
 {
     QWidget *page = hasExistingPage(url);
     if (page) {
@@ -135,7 +135,7 @@ void SieveEditorMainWidget::slotCreateScriptPage(const QUrl &url, const QStringL
         connect(editor, &SieveEditorPageWidget::copyAvailable, this, &SieveEditorMainWidget::copyAvailable);
         connect(editor, &SieveEditorPageWidget::sieveEditorTabCurrentChanged, this, &SieveEditorMainWidget::sieveEditorTabCurrentChanged);
         editor->setIsNewScript(isNewScript);
-        editor->loadScript(url, capabilities, sieveAccount);
+        editor->loadScript(url, capabilities, sieveImapAccountSettings);
         mTabWidget->addTab(editor, url.fileName());
         mTabWidget->setCurrentWidget(editor);
         if (isNewScript) {
