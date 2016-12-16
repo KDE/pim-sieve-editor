@@ -258,6 +258,10 @@ SieveEditorUtil::SieveServerConfig ServerSieveSettings::serverSieveConfig() cons
         conf.sieveImapAccountSettings.setPassword(imapPassword());
         conf.sieveImapAccountSettings.setUserName(imapUserName());
         conf.sieveImapAccountSettings.setServerName(imapServerName());
+    } else {
+        conf.sieveImapAccountSettings.setPassword(password());
+        conf.sieveImapAccountSettings.setUserName(userName());
+        conf.sieveImapAccountSettings.setServerName(serverName());
     }
     conf.sieveImapAccountSettings.setPort(imapPort());
     conf.sieveImapAccountSettings.setAuthenticationType(authenticationType());
