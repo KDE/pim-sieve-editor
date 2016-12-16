@@ -211,6 +211,16 @@ void ServerSieveSettings::setImapPassword(const QString &pass)
     ui->imapPassword->setText(pass);
 }
 
+void ServerSieveSettings::setAuthenticationType(KSieveUi::SieveImapAccountSettings::AuthenticationMode type)
+{
+    setCurrentAuthMode(ui->imapAuthenticationCombo, static_cast<MailTransport::Transport::EnumAuthenticationType::type>(type));
+}
+
+KSieveUi::SieveImapAccountSettings::AuthenticationMode ServerSieveSettings::authenticationType() const
+{
+    return static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(getCurrentAuthMode(ui->imapAuthenticationCombo));
+}
+
 void ServerSieveSettings::setServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf)
 {
     setPassword(conf.sieveSettings.password);
@@ -225,8 +235,8 @@ void ServerSieveSettings::setServerSieveConfig(const SieveEditorUtil::SieveServe
         setImapServerName(conf.sieveImapAccountSettings.serverName());
     }
     setImapPort(conf.sieveImapAccountSettings.port());
+    setAuthenticationType(conf.sieveImapAccountSettings.authenticationType());
     //TODO encryption
-    //TODO auth
 }
 
 SieveEditorUtil::SieveServerConfig ServerSieveSettings::serverSieveConfig() const
@@ -246,8 +256,8 @@ SieveEditorUtil::SieveServerConfig ServerSieveSettings::serverSieveConfig() cons
         conf.sieveImapAccountSettings.setServerName(imapServerName());
     }
     conf.sieveImapAccountSettings.setPort(imapPort());
+    conf.sieveImapAccountSettings.setAuthenticationType(authenticationType());
     //TODO encryption
-    //TODO auth
 
     return conf;
 }

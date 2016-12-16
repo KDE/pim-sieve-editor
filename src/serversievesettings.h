@@ -66,6 +66,8 @@ public:
     QString imapPassword() const;
     void setImapPassword(const QString &pass);
 
+    void setAuthenticationType(KSieveUi::SieveImapAccountSettings::AuthenticationMode type);
+    KSieveUi::SieveImapAccountSettings::AuthenticationMode authenticationType() const;
 Q_SIGNALS:
     void enableOkButton(bool enabled);
 
