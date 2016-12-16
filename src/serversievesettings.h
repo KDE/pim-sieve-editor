@@ -78,12 +78,6 @@ private Q_SLOTS:
     void slotFinished(const QList<int> &testResult);
     void slotEncryptionRadioChanged();
 private:
-    enum LoginEncryption {
-        Unencrypted = 0,
-        AnySslVersion = 1,
-        TlsV1 = 2
-    };
-
     void populateDefaultAuthenticationOptions(QComboBox *combobox);
     void slotSafetyChanged();
     void populateDefaultComboBoxAuthenticationOptions();
