@@ -236,7 +236,11 @@ void ServerSieveSettings::setServerSieveConfig(const SieveEditorUtil::SieveServe
     }
     setImapPort(conf.sieveImapAccountSettings.port());
     setAuthenticationType(conf.sieveImapAccountSettings.authenticationType());
-    //TODO encryption
+
+    QAbstractButton *safetyButton = ui->safeImapGroup->button(conf.sieveImapAccountSettings.encryptionMode());
+    if (safetyButton) {
+        safetyButton->setChecked(true);
+    }
 }
 
 SieveEditorUtil::SieveServerConfig ServerSieveSettings::serverSieveConfig() const
@@ -257,8 +261,7 @@ SieveEditorUtil::SieveServerConfig ServerSieveSettings::serverSieveConfig() cons
     }
     conf.sieveImapAccountSettings.setPort(imapPort());
     conf.sieveImapAccountSettings.setAuthenticationType(authenticationType());
-    //TODO encryption
-
+    conf.sieveImapAccountSettings.setEncryptionMode(static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(ui->safeImapGroup->checkedId()));
     return conf;
 }
 
@@ -278,9 +281,7 @@ void ServerSieveSettings::slotTest()
     qApp->setOverrideCursor(Qt::BusyCursor);
 #endif
 
-
-    //TODO use sieve setting if necessary
-    const QString server = imapServerName();
+    const QString server = imapServerName().isEmpty() ? serverName() : imapServerName();
     const int portValue = ui->imapPort->value();
     qCDebug(SIEVEEDITOR_LOG) << "server: " << server << "port: " << portValue;
 
@@ -336,7 +337,7 @@ void ServerSieveSettings::slotFinished(const QList<int> &testResult)
     ui->safeImap->setEnabled(true);
     ui->authenticationCombo->setEnabled(true);
     slotEncryptionRadioChanged();
-    //slotSafetyChanged();
+    slotSafetyChanged();
 }
 
 void ServerSieveSettings::slotEncryptionRadioChanged()
