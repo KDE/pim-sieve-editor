@@ -157,6 +157,19 @@ void SieveEditorUtil::writeSieveSettings(KWallet::Wallet *wallet, KSharedConfigP
         wallet->writePassword(walletEntry, conf.sieveSettings.password);
     }
     group.writeEntry(QStringLiteral("Authentication"), static_cast<int>(conf.sieveSettings.authenticationType));
+
+
+    //Imap Account Settings
+    group.readEntry(QStringLiteral("ImapPort"), conf.sieveImapAccountSettings.port());
+    group.readEntry(QStringLiteral("ImapServerName"), conf.sieveImapAccountSettings.serverName());
+    group.readEntry(QStringLiteral("UserName"), conf.sieveImapAccountSettings.userName());
+    group.readEntry(QStringLiteral("ImapAuthentication"), static_cast<int>(conf.sieveImapAccountSettings.authenticationType()));
+    group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(conf.sieveImapAccountSettings.encryptionMode()));
+
+    const QString imapWalletEntry = QLatin1String("Imap") + conf.sieveImapAccountSettings.userName() + QLatin1Char('@') + conf.sieveImapAccountSettings.serverName();
+    if (wallet) {
+        wallet->writePassword(imapWalletEntry, conf.sieveImapAccountSettings.password());
+    }
 }
 
 void SieveEditorUtil::addServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf)
