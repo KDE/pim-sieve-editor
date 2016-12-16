@@ -84,6 +84,7 @@ QVector<SieveEditorUtil::SieveServerConfig> SieveEditorUtil::readServerSieveConf
     Q_FOREACH (const QString &conf, groups) {
         SieveServerConfig sieve;
         KConfigGroup group = cfg->group(conf);
+        //Sieve Account Settings
         sieve.sieveSettings.port = group.readEntry(QStringLiteral("Port"), 0);
         sieve.sieveSettings.serverName = group.readEntry(QStringLiteral("ServerName"));
         sieve.sieveSettings.userName = group.readEntry(QStringLiteral("UserName"));
@@ -95,6 +96,22 @@ QVector<SieveEditorUtil::SieveServerConfig> SieveEditorUtil::readServerSieveConf
             sieve.sieveSettings.password = passwd;
         }
         sieve.sieveSettings.authenticationType = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(group.readEntry(QStringLiteral("Authentication"), static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
+
+        //Imap Account Settings
+        sieve.sieveImapAccountSettings.setPort(group.readEntry(QStringLiteral("ImapPort"), 0));
+        sieve.sieveImapAccountSettings.setServerName(group.readEntry(QStringLiteral("ImapServerName")));
+        sieve.sieveImapAccountSettings.setUserName(group.readEntry(QStringLiteral("UserName")));
+        sieve.sieveImapAccountSettings.setAuthenticationType(
+                    static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(group.readEntry(QStringLiteral("ImapAuthentication"), static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
+        sieve.sieveImapAccountSettings.setEncryptionMode(
+                    static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(KSieveUi::SieveImapAccountSettings::TlsV1))));
+
+        const QString imapWalletEntry = QLatin1String("Imap") + sieve.sieveImapAccountSettings.userName() + QLatin1Char('@') + sieve.sieveImapAccountSettings.serverName();
+        if (wallet && wallet->hasEntry(imapWalletEntry)) {
+            QString passwd;
+            wallet->readPassword(imapWalletEntry, passwd);
+            sieve.sieveImapAccountSettings.setPassword(passwd);
+        }
         lstConfig.append(sieve);
     }
     return lstConfig;
