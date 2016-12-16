@@ -89,9 +89,14 @@ ServerSieveSettings::ServerSieveSettings(QWidget *parent) :
     ui->testInfo->hide();
     ui->testProgress->hide();
 
+    ui->safeImapGroup->setId(ui->noRadio, Unencrypted);
+    ui->safeImapGroup->setId(ui->sslRadio, AnySslVersion);
+    ui->safeImapGroup->setId(ui->tlsRadio, TlsV1);
+
+
     connect(ui->testButton, &QPushButton::pressed, this, &ServerSieveSettings::slotTest);
 
-    populateDefaultAuthenticationOptions();
+    populateDefaultComboBoxAuthenticationOptions();
     connect(ui->serverName, &QLineEdit::textChanged, this, &ServerSieveSettings::slotUserServerNameChanged);
     connect(ui->userName, &QLineEdit::textChanged, this, &ServerSieveSettings::slotUserServerNameChanged);
 }
@@ -101,17 +106,24 @@ ServerSieveSettings::~ServerSieveSettings()
     delete ui;
 }
 
-void ServerSieveSettings::populateDefaultAuthenticationOptions()
+
+void ServerSieveSettings::populateDefaultComboBoxAuthenticationOptions()
 {
-    ui->authenticationCombo->clear();
-    addAuthenticationItem(ui->authenticationCombo, MailTransport::Transport::EnumAuthenticationType::CLEAR);
-    addAuthenticationItem(ui->authenticationCombo, MailTransport::Transport::EnumAuthenticationType::LOGIN);
-    addAuthenticationItem(ui->authenticationCombo, MailTransport::Transport::EnumAuthenticationType::PLAIN);
-    addAuthenticationItem(ui->authenticationCombo, MailTransport::Transport::EnumAuthenticationType::CRAM_MD5);
-    addAuthenticationItem(ui->authenticationCombo, MailTransport::Transport::EnumAuthenticationType::DIGEST_MD5);
-    addAuthenticationItem(ui->authenticationCombo, MailTransport::Transport::EnumAuthenticationType::NTLM);
-    addAuthenticationItem(ui->authenticationCombo, MailTransport::Transport::EnumAuthenticationType::GSSAPI);
-    addAuthenticationItem(ui->authenticationCombo, MailTransport::Transport::EnumAuthenticationType::ANONYMOUS);
+    populateDefaultAuthenticationOptions(ui->authenticationCombo);
+    populateDefaultAuthenticationOptions(ui->imapAuthenticationCombo);
+}
+
+void ServerSieveSettings::populateDefaultAuthenticationOptions(QComboBox *combobox)
+{
+    combobox->clear();
+    addAuthenticationItem(combobox, MailTransport::Transport::EnumAuthenticationType::CLEAR);
+    addAuthenticationItem(combobox, MailTransport::Transport::EnumAuthenticationType::LOGIN);
+    addAuthenticationItem(combobox, MailTransport::Transport::EnumAuthenticationType::PLAIN);
+    addAuthenticationItem(combobox, MailTransport::Transport::EnumAuthenticationType::CRAM_MD5);
+    addAuthenticationItem(combobox, MailTransport::Transport::EnumAuthenticationType::DIGEST_MD5);
+    addAuthenticationItem(combobox, MailTransport::Transport::EnumAuthenticationType::NTLM);
+    addAuthenticationItem(combobox, MailTransport::Transport::EnumAuthenticationType::GSSAPI);
+    addAuthenticationItem(combobox, MailTransport::Transport::EnumAuthenticationType::ANONYMOUS);
 }
 
 void ServerSieveSettings::slotUserServerNameChanged()
@@ -179,7 +191,7 @@ void ServerSieveSettings::setImapPort(int value)
     ui->imapPort->setValue(value);
 }
 
-QString ServerSieveSettings::imapSerName() const
+QString ServerSieveSettings::imapUserName() const
 {
     return ui->imapUserName->text().trimmed();
 }
@@ -206,6 +218,15 @@ void ServerSieveSettings::setServerSieveConfig(const SieveEditorUtil::SieveServe
     setServerName(conf.sieveSettings.serverName);
     setUserName(conf.sieveSettings.userName);
     setCurrentAuthMode(ui->authenticationCombo, conf.sieveSettings.authenticationType);
+    ui->alternateServer->setChecked(conf.useImapCustomServer);
+    if (conf.useImapCustomServer) {
+        setImapPassword(conf.sieveImapAccountSettings.password());
+        setImapUserName(conf.sieveImapAccountSettings.userName());
+        setImapServerName(conf.sieveImapAccountSettings.serverName());
+    }
+    setImapPort(conf.sieveImapAccountSettings.port());
+    //TODO encryption
+    //TODO auth
 }
 
 SieveEditorUtil::SieveServerConfig ServerSieveSettings::serverSieveConfig() const
@@ -218,9 +239,15 @@ SieveEditorUtil::SieveServerConfig ServerSieveSettings::serverSieveConfig() cons
     const MailTransport::Transport::EnumAuthenticationType::type authtype = getCurrentAuthMode(ui->authenticationCombo);
     conf.sieveSettings.authenticationType = authtype;
 
+    conf.useImapCustomServer = ui->alternateServer->isChecked();
     if (ui->alternateServer->isChecked()) {
-        //conf.sieveImapAccountSettings.setPassword();
+        conf.sieveImapAccountSettings.setPassword(imapPassword());
+        conf.sieveImapAccountSettings.setUserName(imapUserName());
+        conf.sieveImapAccountSettings.setServerName(imapServerName());
     }
+    conf.sieveImapAccountSettings.setPort(imapPort());
+    //TODO encryption
+    //TODO auth
 
     return conf;
 }
@@ -298,24 +325,64 @@ void ServerSieveSettings::slotFinished(const QList<int> &testResult)
     ui->testButton->setEnabled(true);
     ui->safeImap->setEnabled(true);
     ui->authenticationCombo->setEnabled(true);
-    //slotEncryptionRadioChanged();
+    slotEncryptionRadioChanged();
     //slotSafetyChanged();
 }
 
 void ServerSieveSettings::slotEncryptionRadioChanged()
 {
-#if 0
-    // TODO these really should be defined somewhere else
     switch (ui->safeImapGroup->checkedId()) {
-    case KIMAP::LoginJob::Unencrypted:
-    case KIMAP::LoginJob::TlsV1:
-        m_ui->portSpin->setValue(143);
+    case Unencrypted:
+    case TlsV1:
+        ui->imapPort->setValue(143);
         break;
-    case KIMAP::LoginJob::AnySslVersion:
-        m_ui->portSpin->setValue(993);
+    case AnySslVersion:
+        ui->imapPort->setValue(993);
         break;
     default:
         qFatal("Shouldn't happen");
     }
-#endif
+}
+
+void ServerSieveSettings::slotSafetyChanged()
+{
+    if (mServerTest == Q_NULLPTR) {
+        qCDebug(SIEVEEDITOR_LOG) << "serverTest null";
+        ui->noRadio->setEnabled(true);
+        ui->sslRadio->setEnabled(true);
+        ui->tlsRadio->setEnabled(true);
+
+        ui->authenticationCombo->setEnabled(true);
+        return;
+    }
+
+    QList<int> protocols;
+
+    switch (ui->safeImapGroup->checkedId()) {
+    case Unencrypted :
+        qCDebug(SIEVEEDITOR_LOG) << "safeImapGroup: unencrypted";
+        protocols = mServerTest->normalProtocols();
+        break;
+    case AnySslVersion:
+        protocols = mServerTest->secureProtocols();
+        qCDebug(SIEVEEDITOR_LOG) << "safeImapGroup: SSL";
+        break;
+    case TlsV1:
+        protocols = mServerTest->tlsProtocols();
+        qCDebug(SIEVEEDITOR_LOG) << "safeImapGroup: starttls";
+        break;
+    default:
+        qFatal("Shouldn't happen");
+    }
+
+    ui->authenticationCombo->clear();
+    addAuthenticationItem(ui->imapAuthenticationCombo, MailTransport::Transport::EnumAuthenticationType::CLEAR);
+    foreach (int prot, protocols) {
+        addAuthenticationItem(ui->imapAuthenticationCombo, (MailTransport::Transport::EnumAuthenticationType::type) prot);
+    }
+    if (protocols.isEmpty()) {
+        qCDebug(SIEVEEDITOR_LOG) << "no authmodes found";
+    } else {
+        setCurrentAuthMode(ui->imapAuthenticationCombo, (MailTransport::Transport::EnumAuthenticationType::type) protocols.first());
+    }
 }

@@ -41,6 +41,7 @@ void SieveEditorUtilTest::shouldHaveDefaultValue()
     QCOMPARE(config.sieveSettings.authenticationType, MailTransport::Transport::EnumAuthenticationType::PLAIN);
     QCOMPARE(config.sieveSettings.port, -1);
     QVERIFY(config.enabled);
+    QVERIFY(!config.useImapCustomServer);
 }
 
 QTEST_APPLESS_MAIN(SieveEditorUtilTest)

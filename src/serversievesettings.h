@@ -30,6 +30,7 @@ class ServerSieveSettings;
 namespace MailTransport {
 class ServerTest;
 }
+class QComboBox;
 class ServerSieveSettings : public QWidget
 {
     Q_OBJECT
@@ -59,7 +60,7 @@ public:
     int imapPort() const;
     void setImapPort(int value);
 
-    QString imapSerName() const;
+    QString imapUserName() const;
     void setImapUserName(const QString &name);
 
     QString imapPassword() const;
@@ -75,7 +76,15 @@ private Q_SLOTS:
     void slotFinished(const QList<int> &testResult);
     void slotEncryptionRadioChanged();
 private:
-    void populateDefaultAuthenticationOptions();
+    enum LoginEncryption {
+        Unencrypted = 0,
+        AnySslVersion = 1,
+        TlsV1 = 2
+    };
+
+    void populateDefaultAuthenticationOptions(QComboBox *combobox);
+    void slotSafetyChanged();
+    void populateDefaultComboBoxAuthenticationOptions();
     Ui::ServerSieveSettings *ui;
     MailTransport::ServerTest *mServerTest;
 };

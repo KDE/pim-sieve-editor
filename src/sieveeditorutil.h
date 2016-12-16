@@ -48,7 +48,8 @@ struct SieveAccountSettings
 
 struct SieveServerConfig {
     SieveServerConfig()
-        : enabled(true)
+        : enabled(true),
+          useImapCustomServer(false)
     {
 
     }
@@ -57,6 +58,7 @@ struct SieveServerConfig {
     SieveAccountSettings sieveSettings;
     KSieveUi::SieveImapAccountSettings sieveImapAccountSettings;
     bool enabled;
+    bool useImapCustomServer;
 };
 
 QVector<SieveServerConfig> readServerSieveConfig();

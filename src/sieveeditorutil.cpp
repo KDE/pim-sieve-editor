@@ -116,11 +116,13 @@ QVector<SieveEditorUtil::SieveServerConfig> SieveEditorUtil::readServerSieveConf
                 wallet->readPassword(imapWalletEntry, passwd);
                 sieve.sieveImapAccountSettings.setPassword(passwd);
             }
+            sieve.useImapCustomServer = true;
         } else {
             //Use Sieve Account Settings
             sieve.sieveImapAccountSettings.setUserName(sieve.sieveSettings.userName);
             sieve.sieveImapAccountSettings.setServerName(sieve.sieveSettings.serverName);
             sieve.sieveImapAccountSettings.setPassword(sieve.sieveSettings.password);
+            sieve.useImapCustomServer = false;
         }
         lstConfig.append(sieve);
     }
@@ -177,6 +179,7 @@ void SieveEditorUtil::writeSieveSettings(KWallet::Wallet *wallet, const KSharedC
     if ((conf.sieveImapAccountSettings.serverName() != conf.sieveSettings.serverName) && (conf.sieveImapAccountSettings.userName() != conf.sieveSettings.userName)
             && !conf.sieveImapAccountSettings.serverName().isEmpty()
             && !conf.sieveImapAccountSettings.userName().isEmpty()) {
+        group.writeEntry(QStringLiteral("useImapCustomServer"), true);
         group.writeEntry(QStringLiteral("ImapServerName"), conf.sieveImapAccountSettings.serverName());
         group.writeEntry(QStringLiteral("ImapUserName"), conf.sieveImapAccountSettings.userName());
         const QString imapWalletEntry = QLatin1String("Imap") + conf.sieveImapAccountSettings.userName() + QLatin1Char('@') + conf.sieveImapAccountSettings.serverName();
