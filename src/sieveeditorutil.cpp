@@ -152,7 +152,7 @@ void SieveEditorUtil::writeServerSieveConfig(const QVector<SieveServerConfig> &l
     cfg->reparseConfiguration();
 }
 
-void SieveEditorUtil::writeSieveSettings(KWallet::Wallet *wallet, KSharedConfigPtr cfg, const SieveEditorUtil::SieveServerConfig &conf, int index)
+void SieveEditorUtil::writeSieveSettings(KWallet::Wallet *wallet, const KSharedConfigPtr &cfg, const SieveEditorUtil::SieveServerConfig &conf, int index)
 {
     KConfigGroup group = cfg->group(QStringLiteral("ServerSieve %1").arg(index));
     group.writeEntry(QStringLiteral("Port"), conf.sieveSettings.port);
