@@ -45,7 +45,7 @@ bool SieveEditorManageSieveWidget::refreshList()
     SieveTreeWidgetItem *last = Q_NULLPTR;
 
     const QVector<SieveEditorUtil::SieveServerConfig> listConfig = SieveEditorUtil::readServerSieveConfig();
-    Q_FOREACH (const SieveEditorUtil::SieveServerConfig &conf, listConfig) {
+    for (const SieveEditorUtil::SieveServerConfig &conf : listConfig) {
         last = new SieveTreeWidgetItem(treeView(), last);
         last->setText(0, conf.sieveSettings.serverName + QStringLiteral(" (%1)").arg(conf.sieveSettings.userName));
         last->setIcon(0, QIcon::fromTheme(QStringLiteral("network-server")));

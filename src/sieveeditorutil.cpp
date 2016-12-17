@@ -81,7 +81,7 @@ QVector<SieveEditorUtil::SieveServerConfig> SieveEditorUtil::readServerSieveConf
         wallet->setFolder(QStringLiteral("sieveeditor"));
     }
 
-    Q_FOREACH (const QString &conf, groups) {
+    for (const QString &conf : groups) {
         SieveServerConfig sieve;
         KConfigGroup group = cfg->group(conf);
         //Sieve Account Settings
@@ -135,7 +135,7 @@ void SieveEditorUtil::writeServerSieveConfig(const QVector<SieveServerConfig> &l
     const QRegularExpression re(QStringLiteral("^ServerSieve (.+)$"));
     //Delete Old Group
     const QStringList groups = cfg->groupList().filter(re);
-    Q_FOREACH (const QString &conf, groups) {
+    for (const QString &conf : groups) {
         KConfigGroup group = cfg->group(conf);
         group.deleteGroup();
     }
@@ -149,7 +149,7 @@ void SieveEditorUtil::writeServerSieveConfig(const QVector<SieveServerConfig> &l
         wallet->setFolder(QStringLiteral("sieveeditor"));
     }
 
-    Q_FOREACH (const SieveEditorUtil::SieveServerConfig &conf, lstConfig) {
+    for (const SieveEditorUtil::SieveServerConfig &conf : lstConfig) {
         writeSieveSettings(wallet, cfg, conf, i);
         ++i;
     }
