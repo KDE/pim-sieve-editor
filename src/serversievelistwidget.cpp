@@ -58,6 +58,7 @@ void ServerSieveListWidget::writeConfig()
         }
     }
     SieveEditorUtil::writeServerSieveConfig(lstServerConfig);
+    SieveEditorUtil::deletePasswords(mNeedToRemovePasswordInWallet);
 }
 
 void ServerSieveListWidget::modifyServerConfig()
@@ -76,6 +77,18 @@ void ServerSieveListWidget::modifyServerConfig()
         serverSieveListItem->setServerConfig(dlg->serverSieveConfig());
     }
     delete dlg;
+}
+
+void ServerSieveListWidget::deleteServerConfig(QListWidgetItem *item)
+{
+    ServerSieveListWidgetItem *serverSieveListItem = static_cast<ServerSieveListWidgetItem *>(item);
+    SieveEditorUtil::SieveServerConfig conf = serverSieveListItem->serverConfig();
+
+    mNeedToRemovePasswordInWallet.append(SieveEditorUtil::sievePasswordIdentifier(conf.sieveSettings.userName, conf.sieveSettings.serverName));
+    const QString imapIdentifier = SieveEditorUtil::imapPasswordIdentifier(conf.sieveImapAccountSettings.userName(), conf.sieveImapAccountSettings.serverName());
+    if (!imapIdentifier.isEmpty()) {
+        mNeedToRemovePasswordInWallet.append(imapIdentifier);
+    }
 }
 
 void ServerSieveListWidget::addServerConfig()

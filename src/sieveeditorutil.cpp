@@ -157,6 +157,16 @@ void SieveEditorUtil::writeServerSieveConfig(const QVector<SieveServerConfig> &l
     cfg->reparseConfiguration();
 }
 
+QString SieveEditorUtil::sievePasswordIdentifier(const QString &userName, const QString &serverName)
+{
+    return userName + QLatin1Char('@') + serverName;
+}
+
+QString SieveEditorUtil::imapPasswordIdentifier(const QString &userName, const QString &serverName)
+{
+    return QLatin1String("Imap") + userName + QLatin1Char('@') + serverName;
+}
+
 void SieveEditorUtil::writeSieveSettings(KWallet::Wallet *wallet, const KSharedConfigPtr &cfg, const SieveEditorUtil::SieveServerConfig &conf, int index)
 {
     KConfigGroup group = cfg->group(QStringLiteral("ServerSieve %1").arg(index));
@@ -164,7 +174,7 @@ void SieveEditorUtil::writeSieveSettings(KWallet::Wallet *wallet, const KSharedC
     group.writeEntry(QStringLiteral("ServerName"), conf.sieveSettings.serverName);
     group.writeEntry(QStringLiteral("UserName"), conf.sieveSettings.userName);
     group.writeEntry(QStringLiteral("Enabled"), conf.enabled);
-    const QString walletEntry = conf.sieveSettings.userName + QLatin1Char('@') + conf.sieveSettings.serverName;
+    const QString walletEntry = SieveEditorUtil::sievePasswordIdentifier(conf.sieveSettings.userName, conf.sieveSettings.serverName);
     if (wallet) {
         wallet->writePassword(walletEntry, conf.sieveSettings.password);
     }
@@ -182,7 +192,7 @@ void SieveEditorUtil::writeSieveSettings(KWallet::Wallet *wallet, const KSharedC
         group.writeEntry(QStringLiteral("useImapCustomServer"), true);
         group.writeEntry(QStringLiteral("ImapServerName"), conf.sieveImapAccountSettings.serverName());
         group.writeEntry(QStringLiteral("ImapUserName"), conf.sieveImapAccountSettings.userName());
-        const QString imapWalletEntry = QLatin1String("Imap") + conf.sieveImapAccountSettings.userName() + QLatin1Char('@') + conf.sieveImapAccountSettings.serverName();
+        const QString imapWalletEntry = imapPasswordIdentifier(conf.sieveImapAccountSettings.userName(), conf.sieveImapAccountSettings.serverName());
         if (wallet) {
             wallet->writePassword(imapWalletEntry, conf.sieveImapAccountSettings.password());
         }
@@ -204,4 +214,22 @@ void SieveEditorUtil::addServerSieveConfig(const SieveEditorUtil::SieveServerCon
 
     writeSieveSettings(wallet, cfg, conf, groups.count());
     cfg->sync();
+}
+
+
+void SieveEditorUtil::deletePasswords(const QStringList &identifiers)
+{
+    if (!identifiers.isEmpty()) {
+        KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
+        if (wallet && wallet->isOpen()) {
+            if (wallet->hasFolder(QStringLiteral("sieveeditor"))) {
+                wallet->setFolder(QStringLiteral("sieveeditor"));
+                for (const QString &identifier : identifiers) {
+                    if (wallet->hasEntry(identifier)) {
+                        wallet->removeEntry(identifier);
+                    }
+                }
+            }
+        }
+    }
 }

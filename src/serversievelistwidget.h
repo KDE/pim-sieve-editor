@@ -45,10 +45,14 @@ public:
 
     void readConfig();
     void writeConfig();
-    void addServerConfig();
+    void addServerConfig();    
+    void deleteServerConfig(QListWidgetItem *item);
 
 public Q_SLOTS:
     void modifyServerConfig();
+
+private:
+    QStringList mNeedToRemovePasswordInWallet;
 };
 
 #endif // SERVERSIEVELISTWIDGET_H
