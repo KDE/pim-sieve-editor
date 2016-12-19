@@ -68,7 +68,8 @@ void ImportImapSettingWizard::initializeWizard()
     mListCheckJob.insert(akonadiJob->name(), akonadiJob);
 
     bool hasSettingToImport = false;
-    Q_FOREACH (AbstractImapSettingsCheckJob *job, mListCheckJob.values()) {
+    const QList<AbstractImapSettingsCheckJob *> listJob = mListCheckJob.values();
+    for (AbstractImapSettingsCheckJob *job : listJob) {
         if (job->settingsCanBeImported()) {
             hasSettingToImport = true;
             break;

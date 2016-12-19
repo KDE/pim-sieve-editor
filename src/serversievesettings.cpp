@@ -398,6 +398,6 @@ void ServerSieveSettings::slotSafetyChanged()
     if (protocols.isEmpty()) {
         qCDebug(SIEVEEDITOR_LOG) << "no authmodes found";
     } else {
-        setCurrentAuthMode(ui->imapAuthenticationCombo, (MailTransport::Transport::EnumAuthenticationType::type) protocols.first());
+        setCurrentAuthMode(ui->imapAuthenticationCombo, (MailTransport::Transport::EnumAuthenticationType::type) protocols.constFirst());
     }
 }
