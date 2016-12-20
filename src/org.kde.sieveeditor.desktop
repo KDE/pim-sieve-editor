@@ -42,7 +42,6 @@ Exec=sieveeditor
 Icon=kmail
 X-DocPath=sieveeditor/index.html
 GenericName=Sieve Editor
-GenericName[ast]=Editor Sieve
 GenericName[bs]=Sieve uređivač
 GenericName[ca]=Editor de «Sieve»
 GenericName[ca@valencia]=Editor de «Sieve»
