@@ -102,9 +102,9 @@ QVector<SieveEditorUtil::SieveServerConfig> SieveEditorUtil::readServerSieveConf
         sieve.sieveImapAccountSettings.setServerName(group.readEntry(QStringLiteral("ImapServerName")));
         sieve.sieveImapAccountSettings.setUserName(group.readEntry(QStringLiteral("ImapUserName")));
         sieve.sieveImapAccountSettings.setAuthenticationType(
-                    static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(group.readEntry(QStringLiteral("ImapAuthentication"), static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
+            static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(group.readEntry(QStringLiteral("ImapAuthentication"), static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
         sieve.sieveImapAccountSettings.setEncryptionMode(
-                    static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(KSieveUi::SieveImapAccountSettings::TlsV1))));
+            static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(KSieveUi::SieveImapAccountSettings::TlsV1))));
 
         if (!sieve.sieveImapAccountSettings.userName().isEmpty() &&
                 !sieve.sieveImapAccountSettings.serverName().isEmpty() &&
@@ -180,7 +180,6 @@ void SieveEditorUtil::writeSieveSettings(KWallet::Wallet *wallet, const KSharedC
     }
     group.writeEntry(QStringLiteral("Authentication"), static_cast<int>(conf.sieveSettings.authenticationType));
 
-
     //Imap Account Settings
     group.writeEntry(QStringLiteral("ImapPort"), conf.sieveImapAccountSettings.port());
     group.writeEntry(QStringLiteral("ImapAuthentication"), static_cast<int>(conf.sieveImapAccountSettings.authenticationType()));
@@ -215,7 +214,6 @@ void SieveEditorUtil::addServerSieveConfig(const SieveEditorUtil::SieveServerCon
     writeSieveSettings(wallet, cfg, conf, groups.count());
     cfg->sync();
 }
-
 
 void SieveEditorUtil::deletePasswords(const QStringList &identifiers)
 {

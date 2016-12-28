@@ -27,7 +27,8 @@ namespace Ui
 {
 class ServerSieveSettings;
 }
-namespace MailTransport {
+namespace MailTransport
+{
 class ServerTest;
 }
 class QComboBox;

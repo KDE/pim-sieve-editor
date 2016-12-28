@@ -93,7 +93,6 @@ ServerSieveSettings::ServerSieveSettings(QWidget *parent) :
     ui->safeImapGroup->setId(ui->sslRadio, KSieveUi::SieveImapAccountSettings::AnySslVersion);
     ui->safeImapGroup->setId(ui->tlsRadio, KSieveUi::SieveImapAccountSettings::TlsV1);
 
-
     connect(ui->testButton, &QPushButton::pressed, this, &ServerSieveSettings::slotTest);
 
     populateDefaultComboBoxAuthenticationOptions();
@@ -105,7 +104,6 @@ ServerSieveSettings::~ServerSieveSettings()
 {
     delete ui;
 }
-
 
 void ServerSieveSettings::populateDefaultComboBoxAuthenticationOptions()
 {

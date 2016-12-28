@@ -30,8 +30,7 @@ class Wallet;
 }
 namespace SieveEditorUtil
 {
-struct SieveAccountSettings
-{
+struct SieveAccountSettings {
     SieveAccountSettings()
         : authenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN),
           port(-1)
