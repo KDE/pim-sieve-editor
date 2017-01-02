@@ -26,7 +26,7 @@ class SieveEditorConfigureServerPage : public QWidget
 {
     Q_OBJECT
 public:
-    explicit SieveEditorConfigureServerPage(QWidget *parent = Q_NULLPTR);
+    explicit SieveEditorConfigureServerPage(QWidget *parent = nullptr);
     ~SieveEditorConfigureServerPage();
 
 Q_SIGNALS:

@@ -26,7 +26,7 @@ class SieveEditorManageSieveWidget : public KSieveUi::ManageSieveWidget
 {
     Q_OBJECT
 public:
-    explicit SieveEditorManageSieveWidget(QWidget *parent = Q_NULLPTR);
+    explicit SieveEditorManageSieveWidget(QWidget *parent = nullptr);
     virtual ~SieveEditorManageSieveWidget();
 
 protected:

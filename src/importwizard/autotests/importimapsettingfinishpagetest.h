@@ -26,7 +26,7 @@ class ImportImapSettingFinishPageTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ImportImapSettingFinishPageTest(QObject *parent = Q_NULLPTR);
+    explicit ImportImapSettingFinishPageTest(QObject *parent = nullptr);
     ~ImportImapSettingFinishPageTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

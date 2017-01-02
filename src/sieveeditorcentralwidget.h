@@ -28,7 +28,7 @@ class SieveEditorCentralWidget : public QStackedWidget
 {
     Q_OBJECT
 public:
-    explicit SieveEditorCentralWidget(QWidget *parent = Q_NULLPTR, KActionCollection *ac = Q_NULLPTR);
+    explicit SieveEditorCentralWidget(QWidget *parent = nullptr, KActionCollection *ac = nullptr);
     ~SieveEditorCentralWidget();
 
     SieveEditorMainWidget *sieveEditorMainWidget() const;

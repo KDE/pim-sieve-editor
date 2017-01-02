@@ -26,7 +26,7 @@ class ImportImapSettingProgressPageTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ImportImapSettingProgressPageTest(QObject *parent = Q_NULLPTR);
+    explicit ImportImapSettingProgressPageTest(QObject *parent = nullptr);
     ~ImportImapSettingProgressPageTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

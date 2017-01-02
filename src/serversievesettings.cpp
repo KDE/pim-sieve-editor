@@ -81,7 +81,7 @@ static void setCurrentAuthMode(QComboBox *authCombo, MailTransport::Transport::E
 ServerSieveSettings::ServerSieveSettings(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ServerSieveSettings),
-    mServerTest(Q_NULLPTR)
+    mServerTest(nullptr)
 {
     ui->setupUi(this);
     ui->serversievelabel->setMinimumSize(ui->serversievelabel->sizeHint());
@@ -359,7 +359,7 @@ void ServerSieveSettings::slotEncryptionRadioChanged()
 
 void ServerSieveSettings::slotSafetyChanged()
 {
-    if (mServerTest == Q_NULLPTR) {
+    if (mServerTest == nullptr) {
         qCDebug(SIEVEEDITOR_LOG) << "serverTest null";
         ui->noRadio->setEnabled(true);
         ui->sslRadio->setEnabled(true);

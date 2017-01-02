@@ -36,7 +36,7 @@ class SieveEditorMainWindow : public KXmlGuiWindow
 {
     Q_OBJECT
 public:
-    explicit SieveEditorMainWindow(QWidget *parent = Q_NULLPTR);
+    explicit SieveEditorMainWindow(QWidget *parent = nullptr);
     ~SieveEditorMainWindow();
 
     QString currentHelpTitle() const;

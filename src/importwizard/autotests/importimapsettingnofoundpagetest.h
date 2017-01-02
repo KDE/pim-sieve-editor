@@ -26,7 +26,7 @@ class ImportImapSettingNoFoundPageTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ImportImapSettingNoFoundPageTest(QObject *parent = Q_NULLPTR);
+    explicit ImportImapSettingNoFoundPageTest(QObject *parent = nullptr);
     ~ImportImapSettingNoFoundPageTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

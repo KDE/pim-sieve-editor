@@ -26,7 +26,7 @@ class ImportImapSettingsAkonadiCheckJobTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ImportImapSettingsAkonadiCheckJobTest(QObject *parent = Q_NULLPTR);
+    explicit ImportImapSettingsAkonadiCheckJobTest(QObject *parent = nullptr);
     ~ImportImapSettingsAkonadiCheckJobTest();
 
 };

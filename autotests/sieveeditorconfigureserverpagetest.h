@@ -26,7 +26,7 @@ class SieveEditorConfigureServerPageTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit SieveEditorConfigureServerPageTest(QObject *parent = Q_NULLPTR);
+    explicit SieveEditorConfigureServerPageTest(QObject *parent = nullptr);
     ~SieveEditorConfigureServerPageTest();
 
 private Q_SLOTS:

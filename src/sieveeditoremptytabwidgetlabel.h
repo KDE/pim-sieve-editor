@@ -46,7 +46,7 @@ class SieveEditorEmptyTabWidgetLabel : public QLabel
 {
     Q_OBJECT
 public:
-    explicit SieveEditorEmptyTabWidgetLabel(QWidget *parent = Q_NULLPTR);
+    explicit SieveEditorEmptyTabWidgetLabel(QWidget *parent = nullptr);
     ~SieveEditorEmptyTabWidgetLabel();
 
 private:

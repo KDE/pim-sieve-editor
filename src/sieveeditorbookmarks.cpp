@@ -27,7 +27,7 @@
 SieveEditorBookmarks::SieveEditorBookmarks(SieveEditorMainWindow *mainWindow, KActionCollection *collection, QMenu *menu, QObject *parent)
     : QObject(parent),
       KBookmarkOwner(),
-      mBookmarkMenu(Q_NULLPTR),
+      mBookmarkMenu(nullptr),
       mMenu(menu),
       mMainWindow(mainWindow)
 {

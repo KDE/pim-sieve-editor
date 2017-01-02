@@ -32,7 +32,7 @@ class SieveEditorConfigureServerWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit SieveEditorConfigureServerWidget(QWidget *parent = Q_NULLPTR);
+    explicit SieveEditorConfigureServerWidget(QWidget *parent = nullptr);
     ~SieveEditorConfigureServerWidget();
 
     void readConfig();

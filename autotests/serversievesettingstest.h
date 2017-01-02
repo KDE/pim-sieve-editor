@@ -26,7 +26,7 @@ class ServerSieveSettingsTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ServerSieveSettingsTest(QObject *parent = Q_NULLPTR);
+    explicit ServerSieveSettingsTest(QObject *parent = nullptr);
     ~ServerSieveSettingsTest();
 
 private Q_SLOTS:

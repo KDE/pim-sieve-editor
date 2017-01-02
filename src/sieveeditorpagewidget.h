@@ -35,7 +35,7 @@ class SieveEditorPageWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit SieveEditorPageWidget(QWidget *parent = Q_NULLPTR);
+    explicit SieveEditorPageWidget(QWidget *parent = nullptr);
     ~SieveEditorPageWidget();
 
     void loadScript(const QUrl &url, const QStringList &capabilities, const KSieveUi::SieveImapAccountSettings &sieveImapAccountSettings);

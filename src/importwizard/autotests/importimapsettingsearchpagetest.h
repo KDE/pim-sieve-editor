@@ -26,7 +26,7 @@ class ImportImapSettingSearchPageTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ImportImapSettingSearchPageTest(QObject *parent = Q_NULLPTR);
+    explicit ImportImapSettingSearchPageTest(QObject *parent = nullptr);
     ~ImportImapSettingSearchPageTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

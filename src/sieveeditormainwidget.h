@@ -34,7 +34,7 @@ class SieveEditorMainWidget : public QSplitter
 {
     Q_OBJECT
 public:
-    explicit SieveEditorMainWidget(KActionCollection *ac, QWidget *parent = Q_NULLPTR);
+    explicit SieveEditorMainWidget(KActionCollection *ac, QWidget *parent = nullptr);
     ~SieveEditorMainWidget();
 
     void createNewScript();

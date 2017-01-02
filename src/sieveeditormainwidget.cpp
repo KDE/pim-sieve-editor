@@ -86,7 +86,7 @@ QWidget *SieveEditorMainWidget::hasExistingPage(const QUrl &url)
             }
         }
     }
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 void SieveEditorMainWidget::updateStackedWidget()
