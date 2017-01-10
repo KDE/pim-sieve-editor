@@ -27,7 +27,7 @@ class ImportImapSettingSearchPage : public QWidget
 {
     Q_OBJECT
 public:
-    ImportImapSettingSearchPage(QWidget *parent = Q_NULLPTR);
+    ImportImapSettingSearchPage(QWidget *parent = nullptr);
     ~ImportImapSettingSearchPage();
 
     void setProgramList(const QStringList &lst);

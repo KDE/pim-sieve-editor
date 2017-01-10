@@ -26,7 +26,7 @@ class ImportImapSettingNoFoundPage : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ImportImapSettingNoFoundPage(QWidget *parent = Q_NULLPTR);
+    explicit ImportImapSettingNoFoundPage(QWidget *parent = nullptr);
     ~ImportImapSettingNoFoundPage();
 };
 

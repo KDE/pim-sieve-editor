@@ -26,7 +26,7 @@ class ImportImapSettingFinishPage : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ImportImapSettingFinishPage(QWidget *parent = Q_NULLPTR);
+    explicit ImportImapSettingFinishPage(QWidget *parent = nullptr);
     ~ImportImapSettingFinishPage();
 
     void setImportResult(const QString &result);

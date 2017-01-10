@@ -26,7 +26,7 @@ class ImportImapSettingsThunderbirdCheckJob : public AbstractImapSettingsCheckJo
 {
     Q_OBJECT
 public:
-    explicit ImportImapSettingsThunderbirdCheckJob(QObject *parent = Q_NULLPTR);
+    explicit ImportImapSettingsThunderbirdCheckJob(QObject *parent = nullptr);
     ~ImportImapSettingsThunderbirdCheckJob();
 
     void start() Q_DECL_OVERRIDE;

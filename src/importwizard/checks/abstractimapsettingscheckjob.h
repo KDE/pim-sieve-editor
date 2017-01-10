@@ -26,7 +26,7 @@ class AbstractImapSettingsCheckJob : public QObject
 {
     Q_OBJECT
 public:
-    explicit AbstractImapSettingsCheckJob(QObject *parent = Q_NULLPTR);
+    explicit AbstractImapSettingsCheckJob(QObject *parent = nullptr);
     ~AbstractImapSettingsCheckJob();
     virtual void start() = 0;
 

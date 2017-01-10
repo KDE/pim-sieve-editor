@@ -26,7 +26,7 @@ class ImportImapSettingProgressPage : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ImportImapSettingProgressPage(QWidget *parent = Q_NULLPTR);
+    explicit ImportImapSettingProgressPage(QWidget *parent = nullptr);
     ~ImportImapSettingProgressPage();
     void addProgressInfo(const QString &str);
     void setSelectedPrograms(const QStringList &programs);

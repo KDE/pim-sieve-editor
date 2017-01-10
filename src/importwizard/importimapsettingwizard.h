@@ -32,7 +32,7 @@ class ImportImapSettingWizard : public KAssistantDialog
 {
     Q_OBJECT
 public:
-    explicit ImportImapSettingWizard(QWidget *parent = Q_NULLPTR);
+    explicit ImportImapSettingWizard(QWidget *parent = nullptr);
     ~ImportImapSettingWizard();
 
     void next() Q_DECL_OVERRIDE;

@@ -26,7 +26,7 @@ class ImportImapSettingsAkonadiCheckJob : public AbstractImapSettingsCheckJob
 {
     Q_OBJECT
 public:
-    explicit ImportImapSettingsAkonadiCheckJob(QObject *parent = Q_NULLPTR);
+    explicit ImportImapSettingsAkonadiCheckJob(QObject *parent = nullptr);
     ~ImportImapSettingsAkonadiCheckJob();
 
     void start() Q_DECL_OVERRIDE;
