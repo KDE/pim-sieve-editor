@@ -19,6 +19,8 @@
 
 #include "importimapsettingsakonadicheckjob.h"
 #include <KLocalizedString>
+#include <QStandardPaths>
+#include <QDir>
 
 ImportImapSettingsAkonadiCheckJob::ImportImapSettingsAkonadiCheckJob(QObject *parent)
     : AbstractImapSettingsCheckJob(parent)
@@ -38,7 +40,17 @@ void ImportImapSettingsAkonadiCheckJob::start()
 
 bool ImportImapSettingsAkonadiCheckJob::settingsCanBeImported() const
 {
-    //TODO look at if we have imap akonadi account
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory);
+    for (const QString &dir : dirs) {
+        const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.rc"));
+        for (const QString &file : fileNames) {
+            if (file.startsWith(QStringLiteral("akonadi_kolab_resource")) ||
+                    file.startsWith(QStringLiteral("akonadi_imap_resource"))) {
+                return true;
+            }
+        }
+    }
+
     return false;
 }
 

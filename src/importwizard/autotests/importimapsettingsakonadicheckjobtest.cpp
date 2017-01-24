@@ -20,11 +20,12 @@
 #include "importimapsettingsakonadicheckjobtest.h"
 
 #include <QTest>
+#include <QStandardPaths>
 
 ImportImapSettingsAkonadiCheckJobTest::ImportImapSettingsAkonadiCheckJobTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 ImportImapSettingsAkonadiCheckJobTest::~ImportImapSettingsAkonadiCheckJobTest()
