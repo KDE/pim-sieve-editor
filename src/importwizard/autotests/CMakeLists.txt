@@ -14,3 +14,4 @@ add_sieveeditor_importwizard_unittest(importimapsettingnofoundpagetest.cpp "../i
 add_sieveeditor_importwizard_unittest(importimapsettingsakonadicheckjobtest.cpp "../checks/importimapsettingsakonadicheckjob.cpp;../checks/abstractimapsettingscheckjob.cpp")
 add_sieveeditor_importwizard_unittest(importimapsettingprogresspagetest.cpp "../importimapsettingprogresspage.cpp")
 add_sieveeditor_importwizard_unittest(importimapsettingfinishpagetest.cpp "../importimapsettingfinishpage.cpp")
+add_sieveeditor_importwizard_unittest(importimapsettingsthunderbirdcheckjobtest.cpp "../checks/importimapsettingsthunderbirdcheckjob.cpp;../checks/abstractimapsettingscheckjob.cpp")
