@@ -158,8 +158,8 @@ void SieveEditorMainWindow::setupActions()
     mRefreshList->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
     ac->setDefaultShortcut(mRefreshList, QKeySequence(Qt::Key_F5));
 
-    mGoToLine = ac->addAction(QStringLiteral("gotoline"), mMainWidget->sieveEditorMainWidget(), SLOT(slotGoToLine()));
-    mGoToLine->setText(i18n("Go to Line..."));
+    mGoToLine = new QAction(i18n("Go to Line..."), this);
+    connect(mGoToLine, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotGoToLine);
     mGoToLine->setIcon(QIcon::fromTheme(QStringLiteral("go-jump")));
     ac->setDefaultShortcut(mGoToLine, QKeySequence(Qt::CTRL + Qt::Key_G));
     mGoToLine->setEnabled(false);
@@ -254,8 +254,9 @@ void SieveEditorMainWindow::setupActions()
 
     mPrintPreviewAction = KStandardAction::printPreview(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotPrintPreview, ac);
 
-    act = ac->addAction(QStringLiteral("import_imap_settings"), this, SLOT(slotImportImapSettings()));
-    act->setText(i18n("Import IMAP Settings..."));
+    act = new QAction(i18n("Import IMAP Settings..."), this);
+    ac->addAction(QStringLiteral("import_imap_settings"), act);
+    connect(act, &QAction::triggered, this, &SieveEditorMainWindow::slotImportImapSettings);
 }
 
 void SieveEditorMainWindow::slotImportImapSettings()
