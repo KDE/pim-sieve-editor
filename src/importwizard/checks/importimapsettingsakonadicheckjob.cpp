@@ -18,6 +18,7 @@
 */
 
 #include "importimapsettingsakonadicheckjob.h"
+#include "sieveeditor_debug.h"
 #include <KLocalizedString>
 #include <QStandardPaths>
 #include <QDir>
@@ -35,6 +36,23 @@ ImportImapSettingsAkonadiCheckJob::~ImportImapSettingsAkonadiCheckJob()
 
 void ImportImapSettingsAkonadiCheckJob::start()
 {
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory);
+    for (const QString &dir : dirs) {
+        const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.rc"));
+        for (const QString &file : fileNames) {
+            if (file.startsWith(QStringLiteral("akonadi_kolab_resource")) ||
+                    file.startsWith(QStringLiteral("akonadi_imap_resource"))) {
+                importSettings(dir + QLatin1Char('/') + file);
+            }
+        }
+    }
+}
+
+void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &filename)
+{
+    qCDebug(SIEVEEDITOR_LOG) << " importSettings " << filename;
+    SieveEditorUtil::SieveServerConfig config;
+    //TODO config.sieveSettings
     //TODO
 }
 

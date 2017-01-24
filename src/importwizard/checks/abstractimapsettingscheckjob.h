@@ -21,6 +21,7 @@
 #define ABSTRACTIMAPSETTINGSCHECKJOB_H
 
 #include <QObject>
+#include "../../sieveeditorutil.h"
 
 class AbstractImapSettingsCheckJob : public QObject
 {
@@ -32,6 +33,9 @@ public:
 
     virtual bool settingsCanBeImported() const = 0;
     virtual QString name() const = 0;
+
+Q_SIGNALS:
+    void importSetting(const QString &name, const SieveEditorUtil::SieveServerConfig &settings);
 };
 
 #endif // ABSTRACTIMAPSETTINGSCHECKJOB_H

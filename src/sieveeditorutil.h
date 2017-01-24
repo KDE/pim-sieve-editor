@@ -37,7 +37,7 @@ struct SieveAccountSettings {
     {
 
     }
-
+    bool isValid() const;
     QString serverName;
     QString userName;
     QString password;

@@ -33,6 +33,9 @@ public:
 
     bool settingsCanBeImported() const Q_DECL_OVERRIDE;
     QString name() const Q_DECL_OVERRIDE;
+
+private:
+    void importSettings(const QString &filename);
 };
 
 #endif // IMPORTIMAPSETTINGSAKONADICHECKJOB_H
