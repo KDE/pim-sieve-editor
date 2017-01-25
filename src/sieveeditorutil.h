@@ -53,6 +53,7 @@ struct SieveServerConfig {
 
     }
 
+    bool isValid() const;
     QUrl url() const;
     SieveAccountSettings sieveSettings;
     KSieveUi::SieveImapAccountSettings sieveImapAccountSettings;

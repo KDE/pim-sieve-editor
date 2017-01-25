@@ -236,3 +236,8 @@ bool SieveEditorUtil::SieveAccountSettings::isValid() const
 {
     return !serverName.isEmpty() || !userName.isEmpty() || (port == -1);
 }
+
+bool SieveEditorUtil::SieveServerConfig::isValid() const
+{
+    return sieveSettings.isValid();
+}
