@@ -21,6 +21,7 @@
 #define SIEVEEDITORMAINWINDOW_H
 
 #include <KXmlGuiWindow>
+#include "sieveeditorlib_export.h"
 
 class QAction;
 class SieveEditorCentralWidget;
@@ -32,7 +33,7 @@ namespace PimCommon
 class KActionMenuChangeCase;
 }
 
-class SieveEditorMainWindow : public KXmlGuiWindow
+class SIEVEEDITORLIB_EXPORT SieveEditorMainWindow : public KXmlGuiWindow
 {
     Q_OBJECT
 public:

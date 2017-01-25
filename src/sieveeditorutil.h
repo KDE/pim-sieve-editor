@@ -20,6 +20,7 @@
 #ifndef SIEVEEDITORUTIL_H
 #define SIEVEEDITORUTIL_H
 
+#include "sieveeditorlib_export.h"
 #include <QString>
 #include <QUrl>
 #include <MailTransport/mailtransport/transport.h>
@@ -30,7 +31,7 @@ class Wallet;
 }
 namespace SieveEditorUtil
 {
-struct SieveAccountSettings {
+struct SIEVEEDITORLIB_EXPORT SieveAccountSettings {
     SieveAccountSettings()
         : authenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN),
           port(-1)
@@ -45,7 +46,7 @@ struct SieveAccountSettings {
     int port;
 };
 
-struct SieveServerConfig {
+struct SIEVEEDITORLIB_EXPORT SieveServerConfig {
     SieveServerConfig()
         : enabled(true),
           useImapCustomServer(false)
