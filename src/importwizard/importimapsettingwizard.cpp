@@ -104,6 +104,7 @@ void ImportImapSettingWizard::next()
             //Go to end
             setAppropriate(mProgressPageItem, false);
         } else {
+            mProgressPage->setListCheckJob(mListCheckJob);
             mProgressPage->setSelectedPrograms(programs);
         }
     }

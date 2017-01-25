@@ -18,6 +18,8 @@
 */
 
 #include "importimapsettingprogresspage.h"
+#include "checks/abstractimapsettingscheckjob.h"
+#include "helper_p.h"
 #include <QVBoxLayout>
 #include <KLocalizedString>
 #include <QTextEdit>
@@ -39,12 +41,33 @@ ImportImapSettingProgressPage::~ImportImapSettingProgressPage()
 
 void ImportImapSettingProgressPage::addProgressInfo(const QString &str)
 {
-
+    mProgressTextEdit->append(str);
 }
 
 void ImportImapSettingProgressPage::setSelectedPrograms(const QStringList &programs)
 {
     mSelectedPrograms = programs;
+}
 
-//TODO start check
+void ImportImapSettingProgressPage::setListCheckJob(const QMap<QString, AbstractImapSettingsCheckJob *> &listCheckJob)
+{
+    mListCheckJob = listCheckJob;
+}
+
+void ImportImapSettingProgressPage::start()
+{
+    //Move to abstract class
+    if (mSelectedPrograms.isEmpty()) {
+        return;
+    }
+    for (const QString &prg : qAsConst(mSelectedPrograms)) {
+        AbstractImapSettingsCheckJob *job = mListCheckJob.value(prg);
+        connect(job, &AbstractImapSettingsCheckJob::importSetting, this, &ImportImapSettingProgressPage::slotImportSettingsDone);
+        job->start();
+    }
+}
+
+void ImportImapSettingProgressPage::slotImportSettingsDone(const QString &name, const SieveEditorUtil::SieveServerConfig &settings)
+{
+    //TODO
 }

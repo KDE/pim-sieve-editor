@@ -21,7 +21,11 @@
 #define IMPORTIMAPSETTINGPROGRESSPAGE_H
 
 #include <QWidget>
+#include <QMap>
+#include "sieveeditorutil.h"
+
 class QTextEdit;
+class AbstractImapSettingsCheckJob;
 class ImportImapSettingProgressPage : public QWidget
 {
     Q_OBJECT
@@ -30,9 +34,18 @@ public:
     ~ImportImapSettingProgressPage();
     void addProgressInfo(const QString &str);
     void setSelectedPrograms(const QStringList &programs);
+    void setListCheckJob(const QMap<QString, AbstractImapSettingsCheckJob *> &listCheckJob);
+
+    void start();
+
+Q_SIGNALS:
+    void finished();
+
 private:
+    void slotImportSettingsDone(const QString &name, const SieveEditorUtil::SieveServerConfig &settings);
     QStringList mSelectedPrograms;
     QTextEdit *mProgressTextEdit;
+    QMap<QString, AbstractImapSettingsCheckJob *> mListCheckJob;
 };
 
 #endif // IMPORTIMAPSETTINGPROGRESSPAGE_H

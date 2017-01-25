@@ -21,6 +21,7 @@
 #define IMPORTIMAPSETTINGWIZARD_H
 
 #include <KAssistantDialog>
+#include "sieveeditorlib_export.h"
 
 class ImportImapSettingSearchPage;
 class ImportImapSettingNoFoundPage;
@@ -28,7 +29,7 @@ class ImportImapSettingProgressPage;
 class ImportImapSettingFinishPage;
 class KPageWidgetItem;
 class AbstractImapSettingsCheckJob;
-class ImportImapSettingWizard : public KAssistantDialog
+class SIEVEEDITORLIB_EXPORT ImportImapSettingWizard : public KAssistantDialog
 {
     Q_OBJECT
 public:
