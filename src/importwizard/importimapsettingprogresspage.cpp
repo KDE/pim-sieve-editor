@@ -65,6 +65,7 @@ void ImportImapSettingProgressPage::start()
         connect(job, &AbstractImapSettingsCheckJob::importSetting, this, &ImportImapSettingProgressPage::slotImportSettingsDone);
         job->start();
     }
+    Q_EMIT finished();
 }
 
 void ImportImapSettingProgressPage::slotImportSettingsDone(const QString &name, const SieveEditorUtil::SieveServerConfig &settings)
