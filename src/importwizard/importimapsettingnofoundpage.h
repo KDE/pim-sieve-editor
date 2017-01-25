@@ -21,8 +21,9 @@
 #define IMPORTIMAPSETTINGNOFOUNDPAGE_H
 
 #include <QWidget>
+#include "sieveeditorlib_export.h"
 
-class ImportImapSettingNoFoundPage : public QWidget
+class SIEVEEDITORLIB_EXPORT ImportImapSettingNoFoundPage : public QWidget
 {
     Q_OBJECT
 public:
