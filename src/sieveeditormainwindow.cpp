@@ -25,6 +25,7 @@
 #include "sieveeditorcentralwidget.h"
 #include "sieveeditorglobalconfig.h"
 #include "sieveeditorbookmarks.h"
+#include "importwizard/importimapsettingwizard.h"
 #include "PimCommon/KActionMenuChangeCase"
 
 #include <KStandardGuiItem>
@@ -261,7 +262,8 @@ void SieveEditorMainWindow::setupActions()
 
 void SieveEditorMainWindow::slotImportImapSettings()
 {
-    //TODO open wizard
+    ImportImapSettingWizard w(this);
+    w.exec();
 }
 
 void SieveEditorMainWindow::slotRefreshList()
