@@ -61,20 +61,22 @@ ImportImapSettingWizard::~ImportImapSettingWizard()
 
 void ImportImapSettingWizard::initializeWizard()
 {
-    ImportImapSettingsThunderbirdCheckJob *thjob = new ImportImapSettingsThunderbirdCheckJob(this);
-    thjob->name();
-    mListCheckJob.insert(thjob->name(), thjob);
-    ImportImapSettingsAkonadiCheckJob *akonadiJob = new ImportImapSettingsAkonadiCheckJob(this);
-    mListCheckJob.insert(akonadiJob->name(), akonadiJob);
-
     bool hasSettingToImport = false;
-    const QList<AbstractImapSettingsCheckJob *> listJob = mListCheckJob.values();
-    for (AbstractImapSettingsCheckJob *job : listJob) {
-        if (job->settingsCanBeImported()) {
-            hasSettingToImport = true;
-            break;
-        }
+    ImportImapSettingsThunderbirdCheckJob *thjob = new ImportImapSettingsThunderbirdCheckJob(this);
+    if (thjob->settingsCanBeImported()) {
+        mListCheckJob.insert(thjob->name(), thjob);
+        hasSettingToImport = true;
+    } else {
+        delete thjob;
     }
+    ImportImapSettingsAkonadiCheckJob *akonadiJob = new ImportImapSettingsAkonadiCheckJob(this);
+    if (akonadiJob->settingsCanBeImported()) {
+        mListCheckJob.insert(akonadiJob->name(), akonadiJob);
+        hasSettingToImport = true;
+    } else {
+        delete akonadiJob;
+    }
+
     if (hasSettingToImport) {
         setAppropriate(mNoFoundPageItem, false);
         setAppropriate(mSearchPageItem, true);

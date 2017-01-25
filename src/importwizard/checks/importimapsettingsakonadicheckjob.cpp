@@ -52,8 +52,10 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &filename)
 {
     qCDebug(SIEVEEDITOR_LOG) << " importSettings " << filename;
     SieveEditorUtil::SieveServerConfig config;
-    //TODO config.sieveSettings
-    //TODO
+    if (config.isValid()) {
+        //TODO fix name!
+        Q_EMIT importSetting(filename, config);
+    }
 }
 
 bool ImportImapSettingsAkonadiCheckJob::settingsCanBeImported() const
