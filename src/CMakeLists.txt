@@ -53,7 +53,6 @@ qt5_add_resources(sieveeditor_LIB_SRCS sieveeditor.qrc)
 
 ecm_qt_declare_logging_category(sieveeditor_LIB_SRCS HEADER sieveeditor_debug.h IDENTIFIER SIEVEEDITOR_LOG CATEGORY_NAME org.kde.pim.sieveeditor)
 
-
 add_library(sieveeditorlib ${sieveeditor_LIB_SRCS})
 
 generate_export_header(sieveeditorlib BASE_NAME sieveeditorlib)
@@ -94,6 +93,6 @@ install(TARGETS sieveeditorlib ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMEL
 
 
 if (BUILD_TESTING)
-   add_subdirectory(importwizard/autotests)
-   add_subdirectory(importwizard/tests)
+    add_subdirectory(importwizard/autotests)
+    add_subdirectory(importwizard/tests)
 endif()

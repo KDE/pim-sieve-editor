@@ -6,7 +6,7 @@ macro(add_sieveeditor_importwizard_unittest _source _additionalsource)
         TEST_NAME ${_name}
         NAME_PREFIX "sieveeditor-importwizard-"
         LINK_LIBRARIES Qt5::Test KF5::I18n Qt5::Gui Qt5::Widgets KF5::MailTransport KF5::ConfigCore KF5::ConfigGui KF5::KSieveUi KF5::Wallet sieveeditorlib
-    )
+        )
 endmacro()
 
 
