@@ -18,6 +18,7 @@
 */
 
 #include "importimapsettingprogresspage.h"
+#include "sieveeditor_debug.h"
 #include "checks/abstractimapsettingscheckjob.h"
 #include "helper_p.h"
 #include <QVBoxLayout>
@@ -56,8 +57,14 @@ void ImportImapSettingProgressPage::setListCheckJob(const QMap<QString, Abstract
 
 void ImportImapSettingProgressPage::start()
 {
-    //Move to abstract class
     if (mSelectedPrograms.isEmpty()) {
+        //Send info about no selected program
+        Q_EMIT finished();
+        return;
+    }
+    if (mListCheckJob.isEmpty()) {
+        qCWarning(SIEVEEDITOR_LOG) << "It's a bug, list of check job can not be empty";
+        Q_EMIT finished();
         return;
     }
     for (const QString &prg : qAsConst(mSelectedPrograms)) {
@@ -71,6 +78,5 @@ void ImportImapSettingProgressPage::start()
 void ImportImapSettingProgressPage::slotImportSettingsDone(const QString &name, const SieveEditorUtil::SieveServerConfig &settings)
 {
     addProgressInfo(i18n("Import settings %1", name));
-    //We can't do it. We need to append SieveEditorUtil::writeServerSieveConfig(QVector<SieveEditorUtil::SieveServerConfig>() << settings);
-    //TODO
+    SieveEditorUtil::addServerSieveConfig(settings);
 }
