@@ -42,6 +42,7 @@ private:
     void readConfig();
     void writeConfig();
     void initializeWizard();
+    void slotHelpClicked();
     void slotFinishImportData();
     QMap<QString, AbstractImapSettingsCheckJob *> mListCheckJob;
 

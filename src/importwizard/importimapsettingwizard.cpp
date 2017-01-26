@@ -28,6 +28,9 @@
 #include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <PimCommon/PimUtil>
+
+#include <QPushButton>
 
 ImportImapSettingWizard::ImportImapSettingWizard(QWidget *parent)
     : KAssistantDialog(parent)
@@ -53,6 +56,7 @@ ImportImapSettingWizard::ImportImapSettingWizard(QWidget *parent)
 
     readConfig();
     initializeWizard();
+    connect(button(QDialogButtonBox::Help), &QPushButton::clicked, this, &ImportImapSettingWizard::slotHelpClicked);
 }
 
 ImportImapSettingWizard::~ImportImapSettingWizard()
@@ -137,4 +141,9 @@ void ImportImapSettingWizard::slotFinishImportData()
     setAppropriate(mProgressPageItem, false);
 
     //TODO
+}
+
+void ImportImapSettingWizard::slotHelpClicked()
+{
+    PimCommon::Util::invokeHelp(QStringLiteral("sieveeditor/index.html"));
 }
