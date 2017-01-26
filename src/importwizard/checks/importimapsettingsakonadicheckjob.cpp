@@ -22,6 +22,7 @@
 #include <KLocalizedString>
 #include <QStandardPaths>
 #include <QDir>
+#include <QFile>
 
 ImportImapSettingsAkonadiCheckJob::ImportImapSettingsAkonadiCheckJob(QObject *parent)
     : AbstractImapSettingsCheckJob(parent)
@@ -51,6 +52,11 @@ void ImportImapSettingsAkonadiCheckJob::start()
 void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &filename)
 {
     qCDebug(SIEVEEDITOR_LOG) << " importSettings " << filename;
+    QFile file(filename);
+    if (file.open(QIODevice::ReadOnly)) {
+        qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filename;
+        return;
+    }
     SieveEditorUtil::SieveServerConfig config;
     if (config.isValid()) {
         //TODO fix name!

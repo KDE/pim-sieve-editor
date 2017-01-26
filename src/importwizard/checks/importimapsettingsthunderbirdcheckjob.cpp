@@ -19,6 +19,8 @@
 
 #include "importimapsettingsthunderbirdcheckjob.h"
 #include <KLocalizedString>
+#include <QDir>
+#include <QFile>
 
 ImportImapSettingsThunderbirdCheckJob::ImportImapSettingsThunderbirdCheckJob(QObject *parent)
     : AbstractImapSettingsCheckJob(parent)
@@ -37,8 +39,9 @@ void ImportImapSettingsThunderbirdCheckJob::start()
 
 bool ImportImapSettingsThunderbirdCheckJob::settingsCanBeImported() const
 {
-    //TODO verify
-    return false;
+    const QString thunderBirdDir = QDir::homePath() + QLatin1String("/.thunderbird/");
+    QDir dir(thunderBirdDir);
+    return dir.exists();
 }
 
 QString ImportImapSettingsThunderbirdCheckJob::name() const
