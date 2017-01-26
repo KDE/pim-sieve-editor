@@ -26,7 +26,8 @@
 #include <QTextEdit>
 
 ImportImapSettingProgressPage::ImportImapSettingProgressPage(QWidget *parent)
-    : QWidget(parent)
+    : QWidget(parent),
+      mSettingsFound(false)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mProgressTextEdit = new QTextEdit(this);
@@ -72,6 +73,9 @@ void ImportImapSettingProgressPage::start()
         connect(job, &AbstractImapSettingsCheckJob::importSetting, this, &ImportImapSettingProgressPage::slotImportSettingsDone);
         job->start();
     }
+    if (!mSettingsFound) {
+        addProgressInfo(i18n("No settings found."));
+    }
     Q_EMIT finished();
 }
 
@@ -79,4 +83,5 @@ void ImportImapSettingProgressPage::slotImportSettingsDone(const QString &name, 
 {
     addProgressInfo(i18n("Import settings %1", name));
     SieveEditorUtil::addServerSieveConfig(settings);
+    mSettingsFound = true;
 }

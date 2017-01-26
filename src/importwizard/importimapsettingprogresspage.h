@@ -47,6 +47,7 @@ private:
     QStringList mSelectedPrograms;
     QTextEdit *mProgressTextEdit;
     QMap<QString, AbstractImapSettingsCheckJob *> mListCheckJob;
+    bool mSettingsFound;
 };
 
 #endif // IMPORTIMAPSETTINGPROGRESSPAGE_H
