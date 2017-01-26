@@ -71,6 +71,6 @@ void ImportImapSettingProgressPage::start()
 void ImportImapSettingProgressPage::slotImportSettingsDone(const QString &name, const SieveEditorUtil::SieveServerConfig &settings)
 {
     addProgressInfo(i18n("Import settings %1", name));
-    SieveEditorUtil::writeServerSieveConfig(QVector<SieveEditorUtil::SieveServerConfig>() << settings);
+    //We can't do it. We need to append SieveEditorUtil::writeServerSieveConfig(QVector<SieveEditorUtil::SieveServerConfig>() << settings);
     //TODO
 }
