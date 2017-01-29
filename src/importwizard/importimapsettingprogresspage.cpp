@@ -59,7 +59,7 @@ void ImportImapSettingProgressPage::setListCheckJob(const QMap<QString, Abstract
 void ImportImapSettingProgressPage::start()
 {
     if (mSelectedPrograms.isEmpty()) {
-        //Send info about no selected program
+        qCDebug(SIEVEEDITOR_LOG) << "No selected import type.";
         Q_EMIT finished();
         return;
     }
