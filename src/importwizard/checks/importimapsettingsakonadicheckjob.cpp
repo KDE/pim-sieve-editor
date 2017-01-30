@@ -20,6 +20,8 @@
 #include "importimapsettingsakonadicheckjob.h"
 #include "sieveeditor_debug.h"
 #include <KLocalizedString>
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <QStandardPaths>
 #include <QDir>
 #include <QFile>
@@ -56,16 +58,29 @@ void ImportImapSettingsAkonadiCheckJob::start()
 
 void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &filename)
 {
-    qCDebug(SIEVEEDITOR_LOG) << " importSettings " << filename;
+    qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filename;
     QFile file(filename);
-    if (file.open(QIODevice::ReadOnly)) {
+    if (!file.exists()) {
         qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filename;
         return;
     }
     SieveEditorUtil::SieveServerConfig config;
-    if (config.isValid()) {
-        //TODO fix name!
-        Q_EMIT importSetting(filename, config);
+    bool isKolabSettings = filename.startsWith(QStringLiteral("akonadi_kolab_resource"));
+    KSharedConfigPtr resourceConfig = KSharedConfig::openConfig(filename);
+    KConfigGroup sieveGroup = resourceConfig->group(QStringLiteral("siever"));
+    bool hasSieveSupport = sieveGroup.readEntry(QStringLiteral("SieveSupport"), isKolabSettings ? true : false);
+    if (hasSieveSupport) {
+
+        KConfigGroup networkGroup = resourceConfig->group(QStringLiteral("network"));
+        const QString userName = networkGroup.readEntry(QStringLiteral("UserName"), QString());
+        const QString imapServerName = networkGroup.readEntry(QStringLiteral("ImapServer"), QString());
+        config.sieveSettings.serverName = imapServerName;
+        config.sieveSettings.userName = userName;
+        //TODO save other settings
+        if (config.isValid()) {
+            //TODO fix name!
+            Q_EMIT importSetting(filename, config);
+        }
     }
 }
 
