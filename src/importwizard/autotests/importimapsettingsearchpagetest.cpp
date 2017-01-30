@@ -60,7 +60,9 @@ void ImportImapSettingSearchPageTest::shouldAddCheckPrograms()
     w.setProgramList(lst);
     QListWidget *mFoundProgramList = w.findChild<QListWidget *>(QStringLiteral("foundprogramlist"));
     QCOMPARE(mFoundProgramList->count(), lst.count());
-
+    for (int i = 0; i < mFoundProgramList->count(); ++i) {
+        QCOMPARE(mFoundProgramList->item(i)->checkState(), Qt::Unchecked);
+    }
 }
 
 QTEST_MAIN(ImportImapSettingSearchPageTest)
