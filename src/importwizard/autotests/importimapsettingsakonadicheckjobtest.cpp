@@ -37,12 +37,19 @@ ImportImapSettingsAkonadiCheckJobTest::~ImportImapSettingsAkonadiCheckJobTest()
 void ImportImapSettingsAkonadiCheckJobTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
-    qputenv("XDG_DATA_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/config1")).toLatin1().constData());
 }
 
 
 void ImportImapSettingsAkonadiCheckJobTest::shouldHaveSettingsFiles()
 {
+    qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/config1")).toLatin1().constData());
+    ImportImapSettingsAkonadiCheckJob job;
+    QVERIFY(job.settingsCanBeImported());
+}
+
+void ImportImapSettingsAkonadiCheckJobTest::shouldHaveNotSettingsFiles()
+{
+    qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/noconfig")).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
     QVERIFY(!job.settingsCanBeImported());
 }
