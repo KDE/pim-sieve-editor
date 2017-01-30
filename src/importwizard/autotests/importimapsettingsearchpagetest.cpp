@@ -23,6 +23,7 @@
 #include <QLabel>
 #include <QListWidget>
 #include <QTest>
+#include <QVBoxLayout>
 
 ImportImapSettingSearchPageTest::ImportImapSettingSearchPageTest(QObject *parent)
     : QObject(parent)
@@ -45,6 +46,10 @@ void ImportImapSettingSearchPageTest::shouldHaveDefaultValue()
     QListWidget *mFoundProgramList = w.findChild<QListWidget *>(QStringLiteral("foundprogramlist"));
     QVERIFY(mFoundProgramList);
     QCOMPARE(mFoundProgramList->count(), 0);
+
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->margin(), 0);
 }
 
 void ImportImapSettingSearchPageTest::shouldAddCheckPrograms()

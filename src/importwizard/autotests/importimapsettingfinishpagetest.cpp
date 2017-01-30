@@ -23,6 +23,7 @@
 #include <QLabel>
 #include <QTest>
 #include <QTextEdit>
+#include <QVBoxLayout>
 
 ImportImapSettingFinishPageTest::ImportImapSettingFinishPageTest(QObject *parent)
     : QObject(parent)
@@ -46,6 +47,10 @@ void ImportImapSettingFinishPageTest::shouldHaveDefaultValue()
     QVERIFY(mTextEdit);
     QVERIFY(mTextEdit->isReadOnly());
     QVERIFY(mTextEdit->document()->isEmpty());
+
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->margin(), 0);
 }
 
 QTEST_MAIN(ImportImapSettingFinishPageTest)

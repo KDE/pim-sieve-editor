@@ -22,6 +22,7 @@
 
 #include <QTest>
 #include <QTextEdit>
+#include <QVBoxLayout>
 
 ImportImapSettingProgressPageTest::ImportImapSettingProgressPageTest(QObject *parent)
     : QObject(parent)
@@ -42,6 +43,10 @@ void ImportImapSettingProgressPageTest::shouldHaveDefaultValue()
     QVERIFY(mProgressTextEdit);
     QVERIFY(mProgressTextEdit->isReadOnly());
     QVERIFY(mProgressTextEdit->document()->isEmpty());
+
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->margin(), 0);
 }
 
 QTEST_MAIN(ImportImapSettingProgressPageTest)

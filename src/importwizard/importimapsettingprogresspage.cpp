@@ -30,6 +30,8 @@ ImportImapSettingProgressPage::ImportImapSettingProgressPage(QWidget *parent)
       mSettingsFound(false)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setMargin(0);
     mProgressTextEdit = new QTextEdit(this);
     mProgressTextEdit->setObjectName(QStringLiteral("textedit"));
     mProgressTextEdit->setReadOnly(true);

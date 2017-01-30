@@ -26,17 +26,19 @@
 ImportImapSettingFinishPage::ImportImapSettingFinishPage(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    QVBoxLayout *mainlayout = new QVBoxLayout(this);
+    mainlayout->setObjectName(QStringLiteral("mainlayout"));
+    mainlayout->setMargin(0);
 
     QLabel *label = new QLabel(i18n("IMAP settings were imported:"), this);
     label->setObjectName(QStringLiteral("label"));
-    layout->addWidget(label);
+    mainlayout->addWidget(label);
 
     mTextEdit = new QTextEdit(this);
     mTextEdit->setObjectName(QStringLiteral("textedit"));
     mTextEdit->setAcceptRichText(true);
     mTextEdit->setReadOnly(true);
-    layout->addWidget(mTextEdit);
+    mainlayout->addWidget(mTextEdit);
 }
 
 ImportImapSettingFinishPage::~ImportImapSettingFinishPage()

@@ -21,6 +21,7 @@
 #include "../importimapsettingnofoundpage.h"
 #include <QLabel>
 #include <QTest>
+#include <QVBoxLayout>
 
 ImportImapSettingNoFoundPageTest::ImportImapSettingNoFoundPageTest(QObject *parent)
     : QObject(parent)
@@ -39,6 +40,10 @@ void ImportImapSettingNoFoundPageTest::shouldHaveDefaultValue()
     QLabel *lab = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
+
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->margin(), 0);
 }
 
 QTEST_MAIN(ImportImapSettingNoFoundPageTest)
