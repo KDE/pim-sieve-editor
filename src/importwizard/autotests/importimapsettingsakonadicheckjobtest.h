@@ -32,7 +32,8 @@ private Q_SLOTS:
     void initTestCase();
     void shouldHaveSettingsFiles();
     void shouldHaveNotSettingsFiles();
-
+    void shouldHaveSettingsFilesImap();
+    void shouldHaveSettingsFilesMbox();
 };
 
 #endif // IMPORTIMAPSETTINGSAKONADICHECKJOBTEST_H
