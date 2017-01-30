@@ -234,7 +234,7 @@ void SieveEditorUtil::deletePasswords(const QStringList &identifiers)
 
 bool SieveEditorUtil::SieveAccountSettings::isValid() const
 {
-    return !serverName.isEmpty() || !userName.isEmpty() || (port == -1);
+    return !serverName.isEmpty() && !userName.isEmpty() && (port != -1);
 }
 
 bool SieveEditorUtil::SieveServerConfig::isValid() const

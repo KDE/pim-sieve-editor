@@ -44,5 +44,30 @@ void SieveEditorUtilTest::shouldHaveDefaultValue()
     QVERIFY(!config.useImapCustomServer);
 }
 
+void SieveEditorUtilTest::shouldTestSieveAccountSettingsDefaultValue()
+{
+    SieveEditorUtil::SieveAccountSettings settings;
+    QVERIFY(settings.serverName.isEmpty());
+    QVERIFY(settings.userName.isEmpty());
+    QVERIFY(settings.password.isEmpty());
+    QCOMPARE(settings.authenticationType, MailTransport::Transport::EnumAuthenticationType::PLAIN);
+    QCOMPARE(settings.port, -1);
+    QVERIFY(!settings.isValid());
+}
+
+void SieveEditorUtilTest::shouldSieveAccountSettingsMustBeValid()
+{
+    SieveEditorUtil::SieveAccountSettings settings;
+    QVERIFY(!settings.isValid());
+    settings.serverName = QStringLiteral("foo");
+    QVERIFY(!settings.isValid());
+    settings.userName = QStringLiteral("bla");
+    QVERIFY(!settings.isValid());
+    settings.password = QStringLiteral("bli");
+    QVERIFY(!settings.isValid());
+    settings.port = 2;
+    QVERIFY(settings.isValid());
+}
+
 QTEST_APPLESS_MAIN(SieveEditorUtilTest)
 

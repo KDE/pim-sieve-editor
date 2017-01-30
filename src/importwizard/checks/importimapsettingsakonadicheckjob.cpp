@@ -65,23 +65,28 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &filename)
         return;
     }
     SieveEditorUtil::SieveServerConfig config;
-    bool isKolabSettings = filename.startsWith(QStringLiteral("akonadi_kolab_resource"));
+    bool isKolabSettings = filename.contains(QStringLiteral("/akonadi_kolab_resource"));
     KSharedConfigPtr resourceConfig = KSharedConfig::openConfig(filename);
     KConfigGroup sieveGroup = resourceConfig->group(QStringLiteral("siever"));
     bool hasSieveSupport = sieveGroup.readEntry(QStringLiteral("SieveSupport"), isKolabSettings ? true : false);
     if (hasSieveSupport) {
-
         bool reuseImapSettings = sieveGroup.readEntry(QStringLiteral("SieveReuseConfig"), true);
-
         KConfigGroup networkGroup = resourceConfig->group(QStringLiteral("network"));
         const QString userName = networkGroup.readEntry(QStringLiteral("UserName"), QString());
         const QString imapServerName = networkGroup.readEntry(QStringLiteral("ImapServer"), QString());
+        const int imapPort = networkGroup.readEntry(QStringLiteral("ImapPort"), isKolabSettings ? 143 : 993);
         config.sieveImapAccountSettings.setUserName(userName);
         config.sieveImapAccountSettings.setServerName(imapServerName);
+        config.sieveImapAccountSettings.setPort(imapPort);
         if (reuseImapSettings) {
             config.sieveSettings.serverName = imapServerName;
             config.sieveSettings.userName = userName;
+            config.sieveSettings.port = imapPort;
+        } else {
+            //TODO
         }
+        //TODO import kwallet settings too
+
         //TODO save other settings
         if (config.isValid()) {
             //TODO fix name!

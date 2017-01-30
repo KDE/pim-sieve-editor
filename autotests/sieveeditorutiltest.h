@@ -30,6 +30,8 @@ public:
     ~SieveEditorUtilTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldTestSieveAccountSettingsDefaultValue();
+    void shouldSieveAccountSettingsMustBeValid();
 };
 
 #endif // SIEVEEDITORUTILTEST_H

@@ -76,6 +76,10 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldHaveImportSettings_data()
     QTest::addColumn<QString>("directory");
     QTest::addColumn<int>("nbsignals");
     QTest::newRow("reuseconfig") << QStringLiteral("/config/reuseconfig") << 1;
+    QTest::newRow("reuseconfigtwiceconfig") << QStringLiteral("/config/reuseconfigtwiceconfig") << 2;
+
+    QTest::newRow("imapconfig") << QStringLiteral("/config/imapconfig") << 0;
+    QTest::newRow("imapconfigwithsieveconfig") << QStringLiteral("/config/imapconfigwithsieveconfig") << 1;
 }
 
 void ImportImapSettingsAkonadiCheckJobTest::shouldHaveImportSettings()
