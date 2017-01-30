@@ -71,14 +71,23 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldHaveSettingsFilesMbox()
     QVERIFY(!job.settingsCanBeImported());
 }
 
+void ImportImapSettingsAkonadiCheckJobTest::shouldHaveImportSettings_data()
+{
+    QTest::addColumn<QString>("directory");
+    QTest::addColumn<int>("nbsignals");
+    QTest::newRow("reuseconfig") << QStringLiteral("/config/reuseconfig") << 1;
+}
+
 void ImportImapSettingsAkonadiCheckJobTest::shouldHaveImportSettings()
 {
-    qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/reuseconfig")).toLatin1().constData());
+    QFETCH (QString, directory);
+    QFETCH (int, nbsignals);
+    qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + directory).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
     QVERIFY(job.settingsCanBeImported());
     QSignalSpy spy(&job, &ImportImapSettingsAkonadiCheckJob::importSetting);
     job.start();
-    QCOMPARE(spy.count(), 1);
+    QCOMPARE(spy.count(), nbsignals);
 }
 
 QTEST_MAIN(ImportImapSettingsAkonadiCheckJobTest)

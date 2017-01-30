@@ -35,6 +35,7 @@ private Q_SLOTS:
     void shouldHaveSettingsFilesImap();
     void shouldHaveSettingsFilesMbox();
 
+    void shouldHaveImportSettings_data();
     void shouldHaveImportSettings();
 };
 
