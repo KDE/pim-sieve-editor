@@ -83,27 +83,25 @@ void ImportImapSettingWizard::initializeWizard()
     }
 
     if (hasSettingToImport) {
+        //Initialize list
+        mSearchPage->setProgramList(mListCheckJob.keys());
         setAppropriate(mNoFoundPageItem, false);
         setAppropriate(mSearchPageItem, true);
         setAppropriate(mProgressPageItem, true);
         setAppropriate(mFinishPageItem, true);
         setCurrentPage(mSearchPageItem);
     } else {
-        setCurrentPage(mNoFoundPageItem);
         setAppropriate(mNoFoundPageItem, true);
         setAppropriate(mSearchPageItem, false);
         setAppropriate(mProgressPageItem, false);
         setAppropriate(mFinishPageItem, false);
+        setCurrentPage(mNoFoundPageItem);
     }
 }
 
 void ImportImapSettingWizard::next()
 {
-    if (currentPage() == mNoFoundPageItem) {
-        if (isAppropriate(mSearchPageItem)) {
-            mSearchPage->setProgramList(mListCheckJob.keys());
-        }
-    } else if (currentPage() == mSearchPageItem) {
+    if (currentPage() == mSearchPageItem) {
         const QStringList programs = mSearchPage->selectedPrograms();
         if (programs.isEmpty()) {
             //Go to end

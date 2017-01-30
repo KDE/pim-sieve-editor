@@ -24,11 +24,11 @@
 #include <QListWidget>
 #include <QTest>
 #include <QVBoxLayout>
-
+#include <QStandardPaths>
 ImportImapSettingSearchPageTest::ImportImapSettingSearchPageTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 ImportImapSettingSearchPageTest::~ImportImapSettingSearchPageTest()

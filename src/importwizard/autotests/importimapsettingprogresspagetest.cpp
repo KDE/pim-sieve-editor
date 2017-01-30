@@ -23,11 +23,12 @@
 #include <QTest>
 #include <QTextEdit>
 #include <QVBoxLayout>
+#include <QStandardPaths>
 
 ImportImapSettingProgressPageTest::ImportImapSettingProgressPageTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 ImportImapSettingProgressPageTest::~ImportImapSettingProgressPageTest()
