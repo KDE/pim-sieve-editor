@@ -34,6 +34,8 @@ private Q_SLOTS:
     void shouldHaveNotSettingsFiles();
     void shouldHaveSettingsFilesImap();
     void shouldHaveSettingsFilesMbox();
+
+    void shouldHaveImportSettings();
 };
 
 #endif // IMPORTIMAPSETTINGSAKONADICHECKJOBTEST_H

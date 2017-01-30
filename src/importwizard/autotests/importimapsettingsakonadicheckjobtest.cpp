@@ -23,10 +23,13 @@
 #include <QTest>
 #include <QStandardPaths>
 #include <QDebug>
+#include <QSignalSpy>
 
+Q_DECLARE_METATYPE(SieveEditorUtil::SieveServerConfig)
 ImportImapSettingsAkonadiCheckJobTest::ImportImapSettingsAkonadiCheckJobTest(QObject *parent)
     : QObject(parent)
 {
+    qRegisterMetaType<SieveEditorUtil::SieveServerConfig>();
 }
 
 ImportImapSettingsAkonadiCheckJobTest::~ImportImapSettingsAkonadiCheckJobTest()
@@ -66,6 +69,16 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldHaveSettingsFilesMbox()
     qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/config3")).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
     QVERIFY(!job.settingsCanBeImported());
+}
+
+void ImportImapSettingsAkonadiCheckJobTest::shouldHaveImportSettings()
+{
+    qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/reuseconfig")).toLatin1().constData());
+    ImportImapSettingsAkonadiCheckJob job;
+    QVERIFY(job.settingsCanBeImported());
+    QSignalSpy spy(&job, &ImportImapSettingsAkonadiCheckJob::importSetting);
+    job.start();
+    QCOMPARE(spy.count(), 1);
 }
 
 QTEST_MAIN(ImportImapSettingsAkonadiCheckJobTest)

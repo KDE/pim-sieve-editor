@@ -71,11 +71,17 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &filename)
     bool hasSieveSupport = sieveGroup.readEntry(QStringLiteral("SieveSupport"), isKolabSettings ? true : false);
     if (hasSieveSupport) {
 
+        bool reuseImapSettings = sieveGroup.readEntry(QStringLiteral("SieveReuseConfig"), true);
+
         KConfigGroup networkGroup = resourceConfig->group(QStringLiteral("network"));
         const QString userName = networkGroup.readEntry(QStringLiteral("UserName"), QString());
         const QString imapServerName = networkGroup.readEntry(QStringLiteral("ImapServer"), QString());
-        config.sieveSettings.serverName = imapServerName;
-        config.sieveSettings.userName = userName;
+        config.sieveImapAccountSettings.setUserName(userName);
+        config.sieveImapAccountSettings.setServerName(imapServerName);
+        if (reuseImapSettings) {
+            config.sieveSettings.serverName = imapServerName;
+            config.sieveSettings.userName = userName;
+        }
         //TODO save other settings
         if (config.isValid()) {
             //TODO fix name!
