@@ -48,7 +48,7 @@ void ImportImapSettingSearchPage::setProgramList(const QStringList &lst)
 {
     for (const QString &prog : lst) {
         QListWidgetItem *item = new QListWidgetItem(prog, mFoundProgramList);
-        item->setFlags(item->flags() & ~ Qt::ItemIsUserCheckable);
+        item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
         item->setCheckState(Qt::Unchecked);
     }
 }
@@ -56,7 +56,8 @@ void ImportImapSettingSearchPage::setProgramList(const QStringList &lst)
 QStringList ImportImapSettingSearchPage::selectedPrograms() const
 {
     QStringList checkedItems;
-    for (int i = 0; i < mFoundProgramList->count(); ++i) {
+    const int nbProgram = {mFoundProgramList->count()};
+    for (int i = 0; i < nbProgram; ++i) {
         QListWidgetItem *item = mFoundProgramList->item(i);
         if (item->checkState() == Qt::Checked) {
             checkedItems << item->text();
