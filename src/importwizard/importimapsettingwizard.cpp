@@ -110,8 +110,6 @@ void ImportImapSettingWizard::next()
             mProgressPage->setListCheckJob(mListCheckJob);
             mProgressPage->setSelectedPrograms(programs);
         }
-    } else if (currentPage() == mProgressPageItem) {
-        //TODO
     }
     KAssistantDialog::next();
 }
@@ -137,8 +135,6 @@ void ImportImapSettingWizard::slotFinishImportData()
     setAppropriate(mFinishPageItem, true);
     setAppropriate(mSearchPageItem, false);
     setAppropriate(mProgressPageItem, false);
-
-    //TODO
 }
 
 void ImportImapSettingWizard::slotHelpClicked()
