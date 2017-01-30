@@ -18,19 +18,33 @@
 */
 
 #include "importimapsettingsakonadicheckjobtest.h"
+#include "../checks/importimapsettingsakonadicheckjob.h"
 
 #include <QTest>
 #include <QStandardPaths>
+#include <QDebug>
 
 ImportImapSettingsAkonadiCheckJobTest::ImportImapSettingsAkonadiCheckJobTest(QObject *parent)
     : QObject(parent)
 {
-    QStandardPaths::setTestModeEnabled(true);
 }
 
 ImportImapSettingsAkonadiCheckJobTest::~ImportImapSettingsAkonadiCheckJobTest()
 {
 
+}
+
+void ImportImapSettingsAkonadiCheckJobTest::initTestCase()
+{
+    QStandardPaths::setTestModeEnabled(true);
+    qputenv("XDG_DATA_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/config1")).toLatin1().constData());
+}
+
+
+void ImportImapSettingsAkonadiCheckJobTest::shouldHaveSettingsFiles()
+{
+    ImportImapSettingsAkonadiCheckJob job;
+    QVERIFY(!job.settingsCanBeImported());
 }
 
 QTEST_MAIN(ImportImapSettingsAkonadiCheckJobTest)

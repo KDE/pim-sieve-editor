@@ -28,6 +28,9 @@ class ImportImapSettingsAkonadiCheckJobTest : public QObject
 public:
     explicit ImportImapSettingsAkonadiCheckJobTest(QObject *parent = nullptr);
     ~ImportImapSettingsAkonadiCheckJobTest();
+private Q_SLOTS:
+    void initTestCase();
+    void shouldHaveSettingsFiles();
 
 };
 
