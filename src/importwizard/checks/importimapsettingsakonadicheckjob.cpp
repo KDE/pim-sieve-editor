@@ -35,14 +35,19 @@ ImportImapSettingsAkonadiCheckJob::~ImportImapSettingsAkonadiCheckJob()
 
 }
 
+bool ImportImapSettingsAkonadiCheckJob::resourceCanHaveSieveSupport(const QString &filename) const
+{
+    return filename.startsWith(QStringLiteral("akonadi_kolab_resource")) ||
+                        filename.startsWith(QStringLiteral("akonadi_imap_resource"));
+}
+
 void ImportImapSettingsAkonadiCheckJob::start()
 {
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory);
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*rc"));
         for (const QString &file : fileNames) {
-            if (file.startsWith(QStringLiteral("akonadi_kolab_resource")) ||
-                    file.startsWith(QStringLiteral("akonadi_imap_resource"))) {
+            if (resourceCanHaveSieveSupport(file)) {
                 importSettings(dir + QLatin1Char('/') + file);
             }
         }
@@ -70,8 +75,7 @@ bool ImportImapSettingsAkonadiCheckJob::settingsCanBeImported() const
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*rc"));
         for (const QString &file : fileNames) {
-            if (file.startsWith(QStringLiteral("akonadi_kolab_resource")) ||
-                    file.startsWith(QStringLiteral("akonadi_imap_resource"))) {
+            if (resourceCanHaveSieveSupport(file)) {
                 return true;
             }
         }

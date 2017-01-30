@@ -35,6 +35,7 @@ public:
     QString name() const Q_DECL_OVERRIDE;
 
 private:
+    inline bool resourceCanHaveSieveSupport(const QString &filename) const;
     void importSettings(const QString &filename);
 };
 
