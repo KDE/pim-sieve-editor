@@ -96,15 +96,28 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldHaveImportSettings()
 void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
 {
     QTest::addColumn<QString>("directory");
+    QTest::addColumn<QString>("name");
     QTest::addColumn<SieveEditorUtil::SieveServerConfig>("settings");
-    QTest::newRow("reuseconfig") << QStringLiteral("/config/reuseconfig") << SieveEditorUtil::SieveServerConfig();
+
+    SieveEditorUtil::SieveServerConfig settings;
+
+    QTest::newRow("reuseconfig") << QStringLiteral("/config/reuseconfig") << settings;
 }
 
 void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings()
 {
     QFETCH(QString, directory);
+    QFETCH(QString, name);
     QFETCH(SieveEditorUtil::SieveServerConfig, settings);
     qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + directory).toLatin1().constData());
+    ImportImapSettingsAkonadiCheckJob job;
+    QVERIFY(job.settingsCanBeImported());
+    QSignalSpy spy(&job, &ImportImapSettingsAkonadiCheckJob::importSetting);
+    job.start();
+    QCOMPARE(spy.count(), 1);
+    //QCOMPARE(spy.at(0).at(0).toString(), name);
+    //SieveEditorUtil::SieveServerConfig importSettings = spy.at(0).at(1).value<SieveEditorUtil::SieveServerConfig>();
+    //QCOMPARE(importSettings, settings);
 }
 
 QTEST_MAIN(ImportImapSettingsAkonadiCheckJobTest)
