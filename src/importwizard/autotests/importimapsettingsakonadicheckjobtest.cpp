@@ -42,7 +42,6 @@ void ImportImapSettingsAkonadiCheckJobTest::initTestCase()
     QStandardPaths::setTestModeEnabled(true);
 }
 
-
 void ImportImapSettingsAkonadiCheckJobTest::shouldHaveSettingsFiles()
 {
     qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/config1")).toLatin1().constData());
@@ -84,8 +83,8 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldHaveImportSettings_data()
 
 void ImportImapSettingsAkonadiCheckJobTest::shouldHaveImportSettings()
 {
-    QFETCH (QString, directory);
-    QFETCH (int, nbsignals);
+    QFETCH(QString, directory);
+    QFETCH(int, nbsignals);
     qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + directory).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
     QVERIFY(job.settingsCanBeImported());
@@ -103,8 +102,8 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
 
 void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings()
 {
-    QFETCH (QString, directory);
-    QFETCH (SieveEditorUtil::SieveServerConfig, settings);
+    QFETCH(QString, directory);
+    QFETCH(SieveEditorUtil::SieveServerConfig, settings);
     qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + directory).toLatin1().constData());
 }
 
