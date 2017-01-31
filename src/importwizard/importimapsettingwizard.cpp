@@ -109,6 +109,8 @@ void ImportImapSettingWizard::next()
         } else {
             mProgressPage->setListCheckJob(mListCheckJob);
             mProgressPage->setSelectedPrograms(programs);
+            //Start importation
+            mProgressPage->start();
         }
     }
     KAssistantDialog::next();
