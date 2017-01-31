@@ -97,6 +97,7 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
         } else {
             const QString sieveCustomUserName = sieveGroup.readEntry(QStringLiteral("SieveCustomUsername"));
             config.sieveSettings.userName = sieveCustomUserName;
+            config.sieveSettings.serverName = imapServerName; //FIXME
             //TODO
         }
         //TODO import kwallet settings too

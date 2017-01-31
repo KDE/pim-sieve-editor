@@ -2,3 +2,10 @@
 [network]
 ImapServer=bla.foo.com
 UserName=foo@foo.com
+
+[siever]
+SieveSupport=true
+SieveReuseConfig=false
+SievePort=150
+SieveCustomUsername=b
+
