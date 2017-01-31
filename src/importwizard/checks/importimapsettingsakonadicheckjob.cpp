@@ -78,11 +78,20 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &filename)
         config.sieveImapAccountSettings.setUserName(userName);
         config.sieveImapAccountSettings.setServerName(imapServerName);
         config.sieveImapAccountSettings.setPort(imapPort);
+        //TODO
+        //config.sieveImapAccountSettings.setAuthenticationType();
+        //config.sieveImapAccountSettings.setEncryptionMode();
+        //config.sieveImapAccountSettings.setPassword();
+        const int sievePort = sieveGroup.readEntry(QStringLiteral("SievePort"), 4190);
+        if (sievePort != -1) {
+            config.sieveSettings.port = sievePort;
+        }
         if (reuseImapSettings) {
             config.sieveSettings.serverName = imapServerName;
             config.sieveSettings.userName = userName;
             config.sieveSettings.port = imapPort;
         } else {
+
             //TODO
         }
         //TODO import kwallet settings too
