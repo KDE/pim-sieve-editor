@@ -19,6 +19,7 @@
 
 #include "sieveeditorutil.h"
 #include "sieveserversettings.h"
+#include "sieveeditor_debug.h"
 
 #include <kwallet.h>
 
@@ -71,10 +72,17 @@ QUrl SieveEditorUtil::SieveServerConfig::url() const
 
 bool SieveEditorUtil::SieveServerConfig::operator ==(const SieveEditorUtil::SieveServerConfig &other) const
 {
-    return (enabled == other.enabled) &&
+    const bool result = (enabled == other.enabled) &&
             (useImapCustomServer == other.useImapCustomServer) &&
             (sieveSettings == other.sieveSettings) &&
             (sieveImapAccountSettings == other.sieveImapAccountSettings);
+    if (!result) {
+        qCDebug(SIEVEEDITOR_LOG) << "enabled " << enabled << " other.enabled " << other.enabled;
+        qCDebug(SIEVEEDITOR_LOG) << "useImapCustomServer " << useImapCustomServer << " other.useImapCustomServer " << other.useImapCustomServer;
+        //qCDebug(SIEVEEDITOR_LOG) << "sieveSettings " << sieveSettings << " other.sieveSettings " << other.sieveSettings;
+        //qCDebug(SIEVEEDITOR_LOG) << "sieveImapAccountSettings " << sieveImapAccountSettings << " other.sieveImapAccountSettings " << other.sieveImapAccountSettings;
+    }
+    return result;
 }
 
 QVector<SieveEditorUtil::SieveServerConfig> SieveEditorUtil::readServerSieveConfig()
@@ -242,11 +250,19 @@ void SieveEditorUtil::deletePasswords(const QStringList &identifiers)
 
 bool SieveEditorUtil::SieveAccountSettings::operator ==(const SieveEditorUtil::SieveAccountSettings &other) const
 {
-    return (serverName == other.serverName) &&
+    bool result = (serverName == other.serverName) &&
             (userName == other.userName) &&
             (password == other.password) &&
             (authenticationType == other.authenticationType) &&
             (port == other.port);
+    if (!result) {
+        qCDebug(SIEVEEDITOR_LOG) << "serverName " << serverName << " other.serverName " << other.serverName;
+        qCDebug(SIEVEEDITOR_LOG) << "userName " << userName << " other.userName " << other.userName;
+        qCDebug(SIEVEEDITOR_LOG) << "password " << password << " other.password " << other.password;
+        qCDebug(SIEVEEDITOR_LOG) << "authenticationType " << authenticationType << " other.authenticationType " << other.authenticationType;
+        qCDebug(SIEVEEDITOR_LOG) << "port " << port << " other.port " << other.port;
+    }
+    return result;
 }
 
 bool SieveEditorUtil::SieveAccountSettings::isValid() const
