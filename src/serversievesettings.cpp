@@ -273,7 +273,7 @@ void ServerSieveSettings::slotTest()
     //qCDebug(SIEVEEDITOR_LOG) << ui->imapServer->text();
     ui->testButton->setEnabled(false);
     ui->safeImap->setEnabled(false);
-    ui->authenticationCombo->setEnabled(false);
+    ui->imapAuthenticationCombo->setEnabled(false);
 
     ui->testInfo->clear();
     ui->testInfo->hide();
@@ -338,7 +338,7 @@ void ServerSieveSettings::slotFinished(const QList<int> &testResult)
 
     ui->testButton->setEnabled(true);
     ui->safeImap->setEnabled(true);
-    ui->authenticationCombo->setEnabled(true);
+    ui->imapAuthenticationCombo->setEnabled(true);
     slotEncryptionRadioChanged();
     slotSafetyChanged();
 }
@@ -366,7 +366,7 @@ void ServerSieveSettings::slotSafetyChanged()
         ui->sslRadio->setEnabled(true);
         ui->tlsRadio->setEnabled(true);
 
-        ui->authenticationCombo->setEnabled(true);
+        ui->imapAuthenticationCombo->setEnabled(true);
         return;
     }
 
@@ -389,7 +389,7 @@ void ServerSieveSettings::slotSafetyChanged()
         qFatal("Shouldn't happen");
     }
 
-    ui->authenticationCombo->clear();
+    ui->imapAuthenticationCombo->clear();
     addAuthenticationItem(ui->imapAuthenticationCombo, MailTransport::Transport::EnumAuthenticationType::CLEAR);
     for (int prot : qAsConst(protocols)) {
         addAuthenticationItem(ui->imapAuthenticationCombo, (MailTransport::Transport::EnumAuthenticationType::type) prot);
