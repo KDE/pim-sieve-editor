@@ -94,4 +94,18 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldHaveImportSettings()
     QCOMPARE(spy.count(), nbsignals);
 }
 
+void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
+{
+    QTest::addColumn<QString>("directory");
+    QTest::addColumn<SieveEditorUtil::SieveServerConfig>("settings");
+    QTest::newRow("reuseconfig") << QStringLiteral("/config/reuseconfig") << SieveEditorUtil::SieveServerConfig();
+}
+
+void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings()
+{
+    QFETCH (QString, directory);
+    QFETCH (SieveEditorUtil::SieveServerConfig, settings);
+    qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + directory).toLatin1().constData());
+}
+
 QTEST_MAIN(ImportImapSettingsAkonadiCheckJobTest)
