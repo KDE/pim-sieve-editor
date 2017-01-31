@@ -32,6 +32,7 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldTestSieveAccountSettingsDefaultValue();
     void shouldSieveAccountSettingsMustBeValid();
+    void shouldBeEqual();
 };
 
 #endif // SIEVEEDITORUTILTEST_H

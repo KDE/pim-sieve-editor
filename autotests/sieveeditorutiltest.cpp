@@ -69,5 +69,27 @@ void SieveEditorUtilTest::shouldSieveAccountSettingsMustBeValid()
     QVERIFY(settings.isValid());
 }
 
+void SieveEditorUtilTest::shouldBeEqual()
+{
+    SieveEditorUtil::SieveAccountSettings settings;
+    settings.serverName = QStringLiteral("foo");
+    settings.userName = QStringLiteral("bla");
+    settings.password = QStringLiteral("bli");
+    settings.port = 2;
+    SieveEditorUtil::SieveAccountSettings settings2 = settings;
+    QVERIFY(settings == settings2);
+
+    SieveEditorUtil::SieveAccountSettings settings3;
+    settings3.serverName = QStringLiteral("foo");
+    settings3.userName = QStringLiteral("bla");
+    settings3.password = QStringLiteral("bli");
+    settings3.port = 3;
+    QVERIFY(!(settings == settings3));
+
+
+    settings3.port = 2;
+    QVERIFY(settings == settings3);
+}
+
 QTEST_APPLESS_MAIN(SieveEditorUtilTest)
 

@@ -36,7 +36,7 @@ public:
 
 private:
     inline bool resourceCanHaveSieveSupport(const QString &filename) const;
-    void importSettings(const QString &filename);
+    void importSettings(const QString &directory, const QString &filename);
 };
 
 #endif // IMPORTIMAPSETTINGSAKONADICHECKJOB_H

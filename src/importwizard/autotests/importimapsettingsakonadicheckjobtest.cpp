@@ -100,8 +100,14 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     QTest::addColumn<SieveEditorUtil::SieveServerConfig>("settings");
 
     SieveEditorUtil::SieveServerConfig settings;
+    settings.sieveImapAccountSettings.setUserName(QStringLiteral("foo@foo.com"));
+    settings.sieveImapAccountSettings.setServerName(QStringLiteral("bla.foo.com"));
+    settings.sieveImapAccountSettings.setPort(143);
+    settings.sieveSettings.userName = QStringLiteral("foo@foo.com");
+    settings.sieveSettings.serverName = QStringLiteral("bla.foo.com");
+    settings.sieveSettings.port = 143;
 
-    QTest::newRow("reuseconfig") << QStringLiteral("/config/reuseconfig") << settings;
+    QTest::newRow("reuseconfig") << QStringLiteral("/config/reuseconfig") << QStringLiteral("akonadi_kolab_resource_0rc") <<settings;
 }
 
 void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings()
@@ -115,9 +121,9 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings()
     QSignalSpy spy(&job, &ImportImapSettingsAkonadiCheckJob::importSetting);
     job.start();
     QCOMPARE(spy.count(), 1);
-    //QCOMPARE(spy.at(0).at(0).toString(), name);
-    //SieveEditorUtil::SieveServerConfig importSettings = spy.at(0).at(1).value<SieveEditorUtil::SieveServerConfig>();
-    //QCOMPARE(importSettings, settings);
+    QCOMPARE(spy.at(0).at(0).toString(), name);
+    SieveEditorUtil::SieveServerConfig importSettings = spy.at(0).at(1).value<SieveEditorUtil::SieveServerConfig>();
+    QCOMPARE(importSettings, settings);
 }
 
 QTEST_MAIN(ImportImapSettingsAkonadiCheckJobTest)

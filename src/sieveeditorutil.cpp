@@ -69,6 +69,14 @@ QUrl SieveEditorUtil::SieveServerConfig::url() const
     return u;
 }
 
+bool SieveEditorUtil::SieveServerConfig::operator ==(const SieveEditorUtil::SieveServerConfig &other) const
+{
+    return (enabled == other.enabled) &&
+            (useImapCustomServer == other.useImapCustomServer) &&
+            (sieveSettings == other.sieveSettings) &&
+            (sieveImapAccountSettings == other.sieveImapAccountSettings);
+}
+
 QVector<SieveEditorUtil::SieveServerConfig> SieveEditorUtil::readServerSieveConfig()
 {
     QVector<SieveServerConfig> lstConfig;
@@ -230,6 +238,15 @@ void SieveEditorUtil::deletePasswords(const QStringList &identifiers)
             }
         }
     }
+}
+
+bool SieveEditorUtil::SieveAccountSettings::operator ==(const SieveEditorUtil::SieveAccountSettings &other) const
+{
+    return (serverName == other.serverName) &&
+            (userName == other.userName) &&
+            (password == other.password) &&
+            (authenticationType == other.authenticationType) &&
+            (port == other.port);
 }
 
 bool SieveEditorUtil::SieveAccountSettings::isValid() const

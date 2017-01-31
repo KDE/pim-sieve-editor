@@ -50,23 +50,24 @@ void ImportImapSettingsAkonadiCheckJob::start()
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*rc"));
         for (const QString &file : fileNames) {
             if (resourceCanHaveSieveSupport(file)) {
-                importSettings(dir + QLatin1Char('/') + file);
+                importSettings(dir, file);
             }
         }
     }
 }
 
-void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &filename)
+void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory, const QString &filename)
 {
-    qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filename;
-    QFile file(filename);
+    QString filePath = directory +  QLatin1Char('/') + filename;
+    qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
+    QFile file(filePath);
     if (!file.exists()) {
-        qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filename;
+        qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filePath;
         return;
     }
     SieveEditorUtil::SieveServerConfig config;
-    bool isKolabSettings = filename.contains(QStringLiteral("/akonadi_kolab_resource"));
-    KSharedConfigPtr resourceConfig = KSharedConfig::openConfig(filename);
+    bool isKolabSettings = filePath.contains(QStringLiteral("/akonadi_kolab_resource"));
+    KSharedConfigPtr resourceConfig = KSharedConfig::openConfig(filePath);
     KConfigGroup sieveGroup = resourceConfig->group(QStringLiteral("siever"));
     bool hasSieveSupport = sieveGroup.readEntry(QStringLiteral("SieveSupport"), isKolabSettings ? true : false);
     if (hasSieveSupport) {
@@ -92,10 +93,10 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &filename)
         if (reuseImapSettings) {
             config.sieveSettings.serverName = imapServerName;
             config.sieveSettings.userName = userName;
-            config.sieveSettings.port = imapPort;
             //config.sieveSettings.authenticationType =
         } else {
-
+            const QString sieveCustomUserName = sieveGroup.readEntry(QStringLiteral("SieveCustomUsername"));
+            config.sieveSettings.userName = sieveCustomUserName;
             //TODO
         }
         //TODO import kwallet settings too
