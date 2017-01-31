@@ -78,8 +78,11 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &filename)
         config.sieveImapAccountSettings.setUserName(userName);
         config.sieveImapAccountSettings.setServerName(imapServerName);
         config.sieveImapAccountSettings.setPort(imapPort);
+        config.sieveImapAccountSettings.setAuthenticationType(
+                    static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(
+                        networkGroup.readEntry(QStringLiteral("Authentication"),
+                                               static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
         //TODO
-        //config.sieveImapAccountSettings.setAuthenticationType();
         //config.sieveImapAccountSettings.setEncryptionMode();
         //config.sieveImapAccountSettings.setPassword();
         const int sievePort = sieveGroup.readEntry(QStringLiteral("SievePort"), 4190);
@@ -90,6 +93,7 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &filename)
             config.sieveSettings.serverName = imapServerName;
             config.sieveSettings.userName = userName;
             config.sieveSettings.port = imapPort;
+            //config.sieveSettings.authenticationType =
         } else {
 
             //TODO
