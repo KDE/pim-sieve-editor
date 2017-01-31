@@ -236,6 +236,7 @@ void ServerSieveSettings::setServerSieveConfig(const SieveEditorUtil::SieveServe
     setImapPort(conf.sieveImapAccountSettings.port());
     setAuthenticationType(conf.sieveImapAccountSettings.authenticationType());
 
+    ui->safeImap->setChecked(conf.sieveImapAccountSettings.isValid());
     QAbstractButton *safetyButton = ui->safeImapGroup->button(conf.sieveImapAccountSettings.encryptionMode());
     if (safetyButton) {
         safetyButton->setChecked(true);
@@ -262,9 +263,11 @@ SieveEditorUtil::SieveServerConfig ServerSieveSettings::serverSieveConfig() cons
         conf.sieveImapAccountSettings.setUserName(userName());
         conf.sieveImapAccountSettings.setServerName(serverName());
     }
-    conf.sieveImapAccountSettings.setPort(imapPort());
-    conf.sieveImapAccountSettings.setAuthenticationType(authenticationType());
-    conf.sieveImapAccountSettings.setEncryptionMode(static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(ui->safeImapGroup->checkedId()));
+    if (ui->safeImap->isChecked()) {
+        conf.sieveImapAccountSettings.setPort(imapPort());
+        conf.sieveImapAccountSettings.setAuthenticationType(authenticationType());
+        conf.sieveImapAccountSettings.setEncryptionMode(static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(ui->safeImapGroup->checkedId()));
+    }
     return conf;
 }
 
