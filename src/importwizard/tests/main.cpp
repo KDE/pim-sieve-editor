@@ -19,12 +19,13 @@
 
 #include <QApplication>
 #include "../importimapsettingwizard.h"
+#include <QStandardPaths>
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
+    QStandardPaths::setTestModeEnabled(true);
     ImportImapSettingWizard wizard;
-    wizard.exec();
-    return app.exec();
+    return wizard.exec();
 }
 
