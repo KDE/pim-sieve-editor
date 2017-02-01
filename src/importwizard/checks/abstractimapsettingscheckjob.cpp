@@ -20,7 +20,8 @@
 #include "abstractimapsettingscheckjob.h"
 
 AbstractImapSettingsCheckJob::AbstractImapSettingsCheckJob(QObject *parent)
-    : QObject(parent)
+    : QObject(parent),
+      mSettingsWereImported(false)
 {
 
 }
@@ -28,4 +29,11 @@ AbstractImapSettingsCheckJob::AbstractImapSettingsCheckJob(QObject *parent)
 AbstractImapSettingsCheckJob::~AbstractImapSettingsCheckJob()
 {
 
+}
+
+void AbstractImapSettingsCheckJob::checkNoSettingsImported()
+{
+    if (!mSettingsWereImported) {
+        Q_EMIT noSettingsImported(name());
+    }
 }

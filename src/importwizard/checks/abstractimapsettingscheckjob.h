@@ -38,6 +38,10 @@ public:
 Q_SIGNALS:
     void importSetting(const QString &name, const SieveEditorUtil::SieveServerConfig &settings);
     void noSettingsImported(const QString &name);
+
+protected:
+    void checkNoSettingsImported();
+    bool mSettingsWereImported;
 };
 
 #endif // ABSTRACTIMAPSETTINGSCHECKJOB_H
