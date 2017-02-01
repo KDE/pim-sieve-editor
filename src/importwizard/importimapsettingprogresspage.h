@@ -41,6 +41,7 @@ public:
 
 Q_SIGNALS:
     void finished();
+    void noSettingsImported(const QString &name);
 
 private:
     void slotImportSettingsDone(const QString &name, const SieveEditorUtil::SieveServerConfig &settings);

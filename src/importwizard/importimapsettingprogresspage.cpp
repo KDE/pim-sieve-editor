@@ -73,6 +73,7 @@ void ImportImapSettingProgressPage::start()
     for (const QString &prg : qAsConst(mSelectedPrograms)) {
         AbstractImapSettingsCheckJob *job = mListCheckJob.value(prg);
         connect(job, &AbstractImapSettingsCheckJob::importSetting, this, &ImportImapSettingProgressPage::slotImportSettingsDone);
+        connect(job, &AbstractImapSettingsCheckJob::noSettingsImported, this, &ImportImapSettingProgressPage::noSettingsImported);
         job->start();
     }
     if (!mSettingsFound) {

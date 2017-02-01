@@ -44,6 +44,7 @@ private:
     void initializeWizard();
     void slotHelpClicked();
     void slotFinishImportData();
+    void slotNoSettingsFound(const QString &name);
     QMap<QString, AbstractImapSettingsCheckJob *> mListCheckJob;
 
     ImportImapSettingSearchPage *mSearchPage;

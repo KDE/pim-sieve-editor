@@ -46,7 +46,8 @@ ImportImapSettingFinishPage::~ImportImapSettingFinishPage()
 
 }
 
-void ImportImapSettingFinishPage::setImportResult(const QString &result)
+void ImportImapSettingFinishPage::addSummary(const QString &name)
 {
-    mTextEdit->setPlainText(result);
+    mTextEdit->append(name);
 }
+

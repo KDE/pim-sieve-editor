@@ -29,7 +29,7 @@ public:
     explicit ImportImapSettingFinishPage(QWidget *parent = nullptr);
     ~ImportImapSettingFinishPage();
 
-    void setImportResult(const QString &result);
+    void addSummary(const QString &name);
 
 private:
     QTextEdit *mTextEdit;

@@ -74,23 +74,28 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldHaveImportSettings_data()
 {
     QTest::addColumn<QString>("directory");
     QTest::addColumn<int>("nbsignals");
-    QTest::newRow("reuseconfig") << QStringLiteral("/config/reuseconfig") << 1;
-    QTest::newRow("reuseconfigtwiceconfig") << QStringLiteral("/config/reuseconfigtwiceconfig") << 2;
+    QTest::addColumn<int>("nbSignalsNoSettingsFound");
+    QTest::newRow("reuseconfig") << QStringLiteral("/config/reuseconfig") << 1 << 0;
+    QTest::newRow("reuseconfigtwiceconfig") << QStringLiteral("/config/reuseconfigtwiceconfig") << 2 << 0;
 
-    QTest::newRow("imapconfig") << QStringLiteral("/config/imapconfig") << 0;
-    QTest::newRow("imapconfigwithsieveconfig") << QStringLiteral("/config/imapconfigwithsieveconfig") << 1;
+    QTest::newRow("imapconfig") << QStringLiteral("/config/imapconfig") << 0 << 1;
+    QTest::newRow("imapconfigwithsieveconfig") << QStringLiteral("/config/imapconfigwithsieveconfig") << 1 << 0;
 }
 
 void ImportImapSettingsAkonadiCheckJobTest::shouldHaveImportSettings()
 {
     QFETCH(QString, directory);
     QFETCH(int, nbsignals);
+    QFETCH(int, nbSignalsNoSettingsFound);
     qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + directory).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
     QVERIFY(job.settingsCanBeImported());
     QSignalSpy spy(&job, &ImportImapSettingsAkonadiCheckJob::importSetting);
+    QSignalSpy spy2(&job, &ImportImapSettingsAkonadiCheckJob::noSettingsImported);
+
     job.start();
     QCOMPARE(spy.count(), nbsignals);
+    QCOMPARE(spy2.count(), nbSignalsNoSettingsFound);
 }
 
 void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
