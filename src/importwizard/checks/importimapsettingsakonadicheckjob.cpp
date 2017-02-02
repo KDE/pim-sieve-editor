@@ -45,6 +45,7 @@ bool ImportImapSettingsAkonadiCheckJob::resourceCanHaveSieveSupport(const QStrin
 
 void ImportImapSettingsAkonadiCheckJob::start()
 {
+    mSettingsWereImported = false;
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::ConfigLocation, QString(), QStandardPaths::LocateDirectory);
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*rc"));
