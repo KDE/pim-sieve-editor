@@ -39,6 +39,11 @@ void ImportImapSettingsThunderbirdCheckJob::start()
     checkNoSettingsImported();
 }
 
+bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &directory, const QString &filename)
+{
+    return false;
+}
+
 bool ImportImapSettingsThunderbirdCheckJob::settingsCanBeImported() const
 {
     const QString thunderBirdDir = QDir::homePath() + QLatin1String("/.thunderbird/");

@@ -32,6 +32,8 @@ public:
     void start() Q_DECL_OVERRIDE;
     bool settingsCanBeImported() const Q_DECL_OVERRIDE;
     QString name() const Q_DECL_OVERRIDE;
+private:
+    bool importSettings(const QString &directory, const QString &filename);
 };
 
 #endif // IMPORTIMAPSETTINGSTHUNDERBIRDCHECKJOB_H
