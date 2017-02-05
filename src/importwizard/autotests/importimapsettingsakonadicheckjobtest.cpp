@@ -124,6 +124,8 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
 
     QTest::newRow("usecustomsieveconfig") << QStringLiteral("/config/usecustomsieveconfig") << QStringLiteral("akonadi_kolab_resource_0rc") <<settings2;
 
+    QTest::newRow("usecustomsieveconfig2") << QStringLiteral("/config/usecustomsieveconfig2") << QStringLiteral("akonadi_kolab_resource_0rc") <<settings2;
+
 }
 
 void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings()
