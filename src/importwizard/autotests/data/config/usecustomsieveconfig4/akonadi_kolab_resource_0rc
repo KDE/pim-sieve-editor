@@ -1,0 +1,15 @@
+
+[network]
+ImapServer=bla.foo.com
+UserName=foo@foo.com
+Authentication=3
+ImapPort=143
+Safety=SSL
+
+
+[siever]
+SieveSupport=true
+SieveReuseConfig=false
+SievePort=150
+SieveCustomUsername=b
+
