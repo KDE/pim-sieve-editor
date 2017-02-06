@@ -38,6 +38,7 @@ struct SIEVEEDITORLIB_EXPORT SieveAccountSettings {
     {
 
     }
+
     bool operator ==(const SieveAccountSettings &other) const;
     bool isValid() const;
     QString serverName;
@@ -46,6 +47,7 @@ struct SIEVEEDITORLIB_EXPORT SieveAccountSettings {
     MailTransport::Transport::EnumAuthenticationType::type authenticationType;
     int port;
 };
+
 
 struct SIEVEEDITORLIB_EXPORT SieveServerConfig {
     SieveServerConfig()
@@ -73,5 +75,5 @@ QString sievePasswordIdentifier(const QString &userName, const QString &serverNa
 QString imapPasswordIdentifier(const QString &userName, const QString &serverName);
 }
 Q_DECLARE_TYPEINFO(SieveEditorUtil::SieveServerConfig, Q_MOVABLE_TYPE);
-
+QDebug operator <<(QDebug d, const SieveEditorUtil::SieveAccountSettings &settings);
 #endif // SIEVEEDITORUTIL_H

@@ -124,7 +124,15 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
 
     QTest::newRow("usecustomsieveconfig") << QStringLiteral("/config/usecustomsieveconfig") << QStringLiteral("akonadi_kolab_resource_0rc") <<settings2;
 
-    QTest::newRow("usecustomsieveconfig2") << QStringLiteral("/config/usecustomsieveconfig2") << QStringLiteral("akonadi_kolab_resource_0rc") <<settings2;
+    SieveEditorUtil::SieveServerConfig settings3;
+    settings3.sieveImapAccountSettings.setUserName(QStringLiteral("foo@foo.com"));
+    settings3.sieveImapAccountSettings.setServerName(QStringLiteral("bla.foo.com"));
+    settings3.sieveImapAccountSettings.setPort(143);
+    settings3.sieveSettings.userName = QStringLiteral("b");
+    settings3.sieveSettings.serverName = QStringLiteral("bla.foo.com"); //TODO
+    settings3.sieveSettings.port = 150;
+
+    QTest::newRow("usecustomsieveconfig2") << QStringLiteral("/config/usecustomsieveconfig2") << QStringLiteral("akonadi_kolab_resource_0rc") <<settings3;
 
 }
 

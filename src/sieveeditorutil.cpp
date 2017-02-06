@@ -79,8 +79,8 @@ bool SieveEditorUtil::SieveServerConfig::operator ==(const SieveEditorUtil::Siev
     if (!result) {
         qCDebug(SIEVEEDITOR_LOG) << "enabled " << enabled << " other.enabled " << other.enabled;
         qCDebug(SIEVEEDITOR_LOG) << "useImapCustomServer " << useImapCustomServer << " other.useImapCustomServer " << other.useImapCustomServer;
-        //qCDebug(SIEVEEDITOR_LOG) << "sieveSettings " << sieveSettings << " other.sieveSettings " << other.sieveSettings;
-        //qCDebug(SIEVEEDITOR_LOG) << "sieveImapAccountSettings " << sieveImapAccountSettings << " other.sieveImapAccountSettings " << other.sieveImapAccountSettings;
+        qCDebug(SIEVEEDITOR_LOG) << "sieveSettings " << sieveSettings << " other.sieveSettings " << other.sieveSettings;
+        qCDebug(SIEVEEDITOR_LOG) << "sieveImapAccountSettings " << sieveImapAccountSettings << " other.sieveImapAccountSettings " << other.sieveImapAccountSettings;
     }
     return result;
 }
@@ -246,6 +246,16 @@ void SieveEditorUtil::deletePasswords(const QStringList &identifiers)
             }
         }
     }
+}
+
+QDebug operator <<(QDebug d, const SieveEditorUtil::SieveAccountSettings &settings)
+{
+    d << "serverName " << settings.serverName;
+    d << "userName " << settings.userName;
+    d << "password " << settings.password;
+    d << "authenticationType " << settings.authenticationType;
+    d << "port " << settings.port;
+    return d;
 }
 
 bool SieveEditorUtil::SieveAccountSettings::operator ==(const SieveEditorUtil::SieveAccountSettings &other) const
