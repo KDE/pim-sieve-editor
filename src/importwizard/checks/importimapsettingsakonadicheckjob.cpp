@@ -62,8 +62,8 @@ void ImportImapSettingsAkonadiCheckJob::start()
 
 bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory, const QString &filename)
 {
-    QString filePath = directory +  QLatin1Char('/') + filename;
-    qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
+    const QString filePath = directory +  QLatin1Char('/') + filename;
+    //qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
     QFile file(filePath);
     if (!file.exists()) {
         qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filePath;
@@ -98,7 +98,6 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
             qCWarning(SIEVEEDITOR_LOG) << "Unknown encryption mode " << encryption;
         }
         //TODO
-        //config.sieveImapAccountSettings.setEncryptionMode();
         //config.sieveImapAccountSettings.setPassword();
         const int sievePort = sieveGroup.readEntry(QStringLiteral("SievePort"), 4190);
         if (sievePort != -1) {
@@ -115,10 +114,7 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
             //TODO
         }
         //TODO import kwallet settings too
-
-        //TODO save other settings
         if (config.isValid()) {
-            //TODO fix name!
             Q_EMIT importSetting(filename, config);
             return true;
         }
