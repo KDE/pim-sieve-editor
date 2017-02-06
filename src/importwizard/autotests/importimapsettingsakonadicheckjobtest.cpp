@@ -128,6 +128,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings3.sieveImapAccountSettings.setUserName(QStringLiteral("foo@foo.com"));
     settings3.sieveImapAccountSettings.setServerName(QStringLiteral("bla.foo.com"));
     settings3.sieveImapAccountSettings.setPort(143);
+    settings3.sieveImapAccountSettings.setAuthenticationType(static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(3));
     settings3.sieveSettings.userName = QStringLiteral("b");
     settings3.sieveSettings.serverName = QStringLiteral("bla.foo.com"); //TODO
     settings3.sieveSettings.port = 150;
