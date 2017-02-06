@@ -48,7 +48,6 @@ struct SIEVEEDITORLIB_EXPORT SieveAccountSettings {
     int port;
 };
 
-
 struct SIEVEEDITORLIB_EXPORT SieveServerConfig {
     SieveServerConfig()
         : enabled(true),

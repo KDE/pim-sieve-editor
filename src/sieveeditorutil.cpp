@@ -73,9 +73,9 @@ QUrl SieveEditorUtil::SieveServerConfig::url() const
 bool SieveEditorUtil::SieveServerConfig::operator ==(const SieveEditorUtil::SieveServerConfig &other) const
 {
     const bool result = (enabled == other.enabled) &&
-            (useImapCustomServer == other.useImapCustomServer) &&
-            (sieveSettings == other.sieveSettings) &&
-            (sieveImapAccountSettings == other.sieveImapAccountSettings);
+                        (useImapCustomServer == other.useImapCustomServer) &&
+                        (sieveSettings == other.sieveSettings) &&
+                        (sieveImapAccountSettings == other.sieveImapAccountSettings);
     if (!result) {
         qCDebug(SIEVEEDITOR_LOG) << "enabled " << enabled << " other.enabled " << other.enabled;
         qCDebug(SIEVEEDITOR_LOG) << "useImapCustomServer " << useImapCustomServer << " other.useImapCustomServer " << other.useImapCustomServer;
@@ -261,10 +261,10 @@ QDebug operator <<(QDebug d, const SieveEditorUtil::SieveAccountSettings &settin
 bool SieveEditorUtil::SieveAccountSettings::operator ==(const SieveEditorUtil::SieveAccountSettings &other) const
 {
     bool result = (serverName == other.serverName) &&
-            (userName == other.userName) &&
-            (password == other.password) &&
-            (authenticationType == other.authenticationType) &&
-            (port == other.port);
+                  (userName == other.userName) &&
+                  (password == other.password) &&
+                  (authenticationType == other.authenticationType) &&
+                  (port == other.port);
     if (!result) {
         qCDebug(SIEVEEDITOR_LOG) << "serverName " << serverName << " other.serverName " << other.serverName;
         qCDebug(SIEVEEDITOR_LOG) << "userName " << userName << " other.userName " << other.userName;

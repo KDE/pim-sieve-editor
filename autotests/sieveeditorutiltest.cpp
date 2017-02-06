@@ -86,7 +86,6 @@ void SieveEditorUtilTest::shouldBeEqual()
     settings3.port = 3;
     QVERIFY(!(settings == settings3));
 
-
     settings3.port = 2;
     QVERIFY(settings == settings3);
 }

@@ -84,9 +84,9 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
         config.sieveImapAccountSettings.setServerName(imapServerName);
         config.sieveImapAccountSettings.setPort(imapPort);
         config.sieveImapAccountSettings.setAuthenticationType(
-                    static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(
-                        networkGroup.readEntry(QStringLiteral("Authentication"),
-                                               static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
+            static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(
+                networkGroup.readEntry(QStringLiteral("Authentication"),
+                                       static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
         const QString encryption = networkGroup.readEntry(QStringLiteral("Safety"));
         if (encryption == QLatin1String("SSL")) {
             config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::SslV3_1);
