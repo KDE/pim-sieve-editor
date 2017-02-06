@@ -34,6 +34,8 @@ public:
     QString name() const Q_DECL_OVERRIDE;
 private:
     bool importSettings(const QString &directory, const QString &filename);
+    QMap<QString, QString> listProfile(QString &currentProfile, const QString &defaultSettingPath);
+    QString defaultPath() const;
 };
 
 #endif // IMPORTIMAPSETTINGSTHUNDERBIRDCHECKJOB_H
