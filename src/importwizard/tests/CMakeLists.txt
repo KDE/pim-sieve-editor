@@ -11,6 +11,6 @@ target_link_libraries(sieveeditorimportwizardtest
     KF5::ConfigGui
     KF5::MailTransport
     KF5::KSieveUi
-    sieveeditorlib
+    libsieveeditor
     )
 

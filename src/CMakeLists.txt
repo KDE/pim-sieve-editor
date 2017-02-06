@@ -53,11 +53,11 @@ qt5_add_resources(sieveeditor_LIB_SRCS sieveeditor.qrc)
 
 ecm_qt_declare_logging_category(sieveeditor_LIB_SRCS HEADER sieveeditor_debug.h IDENTIFIER SIEVEEDITOR_LOG CATEGORY_NAME org.kde.pim.sieveeditor)
 
-add_library(sieveeditorlib ${sieveeditor_LIB_SRCS})
+add_library(libsieveeditor ${sieveeditor_LIB_SRCS})
 
-generate_export_header(sieveeditorlib BASE_NAME sieveeditorlib)
+generate_export_header(libsieveeditor BASE_NAME libsieveeditor)
 
-target_link_libraries(sieveeditorlib
+target_link_libraries(libsieveeditor
     KF5::MailTransport
     KF5::Bookmarks
     KF5::DBusAddons
@@ -70,8 +70,8 @@ target_link_libraries(sieveeditorlib
     KF5::Crash
     )
 
-set_target_properties(sieveeditorlib
-    PROPERTIES VERSION ${KDEPIM_LIB_VERSION} SOVERSION ${KDEPIM_LIB_SOVERSION}
+set_target_properties(libsieveeditor
+    PROPERTIES OUTPUT_NAME sieveeditor VERSION ${KDEPIM_LIB_VERSION} SOVERSION ${KDEPIM_LIB_SOVERSION}
     )
 
 set(sieveeditor_SRCS main.cpp)
@@ -79,7 +79,7 @@ set(sieveeditor_SRCS main.cpp)
 add_executable(sieveeditor ${sieveeditor_SRCS} )
 
 target_link_libraries(sieveeditor
-    sieveeditorlib
+    libsieveeditor
     )
 
 install(TARGETS sieveeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
@@ -89,7 +89,7 @@ install(PROGRAMS org.kde.sieveeditor.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 add_subdirectory(kconf_update)
 
 install(FILES settings/sieveeditorglobalconfig.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-install(TARGETS sieveeditorlib ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
+install(TARGETS libsieveeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 
 if (BUILD_TESTING)
