@@ -263,7 +263,9 @@ void SieveEditorMainWindow::setupActions()
 void SieveEditorMainWindow::slotImportImapSettings()
 {
     ImportImapSettingWizard w(this);
-    w.exec();
+    if (w.exec()) {
+        mMainWidget->sieveEditorMainWidget()->updateServerList();
+    }
 }
 
 void SieveEditorMainWindow::slotRefreshList()
