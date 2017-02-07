@@ -25,7 +25,7 @@
 #include <QFile>
 #include <QRegularExpression>
 
-LIBSIEVEEDITOR_EXPORT QString sieveeditor_thunderbird_default_toplevel_path = QDir::homePath();
+LIBSIEVEEDITOR_EXPORT QString sieveeditor_thunderbird_default_toplevel_path = QDir::homePath() + QLatin1String("/.thunderbird/");
 
 ImportImapSettingsThunderbirdCheckJob::ImportImapSettingsThunderbirdCheckJob(QObject *parent)
     : AbstractImapSettingsCheckJob(parent)
@@ -92,7 +92,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
 
 QString ImportImapSettingsThunderbirdCheckJob::defaultPath() const
 {
-    return sieveeditor_thunderbird_default_toplevel_path + QLatin1String("/.thunderbird/");
+    return sieveeditor_thunderbird_default_toplevel_path;
 }
 
 bool ImportImapSettingsThunderbirdCheckJob::settingsCanBeImported() const

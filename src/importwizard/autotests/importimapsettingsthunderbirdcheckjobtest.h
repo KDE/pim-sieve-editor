@@ -30,6 +30,7 @@ public:
     ~ImportImapSettingsThunderbirdCheckJobTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldBeAbleToImportSettings();
 };
 
 #endif // IMPORTIMAPSETTINGSTHUNDERBIRDCHECKJOBTEST_H
