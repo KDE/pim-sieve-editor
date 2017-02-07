@@ -18,6 +18,7 @@
 */
 
 #include "importimapsettingsthunderbirdcheckjobtest.h"
+#include "importwizard/checks/importimapsettingsthunderbirdcheckjob.h"
 #include "libsieveeditor_export.h"
 #include <QTest>
 #include <QStandardPaths>
@@ -26,13 +27,18 @@ ImportImapSettingsThunderbirdCheckJobTest::ImportImapSettingsThunderbirdCheckJob
     : QObject(parent)
 {
     QStandardPaths::setTestModeEnabled(true);
-    //TODO adapt sieveeditor_thunderbird_default_toplevel_path
     sieveeditor_thunderbird_default_toplevel_path = QString();
 }
 
 ImportImapSettingsThunderbirdCheckJobTest::~ImportImapSettingsThunderbirdCheckJobTest()
 {
 
+}
+
+void ImportImapSettingsThunderbirdCheckJobTest::shouldHaveDefaultValue()
+{
+    ImportImapSettingsThunderbirdCheckJob check;
+    QVERIFY(!check.settingsCanBeImported());
 }
 
 QTEST_MAIN(ImportImapSettingsThunderbirdCheckJobTest)
