@@ -37,6 +37,7 @@ ImportImapSettingsThunderbirdCheckJobTest::~ImportImapSettingsThunderbirdCheckJo
 
 void ImportImapSettingsThunderbirdCheckJobTest::shouldHaveDefaultValue()
 {
+    sieveeditor_thunderbird_default_toplevel_path = QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/empty"));
     ImportImapSettingsThunderbirdCheckJob check;
     QVERIFY(!check.settingsCanBeImported());
 }
@@ -45,7 +46,7 @@ void ImportImapSettingsThunderbirdCheckJobTest::shouldBeAbleToImportSettings()
 {
     sieveeditor_thunderbird_default_toplevel_path = QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/thunderbird1"));
     ImportImapSettingsThunderbirdCheckJob check;
-    QVERIFY(!check.settingsCanBeImported());
+    QVERIFY(check.settingsCanBeImported());
 }
 
 QTEST_MAIN(ImportImapSettingsThunderbirdCheckJobTest)
