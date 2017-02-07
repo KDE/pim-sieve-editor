@@ -25,11 +25,14 @@
 #include <QDebug>
 #include <QSignalSpy>
 
+extern LIBSIEVEEDITOR_EXPORT bool sieveeditor_import_wallet;
+
 Q_DECLARE_METATYPE(SieveEditorUtil::SieveServerConfig)
 ImportImapSettingsAkonadiCheckJobTest::ImportImapSettingsAkonadiCheckJobTest(QObject *parent)
     : QObject(parent)
 {
     qRegisterMetaType<SieveEditorUtil::SieveServerConfig>();
+    sieveeditor_import_wallet = false;
 }
 
 ImportImapSettingsAkonadiCheckJobTest::~ImportImapSettingsAkonadiCheckJobTest()

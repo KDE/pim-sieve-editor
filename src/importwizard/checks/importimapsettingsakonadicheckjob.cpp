@@ -18,6 +18,7 @@
 */
 
 #include "importimapsettingsakonadicheckjob.h"
+#include "libsieveeditor_export.h"
 #include "sieveeditor_debug.h"
 #include <KLocalizedString>
 #include <KConfigGroup>
@@ -26,6 +27,7 @@
 #include <QDir>
 #include <QFile>
 
+LIBSIEVEEDITOR_EXPORT bool sieveeditor_import_wallet = true;
 ImportImapSettingsAkonadiCheckJob::ImportImapSettingsAkonadiCheckJob(QObject *parent)
     : AbstractImapSettingsCheckJob(parent)
 {
@@ -113,7 +115,9 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
             config.sieveSettings.serverName = imapServerName; //FIXME
             //TODO
         }
-        //TODO import kwallet settings too
+        if (sieveeditor_import_wallet) {
+            //TODO import kwallet settings too
+        }
         if (config.isValid()) {
             Q_EMIT importSetting(filename, config);
             return true;
