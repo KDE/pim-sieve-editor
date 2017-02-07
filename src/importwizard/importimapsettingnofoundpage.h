@@ -23,7 +23,7 @@
 #include <QWidget>
 #include "libsieveeditor_export.h"
 
-class SIEVEEDITORLIB_EXPORT ImportImapSettingNoFoundPage : public QWidget
+class LIBSIEVEEDITOR_EXPORT ImportImapSettingNoFoundPage : public QWidget
 {
     Q_OBJECT
 public:

@@ -33,7 +33,7 @@ namespace PimCommon
 class KActionMenuChangeCase;
 }
 
-class SIEVEEDITORLIB_EXPORT SieveEditorMainWindow : public KXmlGuiWindow
+class LIBSIEVEEDITOR_EXPORT SieveEditorMainWindow : public KXmlGuiWindow
 {
     Q_OBJECT
 public:

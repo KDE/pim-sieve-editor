@@ -29,7 +29,7 @@ class ImportImapSettingProgressPage;
 class ImportImapSettingFinishPage;
 class KPageWidgetItem;
 class AbstractImapSettingsCheckJob;
-class SIEVEEDITORLIB_EXPORT ImportImapSettingWizard : public KAssistantDialog
+class LIBSIEVEEDITOR_EXPORT ImportImapSettingWizard : public KAssistantDialog
 {
     Q_OBJECT
 public:

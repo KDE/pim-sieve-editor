@@ -24,7 +24,7 @@
 #include <QWidget>
 class QListWidget;
 
-class SIEVEEDITORLIB_EXPORT ImportImapSettingSearchPage : public QWidget
+class LIBSIEVEEDITOR_EXPORT ImportImapSettingSearchPage : public QWidget
 {
     Q_OBJECT
 public:

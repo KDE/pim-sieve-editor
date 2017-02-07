@@ -22,7 +22,7 @@
 #include "libsieveeditor_export.h"
 #include <QWidget>
 class QTextEdit;
-class SIEVEEDITORLIB_EXPORT ImportImapSettingFinishPage : public QWidget
+class LIBSIEVEEDITOR_EXPORT ImportImapSettingFinishPage : public QWidget
 {
     Q_OBJECT
 public:

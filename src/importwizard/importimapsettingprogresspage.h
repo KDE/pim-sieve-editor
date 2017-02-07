@@ -27,7 +27,7 @@
 
 class QTextEdit;
 class AbstractImapSettingsCheckJob;
-class SIEVEEDITORLIB_EXPORT ImportImapSettingProgressPage : public QWidget
+class LIBSIEVEEDITOR_EXPORT ImportImapSettingProgressPage : public QWidget
 {
     Q_OBJECT
 public:
