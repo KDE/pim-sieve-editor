@@ -25,6 +25,8 @@
 #include <QFile>
 #include <QRegularExpression>
 
+LIBSIEVEEDITOR_EXPORT QString sieveeditor_thunderbird_default_toplevel_path = QDir::homePath();
+
 ImportImapSettingsThunderbirdCheckJob::ImportImapSettingsThunderbirdCheckJob(QObject *parent)
     : AbstractImapSettingsCheckJob(parent)
 {
@@ -75,11 +77,10 @@ void ImportImapSettingsThunderbirdCheckJob::start()
     mSettingsWereImported = false;
     QString currentProfile;
     const QMap<QString, QString> lstProfile = listProfile(currentProfile, defaultPath());
-    if (lstProfile.isEmpty()) {
-        //return QString();
-    } else if (lstProfile.count() == 1) {
+    if (lstProfile.count() == 1) {
         //return currentProfile;
     } else {
+        //TODO import all settings.
     }
     checkNoSettingsImported();
 }
@@ -91,7 +92,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
 
 QString ImportImapSettingsThunderbirdCheckJob::defaultPath() const
 {
-    return QDir::homePath() + QLatin1String("/.thunderbird/");
+    return sieveeditor_thunderbird_default_toplevel_path + QLatin1String("/.thunderbird/");
 }
 
 bool ImportImapSettingsThunderbirdCheckJob::settingsCanBeImported() const
