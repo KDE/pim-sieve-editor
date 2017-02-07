@@ -21,7 +21,7 @@
 #define SIEVEEDITORMAINWINDOW_H
 
 #include <KXmlGuiWindow>
-#include "sieveeditorlib_export.h"
+#include "libsieveeditor_export.h"
 
 class QAction;
 class SieveEditorCentralWidget;

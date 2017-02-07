@@ -21,7 +21,7 @@
 #define IMPORTIMAPSETTINGWIZARD_H
 
 #include <KAssistantDialog>
-#include "sieveeditorlib_export.h"
+#include "libsieveeditor_export.h"
 
 class ImportImapSettingSearchPage;
 class ImportImapSettingNoFoundPage;

@@ -23,7 +23,7 @@
 #include <QWidget>
 #include <QMap>
 #include "sieveeditorutil.h"
-#include "sieveeditorlib_export.h"
+#include "libsieveeditor_export.h"
 
 class QTextEdit;
 class AbstractImapSettingsCheckJob;

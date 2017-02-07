@@ -19,7 +19,7 @@
 
 #ifndef IMPORTIMAPSETTINGFINISHPAGE_H
 #define IMPORTIMAPSETTINGFINISHPAGE_H
-#include "sieveeditorlib_export.h"
+#include "libsieveeditor_export.h"
 #include <QWidget>
 class QTextEdit;
 class SIEVEEDITORLIB_EXPORT ImportImapSettingFinishPage : public QWidget

@@ -20,7 +20,7 @@
 #ifndef IMPORTIMAPSETTINGSEARCHPAGE_H
 #define IMPORTIMAPSETTINGSEARCHPAGE_H
 
-#include "sieveeditorlib_export.h"
+#include "libsieveeditor_export.h"
 #include <QWidget>
 class QListWidget;
 
