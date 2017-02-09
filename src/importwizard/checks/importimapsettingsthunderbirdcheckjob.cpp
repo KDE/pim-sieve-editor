@@ -71,7 +71,6 @@ QMap<QString, QString> ImportImapSettingsThunderbirdCheckJob::listProfile(QStrin
     return lstProfile;
 }
 
-
 void ImportImapSettingsThunderbirdCheckJob::start()
 {
     mSettingsWereImported = false;
