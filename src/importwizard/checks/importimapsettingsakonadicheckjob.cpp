@@ -74,6 +74,7 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
     SieveEditorUtil::SieveServerConfig config;
     bool isKolabSettings = filePath.contains(QStringLiteral("/akonadi_kolab_resource"));
     KSharedConfigPtr resourceConfig = KSharedConfig::openConfig(filePath);
+
     KConfigGroup sieveGroup = resourceConfig->group(QStringLiteral("siever"));
     bool hasSieveSupport = sieveGroup.readEntry(QStringLiteral("SieveSupport"), isKolabSettings ? true : false);
     if (hasSieveSupport) {
@@ -117,6 +118,19 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
         }
         if (sieveeditor_import_wallet) {
             //TODO import kwallet settings too
+#if 0
+            QString password;
+            bool passwordStoredInWallet = false;
+            //Wallet *wallet = qobject_cast<Wallet *>(sender());
+            if (wallet && wallet->hasFolder(QStringLiteral("imap"))) {
+                wallet->setFolder(QStringLiteral("imap"));
+                wallet->readPassword(resourceConfig->name(), password);
+                passwordStoredInWallet = true;
+            }
+            if (passwordStoredInWallet) {
+                //TODO
+            }
+#endif
         }
         if (config.isValid()) {
             Q_EMIT importSetting(filename, config);

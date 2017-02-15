@@ -76,10 +76,19 @@ void ImportImapSettingsThunderbirdCheckJob::start()
     mSettingsWereImported = false;
     QString currentProfile;
     const QMap<QString, QString> lstProfile = listProfile(currentProfile, defaultPath());
-    if (lstProfile.count() == 1) {
-        //return currentProfile;
-    } else {
-        //TODO import all settings.
+    const int numberLstProfileCount = lstProfile.count();
+    if (numberLstProfileCount > 0) {
+        if (numberLstProfileCount == 1) {
+            //Path =
+            //return currentProfile;
+        } else {
+            QMap<QString, QString>::const_iterator i = lstProfile.constBegin();
+            while (i != lstProfile.constEnd()) {
+                //cout << i.key() << ": " << i.value() << endl;
+                ++i;
+            }
+            //TODO import all settings.
+        }
     }
     checkNoSettingsImported();
 }
