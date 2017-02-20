@@ -102,8 +102,6 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
         } else {
             qCWarning(SIEVEEDITOR_LOG) << "Unknown encryption mode " << encryption;
         }
-        //TODO
-        //config.sieveImapAccountSettings.setPassword();
         const int sievePort = sieveGroup.readEntry(QStringLiteral("SievePort"), 4190);
         if (sievePort != -1) {
             config.sieveSettings.port = sievePort;
