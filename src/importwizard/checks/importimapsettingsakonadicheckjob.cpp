@@ -129,9 +129,9 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
                     passwordStoredInWallet = true;
                 }
                 if (passwordStoredInWallet) {
+                    config.sieveImapAccountSettings.setPassword(password);
                     if (reuseImapSettings) {
                         config.sieveSettings.password = password;
-                        config.sieveImapAccountSettings.setPassword(password);
                     } else {
                         //TODO
                     }
