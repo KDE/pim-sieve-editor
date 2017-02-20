@@ -20,12 +20,14 @@
 #include "importimapsettingsakonadicheckjob.h"
 #include "libsieveeditor_export.h"
 #include "sieveeditor_debug.h"
+#include "sieveserversettings.h"
 #include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <QStandardPaths>
 #include <QDir>
 #include <QFile>
+#include <KWallet>
 
 LIBSIEVEEDITOR_EXPORT bool sieveeditor_import_wallet = true;
 ImportImapSettingsAkonadiCheckJob::ImportImapSettingsAkonadiCheckJob(QObject *parent)
@@ -117,20 +119,24 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
             //TODO
         }
         if (sieveeditor_import_wallet) {
-            //TODO import kwallet settings too
-#if 0
+            KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
             QString password;
             bool passwordStoredInWallet = false;
-            //Wallet *wallet = qobject_cast<Wallet *>(sender());
-            if (wallet && wallet->hasFolder(QStringLiteral("imap"))) {
-                wallet->setFolder(QStringLiteral("imap"));
-                wallet->readPassword(resourceConfig->name(), password);
-                passwordStoredInWallet = true;
+            if (wallet) {
+                if (wallet && wallet->hasFolder(QStringLiteral("imap"))) {
+                    wallet->setFolder(QStringLiteral("imap"));
+                    wallet->readPassword(resourceConfig->name(), password);
+                    passwordStoredInWallet = true;
+                }
+                if (passwordStoredInWallet) {
+                    if (reuseImapSettings) {
+                        config.sieveSettings.password = password;
+                        config.sieveImapAccountSettings.setPassword(password);
+                    } else {
+                        //TODO
+                    }
+                }
             }
-            if (passwordStoredInWallet) {
-                //TODO
-            }
-#endif
         }
         if (config.isValid()) {
             Q_EMIT importSetting(filename, config);
