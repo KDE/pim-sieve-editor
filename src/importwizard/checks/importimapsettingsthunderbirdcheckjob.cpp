@@ -95,8 +95,6 @@ void ImportImapSettingsThunderbirdCheckJob::start()
 
 bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &directory, const QString &filename)
 {
-    Q_UNUSED(directory);
-    Q_UNUSED(filename);
     return false;
 }
 
