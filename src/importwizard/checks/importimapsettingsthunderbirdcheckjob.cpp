@@ -18,6 +18,7 @@
 */
 
 #include "importimapsettingsthunderbirdcheckjob.h"
+#include "sieveeditor_debug.h"
 #include <KLocalizedString>
 #include <KConfig>
 #include <KConfigGroup>
@@ -79,6 +80,7 @@ void ImportImapSettingsThunderbirdCheckJob::start()
     const int numberLstProfileCount = lstProfile.count();
     if (numberLstProfileCount > 0) {
         if (numberLstProfileCount == 1) {
+
             //Path =
             //return currentProfile;
         } else {
@@ -95,6 +97,15 @@ void ImportImapSettingsThunderbirdCheckJob::start()
 
 bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &directory, const QString &filename)
 {
+    const QString filePath = directory +  QLatin1Char('/') + filename;
+    //qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
+    QFile file(filePath);
+    if (!file.exists()) {
+        qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filePath;
+        return false;
+    }
+
+    //TODO import directory
     return false;
 }
 
