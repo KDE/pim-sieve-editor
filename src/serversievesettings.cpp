@@ -19,7 +19,7 @@
 
 #include "serversievesettings.h"
 #include "ui_serversievesettings.h"
-#include <MailTransport/mailtransport/transport.h>
+#include <mailtransport/transport.h>
 #include <MailTransport/ServerTest>
 #include <KLocalizedString>
 #include <KMessageBox>
