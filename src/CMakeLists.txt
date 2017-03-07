@@ -58,16 +58,15 @@ add_library(libsieveeditor ${sieveeditor_LIB_SRCS})
 generate_export_header(libsieveeditor BASE_NAME libsieveeditor)
 
 target_link_libraries(libsieveeditor
+    PRIVATE
     KF5::MailTransport
     KF5::Bookmarks
-    KF5::DBusAddons
     KF5::I18n
     KF5::IconThemes
     KF5::XmlGui
     KF5::PimCommon
     KF5::KSieveUi
     KF5::KManageSieve
-    KF5::Crash
     )
 
 set_target_properties(libsieveeditor
@@ -79,7 +78,11 @@ set(sieveeditor_SRCS main.cpp)
 add_executable(sieveeditor ${sieveeditor_SRCS} )
 
 target_link_libraries(sieveeditor
+    KF5::Crash
     libsieveeditor
+    KF5::XmlGui
+    KF5::I18n
+    KF5::DBusAddons
     )
 
 install(TARGETS sieveeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
