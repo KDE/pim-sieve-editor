@@ -20,11 +20,11 @@
 #ifndef IMPORTIMAPSETTINGSEARCHPAGE_H
 #define IMPORTIMAPSETTINGSEARCHPAGE_H
 
-#include "libsieveeditor_export.h"
+#include "libsieveeditor_private_export.h"
 #include <QWidget>
 class QListWidget;
 
-class LIBSIEVEEDITOR_EXPORT ImportImapSettingSearchPage : public QWidget
+class LIBSIEVEEDITOR_TESTS_EXPORT ImportImapSettingSearchPage : public QWidget
 {
     Q_OBJECT
 public:

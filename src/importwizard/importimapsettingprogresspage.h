@@ -23,11 +23,11 @@
 #include <QWidget>
 #include <QMap>
 #include "sieveeditorutil.h"
-#include "libsieveeditor_export.h"
+#include "libsieveeditor_private_export.h"
 
 class QTextEdit;
 class AbstractImapSettingsCheckJob;
-class LIBSIEVEEDITOR_EXPORT ImportImapSettingProgressPage : public QWidget
+class LIBSIEVEEDITOR_TESTS_EXPORT ImportImapSettingProgressPage : public QWidget
 {
     Q_OBJECT
 public:
