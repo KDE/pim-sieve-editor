@@ -22,9 +22,9 @@
 
 #include <QObject>
 #include "../../sieveeditorutil.h"
-#include "libsieveeditor_export.h"
+#include "libsieveeditor_private_export.h"
 
-class LIBSIEVEEDITOR_EXPORT AbstractImapSettingsCheckJob : public QObject
+class LIBSIEVEEDITOR_TESTS_EXPORT AbstractImapSettingsCheckJob : public QObject
 {
     Q_OBJECT
 public:

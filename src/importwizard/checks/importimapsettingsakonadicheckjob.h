@@ -21,8 +21,8 @@
 #define IMPORTIMAPSETTINGSAKONADICHECKJOB_H
 
 #include "abstractimapsettingscheckjob.h"
-#include "libsieveeditor_export.h"
-class LIBSIEVEEDITOR_EXPORT ImportImapSettingsAkonadiCheckJob : public AbstractImapSettingsCheckJob
+#include "libsieveeditor_private_export.h"
+class LIBSIEVEEDITOR_TESTS_EXPORT ImportImapSettingsAkonadiCheckJob : public AbstractImapSettingsCheckJob
 {
     Q_OBJECT
 public:

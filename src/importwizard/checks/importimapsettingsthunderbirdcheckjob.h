@@ -21,8 +21,8 @@
 #define IMPORTIMAPSETTINGSTHUNDERBIRDCHECKJOB_H
 
 #include "abstractimapsettingscheckjob.h"
-#include "libsieveeditor_export.h"
-class LIBSIEVEEDITOR_EXPORT ImportImapSettingsThunderbirdCheckJob : public AbstractImapSettingsCheckJob
+#include "libsieveeditor_private_export.h"
+class LIBSIEVEEDITOR_TESTS_EXPORT ImportImapSettingsThunderbirdCheckJob : public AbstractImapSettingsCheckJob
 {
     Q_OBJECT
 public:
