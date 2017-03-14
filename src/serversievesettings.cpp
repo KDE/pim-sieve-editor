@@ -402,4 +402,6 @@ void ServerSieveSettings::slotSafetyChanged()
     } else {
         setCurrentAuthMode(ui->imapAuthenticationCombo, (MailTransport::Transport::EnumAuthenticationType::type) protocols.constFirst());
     }
+    mServerTest->deleteLater();
+    mServerTest = nullptr;
 }
