@@ -21,8 +21,9 @@
 #define SieveEditorConfigureServerPage_H
 
 #include <QWidget>
+#include "libsieveeditor_private_export.h"
 
-class SieveEditorConfigureServerPage : public QWidget
+class LIBSIEVEEDITOR_TESTS_EXPORT SieveEditorConfigureServerPage : public QWidget
 {
     Q_OBJECT
 public:
