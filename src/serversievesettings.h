@@ -22,6 +22,7 @@
 
 #include <QWidget>
 #include "sieveeditorutil.h"
+#include "libsieveeditor_private_export.h"
 
 namespace Ui
 {
@@ -32,7 +33,7 @@ namespace MailTransport
 class ServerTest;
 }
 class QComboBox;
-class ServerSieveSettings : public QWidget
+class LIBSIEVEEDITOR_TESTS_EXPORT ServerSieveSettings : public QWidget
 {
     Q_OBJECT
 

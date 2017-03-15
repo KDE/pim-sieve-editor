@@ -1,12 +1,5 @@
 
-include_directories(${sieveeditor_BINARY_DIR}/src)
-
-set( sieveedit_serversievesettings_source  serversievesettingstest.cpp ../src/serversievesettings.cpp ../src/sieveeditor_debug.cpp)
-ki18n_wrap_ui(sieveedit_serversievesettings_source
-    ../src/ui/serversievesettings.ui
-    )
-
-add_executable( serversievesettingstest  ${sieveedit_serversievesettings_source})
+add_executable( serversievesettingstest  serversievesettingstest.cpp)
 add_test(serversievesettingstest serversievesettingstest)
 ecm_mark_as_test(serversievesettingstest)
 target_link_libraries( serversievesettingstest Qt5::Test Qt5::Widgets KF5::MailTransport KF5::I18n KF5::ConfigGui KF5::KSieveUi libsieveeditor)
