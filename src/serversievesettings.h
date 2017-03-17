@@ -77,7 +77,7 @@ private Q_SLOTS:
     void slotUserServerNameChanged();
     void slotTest();
 
-    void slotFinished(const QList<int> &testResult);
+    void slotFinished(const QVector<int> &testResult);
     void slotEncryptionRadioChanged();
 private:
     void populateDefaultAuthenticationOptions(QComboBox *combobox);
