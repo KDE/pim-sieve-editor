@@ -19,11 +19,8 @@ macro(add_sieveserver_unittest _source _additionalSource)
     ecm_mark_as_test(sieveserver-${_name})
     target_link_libraries( ${_name}
         Qt5::Test
-        Qt5::Core
         Qt5::Widgets
         KF5::I18n
-        KF5::Bookmarks
-        KF5::XmlGui
         KF5::MailTransport
         KF5::KSieveUi
         libsieveeditor
