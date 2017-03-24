@@ -113,7 +113,7 @@ void SieveEditorPageWidget::slotGetResult(KManageSieve::SieveJob *, bool success
         return;
     }
     mSieveEditorWidget->setScriptName(mCurrentURL.fileName());
-    mSieveEditorWidget->setScript(script);
+    mSieveEditorWidget->setScript(script, true);
     mWasActive = isActive;
     mSieveEditorWidget->setModified(false);
 }
