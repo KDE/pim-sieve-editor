@@ -21,14 +21,12 @@
 #include "importimapsettingsakonadipassword.h"
 #include "libsieveeditor_export.h"
 #include "sieveeditor_debug.h"
-#include "sieveserversettings.h"
 #include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <QStandardPaths>
 #include <QDir>
 #include <QFile>
-#include <KWallet>
 
 ImportImapSettingsAkonadiCheckJob::ImportImapSettingsAkonadiCheckJob(QObject *parent)
     : AbstractImapSettingsCheckJob(parent)
