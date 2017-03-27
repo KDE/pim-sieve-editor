@@ -27,5 +27,13 @@ ImportImapSettingsPasswordTest::ImportImapSettingsPasswordTest()
 
 void ImportImapSettingsPasswordTest::importPasswords(SieveEditorUtil::SieveServerConfig &config, const KSharedConfigPtr &resourceConfig, bool reuseImapSettings)
 {
-    //TODO
+    Q_UNUSED(resourceConfig);
+    const QString password = QStringLiteral("password_imap");
+    const QString customPassword = QStringLiteral("password_custom_sieve_imap");
+    config.sieveImapAccountSettings.setPassword(password);
+    if (reuseImapSettings) {
+        config.sieveSettings.password = password;
+    } else {
+        config.sieveSettings.password = customPassword;
+    }
 }
