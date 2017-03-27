@@ -29,6 +29,7 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <PimCommon/PimUtil>
+#include <importwizard/checks/importimapsettingsakonadipassword.h>
 
 #include <QPushButton>
 
@@ -76,6 +77,7 @@ void ImportImapSettingWizard::initializeWizard()
         delete thjob;
     }
     ImportImapSettingsAkonadiCheckJob *akonadiJob = new ImportImapSettingsAkonadiCheckJob(this);
+    akonadiJob->setImapSettingsPassword(new ImportImapSettingsAkonadiPassword);
     if (akonadiJob->settingsCanBeImported()) {
         mListCheckJob.insert(akonadiJob->name(), akonadiJob);
         hasSettingToImport = true;
