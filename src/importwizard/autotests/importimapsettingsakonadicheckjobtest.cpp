@@ -18,6 +18,7 @@
 */
 
 #include "importimapsettingsakonadicheckjobtest.h"
+#include "importimapsettingspasswordtest.h"
 #include "../checks/importimapsettingsakonadicheckjob.h"
 
 #include <QTest>
@@ -47,6 +48,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldHaveSettingsFiles()
 {
     qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/config1")).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
+    job.setImapSettingsPassword(new ImportImapSettingsPasswordTest);
     QVERIFY(job.settingsCanBeImported());
 }
 
@@ -54,6 +56,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldHaveNotSettingsFiles()
 {
     qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/noconfig")).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
+    job.setImapSettingsPassword(new ImportImapSettingsPasswordTest);
     QVERIFY(!job.settingsCanBeImported());
 }
 
@@ -61,6 +64,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldHaveSettingsFilesImap()
 {
     qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/config2")).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
+    job.setImapSettingsPassword(new ImportImapSettingsPasswordTest);
     QVERIFY(job.settingsCanBeImported());
 }
 
@@ -68,6 +72,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldHaveSettingsFilesMbox()
 {
     qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/config3")).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
+    job.setImapSettingsPassword(new ImportImapSettingsPasswordTest);
     QVERIFY(!job.settingsCanBeImported());
 }
 
@@ -90,6 +95,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldHaveImportSettings()
     QFETCH(int, nbSignalsNoSettingsFound);
     qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + directory).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
+    job.setImapSettingsPassword(new ImportImapSettingsPasswordTest);
     QVERIFY(job.settingsCanBeImported());
     QSignalSpy spy(&job, &ImportImapSettingsAkonadiCheckJob::importSetting);
     QSignalSpy spy2(&job, &ImportImapSettingsAkonadiCheckJob::noSettingsImported);
@@ -169,6 +175,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings()
     QFETCH(SieveEditorUtil::SieveServerConfig, settings);
     qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + directory).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
+    job.setImapSettingsPassword(new ImportImapSettingsPasswordTest);
     QVERIFY(job.settingsCanBeImported());
     QSignalSpy spy(&job, &ImportImapSettingsAkonadiCheckJob::importSetting);
     job.start();

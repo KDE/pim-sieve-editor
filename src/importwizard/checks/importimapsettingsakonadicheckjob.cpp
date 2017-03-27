@@ -33,7 +33,6 @@
 ImportImapSettingsAkonadiCheckJob::ImportImapSettingsAkonadiCheckJob(QObject *parent)
     : AbstractImapSettingsCheckJob(parent)
 {
-    setImapSettingsPassword(new ImportImapSettingsAkonadiPassword);
 }
 
 ImportImapSettingsAkonadiCheckJob::~ImportImapSettingsAkonadiCheckJob()
