@@ -119,11 +119,15 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
         if (sieveeditor_import_wallet) {
             KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
             QString password;
+            QString customPassword;
             if (wallet) {
                 bool passwordStoredInWallet = false;
                 if (wallet && wallet->hasFolder(QStringLiteral("imap"))) {
                     wallet->setFolder(QStringLiteral("imap"));
                     wallet->readPassword(resourceConfig->name(), password);
+                    if (!reuseImapSettings) { //Custom Password
+                        wallet->readPassword(QStringLiteral("custom_sieve_") + resourceConfig->name(), customPassword);
+                    }
                     passwordStoredInWallet = true;
                 }
                 if (passwordStoredInWallet) {
@@ -131,7 +135,7 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
                     if (reuseImapSettings) {
                         config.sieveSettings.password = password;
                     } else {
-                        //TODO
+                        config.sieveSettings.password = customPassword;
                     }
                 }
             }
