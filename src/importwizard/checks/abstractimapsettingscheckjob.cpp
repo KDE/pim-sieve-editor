@@ -18,9 +18,11 @@
 */
 
 #include "abstractimapsettingscheckjob.h"
+#include "abstractimapsettingspassword.h"
 
 AbstractImapSettingsCheckJob::AbstractImapSettingsCheckJob(QObject *parent)
     : QObject(parent),
+      mPasswordImporter(nullptr),
       mSettingsWereImported(false)
 {
 
@@ -28,7 +30,12 @@ AbstractImapSettingsCheckJob::AbstractImapSettingsCheckJob(QObject *parent)
 
 AbstractImapSettingsCheckJob::~AbstractImapSettingsCheckJob()
 {
+    delete mPasswordImporter;
+}
 
+void AbstractImapSettingsCheckJob::setImapSettingsPassword(AbstractImapSettingsPassword *passwordImporter)
+{
+    mPasswordImporter = passwordImporter;
 }
 
 void AbstractImapSettingsCheckJob::checkNoSettingsImported()

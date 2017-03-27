@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2016 Montel Laurent <montel@kde.org>
+   Copyright (C) 2016-2017 Montel Laurent <montel@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -23,7 +23,7 @@
 #include <QObject>
 #include "../../sieveeditorutil.h"
 #include "libsieveeditor_private_export.h"
-
+class AbstractImapSettingsPassword;
 class LIBSIEVEEDITOR_TESTS_EXPORT AbstractImapSettingsCheckJob : public QObject
 {
     Q_OBJECT
@@ -35,12 +35,15 @@ public:
     virtual bool settingsCanBeImported() const = 0;
     virtual QString name() const = 0;
 
+    void setImapSettingsPassword(AbstractImapSettingsPassword *passwordImporter);
+
 Q_SIGNALS:
     void importSetting(const QString &name, const SieveEditorUtil::SieveServerConfig &settings);
     void noSettingsImported(const QString &name);
 
 protected:
     void checkNoSettingsImported();
+    AbstractImapSettingsPassword *mPasswordImporter;
     bool mSettingsWereImported;
 };
 

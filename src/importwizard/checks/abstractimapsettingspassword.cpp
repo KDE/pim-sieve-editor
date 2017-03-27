@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2016-2017 Montel Laurent <montel@kde.org>
+   Copyright (C) 2017 Montel Laurent <montel@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -17,18 +17,21 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef IMPORTIMAPSETTINGNOFOUNDPAGE_H
-#define IMPORTIMAPSETTINGNOFOUNDPAGE_H
+#include "abstractimapsettingspassword.h"
 
-#include <QWidget>
-#include "libsieveeditor_private_export.h"
-
-class LIBSIEVEEDITOR_TESTS_EXPORT ImportImapSettingNoFoundPage : public QWidget
+AbstractImapSettingsPassword::AbstractImapSettingsPassword()
 {
-    Q_OBJECT
-public:
-    explicit ImportImapSettingNoFoundPage(QWidget *parent = nullptr);
-    ~ImportImapSettingNoFoundPage();
-};
 
-#endif // IMPORTIMAPSETTINGNOFOUNDPAGE_H
+}
+
+AbstractImapSettingsPassword::~AbstractImapSettingsPassword()
+{
+
+}
+
+void AbstractImapSettingsPassword::importPasswords(SieveEditorUtil::SieveServerConfig &config, const KSharedConfigPtr &resourceConfig, bool reuseImapSettings)
+{
+    Q_UNUSED(config);
+    Q_UNUSED(resourceConfig);
+    Q_UNUSED(reuseImapSettings);
+}

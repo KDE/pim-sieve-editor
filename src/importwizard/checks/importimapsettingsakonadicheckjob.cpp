@@ -18,6 +18,7 @@
 */
 
 #include "importimapsettingsakonadicheckjob.h"
+#include "importimapsettingsakonadipassword.h"
 #include "libsieveeditor_export.h"
 #include "sieveeditor_debug.h"
 #include "sieveserversettings.h"
@@ -29,11 +30,10 @@
 #include <QFile>
 #include <KWallet>
 
-LIBSIEVEEDITOR_EXPORT bool sieveeditor_import_wallet = true;
 ImportImapSettingsAkonadiCheckJob::ImportImapSettingsAkonadiCheckJob(QObject *parent)
     : AbstractImapSettingsCheckJob(parent)
 {
-
+    setImapSettingsPassword(new ImportImapSettingsAkonadiPassword);
 }
 
 ImportImapSettingsAkonadiCheckJob::~ImportImapSettingsAkonadiCheckJob()
@@ -116,30 +116,7 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
             config.sieveSettings.serverName = imapServerName; //FIXME
             //TODO
         }
-        if (sieveeditor_import_wallet) {
-            KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
-            QString password;
-            QString customPassword;
-            if (wallet) {
-                bool passwordStoredInWallet = false;
-                if (wallet && wallet->hasFolder(QStringLiteral("imap"))) {
-                    wallet->setFolder(QStringLiteral("imap"));
-                    wallet->readPassword(resourceConfig->name(), password);
-                    if (!reuseImapSettings) { //Custom Password
-                        wallet->readPassword(QStringLiteral("custom_sieve_") + resourceConfig->name(), customPassword);
-                    }
-                    passwordStoredInWallet = true;
-                }
-                if (passwordStoredInWallet) {
-                    config.sieveImapAccountSettings.setPassword(password);
-                    if (reuseImapSettings) {
-                        config.sieveSettings.password = password;
-                    } else {
-                        config.sieveSettings.password = customPassword;
-                    }
-                }
-            }
-        }
+        mPasswordImporter->importPasswords(config, resourceConfig, reuseImapSettings);
         if (config.isValid()) {
             Q_EMIT importSetting(filename, config);
             return true;
