@@ -81,11 +81,14 @@ void ImportImapSettingsThunderbirdCheckJob::start()
     const int numberLstProfileCount = lstProfile.count();
     if (numberLstProfileCount > 0) {
         if (numberLstProfileCount == 1) {
-            importSettings(defaultPath(), lstProfile.first());
+            mSettingsWereImported = importSettings(defaultPath(), lstProfile.first());
         } else {
             QMap<QString, QString>::const_iterator i = lstProfile.constBegin();
             while (i != lstProfile.constEnd()) {
-                importSettings(defaultPath(), i.value());
+                const bool imported = importSettings(defaultPath(), i.value());
+                if (imported) {
+                    mSettingsWereImported = true;
+                }
                 ++i;
             }
         }
