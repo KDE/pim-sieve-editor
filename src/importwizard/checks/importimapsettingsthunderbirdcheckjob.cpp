@@ -96,16 +96,36 @@ void ImportImapSettingsThunderbirdCheckJob::start()
     checkNoSettingsImported();
 }
 
-bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &directory, const QString &filename)
+bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &directory, const QString &defaultProfile)
 {
-    const QString filePath = directory +  QLatin1Char('/') + filename;
+    const QString filePath = directory +  QLatin1Char('/') + defaultProfile + QStringLiteral("/prefs.js");
     qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
     QFile file(filePath);
     if (!file.exists()) {
         qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filePath;
         return false;
     }
+#if 0
+    QTextStream stream(&file);
+    while (!stream.atEnd()) {
+        const QString line = stream.readLine();
+        if (line.startsWith(QStringLiteral("user_pref"))) {
+            if (line.contains(QStringLiteral("mail.server.")) ||
+                    line.contains(QStringLiteral("mail.account.")) ||
+                    line.contains(QStringLiteral("mail.accountmanager."))) {
+                insertIntoMap(line);
+            }
+        } else {
+            qCDebug(IMPORTWIZARD_LOG) << " unstored line :" << line;
+        }
+    }
+    const QString mailAccountPreference = mHashConfig.value(QStringLiteral("mail.accountmanager.accounts")).toString();
+    if (mailAccountPreference.isEmpty()) {
+        return;
+    }
+    mAccountList = mailAccountPreference.split(QLatin1Char(','));
 
+#endif
     //TODO import directory
     return false;
 }
