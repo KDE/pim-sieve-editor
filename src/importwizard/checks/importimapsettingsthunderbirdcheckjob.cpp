@@ -81,17 +81,13 @@ void ImportImapSettingsThunderbirdCheckJob::start()
     const int numberLstProfileCount = lstProfile.count();
     if (numberLstProfileCount > 0) {
         if (numberLstProfileCount == 1) {
-            qDebug() << " void ImportImapSettingsThunderbirdCheckJob::start()" << lstProfile.first();
-            //Path =
-            //return currentProfile;
+            importSettings(defaultPath(), lstProfile.first());
         } else {
             QMap<QString, QString>::const_iterator i = lstProfile.constBegin();
             while (i != lstProfile.constEnd()) {
-                qDebug() << " void ImportImapSettingsThunderbirdCheckJob::start()" << i.key() << " val " << i.value();
-                //cout << i.key() << ": " << i.value() << endl;
+                importSettings(defaultPath(), i.value());
                 ++i;
             }
-            //TODO import all settings.
         }
     }
     checkNoSettingsImported();
@@ -100,7 +96,7 @@ void ImportImapSettingsThunderbirdCheckJob::start()
 bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &directory, const QString &filename)
 {
     const QString filePath = directory +  QLatin1Char('/') + filename;
-    //qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
+    qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
     QFile file(filePath);
     if (!file.exists()) {
         qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filePath;
