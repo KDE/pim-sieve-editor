@@ -80,12 +80,13 @@ void ImportImapSettingsThunderbirdCheckJob::start()
     const int numberLstProfileCount = lstProfile.count();
     if (numberLstProfileCount > 0) {
         if (numberLstProfileCount == 1) {
-
+            qDebug() << " void ImportImapSettingsThunderbirdCheckJob::start()" << lstProfile.first();
             //Path =
             //return currentProfile;
         } else {
             QMap<QString, QString>::const_iterator i = lstProfile.constBegin();
             while (i != lstProfile.constEnd()) {
+                qDebug() << " void ImportImapSettingsThunderbirdCheckJob::start()" << i.key() << " val " << i.value();
                 //cout << i.key() << ": " << i.value() << endl;
                 ++i;
             }
