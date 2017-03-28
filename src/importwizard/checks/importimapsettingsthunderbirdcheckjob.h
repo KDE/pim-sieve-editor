@@ -33,7 +33,7 @@ public:
     bool settingsCanBeImported() const Q_DECL_OVERRIDE;
     QString name() const Q_DECL_OVERRIDE;
 private:
-    bool importSettings(const QString &directory, const QString &filename);
+    bool importSettings(const QString &directory, const QString &defaultProfile);
     QMap<QString, QString> listProfile(QString &currentProfile, const QString &defaultSettingPath);
     QString defaultPath() const;
 };

@@ -110,28 +110,21 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
     while (!stream.atEnd()) {
         const QString line = stream.readLine();
         if (line.startsWith(QStringLiteral("user_pref"))) {
-            if (line.contains(QStringLiteral("mail.smtpserver")) ||
-                    line.contains(QStringLiteral("mail.server.")) ||
-                    line.contains(QStringLiteral("mail.identity.")) ||
+            if (line.contains(QStringLiteral("mail.server.")) ||
                     line.contains(QStringLiteral("mail.account.")) ||
-                    line.contains(QStringLiteral("mail.accountmanager.")) ||
-                    line.contains(QStringLiteral("mailnews.")) ||
-                    line.contains(QStringLiteral("mail.compose.")) ||
-                    line.contains(QStringLiteral("mail.spellcheck")) ||
-                    line.contains(QStringLiteral("mail.SpellCheckBeforeSend")) ||
-                    line.contains(QStringLiteral("spellchecker.dictionary")) ||
-                    line.contains(QStringLiteral("ldap_")) ||
-                    line.contains(QStringLiteral("mail.biff.")) ||
-                    line.contains(QStringLiteral("mailnews.tags.")) ||
-                    line.contains(QStringLiteral("extensions.AutoResizeImage.")) ||
-                    line.contains(QStringLiteral("mail.phishing.")) ||
-                    line.contains(QStringLiteral("mail.display_glyph"))) {
+                    line.contains(QStringLiteral("mail.accountmanager."))) {
                 insertIntoMap(line);
             }
         } else {
             qCDebug(IMPORTWIZARD_LOG) << " unstored line :" << line;
         }
     }
+    const QString mailAccountPreference = mHashConfig.value(QStringLiteral("mail.accountmanager.accounts")).toString();
+    if (mailAccountPreference.isEmpty()) {
+        return;
+    }
+    mAccountList = mailAccountPreference.split(QLatin1Char(','));
+
 #endif
     //TODO import directory
     return false;
