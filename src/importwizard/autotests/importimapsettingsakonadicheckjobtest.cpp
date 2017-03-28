@@ -115,8 +115,10 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings.sieveImapAccountSettings.setUserName(QStringLiteral("foo@foo.com"));
     settings.sieveImapAccountSettings.setServerName(QStringLiteral("bla.foo.com"));
     settings.sieveImapAccountSettings.setPort(143);
+    settings.sieveImapAccountSettings.setPassword(QStringLiteral("password_imap"));
     settings.sieveSettings.userName = QStringLiteral("foo@foo.com");
     settings.sieveSettings.serverName = QStringLiteral("bla.foo.com");
+    settings.sieveSettings.password = QStringLiteral("password_imap");
     settings.sieveSettings.port = 4190;
 
     QTest::newRow("reuseconfig") << QStringLiteral("/config/reuseconfig") << QStringLiteral("akonadi_kolab_resource_0rc") << settings;
@@ -125,8 +127,10 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings2.sieveImapAccountSettings.setUserName(QStringLiteral("foo@foo.com"));
     settings2.sieveImapAccountSettings.setServerName(QStringLiteral("bla.foo.com"));
     settings2.sieveImapAccountSettings.setPort(143);
+    settings2.sieveImapAccountSettings.setPassword(QStringLiteral("password_imap"));
     settings2.sieveSettings.userName = QStringLiteral("b");
     settings2.sieveSettings.serverName = QStringLiteral("bla.foo.com"); //TODO
+    settings2.sieveSettings.password = QStringLiteral("password_custom_sieve_imap");
     settings2.sieveSettings.port = 150;
 
     QTest::newRow("usecustomsieveconfig") << QStringLiteral("/config/usecustomsieveconfig") << QStringLiteral("akonadi_kolab_resource_0rc") << settings2;
@@ -137,7 +141,9 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings3.sieveImapAccountSettings.setPort(143);
     settings3.sieveImapAccountSettings.setAuthenticationType(static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(3));
     settings3.sieveImapAccountSettings.setEncryptionMode(static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(0));
+    settings3.sieveImapAccountSettings.setPassword(QStringLiteral("password_imap"));
     settings3.sieveSettings.userName = QStringLiteral("b");
+    settings3.sieveSettings.password = QStringLiteral("password_custom_sieve_imap");
     settings3.sieveSettings.serverName = QStringLiteral("bla.foo.com"); //TODO
     settings3.sieveSettings.port = 150;
 
@@ -149,7 +155,9 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings4.sieveImapAccountSettings.setPort(143);
     settings4.sieveImapAccountSettings.setAuthenticationType(static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(3));
     settings4.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::TlsV1);
+    settings4.sieveImapAccountSettings.setPassword(QStringLiteral("password_imap"));
     settings4.sieveSettings.userName = QStringLiteral("b");
+    settings4.sieveSettings.password = QStringLiteral("password_custom_sieve_imap");
     settings4.sieveSettings.serverName = QStringLiteral("bla.foo.com"); //TODO
     settings4.sieveSettings.port = 150;
 
@@ -161,8 +169,10 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings5.sieveImapAccountSettings.setPort(143);
     settings5.sieveImapAccountSettings.setAuthenticationType(static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(3));
     settings5.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::SslV3_1);
+    settings5.sieveImapAccountSettings.setPassword(QStringLiteral("password_imap"));
     settings5.sieveSettings.userName = QStringLiteral("b");
     settings5.sieveSettings.serverName = QStringLiteral("bla.foo.com"); //TODO
+    settings5.sieveSettings.password = QStringLiteral("password_custom_sieve_imap");
     settings5.sieveSettings.port = 150;
 
     QTest::newRow("usecustomsieveconfig4") << QStringLiteral("/config/usecustomsieveconfig4") << QStringLiteral("akonadi_kolab_resource_0rc") << settings5;
