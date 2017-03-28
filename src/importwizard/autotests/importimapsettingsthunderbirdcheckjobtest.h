@@ -31,6 +31,8 @@ public:
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldBeAbleToImportSettings();
+    void shouldHaveDefaultValueWithEmptyDirectory();
+    void shouldBeAbleToImportSettings2();
 };
 
 #endif // IMPORTIMAPSETTINGSTHUNDERBIRDCHECKJOBTEST_H
