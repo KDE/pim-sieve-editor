@@ -36,6 +36,9 @@ private:
     bool importSettings(const QString &directory, const QString &defaultProfile);
     QMap<QString, QString> listProfile(QString &currentProfile, const QString &defaultSettingPath);
     QString defaultPath() const;
+    void insertIntoMap(const QString &line);
+
+    QHash<QString, QVariant> mHashConfig;
 };
 
 #endif // IMPORTIMAPSETTINGSTHUNDERBIRDCHECKJOB_H

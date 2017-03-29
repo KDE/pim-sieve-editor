@@ -105,30 +105,65 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
         qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filePath;
         return false;
     }
-#if 0
     QTextStream stream(&file);
     while (!stream.atEnd()) {
         const QString line = stream.readLine();
         if (line.startsWith(QStringLiteral("user_pref"))) {
             if (line.contains(QStringLiteral("mail.server.")) ||
                     line.contains(QStringLiteral("mail.account.")) ||
-                    line.contains(QStringLiteral("mail.accountmanager."))) {
+                    line.contains(QStringLiteral("mail.accountmanager."))||
+                    line.contains(QStringLiteral("extensions.sieve.account."))) {
                 insertIntoMap(line);
             }
         } else {
-            qCDebug(IMPORTWIZARD_LOG) << " unstored line :" << line;
+            qCDebug(SIEVEEDITOR_LOG) << " unstored line :" << line;
         }
     }
     const QString mailAccountPreference = mHashConfig.value(QStringLiteral("mail.accountmanager.accounts")).toString();
     if (mailAccountPreference.isEmpty()) {
-        return;
+        qCDebug(SIEVEEDITOR_LOG) << "No account found";
+        return false;
     }
-    mAccountList = mailAccountPreference.split(QLatin1Char(','));
+    const QStringList accountList = mailAccountPreference.split(QLatin1Char(','));
 
-#endif
+    for (const QString &account : accountList) {
+        //TODO
+    }
     //TODO import directory
     return false;
 }
+
+//Stolen from import-wizard
+void ImportImapSettingsThunderbirdCheckJob::insertIntoMap(const QString &line)
+{
+    QString newLine = line;
+    newLine.remove(QStringLiteral("user_pref(\""));
+    newLine.remove(QStringLiteral(");"));
+    const int pos = newLine.indexOf(QLatin1Char(','));
+    QString key = newLine.left(pos);
+    key.remove(key.length() - 1, 1);
+    QString valueStr = newLine.right(newLine.length() - pos - 2);
+    if (valueStr.at(0) == QLatin1Char('"')) {
+        valueStr.remove(0, 1);
+        const int pos(valueStr.length() - 1);
+        if (valueStr.at(pos) == QLatin1Char('"')) {
+            valueStr.remove(pos, 1);
+        }
+        //Store as String
+        mHashConfig.insert(key, valueStr);
+    } else {
+        if (valueStr == QLatin1String("true")) {
+            mHashConfig.insert(key, true);
+        } else if (valueStr == QLatin1String("false")) {
+            mHashConfig.insert(key, false);
+        } else {
+            //Store as integer
+            const int value = valueStr.toInt();
+            mHashConfig.insert(key, value);
+        }
+    }
+}
+
 
 QString ImportImapSettingsThunderbirdCheckJob::defaultPath() const
 {
