@@ -111,7 +111,8 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
         if (line.startsWith(QStringLiteral("user_pref"))) {
             if (line.contains(QStringLiteral("mail.server.")) ||
                     line.contains(QStringLiteral("mail.account.")) ||
-                    line.contains(QStringLiteral("mail.accountmanager."))) {
+                    line.contains(QStringLiteral("mail.accountmanager."))||
+                    line.contains(QStringLiteral("extensions.sieve.account."))) {
                 insertIntoMap(line);
             }
         } else {
