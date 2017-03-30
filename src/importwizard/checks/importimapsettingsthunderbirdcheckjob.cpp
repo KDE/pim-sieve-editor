@@ -155,6 +155,31 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
 
 //Stolen from import-wizard
 
+void ImportImapSettingsThunderbirdCheckJob::encryption(QMap<QString, QVariant> &settings, const QString &accountName)
+{
+    bool found;
+    const int socketType = mHashConfig.value(accountName + QStringLiteral(".socketType")).toInt(&found);
+    if (found) {
+        switch (socketType) {
+        case 0:
+            //None
+            settings.insert(QStringLiteral("Safety"), QStringLiteral("None"));
+            break;
+        case 2:
+            //STARTTLS
+            settings.insert(QStringLiteral("Safety"), QStringLiteral("STARTTLS"));
+            break;
+        case 3:
+            //SSL/TLS
+            settings.insert(QStringLiteral("Safety"), QStringLiteral("SSL"));
+            break;
+        default:
+            qCDebug(SIEVEEDITOR_LOG) << " socketType " << socketType;
+        }
+    }
+
+}
+
 void ImportImapSettingsThunderbirdCheckJob::addAuth(QMap<QString, QVariant> &settings, const QString &argument, const QString &accountName)
 {
     bool found = false;
