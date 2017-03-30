@@ -133,8 +133,8 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
     }
     const QStringList accountList = mailAccountPreference.split(QLatin1Char(','));
 
+    bool atLeastAnAccountFound = false;
     for (const QString &account : accountList) {
-
         const QString serverName = mHashConfig.value(QStringLiteral("mail.account.%1").arg(account) + QStringLiteral(".server")).toString();
         const QString accountName = QStringLiteral("mail.server.%1").arg(serverName);
         const QString type = mHashConfig.value(accountName + QStringLiteral(".type")).toString();
@@ -143,13 +143,14 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
             const QString host = mHashConfig.value(accountName + QStringLiteral(".hostname")).toString();
             const QString userName = mHashConfig.value(accountName + QStringLiteral(".userName")).toString();
             const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
-
+            //TODO
+            atLeastAnAccountFound = true;
+        } else {
+            qCDebug(SIEVEEDITOR_LOG) << "Account " << accountName << " is not a imap account. Skip it.";
         }
 
-        //TODO
     }
-    //TODO import directory
-    return false;
+    return atLeastAnAccountFound;
 }
 
 //Stolen from import-wizard
