@@ -43,7 +43,7 @@ ImportImapSettingsThunderbirdCheckJob::~ImportImapSettingsThunderbirdCheckJob()
 QMap<QString, QString> ImportImapSettingsThunderbirdCheckJob::listProfile(QString &currentProfile, const QString &defaultSettingPath)
 {
     const QString thunderbirdPath = defaultSettingPath + QLatin1String("/profiles.ini");
-    qDebug() << " thunderbirdPath"<<thunderbirdPath;
+    qDebug() << " thunderbirdPath" << thunderbirdPath;
     QMap<QString, QString> lstProfile;
     QFile profiles(thunderbirdPath);
     if (profiles.exists()) {
@@ -111,7 +111,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
         if (line.startsWith(QStringLiteral("user_pref"))) {
             if (line.contains(QStringLiteral("mail.server.")) ||
                     line.contains(QStringLiteral("mail.account.")) ||
-                    line.contains(QStringLiteral("mail.accountmanager."))||
+                    line.contains(QStringLiteral("mail.accountmanager.")) ||
                     line.contains(QStringLiteral("extensions.sieve.account."))) {
                 insertIntoMap(line);
             }
@@ -239,7 +239,6 @@ void ImportImapSettingsThunderbirdCheckJob::insertIntoMap(const QString &line)
         }
     }
 }
-
 
 QString ImportImapSettingsThunderbirdCheckJob::defaultPath() const
 {

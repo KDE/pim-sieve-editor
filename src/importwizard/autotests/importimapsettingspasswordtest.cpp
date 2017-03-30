@@ -24,7 +24,6 @@ ImportImapSettingsPasswordTest::ImportImapSettingsPasswordTest()
 
 }
 
-
 void ImportImapSettingsPasswordTest::importPasswords(SieveEditorUtil::SieveServerConfig &config, const KSharedConfigPtr &resourceConfig, bool reuseImapSettings)
 {
     Q_UNUSED(resourceConfig);
