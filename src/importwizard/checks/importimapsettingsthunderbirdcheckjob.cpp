@@ -101,7 +101,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
     const QString filePath = directory +  QLatin1Char('/') + defaultProfile + QStringLiteral("/prefs.js");
     qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
     QFile file(filePath);
-    if (!file.exists()) {
+    if (!file.open(QIODevice::ReadOnly)) {
         qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filePath;
         return false;
     }
@@ -115,8 +115,15 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
                     line.contains(QStringLiteral("extensions.sieve.account."))) {
                 insertIntoMap(line);
             }
+
         } else {
-            qCDebug(SIEVEEDITOR_LOG) << " unstored line :" << line;
+            if (!line.startsWith(QLatin1Char('#')) &&
+                    line.isEmpty() &&
+                    line.startsWith(QStringLiteral("/*")) &&
+                    line.startsWith(QStringLiteral(" */")) &&
+                    line.startsWith(QStringLiteral(" *"))) {
+                qCDebug(SIEVEEDITOR_LOG) << " unstored line :" << line;
+            }
         }
     }
     const QString mailAccountPreference = mHashConfig.value(QStringLiteral("mail.accountmanager.accounts")).toString();
@@ -132,6 +139,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
         const QString accountName = QStringLiteral("mail.server.%1").arg(serverName);
         const QString type = mHashConfig.value(accountName + QStringLiteral(".type")).toString();
         if (type == QLatin1String("imap")) {
+            qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
             const QString host = mHashConfig.value(accountName + QStringLiteral(".hostname")).toString();
             const QString userName = mHashConfig.value(accountName + QStringLiteral(".userName")).toString();
             const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
