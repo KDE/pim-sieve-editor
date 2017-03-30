@@ -32,7 +32,6 @@ ImportImapSettingsAkonadiPassword::~ImportImapSettingsAkonadiPassword()
 
 }
 
-
 void ImportImapSettingsAkonadiPassword::importPasswords(SieveEditorUtil::SieveServerConfig &config, const KSharedConfigPtr &resourceConfig, bool reuseImapSettings)
 {
     KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();

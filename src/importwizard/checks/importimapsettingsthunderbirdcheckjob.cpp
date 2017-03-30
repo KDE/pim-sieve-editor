@@ -43,7 +43,7 @@ ImportImapSettingsThunderbirdCheckJob::~ImportImapSettingsThunderbirdCheckJob()
 QMap<QString, QString> ImportImapSettingsThunderbirdCheckJob::listProfile(QString &currentProfile, const QString &defaultSettingPath)
 {
     const QString thunderbirdPath = defaultSettingPath + QLatin1String("/profiles.ini");
-    qDebug() << " thunderbirdPath"<<thunderbirdPath;
+    qDebug() << " thunderbirdPath" << thunderbirdPath;
     QMap<QString, QString> lstProfile;
     QFile profiles(thunderbirdPath);
     if (profiles.exists()) {
@@ -101,7 +101,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
     const QString filePath = directory +  QLatin1Char('/') + defaultProfile + QStringLiteral("/prefs.js");
     qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
     QFile file(filePath);
-    if (!file.exists()) {
+    if (!file.open(QIODevice::ReadOnly)) {
         qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filePath;
         return false;
     }
@@ -111,12 +111,19 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
         if (line.startsWith(QStringLiteral("user_pref"))) {
             if (line.contains(QStringLiteral("mail.server.")) ||
                     line.contains(QStringLiteral("mail.account.")) ||
-                    line.contains(QStringLiteral("mail.accountmanager."))||
+                    line.contains(QStringLiteral("mail.accountmanager.")) ||
                     line.contains(QStringLiteral("extensions.sieve.account."))) {
                 insertIntoMap(line);
             }
+
         } else {
-            qCDebug(SIEVEEDITOR_LOG) << " unstored line :" << line;
+            if (!line.startsWith(QLatin1Char('#')) &&
+                    line.isEmpty() &&
+                    line.startsWith(QStringLiteral("/*")) &&
+                    line.startsWith(QStringLiteral(" */")) &&
+                    line.startsWith(QStringLiteral(" *"))) {
+                qCDebug(SIEVEEDITOR_LOG) << " unstored line :" << line;
+            }
         }
     }
     const QString mailAccountPreference = mHashConfig.value(QStringLiteral("mail.accountmanager.accounts")).toString();
@@ -126,14 +133,83 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
     }
     const QStringList accountList = mailAccountPreference.split(QLatin1Char(','));
 
+    bool atLeastAnAccountFound = false;
     for (const QString &account : accountList) {
-        //TODO
+        const QString serverName = mHashConfig.value(QStringLiteral("mail.account.%1").arg(account) + QStringLiteral(".server")).toString();
+        const QString accountName = QStringLiteral("mail.server.%1").arg(serverName);
+        const QString type = mHashConfig.value(accountName + QStringLiteral(".type")).toString();
+        if (type == QLatin1String("imap")) {
+            qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
+            const QString host = mHashConfig.value(accountName + QStringLiteral(".hostname")).toString();
+            const QString userName = mHashConfig.value(accountName + QStringLiteral(".userName")).toString();
+            const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
+            //TODO
+            atLeastAnAccountFound = true;
+        } else {
+            qCDebug(SIEVEEDITOR_LOG) << "Account " << accountName << " is not a imap account. Skip it.";
+        }
+
     }
-    //TODO import directory
-    return false;
+    return atLeastAnAccountFound;
 }
 
 //Stolen from import-wizard
+
+void ImportImapSettingsThunderbirdCheckJob::encryption(QMap<QString, QVariant> &settings, const QString &accountName)
+{
+    bool found;
+    const int socketType = mHashConfig.value(accountName + QStringLiteral(".socketType")).toInt(&found);
+    if (found) {
+        switch (socketType) {
+        case 0:
+            //None
+            settings.insert(QStringLiteral("Safety"), QStringLiteral("None"));
+            break;
+        case 2:
+            //STARTTLS
+            settings.insert(QStringLiteral("Safety"), QStringLiteral("STARTTLS"));
+            break;
+        case 3:
+            //SSL/TLS
+            settings.insert(QStringLiteral("Safety"), QStringLiteral("SSL"));
+            break;
+        default:
+            qCDebug(SIEVEEDITOR_LOG) << " socketType " << socketType;
+        }
+    }
+
+}
+
+void ImportImapSettingsThunderbirdCheckJob::addAuth(QMap<QString, QVariant> &settings, const QString &argument, const QString &accountName)
+{
+    bool found = false;
+    if (mHashConfig.contains(accountName + QStringLiteral(".authMethod"))) {
+        const int authMethod = mHashConfig.value(accountName + QStringLiteral(".authMethod")).toInt(&found);
+        if (found) {
+            switch (authMethod) {
+            case 0:
+                break;
+            case 4: //Encrypted password ???
+                settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::LOGIN);   //????
+                qCDebug(SIEVEEDITOR_LOG) << " authmethod == encrypt password";
+                break;
+            case 5: //GSSAPI
+                settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::GSSAPI);
+                break;
+            case 6: //NTLM
+                settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::NTLM);
+                break;
+            case 7: //TLS
+                qCDebug(SIEVEEDITOR_LOG) << " authmethod method == TLS"; //????
+                break;
+            default:
+                qCDebug(SIEVEEDITOR_LOG) << " ThunderbirdSettings::addAuth unknown :" << authMethod;
+                break;
+            }
+        }
+    }
+}
+
 void ImportImapSettingsThunderbirdCheckJob::insertIntoMap(const QString &line)
 {
     QString newLine = line;
@@ -163,7 +239,6 @@ void ImportImapSettingsThunderbirdCheckJob::insertIntoMap(const QString &line)
         }
     }
 }
-
 
 QString ImportImapSettingsThunderbirdCheckJob::defaultPath() const
 {

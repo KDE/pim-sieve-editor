@@ -26,7 +26,6 @@
 #include <QDebug>
 #include <QSignalSpy>
 
-
 Q_DECLARE_METATYPE(SieveEditorUtil::SieveServerConfig)
 ImportImapSettingsAkonadiCheckJobTest::ImportImapSettingsAkonadiCheckJobTest(QObject *parent)
     : QObject(parent)
