@@ -154,7 +154,6 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
 }
 
 //Stolen from import-wizard
-
 void ImportImapSettingsThunderbirdCheckJob::encryption(QMap<QString, QVariant> &settings, const QString &accountName)
 {
     bool found;
@@ -188,6 +187,7 @@ void ImportImapSettingsThunderbirdCheckJob::addAuth(QMap<QString, QVariant> &set
         if (found) {
             switch (authMethod) {
             case 0:
+                settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::PLAIN);   //????
                 break;
             case 4: //Encrypted password ???
                 settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::LOGIN);   //????
@@ -201,6 +201,9 @@ void ImportImapSettingsThunderbirdCheckJob::addAuth(QMap<QString, QVariant> &set
                 break;
             case 7: //TLS
                 qCDebug(SIEVEEDITOR_LOG) << " authmethod method == TLS"; //????
+                break;
+            case 10: //OAuth2
+                qCDebug(SIEVEEDITOR_LOG) << " authmethod method == OAuth2"; //????
                 break;
             default:
                 qCDebug(SIEVEEDITOR_LOG) << " ThunderbirdSettings::addAuth unknown :" << authMethod;
