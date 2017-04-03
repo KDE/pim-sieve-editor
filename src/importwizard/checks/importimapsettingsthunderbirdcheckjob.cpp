@@ -152,6 +152,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
 
             //TODO
             encryption(config, accountName);
+            addAuth(config, accountName);
             config.sieveImapAccountSettings.setUserName(userName);
             config.sieveImapAccountSettings.setServerName(imapServerName);
 #if 0
@@ -216,7 +217,7 @@ void ImportImapSettingsThunderbirdCheckJob::encryption(SieveEditorUtil::SieveSer
     }
 }
 
-void ImportImapSettingsThunderbirdCheckJob::addAuth(QMap<QString, QVariant> &settings, const QString &argument, const QString &accountName)
+void ImportImapSettingsThunderbirdCheckJob::addAuth(SieveEditorUtil::SieveServerConfig &config, const QString &accountName)
 {
     bool found = false;
     if (mHashConfig.contains(accountName + QStringLiteral(".authMethod"))) {
@@ -224,29 +225,31 @@ void ImportImapSettingsThunderbirdCheckJob::addAuth(QMap<QString, QVariant> &set
         if (found) {
             switch (authMethod) {
             case 0:
-                settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::PLAIN);   //????
+                config.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::Plain);
                 break;
             case 4: //Encrypted password ???
-                settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::LOGIN);   //????
+                config.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::Login);
                 qCDebug(SIEVEEDITOR_LOG) << " authmethod == encrypt password";
                 break;
             case 5: //GSSAPI
-                settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::GSSAPI);
+                config.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::GSSAPI);
                 break;
             case 6: //NTLM
-                settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::NTLM);
+                config.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::NTLM);
                 break;
             case 7: //TLS
                 qCDebug(SIEVEEDITOR_LOG) << " authmethod method == TLS"; //????
                 break;
             case 10: //OAuth2
-                settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::XOAUTH2);
+                config.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::XOAuth2);
                 qCDebug(SIEVEEDITOR_LOG) << " authmethod method == OAuth2"; //????
                 break;
             default:
-                qCDebug(SIEVEEDITOR_LOG) << " ThunderbirdSettings::addAuth unknown :" << authMethod;
+                qCDebug(SIEVEEDITOR_LOG) << " ImportImapSettingsThunderbirdCheckJob::addAuth unknown :" << authMethod;
                 break;
             }
+        } else {
+            qCDebug(SIEVEEDITOR_LOG) << " ImportImapSettingsThunderbirdCheckJob::addAuth undefine value";
         }
     }
 }
