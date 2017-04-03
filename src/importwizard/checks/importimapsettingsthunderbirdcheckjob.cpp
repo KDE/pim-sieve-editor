@@ -139,49 +139,65 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
         const QString accountName = QStringLiteral("mail.server.%1").arg(serverName);
         const QString type = mHashConfig.value(accountName + QStringLiteral(".type")).toString();
         if (type == QLatin1String("imap")) {
-            qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
-            SieveEditorUtil::SieveServerConfig config;
+            //Sieve settings == username@account
+
             const QString imapServerName = mHashConfig.value(accountName + QStringLiteral(".hostname")).toString();
             const QString userName = mHashConfig.value(accountName + QStringLiteral(".userName")).toString();
-            const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
-            bool found;
-            const int sievePort = mHashConfig.value(accountName + QStringLiteral(".port")).toInt(&found);
-            if (found) {
-                config.sieveImapAccountSettings.setPort(sievePort);
-            }
-
-            //TODO
-            encryption(config, accountName);
-            addAuth(config, accountName);
-            config.sieveImapAccountSettings.setUserName(userName);
-            config.sieveImapAccountSettings.setServerName(imapServerName);
-#if 0
-            config.sieveImapAccountSettings.setPort(imapPort);
-            config.sieveImapAccountSettings.setAuthenticationType(
-                static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(
-                    networkGroup.readEntry(QStringLiteral("Authentication"),
-                                           static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
-            const int sievePort = sieveGroup.readEntry(QStringLiteral("SievePort"), 4190);
-            if (sievePort != -1) {
-                config.sieveSettings.port = sievePort;
-            }
-            if (reuseImapSettings) {
-                config.sieveSettings.serverName = imapServerName;
-                config.sieveSettings.userName = userName;
-                config.sieveSettings.authenticationType = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(sieveGroup.readEntry(QStringLiteral("Authentication"), static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
-            } else {
-                const QString sieveCustomUserName = sieveGroup.readEntry(QStringLiteral("SieveCustomUsername"));
-                config.sieveSettings.userName = sieveCustomUserName;
-                config.sieveSettings.serverName = imapServerName; //FIXME
+            const QString sieveKeyServerUserName = QStringLiteral("extensions.sieve.account.") + userName + QLatin1Char('@') + imapServerName;
+            if (mHashConfig.contains(sieveKeyServerUserName + QStringLiteral(".enabled"))) {
                 //TODO
-            }
+                //user_pref("extensions.sieve.account.<username>@<server>.TLS", true);
+                //user_pref("extensions.sieve.account.<username>@<server>.TLS.forced", true);
+                //user_pref("extensions.sieve.account.<username>@<server>.activeAuthorization", 1);
+                //user_pref("extensions.sieve.account.<username>@<server>.activeHost", 1);
+                //user_pref("extensions.sieve.account.<username>@<server>.activeLogin", 1);
+                //user_pref("extensions.sieve.account.<username>@<server>.enabled", true);
+                //user_pref("extensions.sieve.account.<username>@<server>.hostname", "sdfsfsqsdf");
+                //user_pref("extensions.sieve.account.<username>@<server>.port.type", 1);
+                //user_pref("extensions.sieve.account.<username>@<server>.proxy.type", 1);
+
+
+                qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
+                SieveEditorUtil::SieveServerConfig config;
+                const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
+                bool found;
+                const int sievePort = mHashConfig.value(accountName + QStringLiteral(".port")).toInt(&found);
+                if (found) {
+                    config.sieveImapAccountSettings.setPort(sievePort);
+                }
+                encryption(config, accountName);
+                addAuth(config, accountName);
+                config.sieveImapAccountSettings.setUserName(userName);
+                config.sieveImapAccountSettings.setServerName(imapServerName);
+
+#if 0
+                config.sieveImapAccountSettings.setPort(imapPort);
+                config.sieveImapAccountSettings.setAuthenticationType(
+                            static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(
+                                networkGroup.readEntry(QStringLiteral("Authentication"),
+                                                       static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
+                const int sievePort = sieveGroup.readEntry(QStringLiteral("SievePort"), 4190);
+                if (sievePort != -1) {
+                    config.sieveSettings.port = sievePort;
+                }
+                if (reuseImapSettings) {
+                    config.sieveSettings.serverName = imapServerName;
+                    config.sieveSettings.userName = userName;
+                    config.sieveSettings.authenticationType = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(sieveGroup.readEntry(QStringLiteral("Authentication"), static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
+                } else {
+                    const QString sieveCustomUserName = sieveGroup.readEntry(QStringLiteral("SieveCustomUsername"));
+                    config.sieveSettings.userName = sieveCustomUserName;
+                    config.sieveSettings.serverName = imapServerName; //FIXME
+                    //TODO
+                }
 
 #endif
-            if (config.isValid()) {
-                Q_EMIT importSetting(serverName, config);
-            }
+                if (config.isValid()) {
+                    Q_EMIT importSetting(serverName, config);
+                }
 
-            atLeastAnAccountFound = true;
+                atLeastAnAccountFound = true;
+            }
         } else {
             qCDebug(SIEVEEDITOR_LOG) << "Account " << accountName << " is not a imap account. Skip it.";
         }
