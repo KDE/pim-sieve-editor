@@ -144,7 +144,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
             const QString imapServerName = mHashConfig.value(accountName + QStringLiteral(".hostname")).toString();
             const QString userName = mHashConfig.value(accountName + QStringLiteral(".userName")).toString();
             const QString sieveKeyServerUserName = QStringLiteral("extensions.sieve.account.") + userName + QLatin1Char('@') + imapServerName;
-            if (mHashConfig.contains(sieveKeyServerUserName + QStringLiteral(".enabled"))) {
+            if (mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".enabled"), false).toBool()) {
                 //TODO
                 //user_pref("extensions.sieve.account.<username>@<server>.TLS", true);
                 //user_pref("extensions.sieve.account.<username>@<server>.TLS.forced", true);
@@ -153,12 +153,19 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
                 //user_pref("extensions.sieve.account.<username>@<server>.activeLogin", 1);
                 //user_pref("extensions.sieve.account.<username>@<server>.enabled", true);
                 //user_pref("extensions.sieve.account.<username>@<server>.hostname", "sdfsfsqsdf");
+                //user_pref("extensions.sieve.account.<username>@<server>.port", 1255);
+
+                //0 4190
+                //1 2000
+                //2 custom
+                //Default == 4190
                 //user_pref("extensions.sieve.account.<username>@<server>.port.type", 1);
                 //user_pref("extensions.sieve.account.<username>@<server>.proxy.type", 1);
 
+                SieveEditorUtil::SieveServerConfig config;
+                config.sieveSettings.port = mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".port"), 4190).toInt();
 
                 qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
-                SieveEditorUtil::SieveServerConfig config;
                 const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
                 bool found;
                 const int sievePort = mHashConfig.value(accountName + QStringLiteral(".port")).toInt(&found);
