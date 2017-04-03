@@ -203,6 +203,7 @@ void ImportImapSettingsThunderbirdCheckJob::addAuth(QMap<QString, QVariant> &set
                 qCDebug(SIEVEEDITOR_LOG) << " authmethod method == TLS"; //????
                 break;
             case 10: //OAuth2
+                settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::XOAUTH2);
                 qCDebug(SIEVEEDITOR_LOG) << " authmethod method == OAuth2"; //????
                 break;
             default:
