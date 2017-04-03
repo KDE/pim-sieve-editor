@@ -140,15 +140,21 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
         const QString type = mHashConfig.value(accountName + QStringLiteral(".type")).toString();
         if (type == QLatin1String("imap")) {
             qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
+            SieveEditorUtil::SieveServerConfig config;
             const QString imapServerName = mHashConfig.value(accountName + QStringLiteral(".hostname")).toString();
             const QString userName = mHashConfig.value(accountName + QStringLiteral(".userName")).toString();
             const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
+            bool found;
+            const int sievePort = mHashConfig.value(accountName + QStringLiteral(".port")).toInt(&found);
+            if (found) {
+                config.sieveImapAccountSettings.setPort(sievePort);
+            }
+
             //TODO
-            SieveEditorUtil::SieveServerConfig config;
             encryption(config, accountName);
-#if 0
             config.sieveImapAccountSettings.setUserName(userName);
             config.sieveImapAccountSettings.setServerName(imapServerName);
+#if 0
             config.sieveImapAccountSettings.setPort(imapPort);
             config.sieveImapAccountSettings.setAuthenticationType(
                 static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(
