@@ -38,7 +38,7 @@ private:
     QString defaultPath() const;
     void insertIntoMap(const QString &line);
     void addAuth(QMap<QString, QVariant> &settings, const QString &argument, const QString &accountName);
-    void encryption(QMap<QString, QVariant> &settings, const QString &accountName);
+    void encryption(SieveEditorUtil::SieveServerConfig &config, const QString &accountName);
 
     QHash<QString, QVariant> mHashConfig;
 };

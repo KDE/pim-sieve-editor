@@ -140,10 +140,40 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
         const QString type = mHashConfig.value(accountName + QStringLiteral(".type")).toString();
         if (type == QLatin1String("imap")) {
             qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
-            const QString host = mHashConfig.value(accountName + QStringLiteral(".hostname")).toString();
+            const QString imapServerName = mHashConfig.value(accountName + QStringLiteral(".hostname")).toString();
             const QString userName = mHashConfig.value(accountName + QStringLiteral(".userName")).toString();
             const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
             //TODO
+            SieveEditorUtil::SieveServerConfig config;
+            encryption(config, accountName);
+#if 0
+            config.sieveImapAccountSettings.setUserName(userName);
+            config.sieveImapAccountSettings.setServerName(imapServerName);
+            config.sieveImapAccountSettings.setPort(imapPort);
+            config.sieveImapAccountSettings.setAuthenticationType(
+                static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(
+                    networkGroup.readEntry(QStringLiteral("Authentication"),
+                                           static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
+            const int sievePort = sieveGroup.readEntry(QStringLiteral("SievePort"), 4190);
+            if (sievePort != -1) {
+                config.sieveSettings.port = sievePort;
+            }
+            if (reuseImapSettings) {
+                config.sieveSettings.serverName = imapServerName;
+                config.sieveSettings.userName = userName;
+                config.sieveSettings.authenticationType = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(sieveGroup.readEntry(QStringLiteral("Authentication"), static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
+            } else {
+                const QString sieveCustomUserName = sieveGroup.readEntry(QStringLiteral("SieveCustomUsername"));
+                config.sieveSettings.userName = sieveCustomUserName;
+                config.sieveSettings.serverName = imapServerName; //FIXME
+                //TODO
+            }
+
+#endif
+            if (config.isValid()) {
+                Q_EMIT importSetting(serverName, config);
+            }
+
             atLeastAnAccountFound = true;
         } else {
             qCDebug(SIEVEEDITOR_LOG) << "Account " << accountName << " is not a imap account. Skip it.";
@@ -154,7 +184,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
 }
 
 //Stolen from import-wizard
-void ImportImapSettingsThunderbirdCheckJob::encryption(QMap<QString, QVariant> &settings, const QString &accountName)
+void ImportImapSettingsThunderbirdCheckJob::encryption(SieveEditorUtil::SieveServerConfig &config, const QString &accountName)
 {
     bool found;
     const int socketType = mHashConfig.value(accountName + QStringLiteral(".socketType")).toInt(&found);
@@ -162,21 +192,22 @@ void ImportImapSettingsThunderbirdCheckJob::encryption(QMap<QString, QVariant> &
         switch (socketType) {
         case 0:
             //None
-            settings.insert(QStringLiteral("Safety"), QStringLiteral("None"));
+            config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::Unencrypted);
             break;
         case 2:
             //STARTTLS
-            settings.insert(QStringLiteral("Safety"), QStringLiteral("STARTTLS"));
+            config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::TlsV1);
             break;
         case 3:
             //SSL/TLS
-            settings.insert(QStringLiteral("Safety"), QStringLiteral("SSL"));
+            config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::SslV3_1);
             break;
         default:
-            qCDebug(SIEVEEDITOR_LOG) << " socketType " << socketType;
+            qCDebug(SIEVEEDITOR_LOG) << "Unknown encryption mode " << socketType;
         }
+    } else {
+        qCDebug(SIEVEEDITOR_LOG) << "Invalid encryption mode settings";
     }
-
 }
 
 void ImportImapSettingsThunderbirdCheckJob::addAuth(QMap<QString, QVariant> &settings, const QString &argument, const QString &accountName)
