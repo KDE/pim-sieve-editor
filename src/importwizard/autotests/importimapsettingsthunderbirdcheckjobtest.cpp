@@ -75,7 +75,9 @@ void ImportImapSettingsThunderbirdCheckJobTest::shouldHaveImportSettings_data()
     QTest::addColumn<QString>("directory");
     QTest::addColumn<int>("nbsignals");
     QTest::addColumn<int>("nbSignalsNoSettingsFound");
-    QTest::newRow("thunderbird1") << QStringLiteral("/thunderbird1") << 0 << 1;
+    QTest::newRow("thunderbird1-withoutsieve") << QStringLiteral("/thunderbird1") << 0 << 1;
+    QTest::newRow("empty") << QStringLiteral("/empty") << 0 << 1;
+    QTest::newRow("thunderbird2-withoutsieve") << QStringLiteral("/thunderbird2") << 0 << 1;
 }
 
 void ImportImapSettingsThunderbirdCheckJobTest::shouldHaveImportSettings()
