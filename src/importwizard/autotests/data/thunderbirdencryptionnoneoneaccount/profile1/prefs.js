@@ -78,5 +78,5 @@ user_pref("mail.server.server3.name", "gre@kde.org");
 user_pref("mail.server.server3.port", 993);
 user_pref("mail.server.server3.socketType", 0);
 user_pref("mail.server.server3.spamActionTargetAccount", "imap://bli@kde.org@sever.foo.org");
-user_pref("mail.server.server3.type", "imap");
+user_pref("mail.server.server3.type", "pop3");
 user_pref("mail.server.server3.userName", "bli@kde.org");

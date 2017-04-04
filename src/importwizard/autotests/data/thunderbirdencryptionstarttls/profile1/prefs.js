@@ -8,15 +8,15 @@
  * To make a manual change to preferences, you can visit the URL about:config
  */
 
-user_pref("extensions.sieve.account.bla@kde.org@sever.foo.org.TLS", true);
-user_pref("extensions.sieve.account.bla@kde.org@sever.foo.org.TLS.forced", true);
-user_pref("extensions.sieve.account.bla@kde.org@sever.foo.org.activeAuthorization", 1);
-user_pref("extensions.sieve.account.bla@kde.org@sever.foo.org.activeHost", 0);
-user_pref("extensions.sieve.account.bla@kde.org@sever.foo.org.activeLogin", 1);
-user_pref("extensions.sieve.account.bla@kde.org@sever.foo.org.enabled", true);
-user_pref("extensions.sieve.account.bla@kde.org@sever.foo.org.port.type", 0);
-user_pref("extensions.sieve.account.bla@kde.org@sever.foo.org.proxy.type", 1);
-user_pref("extensions.sieve.account.bli@kde.org@sever.foo.org.enabled", true);
+user_pref("extensions.sieve.account.bla%40kde.org@sever.foo.org.TLS", true);
+user_pref("extensions.sieve.account.bla%40kde.org@sever.foo.org.TLS.forced", true);
+user_pref("extensions.sieve.account.bla%40kde.org@sever.foo.org.activeAuthorization", 1);
+user_pref("extensions.sieve.account.bla%40kde.org@sever.foo.org.activeHost", 0);
+user_pref("extensions.sieve.account.bla%40kde.org@sever.foo.org.activeLogin", 1);
+user_pref("extensions.sieve.account.bla%40kde.org@sever.foo.org.enabled", true);
+user_pref("extensions.sieve.account.bla%40kde.org@sever.foo.org.port.type", 0);
+user_pref("extensions.sieve.account.bla%40kde.org@sever.foo.org.proxy.type", 1);
+user_pref("extensions.sieve.account.bli%40kde.org@sever.foo.org.enabled", true);
 user_pref("mail.account.account1.identities", "id1");
 user_pref("mail.account.account1.server", "server1");
 user_pref("mail.account.account2.server", "server2");
@@ -42,14 +42,14 @@ user_pref("mail.server.server1.hostname", "sever.foo.org");
 user_pref("mail.server.server1.keepUnreadOnly", false);
 user_pref("mail.server.server1.login_at_startup", true);
 user_pref("mail.server.server1.max_cached_connections", 5);
-user_pref("mail.server.server1.name", "kde@bla.org");
+user_pref("mail.server.server1.name", "bla@kde.org");
 user_pref("mail.server.server1.namespace.personal", "\"INBOX.\"");
 user_pref("mail.server.server1.numHdrsToKeep", 2000);
 user_pref("mail.server.server1.port", 993);
 user_pref("mail.server.server1.socketType", 2);
 user_pref("mail.server.server1.timeout", 29);
 user_pref("mail.server.server1.type", "imap");
-user_pref("mail.server.server1.userName", "kde@bla.org");
+user_pref("mail.server.server1.userName", "bla@kde.org");
 user_pref("mail.server.server2.ageLimit", 30);
 user_pref("mail.server.server2.applyToFlaggedMessages", false);
 user_pref("mail.server.server2.cleanupBodies", false);
@@ -79,4 +79,4 @@ user_pref("mail.server.server3.port", 993);
 user_pref("mail.server.server3.socketType", 2);
 user_pref("mail.server.server3.spamActionTargetAccount", "imap://bli@kde.org@sever.foo.org");
 user_pref("mail.server.server3.type", "imap");
-user_pref("mail.server.server3.userName", "gre@kde.org");
+user_pref("mail.server.server3.userName", "bli@kde.org");

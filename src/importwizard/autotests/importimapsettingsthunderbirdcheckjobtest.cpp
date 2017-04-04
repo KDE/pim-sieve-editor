@@ -78,7 +78,13 @@ void ImportImapSettingsThunderbirdCheckJobTest::shouldHaveImportSettings_data()
     QTest::newRow("thunderbird1-withoutsieve") << QStringLiteral("/thunderbird1") << 0 << 1;
     QTest::newRow("empty") << QStringLiteral("/empty") << 0 << 1;
     QTest::newRow("thunderbird2-withoutsieve") << QStringLiteral("/thunderbird2") << 0 << 1;
-    QTest::newRow("thunderbirdencryptionnone") << QStringLiteral("/thunderbirdencryptionnone") << 0 << 1;
+    QTest::newRow("thunderbirdencryptionnone") << QStringLiteral("/thunderbirdencryptionnone") << 2 << 0;
+    QTest::newRow("thunderbirdencryptionssl") << QStringLiteral("/thunderbirdencryptionssl") << 2 << 0;
+    QTest::newRow("thunderbirdencryptionstarttls") << QStringLiteral("/thunderbirdencryptionstarttls") << 2 << 0;
+
+    QTest::newRow("thunderbirdencryptionnoneoneaccount") << QStringLiteral("/thunderbirdencryptionnoneoneaccount") << 1 << 0;
+    QTest::newRow("thunderbirdencryptionssloneaccount") << QStringLiteral("/thunderbirdencryptionssloneaccount") << 1 << 0;
+    QTest::newRow("thunderbirdencryptionstarttlsoneaccount") << QStringLiteral("/thunderbirdencryptionstarttlsoneaccount") << 1 << 0;
 }
 
 void ImportImapSettingsThunderbirdCheckJobTest::shouldHaveImportSettings()
