@@ -109,17 +109,42 @@ void ImportImapSettingsThunderbirdCheckJobTest::shouldImportSieveSettings_data()
     QTest::addColumn<QString>("name");
     QTest::addColumn<SieveEditorUtil::SieveServerConfig>("settings");
 
-    SieveEditorUtil::SieveServerConfig settings;
-    settings.sieveImapAccountSettings.setUserName(QStringLiteral("foo@foo.com"));
-    settings.sieveImapAccountSettings.setServerName(QStringLiteral("bla.foo.com"));
-    settings.sieveImapAccountSettings.setPort(143);
-    settings.sieveImapAccountSettings.setPassword(QStringLiteral("password_imap"));
-    settings.sieveSettings.userName = QStringLiteral("foo@foo.com");
-    settings.sieveSettings.serverName = QStringLiteral("bla.foo.com");
-    settings.sieveSettings.password = QStringLiteral("password_imap");
-    settings.sieveSettings.port = 4190;
+    {
+        SieveEditorUtil::SieveServerConfig settings;
+        settings.sieveImapAccountSettings.setUserName(QStringLiteral("bla%40kde.org"));
+        settings.sieveImapAccountSettings.setServerName(QStringLiteral("sever.foo.org"));
+        settings.sieveImapAccountSettings.setPort(993);
+        settings.sieveSettings.userName = QStringLiteral("bla%40kde.org");
+        settings.sieveSettings.serverName = QStringLiteral("sever.foo.org");
+        settings.sieveSettings.port = 4190;
 
-    QTest::newRow("thunderbirdencryptionnoneoneaccount") << QStringLiteral("/thunderbirdencryptionnoneoneaccount") << QStringLiteral("bla@kde.org") << settings;
+        QTest::newRow("thunderbirdencryptionnoneoneaccount") << QStringLiteral("/thunderbirdencryptionnoneoneaccount") << QStringLiteral("bla@kde.org") << settings;
+    }
+    {
+        SieveEditorUtil::SieveServerConfig settings;
+        settings.sieveImapAccountSettings.setUserName(QStringLiteral("bla%40kde.org"));
+        settings.sieveImapAccountSettings.setServerName(QStringLiteral("sever.foo.org"));
+        settings.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::SslV3_1);
+        settings.sieveImapAccountSettings.setPort(993);
+        settings.sieveSettings.userName = QStringLiteral("bla%40kde.org");
+        settings.sieveSettings.serverName = QStringLiteral("sever.foo.org");
+        settings.sieveSettings.port = 4190;
+
+        QTest::newRow("thunderbirdencryptionssloneaccount") << QStringLiteral("/thunderbirdencryptionssloneaccount") << QStringLiteral("bla@kde.org") << settings;
+    }
+
+    {
+        SieveEditorUtil::SieveServerConfig settings;
+        settings.sieveImapAccountSettings.setUserName(QStringLiteral("bla%40kde.org"));
+        settings.sieveImapAccountSettings.setServerName(QStringLiteral("sever.foo.org"));
+        settings.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::TlsV1);
+        settings.sieveImapAccountSettings.setPort(993);
+        settings.sieveSettings.userName = QStringLiteral("bla%40kde.org");
+        settings.sieveSettings.serverName = QStringLiteral("sever.foo.org");
+        settings.sieveSettings.port = 4190;
+
+        QTest::newRow("thunderbirdencryptionstarttlsoneaccount") << QStringLiteral("/thunderbirdencryptionstarttlsoneaccount") << QStringLiteral("bla@kde.org") << settings;
+    }
 }
 
 void ImportImapSettingsThunderbirdCheckJobTest::shouldImportSieveSettings()
