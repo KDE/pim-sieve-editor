@@ -36,6 +36,8 @@ private Q_SLOTS:
 
     void shouldHaveImportSettings();
     void shouldHaveImportSettings_data();
+    void shouldImportSieveSettings_data();
+    void shouldImportSieveSettings();
 };
 
 #endif // IMPORTIMAPSETTINGSTHUNDERBIRDCHECKJOBTEST_H
