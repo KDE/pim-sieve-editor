@@ -144,6 +144,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
             const QString imapServerName = mHashConfig.value(accountName + QStringLiteral(".hostname")).toString();
             const QString userName = mHashConfig.value(accountName + QStringLiteral(".userName")).toString();
             const QString sieveKeyServerUserName = QStringLiteral("extensions.sieve.account.") + userName + QLatin1Char('@') + imapServerName;
+            //user_pref("extensions.sieve.account.<username>@<server>.enabled", true);
             if (mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".enabled"), false).toBool()) {
                 //TODO
                 //user_pref("extensions.sieve.account.<username>@<server>.TLS", true);
@@ -151,19 +152,33 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
                 //user_pref("extensions.sieve.account.<username>@<server>.activeAuthorization", 1);
                 //user_pref("extensions.sieve.account.<username>@<server>.activeHost", 1);
                 //user_pref("extensions.sieve.account.<username>@<server>.activeLogin", 1);
-                //user_pref("extensions.sieve.account.<username>@<server>.enabled", true);
-                //user_pref("extensions.sieve.account.<username>@<server>.hostname", "sdfsfsqsdf");
-                //user_pref("extensions.sieve.account.<username>@<server>.port", 1255);
-
+                SieveEditorUtil::SieveServerConfig config;
                 //0 4190
                 //1 2000
                 //2 custom
                 //Default == 4190
-                //user_pref("extensions.sieve.account.<username>@<server>.port.type", 1);
-                //user_pref("extensions.sieve.account.<username>@<server>.proxy.type", 1);
-
-                SieveEditorUtil::SieveServerConfig config;
+                //user_pref("extensions.sieve.account.<username>@<server>.port", 1255);
                 config.sieveSettings.port = mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".port"), 4190).toInt();
+                //not necessary to import this one : user_pref("extensions.sieve.account.<username>@<server>.port.type", 1);
+
+                //user_pref("extensions.sieve.account.<username>@<server>.hostname", "sdfsfsqsdf");
+                const QString sieveHostName = mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".hostname")).toString();
+                if (sieveHostName.isEmpty()) {
+                    config.sieveSettings.serverName = imapServerName;
+                } else {
+                    config.sieveSettings.serverName = sieveHostName;
+                }
+
+                const QString sieveUserName = mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".login.username")).toString();
+                //user_pref("extensions.sieve.account.<username>@<server>.login.username", "newuser");
+                if (sieveUserName.isEmpty()) {
+                    config.sieveSettings.userName = userName;
+                } else {
+                    config.sieveSettings.userName = sieveUserName;
+                }
+
+                //not necessary to import this one : user_pref("extensions.sieve.account.<username>@<server>.proxy.type", 1);
+
 
                 qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
                 const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
@@ -178,24 +193,14 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
                 config.sieveImapAccountSettings.setServerName(imapServerName);
 
 #if 0
-                config.sieveImapAccountSettings.setPort(imapPort);
                 config.sieveImapAccountSettings.setAuthenticationType(
                             static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(
                                 networkGroup.readEntry(QStringLiteral("Authentication"),
                                                        static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
-                const int sievePort = sieveGroup.readEntry(QStringLiteral("SievePort"), 4190);
-                if (sievePort != -1) {
-                    config.sieveSettings.port = sievePort;
-                }
                 if (reuseImapSettings) {
-                    config.sieveSettings.serverName = imapServerName;
-                    config.sieveSettings.userName = userName;
                     config.sieveSettings.authenticationType = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(sieveGroup.readEntry(QStringLiteral("Authentication"), static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
                 } else {
                     const QString sieveCustomUserName = sieveGroup.readEntry(QStringLiteral("SieveCustomUsername"));
-                    config.sieveSettings.userName = sieveCustomUserName;
-                    config.sieveSettings.serverName = imapServerName; //FIXME
-                    //TODO
                 }
 
 #endif
