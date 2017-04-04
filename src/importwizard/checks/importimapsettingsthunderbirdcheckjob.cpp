@@ -152,7 +152,6 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
                 //user_pref("extensions.sieve.account.<username>@<server>.activeAuthorization", 1);
                 //user_pref("extensions.sieve.account.<username>@<server>.activeHost", 1);
                 //user_pref("extensions.sieve.account.<username>@<server>.activeLogin", 1);
-
                 SieveEditorUtil::SieveServerConfig config;
                 //0 4190
                 //1 2000
@@ -170,7 +169,13 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
                     config.sieveSettings.serverName = sieveHostName;
                 }
 
-                config.sieveSettings.userName = userName;
+                const QString sieveUserName = mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".login.username")).toString();
+                //user_pref("extensions.sieve.account.<username>@<server>.login.username", "newuser");
+                if (sieveUserName.isEmpty()) {
+                    config.sieveSettings.userName = userName;
+                } else {
+                    config.sieveSettings.userName = sieveUserName;
+                }
 
                 //not necessary to import this one : user_pref("extensions.sieve.account.<username>@<server>.proxy.type", 1);
 
