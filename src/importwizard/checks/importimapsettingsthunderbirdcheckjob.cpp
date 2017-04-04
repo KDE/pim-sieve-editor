@@ -43,7 +43,6 @@ ImportImapSettingsThunderbirdCheckJob::~ImportImapSettingsThunderbirdCheckJob()
 QMap<QString, QString> ImportImapSettingsThunderbirdCheckJob::listProfile(QString &currentProfile, const QString &defaultSettingPath)
 {
     const QString thunderbirdPath = defaultSettingPath + QLatin1String("/profiles.ini");
-    qDebug() << " thunderbirdPath" << thunderbirdPath;
     QMap<QString, QString> lstProfile;
     QFile profiles(thunderbirdPath);
     if (profiles.exists()) {
@@ -99,7 +98,7 @@ void ImportImapSettingsThunderbirdCheckJob::start()
 bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &directory, const QString &defaultProfile)
 {
     const QString filePath = directory +  QLatin1Char('/') + defaultProfile + QStringLiteral("/prefs.js");
-    qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
+    //qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
     QFile file(filePath);
     if (!file.open(QIODevice::ReadOnly)) {
         qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filePath;
@@ -182,7 +181,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
                 //not necessary to import this one : user_pref("extensions.sieve.account.<username>@<server>.proxy.type", 1);
 
 
-                qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
+                //qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
                 const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
                 bool found;
                 const int sievePort = mHashConfig.value(accountName + QStringLiteral(".port")).toInt(&found);
@@ -206,15 +205,13 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
                 }
 
 #endif
-                qDebug() << " config ? " << config.sieveImapAccountSettings;
                 if (config.isValid()) {
+                    atLeastAnAccountFound = true;
                     Q_EMIT importSetting(name, config);
                 }
-
-                atLeastAnAccountFound = true;
             }
         } else {
-            qCDebug(SIEVEEDITOR_LOG) << "Account " << accountName << " is not a imap account. Skip it.";
+            //qCDebug(SIEVEEDITOR_LOG) << "Account " << accountName << " is not a imap account. Skip it.";
         }
 
     }
