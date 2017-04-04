@@ -103,4 +103,40 @@ void ImportImapSettingsThunderbirdCheckJobTest::shouldHaveImportSettings()
     QCOMPARE(spy2.count(), nbSignalsNoSettingsFound);
 }
 
+void ImportImapSettingsThunderbirdCheckJobTest::shouldImportSieveSettings_data()
+{
+    QTest::addColumn<QString>("directory");
+    QTest::addColumn<QString>("name");
+    QTest::addColumn<SieveEditorUtil::SieveServerConfig>("settings");
+
+    SieveEditorUtil::SieveServerConfig settings;
+    settings.sieveImapAccountSettings.setUserName(QStringLiteral("foo@foo.com"));
+    settings.sieveImapAccountSettings.setServerName(QStringLiteral("bla.foo.com"));
+    settings.sieveImapAccountSettings.setPort(143);
+    settings.sieveImapAccountSettings.setPassword(QStringLiteral("password_imap"));
+    settings.sieveSettings.userName = QStringLiteral("foo@foo.com");
+    settings.sieveSettings.serverName = QStringLiteral("bla.foo.com");
+    settings.sieveSettings.password = QStringLiteral("password_imap");
+    settings.sieveSettings.port = 4190;
+
+    QTest::newRow("thunderbirdencryptionnoneoneaccount") << QStringLiteral("/thunderbirdencryptionnoneoneaccount") << QStringLiteral("bla@kde.org") << settings;
+}
+
+void ImportImapSettingsThunderbirdCheckJobTest::shouldImportSieveSettings()
+{
+    QFETCH(QString, directory);
+    QFETCH(QString, name);
+    QFETCH(SieveEditorUtil::SieveServerConfig, settings);
+    sieveeditor_thunderbird_default_toplevel_path = QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + directory);
+    ImportImapSettingsThunderbirdCheckJob job;
+    QVERIFY(job.settingsCanBeImported());
+    QSignalSpy spy(&job, &ImportImapSettingsThunderbirdCheckJob::importSetting);
+    job.start();
+    QCOMPARE(spy.count(), 1);
+    QCOMPARE(spy.at(0).at(0).toString(), name);
+    SieveEditorUtil::SieveServerConfig importSettings = spy.at(0).at(1).value<SieveEditorUtil::SieveServerConfig>();
+    QCOMPARE(importSettings, settings);
+}
+
+
 QTEST_MAIN(ImportImapSettingsThunderbirdCheckJobTest)
