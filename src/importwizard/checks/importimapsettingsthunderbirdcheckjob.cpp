@@ -205,7 +205,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
 
 #endif
                 if (config.isValid()) {
-                    Q_EMIT importSetting(serverName, config);
+                    Q_EMIT importSetting(name, config);
                 }
 
                 atLeastAnAccountFound = true;
