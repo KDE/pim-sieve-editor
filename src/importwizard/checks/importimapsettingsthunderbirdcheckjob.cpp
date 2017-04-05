@@ -194,18 +194,6 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
                 config.sieveImapAccountSettings.setUserName(userName);
                 config.sieveImapAccountSettings.setServerName(imapServerName);
 
-#if 0
-                config.sieveImapAccountSettings.setAuthenticationType(
-                            static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(
-                                networkGroup.readEntry(QStringLiteral("Authentication"),
-                                                       static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
-                if (reuseImapSettings) {
-                    config.sieveSettings.authenticationType = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(sieveGroup.readEntry(QStringLiteral("Authentication"), static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
-                } else {
-                    const QString sieveCustomUserName = sieveGroup.readEntry(QStringLiteral("SieveCustomUsername"));
-                }
-
-#endif
                 if (config.isValid()) {
                     atLeastAnAccountFound = true;
                     Q_EMIT importSetting(name, config);
