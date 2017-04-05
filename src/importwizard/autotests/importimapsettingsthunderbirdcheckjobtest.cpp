@@ -111,10 +111,10 @@ void ImportImapSettingsThunderbirdCheckJobTest::shouldImportSieveSettings_data()
 
     {
         SieveEditorUtil::SieveServerConfig settings;
-        settings.sieveImapAccountSettings.setUserName(QStringLiteral("bla%40kde.org"));
+        settings.sieveImapAccountSettings.setUserName(QStringLiteral("bla@kde.org"));
         settings.sieveImapAccountSettings.setServerName(QStringLiteral("sever.foo.org"));
         settings.sieveImapAccountSettings.setPort(993);
-        settings.sieveSettings.userName = QStringLiteral("bla%40kde.org");
+        settings.sieveSettings.userName = QStringLiteral("bla@kde.org");
         settings.sieveSettings.serverName = QStringLiteral("sever.foo.org");
         settings.sieveSettings.port = 4190;
 
@@ -122,11 +122,11 @@ void ImportImapSettingsThunderbirdCheckJobTest::shouldImportSieveSettings_data()
     }
     {
         SieveEditorUtil::SieveServerConfig settings;
-        settings.sieveImapAccountSettings.setUserName(QStringLiteral("bla%40kde.org"));
+        settings.sieveImapAccountSettings.setUserName(QStringLiteral("bla@kde.org"));
         settings.sieveImapAccountSettings.setServerName(QStringLiteral("sever.foo.org"));
         settings.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::SslV3_1);
         settings.sieveImapAccountSettings.setPort(993);
-        settings.sieveSettings.userName = QStringLiteral("bla%40kde.org");
+        settings.sieveSettings.userName = QStringLiteral("bla@kde.org");
         settings.sieveSettings.serverName = QStringLiteral("sever.foo.org");
         settings.sieveSettings.port = 4190;
 
@@ -135,11 +135,11 @@ void ImportImapSettingsThunderbirdCheckJobTest::shouldImportSieveSettings_data()
 
     {
         SieveEditorUtil::SieveServerConfig settings;
-        settings.sieveImapAccountSettings.setUserName(QStringLiteral("bla%40kde.org"));
+        settings.sieveImapAccountSettings.setUserName(QStringLiteral("bla@kde.org"));
         settings.sieveImapAccountSettings.setServerName(QStringLiteral("sever.foo.org"));
         settings.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::TlsV1);
         settings.sieveImapAccountSettings.setPort(993);
-        settings.sieveSettings.userName = QStringLiteral("bla%40kde.org");
+        settings.sieveSettings.userName = QStringLiteral("bla@kde.org");
         settings.sieveSettings.serverName = QStringLiteral("sever.foo.org");
         settings.sieveSettings.port = 4190;
 
