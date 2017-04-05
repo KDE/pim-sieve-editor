@@ -50,6 +50,7 @@ user_pref("mail.server.server1.socketType", 0);
 user_pref("mail.server.server1.timeout", 29);
 user_pref("mail.server.server1.type", "imap");
 user_pref("mail.server.server1.userName", "bla@kde.org");
+user_pref("mail.server.server1.authMethod", 6);
 user_pref("mail.server.server2.ageLimit", 30);
 user_pref("mail.server.server2.applyToFlaggedMessages", false);
 user_pref("mail.server.server2.cleanupBodies", false);

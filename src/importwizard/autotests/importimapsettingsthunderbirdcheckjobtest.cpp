@@ -114,6 +114,7 @@ void ImportImapSettingsThunderbirdCheckJobTest::shouldImportSieveSettings_data()
         settings.sieveImapAccountSettings.setUserName(QStringLiteral("bla@kde.org"));
         settings.sieveImapAccountSettings.setServerName(QStringLiteral("sever.foo.org"));
         settings.sieveImapAccountSettings.setPort(993);
+        settings.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::NTLM);
         settings.sieveSettings.userName = QStringLiteral("bla@kde.org");
         settings.sieveSettings.serverName = QStringLiteral("sever.foo.org");
         settings.sieveSettings.port = 4190;
@@ -125,6 +126,7 @@ void ImportImapSettingsThunderbirdCheckJobTest::shouldImportSieveSettings_data()
         settings.sieveImapAccountSettings.setUserName(QStringLiteral("bla@kde.org"));
         settings.sieveImapAccountSettings.setServerName(QStringLiteral("sever.foo.org"));
         settings.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::SslV3_1);
+        settings.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::Plain);
         settings.sieveImapAccountSettings.setPort(993);
         settings.sieveSettings.userName = QStringLiteral("bla@kde.org");
         settings.sieveSettings.serverName = QStringLiteral("sever.foo.org");
@@ -138,6 +140,7 @@ void ImportImapSettingsThunderbirdCheckJobTest::shouldImportSieveSettings_data()
         settings.sieveImapAccountSettings.setUserName(QStringLiteral("bla@kde.org"));
         settings.sieveImapAccountSettings.setServerName(QStringLiteral("sever.foo.org"));
         settings.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::TlsV1);
+        settings.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::GSSAPI);
         settings.sieveImapAccountSettings.setPort(993);
         settings.sieveSettings.userName = QStringLiteral("bla@kde.org");
         settings.sieveSettings.serverName = QStringLiteral("sever.foo.org");
