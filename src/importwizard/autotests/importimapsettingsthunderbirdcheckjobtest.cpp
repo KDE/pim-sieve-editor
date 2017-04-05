@@ -166,5 +166,4 @@ void ImportImapSettingsThunderbirdCheckJobTest::shouldImportSieveSettings()
     QCOMPARE(importSettings, settings);
 }
 
-
 QTEST_MAIN(ImportImapSettingsThunderbirdCheckJobTest)
