@@ -181,7 +181,6 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
 
                 //not necessary to import this one : user_pref("extensions.sieve.account.<username>@<server>.proxy.type", 1);
 
-
                 //qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
                 const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
                 bool found;
