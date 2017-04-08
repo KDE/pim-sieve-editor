@@ -32,7 +32,7 @@ ImportImapSettingsAkonadiPassword::~ImportImapSettingsAkonadiPassword()
 
 }
 
-void ImportImapSettingsAkonadiPassword::importPasswords(SieveEditorUtil::SieveServerConfig &config, const KSharedConfigPtr &resourceConfig, bool reuseImapSettings)
+void ImportImapSettingsAkonadiPassword::importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings)
 {
     KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
     QString password;
@@ -41,9 +41,9 @@ void ImportImapSettingsAkonadiPassword::importPasswords(SieveEditorUtil::SieveSe
         bool passwordStoredInWallet = false;
         if (wallet && wallet->hasFolder(QStringLiteral("imap"))) {
             wallet->setFolder(QStringLiteral("imap"));
-            wallet->readPassword(resourceConfig->name(), password);
+            wallet->readPassword(filename, password);
             if (!reuseImapSettings) { //Custom Password
-                wallet->readPassword(QStringLiteral("custom_sieve_") + resourceConfig->name(), customPassword);
+                wallet->readPassword(QStringLiteral("custom_sieve_") + filename, customPassword);
             }
             passwordStoredInWallet = true;
         }

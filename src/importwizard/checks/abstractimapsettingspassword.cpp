@@ -29,9 +29,9 @@ AbstractImapSettingsPassword::~AbstractImapSettingsPassword()
 
 }
 
-void AbstractImapSettingsPassword::importPasswords(SieveEditorUtil::SieveServerConfig &config, const KSharedConfigPtr &resourceConfig, bool reuseImapSettings)
+void AbstractImapSettingsPassword::importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings)
 {
     Q_UNUSED(config);
-    Q_UNUSED(resourceConfig);
+    Q_UNUSED(filename);
     Q_UNUSED(reuseImapSettings);
 }

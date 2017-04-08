@@ -96,6 +96,12 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
             config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::TlsV1);
         } else if (encryption == QLatin1String("None")) {
             config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::Unencrypted);
+        } else if (encryption.isEmpty()) { //Default value
+            if (isKolabSettings) {
+                config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::TlsV1);
+            } else {
+                config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::Unencrypted);
+            }
         } else {
             qCWarning(SIEVEEDITOR_LOG) << "Unknown encryption mode " << encryption;
         }
@@ -114,7 +120,7 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
             //TODO
         }
         Q_ASSERT_X(mPasswordImporter, "Missing mPasswordImporter", "You must create a mPasswordImporter");
-        mPasswordImporter->importPasswords(config, resourceConfig, reuseImapSettings);
+        mPasswordImporter->importPasswords(config, filename, reuseImapSettings);
         if (config.isValid()) {
             Q_EMIT importSetting(filename, config);
             return true;

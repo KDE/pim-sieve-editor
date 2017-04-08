@@ -28,7 +28,7 @@ public:
     ImportImapSettingsAkonadiPassword();
     ~ImportImapSettingsAkonadiPassword();
 
-    void importPasswords(SieveEditorUtil::SieveServerConfig &config, const KSharedConfigPtr &resourceConfig, bool reuseImapSettings) Q_DECL_OVERRIDE;
+    void importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings) Q_DECL_OVERRIDE;
 };
 
 #endif // IMPORTIMAPSETTINGSAKONADIPASSWORD_H
