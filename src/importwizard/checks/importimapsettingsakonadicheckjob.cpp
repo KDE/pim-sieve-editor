@@ -96,6 +96,12 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
             config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::TlsV1);
         } else if (encryption == QLatin1String("None")) {
             config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::Unencrypted);
+        } else if (encryption.isEmpty()) { //Default value
+            if (isKolabSettings) {
+                config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::TlsV1);
+            } else {
+                config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::Unencrypted);
+            }
         } else {
             qCWarning(SIEVEEDITOR_LOG) << "Unknown encryption mode " << encryption;
         }
