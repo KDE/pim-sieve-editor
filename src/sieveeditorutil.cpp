@@ -248,6 +248,17 @@ void SieveEditorUtil::deletePasswords(const QStringList &identifiers)
     }
 }
 
+
+QDebug operator <<(QDebug d, const SieveEditorUtil::SieveServerConfig &settings)
+{
+    d << "sieveSettings " << settings.sieveSettings;
+    d << "sieveImapAccountSettings " << settings.sieveImapAccountSettings;
+    d << "url " << settings.url();
+    d << "enabled " << settings.enabled;
+    d << "useImapCustomServer " << settings.useImapCustomServer;
+    return d;
+}
+
 QDebug operator <<(QDebug d, const SieveEditorUtil::SieveAccountSettings &settings)
 {
     d << "serverName " << settings.serverName;

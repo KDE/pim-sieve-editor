@@ -75,4 +75,5 @@ QString imapPasswordIdentifier(const QString &userName, const QString &serverNam
 }
 Q_DECLARE_TYPEINFO(SieveEditorUtil::SieveServerConfig, Q_MOVABLE_TYPE);
 QDebug operator <<(QDebug d, const SieveEditorUtil::SieveAccountSettings &settings);
+QDebug operator <<(QDebug d, const SieveEditorUtil::SieveServerConfig &settings);
 #endif // SIEVEEDITORUTIL_H
