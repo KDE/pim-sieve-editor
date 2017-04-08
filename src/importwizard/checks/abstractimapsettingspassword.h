@@ -28,7 +28,7 @@ class LIBSIEVEEDITOR_TESTS_EXPORT AbstractImapSettingsPassword
 public:
     AbstractImapSettingsPassword();
     virtual ~AbstractImapSettingsPassword();
-    virtual void importPasswords(SieveEditorUtil::SieveServerConfig &config, const KSharedConfigPtr &resourceConfig, bool reuseImapSettings);
+    virtual void importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings);
 };
 
 #endif // ABSTRACTIMAPSETTINGSPASSWORD_H

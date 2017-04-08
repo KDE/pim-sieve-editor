@@ -120,7 +120,7 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
             //TODO
         }
         Q_ASSERT_X(mPasswordImporter, "Missing mPasswordImporter", "You must create a mPasswordImporter");
-        mPasswordImporter->importPasswords(config, resourceConfig, reuseImapSettings);
+        mPasswordImporter->importPasswords(config, filename, reuseImapSettings);
         if (config.isValid()) {
             Q_EMIT importSetting(filename, config);
             return true;
