@@ -115,6 +115,8 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings.sieveImapAccountSettings.setServerName(QStringLiteral("bla.foo.com"));
     settings.sieveImapAccountSettings.setPort(143);
     settings.sieveImapAccountSettings.setPassword(QStringLiteral("password_imap"));
+    settings.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::TlsV1);
+
     settings.sieveSettings.userName = QStringLiteral("foo@foo.com");
     settings.sieveSettings.serverName = QStringLiteral("bla.foo.com");
     settings.sieveSettings.password = QStringLiteral("password_imap");
@@ -127,6 +129,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings2.sieveImapAccountSettings.setServerName(QStringLiteral("bla.foo.com"));
     settings2.sieveImapAccountSettings.setPort(143);
     settings2.sieveImapAccountSettings.setPassword(QStringLiteral("password_imap"));
+    settings2.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::TlsV1);
     settings2.sieveSettings.userName = QStringLiteral("b");
     settings2.sieveSettings.serverName = QStringLiteral("bla.foo.com"); //TODO
     settings2.sieveSettings.password = QStringLiteral("password_custom_sieve_imap");
@@ -139,7 +142,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings3.sieveImapAccountSettings.setServerName(QStringLiteral("bla.foo.com"));
     settings3.sieveImapAccountSettings.setPort(143);
     settings3.sieveImapAccountSettings.setAuthenticationType(static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(3));
-    settings3.sieveImapAccountSettings.setEncryptionMode(static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(0));
+    settings3.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::Unencrypted);
     settings3.sieveImapAccountSettings.setPassword(QStringLiteral("password_imap"));
     settings3.sieveSettings.userName = QStringLiteral("b");
     settings3.sieveSettings.password = QStringLiteral("password_custom_sieve_imap");

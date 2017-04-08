@@ -21,6 +21,7 @@
 #define SIEVEEDITORUTIL_H
 
 #include "libsieveeditor_export.h"
+#include "libsieveeditor_private_export.h"
 #include <QString>
 #include <QUrl>
 #include <mailtransport/transport.h>
@@ -74,6 +75,6 @@ QString sievePasswordIdentifier(const QString &userName, const QString &serverNa
 QString imapPasswordIdentifier(const QString &userName, const QString &serverName);
 }
 Q_DECLARE_TYPEINFO(SieveEditorUtil::SieveServerConfig, Q_MOVABLE_TYPE);
-QDebug operator <<(QDebug d, const SieveEditorUtil::SieveAccountSettings &settings);
-QDebug operator <<(QDebug d, const SieveEditorUtil::SieveServerConfig &settings);
+LIBSIEVEEDITOR_TESTS_EXPORT QDebug operator <<(QDebug d, const SieveEditorUtil::SieveAccountSettings &settings);
+LIBSIEVEEDITOR_TESTS_EXPORT QDebug operator <<(QDebug d, const SieveEditorUtil::SieveServerConfig &settings);
 #endif // SIEVEEDITORUTIL_H
