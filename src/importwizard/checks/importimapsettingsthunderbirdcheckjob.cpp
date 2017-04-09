@@ -44,8 +44,7 @@ QMap<QString, QString> ImportImapSettingsThunderbirdCheckJob::listProfile(QStrin
 {
     const QString thunderbirdPath = defaultSettingPath + QLatin1String("/profiles.ini");
     QMap<QString, QString> lstProfile;
-    QFile profiles(thunderbirdPath);
-    if (profiles.exists()) {
+    if (QFileInfo::exists(thunderbirdPath)) {
         //ini file.
         KConfig config(thunderbirdPath);
         const QStringList profileList = config.groupList().filter(QRegularExpression(QStringLiteral("Profile\\d+")));
