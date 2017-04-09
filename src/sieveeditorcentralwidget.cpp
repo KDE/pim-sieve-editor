@@ -26,6 +26,7 @@ SieveEditorCentralWidget::SieveEditorCentralWidget(QWidget *parent, KActionColle
 {
     mConfigureWidget = new SieveEditorConfigureServerPage;
     connect(mConfigureWidget, &SieveEditorConfigureServerPage::configureClicked, this, &SieveEditorCentralWidget::configureClicked);
+    connect(mConfigureWidget, &SieveEditorConfigureServerPage::importSieveSettings, this, &SieveEditorCentralWidget::importSieveSettings);
     addWidget(mConfigureWidget);
     mSieveEditorMainWidget = new SieveEditorMainWidget(ac);
     connect(mSieveEditorMainWidget, &SieveEditorMainWidget::serverSieveFound, this, &SieveEditorCentralWidget::slotServerSieveFound);

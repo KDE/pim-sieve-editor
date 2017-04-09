@@ -30,7 +30,8 @@ public:
     ~SieveEditorConfigureServerPageTest();
 
 private Q_SLOTS:
-    void shouldEmitSignalWhenClickOnButton();
+    void shouldEmitSignalWhenClickOnConfigureButton();
+    void shouldEmitSignalWhenClickOnImportSieveButton();
     void shouldHaveDefaultValue();
 };
 

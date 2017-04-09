@@ -32,6 +32,7 @@ public:
 
 Q_SIGNALS:
     void configureClicked();
+    void importSieveSettings();
 };
 
 #endif // SieveEditorConfigureServerPage_H

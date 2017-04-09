@@ -52,6 +52,7 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
 {
     mMainWidget = new SieveEditorCentralWidget(this, actionCollection());
     connect(mMainWidget, &SieveEditorCentralWidget::configureClicked, this, &SieveEditorMainWindow::slotConfigure);
+    connect(mMainWidget, &SieveEditorCentralWidget::importSieveSettings, this, &SieveEditorMainWindow::slotImportImapSettings);
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::updateButtons, this, &SieveEditorMainWindow::slotUpdateButtons);
     setCentralWidget(mMainWidget);
     setupActions();
