@@ -65,8 +65,7 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
 {
     const QString filePath = directory +  QLatin1Char('/') + filename;
     //qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
-    QFile file(filePath);
-    if (!file.exists()) {
+    if (!QFileInfo::exists(filePath)) {
         qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filePath;
         return false;
     }
