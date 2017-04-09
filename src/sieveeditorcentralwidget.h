@@ -35,6 +35,7 @@ public:
 
 Q_SIGNALS:
     void configureClicked();
+    void importSieveSettings();
 
 private Q_SLOTS:
     void slotServerSieveFound(bool hasServer);
