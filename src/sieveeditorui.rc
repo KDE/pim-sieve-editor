@@ -1,5 +1,5 @@
-<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
-<kpartgui name="sieveeditor" version="17">
+<!DOCTYPE gui SYSTEM "kpartgui.dtd">
+<gui name="sieveeditor" version="17">
  <MenuBar>
   <Menu name="file" >
    <Action name="add_server_sieve" />
@@ -49,5 +49,5 @@
    <Action name="import_imap_settings" />
   </Menu>
  </MenuBar>
-</kpartgui>
+</gui>
 
