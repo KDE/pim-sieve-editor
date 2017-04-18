@@ -20,7 +20,6 @@
 #include "importimapsettingprogresspage.h"
 #include "sieveeditor_debug.h"
 #include "checks/abstractimapsettingscheckjob.h"
-#include "helper_p.h"
 #include <QVBoxLayout>
 #include <KLocalizedString>
 #include <QTextEdit>

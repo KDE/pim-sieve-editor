@@ -24,7 +24,6 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include "sieveeditor_debug.h"
-#include "helper_p.h"
 
 /** static helper functions **/
 static QString authenticationModeString(MailTransport::Transport::EnumAuthenticationType::type mode)
