@@ -28,7 +28,7 @@ SieveEditorConfigureServerPage::SieveEditorConfigureServerPage(QWidget *parent)
     : QWidget(parent)
 {
     QHBoxLayout *hbox = new QHBoxLayout(this);
-    hbox->setSpacing(0);
+    hbox->addStretch(1);
     QPushButton *button = new QPushButton(i18n("Configure..."));
     button->setObjectName(QStringLiteral("configure_button"));
     button->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -41,6 +41,7 @@ SieveEditorConfigureServerPage::SieveEditorConfigureServerPage(QWidget *parent)
 
     hbox->addWidget(button);
     hbox->addWidget(importSieveSettings);
+    hbox->addStretch(1);
     setLayout(hbox);
 }
 
