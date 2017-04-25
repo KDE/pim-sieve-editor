@@ -33,7 +33,6 @@ SieveEditorScriptWidget::SieveEditorScriptWidget(QWidget *parent)
 
 SieveEditorScriptWidget::~SieveEditorScriptWidget()
 {
-
 }
 
 void SieveEditorScriptWidget::setScript(const QString &script)

@@ -21,7 +21,6 @@
 
 ImportImapSettingsPasswordTest::ImportImapSettingsPasswordTest()
 {
-
 }
 
 void ImportImapSettingsPasswordTest::importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings)

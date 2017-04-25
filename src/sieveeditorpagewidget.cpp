@@ -31,9 +31,9 @@
 #include <QVBoxLayout>
 
 SieveEditorPageWidget::SieveEditorPageWidget(QWidget *parent)
-    : QWidget(parent),
-      mWasActive(false),
-      mIsNewScript(false)
+    : QWidget(parent)
+    , mWasActive(false)
+    , mIsNewScript(false)
 {
     QVBoxLayout *vbox = new QVBoxLayout;
     setLayout(vbox);
@@ -57,7 +57,6 @@ void SieveEditorPageWidget::slotCheckSyntaxClicked()
     const QString script = mSieveEditorWidget->script();
     if (script.isEmpty()) {
         return;
-
     }
     mSieveEditorWidget->addNormalMessage(i18n("Uploading script to server for checking it, please wait..."));
 
@@ -142,10 +141,10 @@ void SieveEditorPageWidget::slotPutResult(KManageSieve::SieveJob *job, bool succ
         mSieveEditorWidget->setModified(false);
     } else {
         const QString msg = job->errorString();
-        if (msg.isEmpty())
+        if (msg.isEmpty()) {
             KMessageBox::error(nullptr, i18n("Uploading the Sieve script failed.\n"
                                              "The server responded:\n%1", msg, i18n("Sieve Error")));
-        else {
+        } else {
             KMessageBox::error(nullptr, msg, i18n("Sieve Error"));
         }
     }

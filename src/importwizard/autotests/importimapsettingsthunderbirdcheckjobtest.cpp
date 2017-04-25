@@ -36,7 +36,6 @@ ImportImapSettingsThunderbirdCheckJobTest::ImportImapSettingsThunderbirdCheckJob
 
 ImportImapSettingsThunderbirdCheckJobTest::~ImportImapSettingsThunderbirdCheckJobTest()
 {
-
 }
 
 void ImportImapSettingsThunderbirdCheckJobTest::shouldHaveDefaultValue()

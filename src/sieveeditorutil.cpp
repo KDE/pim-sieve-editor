@@ -72,10 +72,10 @@ QUrl SieveEditorUtil::SieveServerConfig::url() const
 
 bool SieveEditorUtil::SieveServerConfig::operator ==(const SieveEditorUtil::SieveServerConfig &other) const
 {
-    const bool result = (enabled == other.enabled) &&
-                        (useImapCustomServer == other.useImapCustomServer) &&
-                        (sieveSettings == other.sieveSettings) &&
-                        (sieveImapAccountSettings == other.sieveImapAccountSettings);
+    const bool result = (enabled == other.enabled)
+                        && (useImapCustomServer == other.useImapCustomServer)
+                        && (sieveSettings == other.sieveSettings)
+                        && (sieveImapAccountSettings == other.sieveImapAccountSettings);
     if (!result) {
         qCDebug(SIEVEEDITOR_LOG) << "enabled " << enabled << " other.enabled " << other.enabled;
         qCDebug(SIEVEEDITOR_LOG) << "useImapCustomServer " << useImapCustomServer << " other.useImapCustomServer " << other.useImapCustomServer;
@@ -111,7 +111,9 @@ QVector<SieveEditorUtil::SieveServerConfig> SieveEditorUtil::readServerSieveConf
             wallet->readPassword(walletEntry, passwd);
             sieve.sieveSettings.password = passwd;
         }
-        sieve.sieveSettings.authenticationType = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(group.readEntry(QStringLiteral("Authentication"), static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
+        sieve.sieveSettings.authenticationType
+            = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(group.readEntry(QStringLiteral("Authentication"),
+                                                                                                  static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
 
         //Imap Account Settings
         sieve.sieveImapAccountSettings.setPort(group.readEntry(QStringLiteral("ImapPort"), 0));
@@ -122,10 +124,10 @@ QVector<SieveEditorUtil::SieveServerConfig> SieveEditorUtil::readServerSieveConf
         sieve.sieveImapAccountSettings.setEncryptionMode(
             static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(KSieveUi::SieveImapAccountSettings::TlsV1))));
 
-        if (!sieve.sieveImapAccountSettings.userName().isEmpty() &&
-                !sieve.sieveImapAccountSettings.serverName().isEmpty() &&
-                (sieve.sieveImapAccountSettings.userName() != sieve.sieveSettings.userName) &&
-                (sieve.sieveImapAccountSettings.serverName() != sieve.sieveSettings.serverName)) {
+        if (!sieve.sieveImapAccountSettings.userName().isEmpty()
+            && !sieve.sieveImapAccountSettings.serverName().isEmpty()
+            && (sieve.sieveImapAccountSettings.userName() != sieve.sieveSettings.userName)
+            && (sieve.sieveImapAccountSettings.serverName() != sieve.sieveSettings.serverName)) {
             const QString imapWalletEntry = QLatin1String("Imap") + sieve.sieveImapAccountSettings.userName() + QLatin1Char('@') + sieve.sieveImapAccountSettings.serverName();
             if (wallet && wallet->hasEntry(imapWalletEntry)) {
                 QString passwd;
@@ -202,8 +204,8 @@ void SieveEditorUtil::writeSieveSettings(KWallet::Wallet *wallet, const KSharedC
     group.writeEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(conf.sieveImapAccountSettings.encryptionMode()));
 
     if ((conf.sieveImapAccountSettings.serverName() != conf.sieveSettings.serverName) && (conf.sieveImapAccountSettings.userName() != conf.sieveSettings.userName)
-            && !conf.sieveImapAccountSettings.serverName().isEmpty()
-            && !conf.sieveImapAccountSettings.userName().isEmpty()) {
+        && !conf.sieveImapAccountSettings.serverName().isEmpty()
+        && !conf.sieveImapAccountSettings.userName().isEmpty()) {
         group.writeEntry(QStringLiteral("useImapCustomServer"), true);
         group.writeEntry(QStringLiteral("ImapServerName"), conf.sieveImapAccountSettings.serverName());
         group.writeEntry(QStringLiteral("ImapUserName"), conf.sieveImapAccountSettings.userName());
@@ -248,7 +250,6 @@ void SieveEditorUtil::deletePasswords(const QStringList &identifiers)
     }
 }
 
-
 QDebug operator <<(QDebug d, const SieveEditorUtil::SieveServerConfig &settings)
 {
     d << "sieveSettings " << settings.sieveSettings;
@@ -271,11 +272,11 @@ QDebug operator <<(QDebug d, const SieveEditorUtil::SieveAccountSettings &settin
 
 bool SieveEditorUtil::SieveAccountSettings::operator ==(const SieveEditorUtil::SieveAccountSettings &other) const
 {
-    bool result = (serverName == other.serverName) &&
-                  (userName == other.userName) &&
-                  (password == other.password) &&
-                  (authenticationType == other.authenticationType) &&
-                  (port == other.port);
+    bool result = (serverName == other.serverName)
+                  && (userName == other.userName)
+                  && (password == other.password)
+                  && (authenticationType == other.authenticationType)
+                  && (port == other.port);
     if (!result) {
         qCDebug(SIEVEEDITOR_LOG) << "serverName " << serverName << " other.serverName " << other.serverName;
         qCDebug(SIEVEEDITOR_LOG) << "userName " << userName << " other.userName " << other.userName;

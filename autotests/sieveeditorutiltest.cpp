@@ -24,12 +24,10 @@
 SieveEditorUtilTest::SieveEditorUtilTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 SieveEditorUtilTest::~SieveEditorUtilTest()
 {
-
 }
 
 void SieveEditorUtilTest::shouldHaveDefaultValue()
@@ -91,4 +89,3 @@ void SieveEditorUtilTest::shouldBeEqual()
 }
 
 QTEST_APPLESS_MAIN(SieveEditorUtilTest)
-

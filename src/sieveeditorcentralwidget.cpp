@@ -36,7 +36,6 @@ SieveEditorCentralWidget::SieveEditorCentralWidget(QWidget *parent, KActionColle
 
 SieveEditorCentralWidget::~SieveEditorCentralWidget()
 {
-
 }
 
 void SieveEditorCentralWidget::slotServerSieveFound(bool hasServer)

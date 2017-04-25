@@ -28,4 +28,3 @@ int main(int argc, char *argv[])
     ImportImapSettingWizard wizard;
     return wizard.exec();
 }
-

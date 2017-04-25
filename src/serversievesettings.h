@@ -24,12 +24,10 @@
 #include "sieveeditorutil.h"
 #include "libsieveeditor_private_export.h"
 
-namespace Ui
-{
+namespace Ui {
 class ServerSieveSettings;
 }
-namespace MailTransport
-{
+namespace MailTransport {
 class ServerTest;
 }
 class QComboBox;

@@ -25,8 +25,7 @@
 
 class SieveEditorManageSieveWidget;
 class QTreeWidgetItem;
-namespace KSieveUi
-{
+namespace KSieveUi {
 class SieveImapAccountSettings;
 }
 class SieveEditorScriptManagerWidget : public QWidget

@@ -22,12 +22,10 @@
 #include <QWidget>
 #include <QUrl>
 #include "ksieveui/sieveeditorwidget.h"
-namespace KManageSieve
-{
+namespace KManageSieve {
 class SieveJob;
 }
-namespace KSieveUi
-{
+namespace KSieveUi {
 class SieveEditorWidget;
 }
 

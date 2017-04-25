@@ -25,8 +25,8 @@
 #include <QTextEdit>
 
 ImportImapSettingProgressPage::ImportImapSettingProgressPage(QWidget *parent)
-    : QWidget(parent),
-      mSettingsFound(false)
+    : QWidget(parent)
+    , mSettingsFound(false)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
@@ -39,7 +39,6 @@ ImportImapSettingProgressPage::ImportImapSettingProgressPage(QWidget *parent)
 
 ImportImapSettingProgressPage::~ImportImapSettingProgressPage()
 {
-
 }
 
 void ImportImapSettingProgressPage::addProgressInfo(const QString &str)

@@ -24,9 +24,9 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 
-SieveEditorConfigureServerWidget::SieveEditorConfigureServerWidget(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::SieveEditorConfigureServerWidget)
+SieveEditorConfigureServerWidget::SieveEditorConfigureServerWidget(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::SieveEditorConfigureServerWidget)
 {
     ui->setupUi(this);
     connect(ui->modifyServer, &QPushButton::clicked, this, &SieveEditorConfigureServerWidget::slotModifyServer);

@@ -33,7 +33,6 @@ ImportImapSettingProgressPageTest::ImportImapSettingProgressPageTest(QObject *pa
 
 ImportImapSettingProgressPageTest::~ImportImapSettingProgressPageTest()
 {
-
 }
 
 void ImportImapSettingProgressPageTest::shouldHaveDefaultValue()

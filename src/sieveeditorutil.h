@@ -26,18 +26,15 @@
 #include <QUrl>
 #include <mailtransport/transport.h>
 #include <KSieveUi/SieveImapAccountSettings>
-namespace KWallet
-{
+namespace KWallet {
 class Wallet;
 }
-namespace SieveEditorUtil
-{
+namespace SieveEditorUtil {
 struct LIBSIEVEEDITOR_EXPORT SieveAccountSettings {
     SieveAccountSettings()
-        : authenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN),
-          port(-1)
+        : authenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN)
+        , port(-1)
     {
-
     }
 
     bool operator ==(const SieveAccountSettings &other) const;
@@ -51,10 +48,9 @@ struct LIBSIEVEEDITOR_EXPORT SieveAccountSettings {
 
 struct LIBSIEVEEDITOR_EXPORT SieveServerConfig {
     SieveServerConfig()
-        : enabled(true),
-          useImapCustomServer(false)
+        : enabled(true)
+        , useImapCustomServer(false)
     {
-
     }
 
     bool isValid() const;

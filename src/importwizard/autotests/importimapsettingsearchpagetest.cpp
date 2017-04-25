@@ -33,7 +33,6 @@ ImportImapSettingSearchPageTest::ImportImapSettingSearchPageTest(QObject *parent
 
 ImportImapSettingSearchPageTest::~ImportImapSettingSearchPageTest()
 {
-
 }
 
 void ImportImapSettingSearchPageTest::shouldHaveDefaultValue()
@@ -55,7 +54,9 @@ void ImportImapSettingSearchPageTest::shouldHaveDefaultValue()
 void ImportImapSettingSearchPageTest::shouldAddCheckPrograms()
 {
     ImportImapSettingSearchPage w;
-    const QStringList lst { QStringLiteral("foo"), QStringLiteral("bla"), QStringLiteral("do") };
+    const QStringList lst {
+        QStringLiteral("foo"), QStringLiteral("bla"), QStringLiteral("do")
+    };
 
     w.setProgramList(lst);
     QListWidget *mFoundProgramList = w.findChild<QListWidget *>(QStringLiteral("foundprogramlist"));

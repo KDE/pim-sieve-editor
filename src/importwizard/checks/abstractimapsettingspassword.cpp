@@ -21,12 +21,10 @@
 
 AbstractImapSettingsPassword::AbstractImapSettingsPassword()
 {
-
 }
 
 AbstractImapSettingsPassword::~AbstractImapSettingsPassword()
 {
-
 }
 
 void AbstractImapSettingsPassword::importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings)

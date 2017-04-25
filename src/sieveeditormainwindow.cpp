@@ -144,7 +144,7 @@ void SieveEditorMainWindow::setupActions()
     ac->setDefaultShortcut(mNewScript, QKeySequence(Qt::CTRL + Qt::Key_N));
     mNewScript->setEnabled(false);
 
-    mEditScript =  new QAction(i18n("Edit Script..."), this);
+    mEditScript = new QAction(i18n("Edit Script..."), this);
     connect(mEditScript, &QAction::triggered, this, &SieveEditorMainWindow::slotEditScript);
     ac->addAction(QStringLiteral("edit_script"), mEditScript);
     mEditScript->setEnabled(false);

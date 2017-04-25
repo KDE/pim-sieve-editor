@@ -25,11 +25,11 @@
 #include <QDir>
 
 SieveEditorBookmarks::SieveEditorBookmarks(SieveEditorMainWindow *mainWindow, KActionCollection *collection, QMenu *menu, QObject *parent)
-    : QObject(parent),
-      KBookmarkOwner(),
-      mBookmarkMenu(nullptr),
-      mMenu(menu),
-      mMainWindow(mainWindow)
+    : QObject(parent)
+    , KBookmarkOwner()
+    , mBookmarkMenu(nullptr)
+    , mMenu(menu)
+    , mMainWindow(mainWindow)
 {
     QString bookmarkFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("sieveeditor/bookmarks.xml"));
 
@@ -71,4 +71,3 @@ QUrl SieveEditorBookmarks::currentUrl() const
 {
     return mMainWindow->currentHelpUrl();
 }
-

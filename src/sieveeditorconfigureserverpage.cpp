@@ -46,5 +46,4 @@ SieveEditorConfigureServerPage::SieveEditorConfigureServerPage(QWidget *parent)
 
 SieveEditorConfigureServerPage::~SieveEditorConfigureServerPage()
 {
-
 }

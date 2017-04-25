@@ -35,13 +35,12 @@ ImportImapSettingsAkonadiCheckJob::ImportImapSettingsAkonadiCheckJob(QObject *pa
 
 ImportImapSettingsAkonadiCheckJob::~ImportImapSettingsAkonadiCheckJob()
 {
-
 }
 
 bool ImportImapSettingsAkonadiCheckJob::resourceCanHaveSieveSupport(const QString &filename) const
 {
-    return filename.startsWith(QStringLiteral("akonadi_kolab_resource")) ||
-           filename.startsWith(QStringLiteral("akonadi_imap_resource"));
+    return filename.startsWith(QStringLiteral("akonadi_kolab_resource"))
+           || filename.startsWith(QStringLiteral("akonadi_imap_resource"));
 }
 
 void ImportImapSettingsAkonadiCheckJob::start()
@@ -111,7 +110,9 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
         if (reuseImapSettings) {
             config.sieveSettings.serverName = imapServerName;
             config.sieveSettings.userName = userName;
-            config.sieveSettings.authenticationType = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(sieveGroup.readEntry(QStringLiteral("Authentication"), static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
+            config.sieveSettings.authenticationType
+                = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(sieveGroup.readEntry(QStringLiteral("Authentication"),
+                                                                                                           static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
         } else {
             const QString sieveCustomUserName = sieveGroup.readEntry(QStringLiteral("SieveCustomUsername"));
             config.sieveSettings.userName = sieveCustomUserName;

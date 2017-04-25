@@ -28,14 +28,13 @@ SieveEditorEmptyTabWidgetLabel::SieveEditorEmptyTabWidgetLabel(QWidget *parent)
 
 SieveEditorEmptyTabWidgetLabel::~SieveEditorEmptyTabWidgetLabel()
 {
-
 }
 
 void SieveEditorEmptyTabWidgetLabel::init()
 {
     //TODO improve text
     QString placeholderText = QStringLiteral("<html><body style=\"color:#909090; font-size:14px\">"
-                                                   "<div align='center'>");
+                                             "<div align='center'>");
     const QMap<QString, QString> map = {
         {i18n("Debug a script:"), i18nc("These action in from menu tools submenu debug sieve script", "Tools > Debug Sieve Script")},
         {i18n("Create Rules Graphically:"), i18nc("Action is from menu tools, submenu autogenerate script", "Tools > Autogenerate script")},

@@ -40,7 +40,6 @@ SieveEditorScriptManagerWidget::SieveEditorScriptManagerWidget(QWidget *parent)
 
 SieveEditorScriptManagerWidget::~SieveEditorScriptManagerWidget()
 {
-
 }
 
 void SieveEditorScriptManagerWidget::slotUpdateButtons(QTreeWidgetItem *item)

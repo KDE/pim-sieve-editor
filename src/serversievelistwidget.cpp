@@ -34,7 +34,6 @@ ServerSieveListWidget::ServerSieveListWidget(QWidget *parent)
 
 ServerSieveListWidget::~ServerSieveListWidget()
 {
-
 }
 
 void ServerSieveListWidget::readConfig()
@@ -104,12 +103,10 @@ void ServerSieveListWidget::addServerConfig()
 ServerSieveListWidgetItem::ServerSieveListWidgetItem(QListWidget *parent)
     : QListWidgetItem(parent)
 {
-
 }
 
 ServerSieveListWidgetItem::~ServerSieveListWidgetItem()
 {
-
 }
 
 SieveEditorUtil::SieveServerConfig ServerSieveListWidgetItem::serverConfig() const

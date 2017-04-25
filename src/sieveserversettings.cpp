@@ -40,8 +40,8 @@ public:
 Q_GLOBAL_STATIC(SieveServerSettingsPrivate, sInstance)
 
 SieveServerSettings::SieveServerSettings(QObject *parent)
-    : QObject(parent),
-      mWallet(nullptr)
+    : QObject(parent)
+    , mWallet(nullptr)
 {
 }
 

@@ -31,12 +31,10 @@ using namespace KSieveUi;
 SieveEditorManageSieveWidget::SieveEditorManageSieveWidget(QWidget *parent)
     : KSieveUi::ManageSieveWidget(parent)
 {
-
 }
 
 SieveEditorManageSieveWidget::~SieveEditorManageSieveWidget()
 {
-
 }
 
 bool SieveEditorManageSieveWidget::refreshList()
@@ -71,4 +69,3 @@ bool SieveEditorManageSieveWidget::refreshList()
     }
     return noImapFound;
 }
-

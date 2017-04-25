@@ -21,8 +21,7 @@
 #define SIEVEEDITORSCRIPTWIDGET_H
 
 #include <QWidget>
-namespace KSieveUi
-{
+namespace KSieveUi {
 class SieveEditor;
 }
 class SieveEditorScriptWidget : public QWidget

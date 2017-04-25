@@ -31,12 +31,10 @@ LIBSIEVEEDITOR_EXPORT QString sieveeditor_thunderbird_default_toplevel_path = QD
 ImportImapSettingsThunderbirdCheckJob::ImportImapSettingsThunderbirdCheckJob(QObject *parent)
     : AbstractImapSettingsCheckJob(parent)
 {
-
 }
 
 ImportImapSettingsThunderbirdCheckJob::~ImportImapSettingsThunderbirdCheckJob()
 {
-
 }
 
 //Copy from mailimporter
@@ -107,19 +105,18 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
     while (!stream.atEnd()) {
         const QString line = stream.readLine();
         if (line.startsWith(QStringLiteral("user_pref"))) {
-            if (line.contains(QStringLiteral("mail.server.")) ||
-                    line.contains(QStringLiteral("mail.account.")) ||
-                    line.contains(QStringLiteral("mail.accountmanager.")) ||
-                    line.contains(QStringLiteral("extensions.sieve.account."))) {
+            if (line.contains(QStringLiteral("mail.server."))
+                || line.contains(QStringLiteral("mail.account."))
+                || line.contains(QStringLiteral("mail.accountmanager."))
+                || line.contains(QStringLiteral("extensions.sieve.account."))) {
                 insertIntoMap(line);
             }
-
         } else {
-            if (!line.startsWith(QLatin1Char('#')) &&
-                    line.isEmpty() &&
-                    line.startsWith(QStringLiteral("/*")) &&
-                    line.startsWith(QStringLiteral(" */")) &&
-                    line.startsWith(QStringLiteral(" *"))) {
+            if (!line.startsWith(QLatin1Char('#'))
+                && line.isEmpty()
+                && line.startsWith(QStringLiteral("/*"))
+                && line.startsWith(QStringLiteral(" */"))
+                && line.startsWith(QStringLiteral(" *"))) {
                 qCDebug(SIEVEEDITOR_LOG) << " unstored line :" << line;
             }
         }
@@ -200,7 +197,6 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
         } else {
             //qCDebug(SIEVEEDITOR_LOG) << "Account " << accountName << " is not a imap account. Skip it.";
         }
-
     }
     return atLeastAnAccountFound;
 }

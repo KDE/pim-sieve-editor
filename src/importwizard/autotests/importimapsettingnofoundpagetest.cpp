@@ -26,12 +26,10 @@
 ImportImapSettingNoFoundPageTest::ImportImapSettingNoFoundPageTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ImportImapSettingNoFoundPageTest::~ImportImapSettingNoFoundPageTest()
 {
-
 }
 
 void ImportImapSettingNoFoundPageTest::shouldHaveDefaultValue()

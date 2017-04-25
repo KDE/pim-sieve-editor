@@ -24,12 +24,10 @@
 ImportImapSettingsAkonadiPassword::ImportImapSettingsAkonadiPassword()
     : AbstractImapSettingsPassword()
 {
-
 }
 
 ImportImapSettingsAkonadiPassword::~ImportImapSettingsAkonadiPassword()
 {
-
 }
 
 void ImportImapSettingsAkonadiPassword::importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings)
@@ -56,5 +54,4 @@ void ImportImapSettingsAkonadiPassword::importPasswords(SieveEditorUtil::SieveSe
             }
         }
     }
-
 }

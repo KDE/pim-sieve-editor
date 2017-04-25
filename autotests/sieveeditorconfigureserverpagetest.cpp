@@ -26,19 +26,17 @@
 SieveEditorConfigureServerPageTest::SieveEditorConfigureServerPageTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 SieveEditorConfigureServerPageTest::~SieveEditorConfigureServerPageTest()
 {
-
 }
 
 void SieveEditorConfigureServerPageTest::shouldHaveDefaultValue()
 {
     SieveEditorConfigureServerPage w;
     QPushButton *button = w.findChild<QPushButton *>(QStringLiteral("configure_button"));
-    QVERIFY(button);  
+    QVERIFY(button);
 
     QPushButton *importSieveSettings = w.findChild<QPushButton *>(QStringLiteral("import_sieve_settings_button"));
     QVERIFY(importSieveSettings);

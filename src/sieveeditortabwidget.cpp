@@ -40,7 +40,6 @@ SieveEditorTabWidget::SieveEditorTabWidget(KActionCollection *ac, QWidget *paren
 
 SieveEditorTabWidget::~SieveEditorTabWidget()
 {
-
 }
 
 void SieveEditorTabWidget::slotTabContextMenuRequest(const QPoint &pos)

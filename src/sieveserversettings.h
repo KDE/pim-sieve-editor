@@ -21,8 +21,7 @@
 #define SieveServerSettings_H
 
 #include <QObject>
-namespace KWallet
-{
+namespace KWallet {
 class Wallet;
 }
 class SieveServerSettings : public QObject

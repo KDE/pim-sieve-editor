@@ -41,5 +41,4 @@ ImportImapSettingNoFoundPage::ImportImapSettingNoFoundPage(QWidget *parent)
 
 ImportImapSettingNoFoundPage::~ImportImapSettingNoFoundPage()
 {
-
 }

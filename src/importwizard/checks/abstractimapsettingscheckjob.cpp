@@ -21,11 +21,10 @@
 #include "abstractimapsettingspassword.h"
 
 AbstractImapSettingsCheckJob::AbstractImapSettingsCheckJob(QObject *parent)
-    : QObject(parent),
-      mPasswordImporter(nullptr),
-      mSettingsWereImported(false)
+    : QObject(parent)
+    , mPasswordImporter(nullptr)
+    , mSettingsWereImported(false)
 {
-
 }
 
 AbstractImapSettingsCheckJob::~AbstractImapSettingsCheckJob()

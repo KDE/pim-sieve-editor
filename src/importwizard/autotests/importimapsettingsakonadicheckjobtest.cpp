@@ -35,7 +35,6 @@ ImportImapSettingsAkonadiCheckJobTest::ImportImapSettingsAkonadiCheckJobTest(QOb
 
 ImportImapSettingsAkonadiCheckJobTest::~ImportImapSettingsAkonadiCheckJobTest()
 {
-
 }
 
 void ImportImapSettingsAkonadiCheckJobTest::initTestCase()

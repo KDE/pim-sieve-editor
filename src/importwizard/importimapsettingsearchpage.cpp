@@ -41,7 +41,6 @@ ImportImapSettingSearchPage::ImportImapSettingSearchPage(QWidget *parent)
 
 ImportImapSettingSearchPage::~ImportImapSettingSearchPage()
 {
-
 }
 
 void ImportImapSettingSearchPage::setProgramList(const QStringList &lst)

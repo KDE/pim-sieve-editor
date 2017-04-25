@@ -28,8 +28,7 @@ class SieveEditorCentralWidget;
 class QLabel;
 class SieveEditorBookmarks;
 class KActionMenu;
-namespace PimCommon
-{
+namespace PimCommon {
 class KActionMenuChangeCase;
 }
 

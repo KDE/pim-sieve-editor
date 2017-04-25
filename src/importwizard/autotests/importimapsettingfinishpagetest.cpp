@@ -28,12 +28,10 @@
 ImportImapSettingFinishPageTest::ImportImapSettingFinishPageTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ImportImapSettingFinishPageTest::~ImportImapSettingFinishPageTest()
 {
-
 }
 
 void ImportImapSettingFinishPageTest::shouldHaveDefaultValue()

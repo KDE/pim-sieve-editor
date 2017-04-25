@@ -24,12 +24,10 @@
 ServerSieveSettingsTest::ServerSieveSettingsTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ServerSieveSettingsTest::~ServerSieveSettingsTest()
 {
-
 }
 
 void ServerSieveSettingsTest::shouldHaveDefaultValue()
@@ -101,7 +99,6 @@ void ServerSieveSettingsTest::shouldEmitSignalWithValueTrue()
     widget.setServerName(QStringLiteral(" "));
     QCOMPARE(spy.count(), 4);
     QCOMPARE(spy.at(3).at(0).toBool(), false);
-
 }
 
 QTEST_MAIN(ServerSieveSettingsTest)
