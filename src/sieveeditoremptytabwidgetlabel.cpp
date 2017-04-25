@@ -37,10 +37,10 @@ void SieveEditorEmptyTabWidgetLabel::init()
     QString placeholderText = QStringLiteral("<html><body style=\"color:#909090; font-size:14px\">"
                                                    "<div align='center'>");
     const QMap<QString, QString> map = {
-        {i18n("Debug a script:"), i18nc("These action in from menu tools submenu debug sieve script", "Tools > Debug Sieve Script")}
-        , {i18n("Create Rules Graphically:"), i18nc("Action is from menu tools, submenu autogenerate script", "Tools > Autogenerate script")}
-        , {i18n("Import script:"), i18nc("Action is from file menu, import submenu", "File > Import")}
-        , {i18n("Import Sieve Settings"), i18nc("Action is from tools menu, import IMAP settings", "Tools > Import IMAP settings")}
+        {i18n("Debug a script:"), i18nc("These action in from menu tools submenu debug sieve script", "Tools > Debug Sieve Script")},
+        {i18n("Create Rules Graphically:"), i18nc("Action is from menu tools, submenu autogenerate script", "Tools > Autogenerate script")},
+        {i18n("Import script:"), i18nc("Action is from file menu, import submenu", "File > Import")},
+        {i18n("Import Sieve Settings"), i18nc("Action is from tools menu, import IMAP settings", "Tools > Import IMAP settings")}
     };
     addInfo(placeholderText, map);
     placeholderText += QStringLiteral("<div></div>"
