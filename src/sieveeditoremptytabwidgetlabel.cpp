@@ -35,12 +35,11 @@ void SieveEditorEmptyTabWidgetLabel::init()
     //TODO improve text
     QString placeholderText = QStringLiteral("<html><body style=\"color:#909090; font-size:14px\">"
                                              "<div align='center'>");
-    const QMap<QString, QString> map = {
-        {i18n("Debug a script:"), i18nc("These action in from menu tools submenu debug sieve script", "Tools > Debug Sieve Script")},
-        {i18n("Create Rules Graphically:"), i18nc("Action is from menu tools, submenu autogenerate script", "Tools > Autogenerate script")},
-        {i18n("Import script:"), i18nc("Action is from file menu, import submenu", "File > Import")},
-        {i18n("Import Sieve Settings"), i18nc("Action is from tools menu, import IMAP settings", "Tools > Import IMAP settings")}
-    };
+    QVector<placeHolderTextInfo> map;
+    map.append(placeHolderTextInfo(i18n("Import script:"), i18nc("Action is from file menu, import submenu", "File > Import")));
+    map.append(placeHolderTextInfo(i18n("Create Rules Graphically:"), i18nc("Action is from menu tools, submenu autogenerate script", "Tools > Autogenerate script")));
+    map.append(placeHolderTextInfo(i18n("Debug a script:"), i18nc("These action in from menu tools submenu debug sieve script", "Tools > Debug Sieve Script")));
+    map.append(placeHolderTextInfo(i18n("Import Sieve Settings"), i18nc("Action is from tools menu, import IMAP settings", "Tools > Import IMAP settings")));
     addInfo(placeholderText, map);
     placeholderText += QStringLiteral("<div></div>"
                                       "</div>"
@@ -48,13 +47,11 @@ void SieveEditorEmptyTabWidgetLabel::init()
     setText(placeholderText);
 }
 
-void SieveEditorEmptyTabWidgetLabel::addInfo(QString &placeholderText, const QMap<QString, QString> &map)
+void SieveEditorEmptyTabWidgetLabel::addInfo(QString &placeholderText, const QVector<placeHolderTextInfo> &map)
 {
-    QMap<QString, QString>::const_iterator i = map.constBegin();
-    while (i != map.constEnd()) {
+    for (int i = 0; i < map.size(); ++i) {
         placeholderText += QStringLiteral("<div style=\"font-size:20px\">%1</div>"
                                           "<div></div>"
-                                          "<li>%2").arg(i.key(), i.value());
-        ++i;
+                                          "<li>%2").arg(map.at(i).text, map.at(i).menuInfo);
     }
 }
