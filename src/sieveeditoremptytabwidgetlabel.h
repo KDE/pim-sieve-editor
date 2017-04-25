@@ -41,6 +41,7 @@
 #define SIEVEEDITOREMPTYTABWIDGETLABEL_H
 
 #include <QLabel>
+#include <QMap>
 
 class SieveEditorEmptyTabWidgetLabel : public QLabel
 {
@@ -50,6 +51,7 @@ public:
     ~SieveEditorEmptyTabWidgetLabel();
 
 private:
+    void addInfo(QString &placeholderText, const QMap<QString, QString> &map);
     void init();
 };
 
