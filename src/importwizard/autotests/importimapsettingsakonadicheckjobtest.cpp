@@ -23,7 +23,6 @@
 
 #include <QTest>
 #include <QStandardPaths>
-#include <QDebug>
 #include <QSignalSpy>
 
 Q_DECLARE_METATYPE(SieveEditorUtil::SieveServerConfig)

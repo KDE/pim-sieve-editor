@@ -31,7 +31,6 @@
 #include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <QGroupBox>
 
 SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     : QDialog(parent)

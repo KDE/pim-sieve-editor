@@ -28,7 +28,6 @@
 #include "importwizard/importimapsettingwizard.h"
 #include "PimCommon/KActionMenuChangeCase"
 
-#include <KStandardGuiItem>
 #include <KSharedConfig>
 #include <KIconEngine>
 #include <KIconLoader>
