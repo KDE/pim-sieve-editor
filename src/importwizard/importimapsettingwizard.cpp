@@ -49,7 +49,8 @@ ImportImapSettingWizard::ImportImapSettingWizard(QWidget *parent)
     mProgressPage = new ImportImapSettingProgressPage(this);
     mProgressPageItem = new KPageWidgetItem(mProgressPage, i18n("Import in Progress..."));
     connect(mProgressPage, &ImportImapSettingProgressPage::finished, this, &ImportImapSettingWizard::slotFinishImportData);
-    connect(mProgressPage, &ImportImapSettingProgressPage::noSettingsImported, this, &ImportImapSettingWizard::slotNoSettingsFound);
+    connect(mProgressPage, &ImportImapSettingProgressPage::noSettingsImported, this, &ImportImapSettingWizard::slotAddSummaryInfo);
+    connect(mProgressPage, &ImportImapSettingProgressPage::addSummaryInfo, this, &ImportImapSettingWizard::slotAddSummaryInfo);
     addPage(mProgressPageItem);
 
     mFinishPage = new ImportImapSettingFinishPage(this);
@@ -141,7 +142,7 @@ void ImportImapSettingWizard::slotFinishImportData()
     setAppropriate(mSearchPageItem, false);
 }
 
-void ImportImapSettingWizard::slotNoSettingsFound(const QString &name)
+void ImportImapSettingWizard::slotAddSummaryInfo(const QString &name)
 {
     mFinishPage->addSummary(name);
 }
