@@ -82,7 +82,7 @@ void ImportImapSettingProgressPage::start()
 
 void ImportImapSettingProgressPage::slotImportSettingsDone(const QString &name, const SieveEditorUtil::SieveServerConfig &settings)
 {
-    const QString str{i18n("Import settings %1", name)};
+    const QString str{i18n("Import settings from %1", name)};
     addProgressInfo(str);
     Q_EMIT addSummaryInfo(str);
     SieveEditorUtil::addServerSieveConfig(settings);
