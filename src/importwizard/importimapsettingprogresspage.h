@@ -40,6 +40,7 @@ public:
     void start();
 
 Q_SIGNALS:
+    void addSummaryInfo(const QString &info);
     void finished();
     void noSettingsImported(const QString &name);
 
