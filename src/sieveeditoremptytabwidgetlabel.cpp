@@ -45,6 +45,7 @@ void SieveEditorEmptyTabWidgetLabel::init()
     placeholderText += QStringLiteral("<div></div>"
                                       "</div>"
                                       "</body></html>");
+    setTextFormat(Qt::RichText);
     setText(placeholderText);
 }
 
