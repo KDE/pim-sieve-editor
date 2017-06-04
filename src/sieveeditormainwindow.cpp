@@ -84,6 +84,7 @@ SieveEditorMainWindow::~SieveEditorMainWindow()
 void SieveEditorMainWindow::initStatusBar()
 {
     mStatusBarInfo = new QLabel;
+    mStatusBarInfo->setTextFormat(Qt::PlainText);
     statusBar()->insertWidget(0, mStatusBarInfo, 4);
 }
 
