@@ -36,7 +36,7 @@ public:
     explicit ImportImapSettingWizard(QWidget *parent = nullptr);
     ~ImportImapSettingWizard();
 
-    void next() Q_DECL_OVERRIDE;
+    void next() override;
 
 private:
     void readConfig();

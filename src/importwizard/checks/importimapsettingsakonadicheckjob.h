@@ -29,10 +29,10 @@ public:
     explicit ImportImapSettingsAkonadiCheckJob(QObject *parent = nullptr);
     ~ImportImapSettingsAkonadiCheckJob();
 
-    void start() Q_DECL_OVERRIDE;
+    void start() override;
 
-    bool settingsCanBeImported() const Q_DECL_OVERRIDE;
-    QString name() const Q_DECL_OVERRIDE;
+    bool settingsCanBeImported() const override;
+    QString name() const override;
 
 private:
     inline bool resourceCanHaveSieveSupport(const QString &filename) const;

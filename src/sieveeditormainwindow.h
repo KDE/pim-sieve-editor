@@ -43,7 +43,7 @@ public:
     QUrl currentHelpUrl() const;
 
 protected:
-    void closeEvent(QCloseEvent *e) Q_DECL_OVERRIDE;
+    void closeEvent(QCloseEvent *e) override;
 
 private Q_SLOTS:
     void slotConfigure();

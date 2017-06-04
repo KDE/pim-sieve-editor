@@ -35,10 +35,10 @@ public:
 
     QMenu *menu() const;
 
-    void openBookmark(const KBookmark &bm, Qt::MouseButtons mb, Qt::KeyboardModifiers km) Q_DECL_OVERRIDE;
+    void openBookmark(const KBookmark &bm, Qt::MouseButtons mb, Qt::KeyboardModifiers km) override;
 
-    QString currentTitle() const Q_DECL_OVERRIDE;
-    QUrl currentUrl() const Q_DECL_OVERRIDE;
+    QString currentTitle() const override;
+    QUrl currentUrl() const override;
 
 Q_SIGNALS:
     void openUrl(const QUrl &url);

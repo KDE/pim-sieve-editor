@@ -26,7 +26,7 @@ class ImportImapSettingsPasswordTest : public AbstractImapSettingsPassword
 {
 public:
     ImportImapSettingsPasswordTest();
-    void importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings) Q_DECL_OVERRIDE;
+    void importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings) override;
 };
 
 #endif // IMPORTIMAPSETTINGSPASSWORDTEST_H

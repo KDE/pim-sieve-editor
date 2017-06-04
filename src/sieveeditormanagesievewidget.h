@@ -30,7 +30,7 @@ public:
     virtual ~SieveEditorManageSieveWidget();
 
 protected:
-    bool refreshList() Q_DECL_OVERRIDE;
+    bool refreshList() override;
 };
 
 #endif // SIEVEEDITORMANAGESIEVEWIDGET_H

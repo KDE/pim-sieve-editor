@@ -29,9 +29,9 @@ public:
     explicit ImportImapSettingsThunderbirdCheckJob(QObject *parent = nullptr);
     ~ImportImapSettingsThunderbirdCheckJob();
 
-    void start() Q_DECL_OVERRIDE;
-    bool settingsCanBeImported() const Q_DECL_OVERRIDE;
-    QString name() const Q_DECL_OVERRIDE;
+    void start() override;
+    bool settingsCanBeImported() const override;
+    QString name() const override;
 private:
     bool importSettings(const QString &directory, const QString &defaultProfile);
     QMap<QString, QString> listProfile(QString &currentProfile, const QString &defaultSettingPath);
