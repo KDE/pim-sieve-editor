@@ -54,14 +54,12 @@ private:
     struct placeHolderTextInfo {
         placeHolderTextInfo()
         {
-
         }
 
         placeHolderTextInfo(const QString &t, const QString &info)
-            : text(t),
-              menuInfo(info)
+            : text(t)
+            , menuInfo(info)
         {
-
         }
 
         QString text;
