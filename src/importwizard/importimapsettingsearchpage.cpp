@@ -37,6 +37,7 @@ ImportImapSettingSearchPage::ImportImapSettingSearchPage(QWidget *parent)
     mFoundProgramList = new QListWidget(this);
     mFoundProgramList->setObjectName(QStringLiteral("foundprogramlist"));
     mainLayout->addWidget(mFoundProgramList);
+    connect(mFoundProgramList, &QListWidget::itemChanged, this, &ImportImapSettingSearchPage::slotItemChanged);
 }
 
 ImportImapSettingSearchPage::~ImportImapSettingSearchPage()
@@ -63,4 +64,18 @@ QStringList ImportImapSettingSearchPage::selectedPrograms() const
         }
     }
     return checkedItems;
+}
+
+void ImportImapSettingSearchPage::slotItemChanged()
+{
+    bool hasSelectedItem = false;
+    const int nbProgram = {mFoundProgramList->count()};
+    for (int i = 0; i < nbProgram; ++i) {
+        QListWidgetItem *item = mFoundProgramList->item(i);
+        if (item->checkState() == Qt::Checked) {
+            hasSelectedItem = true;
+            break;
+        }
+    }
+    Q_EMIT needToImportSettings(hasSelectedItem);
 }

@@ -34,7 +34,11 @@ public:
     void setProgramList(const QStringList &lst);
     QStringList selectedPrograms() const;
 
+Q_SIGNALS:
+    void needToImportSettings(bool);
+
 private:
+    void slotItemChanged();
     QListWidget *mFoundProgramList;
 };
 
