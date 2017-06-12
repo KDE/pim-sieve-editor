@@ -59,7 +59,6 @@ ImportImapSettingWizard::ImportImapSettingWizard(QWidget *parent)
 
     readConfig();
     initializeWizard();
-    nextButton()->setEnabled(false);
     connect(button(QDialogButtonBox::Help), &QPushButton::clicked, this, &ImportImapSettingWizard::slotHelpClicked);
     connect(mSearchPage, &ImportImapSettingSearchPage::needToImportSettings, this, &ImportImapSettingWizard::slotNeedToImportSettings);
 }
@@ -103,6 +102,7 @@ void ImportImapSettingWizard::initializeWizard()
         setAppropriate(mFinishPageItem, false);
         setCurrentPage(mNoFoundPageItem);
     }
+    nextButton()->setEnabled(false);
 }
 
 void ImportImapSettingWizard::slotNeedToImportSettings(bool b)
