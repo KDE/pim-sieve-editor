@@ -36,6 +36,7 @@ int main(int argc, char **argv)
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication app(argc, argv);
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+    app.setDesktopFileName(QStringLiteral("org.kde.sieveeditor"));
     KCrash::initialize();
     Kdelibs4ConfigMigrator migrate(QStringLiteral("sieveeditor"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("sieveeditorrc") << QStringLiteral("sievetemplaterc"));
