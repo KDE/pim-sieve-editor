@@ -161,12 +161,12 @@ void ServerSieveSettings::setUserName(const QString &name)
 
 QString ServerSieveSettings::password() const
 {
-    return ui->password->text();
+    return ui->password->password();
 }
 
 void ServerSieveSettings::setPassword(const QString &pass)
 {
-    ui->password->setText(pass);
+    ui->password->setPassword(pass);
 }
 
 QString ServerSieveSettings::imapServerName() const
@@ -201,12 +201,12 @@ void ServerSieveSettings::setImapUserName(const QString &name)
 
 QString ServerSieveSettings::imapPassword() const
 {
-    return ui->imapPassword->text();
+    return ui->imapPassword->password();
 }
 
 void ServerSieveSettings::setImapPassword(const QString &pass)
 {
-    ui->imapPassword->setText(pass);
+    ui->imapPassword->setPassword(pass);
 }
 
 void ServerSieveSettings::setAuthenticationType(KSieveUi::SieveImapAccountSettings::AuthenticationMode type)
