@@ -272,6 +272,11 @@ SieveEditorUtil::SieveServerConfig ServerSieveSettings::serverSieveConfig() cons
 
 void ServerSieveSettings::slotTest()
 {
+    const QString server = imapServerName().isEmpty() ? serverName() : imapServerName();
+    if (server.isEmpty()) {
+        KMessageBox::error(this, i18n("Server is not defined"), i18n("Check Server"));
+        return;
+    }
     //qCDebug(SIEVEEDITOR_LOG) << ui->imapServer->text();
     ui->testButton->setEnabled(false);
     ui->safeImap->setEnabled(false);
@@ -286,7 +291,6 @@ void ServerSieveSettings::slotTest()
     qApp->setOverrideCursor(Qt::BusyCursor);
 #endif
 
-    const QString server = imapServerName().isEmpty() ? serverName() : imapServerName();
     const int portValue = ui->imapPort->value();
     qCDebug(SIEVEEDITOR_LOG) << "server: " << server << "port: " << portValue;
 
