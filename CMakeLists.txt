@@ -27,7 +27,7 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 include(ECMCoverageOption)
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION alpha1)
+set(KDEPIM_DEV_VERSION beta1)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
@@ -35,7 +35,7 @@ if(DEFINED KDEPIM_DEV_VERSION)
 endif()
 
 
-set(KDEPIM_VERSION_NUMBER "5.5.60")
+set(KDEPIM_VERSION_NUMBER "5.5.80")
 set(KDEPIM_VERSION "${KDEPIM_VERSION_NUMBER}${KDEPIM_DEV_VERSION}")
 
 set(KMAILTRANSPORT_LIB_VERSION "5.5.41")
