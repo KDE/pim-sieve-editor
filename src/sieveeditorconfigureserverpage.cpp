@@ -42,7 +42,6 @@ SieveEditorConfigureServerPage::SieveEditorConfigureServerPage(QWidget *parent)
     hbox->addWidget(button);
     hbox->addWidget(importSieveSettings);
     hbox->addStretch(1);
-    setLayout(hbox);
 }
 
 SieveEditorConfigureServerPage::~SieveEditorConfigureServerPage()
