@@ -22,6 +22,7 @@
 
 #include <QWidget>
 #include <QUrl>
+#include <KSieveUi/ManageSieveWidget>
 
 class SieveEditorManageSieveWidget;
 class QTreeWidgetItem;
@@ -53,8 +54,8 @@ public Q_SLOTS:
     void slotRefreshList();
 
 private Q_SLOTS:
-    void slotNewScript(const QUrl &url, const QStringList &capabilities, const KSieveUi::SieveImapAccountSettings &sieveImapAccountSettings);
-    void slotEditScript(const QUrl &url, const QStringList &capabilities, const KSieveUi::SieveImapAccountSettings &sieveImapAccountSettings);
+    void slotNewScript(const KSieveUi::ManageSieveWidget::ScriptInfo &info);
+    void slotEditScript(const KSieveUi::ManageSieveWidget::ScriptInfo &info);
     void slotUpdateButtons(QTreeWidgetItem *item);
 
 private:
