@@ -23,6 +23,7 @@
 #include <QSplitter>
 #include <QUrl>
 #include "ksieveui/sieveeditorwidget.h"
+#include <KSieveUi/ManageSieveWidget>
 class QTabWidget;
 class QStackedWidget;
 class SieveEditorTabWidget;
@@ -30,6 +31,7 @@ class SieveEditorScriptManagerWidget;
 class SieveEditorPageWidget;
 class SieveEditorEmptyTabWidgetLabel;
 class KActionCollection;
+
 class SieveEditorMainWidget : public QSplitter
 {
     Q_OBJECT
@@ -101,7 +103,7 @@ Q_SIGNALS:
     void sieveEditorTabCurrentChanged();
 
 private Q_SLOTS:
-    void slotCreateScriptPage(const QUrl &url, const QStringList &capabilities, bool isNewScript, const KSieveUi::SieveImapAccountSettings &sieveImapAccountSettings);
+    void slotCreateScriptPage(const KSieveUi::ManageSieveWidget::ScriptInfo &info, bool isNewScript);
     void slotScriptDeleted(const QUrl &url);
     void slotScriptRenamed(const QUrl &oldUrl, const QUrl &newUrl);
     void slotScriptModified(bool modified, SieveEditorPageWidget *page);

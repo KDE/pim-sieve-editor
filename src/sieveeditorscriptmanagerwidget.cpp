@@ -55,12 +55,12 @@ void SieveEditorScriptManagerWidget::slotUpdateButtons(QTreeWidgetItem *item)
 
 void SieveEditorScriptManagerWidget::slotEditScript(const KSieveUi::ManageSieveWidget::ScriptInfo &info)
 {
-    Q_EMIT createScriptPage(info.currentUrl, info.currentCapabilities, false, info.sieveImapAccountSettings);
+    Q_EMIT createScriptPage(info, false);
 }
 
 void SieveEditorScriptManagerWidget::slotNewScript(const KSieveUi::ManageSieveWidget::ScriptInfo &info)
 {
-    Q_EMIT createScriptPage(info.currentUrl, info.currentCapabilities, true, info.sieveImapAccountSettings);
+    Q_EMIT createScriptPage(info, true);
 }
 
 void SieveEditorScriptManagerWidget::slotCreateNewScript()
