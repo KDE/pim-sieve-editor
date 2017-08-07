@@ -135,7 +135,7 @@ void SieveEditorMainWidget::slotCreateScriptPage(const KSieveUi::ManageSieveWidg
         connect(editor, &SieveEditorPageWidget::copyAvailable, this, &SieveEditorMainWidget::copyAvailable);
         connect(editor, &SieveEditorPageWidget::sieveEditorTabCurrentChanged, this, &SieveEditorMainWidget::sieveEditorTabCurrentChanged);
         editor->setIsNewScript(isNewScript);
-        editor->loadScript(info.currentUrl, info.currentCapabilities, info.sieveImapAccountSettings);
+        editor->loadScript(info);
         mTabWidget->addTab(editor, info.currentUrl.fileName());
         mTabWidget->setCurrentWidget(editor);
         if (isNewScript) {

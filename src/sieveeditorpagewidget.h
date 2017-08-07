@@ -22,6 +22,7 @@
 #include <QWidget>
 #include <QUrl>
 #include "ksieveui/sieveeditorwidget.h"
+#include <KSieveUi/ManageSieveWidget>
 namespace KManageSieve {
 class SieveJob;
 }
@@ -36,7 +37,7 @@ public:
     explicit SieveEditorPageWidget(QWidget *parent = nullptr);
     ~SieveEditorPageWidget();
 
-    void loadScript(const QUrl &url, const QStringList &capabilities, const KSieveUi::SieveImapAccountSettings &sieveImapAccountSettings);
+    void loadScript(const KSieveUi::ManageSieveWidget::ScriptInfo &info);
     QUrl currentUrl() const;
     void setCurrentUrl(const QUrl &url);
     void setIsNewScript(bool isNewScript);
