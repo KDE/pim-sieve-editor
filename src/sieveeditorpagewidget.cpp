@@ -89,6 +89,7 @@ void SieveEditorPageWidget::loadScript(const KSieveUi::ManageSieveWidget::Script
     mCurrentURL = info.currentUrl;
     mSieveEditorWidget->setSieveCapabilities(info.currentCapabilities);
     mSieveEditorWidget->setSieveImapAccountSettings(info.sieveImapAccountSettings);
+    mSieveEditorWidget->setListOfIncludeFile(info.scriptList);
     mSieveEditorWidget->setReadOnly(true);
     mSieveEditorWidget->wordWrap(SieveEditorGlobalConfig::self()->wrapText());
     KManageSieve::SieveJob *job = KManageSieve::SieveJob::get(mCurrentURL);
