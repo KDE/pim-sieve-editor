@@ -18,7 +18,7 @@
 */
 
 #include "sieveeditorscriptwidget.h"
-#include "ksieveui/sieveeditor.h"
+#include <KSieveUi/SieveEditor>
 
 #include <QHBoxLayout>
 

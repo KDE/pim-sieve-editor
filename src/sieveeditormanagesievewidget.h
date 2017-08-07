@@ -20,7 +20,7 @@
 #ifndef SIEVEEDITORMANAGESIEVEWIDGET_H
 #define SIEVEEDITORMANAGESIEVEWIDGET_H
 
-#include "ksieveui/managesievewidget.h"
+#include <KSieveUi/ManageSieveWidget>
 
 class SieveEditorManageSieveWidget : public KSieveUi::ManageSieveWidget
 {

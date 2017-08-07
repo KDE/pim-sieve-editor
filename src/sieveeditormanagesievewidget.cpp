@@ -19,8 +19,8 @@
 
 #include "sieveeditormanagesievewidget.h"
 #include "sieveeditorutil.h"
-#include "ksieveui/sievetreewidgetitem.h"
-#include "ksieveui/managesievetreeview.h"
+#include <KSieveUi/SieveTreeWidgetItem>
+#include <KSieveUi/ManageSieveTreeView>
 
 #include <kmanagesieve/sievejob.h>
 

@@ -21,7 +21,7 @@
 #define SIEVEEDITORPAGEWIDGET_H
 #include <QWidget>
 #include <QUrl>
-#include "ksieveui/sieveeditorwidget.h"
+#include <KSieveUi/SieveEditorWidget>
 #include <KSieveUi/ManageSieveWidget>
 namespace KManageSieve {
 class SieveJob;

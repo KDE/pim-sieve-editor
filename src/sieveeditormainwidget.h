@@ -22,7 +22,7 @@
 
 #include <QSplitter>
 #include <QUrl>
-#include "ksieveui/sieveeditorwidget.h"
+#include <KSieveUi/SieveEditorWidget>
 #include <KSieveUi/ManageSieveWidget>
 class QTabWidget;
 class QStackedWidget;
