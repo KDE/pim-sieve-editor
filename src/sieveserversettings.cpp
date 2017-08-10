@@ -21,24 +21,6 @@
 
 #include <kwallet.h>
 
-class SieveServerSettingsPrivate
-{
-public:
-    SieveServerSettingsPrivate()
-        : sieveServerSettings(new SieveServerSettings)
-    {
-    }
-
-    ~SieveServerSettingsPrivate()
-    {
-        delete sieveServerSettings;
-    }
-
-    SieveServerSettings *sieveServerSettings;
-};
-
-Q_GLOBAL_STATIC(SieveServerSettingsPrivate, sInstance)
-
 SieveServerSettings::SieveServerSettings(QObject *parent)
     : QObject(parent)
     , mWallet(nullptr)
@@ -52,7 +34,8 @@ SieveServerSettings::~SieveServerSettings()
 
 SieveServerSettings *SieveServerSettings::self()
 {
-    return sInstance->sieveServerSettings; //will create it
+    static SieveServerSettings s_self;
+    return &s_self;
 }
 
 KWallet::Wallet *SieveServerSettings::wallet()
