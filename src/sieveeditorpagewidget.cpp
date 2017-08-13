@@ -142,11 +142,16 @@ void SieveEditorPageWidget::slotPutResult(KManageSieve::SieveJob *job, bool succ
         mSieveEditorWidget->setModified(false);
     } else {
         const QString msg = job->errorString();
-        if (msg.isEmpty()) {
-            KMessageBox::error(nullptr, i18n("Uploading the Sieve script failed.\n"
-                                             "The server responded:\n%1", msg, i18n("Sieve Error")));
+        if (!msg.isEmpty()) {
+            KMessageBox::error(nullptr,
+                               i18n("Uploading the Sieve script failed.\n"
+                                    "The server responded:\n%1", msg),
+                               i18n("Sieve Error"));
         } else {
-            KMessageBox::error(nullptr, msg, i18n("Sieve Error"));
+            KMessageBox::error(nullptr,
+                               i18n("Uploading the Sieve script failed.\n"
+                                    "unknown reason\n"),
+                               i18n("Sieve Error"));
         }
     }
 }
