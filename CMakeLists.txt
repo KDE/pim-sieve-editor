@@ -49,7 +49,7 @@ set(PIMCOMMON_LIB_VERSION_LIB "5.6.41")
 set(KIMAP_LIB_VERSION "5.6.40")
 
 
-set(QT_REQUIRED_VERSION "5.7.0")
+set(QT_REQUIRED_VERSION "5.8.0")
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network Test)
 
 # Find KF5 package
