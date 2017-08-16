@@ -263,10 +263,11 @@ void SieveEditorMainWindow::setupActions()
 
 void SieveEditorMainWindow::slotImportImapSettings()
 {
-    ImportImapSettingWizard w(this);
-    if (w.exec()) {
+    QPointer<ImportImapSettingWizard> w = new ImportImapSettingWizard(this);
+    if (w->exec()) {
         mMainWidget->sieveEditorMainWidget()->updateServerList();
     }
+    delete w;
 }
 
 void SieveEditorMainWindow::slotRefreshList()
