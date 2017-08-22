@@ -81,7 +81,6 @@ static void setCurrentAuthMode(QComboBox *authCombo, MailTransport::Transport::E
 ServerSieveSettings::ServerSieveSettings(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::ServerSieveSettings)
-    , mServerTest(nullptr)
 {
     ui->setupUi(this);
     ui->serversievelabel->setMinimumSize(ui->serversievelabel->sizeHint());

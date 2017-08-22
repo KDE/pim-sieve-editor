@@ -32,8 +32,6 @@
 
 SieveEditorPageWidget::SieveEditorPageWidget(QWidget *parent)
     : QWidget(parent)
-    , mWasActive(false)
-    , mIsNewScript(false)
 {
     QVBoxLayout *vbox = new QVBoxLayout;
     setLayout(vbox);

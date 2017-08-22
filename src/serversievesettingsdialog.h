@@ -52,8 +52,8 @@ private Q_SLOTS:
 private:
     void readConfig();
     void writeConfig();
-    ServerSieveSettings *mServerSieveSettings;
-    QPushButton *mOkButton;
+    ServerSieveSettings *mServerSieveSettings = nullptr;
+    QPushButton *mOkButton = nullptr;
 };
 
 #endif // SERVERSIEVESETTINGSDIALOG_H

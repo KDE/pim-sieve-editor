@@ -116,10 +116,10 @@ private:
     QWidget *hasExistingPage(const QUrl &url);
     QColor mModifiedScriptColor;
     QColor mScriptColor;
-    SieveEditorTabWidget *mTabWidget;
-    SieveEditorScriptManagerWidget *mScriptManagerWidget;
-    QStackedWidget *mStackedWidget;
-    SieveEditorEmptyTabWidgetLabel *mEditorEmptyLabel;
+    SieveEditorTabWidget *mTabWidget = nullptr;
+    SieveEditorScriptManagerWidget *mScriptManagerWidget = nullptr;
+    QStackedWidget *mStackedWidget = nullptr;
+    SieveEditorEmptyTabWidgetLabel *mEditorEmptyLabel = nullptr;
 };
 
 #endif // SIEVEEDITORMAINWIDGET_H

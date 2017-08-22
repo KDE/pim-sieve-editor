@@ -104,9 +104,9 @@ private Q_SLOTS:
 private:
     void setModified(bool b);
     QUrl mCurrentURL;
-    KSieveUi::SieveEditorWidget *mSieveEditorWidget;
-    bool mWasActive;
-    bool mIsNewScript;
+    KSieveUi::SieveEditorWidget *mSieveEditorWidget = nullptr;
+    bool mWasActive = false;
+    bool mIsNewScript = false;
 };
 
 #endif // SIEVEEDITORPAGEWIDGET_H

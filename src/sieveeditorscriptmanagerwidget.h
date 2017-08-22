@@ -59,7 +59,7 @@ private Q_SLOTS:
     void slotUpdateButtons(QTreeWidgetItem *item);
 
 private:
-    SieveEditorManageSieveWidget *mTreeView;
+    SieveEditorManageSieveWidget *mTreeView = nullptr;
 };
 
 #endif // SIEVEEDITORSCRIPTMANAGERWIDGET_H

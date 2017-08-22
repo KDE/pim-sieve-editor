@@ -36,7 +36,7 @@ public:
     void setSieveCapabilities(const QStringList &capabilities);
 
 private:
-    KSieveUi::SieveEditor *mSieveEditor;
+    KSieveUi::SieveEditor *mSieveEditor = nullptr;
 };
 
 #endif // SIEVEEDITORSCRIPTWIDGET_H

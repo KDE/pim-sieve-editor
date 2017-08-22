@@ -40,7 +40,7 @@ private Q_SLOTS:
 private:
     explicit SieveServerSettings(QObject *parent = nullptr);
     friend class SieveServerSettingsPrivate;
-    KWallet::Wallet *mWallet;
+    KWallet::Wallet *mWallet = nullptr;
 };
 
 #endif // SieveServerSettings_H

@@ -41,8 +41,8 @@ private Q_SLOTS:
     void slotServerSieveFound(bool hasServer);
 
 private:
-    SieveEditorConfigureServerPage *mConfigureWidget;
-    SieveEditorMainWidget *mSieveEditorMainWidget;
+    SieveEditorConfigureServerPage *mConfigureWidget = nullptr;
+    SieveEditorMainWidget *mSieveEditorMainWidget = nullptr;
 };
 
 #endif // SIEVEEDITORCENTRALWIDGET_H

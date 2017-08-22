@@ -23,7 +23,6 @@
 
 SieveServerSettings::SieveServerSettings(QObject *parent)
     : QObject(parent)
-    , mWallet(nullptr)
 {
 }
 

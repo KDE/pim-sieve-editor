@@ -37,10 +37,10 @@ private:
     void readConfig();
     void writeConfig();
     void loadServerSieveConfig();
-    SieveEditorConfigureServerWidget *mServerWidget;
-    QCheckBox *mCloseWallet;
-    QCheckBox *mWrapText;
-    QTabWidget *mTabWidget;
+    SieveEditorConfigureServerWidget *mServerWidget = nullptr;
+    QCheckBox *mCloseWallet = nullptr;
+    QCheckBox *mWrapText = nullptr;
+    QTabWidget *mTabWidget = nullptr;
 };
 
 #endif // SIEVEEDITORCONFIGUREDIALOG_H
