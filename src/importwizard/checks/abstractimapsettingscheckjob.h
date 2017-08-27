@@ -43,8 +43,8 @@ Q_SIGNALS:
 
 protected:
     void checkNoSettingsImported();
-    AbstractImapSettingsPassword *mPasswordImporter;
-    bool mSettingsWereImported;
+    AbstractImapSettingsPassword *mPasswordImporter = nullptr;
+    bool mSettingsWereImported = false;
 };
 
 #endif // ABSTRACTIMAPSETTINGSCHECKJOB_H

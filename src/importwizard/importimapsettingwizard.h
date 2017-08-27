@@ -48,17 +48,17 @@ private:
     void slotNeedToImportSettings(bool b);
     QMap<QString, AbstractImapSettingsCheckJob *> mListCheckJob;
 
-    ImportImapSettingSearchPage *mSearchPage;
-    KPageWidgetItem *mSearchPageItem;
+    ImportImapSettingSearchPage *mSearchPage = nullptr;
+    KPageWidgetItem *mSearchPageItem = nullptr;
 
-    ImportImapSettingNoFoundPage *mNoFoundPage;
-    KPageWidgetItem *mNoFoundPageItem;
+    ImportImapSettingNoFoundPage *mNoFoundPage = nullptr;
+    KPageWidgetItem *mNoFoundPageItem = nullptr;
 
-    ImportImapSettingProgressPage *mProgressPage;
-    KPageWidgetItem *mProgressPageItem;
+    ImportImapSettingProgressPage *mProgressPage = nullptr;
+    KPageWidgetItem *mProgressPageItem = nullptr;
 
-    ImportImapSettingFinishPage *mFinishPage;
-    KPageWidgetItem *mFinishPageItem;
+    ImportImapSettingFinishPage *mFinishPage = nullptr;
+    KPageWidgetItem *mFinishPageItem = nullptr;
 };
 
 #endif // IMPORTIMAPSETTINGWIZARD_H

@@ -47,9 +47,9 @@ Q_SIGNALS:
 private:
     void slotImportSettingsDone(const QString &name, const SieveEditorUtil::SieveServerConfig &settings);
     QStringList mSelectedPrograms;
-    QTextEdit *mProgressTextEdit;
+    QTextEdit *mProgressTextEdit = nullptr;
     QMap<QString, AbstractImapSettingsCheckJob *> mListCheckJob;
-    bool mSettingsFound;
+    bool mSettingsFound = false;
 };
 
 #endif // IMPORTIMAPSETTINGPROGRESSPAGE_H

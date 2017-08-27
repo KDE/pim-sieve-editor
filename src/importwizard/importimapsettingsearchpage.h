@@ -39,7 +39,7 @@ Q_SIGNALS:
 
 private:
     void slotItemChanged();
-    QListWidget *mFoundProgramList;
+    QListWidget *mFoundProgramList = nullptr;
 };
 
 #endif // IMPORTIMAPSETTINGSEARCHPAGE_H

@@ -32,7 +32,7 @@ public:
     void addSummary(const QString &name);
 
 private:
-    QTextEdit *mTextEdit;
+    QTextEdit *mTextEdit = nullptr;
 };
 
 #endif // IMPORTIMAPSETTINGFINISHPAGE_H
