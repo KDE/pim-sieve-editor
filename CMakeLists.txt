@@ -1,5 +1,7 @@
-project( sieveeditor )
 cmake_minimum_required(VERSION 3.1)
+set(KDEPIM_VERSION_NUMBER "5.6.42")
+project( sieveeditor VERSION ${KDEPIM_VERSION_NUMBER})
+
 if (POLICY CMP0063)
     cmake_policy(SET CMP0063 NEW)
 endif()
@@ -43,7 +45,6 @@ if(DEFINED KDEPIM_DEV_VERSION)
 endif()
 
 
-set(KDEPIM_VERSION_NUMBER "5.6.42")
 set(KDEPIM_VERSION "${KDEPIM_VERSION_NUMBER}${KDEPIM_DEV_VERSION}")
 
 set(KMAILTRANSPORT_LIB_VERSION "5.6.40")
