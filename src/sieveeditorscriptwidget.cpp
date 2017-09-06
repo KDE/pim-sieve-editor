@@ -25,10 +25,9 @@
 SieveEditorScriptWidget::SieveEditorScriptWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QHBoxLayout *lay = new QHBoxLayout;
+    QHBoxLayout *lay = new QHBoxLayout(this);
     lay->setMargin(0);
     mSieveEditor = new KSieveUi::SieveEditor;
-    setLayout(lay);
 }
 
 SieveEditorScriptWidget::~SieveEditorScriptWidget()

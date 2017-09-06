@@ -26,8 +26,7 @@
 SieveEditorScriptManagerWidget::SieveEditorScriptManagerWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QHBoxLayout *hbox = new QHBoxLayout;
-    setLayout(hbox);
+    QHBoxLayout *hbox = new QHBoxLayout(this);
     mTreeView = new SieveEditorManageSieveWidget;
     connect(mTreeView, &SieveEditorManageSieveWidget::newScript, this, &SieveEditorScriptManagerWidget::slotNewScript);
     connect(mTreeView, &SieveEditorManageSieveWidget::editScript, this, &SieveEditorScriptManagerWidget::slotEditScript);

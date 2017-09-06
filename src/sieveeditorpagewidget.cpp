@@ -33,8 +33,7 @@
 SieveEditorPageWidget::SieveEditorPageWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *vbox = new QVBoxLayout;
-    setLayout(vbox);
+    QVBoxLayout *vbox = new QVBoxLayout(this);
     mSieveEditorWidget = new KSieveUi::SieveEditorWidget(false);
     connect(mSieveEditorWidget, &KSieveUi::SieveEditorWidget::valueChanged, this, &SieveEditorPageWidget::slotValueChanged);
     vbox->addWidget(mSieveEditorWidget);
