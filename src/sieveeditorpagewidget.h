@@ -84,6 +84,7 @@ public:
     void printPreview();
     bool printSupportEnabled() const;
     bool isTextEditor() const;
+    void renameScriptName(const QString &newName);
 Q_SIGNALS:
     void refreshList();
     void scriptModified(bool, SieveEditorPageWidget *);

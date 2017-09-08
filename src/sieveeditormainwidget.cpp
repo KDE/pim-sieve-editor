@@ -114,7 +114,9 @@ void SieveEditorMainWidget::slotScriptRenamed(const QUrl &oldUrl, const QUrl &ne
     if (page) {
         if (SieveEditorPageWidget *editor = qobject_cast<SieveEditorPageWidget *>(page)) {
             editor->setCurrentUrl(newUrl);
-            mTabWidget->setTabText(mTabWidget->indexOf(page), newUrl.fileName());
+            const QString newScriptName = newUrl.fileName();
+            mTabWidget->setTabText(mTabWidget->indexOf(page), newScriptName);
+            editor->renameScriptName(newScriptName);
         }
     }
     updateStackedWidget();
