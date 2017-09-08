@@ -98,6 +98,11 @@ QUrl SieveEditorPageWidget::currentUrl() const
     return mCurrentURL;
 }
 
+void SieveEditorPageWidget::renameScriptName(const QString &newName)
+{
+    mSieveEditorWidget->setScriptName(newName);
+}
+
 void SieveEditorPageWidget::setCurrentUrl(const QUrl &url)
 {
     mCurrentURL = url;
