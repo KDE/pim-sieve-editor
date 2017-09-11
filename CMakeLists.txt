@@ -8,14 +8,9 @@ endif()
 
 option(RUN_UNINSTALL "test run uninstalled apps (experimental)" FALSE)
 
-set(KF5_VERSION "5.37.0")
-set(ECM_VERSION ${KF5_VERSION})
-# ECM setup
-if (RUN_UNINSTALL)
-   set(ECM_VERSION "5.38.0")
-endif()
+set(KF5_VERSION "5.38.0")
 
-find_package(ECM ${ECM_VERSION} REQUIRED NO_MODULE)
+find_package(ECM ${KF5_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 include(ECMInstallIcons)
 
