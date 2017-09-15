@@ -95,6 +95,7 @@ Comment[sr@latin]=Uređujte sito filtere za IMAP
 Comment[sv]=Redigera IMAP Sieve-filter
 Comment[uk]=Редагувати фільтри IMAP
 Comment[x-test]=xxEdit IMAP Sieve filtersxx
+Comment[zh_CN]=编辑 IMAP 筛选过滤器
 Terminal=false
 Categories=Qt;KDE;Office;Network;X-KDE-Sieve;
 InitialPreference=10
