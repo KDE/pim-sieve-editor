@@ -27,7 +27,6 @@ set(sieveeditor_LIB_SRCS
     serversievesettingsdialog.cpp
     serversievesettings.cpp
     sieveeditormainwidget.cpp
-    sieveeditorscriptwidget.cpp
     sieveeditorconfiguredialog.cpp
     sieveeditorscriptmanagerwidget.cpp
     sieveeditorutil.cpp
