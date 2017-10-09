@@ -1,5 +1,5 @@
 <!DOCTYPE gui SYSTEM "kpartgui.dtd">
-<gui name="sieveeditor" version="17">
+<gui name="sieveeditor" version="18">
  <MenuBar>
   <Menu name="file" >
    <Action name="add_server_sieve" />
@@ -30,8 +30,8 @@
    <Separator/>
    <Action name="change_case_menu" />
   </Menu>
-  <Menu name="display" >
-   <text>Display</text>
+  <Menu name="view" >
+   <text>View</text>
    <Action name="zoom_in" />
    <Action name="zoom_out" />
    <Separator/>
