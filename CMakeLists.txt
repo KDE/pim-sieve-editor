@@ -6,7 +6,6 @@ if (POLICY CMP0063)
     cmake_policy(SET CMP0063 NEW)
 endif()
 
-option(RUN_UNINSTALL "test run uninstalled apps (experimental)" FALSE)
 
 set(KF5_VERSION "5.39.0")
 
