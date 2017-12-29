@@ -39,8 +39,8 @@ ImportImapSettingsAkonadiCheckJob::~ImportImapSettingsAkonadiCheckJob()
 
 bool ImportImapSettingsAkonadiCheckJob::resourceCanHaveSieveSupport(const QString &filename) const
 {
-    return filename.startsWith(QStringLiteral("akonadi_kolab_resource"))
-           || filename.startsWith(QStringLiteral("akonadi_imap_resource"));
+    return filename.startsWith(QLatin1String("akonadi_kolab_resource"))
+           || filename.startsWith(QLatin1String("akonadi_imap_resource"));
 }
 
 void ImportImapSettingsAkonadiCheckJob::start()

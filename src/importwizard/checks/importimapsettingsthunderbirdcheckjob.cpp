@@ -104,7 +104,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
     QTextStream stream(&file);
     while (!stream.atEnd()) {
         const QString line = stream.readLine();
-        if (line.startsWith(QStringLiteral("user_pref"))) {
+        if (line.startsWith(QLatin1String("user_pref"))) {
             if (line.contains(QStringLiteral("mail.server."))
                 || line.contains(QStringLiteral("mail.account."))
                 || line.contains(QStringLiteral("mail.accountmanager."))
@@ -114,9 +114,9 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
         } else {
             if (!line.startsWith(QLatin1Char('#'))
                 && line.isEmpty()
-                && line.startsWith(QStringLiteral("/*"))
-                && line.startsWith(QStringLiteral(" */"))
-                && line.startsWith(QStringLiteral(" *"))) {
+                && line.startsWith(QLatin1String("/*"))
+                && line.startsWith(QLatin1String(" */"))
+                && line.startsWith(QLatin1String(" *"))) {
                 qCDebug(SIEVEEDITOR_LOG) << " unstored line :" << line;
             }
         }
