@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2015-2017 Montel Laurent <montel@kde.org>
+   Copyright (C) 2015-2018 Montel Laurent <montel@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -18,7 +18,7 @@
 */
 
 /*
-  Copyright (c) 2015-2017 Montel Laurent <montel@kde.org>
+  Copyright (c) 2015-2018 Montel Laurent <montel@kde.org>
 
   This library is free software; you can redistribute it and/or modify it
   under the terms of the GNU Library General Public License as published by
