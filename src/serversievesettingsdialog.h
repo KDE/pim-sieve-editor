@@ -46,10 +46,8 @@ public:
     void setServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf);
     SieveEditorUtil::SieveServerConfig serverSieveConfig() const;
 
-private Q_SLOTS:
-    void slotEnableButtonOk(bool);
-
 private:
+    void slotEnableButtonOk(bool);
     void readConfig();
     void writeConfig();
     ServerSieveSettings *mServerSieveSettings = nullptr;

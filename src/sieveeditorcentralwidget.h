@@ -37,10 +37,8 @@ Q_SIGNALS:
     void configureClicked();
     void importSieveSettings();
 
-private Q_SLOTS:
-    void slotServerSieveFound(bool hasServer);
-
 private:
+    void slotServerSieveFound(bool hasServer);
     SieveEditorConfigureServerPage *mConfigureWidget = nullptr;
     SieveEditorMainWidget *mSieveEditorMainWidget = nullptr;
 };

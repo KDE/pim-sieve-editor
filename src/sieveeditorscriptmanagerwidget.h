@@ -53,7 +53,7 @@ public Q_SLOTS:
     void slotDeleteScript();
     void slotRefreshList();
 
-private Q_SLOTS:
+private:
     void slotNewScript(const KSieveUi::ManageSieveWidget::ScriptInfo &info);
     void slotEditScript(const KSieveUi::ManageSieveWidget::ScriptInfo &info);
     void slotUpdateButtons(QTreeWidgetItem *item);

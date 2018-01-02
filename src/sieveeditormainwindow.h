@@ -45,7 +45,7 @@ public:
 protected:
     void closeEvent(QCloseEvent *e) override;
 
-private Q_SLOTS:
+private:
     void slotConfigure();
     void slotAddServerSieve();
     void slotCreateNewScript();

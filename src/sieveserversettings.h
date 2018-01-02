@@ -34,7 +34,7 @@ public:
     KWallet::Wallet *wallet();
 
     void closeWallet();
-private Q_SLOTS:
+private:
     void slotWalletClosed();
 
 private:

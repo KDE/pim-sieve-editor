@@ -37,7 +37,7 @@ public:
     void readConfig();
     void writeConfig();
 
-private Q_SLOTS:
+private:
     void slotModifyServer();
     void slotAddServer();
     void slotDeleteServer();

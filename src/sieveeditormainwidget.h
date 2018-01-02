@@ -102,7 +102,7 @@ Q_SIGNALS:
     void copyAvailable(bool);
     void sieveEditorTabCurrentChanged();
 
-private Q_SLOTS:
+private:
     void slotCreateScriptPage(const KSieveUi::ManageSieveWidget::ScriptInfo &info, bool isNewScript);
     void slotScriptDeleted(const QUrl &url);
     void slotScriptRenamed(const QUrl &oldUrl, const QUrl &newUrl);

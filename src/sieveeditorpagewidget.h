@@ -95,7 +95,7 @@ Q_SIGNALS:
     void copyAvailable(bool);
     void sieveEditorTabCurrentChanged();
 
-private Q_SLOTS:
+private:
     void slotGetResult(KManageSieve::SieveJob *, bool success, const QString &script, bool isActive);
     void slotCheckSyntaxClicked();
     void slotPutResult(KManageSieve::SieveJob *, bool success);

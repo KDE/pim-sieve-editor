@@ -71,7 +71,7 @@ public:
 Q_SIGNALS:
     void enableOkButton(bool enabled);
 
-private Q_SLOTS:
+private:
     void slotUserServerNameChanged();
     void slotTest();
 
