@@ -38,6 +38,7 @@ private:
     void slotWalletClosed();
 
 private:
+    Q_DISABLE_COPY(SieveServerSettings)
     explicit SieveServerSettings(QObject *parent = nullptr);
     friend class SieveServerSettingsPrivate;
     KWallet::Wallet *mWallet = nullptr;

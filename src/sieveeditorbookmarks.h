@@ -44,6 +44,7 @@ Q_SIGNALS:
     void openUrl(const QUrl &url);
 
 private:
+    Q_DISABLE_COPY(SieveEditorBookmarks)
     KBookmarkMenu *mBookmarkMenu = nullptr;
     QMenu *mMenu = nullptr;
     SieveEditorMainWindow *mMainWindow = nullptr;
