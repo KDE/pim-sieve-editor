@@ -1,12 +1,10 @@
 <!DOCTYPE gui SYSTEM "kpartgui.dtd">
-<gui name="sieveeditor" version="18">
+<gui name="sieveeditor" version="19">
  <MenuBar>
   <Menu name="file" >
    <Action name="add_server_sieve" />
    <Separator/>
    <Action name="create_new_script" />
-   <Action name="edit_script"/>
-   <Action name="desactivate_script"/>
    <Separator/>
    <Action name="share_script"/>
    <Separator/>
