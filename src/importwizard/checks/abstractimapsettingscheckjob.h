@@ -42,6 +42,7 @@ Q_SIGNALS:
     void noSettingsImported(const QString &name);
 
 protected:
+    Q_DISABLE_COPY(AbstractImapSettingsCheckJob)
     void checkNoSettingsImported();
     AbstractImapSettingsPassword *mPasswordImporter = nullptr;
     bool mSettingsWereImported = false;
