@@ -69,7 +69,7 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
         return false;
     }
     SieveEditorUtil::SieveServerConfig config;
-    bool isKolabSettings = filePath.contains(QStringLiteral("/akonadi_kolab_resource"));
+    bool isKolabSettings = filePath.contains(QLatin1String("/akonadi_kolab_resource"));
     KSharedConfigPtr resourceConfig = KSharedConfig::openConfig(filePath);
 
     KConfigGroup sieveGroup = resourceConfig->group(QStringLiteral("siever"));

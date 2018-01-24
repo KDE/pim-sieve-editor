@@ -105,10 +105,10 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
     while (!stream.atEnd()) {
         const QString line = stream.readLine();
         if (line.startsWith(QLatin1String("user_pref"))) {
-            if (line.contains(QStringLiteral("mail.server."))
-                || line.contains(QStringLiteral("mail.account."))
-                || line.contains(QStringLiteral("mail.accountmanager."))
-                || line.contains(QStringLiteral("extensions.sieve.account."))) {
+            if (line.contains(QLatin1String("mail.server."))
+                || line.contains(QLatin1String("mail.account."))
+                || line.contains(QLatin1String("mail.accountmanager."))
+                || line.contains(QLatin1String("extensions.sieve.account."))) {
                 insertIntoMap(line);
             }
         } else {
