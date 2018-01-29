@@ -140,7 +140,7 @@
        <item>
         <widget class="QLabel" name="label_11">
          <property name="text">
-          <string>IMAP settings is necessary if you want to be able to list folders from server </string>
+          <string>IMAP settings is necessary if you want to be able to list folders from server.</string>
          </property>
         </widget>
        </item>
