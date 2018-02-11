@@ -27,7 +27,7 @@ class SieveEditorManageSieveWidget : public KSieveUi::ManageSieveWidget
     Q_OBJECT
 public:
     explicit SieveEditorManageSieveWidget(QWidget *parent = nullptr);
-    virtual ~SieveEditorManageSieveWidget();
+    ~SieveEditorManageSieveWidget() override;
 
 protected:
     bool refreshList() override;
