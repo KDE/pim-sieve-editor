@@ -34,7 +34,7 @@ class LIBSIEVEEDITOR_EXPORT ImportImapSettingWizard : public KAssistantDialog
     Q_OBJECT
 public:
     explicit ImportImapSettingWizard(QWidget *parent = nullptr);
-    ~ImportImapSettingWizard();
+    ~ImportImapSettingWizard() override;
 
     void next() override;
 

@@ -37,7 +37,7 @@ class LIBSIEVEEDITOR_EXPORT SieveEditorMainWindow : public KXmlGuiWindow
     Q_OBJECT
 public:
     explicit SieveEditorMainWindow(QWidget *parent = nullptr);
-    ~SieveEditorMainWindow();
+    ~SieveEditorMainWindow() override;
 
     QString currentHelpTitle() const;
     QUrl currentHelpUrl() const;

@@ -27,7 +27,7 @@ class LIBSIEVEEDITOR_TESTS_EXPORT ImportImapSettingsAkonadiCheckJob : public Abs
     Q_OBJECT
 public:
     explicit ImportImapSettingsAkonadiCheckJob(QObject *parent = nullptr);
-    ~ImportImapSettingsAkonadiCheckJob();
+    ~ImportImapSettingsAkonadiCheckJob() override;
 
     void start() override;
 

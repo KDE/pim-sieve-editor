@@ -26,7 +26,7 @@ class ImportImapSettingsAkonadiPassword : public AbstractImapSettingsPassword
 {
 public:
     ImportImapSettingsAkonadiPassword();
-    ~ImportImapSettingsAkonadiPassword();
+    ~ImportImapSettingsAkonadiPassword() override;
 
     void importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings) override;
 };

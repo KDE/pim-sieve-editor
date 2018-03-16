@@ -27,7 +27,7 @@ class LIBSIEVEEDITOR_TESTS_EXPORT ImportImapSettingsThunderbirdCheckJob : public
     Q_OBJECT
 public:
     explicit ImportImapSettingsThunderbirdCheckJob(QObject *parent = nullptr);
-    ~ImportImapSettingsThunderbirdCheckJob();
+    ~ImportImapSettingsThunderbirdCheckJob() override;
 
     void start() override;
     bool settingsCanBeImported() const override;

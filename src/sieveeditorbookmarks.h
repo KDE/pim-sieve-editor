@@ -31,7 +31,7 @@ class SieveEditorBookmarks : public QObject, public KBookmarkOwner
     Q_OBJECT
 public:
     explicit SieveEditorBookmarks(SieveEditorMainWindow *mainWindow, KActionCollection *collection, QMenu *menu, QObject *parent = nullptr);
-    ~SieveEditorBookmarks();
+    ~SieveEditorBookmarks() override;
 
     QMenu *menu() const;
 
