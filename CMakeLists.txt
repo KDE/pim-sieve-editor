@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1)
-set(KDEPIM_VERSION_NUMBER "5.8.0")
+set(KDEPIM_VERSION_NUMBER "5.8.1")
 project( sieveeditor VERSION ${KDEPIM_VERSION_NUMBER})
 
 if (POLICY CMP0063)
