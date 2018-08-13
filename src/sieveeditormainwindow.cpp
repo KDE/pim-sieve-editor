@@ -215,15 +215,11 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("uncomment_code"), mUncommentAction);
     ac->setDefaultShortcut(mUncommentAction, Qt::CTRL + Qt::SHIFT + Qt::Key_D);
 
-    mZoomInAction = new QAction(QIcon::fromTheme(QStringLiteral("zoom-in")), i18n("&Zoom In"), this);
+    mZoomInAction = KStandardAction::zoomIn(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotZoomIn, this);
     ac->addAction(QStringLiteral("zoom_in"), mZoomInAction);
-    connect(mZoomInAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotZoomIn);
-    ac->setDefaultShortcut(mZoomInAction, QKeySequence(Qt::CTRL + Qt::Key_Plus));
 
-    mZoomOutAction = new QAction(QIcon::fromTheme(QStringLiteral("zoom-out")), i18n("Zoom &Out"), this);
+    mZoomOutAction = KStandardAction::zoomOut(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotZoomOut, this);
     ac->addAction(QStringLiteral("zoom_out"), mZoomOutAction);
-    connect(mZoomOutAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotZoomOut);
-    ac->setDefaultShortcut(mZoomOutAction, QKeySequence(Qt::CTRL + Qt::Key_Minus));
 
 #if KCONFIG_VERSION < QT_VERSION_CHECK(5, 50, 0)
     mZoomResetAction = new QAction(i18nc("Reset the zoom", "Reset"), this);
