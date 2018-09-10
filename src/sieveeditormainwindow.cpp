@@ -27,7 +27,6 @@
 #include "sieveeditorbookmarks.h"
 #include "importwizard/importimapsettingwizard.h"
 #include "PimCommon/KActionMenuChangeCase"
-#include <kconfig_version.h>
 
 #include <KSharedConfig>
 #include <KIconEngine>
@@ -221,15 +220,8 @@ void SieveEditorMainWindow::setupActions()
     mZoomOutAction = KStandardAction::zoomOut(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotZoomOut, this);
     ac->addAction(QStringLiteral("zoom_out"), mZoomOutAction);
 
-#if KCONFIG_VERSION < QT_VERSION_CHECK(5, 50, 0)
-    mZoomResetAction = new QAction(i18nc("Reset the zoom", "Reset"), this);
-    connect(mZoomResetAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotZoomReset);
-    ac->addAction(QStringLiteral("zoom_reset"), mZoomResetAction);
-    ac->setDefaultShortcut(mZoomResetAction, QKeySequence(Qt::CTRL + Qt::Key_0));
-#else
     mZoomResetAction = KStandardAction::actualSize(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotZoomReset, this);
     ac->addAction(QStringLiteral("zoom_reset"), mZoomResetAction);
-#endif
 
     mMenuChangeCaseAction = new PimCommon::KActionMenuChangeCase(this);
     ac->addAction(QStringLiteral("change_case_menu"), mMenuChangeCaseAction);
