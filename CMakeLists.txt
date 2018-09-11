@@ -61,7 +61,16 @@ find_package(KF5Crash ${KF5_VERSION} REQUIRED)
 find_package(KF5Bookmarks ${KF5_VERSION} REQUIRED)
 find_package(KF5IconThemes ${KF5_VERSION} REQUIRED)
 find_package(KF5KIO ${KF5_VERSION} REQUIRED)
-
+find_package(KF5Purpose CONFIG QUIET)
+set_package_properties(KF5Purpose PROPERTIES DESCRIPTION "Support for "
+                       TYPE OPTIONAL
+                      )
+if (KF5Purpose_FOUND)
+  message(STATUS "Found KF5 Purpose, filesharing enabled")
+  set(KF5_PURPOSE TRUE)
+else()
+  message(STATUS "KF5 Purpose not found, filesharing disabled")
+endif()
 
 # Find KdepimLibs Package
 find_package(KF5PimTextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
@@ -83,6 +92,7 @@ if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
 endif()
 
+configure_file(config-sieveeditor.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-sieveeditor.h )
 
 add_subdirectory(src)
 if (BUILD_TESTING)
