@@ -62,12 +62,12 @@ find_package(KF5Bookmarks ${KF5_VERSION} REQUIRED)
 find_package(KF5IconThemes ${KF5_VERSION} REQUIRED)
 find_package(KF5KIO ${KF5_VERSION} REQUIRED)
 find_package(KF5Purpose CONFIG QUIET)
-set_package_properties(KF5Purpose PROPERTIES DESCRIPTION "Support for "
+set_package_properties(KF5Purpose PROPERTIES DESCRIPTION "Support for sharing file"
                        TYPE OPTIONAL
                       )
 if (KF5Purpose_FOUND)
   message(STATUS "Found KF5 Purpose, filesharing enabled")
-  set(KF5_PURPOSE TRUE)
+  set(KF5_USE_PURPOSE true)
 else()
   message(STATUS "KF5 Purpose not found, filesharing disabled")
 endif()

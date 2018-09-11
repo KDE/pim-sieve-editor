@@ -1,2 +1,2 @@
-#cmakedefine KF5_PURPOSE 1
+#cmakedefine KF5_USE_PURPOSE 1
 

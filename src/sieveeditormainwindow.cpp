@@ -18,6 +18,7 @@
 */
 
 #include "sieveeditormainwindow.h"
+
 #include "sieveeditormainwidget.h"
 #include "sieveeditorconfiguredialog.h"
 #include "serversievesettingsdialog.h"
@@ -31,7 +32,14 @@
 #include <KSharedConfig>
 #include <KIconEngine>
 #include <KIconLoader>
+#include <KMessageBox>
 #include <PimCommon/NetworkManager>
+
+#ifdef KF5_USE_PURPOSE
+#include <Purpose/AlternativesModel>
+#include <PurposeWidgets/Menu>
+#include <QJsonArray>
+#endif
 
 #include <KLocalizedString>
 #include <KConfigGroup>
@@ -181,13 +189,27 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("import_script"), mImportAction);
     mImportAction->setEnabled(false);
 
+#ifdef KF5_USE_PURPOSE
+    mShareAction = new QAction(i18n("Share..."), this);
+    ac->addAction(QStringLiteral("share_script"), mShareAction);
+    mShareMenu = new Purpose::Menu(this);
+    mShareMenu->model()->setPluginType(QStringLiteral("Export"));
+    mShareMenu->model()->setInputData(QJsonObject {
+        { QStringLiteral("urls"), QJsonArray() },
+        { QStringLiteral("mimeType"), { QStringLiteral("text/plain") } }
+    });
+
+    mShareAction->setMenu(mShareMenu);
+    mShareAction->setIcon( QIcon::fromTheme(QStringLiteral("document-share")));
+    //connect(mShareAction, &Purpose::Menu::finished, this, &SieveEditorMainWindow::slotShareActionFinished);
+#else
     mShareAction = new QAction(i18n("Share..."), this);
     connect(mShareAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotShareScript);
     ac->addAction(QStringLiteral("share_script"), mShareAction);
     const QStringList overlays = QStringList() << QStringLiteral("list-add");
     mShareAction->setIcon(QIcon(new KIconEngine(QStringLiteral("get-hot-new-stuff"), KIconLoader::global(), overlays)));
     mShareAction->setEnabled(false);
-
+#endif
     mSpellCheckAction = new QAction(i18n("Check Spelling..."), this);
     connect(mSpellCheckAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotCheckSpelling);
     ac->addAction(QStringLiteral("check_spelling"), mSpellCheckAction);
@@ -254,6 +276,20 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("import_imap_settings"), act);
     connect(act, &QAction::triggered, this, &SieveEditorMainWindow::slotImportImapSettings);
 }
+
+void SieveEditorMainWindow::slotShareActionFinished(const QJsonObject &output, int error, const QString &message)
+{
+#ifdef KF5_USE_PURPOSE
+    if (error) {
+        KMessageBox::error(this, i18n("There was a problem sharing the document: %1", message),
+                           i18n("Share"));
+    } else {
+        KMessageBox::information(nullptr, i18n("<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>", output[QLatin1String("url")].toString()),
+                                QString(), QString(), KMessageBox::AllowLink);
+    }
+#endif
+}
+
 
 void SieveEditorMainWindow::slotImportImapSettings()
 {
