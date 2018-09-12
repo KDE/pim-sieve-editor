@@ -28,6 +28,7 @@ class SieveEditorCentralWidget;
 class QLabel;
 class SieveEditorBookmarks;
 class KActionMenu;
+class QTemporaryFile;
 namespace PimCommon {
 class KActionMenuChangeCase;
 }
@@ -69,6 +70,8 @@ private:
     void readConfig();
     void setupActions();
     void slotShareActionFinished(const QJsonObject &output, int error, const QString &message);
+    void slotInitializeShareMenu();
+    QString currentText() const;
 
     SieveEditorCentralWidget *mMainWidget = nullptr;
     QAction *mDeleteScript = nullptr;
@@ -109,6 +112,7 @@ private:
     KActionMenu *mBookmarkMenu = nullptr;
 #ifdef KF5_USE_PURPOSE
     Purpose::Menu *mShareMenu = nullptr;
+    QTemporaryFile *mTemporaryShareFile = nullptr;
 #endif
     bool mNetworkIsDown = false;
 };

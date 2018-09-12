@@ -333,6 +333,11 @@ void SieveEditorPageWidget::zoomOut()
     mSieveEditorWidget->zoomOut();
 }
 
+QString SieveEditorPageWidget::currentText() const
+{
+    return mSieveEditorWidget->script();
+}
+
 void SieveEditorPageWidget::wordWrap(bool state)
 {
     mSieveEditorWidget->wordWrap(state);

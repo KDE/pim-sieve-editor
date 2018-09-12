@@ -74,6 +74,7 @@ public:
     void reverseCase();
     void zoomIn();
     void zoomOut();
+    QString currentText() const;
     QString currentHelpTitle() const;
     QUrl currentHelpUrl() const;
     void openBookmarkUrl(const QUrl &url);

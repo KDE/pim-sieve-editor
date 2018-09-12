@@ -366,6 +366,19 @@ void SieveEditorMainWidget::slotShareScript()
     }
 }
 
+QString SieveEditorMainWidget::currentText() const
+{
+    QWidget *w = mTabWidget->currentWidget();
+    if (w) {
+        SieveEditorPageWidget *page = qobject_cast<SieveEditorPageWidget *>(w);
+        if (page) {
+            return page->currentText();
+        }
+    }
+    return {};
+}
+
+
 void SieveEditorMainWidget::slotCreateRulesGraphically()
 {
     QWidget *w = mTabWidget->currentWidget();

@@ -61,6 +61,7 @@ public:
     void openBookmarkUrl(const QUrl &url);
     bool printSupportEnabled() const;
     bool isTextEditor() const;
+    QString currentText() const;
 public Q_SLOTS:
     void slotDebugSieveScript();
     void slotGoToLine();

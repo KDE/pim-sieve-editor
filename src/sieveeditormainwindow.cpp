@@ -53,6 +53,7 @@
 #include <QLabel>
 #include <QCloseEvent>
 #include <QNetworkConfigurationManager>
+#include <QTemporaryFile>
 
 SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     : KXmlGuiWindow(parent)
@@ -194,12 +195,7 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("share_script"), mShareAction);
     mShareMenu = new Purpose::Menu(this);
     mShareMenu->model()->setPluginType(QStringLiteral("Export"));
-    //TODO initialize.
-    mShareMenu->model()->setInputData(QJsonObject {
-        { QStringLiteral("urls"), QJsonArray() },
-        { QStringLiteral("mimeType"), { QStringLiteral("text/plain") } }
-    });
-
+    connect(mShareMenu, &Purpose::Menu::aboutToShow, this, &SieveEditorMainWindow::slotInitializeShareMenu);
     mShareAction->setMenu(mShareMenu);
     mShareAction->setIcon( QIcon::fromTheme(QStringLiteral("document-share")));
     connect(mShareMenu, &Purpose::Menu::finished, this, &SieveEditorMainWindow::slotShareActionFinished);
@@ -278,6 +274,23 @@ void SieveEditorMainWindow::setupActions()
     connect(act, &QAction::triggered, this, &SieveEditorMainWindow::slotImportImapSettings);
 }
 
+void SieveEditorMainWindow::slotInitializeShareMenu()
+{
+#ifdef KF5_USE_PURPOSE
+    delete mTemporaryShareFile;
+    mTemporaryShareFile = new QTemporaryFile();
+    mTemporaryShareFile->open();
+    mTemporaryShareFile->setPermissions(QFile::ReadUser);
+    mTemporaryShareFile->write(mMainWidget->sieveEditorMainWidget()->currentText().toUtf8());
+    mTemporaryShareFile->close();
+    mShareMenu->model()->setInputData(QJsonObject {
+        { QStringLiteral("urls"), QJsonArray { {mTemporaryShareFile->fileName()} } },
+        { QStringLiteral("mimeType"), { QStringLiteral("text/plain") } }
+    });
+    mShareMenu->reload();
+#endif
+}
+
 void SieveEditorMainWindow::slotShareActionFinished(const QJsonObject &output, int error, const QString &message)
 {
 #ifdef KF5_USE_PURPOSE
@@ -331,6 +344,11 @@ void SieveEditorMainWindow::slotCreateNewScript()
 void SieveEditorMainWindow::slotDeleteScript()
 {
     mMainWidget->sieveEditorMainWidget()->deleteScript();
+}
+
+QString SieveEditorMainWindow::currentText() const
+{
+    return mMainWidget->sieveEditorMainWidget()->currentText();
 }
 
 void SieveEditorMainWindow::closeEvent(QCloseEvent *e)
