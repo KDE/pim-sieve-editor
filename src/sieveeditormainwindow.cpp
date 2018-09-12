@@ -194,6 +194,7 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("share_script"), mShareAction);
     mShareMenu = new Purpose::Menu(this);
     mShareMenu->model()->setPluginType(QStringLiteral("Export"));
+    //TODO initialize.
     mShareMenu->model()->setInputData(QJsonObject {
         { QStringLiteral("urls"), QJsonArray() },
         { QStringLiteral("mimeType"), { QStringLiteral("text/plain") } }
@@ -201,7 +202,7 @@ void SieveEditorMainWindow::setupActions()
 
     mShareAction->setMenu(mShareMenu);
     mShareAction->setIcon( QIcon::fromTheme(QStringLiteral("document-share")));
-    //connect(mShareAction, &Purpose::Menu::finished, this, &SieveEditorMainWindow::slotShareActionFinished);
+    connect(mShareMenu, &Purpose::Menu::finished, this, &SieveEditorMainWindow::slotShareActionFinished);
 #else
     mShareAction = new QAction(i18n("Share..."), this);
     connect(mShareAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotShareScript);

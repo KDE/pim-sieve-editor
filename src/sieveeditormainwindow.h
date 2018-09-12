@@ -23,7 +23,6 @@
 #include <KXmlGuiWindow>
 #include "config-sieveeditor.h"
 #include "libsieveeditor_export.h"
-
 class QAction;
 class SieveEditorCentralWidget;
 class QLabel;
