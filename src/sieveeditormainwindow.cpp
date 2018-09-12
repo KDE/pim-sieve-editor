@@ -203,14 +203,14 @@ void SieveEditorMainWindow::setupActions()
     mShareAction->setMenu(mShareMenu);
     mShareAction->setIcon( QIcon::fromTheme(QStringLiteral("document-share")));
     connect(mShareMenu, &Purpose::Menu::finished, this, &SieveEditorMainWindow::slotShareActionFinished);
-#else
-    mShareAction = new QAction(i18n("Share..."), this);
-    connect(mShareAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotShareScript);
-    ac->addAction(QStringLiteral("share_script"), mShareAction);
-    const QStringList overlays = QStringList() << QStringLiteral("list-add");
-    mShareAction->setIcon(QIcon(new KIconEngine(QStringLiteral("get-hot-new-stuff"), KIconLoader::global(), overlays)));
-    mShareAction->setEnabled(false);
 #endif
+    mShareHotNewStuffAction = new QAction(i18n("Share Script..."), this);
+    connect(mShareHotNewStuffAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotShareScript);
+    ac->addAction(QStringLiteral("share_hot_new_stuff_script"), mShareHotNewStuffAction);
+    const QStringList overlays = QStringList() << QStringLiteral("list-add");
+    mShareHotNewStuffAction->setIcon(QIcon(new KIconEngine(QStringLiteral("get-hot-new-stuff"), KIconLoader::global(), overlays)));
+    mShareHotNewStuffAction->setEnabled(false);
+
     mSpellCheckAction = new QAction(i18n("Check Spelling..."), this);
     connect(mSpellCheckAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotCheckSpelling);
     ac->addAction(QStringLiteral("check_spelling"), mSpellCheckAction);
@@ -387,6 +387,7 @@ void SieveEditorMainWindow::slotUpdateActions()
     mSaveAsAction->setEnabled(hasPage);
     mImportAction->setEnabled(hasPage);
     mShareAction->setEnabled(hasPage && !mNetworkIsDown);
+    mShareHotNewStuffAction->setEnabled(hasPage && !mNetworkIsDown);
     mSpellCheckAction->setEnabled(editActionEnabled);
     mCheckSyntaxAction->setEnabled(editActionEnabled && !mNetworkIsDown);
     mCreateRulesGraphicallyAction->setEnabled(editActionEnabled);
