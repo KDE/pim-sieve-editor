@@ -82,6 +82,7 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
 
 SieveEditorMainWindow::~SieveEditorMainWindow()
 {
+    delete mTemporaryShareFile;
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     KConfigGroup group = config->group(QStringLiteral("SieveEditorMainWindow"));
     group.writeEntry("Size", size());
