@@ -299,8 +299,13 @@ void SieveEditorMainWindow::slotShareActionFinished(const QJsonObject &output, i
         KMessageBox::error(this, i18n("There was a problem sharing the document: %1", message),
                            i18n("Share"));
     } else {
-        KMessageBox::information(nullptr, i18n("<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>", output[QLatin1String("url")].toString()),
-                                QString(), QString(), KMessageBox::AllowLink);
+        const QString url = output[QLatin1String("url")].toString();
+        if (url.isEmpty()) {
+            KMessageBox::information(this, i18n("File was shared."));
+        } else {
+            KMessageBox::information(this, i18n("<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>", url),
+                    QString(), QString(), KMessageBox::AllowLink);
+        }
     }
 #endif
 }
