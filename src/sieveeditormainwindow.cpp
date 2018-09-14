@@ -287,7 +287,7 @@ void SieveEditorMainWindow::slotInitializeShareMenu()
     mTemporaryShareFile->write(mMainWidget->sieveEditorMainWidget()->currentText().toUtf8());
     mTemporaryShareFile->close();
     mShareMenu->model()->setInputData(QJsonObject {
-        { QStringLiteral("urls"), QJsonArray { {mTemporaryShareFile->fileName()} } },
+        { QStringLiteral("urls"), QJsonArray { {QUrl::fromLocalFile(mTemporaryShareFile->fileName()).toString()} } },
         { QStringLiteral("mimeType"), { QStringLiteral("text/plain") } }
     });
     mShareMenu->reload();
