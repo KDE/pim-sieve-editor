@@ -21,7 +21,6 @@
 #define SIEVEEDITORMAINWINDOW_H
 
 #include <KXmlGuiWindow>
-#include "config-sieveeditor.h"
 #include "libsieveeditor_export.h"
 class QAction;
 class SieveEditorCentralWidget;
@@ -31,9 +30,6 @@ class KActionMenu;
 class QTemporaryFile;
 namespace PimCommon {
 class KActionMenuChangeCase;
-}
-namespace Purpose {
-class Menu;
 }
 class LIBSIEVEEDITOR_EXPORT SieveEditorMainWindow : public KXmlGuiWindow
 {
@@ -69,8 +65,6 @@ private:
     void initStatusBar();
     void readConfig();
     void setupActions();
-    void slotShareActionFinished(const QJsonObject &output, int error, const QString &message);
-    void slotInitializeShareMenu();
     QString currentText() const;
 
     SieveEditorCentralWidget *mMainWidget = nullptr;
@@ -110,10 +104,6 @@ private:
     QLabel *mStatusBarInfo = nullptr;
     SieveEditorBookmarks *mSieveEditorBookmarks = nullptr;
     KActionMenu *mBookmarkMenu = nullptr;
-#ifdef KF5_USE_PURPOSE
-    Purpose::Menu *mShareMenu = nullptr;
-    QTemporaryFile *mTemporaryShareFile = nullptr;
-#endif
     bool mNetworkIsDown = false;
 };
 

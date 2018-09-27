@@ -40,6 +40,7 @@ set(sieveeditor_LIB_SRCS
     sieveeditorconfigureserverpage.cpp
     sieveeditorbookmarks.cpp
     sieveeditoremptytabwidgetlabel.cpp
+    sievepurposemenuwidget.cpp
     ${sieveeditor_importimapsettings_SRCS}
     ${sieveeditor_importimapsettings_check_SRCS}
     )
@@ -69,10 +70,6 @@ target_link_libraries(libsieveeditor
     KF5::KSieveUi
     KF5::KManageSieve
     )
-
-if (KF5_USE_PURPOSE)
-    target_link_libraries(libsieveeditor PRIVATE KF5::Purpose KF5::PurposeWidgets)
-endif()
 
 set_target_properties(libsieveeditor
     PROPERTIES OUTPUT_NAME sieveeditor VERSION ${KDEPIM_LIB_VERSION} SOVERSION ${KDEPIM_LIB_SOVERSION}

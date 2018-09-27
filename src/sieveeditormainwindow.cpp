@@ -25,6 +25,7 @@
 #include "sieveserversettings.h"
 #include "sieveeditorcentralwidget.h"
 #include "sieveeditorglobalconfig.h"
+#include "sievepurposemenuwidget.h"
 #include "sieveeditorbookmarks.h"
 #include "importwizard/importimapsettingwizard.h"
 #include "PimCommon/KActionMenuChangeCase"
@@ -34,12 +35,6 @@
 #include <KIconLoader>
 #include <KMessageBox>
 #include <PimCommon/NetworkManager>
-
-#ifdef KF5_USE_PURPOSE
-#include <Purpose/AlternativesModel>
-#include <PurposeWidgets/Menu>
-#include <QJsonArray>
-#endif
 
 #include <KLocalizedString>
 #include <KConfigGroup>
@@ -82,9 +77,6 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
 
 SieveEditorMainWindow::~SieveEditorMainWindow()
 {
-#ifdef KF5_USE_PURPOSE
-    delete mTemporaryShareFile;
-#endif
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     KConfigGroup group = config->group(QStringLiteral("SieveEditorMainWindow"));
     group.writeEntry("Size", size());
@@ -193,16 +185,17 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("import_script"), mImportAction);
     mImportAction->setEnabled(false);
 
-#ifdef KF5_USE_PURPOSE
-    mShareAction = new QAction(i18n("Share..."), this);
-    ac->addAction(QStringLiteral("share_script"), mShareAction);
-    mShareMenu = new Purpose::Menu(this);
-    mShareMenu->model()->setPluginType(QStringLiteral("Export"));
-    connect(mShareMenu, &Purpose::Menu::aboutToShow, this, &SieveEditorMainWindow::slotInitializeShareMenu);
-    mShareAction->setMenu(mShareMenu);
-    mShareAction->setIcon( QIcon::fromTheme(QStringLiteral("document-share")));
-    connect(mShareMenu, &Purpose::Menu::finished, this, &SieveEditorMainWindow::slotShareActionFinished);
-#endif
+    SievePurposeMenuWidget *purposeMenu = new SievePurposeMenuWidget(this, this);
+    if (purposeMenu->menu()) {
+        mShareAction = new QAction(i18n("Share..."), this);
+        ac->addAction(QStringLiteral("share_script"), mShareAction);
+        mShareAction->setMenu(purposeMenu->menu());
+        mShareAction->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
+        purposeMenu->setEditorWidget(mMainWidget->sieveEditorMainWidget());
+    } else {
+        delete purposeMenu;
+    }
+
     mShareHotNewStuffAction = new QAction(i18n("Share Script..."), this);
     connect(mShareHotNewStuffAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotShareScript);
     ac->addAction(QStringLiteral("share_hot_new_stuff_script"), mShareHotNewStuffAction);
@@ -276,42 +269,6 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("import_imap_settings"), act);
     connect(act, &QAction::triggered, this, &SieveEditorMainWindow::slotImportImapSettings);
 }
-
-void SieveEditorMainWindow::slotInitializeShareMenu()
-{
-#ifdef KF5_USE_PURPOSE
-    delete mTemporaryShareFile;
-    mTemporaryShareFile = new QTemporaryFile();
-    mTemporaryShareFile->open();
-    mTemporaryShareFile->setPermissions(QFile::ReadUser);
-    mTemporaryShareFile->write(mMainWidget->sieveEditorMainWidget()->currentText().toUtf8());
-    mTemporaryShareFile->close();
-    mShareMenu->model()->setInputData(QJsonObject {
-        { QStringLiteral("urls"), QJsonArray { {QUrl::fromLocalFile(mTemporaryShareFile->fileName()).toString()} } },
-        { QStringLiteral("mimeType"), { QStringLiteral("text/plain") } }
-    });
-    mShareMenu->reload();
-#endif
-}
-
-void SieveEditorMainWindow::slotShareActionFinished(const QJsonObject &output, int error, const QString &message)
-{
-#ifdef KF5_USE_PURPOSE
-    if (error) {
-        KMessageBox::error(this, i18n("There was a problem sharing the document: %1", message),
-                           i18n("Share"));
-    } else {
-        const QString url = output[QLatin1String("url")].toString();
-        if (url.isEmpty()) {
-            KMessageBox::information(this, i18n("File was shared."));
-        } else {
-            KMessageBox::information(this, i18n("<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>", url),
-                    QString(), QString(), KMessageBox::AllowLink);
-        }
-    }
-#endif
-}
-
 
 void SieveEditorMainWindow::slotImportImapSettings()
 {
