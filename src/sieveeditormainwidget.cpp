@@ -378,7 +378,6 @@ QString SieveEditorMainWidget::currentText() const
     return {};
 }
 
-
 void SieveEditorMainWidget::slotCreateRulesGraphically()
 {
     QWidget *w = mTabWidget->currentWidget();
