@@ -68,10 +68,10 @@ void ServerSieveSettingsTest::shouldEmitEnableOkButtonSignal()
     widget.setUserName(QStringLiteral("foo"));
     QCOMPARE(spy.count(), numberEmitSignal);
     ++numberEmitSignal;
-    widget.setUserName(QStringLiteral(""));
+    widget.setUserName(QString());
     QCOMPARE(spy.count(), numberEmitSignal);
     ++numberEmitSignal;
-    widget.setServerName(QStringLiteral(""));
+    widget.setServerName(QString());
     QCOMPARE(spy.count(), numberEmitSignal);
 }
 
