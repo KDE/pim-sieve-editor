@@ -101,3 +101,6 @@ if (BUILD_TESTING)
     add_subdirectory(importwizard/autotests)
     add_subdirectory(importwizard/tests)
 endif()
+
+install(FILES org.kde.sieveeditor.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+

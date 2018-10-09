@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop">
+  <id>org.kde.sieveeditor.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>SieveEditor</name>
+  <summary>Sieve Script Editor</summary>
+  <developer_name>Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <description>
+    <p>
+      SieveEditor allows to edit, create, delete sieve scripts.
+    </p>
+  </description>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=sieveeditor</url>
+  <url type="help">https://docs.kde.org/?application=sieveeditor</url>
+  <url type="donation">https://www.kde.org/community/donations</url>
+  <provides>
+    <binary>sieveeditor</binary>
+  </provides>
+  <project_group>KDE</project_group>
+</component>
