@@ -4,12 +4,28 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>SieveEditor</name>
+  <name xml:lang="ca">SieveEditor</name>
+  <name xml:lang="sv">Sieveeditor</name>
+  <name xml:lang="uk">Редактор фільтрів</name>
+  <name xml:lang="x-test">xxSieveEditorxx</name>
   <summary>Sieve Script Editor</summary>
+  <summary xml:lang="ca">Editor de scripts Sieve</summary>
+  <summary xml:lang="sv">Sieve-skripteditor</summary>
+  <summary xml:lang="uk">Редактор скриптів фільтрування</summary>
+  <summary xml:lang="x-test">xxSieve Script Editorxx</summary>
   <developer_name>Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="ca">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="sv">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="uk">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="x-test">xxLaurent Montel &lt;montel@kde.org&gt;xx</developer_name>
   <description>
     <p>
       SieveEditor allows to edit, create, delete sieve scripts.
     </p>
+    <p xml:lang="ca">El SieveEditor permet editar, crear i suprimir scripts de «Sieve».</p>
+    <p xml:lang="sv">Sieveeditor gör det möjligt att redigera, skapa och ta bort Sieve-skript.</p>
+    <p xml:lang="uk">За допомогою редактора фільтрів ви зможете редагувати, створювати та вилучати скрипти фільтрування пошти.</p>
+    <p xml:lang="x-test">xxSieveEditor allows to edit, create, delete sieve scripts.xx</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=sieveeditor</url>
   <url type="help">https://docs.kde.org/?application=sieveeditor</url>
