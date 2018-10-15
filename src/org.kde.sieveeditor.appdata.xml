@@ -5,6 +5,7 @@
   <project_license>GPL-2.0+</project_license>
   <name>SieveEditor</name>
   <name xml:lang="ca">SieveEditor</name>
+  <name xml:lang="ca-valencia">SieveEditor</name>
   <name xml:lang="nl">SieveEditor</name>
   <name xml:lang="pt">SieveEditor</name>
   <name xml:lang="sk">SieveEditor</name>
@@ -13,6 +14,7 @@
   <name xml:lang="x-test">xxSieveEditorxx</name>
   <summary>Sieve Script Editor</summary>
   <summary xml:lang="ca">Editor de scripts Sieve</summary>
+  <summary xml:lang="ca-valencia">Editor de scripts Sieve</summary>
   <summary xml:lang="nl">Bewerker van Sieve-scripts</summary>
   <summary xml:lang="pt">Editor de Programas do Sieve</summary>
   <summary xml:lang="sk">Editor Sieve skriptov</summary>
@@ -21,6 +23,7 @@
   <summary xml:lang="x-test">xxSieve Script Editorxx</summary>
   <developer_name>Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ca">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="ca-valencia">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="nl">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="pt">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="sk">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
@@ -32,6 +35,7 @@
       SieveEditor allows to edit, create, delete sieve scripts.
     </p>
     <p xml:lang="ca">El SieveEditor permet editar, crear i suprimir scripts de «Sieve».</p>
+    <p xml:lang="ca-valencia">El SieveEditor permet editar, crear i suprimir scripts de «Sieve».</p>
     <p xml:lang="nl">SieveEditor biedt u om sieve-scripts te bewerken, aan te maken en te verwijderen.</p>
     <p xml:lang="pt">O SieveEditor permite editar, criar e apagar programas do Sieve.</p>
     <p xml:lang="sk">SieveEditor umožňuje upravovať, vytvárať a mazať Sieve skripty.</p>
