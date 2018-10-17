@@ -6,6 +6,7 @@
   <name>SieveEditor</name>
   <name xml:lang="ca">SieveEditor</name>
   <name xml:lang="ca-valencia">SieveEditor</name>
+  <name xml:lang="fr">SieveEditor</name>
   <name xml:lang="nl">SieveEditor</name>
   <name xml:lang="pt">SieveEditor</name>
   <name xml:lang="ru">SieveEditor</name>
@@ -16,6 +17,7 @@
   <summary>Sieve Script Editor</summary>
   <summary xml:lang="ca">Editor de scripts Sieve</summary>
   <summary xml:lang="ca-valencia">Editor de scripts Sieve</summary>
+  <summary xml:lang="fr">Éditeur de scripts Sieve</summary>
   <summary xml:lang="nl">Bewerker van Sieve-scripts</summary>
   <summary xml:lang="pt">Editor de Programas do Sieve</summary>
   <summary xml:lang="ru">Редактор сценариев Sieve</summary>
@@ -26,6 +28,7 @@
   <developer_name>Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ca">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ca-valencia">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="fr">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="nl">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="pt">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ru">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
@@ -39,6 +42,7 @@
     </p>
     <p xml:lang="ca">El SieveEditor permet editar, crear i suprimir scripts de «Sieve».</p>
     <p xml:lang="ca-valencia">El SieveEditor permet editar, crear i suprimir scripts de «Sieve».</p>
+    <p xml:lang="fr">SieveEditor permet de créer, de modifier et de supprimer des scripts sieve.</p>
     <p xml:lang="nl">SieveEditor biedt u om sieve-scripts te bewerken, aan te maken en te verwijderen.</p>
     <p xml:lang="pt">O SieveEditor permite editar, criar e apagar programas do Sieve.</p>
     <p xml:lang="ru">Редактор сценариев позволяет создавать, изменять и удалять сценарии sieve.</p>
