@@ -87,6 +87,7 @@ public:
     bool printSupportEnabled() const;
     bool isTextEditor() const;
     void renameScriptName(const QString &newName);
+    bool uploadScriptAndCloseTab(int index);
 Q_SIGNALS:
     void refreshList();
     void scriptModified(bool, SieveEditorPageWidget *);
@@ -95,6 +96,7 @@ Q_SIGNALS:
     void redoAvailable(bool);
     void copyAvailable(bool);
     void sieveEditorTabCurrentChanged();
+    void requestCloseTab(int index);
 
 private:
     void slotGetResult(KManageSieve::SieveJob *, bool success, const QString &script, bool isActive);

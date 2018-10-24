@@ -62,6 +62,7 @@ public:
     bool printSupportEnabled() const;
     bool isTextEditor() const;
     QString currentText() const;
+    void forceCloseTab(int index);
 public Q_SLOTS:
     void slotDebugSieveScript();
     void slotGoToLine();

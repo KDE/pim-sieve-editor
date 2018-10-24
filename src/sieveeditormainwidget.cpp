@@ -136,6 +136,7 @@ void SieveEditorMainWidget::slotCreateScriptPage(const KSieveUi::ManageSieveWidg
         connect(editor, &SieveEditorPageWidget::redoAvailable, this, &SieveEditorMainWidget::redoAvailable);
         connect(editor, &SieveEditorPageWidget::copyAvailable, this, &SieveEditorMainWidget::copyAvailable);
         connect(editor, &SieveEditorPageWidget::sieveEditorTabCurrentChanged, this, &SieveEditorMainWidget::sieveEditorTabCurrentChanged);
+        connect(editor, &SieveEditorPageWidget::requestCloseTab, this, &SieveEditorMainWidget::forceCloseTab);
         editor->setIsNewScript(isNewScript);
         editor->loadScript(info);
         mTabWidget->addTab(editor, info.currentUrl.fileName());
@@ -597,6 +598,16 @@ void SieveEditorMainWidget::slotGeneralPaletteChanged()
     mModifiedScriptColor = scheme.foreground(KColorScheme::NegativeText).color();
 }
 
+void SieveEditorMainWidget::forceCloseTab(int index)
+{
+    SieveEditorPageWidget *page = qobject_cast<SieveEditorPageWidget *>(mTabWidget->widget(index));
+    if (page) {
+        mTabWidget->removeTab(index);
+        delete page;
+        updateStackedWidget();
+    }
+}
+
 void SieveEditorMainWidget::slotTabCloseRequested(int index)
 {
     SieveEditorPageWidget *page = qobject_cast<SieveEditorPageWidget *>(mTabWidget->widget(index));
@@ -604,7 +615,9 @@ void SieveEditorMainWidget::slotTabCloseRequested(int index)
         if (page->isModified()) {
             const int result = KMessageBox::questionYesNoCancel(this, i18n("Script was modified. Do you want to save before closing?"), i18n("Close script"));
             if (result == KMessageBox::Yes) {
-                page->uploadScript();
+                if (page->uploadScriptAndCloseTab(index)) {
+                    return;
+                }
             } else if (result == KMessageBox::Cancel) {
                 return;
             }
