@@ -7,6 +7,7 @@
   <name xml:lang="ca">SieveEditor</name>
   <name xml:lang="ca-valencia">SieveEditor</name>
   <name xml:lang="cs">SieveEditor</name>
+  <name xml:lang="de">Sieve-Editor</name>
   <name xml:lang="en-GB">SieveEditor</name>
   <name xml:lang="es">SieveEditor</name>
   <name xml:lang="fr">SieveEditor</name>
@@ -22,6 +23,7 @@
   <summary xml:lang="ca">Editor de scripts Sieve</summary>
   <summary xml:lang="ca-valencia">Editor de scripts Sieve</summary>
   <summary xml:lang="cs">Editor skriptů Sieve</summary>
+  <summary xml:lang="de">Sieve-Skripteditor</summary>
   <summary xml:lang="en-GB">Sieve Script Editor</summary>
   <summary xml:lang="es">Editor de guiones Sieve</summary>
   <summary xml:lang="fr">Éditeur de scripts Sieve</summary>
@@ -37,6 +39,7 @@
   <developer_name xml:lang="ca">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ca-valencia">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="cs">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="de">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="en-GB">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="es">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="fr">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
@@ -55,6 +58,7 @@
     <p xml:lang="ca">El SieveEditor permet editar, crear i suprimir scripts de «Sieve».</p>
     <p xml:lang="ca-valencia">El SieveEditor permet editar, crear i suprimir scripts de «Sieve».</p>
     <p xml:lang="cs">SieveEditor vám umožňuje upravit, vytvářet a mazat skripty sieve.</p>
+    <p xml:lang="de">Mit dem Sieve-Editor können Sie Sieve-Skripte bearbeiten, erstellen und löschen.</p>
     <p xml:lang="en-GB">SieveEditor allows to edit, create, delete sieve scripts.</p>
     <p xml:lang="es">SieveEditor permite editar, crear o borrar guiones de sieve.</p>
     <p xml:lang="fr">SieveEditor permet de créer, de modifier et de supprimer des scripts sieve.</p>
