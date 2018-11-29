@@ -10,6 +10,7 @@
   <name xml:lang="de">Sieve-Editor</name>
   <name xml:lang="en-GB">SieveEditor</name>
   <name xml:lang="es">SieveEditor</name>
+  <name xml:lang="fi">SieveEditor</name>
   <name xml:lang="fr">SieveEditor</name>
   <name xml:lang="gl">SieveEditor</name>
   <name xml:lang="it">SieveEditor</name>
@@ -27,6 +28,7 @@
   <summary xml:lang="de">Sieve-Skripteditor</summary>
   <summary xml:lang="en-GB">Sieve Script Editor</summary>
   <summary xml:lang="es">Editor de guiones Sieve</summary>
+  <summary xml:lang="fi">Sieve-komentojonomuokkain</summary>
   <summary xml:lang="fr">Éditeur de scripts Sieve</summary>
   <summary xml:lang="gl">Editor de scripts de filtro</summary>
   <summary xml:lang="it">Editor di script sieve</summary>
@@ -44,6 +46,7 @@
   <developer_name xml:lang="de">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="en-GB">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="es">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="fi">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="fr">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="gl">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="it">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
@@ -64,6 +67,7 @@
     <p xml:lang="de">Mit dem Sieve-Editor können Sie Sieve-Skripte bearbeiten, erstellen und löschen.</p>
     <p xml:lang="en-GB">SieveEditor allows to edit, create, delete sieve scripts.</p>
     <p xml:lang="es">SieveEditor permite editar, crear o borrar guiones de sieve.</p>
+    <p xml:lang="fi">SieveEditorilla voit luoda, muokata ja poista Sieve-komentojonoja.</p>
     <p xml:lang="fr">SieveEditor permet de créer, de modifier et de supprimer des scripts sieve.</p>
     <p xml:lang="gl">SieveEditor permite editar, crear e eliminar scripts de filtro.</p>
     <p xml:lang="it">SieveEditor permette di modificare, creare ed eliminare script sieve.</p>
