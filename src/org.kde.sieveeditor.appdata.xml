@@ -13,6 +13,7 @@
   <name xml:lang="fi">SieveEditor</name>
   <name xml:lang="fr">SieveEditor</name>
   <name xml:lang="gl">SieveEditor</name>
+  <name xml:lang="id">SieveEditor</name>
   <name xml:lang="it">SieveEditor</name>
   <name xml:lang="nl">SieveEditor</name>
   <name xml:lang="pt">SieveEditor</name>
@@ -31,6 +32,7 @@
   <summary xml:lang="fi">Sieve-komentojonomuokkain</summary>
   <summary xml:lang="fr">Éditeur de scripts Sieve</summary>
   <summary xml:lang="gl">Editor de scripts de filtro</summary>
+  <summary xml:lang="id">Editor Skrip Sieve</summary>
   <summary xml:lang="it">Editor di script sieve</summary>
   <summary xml:lang="nl">Bewerker van Sieve-scripts</summary>
   <summary xml:lang="pt">Editor de Programas do Sieve</summary>
@@ -49,6 +51,7 @@
   <developer_name xml:lang="fi">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="fr">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="gl">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="id">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="it">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="nl">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="pt">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
@@ -70,6 +73,7 @@
     <p xml:lang="fi">SieveEditorilla voit luoda, muokata ja poista Sieve-komentojonoja.</p>
     <p xml:lang="fr">SieveEditor permet de créer, de modifier et de supprimer des scripts sieve.</p>
     <p xml:lang="gl">SieveEditor permite editar, crear e eliminar scripts de filtro.</p>
+    <p xml:lang="id">SieveEditor memungkinkan untuk edit, cipta, hapus skrip sieve.</p>
     <p xml:lang="it">SieveEditor permette di modificare, creare ed eliminare script sieve.</p>
     <p xml:lang="nl">SieveEditor biedt u om sieve-scripts te bewerken, aan te maken en te verwijderen.</p>
     <p xml:lang="pt">O SieveEditor permite editar, criar e apagar programas do Sieve.</p>
