@@ -19,7 +19,7 @@
 
 #include "importimapsettingprogresspagetest.h"
 #include "../importimapsettingprogresspage.h"
-
+#include "kdepimtest_layout.h"
 #include <QTest>
 #include <QTextEdit>
 #include <QVBoxLayout>
@@ -46,7 +46,7 @@ void ImportImapSettingProgressPageTest::shouldHaveDefaultValue()
 
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
+    KdepimTestLayout::checkContentsMargins(0, mainLayout);
 }
 
 QTEST_MAIN(ImportImapSettingProgressPageTest)

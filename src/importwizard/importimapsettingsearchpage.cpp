@@ -29,7 +29,7 @@ ImportImapSettingSearchPage::ImportImapSettingSearchPage(QWidget *parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
     QLabel *label = new QLabel(i18n("Please select the program from which you like to import IMAP settings:"), this);
     label->setObjectName(QStringLiteral("label"));
     mainLayout->addWidget(label);

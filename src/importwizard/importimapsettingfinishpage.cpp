@@ -28,7 +28,7 @@ ImportImapSettingFinishPage::ImportImapSettingFinishPage(QWidget *parent)
 {
     QVBoxLayout *mainlayout = new QVBoxLayout(this);
     mainlayout->setObjectName(QStringLiteral("mainlayout"));
-    mainlayout->setMargin(0);
+    mainlayout->setContentsMargins(0, 0, 0, 0);
 
     QLabel *label = new QLabel(i18n("IMAP settings were imported:"), this);
     label->setObjectName(QStringLiteral("label"));

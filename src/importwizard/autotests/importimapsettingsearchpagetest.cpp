@@ -19,7 +19,7 @@
 
 #include "importimapsettingsearchpagetest.h"
 #include "../importimapsettingsearchpage.h"
-
+#include "kdepimtest_layout.h"
 #include <QLabel>
 #include <QListWidget>
 #include <QTest>
@@ -48,7 +48,7 @@ void ImportImapSettingSearchPageTest::shouldHaveDefaultValue()
 
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
+    KdepimTestLayout::checkContentsMargins(0, mainLayout);
 }
 
 void ImportImapSettingSearchPageTest::shouldAddCheckPrograms()

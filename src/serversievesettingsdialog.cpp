@@ -35,7 +35,7 @@ ServerSieveSettingsDialog::ServerSieveSettingsDialog(QWidget *parent)
     mServerSieveSettings = new ServerSieveSettings;
     connect(mServerSieveSettings, &ServerSieveSettings::enableOkButton, this, &ServerSieveSettingsDialog::slotEnableButtonOk);
     lay->addWidget(mServerSieveSettings);
-    lay->setMargin(0);
+    lay->setContentsMargins(0, 0, 0, 0);
     w->setLayout(lay);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(w);
