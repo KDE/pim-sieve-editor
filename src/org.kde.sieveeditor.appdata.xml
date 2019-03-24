@@ -24,6 +24,7 @@
   <name xml:lang="sv">Sieveeditor</name>
   <name xml:lang="uk">Редактор фільтрів</name>
   <name xml:lang="x-test">xxSieveEditorxx</name>
+  <name xml:lang="zh-TW">篩選器編輯器</name>
   <summary>Sieve Script Editor</summary>
   <summary xml:lang="ca">Editor de scripts Sieve</summary>
   <summary xml:lang="ca-valencia">Editor de scripts Sieve</summary>
@@ -45,6 +46,7 @@
   <summary xml:lang="sv">Sieve-skripteditor</summary>
   <summary xml:lang="uk">Редактор скриптів фільтрування</summary>
   <summary xml:lang="x-test">xxSieve Script Editorxx</summary>
+  <summary xml:lang="zh-TW">篩選器指令碼編輯器</summary>
   <developer_name>Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ca">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ca-valencia">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
@@ -66,6 +68,7 @@
   <developer_name xml:lang="sv">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="uk">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="x-test">xxLaurent Montel &lt;montel@kde.org&gt;xx</developer_name>
+  <developer_name xml:lang="zh-TW">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <description>
     <p>
       SieveEditor allows to edit, create, delete sieve scripts.
@@ -90,6 +93,7 @@
     <p xml:lang="sv">Sieveeditor gör det möjligt att redigera, skapa och ta bort Sieve-skript.</p>
     <p xml:lang="uk">За допомогою редактора фільтрів ви зможете редагувати, створювати та вилучати скрипти фільтрування пошти.</p>
     <p xml:lang="x-test">xxSieveEditor allows to edit, create, delete sieve scripts.xx</p>
+    <p xml:lang="zh-TW">篩選器編輯器允許編輯、建立和刪除篩選器指令碼。</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=sieveeditor</url>
   <url type="help">https://docs.kde.org/?application=sieveeditor</url>
