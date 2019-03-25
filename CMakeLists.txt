@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-set(KDEPIM_VERSION_NUMBER "5.10.80")
+set(KDEPIM_VERSION_NUMBER "5.10.90")
 project( sieveeditor VERSION ${KDEPIM_VERSION_NUMBER})
 
 if (POLICY CMP0063)
@@ -72,7 +72,12 @@ find_package(KF5IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 
 include_directories(${sieveeditor_SOURCE_DIR} ${sieveeditor_BINARY_DIR})
 
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
+# workaround for https://bugreports.qt.io/browse/QTBUG-74665 (bug in qt5.13 reevaluate it)
+if (${Qt5Widgets_VERSION} STRGREATER "5.13")
+   MESSAGE(STATUS "Qt version: ${Qt5Widgets_VERSION} DISABLE compile without deprecated methods. bug QTBUG-74665")
+else()
+   add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
+endif()
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
 endif()
