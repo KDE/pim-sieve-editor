@@ -20,7 +20,7 @@
 #include "sieveeditorconfigureserverpagetest.h"
 #include "../src/sieveeditorconfigureserverpage.h"
 #include <QPushButton>
-#include <qtest.h>
+#include <QTest>
 #include <QSignalSpy>
 #include <qtestmouse.h>
 SieveEditorConfigureServerPageTest::SieveEditorConfigureServerPageTest(QObject *parent)
