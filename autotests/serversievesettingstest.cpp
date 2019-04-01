@@ -19,7 +19,7 @@
 
 #include "serversievesettingstest.h"
 #include "../src/serversievesettings.h"
-#include <qtest.h>
+#include <QTest>
 #include <QSignalSpy>
 ServerSieveSettingsTest::ServerSieveSettingsTest(QObject *parent)
     : QObject(parent)
