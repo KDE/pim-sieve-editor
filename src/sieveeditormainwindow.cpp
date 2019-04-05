@@ -168,6 +168,7 @@ void SieveEditorMainWindow::setupActions()
     connect(mGoToLine, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotGoToLine);
     mGoToLine->setIcon(QIcon::fromTheme(QStringLiteral("go-jump")));
     ac->setDefaultShortcut(mGoToLine, QKeySequence(Qt::CTRL + Qt::Key_G));
+    ac->addAction(QStringLiteral("gotoline"), mGoToLine);
     mGoToLine->setEnabled(false);
 
     mFindAction = KStandardAction::find(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotFind, ac);
