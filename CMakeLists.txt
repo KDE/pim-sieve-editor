@@ -83,8 +83,6 @@ if(BUILD_TESTING)
 endif()
 add_definitions(-DQT_NO_FOREACH)
 
-configure_file(config-sieveeditor.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-sieveeditor.h )
-
 add_subdirectory(src)
 if (BUILD_TESTING)
     add_subdirectory(autotests)
