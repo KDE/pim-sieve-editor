@@ -57,7 +57,7 @@ void ServerSieveSettingsTest::shouldEmitEnableOkButtonSignal()
     ServerSieveSettings widget;
     widget.show();
     QVERIFY(QTest::qWaitForWindowExposed(&widget));
-    QSignalSpy spy(&widget, SIGNAL(enableOkButton(bool)));
+    QSignalSpy spy(&widget, &ServerSieveSettings::enableOkButton);
     widget.setPassword(QStringLiteral("foo"));
     QCOMPARE(spy.count(), 0);
 
@@ -80,7 +80,7 @@ void ServerSieveSettingsTest::shouldEmitSignalWithValueTrue()
     ServerSieveSettings widget;
     widget.show();
     QVERIFY(QTest::qWaitForWindowExposed(&widget));
-    QSignalSpy spy(&widget, SIGNAL(enableOkButton(bool)));
+    QSignalSpy spy(&widget, &ServerSieveSettings::enableOkButton);
     widget.setServerName(QStringLiteral("foo"));
     QCOMPARE(spy.count(), 1);
     //We need servername!=empty and username != empty
