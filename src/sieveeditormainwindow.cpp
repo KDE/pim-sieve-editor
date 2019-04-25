@@ -370,7 +370,9 @@ void SieveEditorMainWindow::slotUpdateActions()
     mRefreshList->setEnabled(!mNetworkIsDown);
     mSaveAsAction->setEnabled(hasPage);
     mImportAction->setEnabled(hasPage);
-    mShareAction->setEnabled(hasPage && !mNetworkIsDown);
+    if (mShareAction) {
+       mShareAction->setEnabled(hasPage && !mNetworkIsDown);
+    }
     mShareHotNewStuffAction->setEnabled(hasPage && !mNetworkIsDown);
     mSpellCheckAction->setEnabled(editActionEnabled);
     mCheckSyntaxAction->setEnabled(editActionEnabled && !mNetworkIsDown);
