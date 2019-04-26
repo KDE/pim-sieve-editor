@@ -187,15 +187,11 @@ void SieveEditorMainWindow::setupActions()
     mImportAction->setEnabled(false);
 
     SievePurposeMenuWidget *purposeMenu = new SievePurposeMenuWidget(this, this);
-    if (purposeMenu->menu()) {
-        mShareAction = new QAction(i18n("Share..."), this);
-        ac->addAction(QStringLiteral("share_script"), mShareAction);
-        mShareAction->setMenu(purposeMenu->menu());
-        mShareAction->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
-        purposeMenu->setEditorWidget(mMainWidget->sieveEditorMainWidget());
-    } else {
-        delete purposeMenu;
-    }
+    mShareAction = new QAction(i18n("Share..."), this);
+    ac->addAction(QStringLiteral("share_script"), mShareAction);
+    mShareAction->setMenu(purposeMenu->menu());
+    mShareAction->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
+    purposeMenu->setEditorWidget(mMainWidget->sieveEditorMainWidget());
 
     mShareHotNewStuffAction = new QAction(i18n("Share Script..."), this);
     connect(mShareHotNewStuffAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotShareScript);
@@ -370,9 +366,8 @@ void SieveEditorMainWindow::slotUpdateActions()
     mRefreshList->setEnabled(!mNetworkIsDown);
     mSaveAsAction->setEnabled(hasPage);
     mImportAction->setEnabled(hasPage);
-    if (mShareAction) {
-       mShareAction->setEnabled(hasPage && !mNetworkIsDown);
-    }
+    mShareAction->setEnabled(hasPage && !mNetworkIsDown);
+
     mShareHotNewStuffAction->setEnabled(hasPage && !mNetworkIsDown);
     mSpellCheckAction->setEnabled(editActionEnabled);
     mCheckSyntaxAction->setEnabled(editActionEnabled && !mNetworkIsDown);
