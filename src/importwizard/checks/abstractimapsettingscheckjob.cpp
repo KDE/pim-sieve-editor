@@ -22,8 +22,6 @@
 
 AbstractImapSettingsCheckJob::AbstractImapSettingsCheckJob(QObject *parent)
     : QObject(parent)
-    , mPasswordImporter(nullptr)
-    , mSettingsWereImported(false)
 {
 }
 

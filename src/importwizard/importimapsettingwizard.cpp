@@ -91,9 +91,9 @@ void ImportImapSettingWizard::initializeWizard()
         //Initialize list
         mSearchPage->setProgramList(mListCheckJob.keys());
         setAppropriate(mNoFoundPageItem, false);
-        setAppropriate(mSearchPageItem, true);
-        setAppropriate(mProgressPageItem, true);
-        setAppropriate(mFinishPageItem, true);
+        setAppropriate(mSearchPageItem, false);
+        setAppropriate(mProgressPageItem, false);
+        setAppropriate(mFinishPageItem, false);
         setCurrentPage(mSearchPageItem);
     } else {
         setAppropriate(mNoFoundPageItem, true);
@@ -102,12 +102,13 @@ void ImportImapSettingWizard::initializeWizard()
         setAppropriate(mFinishPageItem, false);
         setCurrentPage(mNoFoundPageItem);
     }
-    nextButton()->setEnabled(false);
 }
 
 void ImportImapSettingWizard::slotNeedToImportSettings(bool b)
 {
-    nextButton()->setEnabled(b);
+    setAppropriate(mSearchPageItem, b);
+    setAppropriate(mProgressPageItem, b);
+    setAppropriate(mFinishPageItem, b);
 }
 
 void ImportImapSettingWizard::next()
