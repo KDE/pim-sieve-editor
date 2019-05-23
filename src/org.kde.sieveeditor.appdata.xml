@@ -25,7 +25,7 @@
   <name xml:lang="uk">Редактор фільтрів</name>
   <name xml:lang="x-test">xxSieveEditorxx</name>
   <name xml:lang="zh-TW">篩選器編輯器</name>
-  <summary>Sieve Script Editor</summary>
+  <summary>Editor for email filter Sieve scripts</summary>
   <summary xml:lang="ca">Editor de scripts Sieve</summary>
   <summary xml:lang="ca-valencia">Editor de scripts Sieve</summary>
   <summary xml:lang="cs">Editor skriptů Sieve</summary>
