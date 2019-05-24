@@ -26,27 +26,6 @@
   <name xml:lang="x-test">xxSieveEditorxx</name>
   <name xml:lang="zh-TW">篩選器編輯器</name>
   <summary>Editor for email filter Sieve scripts</summary>
-  <summary xml:lang="ca">Editor de scripts Sieve</summary>
-  <summary xml:lang="ca-valencia">Editor de scripts Sieve</summary>
-  <summary xml:lang="cs">Editor skriptů Sieve</summary>
-  <summary xml:lang="de">Sieve-Skripteditor</summary>
-  <summary xml:lang="en-GB">Sieve Script Editor</summary>
-  <summary xml:lang="es">Editor de guiones Sieve</summary>
-  <summary xml:lang="fi">Sieve-komentojonomuokkain</summary>
-  <summary xml:lang="fr">Éditeur de scripts Sieve</summary>
-  <summary xml:lang="gl">Editor de scripts de filtro</summary>
-  <summary xml:lang="id">Editor Skrip Sieve</summary>
-  <summary xml:lang="it">Editor di script sieve</summary>
-  <summary xml:lang="nl">Bewerker van Sieve-scripts</summary>
-  <summary xml:lang="pl">Edytor skryptów Sieve</summary>
-  <summary xml:lang="pt">Editor de Programas do Sieve</summary>
-  <summary xml:lang="pt-BR">Editor de script Sieve</summary>
-  <summary xml:lang="ru">Редактор сценариев Sieve</summary>
-  <summary xml:lang="sk">Editor Sieve skriptov</summary>
-  <summary xml:lang="sv">Sieve-skripteditor</summary>
-  <summary xml:lang="uk">Редактор скриптів фільтрування</summary>
-  <summary xml:lang="x-test">xxSieve Script Editorxx</summary>
-  <summary xml:lang="zh-TW">篩選器指令碼編輯器</summary>
   <developer_name>Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ca">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ca-valencia">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
