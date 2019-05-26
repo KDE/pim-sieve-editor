@@ -30,6 +30,7 @@
   <summary xml:lang="ca-valencia">Editor per als scripts de «Sieve» de filtratge de correu</summary>
   <summary xml:lang="nl">Bewerker voor Sieve-scripts met e-mailfilters</summary>
   <summary xml:lang="pt">Editor de programas de filtros de e-mails em Sieve</summary>
+  <summary xml:lang="sv">Editor av Sieve-skript för filtrering av e-post</summary>
   <summary xml:lang="uk">Редактор скриптів фільтрування електронної пошти</summary>
   <summary xml:lang="x-test">xxEditor for email filter Sieve scriptsxx</summary>
   <developer_name>Laurent Montel &lt;montel@kde.org&gt;</developer_name>
