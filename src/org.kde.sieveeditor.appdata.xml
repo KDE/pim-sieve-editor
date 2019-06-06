@@ -15,6 +15,7 @@
   <name xml:lang="gl">SieveEditor</name>
   <name xml:lang="id">SieveEditor</name>
   <name xml:lang="it">SieveEditor</name>
+  <name xml:lang="ko">SieveEditor</name>
   <name xml:lang="nl">SieveEditor</name>
   <name xml:lang="pl">EdytorSieve</name>
   <name xml:lang="pt">SieveEditor</name>
@@ -30,6 +31,7 @@
   <summary xml:lang="ca-valencia">Editor per als scripts de «Sieve» de filtratge de correu</summary>
   <summary xml:lang="en-GB">Editor for email filter Sieve scripts</summary>
   <summary xml:lang="it">Editor di script per i filtri Sieve della posta elettronica</summary>
+  <summary xml:lang="ko">이메일 필터 Sieve 스크립트 편집기</summary>
   <summary xml:lang="nl">Bewerker voor Sieve-scripts met e-mailfilters</summary>
   <summary xml:lang="pt">Editor de programas de filtros de e-mails em Sieve</summary>
   <summary xml:lang="sv">Editor av Sieve-skript för filtrering av e-post</summary>
@@ -47,6 +49,7 @@
   <developer_name xml:lang="gl">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="id">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="it">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="ko">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="nl">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="pl">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="pt">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
@@ -72,6 +75,7 @@
     <p xml:lang="gl">SieveEditor permite editar, crear e eliminar scripts de filtro.</p>
     <p xml:lang="id">SieveEditor memungkinkan untuk edit, cipta, hapus skrip sieve.</p>
     <p xml:lang="it">SieveEditor permette di modificare, creare ed eliminare script sieve.</p>
+    <p xml:lang="ko">SieveEditor에서는 Sieve 스크립트를 편집, 생성, 삭제할 수 있습니다.</p>
     <p xml:lang="nl">SieveEditor biedt u om sieve-scripts te bewerken, aan te maken en te verwijderen.</p>
     <p xml:lang="pl">EdytorSieve umożliwia edycję, tworzenie oraz usuwanie skryptów sieve.</p>
     <p xml:lang="pt">O SieveEditor permite editar, criar e apagar programas do Sieve.</p>
