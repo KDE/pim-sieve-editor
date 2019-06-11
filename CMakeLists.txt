@@ -82,8 +82,11 @@ add_subdirectory(src)
 if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
-
-install( FILES sieveeditor.renamecategories sieveeditor.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+if (${ECM_VERSION} STRGREATER "5.58.0")
+    install(FILES sieveeditor.renamecategories sieveeditor.categories  DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
+else()
+    install(FILES sieveeditor.renamecategories sieveeditor.categories  DESTINATION ${KDE_INSTALL_CONFDIR})
+endif()
 
 add_subdirectory(doc)
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
