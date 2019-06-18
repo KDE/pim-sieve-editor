@@ -33,7 +33,6 @@
 #include <KSharedConfig>
 #include <KIconEngine>
 #include <KIconLoader>
-#include <KMessageBox>
 #include <PimCommon/NetworkManager>
 
 #include <KLocalizedString>
@@ -48,7 +47,6 @@
 #include <QLabel>
 #include <QCloseEvent>
 #include <QNetworkConfigurationManager>
-#include <QTemporaryFile>
 
 SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     : KXmlGuiWindow(parent)
