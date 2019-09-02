@@ -141,7 +141,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
             //Convert @ in username in %40
             QString userNameSieveConverted = userName;
             userNameSieveConverted.replace(QLatin1Char('@'), QStringLiteral("%40"));
-            const QString sieveKeyServerUserName = QStringLiteral("extensions.sieve.account.") + userNameSieveConverted + QLatin1Char('@') + imapServerName;
+            const QString sieveKeyServerUserName = QLatin1String("extensions.sieve.account.") + userNameSieveConverted + QLatin1Char('@') + imapServerName;
             //user_pref("extensions.sieve.account.<username>@<server>.enabled", true);
             if (mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".enabled"), false).toBool()) {
                 //TODO
