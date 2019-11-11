@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 3.5)
-set(KDEPIM_VERSION_NUMBER "5.12.80")
+set(KDEPIM_VERSION_NUMBER "5.13.40")
 project( sieveeditor VERSION ${KDEPIM_VERSION_NUMBER})
-set(KDE_APPLICATIONS_VERSION "19.11.80")
+set(KDE_APPLICATIONS_VERSION "20.03.70")
 if (POLICY CMP0063)
     cmake_policy(SET CMP0063 NEW)
 endif()
 
 
-set(KF5_MIN_VERSION "5.63.0")
+set(KF5_MIN_VERSION "5.64.0")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -31,7 +31,7 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION beta1)
+set(KDEPIM_DEV_VERSION alpha)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
@@ -51,7 +51,7 @@ set(PIMCOMMON_LIB_VERSION "5.12.40")
 set(KIMAP_LIB_VERSION "5.12.40")
 
 
-set(QT_REQUIRED_VERSION "5.11.0")
+set(QT_REQUIRED_VERSION "5.12.0")
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network Test)
 
 # Find KF5 package
