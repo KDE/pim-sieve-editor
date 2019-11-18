@@ -30,7 +30,7 @@ public:
     ~SieveEditorManageSieveWidget() override;
 
 protected:
-    bool refreshList() override;
+    Q_REQUIRED_RESULT bool refreshList() override;
 };
 
 #endif // SIEVEEDITORMANAGESIEVEWIDGET_H

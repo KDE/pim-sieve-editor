@@ -30,12 +30,12 @@ public:
     ~ImportImapSettingsThunderbirdCheckJob() override;
 
     void start() override;
-    bool settingsCanBeImported() const override;
-    QString name() const override;
+    Q_REQUIRED_RESULT bool settingsCanBeImported() const override;
+    Q_REQUIRED_RESULT QString name() const override;
 private:
-    bool importSettings(const QString &directory, const QString &defaultProfile);
-    QMap<QString, QString> listProfile(QString &currentProfile, const QString &defaultSettingPath);
-    QString defaultPath() const;
+    Q_REQUIRED_RESULT bool importSettings(const QString &directory, const QString &defaultProfile);
+    Q_REQUIRED_RESULT QMap<QString, QString> listProfile(QString &currentProfile, const QString &defaultSettingPath);
+    Q_REQUIRED_RESULT QString defaultPath() const;
     void insertIntoMap(const QString &line);
     void addAuth(SieveEditorUtil::SieveServerConfig &config, const QString &accountName);
     void encryption(SieveEditorUtil::SieveServerConfig &config, const QString &accountName);

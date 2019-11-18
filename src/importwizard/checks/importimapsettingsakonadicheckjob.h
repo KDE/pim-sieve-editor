@@ -31,8 +31,8 @@ public:
 
     void start() override;
 
-    bool settingsCanBeImported() const override;
-    QString name() const override;
+    Q_REQUIRED_RESULT bool settingsCanBeImported() const override;
+    Q_REQUIRED_RESULT QString name() const override;
 
 private:
     inline bool resourceCanHaveSieveSupport(const QString &filename) const;

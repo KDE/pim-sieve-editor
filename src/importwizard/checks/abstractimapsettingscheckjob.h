@@ -32,8 +32,8 @@ public:
     ~AbstractImapSettingsCheckJob();
     virtual void start() = 0;
 
-    virtual bool settingsCanBeImported() const = 0;
-    virtual QString name() const = 0;
+    virtual Q_REQUIRED_RESULT bool settingsCanBeImported() const = 0;
+    virtual Q_REQUIRED_RESULT QString name() const = 0;
 
     void setImapSettingsPassword(AbstractImapSettingsPassword *passwordImporter);
 

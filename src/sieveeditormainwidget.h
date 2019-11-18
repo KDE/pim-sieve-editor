@@ -51,17 +51,17 @@ public:
     QTabWidget *tabWidget() const;
 
     KSieveUi::SieveEditorWidget::EditorMode pageMode() const;
-    bool isUndoAvailable() const;
-    bool isRedoAvailable() const;
-    bool isWordWrap() const;
+    Q_REQUIRED_RESULT bool isUndoAvailable() const;
+    Q_REQUIRED_RESULT bool isRedoAvailable() const;
+    Q_REQUIRED_RESULT bool isWordWrap() const;
 
-    bool hasSelection() const;
-    QString currentHelpTitle() const;
-    QUrl currentHelpUrl() const;
+    Q_REQUIRED_RESULT bool hasSelection() const;
+    Q_REQUIRED_RESULT QString currentHelpTitle() const;
+    Q_REQUIRED_RESULT QUrl currentHelpUrl() const;
     void openBookmarkUrl(const QUrl &url);
-    bool printSupportEnabled() const;
-    bool isTextEditor() const;
-    QString currentText() const;
+    Q_REQUIRED_RESULT bool printSupportEnabled() const;
+    Q_REQUIRED_RESULT bool isTextEditor() const;
+    Q_REQUIRED_RESULT QString currentText() const;
     void forceCloseTab(int index);
 public Q_SLOTS:
     void slotDebugSieveScript();

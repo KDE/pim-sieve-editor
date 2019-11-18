@@ -39,35 +39,35 @@ public:
     explicit ServerSieveSettings(QWidget *parent = nullptr);
     ~ServerSieveSettings();
 
-    QString serverName() const;
+    Q_REQUIRED_RESULT QString serverName() const;
     void setServerName(const QString &name);
 
-    int port() const;
+    Q_REQUIRED_RESULT int port() const;
     void setPort(int value);
 
-    QString userName() const;
+    Q_REQUIRED_RESULT QString userName() const;
     void setUserName(const QString &name);
 
-    QString password() const;
+    Q_REQUIRED_RESULT QString password() const;
     void setPassword(const QString &pass);
 
     void setServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf);
-    SieveEditorUtil::SieveServerConfig serverSieveConfig() const;
+    Q_REQUIRED_RESULT SieveEditorUtil::SieveServerConfig serverSieveConfig() const;
 
-    QString imapServerName() const;
+    Q_REQUIRED_RESULT QString imapServerName() const;
     void setImapServerName(const QString &name);
 
-    int imapPort() const;
+    Q_REQUIRED_RESULT int imapPort() const;
     void setImapPort(int value);
 
-    QString imapUserName() const;
+    Q_REQUIRED_RESULT QString imapUserName() const;
     void setImapUserName(const QString &name);
 
-    QString imapPassword() const;
+    Q_REQUIRED_RESULT QString imapPassword() const;
     void setImapPassword(const QString &pass);
 
     void setAuthenticationType(KSieveUi::SieveImapAccountSettings::AuthenticationMode type);
-    KSieveUi::SieveImapAccountSettings::AuthenticationMode authenticationType() const;
+    Q_REQUIRED_RESULT KSieveUi::SieveImapAccountSettings::AuthenticationMode authenticationType() const;
 Q_SIGNALS:
     void enableOkButton(bool enabled);
 

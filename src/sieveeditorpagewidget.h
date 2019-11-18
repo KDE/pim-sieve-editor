@@ -38,26 +38,26 @@ public:
     ~SieveEditorPageWidget();
 
     void loadScript(const KSieveUi::ManageSieveWidget::ScriptInfo &info);
-    QUrl currentUrl() const;
+    Q_REQUIRED_RESULT QUrl currentUrl() const;
     void setCurrentUrl(const QUrl &url);
     void setIsNewScript(bool isNewScript);
     void uploadScript(bool showInformation = true, bool forceSave = false);
-    bool needToSaveScript();
+    Q_REQUIRED_RESULT bool needToSaveScript();
 
-    bool isModified() const;
+    Q_REQUIRED_RESULT bool isModified() const;
     void goToLine();
-    KSieveUi::SieveEditorWidget::EditorMode pageMode() const;
+    Q_REQUIRED_RESULT KSieveUi::SieveEditorWidget::EditorMode pageMode() const;
 
     void find();
     void replace();
     void redo();
     void undo();
-    bool isUndoAvailable() const;
-    bool isRedoAvailable() const;
+    Q_REQUIRED_RESULT bool isUndoAvailable() const;
+    Q_REQUIRED_RESULT bool isRedoAvailable() const;
     void paste();
     void cut();
     void copy();
-    bool hasSelection() const;
+    Q_REQUIRED_RESULT bool hasSelection() const;
 
     void selectAll();
     void saveAs();
@@ -74,20 +74,20 @@ public:
     void reverseCase();
     void zoomIn();
     void zoomOut();
-    QString currentText() const;
-    QString currentHelpTitle() const;
-    QUrl currentHelpUrl() const;
+    Q_REQUIRED_RESULT QString currentText() const;
+    Q_REQUIRED_RESULT QString currentHelpTitle() const;
+    Q_REQUIRED_RESULT QUrl currentHelpUrl() const;
     void openBookmarkUrl(const QUrl &url);
     void debugSieveScript();
     void zoomReset();
     void wordWrap(bool state);
-    bool isWordWrap() const;
+    Q_REQUIRED_RESULT bool isWordWrap() const;
     void print();
     void printPreview();
     bool printSupportEnabled() const;
     bool isTextEditor() const;
     void renameScriptName(const QString &newName);
-    bool uploadScriptAndCloseTab(int index);
+    Q_REQUIRED_RESULT bool uploadScriptAndCloseTab(int index);
 Q_SIGNALS:
     void refreshList();
     void scriptModified(bool, SieveEditorPageWidget *);

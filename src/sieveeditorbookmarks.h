@@ -37,8 +37,8 @@ public:
 
     void openBookmark(const KBookmark &bm, Qt::MouseButtons mb, Qt::KeyboardModifiers km) override;
 
-    QString currentTitle() const override;
-    QUrl currentUrl() const override;
+    Q_REQUIRED_RESULT QString currentTitle() const override;
+    Q_REQUIRED_RESULT QUrl currentUrl() const override;
 
 Q_SIGNALS:
     void openUrl(const QUrl &url);
