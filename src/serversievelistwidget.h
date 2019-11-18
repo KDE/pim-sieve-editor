@@ -29,7 +29,7 @@ public:
     explicit ServerSieveListWidgetItem(QListWidget *parent = nullptr);
     ~ServerSieveListWidgetItem();
 
-    SieveEditorUtil::SieveServerConfig serverConfig() const;
+    Q_REQUIRED_RESULT SieveEditorUtil::SieveServerConfig serverConfig() const;
     void setServerConfig(const SieveEditorUtil::SieveServerConfig &conf);
 
 private:

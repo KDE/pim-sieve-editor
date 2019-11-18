@@ -32,7 +32,7 @@ public:
     ~ImportImapSettingSearchPage();
 
     void setProgramList(const QStringList &lst);
-    QStringList selectedPrograms() const;
+    Q_REQUIRED_RESULT QStringList selectedPrograms() const;
 
 Q_SIGNALS:
     void needToImportSettings(bool);

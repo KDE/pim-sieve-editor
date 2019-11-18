@@ -37,8 +37,8 @@ struct LIBSIEVEEDITOR_EXPORT SieveAccountSettings {
     {
     }
 
-    bool operator ==(const SieveAccountSettings &other) const;
-    bool isValid() const;
+    Q_REQUIRED_RESULT bool operator ==(const SieveAccountSettings &other) const;
+    Q_REQUIRED_RESULT bool isValid() const;
     QString serverName;
     QString userName;
     QString password;
@@ -53,8 +53,8 @@ struct LIBSIEVEEDITOR_EXPORT SieveServerConfig {
     {
     }
 
-    bool isValid() const;
-    QUrl url() const;
+    Q_REQUIRED_RESULT bool isValid() const;
+    Q_REQUIRED_RESULT QUrl url() const;
     SieveAccountSettings sieveSettings;
     KSieveUi::SieveImapAccountSettings sieveImapAccountSettings;
     bool operator ==(const SieveServerConfig &other) const;

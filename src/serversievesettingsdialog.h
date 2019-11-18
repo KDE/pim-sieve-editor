@@ -31,20 +31,20 @@ public:
     explicit ServerSieveSettingsDialog(QWidget *parent = nullptr);
     ~ServerSieveSettingsDialog();
 
-    QString serverName() const;
+    Q_REQUIRED_RESULT QString serverName() const;
     void setServerName(const QString &name);
 
-    int port() const;
+    Q_REQUIRED_RESULT int port() const;
     void setPort(int value);
 
-    QString userName() const;
+    Q_REQUIRED_RESULT QString userName() const;
     void setUserName(const QString &name);
 
-    QString password() const;
+    Q_REQUIRED_RESULT QString password() const;
     void setPassword(const QString &pass);
 
     void setServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf);
-    SieveEditorUtil::SieveServerConfig serverSieveConfig() const;
+    Q_REQUIRED_RESULT SieveEditorUtil::SieveServerConfig serverSieveConfig() const;
 
 private:
     void slotEnableButtonOk(bool);

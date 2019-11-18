@@ -38,8 +38,8 @@ public:
     explicit SieveEditorMainWindow(QWidget *parent = nullptr);
     ~SieveEditorMainWindow() override;
 
-    QString currentHelpTitle() const;
-    QUrl currentHelpUrl() const;
+    Q_REQUIRED_RESULT QString currentHelpTitle() const;
+    Q_REQUIRED_RESULT QUrl currentHelpUrl() const;
 
 protected:
     void closeEvent(QCloseEvent *e) override;
