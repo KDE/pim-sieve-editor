@@ -21,7 +21,7 @@
 #define SIEVEEDITORBOOKMARKS_H
 
 #include <QObject>
-#include <kbookmarkowner.h>
+#include <KBookmarkOwner>
 class KBookmarkMenu;
 class QMenu;
 class KActionCollection;

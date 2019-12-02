@@ -19,7 +19,7 @@
 
 #include "sieveeditor-version.h"
 #include "sieveeditormainwindow.h"
-#include <kaboutdata.h>
+#include <KAboutData>
 #include <KLocalizedString>
 #include <Kdelibs4ConfigMigrator>
 #include <QApplication>

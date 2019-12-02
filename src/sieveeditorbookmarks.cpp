@@ -20,7 +20,7 @@
 #include "sieveeditorbookmarks.h"
 #include "sieveeditormainwindow.h"
 #include <QStandardPaths>
-#include <kbookmarkmanager.h>
+#include <KBookmarkManager>
 #include <KBookmarkMenu>
 #include <QDir>
 
