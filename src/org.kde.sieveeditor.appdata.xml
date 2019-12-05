@@ -113,4 +113,7 @@
     </screenshot>
   </screenshots>
   <project_group>KDE</project_group>
+  <releases>
+    <release version="5.13.0" date="2019-12-12"/>
+  </releases>
 </component>
