@@ -19,7 +19,7 @@
 
 #include "sieveserversettings.h"
 
-#include <kwallet.h>
+#include <KWallet>
 
 SieveServerSettings::SieveServerSettings(QObject *parent)
     : QObject(parent)

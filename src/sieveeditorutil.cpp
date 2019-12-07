@@ -21,7 +21,7 @@
 #include "sieveserversettings.h"
 #include "sieveeditor_debug.h"
 
-#include <kwallet.h>
+#include <KWallet>
 
 #include <KConfig>
 
