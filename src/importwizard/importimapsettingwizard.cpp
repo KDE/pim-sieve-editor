@@ -36,7 +36,7 @@
 ImportImapSettingWizard::ImportImapSettingWizard(QWidget *parent)
     : KAssistantDialog(parent)
 {
-    setWindowTitle(i18n("Import IMAP Settings"));
+    setWindowTitle(i18nc("@title:window", "Import IMAP Settings"));
 
     mSearchPage = new ImportImapSettingSearchPage(this);
     mSearchPageItem = new KPageWidgetItem(mSearchPage, i18n("Select Import Settings"));

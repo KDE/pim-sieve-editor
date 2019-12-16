@@ -35,7 +35,7 @@
 SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Configure"));
+    setWindowTitle(i18nc("@title:window", "Configure"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
