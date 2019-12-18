@@ -28,7 +28,7 @@
   <name xml:lang="zh-CN">SieveEditor</name>
   <name xml:lang="zh-TW">篩選器編輯器</name>
   <summary>Editor for email filter Sieve scripts</summary>
-  <summary xml:lang="ca">Editor per als scripts de «Sieve» de filtratge de correu</summary>
+  <summary xml:lang="ca">Editor per als scripts de «Sieve» del filtratge de correu</summary>
   <summary xml:lang="ca-valencia">Editor per als scripts de «Sieve» de filtratge de correu</summary>
   <summary xml:lang="de">Editor für Sieve-Skripte zum Filtern von E-Mails</summary>
   <summary xml:lang="en-GB">Editor for email filter Sieve scripts</summary>
