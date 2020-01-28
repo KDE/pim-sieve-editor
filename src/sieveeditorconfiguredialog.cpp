@@ -33,48 +33,43 @@
 #include <QPushButton>
 
 SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
-    : QDialog(parent)
+    : KPageDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure"));
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
-    okButton->setDefault(true);
-    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &SieveEditorConfigureDialog::accept);
-    connect(buttonBox, &QDialogButtonBox::rejected, this, &SieveEditorConfigureDialog::reject);
+    setFaceType(KPageDialog::List);
 
-    mTabWidget = new QTabWidget(this);
-    mTabWidget->setObjectName(QStringLiteral("tabwidget"));
+    buttonBox()->setStandardButtons(QDialogButtonBox::Ok| QDialogButtonBox::Cancel);
+
+    connect(buttonBox(), &QDialogButtonBox::accepted, this, &SieveEditorConfigureDialog::accept);
+    connect(buttonBox(), &QDialogButtonBox::rejected, this, &SieveEditorConfigureDialog::reject);
 
     //Server page
-    QWidget *w = new QWidget;
-    mTabWidget->addTab(w, i18n("Sieve Server"));
-
-    QVBoxLayout *layout = new QVBoxLayout;
-    w->setLayout(layout);
+    QWidget *serverConfigureWiget = new QWidget;
+    QVBoxLayout *layout = new QVBoxLayout(serverConfigureWiget);
     mServerWidget = new SieveEditorConfigureServerWidget;
     layout->addWidget(mServerWidget);
 
     mCloseWallet = new QCheckBox(i18n("Close wallet when close application"));
     layout->addWidget(mCloseWallet);
 
+    KPageWidgetItem *serverPageWidgetPage = new KPageWidgetItem(serverConfigureWiget, i18n("Sieve Server"));
+    serverPageWidgetPage->setIcon(QIcon::fromTheme(QStringLiteral("network-workgroup")));
+    addPage(serverPageWidgetPage);
 
     //Editor page
     QWidget *editorWidget = new QWidget;
     editorWidget->setObjectName(QStringLiteral("editorwidget"));
-    mTabWidget->addTab(editorWidget, i18n("Editor"));
 
-    layout = new QVBoxLayout;
-    editorWidget->setLayout(layout);
+    layout = new QVBoxLayout(editorWidget);
     mWrapText = new QCheckBox(i18n("Wrap Text"));
     mWrapText->setObjectName(QStringLiteral("wraptext"));
     layout->addWidget(mWrapText);
     layout->addStretch(100);
 
+    KPageWidgetItem *editorPageWidgetPage = new KPageWidgetItem(editorWidget, i18n("Editor"));
+    editorPageWidgetPage->setIcon(QIcon::fromTheme(QStringLiteral("accessories-text-editor")));
+    addPage(editorPageWidgetPage);
 
-    mainLayout->addWidget(mTabWidget);
-    mainLayout->addWidget(buttonBox);
     loadServerSieveConfig();
     readConfig();
 }

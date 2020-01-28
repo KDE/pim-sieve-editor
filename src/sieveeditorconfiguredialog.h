@@ -20,11 +20,10 @@
 #ifndef SIEVEEDITORCONFIGUREDIALOG_H
 #define SIEVEEDITORCONFIGUREDIALOG_H
 
-#include <QDialog>
+#include <KPageDialog>
 class QCheckBox;
-class QTabWidget;
 class SieveEditorConfigureServerWidget;
-class SieveEditorConfigureDialog : public QDialog
+class SieveEditorConfigureDialog : public KPageDialog
 {
     Q_OBJECT
 public:
@@ -40,7 +39,6 @@ private:
     SieveEditorConfigureServerWidget *mServerWidget = nullptr;
     QCheckBox *mCloseWallet = nullptr;
     QCheckBox *mWrapText = nullptr;
-    QTabWidget *mTabWidget = nullptr;
 };
 
 #endif // SIEVEEDITORCONFIGUREDIALOG_H
