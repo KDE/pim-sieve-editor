@@ -59,6 +59,8 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     mCloseWallet = new QCheckBox(i18n("Close wallet when close application"));
     layout->addWidget(mCloseWallet);
 
+
+    //Editor page
     QWidget *editorWidget = new QWidget;
     editorWidget->setObjectName(QStringLiteral("editorwidget"));
     mTabWidget->addTab(editorWidget, i18n("Editor"));
@@ -69,6 +71,8 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     mWrapText->setObjectName(QStringLiteral("wraptext"));
     layout->addWidget(mWrapText);
     layout->addStretch(100);
+
+
     mainLayout->addWidget(mTabWidget);
     mainLayout->addWidget(buttonBox);
     loadServerSieveConfig();
