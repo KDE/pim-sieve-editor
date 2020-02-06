@@ -70,6 +70,12 @@ find_package(KF5PimCommon ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5LibKSieve ${LIBKSIEVE_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 
+option(KDEPIM_KUSERFEEDBACK "Enable user feedback support (experimental)" FALSE)
+if (KDEPIM_KUSERFEEDBACK)
+    #Optional
+    find_package(KUserFeedback)
+endif()
+
 include_directories(${sieveeditor_SOURCE_DIR} ${sieveeditor_BINARY_DIR})
 
 if (EXISTS "${CMAKE_SOURCE_DIR}/.git")

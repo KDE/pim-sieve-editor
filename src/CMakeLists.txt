@@ -21,7 +21,16 @@ set(sieveeditor_importimapsettings_check_SRCS
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/checks/importimapsettingsakonadipassword.cpp
     )
 
+set(sieveeditor_userfeedback_SRCS)
+if (TARGET KUserFeedbackWidgets)
+    set(sieveeditor_userfeedback_SRCS ${sieveeditor_userfeedback_SRCS}
+        #TODO
+        )
+endif()
+
+
 set(sieveeditor_LIB_SRCS
+    ${sieveeditor_userfeedback_SRCS}
     ${sieveeditor_kcfg_SRCS}
     sieveeditormainwindow.cpp
     serversievesettingsdialog.cpp
