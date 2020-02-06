@@ -47,11 +47,18 @@
 #include <QLabel>
 #include <QCloseEvent>
 #include <QNetworkConfigurationManager>
+#ifdef WITH_KUSERFEEDBACK
+#include "userfeedback/userfeedbackmanager.h"
+#endif
 
 SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     : KXmlGuiWindow(parent)
 {
     mMainWidget = new SieveEditorCentralWidget(this, actionCollection());
+#ifdef WITH_KUSERFEEDBACK
+    //Initialize
+    (void)UserFeedBackManager::self();
+#endif
     connect(mMainWidget, &SieveEditorCentralWidget::configureClicked, this, &SieveEditorMainWindow::slotConfigure);
     connect(mMainWidget, &SieveEditorCentralWidget::importSieveSettings, this, &SieveEditorMainWindow::slotImportImapSettings);
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::updateButtons, this, &SieveEditorMainWindow::slotUpdateButtons);

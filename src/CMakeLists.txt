@@ -21,10 +21,15 @@ set(sieveeditor_importimapsettings_check_SRCS
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/checks/importimapsettingsakonadipassword.cpp
     )
 
+if (TARGET KUserFeedbackWidgets)
+    add_definitions(-DWITH_KUSERFEEDBACK)
+endif()
+
+
 set(sieveeditor_userfeedback_SRCS)
 if (TARGET KUserFeedbackWidgets)
     set(sieveeditor_userfeedback_SRCS ${sieveeditor_userfeedback_SRCS}
-        #TODO
+        userfeedback/userfeedbackmanager.cpp
         )
 endif()
 
@@ -68,6 +73,12 @@ add_library(libsieveeditor ${sieveeditor_LIB_SRCS})
 
 generate_export_header(libsieveeditor BASE_NAME libsieveeditor)
 
+set(libsieveeditor_userfeedback_LIB)
+if (TARGET KUserFeedbackWidgets)
+    set(libsieveeditor_userfeedback_LIB KUserFeedbackWidgets)
+endif()
+
+
 target_link_libraries(libsieveeditor
     PRIVATE
     KF5::MailTransport
@@ -78,6 +89,7 @@ target_link_libraries(libsieveeditor
     KF5::PimCommon
     KF5::KSieveUi
     KF5::KManageSieve
+    ${libsieveeditor_userfeedback_LIB}
     )
 
 set_target_properties(libsieveeditor

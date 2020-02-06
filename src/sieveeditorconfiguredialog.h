@@ -23,6 +23,12 @@
 #include <KPageDialog>
 class QCheckBox;
 class SieveEditorConfigureServerWidget;
+#ifdef WITH_KUSERFEEDBACK
+namespace KUserFeedback {
+class FeedbackConfigWidget;
+}
+#endif
+
 class SieveEditorConfigureDialog : public KPageDialog
 {
     Q_OBJECT
@@ -39,6 +45,9 @@ private:
     SieveEditorConfigureServerWidget *mServerWidget = nullptr;
     QCheckBox *mCloseWallet = nullptr;
     QCheckBox *mWrapText = nullptr;
+#ifdef WITH_KUSERFEEDBACK
+    KUserFeedback::FeedbackConfigWidget *mUserFeedbackWidget = nullptr;
+#endif
 };
 
 #endif // SIEVEEDITORCONFIGUREDIALOG_H

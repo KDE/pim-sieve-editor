@@ -23,6 +23,13 @@
 #include "PimCommon/ConfigureImmutableWidgetUtils"
 #include "sieveeditorglobalconfig.h"
 
+#ifdef WITH_KUSERFEEDBACK
+#include "userfeedback/userfeedbackmanager.h"
+#include <KUserFeedback/Provider>
+#include <KUserFeedback/FeedbackConfigWidget>
+#endif
+
+
 #include <KLocalizedString>
 #include <KSharedConfig>
 
@@ -70,6 +77,22 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     editorPageWidgetPage->setIcon(QIcon::fromTheme(QStringLiteral("accessories-text-editor")));
     addPage(editorPageWidgetPage);
 
+    //UserFeedBack config
+#ifdef WITH_KUSERFEEDBACK
+    QWidget *userFeedBackWidget = new QWidget;
+    userFeedBackWidget->setObjectName(QStringLiteral("userFeedBackWidget"));
+
+    mUserFeedbackWidget = new KUserFeedback::FeedbackConfigWidget(this);
+
+    QHBoxLayout *userFeedBackLayout = new QHBoxLayout(userFeedBackWidget);
+    userFeedBackLayout->setContentsMargins(0, 0, 0, 0);
+    userFeedBackLayout->addWidget(mUserFeedbackWidget);
+
+    mUserFeedbackWidget->setFeedbackProvider(UserFeedBackManager::self()->userFeedbackProvider());
+    KPageWidgetItem *userFeedBackPageWidgetPage = new KPageWidgetItem(userFeedBackWidget, i18n("User Feedback"));
+    addPage(userFeedBackPageWidgetPage);
+#endif
+
     loadServerSieveConfig();
     readConfig();
 }
@@ -92,6 +115,11 @@ void SieveEditorConfigureDialog::saveServerSieveConfig()
     PimCommon::ConfigureImmutableWidgetUtils::saveCheckBox(mCloseWallet, SieveEditorGlobalConfig::self()->closeWalletItem());
     PimCommon::ConfigureImmutableWidgetUtils::saveCheckBox(mWrapText, SieveEditorGlobalConfig::self()->wrapTextItem());
     SieveEditorGlobalConfig::self()->save();
+#ifdef WITH_KUSERFEEDBACK
+    // set current active mode + write back the config for future starts
+    UserFeedBackManager::self()->userFeedbackProvider()->setTelemetryMode(mUserFeedbackWidget->telemetryMode());
+    UserFeedBackManager::self()->userFeedbackProvider()->setSurveyInterval(mUserFeedbackWidget->surveyInterval());
+#endif
 }
 
 void SieveEditorConfigureDialog::readConfig()
