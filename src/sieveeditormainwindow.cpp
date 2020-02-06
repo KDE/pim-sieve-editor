@@ -49,6 +49,8 @@
 #include <QNetworkConfigurationManager>
 #ifdef WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
+#include <KUserFeedback/NotificationPopup>
+#include <KUserFeedback/Provider>
 #endif
 
 SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
@@ -78,6 +80,10 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::copyAvailable, this, &SieveEditorMainWindow::slotCopyAvailable);
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::sieveEditorTabCurrentChanged, this, &SieveEditorMainWindow::slotUpdateActions);
     mMainWidget->sieveEditorMainWidget()->refreshList();
+#ifdef WITH_KUSERFEEDBACK
+    KUserFeedback::NotificationPopup *userFeedBackNotificationPopup = new KUserFeedback::NotificationPopup(this);
+    userFeedBackNotificationPopup->setFeedbackProvider(UserFeedBackManager::self()->userFeedbackProvider());
+#endif
 }
 
 SieveEditorMainWindow::~SieveEditorMainWindow()
