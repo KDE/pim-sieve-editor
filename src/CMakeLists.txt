@@ -67,7 +67,15 @@ ki18n_wrap_ui(sieveeditor_LIB_SRCS
 
 qt5_add_resources(sieveeditor_LIB_SRCS sieveeditor.qrc)
 
-ecm_qt_declare_logging_category(sieveeditor_LIB_SRCS HEADER sieveeditor_debug.h IDENTIFIER SIEVEEDITOR_LOG CATEGORY_NAME org.kde.pim.sieveeditor)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(sieveeditor_LIB_SRCS HEADER sieveeditor_debug.h IDENTIFIER SIEVEEDITOR_LOG CATEGORY_NAME org.kde.pim.sieveeditor)
+else()
+    ecm_qt_declare_logging_category(sieveeditor_LIB_SRCS HEADER sieveeditor_debug.h 
+	IDENTIFIER SIEVEEDITOR_LOG 
+	CATEGORY_NAME org.kde.pim.sieveeditor 
+	OLD_CATEGORY_NAMES log_sieveeditor 
+	DESCRIPTION "sieveeditor (sieveeditor)" EXPORT SIEVEEDITOR)
+endif()
 
 add_library(libsieveeditor ${sieveeditor_LIB_SRCS})
 
@@ -124,4 +132,7 @@ if (BUILD_TESTING)
 endif()
 
 install(FILES org.kde.sieveeditor.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+if (NOT ECM_VERSION VERSION_LESS "5.68.0")
+   ecm_qt_install_logging_categories(EXPORT SIEVEEDITOR FILE sieveeditor.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
+endif()
 
