@@ -90,7 +90,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
 
     mUserFeedbackWidget->setFeedbackProvider(UserFeedBackManager::self()->userFeedbackProvider());
     KPageWidgetItem *userFeedBackPageWidgetPage = new KPageWidgetItem(userFeedBackWidget, i18n("User Feedback"));
-    userFeedBackPageWidgetPage->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-locale")));
+    userFeedBackPageWidgetPage->setIcon(QIcon::fromTheme(QStringLiteral("preferences-other")));
     addPage(userFeedBackPageWidgetPage);
 #endif
 
