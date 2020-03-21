@@ -110,6 +110,7 @@ target_link_libraries(sieveeditor
     KF5::XmlGui
     KF5::I18n
     KF5::DBusAddons
+    ${libsieveeditor_userfeedback_LIB}
     )
 
 install(TARGETS sieveeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

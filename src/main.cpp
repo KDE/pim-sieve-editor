@@ -26,6 +26,13 @@
 #include <KDBusService>
 #include <QCommandLineParser>
 #include <KCrash>
+#ifdef WITH_KUSERFEEDBACK
+#include "userfeedback/userfeedbackmanager.h"
+#include <KUserFeedback/Provider>
+#include <KUserFeedback/FeedbackConfigWidget>
+#include <QTextStream>
+#endif
+
 
 int main(int argc, char **argv)
 {
@@ -54,8 +61,19 @@ int main(int argc, char **argv)
 
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
+#ifdef WITH_KUSERFEEDBACK
+    parser.addOption(QCommandLineOption(QStringLiteral("feedback"), i18n("Lists the available options for user feedback")));
+#endif
     parser.process(app);
     aboutData.processCommandLine(&parser);
+
+#ifdef WITH_KUSERFEEDBACK
+    if(parser.isSet(QStringLiteral("feedback"))) {
+        QTextStream(stdout) << UserFeedBackManager::self()->userFeedbackProvider()->describeDataSources() << '\n';
+        return 0;
+    }
+#endif
+
 
     KDBusService service(KDBusService::Unique);
 
