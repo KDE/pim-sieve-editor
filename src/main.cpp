@@ -26,11 +26,11 @@
 #include <KDBusService>
 #include <QCommandLineParser>
 #include <KCrash>
+#include <QTextStream>
 #ifdef WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
 #include <KUserFeedback/Provider>
 #include <KUserFeedback/FeedbackConfigWidget>
-#include <QTextStream>
 #endif
 
 
