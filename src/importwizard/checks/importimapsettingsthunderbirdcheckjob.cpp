@@ -214,11 +214,11 @@ void ImportImapSettingsThunderbirdCheckJob::encryption(SieveEditorUtil::SieveSer
             break;
         case 2:
             //STARTTLS
-            config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::TlsV1);
+            config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::STARTTLS);
             break;
         case 3:
             //SSL/TLS
-            config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::SslV3_1);
+            config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::SSLorTLS);
             break;
         default:
             qCDebug(SIEVEEDITOR_LOG) << "Unknown encryption mode " << socketType;
