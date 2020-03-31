@@ -20,7 +20,7 @@
 #include "sieveeditorconfiguredialog.h"
 #include "serversievelistwidget.h"
 #include "sieveeditorconfigureserverwidget.h"
-#include "PimCommon/ConfigureImmutableWidgetUtils"
+#include <PimCommon/ConfigureImmutableWidgetUtils>
 #include "sieveeditorglobalconfig.h"
 
 #ifdef WITH_KUSERFEEDBACK

@@ -28,7 +28,7 @@
 #include "sievepurposemenuwidget.h"
 #include "sieveeditorbookmarks.h"
 #include "importwizard/importimapsettingwizard.h"
-#include "PimCommon/KActionMenuChangeCase"
+#include <PimCommon/KActionMenuChangeCase>
 
 #include <KSharedConfig>
 #include <KIconEngine>
