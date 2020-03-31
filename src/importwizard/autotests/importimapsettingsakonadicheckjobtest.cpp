@@ -113,7 +113,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings.sieveImapAccountSettings.setServerName(QStringLiteral("bla.foo.com"));
     settings.sieveImapAccountSettings.setPort(143);
     settings.sieveImapAccountSettings.setPassword(QStringLiteral("password_imap"));
-    settings.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::TlsV1);
+    settings.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::STARTTLS);
 
     settings.sieveSettings.userName = QStringLiteral("foo@foo.com");
     settings.sieveSettings.serverName = QStringLiteral("bla.foo.com");
@@ -127,7 +127,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings2.sieveImapAccountSettings.setServerName(QStringLiteral("bla.foo.com"));
     settings2.sieveImapAccountSettings.setPort(143);
     settings2.sieveImapAccountSettings.setPassword(QStringLiteral("password_imap"));
-    settings2.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::TlsV1);
+    settings2.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::STARTTLS);
     settings2.sieveSettings.userName = QStringLiteral("b");
     settings2.sieveSettings.serverName = QStringLiteral("bla.foo.com"); //TODO
     settings2.sieveSettings.password = QStringLiteral("password_custom_sieve_imap");
@@ -154,7 +154,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings4.sieveImapAccountSettings.setServerName(QStringLiteral("bla.foo.com"));
     settings4.sieveImapAccountSettings.setPort(143);
     settings4.sieveImapAccountSettings.setAuthenticationType(static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(3));
-    settings4.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::TlsV1);
+    settings4.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::STARTTLS);
     settings4.sieveImapAccountSettings.setPassword(QStringLiteral("password_imap"));
     settings4.sieveSettings.userName = QStringLiteral("b");
     settings4.sieveSettings.password = QStringLiteral("password_custom_sieve_imap");
@@ -168,7 +168,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings5.sieveImapAccountSettings.setServerName(QStringLiteral("bla.foo.com"));
     settings5.sieveImapAccountSettings.setPort(143);
     settings5.sieveImapAccountSettings.setAuthenticationType(static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(3));
-    settings5.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::SslV3_1);
+    settings5.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::SSLorTLS);
     settings5.sieveImapAccountSettings.setPassword(QStringLiteral("password_imap"));
     settings5.sieveSettings.userName = QStringLiteral("b");
     settings5.sieveSettings.serverName = QStringLiteral("bla.foo.com"); //TODO

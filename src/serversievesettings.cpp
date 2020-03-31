@@ -89,8 +89,8 @@ ServerSieveSettings::ServerSieveSettings(QWidget *parent)
     ui->testProgress->hide();
 
     ui->safeImapGroup->setId(ui->noRadio, KSieveUi::SieveImapAccountSettings::Unencrypted);
-    ui->safeImapGroup->setId(ui->sslRadio, KSieveUi::SieveImapAccountSettings::AnySslVersion);
-    ui->safeImapGroup->setId(ui->tlsRadio, KSieveUi::SieveImapAccountSettings::TlsV1);
+    ui->safeImapGroup->setId(ui->sslRadio, KSieveUi::SieveImapAccountSettings::SSLorTLS);
+    ui->safeImapGroup->setId(ui->tlsRadio, KSieveUi::SieveImapAccountSettings::STARTTLS);
 
     connect(ui->testButton, &QPushButton::pressed, this, &ServerSieveSettings::slotTest);
 
@@ -352,10 +352,10 @@ void ServerSieveSettings::slotEncryptionRadioChanged()
 {
     switch (ui->safeImapGroup->checkedId()) {
     case KSieveUi::SieveImapAccountSettings::Unencrypted:
-    case KSieveUi::SieveImapAccountSettings::TlsV1:
+    case KSieveUi::SieveImapAccountSettings::STARTTLS:
         ui->imapPort->setValue(143);
         break;
-    case KSieveUi::SieveImapAccountSettings::AnySslVersion:
+    case KSieveUi::SieveImapAccountSettings::SSLorTLS:
         ui->imapPort->setValue(993);
         break;
     default:
@@ -382,11 +382,11 @@ void ServerSieveSettings::slotSafetyChanged()
         qCDebug(SIEVEEDITOR_LOG) << "safeImapGroup: unencrypted";
         protocols = mServerTest->normalProtocols();
         break;
-    case KSieveUi::SieveImapAccountSettings::AnySslVersion:
+    case KSieveUi::SieveImapAccountSettings::SSLorTLS:
         protocols = mServerTest->secureProtocols();
         qCDebug(SIEVEEDITOR_LOG) << "safeImapGroup: SSL";
         break;
-    case KSieveUi::SieveImapAccountSettings::TlsV1:
+    case KSieveUi::SieveImapAccountSettings::STARTTLS:
         protocols = mServerTest->tlsProtocols();
         qCDebug(SIEVEEDITOR_LOG) << "safeImapGroup: starttls";
         break;
