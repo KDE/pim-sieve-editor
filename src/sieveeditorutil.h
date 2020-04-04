@@ -24,7 +24,7 @@
 #include "libsieveeditor_private_export.h"
 #include <QString>
 #include <QUrl>
-#include <mailtransport/transport.h>
+#include <MailTransport/Transport>
 #include <KSieveUi/SieveImapAccountSettings>
 namespace KWallet {
 class Wallet;

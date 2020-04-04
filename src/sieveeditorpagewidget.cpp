@@ -22,7 +22,7 @@
 #include <KSieveUi/CheckScriptJob>
 #include "sieveeditorglobalconfig.h"
 
-#include <kmanagesieve/sievejob.h>
+#include <KManageSieve/SieveJob>
 
 #include <KLocalizedString>
 #include <KMessageBox>

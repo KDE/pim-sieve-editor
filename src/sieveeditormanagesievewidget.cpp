@@ -22,7 +22,7 @@
 #include <KSieveUi/SieveTreeWidgetItem>
 #include <KSieveUi/ManageSieveTreeView>
 
-#include <kmanagesieve/sievejob.h>
+#include <KManageSieve/SieveJob>
 
 #include <KLocalizedString>
 
