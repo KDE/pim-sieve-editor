@@ -23,6 +23,8 @@
 #include <KBookmarkManager>
 #include <KBookmarkMenu>
 #include <QDir>
+#include <KActionCollection>
+#include <QMenu>
 
 SieveEditorBookmarks::SieveEditorBookmarks(SieveEditorMainWindow *mainWindow, KActionCollection *collection, QMenu *menu, QObject *parent)
     : QObject(parent)
@@ -41,7 +43,8 @@ SieveEditorBookmarks::SieveEditorBookmarks(SieveEditorMainWindow *mainWindow, KA
     KBookmarkManager *manager = KBookmarkManager::managerForFile(bookmarkFile, QStringLiteral("sieveeditor"));
     manager->setUpdate(true);
 
-    mBookmarkMenu = new KBookmarkMenu(manager, this, mMenu, collection);
+    mBookmarkMenu = new KBookmarkMenu(manager, this, mMenu);
+    collection->addActions(mMenu->actions());
 }
 
 SieveEditorBookmarks::~SieveEditorBookmarks()
