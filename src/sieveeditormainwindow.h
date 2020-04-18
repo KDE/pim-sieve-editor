@@ -27,7 +27,6 @@ class SieveEditorCentralWidget;
 class QLabel;
 class SieveEditorBookmarks;
 class KActionMenu;
-class QTemporaryFile;
 namespace PimCommon {
 class KActionMenuChangeCase;
 }
