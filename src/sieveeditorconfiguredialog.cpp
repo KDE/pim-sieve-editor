@@ -29,7 +29,6 @@
 #include <KUserFeedback/FeedbackConfigWidget>
 #endif
 
-
 #include <KLocalizedString>
 #include <KSharedConfig>
 

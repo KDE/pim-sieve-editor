@@ -33,7 +33,6 @@
 #include <KUserFeedback/FeedbackConfigWidget>
 #endif
 
-
 int main(int argc, char **argv)
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
@@ -68,12 +67,11 @@ int main(int argc, char **argv)
     aboutData.processCommandLine(&parser);
 
 #ifdef WITH_KUSERFEEDBACK
-    if(parser.isSet(QStringLiteral("feedback"))) {
+    if (parser.isSet(QStringLiteral("feedback"))) {
         QTextStream(stdout) << UserFeedBackManager::self()->userFeedbackProvider()->describeDataSources() << '\n';
         return 0;
     }
 #endif
-
 
     KDBusService service(KDBusService::Unique);
 
