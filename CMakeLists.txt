@@ -77,7 +77,7 @@ include_directories(${sieveeditor_SOURCE_DIR} ${sieveeditor_BINARY_DIR})
 
 if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
    add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00)
-   add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054500)
+   add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054600)
 endif()
 
 if(BUILD_TESTING)
