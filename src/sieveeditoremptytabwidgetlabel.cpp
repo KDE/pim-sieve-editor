@@ -39,7 +39,7 @@ void SieveEditorEmptyTabWidgetLabel::init()
         placeHolderTextInfo(i18n("Import script:"), i18nc("Action is from file menu, import submenu", "File > Import")),
         placeHolderTextInfo(i18n("Create Rules Graphically:"), i18nc("Action is from menu tools, submenu autogenerate script", "Tools > Autogenerate script")),
         placeHolderTextInfo(i18n("Debug a script:"), i18nc("These action in from menu tools submenu debug sieve script", "Tools > Debug Sieve Script")),
-        placeHolderTextInfo(i18n("Import Sieve Settings"), i18nc("Action is from tools menu, import IMAP settings", "Tools > Import IMAP settings"))
+        placeHolderTextInfo(i18n("Import Sieve Settings:"), i18nc("Action is from tools menu, import IMAP settings", "Tools > Import IMAP settings"))
     };
     addInfo(placeholderText, map);
     placeholderText += QStringLiteral("<div></div>"
