@@ -24,6 +24,7 @@
   <name xml:lang="pt-BR">Editor do Sieve</name>
   <name xml:lang="ru">SieveEditor</name>
   <name xml:lang="sk">SieveEditor</name>
+  <name xml:lang="sl">SieveEditor</name>
   <name xml:lang="sv">Sieveeditor</name>
   <name xml:lang="uk">Редактор фільтрів</name>
   <name xml:lang="x-test">xxSieveEditorxx</name>
@@ -49,6 +50,7 @@
   <summary xml:lang="pt-BR">Editor de scripts Sieve para filtro de e-mail</summary>
   <summary xml:lang="ru">Редактор сценариев правил фильтрации почтовых сообщений Sieve</summary>
   <summary xml:lang="sk">Editor e-mailového filtra Sieve skripty</summary>
+  <summary xml:lang="sl">Urejevalnik za poštne skripte Sieve</summary>
   <summary xml:lang="sv">Editor av Sieve-skript för filtrering av e-post</summary>
   <summary xml:lang="uk">Редактор скриптів фільтрування електронної пошти</summary>
   <summary xml:lang="x-test">xxEditor for email filter Sieve scriptsxx</summary>
@@ -74,6 +76,7 @@
   <developer_name xml:lang="pt-BR">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ru">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="sk">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="sl">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="sv">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="uk">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="x-test">xxLaurent Montel &lt;montel@kde.org&gt;xx</developer_name>
@@ -103,6 +106,7 @@
     <p xml:lang="pt-BR">O Editor do Sieve permite editar, criar e excluir scripts Sieve.</p>
     <p xml:lang="ru">Редактор сценариев позволяет создавать, изменять и удалять сценарии sieve.</p>
     <p xml:lang="sk">SieveEditor umožňuje upravovať, vytvárať a mazať Sieve skripty.</p>
+    <p xml:lang="sl">SieveEditor dovoljuje urejanje, kreiranje in brisanje skriptov sieve.</p>
     <p xml:lang="sv">Sieveeditor gör det möjligt att redigera, skapa och ta bort Sieve-skript.</p>
     <p xml:lang="uk">За допомогою редактора фільтрів ви зможете редагувати, створювати та вилучати скрипти фільтрування пошти.</p>
     <p xml:lang="x-test">xxSieveEditor allows to edit, create, delete sieve scripts.xx</p>
