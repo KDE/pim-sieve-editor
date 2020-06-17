@@ -77,6 +77,8 @@ include_directories(${sieveeditor_SOURCE_DIR} ${sieveeditor_BINARY_DIR})
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
 add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054700)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
