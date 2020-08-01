@@ -34,6 +34,7 @@
   <summary>Editor for email filter Sieve scripts</summary>
   <summary xml:lang="ca">Editor per als scripts de «Sieve» del filtratge de correu</summary>
   <summary xml:lang="ca-valencia">Editor per als scripts de «Sieve» del filtratge de correu</summary>
+  <summary xml:lang="da">Editor til sieve-scripts til e-mailfiltre</summary>
   <summary xml:lang="de">Editor für Sieve-Skripte zum Filtern von E-Mails</summary>
   <summary xml:lang="en-GB">Editor for email filter Sieve scripts</summary>
   <summary xml:lang="es">Editor para filtro de correo con guiones Sieve</summary>
@@ -60,6 +61,7 @@
   <developer_name xml:lang="ca">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ca-valencia">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="cs">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="da">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="de">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="en-GB">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="es">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
@@ -90,6 +92,7 @@
     <p xml:lang="ca">El SieveEditor permet editar, crear i suprimir scripts de «Sieve».</p>
     <p xml:lang="ca-valencia">El SieveEditor permet editar, crear i suprimir scripts de «Sieve».</p>
     <p xml:lang="cs">SieveEditor vám umožňuje upravit, vytvářet a mazat skripty sieve.</p>
+    <p xml:lang="da">SieveEditor lader dig redigere, oprette og slette sieve-scripts.</p>
     <p xml:lang="de">Mit dem Sieve-Editor können Sie Sieve-Skripte bearbeiten, erstellen und löschen.</p>
     <p xml:lang="en-GB">SieveEditor allows to edit, create, delete sieve scripts.</p>
     <p xml:lang="es">SieveEditor permite editar, crear o borrar guiones de sieve.</p>
