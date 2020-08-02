@@ -70,7 +70,7 @@ find_package(KF5PimCommon ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5LibKSieve ${LIBKSIEVE_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 
-find_package(KUserFeedback 0.9.90 CONFIG) # Needs Provider::describeDataSources()
+find_package(KUserFeedback 1.0.0 CONFIG) # Needs Provider::describeDataSources()
 set_package_properties(KUserFeedback PROPERTIES DESCRIPTION "User Feedback lib" TYPE OPTIONAL PURPOSE "Allow to send Telemetry Information (optional). It can be disable in apps.")
 
 include_directories(${sieveeditor_SOURCE_DIR} ${sieveeditor_BINARY_DIR})
