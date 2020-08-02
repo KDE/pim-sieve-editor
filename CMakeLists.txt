@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
-set(PIM_VERSION "5.14.90")
+set(PIM_VERSION "5.15.0")
 project( sieveeditor VERSION ${PIM_VERSION})
-set(RELEASE_SERVICE_VERSION "20.07.90")
+set(RELEASE_SERVICE_VERSION "20.08.0")
 if (POLICY CMP0063)
     cmake_policy(SET CMP0063 NEW)
 endif()
@@ -31,7 +31,7 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION rc)
+set(KDEPIM_DEV_VERSION)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
