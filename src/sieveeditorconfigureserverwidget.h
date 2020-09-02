@@ -44,7 +44,7 @@ private:
     void slotItemSelectionChanged();
 
 private:
-    Ui::SieveEditorConfigureServerWidget *ui = nullptr;
+    Ui::SieveEditorConfigureServerWidget *const ui;
 };
 
 #endif // SIEVEEDITORCONFIGURESERVERWIDGET_H

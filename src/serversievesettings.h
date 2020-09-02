@@ -81,7 +81,7 @@ private:
     void populateDefaultAuthenticationOptions(QComboBox *combobox);
     void slotSafetyChanged();
     void populateDefaultComboBoxAuthenticationOptions();
-    Ui::ServerSieveSettings *ui = nullptr;
+    Ui::ServerSieveSettings *const ui;
     MailTransport::ServerTest *mServerTest = nullptr;
 };
 
