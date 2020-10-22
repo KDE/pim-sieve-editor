@@ -41,7 +41,6 @@ void ImportImapSettingNoFoundPageTest::shouldHaveDefaultValue()
 
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 }
 
 QTEST_MAIN(ImportImapSettingNoFoundPageTest)

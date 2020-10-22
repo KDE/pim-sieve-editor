@@ -84,7 +84,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     mUserFeedbackWidget = new KUserFeedback::FeedbackConfigWidget(this);
 
     QHBoxLayout *userFeedBackLayout = new QHBoxLayout(userFeedBackWidget);
-    userFeedBackLayout->setContentsMargins(0, 0, 0, 0);
+    userFeedBackLayout->setContentsMargins({});
     userFeedBackLayout->addWidget(mUserFeedbackWidget);
 
     mUserFeedbackWidget->setFeedbackProvider(UserFeedBackManager::self()->userFeedbackProvider());
