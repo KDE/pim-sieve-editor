@@ -18,7 +18,6 @@
 */
 
 #include "serversievelistwidget.h"
-#include "sieveeditorutil.h"
 #include "serversievesettingsdialog.h"
 
 #include <KLocalizedString>

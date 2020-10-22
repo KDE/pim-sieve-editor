@@ -31,7 +31,6 @@
 #include <KColorScheme>
 #include <KMessageBox>
 
-#include <QSplitter>
 #include <QStackedWidget>
 #include <QTabBar>
 

@@ -18,7 +18,6 @@
 */
 
 #include "sieveeditorpagewidget.h"
-#include <KSieveUi/SieveEditorWidget>
 #include <KSieveUi/CheckScriptJob>
 #include "sieveeditorglobalconfig.h"
 
