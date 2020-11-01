@@ -35,17 +35,17 @@ SieveEditorConfigureServerPageTest::~SieveEditorConfigureServerPageTest()
 void SieveEditorConfigureServerPageTest::shouldHaveDefaultValue()
 {
     SieveEditorConfigureServerPage w;
-    QPushButton *button = w.findChild<QPushButton *>(QStringLiteral("configure_button"));
+    auto *button = w.findChild<QPushButton *>(QStringLiteral("configure_button"));
     QVERIFY(button);
 
-    QPushButton *importSieveSettings = w.findChild<QPushButton *>(QStringLiteral("import_sieve_settings_button"));
+    auto *importSieveSettings = w.findChild<QPushButton *>(QStringLiteral("import_sieve_settings_button"));
     QVERIFY(importSieveSettings);
 }
 
 void SieveEditorConfigureServerPageTest::shouldEmitSignalWhenClickOnConfigureButton()
 {
     SieveEditorConfigureServerPage w;
-    QPushButton *button = w.findChild<QPushButton *>(QStringLiteral("configure_button"));
+    auto *button = w.findChild<QPushButton *>(QStringLiteral("configure_button"));
     QSignalSpy spy(&w, &SieveEditorConfigureServerPage::configureClicked);
     QTest::mouseClick(button, Qt::LeftButton);
     QCOMPARE(spy.count(), 1);
@@ -54,7 +54,7 @@ void SieveEditorConfigureServerPageTest::shouldEmitSignalWhenClickOnConfigureBut
 void SieveEditorConfigureServerPageTest::shouldEmitSignalWhenClickOnImportSieveButton()
 {
     SieveEditorConfigureServerPage w;
-    QPushButton *button = w.findChild<QPushButton *>(QStringLiteral("import_sieve_settings_button"));
+    auto *button = w.findChild<QPushButton *>(QStringLiteral("import_sieve_settings_button"));
     QSignalSpy spy(&w, &SieveEditorConfigureServerPage::importSieveSettings);
     QTest::mouseClick(button, Qt::LeftButton);
     QCOMPARE(spy.count(), 1);

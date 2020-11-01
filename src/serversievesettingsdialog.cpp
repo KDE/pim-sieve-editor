@@ -31,13 +31,13 @@ ServerSieveSettingsDialog::ServerSieveSettingsDialog(QWidget *parent)
     setWindowTitle(i18nc("@title:window", "Add Sieve Server"));
 
     QWidget *w = new QWidget;
-    QVBoxLayout *lay = new QVBoxLayout;
+    auto *lay = new QVBoxLayout;
     mServerSieveSettings = new ServerSieveSettings;
     connect(mServerSieveSettings, &ServerSieveSettings::enableOkButton, this, &ServerSieveSettingsDialog::slotEnableButtonOk);
     lay->addWidget(mServerSieveSettings);
     lay->setContentsMargins({});
     w->setLayout(lay);
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(w);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);

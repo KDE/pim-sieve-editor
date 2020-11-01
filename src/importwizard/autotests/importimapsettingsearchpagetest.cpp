@@ -37,15 +37,15 @@ ImportImapSettingSearchPageTest::~ImportImapSettingSearchPageTest()
 void ImportImapSettingSearchPageTest::shouldHaveDefaultValue()
 {
     ImportImapSettingSearchPage w;
-    QLabel *label = w.findChild<QLabel *>(QStringLiteral("label"));
+    auto *label = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(label);
     QVERIFY(!label->text().isEmpty());
 
-    QListWidget *mFoundProgramList = w.findChild<QListWidget *>(QStringLiteral("foundprogramlist"));
+    auto *mFoundProgramList = w.findChild<QListWidget *>(QStringLiteral("foundprogramlist"));
     QVERIFY(mFoundProgramList);
     QCOMPARE(mFoundProgramList->count(), 0);
 
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 }
 
@@ -57,7 +57,7 @@ void ImportImapSettingSearchPageTest::shouldAddCheckPrograms()
     };
 
     w.setProgramList(lst);
-    QListWidget *mFoundProgramList = w.findChild<QListWidget *>(QStringLiteral("foundprogramlist"));
+    auto *mFoundProgramList = w.findChild<QListWidget *>(QStringLiteral("foundprogramlist"));
     QCOMPARE(mFoundProgramList->count(), lst.count());
     for (int i = 0; i < mFoundProgramList->count(); ++i) {
         QCOMPARE(mFoundProgramList->item(i)->checkState(), Qt::Unchecked);

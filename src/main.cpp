@@ -75,7 +75,7 @@ int main(int argc, char **argv)
 
     KDBusService service(KDBusService::Unique);
 
-    SieveEditorMainWindow *mw = new SieveEditorMainWindow();
+    auto *mw = new SieveEditorMainWindow();
     mw->show();
     const int val = app.exec();
     return val;

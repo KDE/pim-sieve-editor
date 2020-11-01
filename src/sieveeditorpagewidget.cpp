@@ -32,7 +32,7 @@
 SieveEditorPageWidget::SieveEditorPageWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *vbox = new QVBoxLayout(this);
+    auto *vbox = new QVBoxLayout(this);
     mSieveEditorWidget = new KSieveUi::SieveEditorWidget(false);
     connect(mSieveEditorWidget, &KSieveUi::SieveEditorWidget::valueChanged, this, &SieveEditorPageWidget::slotValueChanged);
     vbox->addWidget(mSieveEditorWidget);
@@ -56,7 +56,7 @@ void SieveEditorPageWidget::slotCheckSyntaxClicked()
     }
     mSieveEditorWidget->addNormalMessage(i18n("Uploading script to server for checking it, please wait..."));
 
-    KSieveUi::CheckScriptJob *checkScriptJob = new KSieveUi::CheckScriptJob(this);
+    auto *checkScriptJob = new KSieveUi::CheckScriptJob(this);
     connect(checkScriptJob, &KSieveUi::CheckScriptJob::finished, this, &SieveEditorPageWidget::slotCheckScriptJobFinished);
     checkScriptJob->setUrl(mCurrentURL);
     checkScriptJob->setIsActive(mWasActive);

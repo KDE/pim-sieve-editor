@@ -51,7 +51,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
 
     //Server page
     QWidget *serverConfigureWiget = new QWidget;
-    QVBoxLayout *layout = new QVBoxLayout(serverConfigureWiget);
+    auto *layout = new QVBoxLayout(serverConfigureWiget);
     mServerWidget = new SieveEditorConfigureServerWidget;
     layout->addWidget(mServerWidget);
 
@@ -83,7 +83,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
 
     mUserFeedbackWidget = new KUserFeedback::FeedbackConfigWidget(this);
 
-    QHBoxLayout *userFeedBackLayout = new QHBoxLayout(userFeedBackWidget);
+    auto *userFeedBackLayout = new QHBoxLayout(userFeedBackWidget);
     userFeedBackLayout->setContentsMargins({});
     userFeedBackLayout->addWidget(mUserFeedbackWidget);
 

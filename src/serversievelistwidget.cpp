@@ -39,7 +39,7 @@ void ServerSieveListWidget::readConfig()
 {
     const QVector<SieveEditorUtil::SieveServerConfig> lstServer = SieveEditorUtil::readServerSieveConfig();
     for (const SieveEditorUtil::SieveServerConfig &conf : lstServer) {
-        ServerSieveListWidgetItem *item = new ServerSieveListWidgetItem(this);
+        auto *item = new ServerSieveListWidgetItem(this);
         item->setServerConfig(conf);
     }
 }
@@ -48,7 +48,7 @@ void ServerSieveListWidget::writeConfig()
 {
     QVector<SieveEditorUtil::SieveServerConfig> lstServerConfig;
     for (int i = 0; i < count(); ++i) {
-        ServerSieveListWidgetItem *serverSieveItem = static_cast<ServerSieveListWidgetItem *>(item(i));
+        auto *serverSieveItem = static_cast<ServerSieveListWidgetItem *>(item(i));
         if (serverSieveItem) {
             SieveEditorUtil::SieveServerConfig config = serverSieveItem->serverConfig();
             config.enabled = (serverSieveItem->checkState() == Qt::Checked);
@@ -66,7 +66,7 @@ void ServerSieveListWidget::modifyServerConfig()
         return;
     }
 
-    ServerSieveListWidgetItem *serverSieveListItem = static_cast<ServerSieveListWidgetItem *>(item);
+    auto *serverSieveListItem = static_cast<ServerSieveListWidgetItem *>(item);
 
     QPointer<ServerSieveSettingsDialog> dlg = new ServerSieveSettingsDialog(this);
     dlg->setWindowTitle(i18nc("@title:window", "Modify Settings"));
@@ -79,7 +79,7 @@ void ServerSieveListWidget::modifyServerConfig()
 
 void ServerSieveListWidget::deleteServerConfig(QListWidgetItem *item)
 {
-    ServerSieveListWidgetItem *serverSieveListItem = static_cast<ServerSieveListWidgetItem *>(item);
+    auto *serverSieveListItem = static_cast<ServerSieveListWidgetItem *>(item);
     SieveEditorUtil::SieveServerConfig conf = serverSieveListItem->serverConfig();
 
     mNeedToRemovePasswordInWallet.append(SieveEditorUtil::sievePasswordIdentifier(conf.sieveSettings.userName, conf.sieveSettings.serverName));
@@ -93,7 +93,7 @@ void ServerSieveListWidget::addServerConfig()
 {
     QPointer<ServerSieveSettingsDialog> dlg = new ServerSieveSettingsDialog(this);
     if (dlg->exec()) {
-        ServerSieveListWidgetItem *item = new ServerSieveListWidgetItem(this);
+        auto *item = new ServerSieveListWidgetItem(this);
         item->setServerConfig(dlg->serverSieveConfig());
     }
     delete dlg;

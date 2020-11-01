@@ -27,7 +27,7 @@
 SieveEditorConfigureServerPage::SieveEditorConfigureServerPage(QWidget *parent)
     : QWidget(parent)
 {
-    QHBoxLayout *hbox = new QHBoxLayout(this);
+    auto *hbox = new QHBoxLayout(this);
     hbox->addStretch(1);
     QPushButton *button = new QPushButton(i18n("Configure..."));
     button->setObjectName(QStringLiteral("configure_button"));

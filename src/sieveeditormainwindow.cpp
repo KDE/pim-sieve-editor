@@ -81,7 +81,7 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::sieveEditorTabCurrentChanged, this, &SieveEditorMainWindow::slotUpdateActions);
     mMainWidget->sieveEditorMainWidget()->refreshList();
 #ifdef WITH_KUSERFEEDBACK
-    KUserFeedback::NotificationPopup *userFeedBackNotificationPopup = new KUserFeedback::NotificationPopup(this);
+    auto *userFeedBackNotificationPopup = new KUserFeedback::NotificationPopup(this);
     userFeedBackNotificationPopup->setFeedbackProvider(UserFeedBackManager::self()->userFeedbackProvider());
 #endif
 }
@@ -197,7 +197,7 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("import_script"), mImportAction);
     mImportAction->setEnabled(false);
 
-    SievePurposeMenuWidget *purposeMenu = new SievePurposeMenuWidget(this, this);
+    auto *purposeMenu = new SievePurposeMenuWidget(this, this);
     mShareAction = new QAction(i18n("Share..."), this);
     ac->addAction(QStringLiteral("share_script"), mShareAction);
     mShareAction->setMenu(purposeMenu->menu());
