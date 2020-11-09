@@ -50,7 +50,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     connect(buttonBox(), &QDialogButtonBox::rejected, this, &SieveEditorConfigureDialog::reject);
 
     //Server page
-    QWidget *serverConfigureWiget = new QWidget;
+    auto *serverConfigureWiget = new QWidget;
     auto *layout = new QVBoxLayout(serverConfigureWiget);
     mServerWidget = new SieveEditorConfigureServerWidget;
     layout->addWidget(mServerWidget);
@@ -63,7 +63,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     addPage(serverPageWidgetPage);
 
     //Editor page
-    QWidget *editorWidget = new QWidget;
+    auto *editorWidget = new QWidget;
     editorWidget->setObjectName(QStringLiteral("editorwidget"));
 
     layout = new QVBoxLayout(editorWidget);
@@ -78,7 +78,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
 
     //UserFeedBack config
 #ifdef WITH_KUSERFEEDBACK
-    QWidget *userFeedBackWidget = new QWidget;
+    auto *userFeedBackWidget = new QWidget;
     userFeedBackWidget->setObjectName(QStringLiteral("userFeedBackWidget"));
 
     mUserFeedbackWidget = new KUserFeedback::FeedbackConfigWidget(this);

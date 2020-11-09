@@ -30,7 +30,7 @@ ServerSieveSettingsDialog::ServerSieveSettingsDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Add Sieve Server"));
 
-    QWidget *w = new QWidget;
+    auto *w = new QWidget;
     auto *lay = new QVBoxLayout;
     mServerSieveSettings = new ServerSieveSettings;
     connect(mServerSieveSettings, &ServerSieveSettings::enableOkButton, this, &ServerSieveSettingsDialog::slotEnableButtonOk);
@@ -40,7 +40,7 @@ ServerSieveSettingsDialog::ServerSieveSettingsDialog(QWidget *parent)
     auto *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(w);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setDefault(true);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
