@@ -55,6 +55,7 @@ set(sieveeditor_LIB_SRCS
     sieveeditorbookmarks.cpp
     sieveeditoremptytabwidgetlabel.cpp
     sievepurposemenuwidget.cpp
+    readserversieveconfigjob.cpp
     ${sieveeditor_importimapsettings_SRCS}
     ${sieveeditor_importimapsettings_check_SRCS}
     )
