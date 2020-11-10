@@ -22,7 +22,7 @@
 #define READSERVERSIEVECONFIGJOB_H
 
 #include <QObject>
-
+#include "sieveeditorutil.h"
 class ReadServerSieveConfigJob : public QObject
 {
     Q_OBJECT
@@ -31,6 +31,8 @@ public:
     ~ReadServerSieveConfigJob();
 
     void start();
+Q_SIGNALS:
+    void finished(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig);
 
 };
 

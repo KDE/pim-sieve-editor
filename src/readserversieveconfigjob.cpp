@@ -19,6 +19,14 @@
 
 #include "readserversieveconfigjob.h"
 
+#include "sieveserversettings.h"
+
+#include <KSharedConfig>
+#include <KWallet>
+#include <KConfig>
+#include <QRegularExpression>
+#include <QVector>
+
 ReadServerSieveConfigJob::ReadServerSieveConfigJob(QObject *parent)
     : QObject(parent)
 {
@@ -32,5 +40,62 @@ ReadServerSieveConfigJob::~ReadServerSieveConfigJob()
 
 void ReadServerSieveConfigJob::start()
 {
-    //TODO
+    QVector<SieveEditorUtil::SieveServerConfig> lstConfig;
+    KSharedConfigPtr cfg = KSharedConfig::openConfig();
+    QRegularExpression re(QStringLiteral("^ServerSieve (.+)$"));
+    const QStringList groups = cfg->groupList().filter(re);
+    KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
+    if (wallet && !wallet->setFolder(QStringLiteral("sieveeditor"))) {
+        wallet->createFolder(QStringLiteral("sieveeditor"));
+        wallet->setFolder(QStringLiteral("sieveeditor"));
+    }
+
+    for (const QString &conf : groups) {
+        SieveEditorUtil::SieveServerConfig sieve;
+        KConfigGroup group = cfg->group(conf);
+        //Sieve Account Settings
+        sieve.sieveSettings.port = group.readEntry(QStringLiteral("Port"), 0);
+        sieve.sieveSettings.serverName = group.readEntry(QStringLiteral("ServerName"));
+        sieve.sieveSettings.userName = group.readEntry(QStringLiteral("UserName"));
+        sieve.enabled = group.readEntry(QStringLiteral("Enabled"), true);
+        const QString walletEntry = sieve.sieveSettings.userName + QLatin1Char('@') + sieve.sieveSettings.serverName;
+        if (wallet && wallet->hasEntry(walletEntry)) {
+            QString passwd;
+            wallet->readPassword(walletEntry, passwd);
+            sieve.sieveSettings.password = passwd;
+        }
+        sieve.sieveSettings.authenticationType
+                = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(group.readEntry(QStringLiteral("Authentication"),
+                                                                                                      static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
+
+        //Imap Account Settings
+        sieve.sieveImapAccountSettings.setPort(group.readEntry(QStringLiteral("ImapPort"), 0));
+        sieve.sieveImapAccountSettings.setServerName(group.readEntry(QStringLiteral("ImapServerName")));
+        sieve.sieveImapAccountSettings.setUserName(group.readEntry(QStringLiteral("ImapUserName")));
+        sieve.sieveImapAccountSettings.setAuthenticationType(
+                    static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(group.readEntry(QStringLiteral("ImapAuthentication"), static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
+        sieve.sieveImapAccountSettings.setEncryptionMode(
+                    static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(KSieveUi::SieveImapAccountSettings::SSLorTLS))));
+
+        if (!sieve.sieveImapAccountSettings.userName().isEmpty()
+                && !sieve.sieveImapAccountSettings.serverName().isEmpty()
+                && (sieve.sieveImapAccountSettings.userName() != sieve.sieveSettings.userName)
+                && (sieve.sieveImapAccountSettings.serverName() != sieve.sieveSettings.serverName)) {
+            const QString imapWalletEntry = QLatin1String("Imap") + sieve.sieveImapAccountSettings.userName() + QLatin1Char('@') + sieve.sieveImapAccountSettings.serverName();
+            if (wallet && wallet->hasEntry(imapWalletEntry)) {
+                QString passwd;
+                wallet->readPassword(imapWalletEntry, passwd);
+                sieve.sieveImapAccountSettings.setPassword(passwd);
+            }
+            sieve.useImapCustomServer = true;
+        } else {
+            //Use Sieve Account Settings
+            sieve.sieveImapAccountSettings.setUserName(sieve.sieveSettings.userName);
+            sieve.sieveImapAccountSettings.setServerName(sieve.sieveSettings.serverName);
+            sieve.sieveImapAccountSettings.setPassword(sieve.sieveSettings.password);
+            sieve.useImapCustomServer = false;
+        }
+        lstConfig.append(sieve);
+    }
+    //return lstConfig;
 }
