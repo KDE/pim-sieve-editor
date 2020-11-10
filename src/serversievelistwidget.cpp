@@ -19,11 +19,12 @@
 
 #include "serversievelistwidget.h"
 #include "serversievesettingsdialog.h"
-
+#include "sieveserversettings.h"
 #include <KLocalizedString>
 
 #include <QListWidgetItem>
 #include <QPointer>
+#include <KWallet>
 
 ServerSieveListWidget::ServerSieveListWidget(QWidget *parent)
     : QListWidget(parent)
@@ -56,7 +57,24 @@ void ServerSieveListWidget::writeConfig()
         }
     }
     SieveEditorUtil::writeServerSieveConfig(lstServerConfig);
-    SieveEditorUtil::deletePasswords(mNeedToRemovePasswordInWallet);
+}
+
+void ServerSieveListWidget::deletePasswords()
+{
+    if (!mNeedToRemovePasswordInWallet.isEmpty()) {
+        KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
+        if (wallet && wallet->isOpen()) {
+            if (wallet->hasFolder(QStringLiteral("sieveeditor"))) {
+                wallet->setFolder(QStringLiteral("sieveeditor"));
+                for (const QString &identifier : mNeedToRemovePasswordInWallet) {
+                    //TODO move to qtkeychain
+                    if (wallet->hasEntry(identifier)) {
+                        wallet->removeEntry(identifier);
+                    }
+                }
+            }
+        }
+    }
 }
 
 void ServerSieveListWidget::modifyServerConfig()

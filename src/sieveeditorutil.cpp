@@ -87,6 +87,7 @@ bool SieveEditorUtil::SieveServerConfig::operator ==(const SieveEditorUtil::Siev
 
 QVector<SieveEditorUtil::SieveServerConfig> SieveEditorUtil::readServerSieveConfig()
 {
+    //TODO move to async
     QVector<SieveServerConfig> lstConfig;
     KSharedConfigPtr cfg = KSharedConfig::openConfig();
     QRegularExpression re(QStringLiteral("^ServerSieve (.+)$"));
@@ -231,23 +232,6 @@ void SieveEditorUtil::addServerSieveConfig(const SieveEditorUtil::SieveServerCon
 
     writeSieveSettings(wallet, cfg, conf, groups.count());
     cfg->sync();
-}
-
-void SieveEditorUtil::deletePasswords(const QStringList &identifiers)
-{
-    if (!identifiers.isEmpty()) {
-        KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
-        if (wallet && wallet->isOpen()) {
-            if (wallet->hasFolder(QStringLiteral("sieveeditor"))) {
-                wallet->setFolder(QStringLiteral("sieveeditor"));
-                for (const QString &identifier : identifiers) {
-                    if (wallet->hasEntry(identifier)) {
-                        wallet->removeEntry(identifier);
-                    }
-                }
-            }
-        }
-    }
 }
 
 QDebug operator <<(QDebug d, const SieveEditorUtil::SieveServerConfig &settings)

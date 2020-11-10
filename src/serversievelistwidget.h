@@ -52,6 +52,7 @@ public Q_SLOTS:
     void modifyServerConfig();
 
 private:
+    void deletePasswords();
     QStringList mNeedToRemovePasswordInWallet;
 };
 
