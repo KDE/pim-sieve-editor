@@ -92,11 +92,7 @@ QVector<SieveEditorUtil::SieveServerConfig> SieveEditorUtil::readServerSieveConf
     KSharedConfigPtr cfg = KSharedConfig::openConfig();
     QRegularExpression re(QStringLiteral("^ServerSieve (.+)$"));
     const QStringList groups = cfg->groupList().filter(re);
-    KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
-    if (wallet && !wallet->setFolder(QStringLiteral("sieveeditor"))) {
-        wallet->createFolder(QStringLiteral("sieveeditor"));
-        wallet->setFolder(QStringLiteral("sieveeditor"));
-    }
+    KWallet::Wallet *wallet = SieveEditorUtil::selectWalletFolder();
 
     for (const QString &conf : groups) {
         SieveServerConfig sieve;
@@ -160,13 +156,7 @@ void SieveEditorUtil::writeServerSieveConfig(const QVector<SieveServerConfig> &l
     }
 
     int i = 0;
-    KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
-    if (wallet) {
-        if (!wallet->hasFolder(QStringLiteral("sieveeditor"))) {
-            wallet->createFolder(QStringLiteral("sieveeditor"));
-        }
-        wallet->setFolder(QStringLiteral("sieveeditor"));
-    }
+    KWallet::Wallet *wallet = SieveEditorUtil::selectWalletFolder();
 
     for (const SieveEditorUtil::SieveServerConfig &conf : lstConfig) {
         writeSieveSettings(wallet, cfg, conf, i);
@@ -217,7 +207,7 @@ void SieveEditorUtil::writeSieveSettings(KWallet::Wallet *wallet, const KSharedC
     }
 }
 
-void SieveEditorUtil::addServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf)
+KWallet::Wallet * SieveEditorUtil::selectWalletFolder()
 {
     KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
     if (wallet) {
@@ -226,6 +216,12 @@ void SieveEditorUtil::addServerSieveConfig(const SieveEditorUtil::SieveServerCon
         }
         wallet->setFolder(QStringLiteral("sieveeditor"));
     }
+    return wallet;
+}
+
+void SieveEditorUtil::addServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf)
+{
+    KWallet::Wallet *wallet = SieveEditorUtil::selectWalletFolder();
     KSharedConfigPtr cfg = KSharedConfig::openConfig();
     const QRegularExpression re(QStringLiteral("^ServerSieve (.+)$"));
     const QStringList groups = cfg->groupList().filter(re);

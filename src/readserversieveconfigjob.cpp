@@ -44,11 +44,7 @@ void ReadServerSieveConfigJob::start()
     KSharedConfigPtr cfg = KSharedConfig::openConfig();
     QRegularExpression re(QStringLiteral("^ServerSieve (.+)$"));
     const QStringList groups = cfg->groupList().filter(re);
-    KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
-    if (wallet && !wallet->setFolder(QStringLiteral("sieveeditor"))) {
-        wallet->createFolder(QStringLiteral("sieveeditor"));
-        wallet->setFolder(QStringLiteral("sieveeditor"));
-    }
+    KWallet::Wallet *wallet = SieveEditorUtil::selectWalletFolder();
 
     for (const QString &conf : groups) {
         SieveEditorUtil::SieveServerConfig sieve;
