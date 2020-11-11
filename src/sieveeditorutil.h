@@ -61,9 +61,9 @@ struct LIBSIEVEEDITOR_EXPORT SieveServerConfig {
 void writeServerSieveConfig(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig);
 void addServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf);
 void writeSieveSettings(KWallet::Wallet *wallet, const KSharedConfigPtr &cfg, const SieveEditorUtil::SieveServerConfig &conf, int index);
-QString sievePasswordIdentifier(const QString &userName, const QString &serverName);
-QString imapPasswordIdentifier(const QString &userName, const QString &serverName);
-KWallet::Wallet *selectWalletFolder();
+Q_REQUIRED_RESULT QString sievePasswordIdentifier(const QString &userName, const QString &serverName);
+Q_REQUIRED_RESULT QString imapPasswordIdentifier(const QString &userName, const QString &serverName);
+Q_REQUIRED_RESULT KWallet::Wallet *selectWalletFolder();
 }
 Q_DECLARE_TYPEINFO(SieveEditorUtil::SieveServerConfig, Q_MOVABLE_TYPE);
 LIBSIEVEEDITOR_TESTS_EXPORT QDebug operator <<(QDebug d, const SieveEditorUtil::SieveAccountSettings &settings);
