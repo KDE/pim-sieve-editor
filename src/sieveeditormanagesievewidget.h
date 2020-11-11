@@ -20,6 +20,7 @@
 #ifndef SIEVEEDITORMANAGESIEVEWIDGET_H
 #define SIEVEEDITORMANAGESIEVEWIDGET_H
 
+#include "sieveeditorutil.h"
 #include <KSieveUi/ManageSieveWidget>
 
 class SieveEditorManageSieveWidget : public KSieveUi::ManageSieveWidget
@@ -31,6 +32,9 @@ public:
 
 protected:
     Q_REQUIRED_RESULT bool refreshList() override;
+    void updateSieveSettings() override;
+private:
+    QVector<SieveEditorUtil::SieveServerConfig> mSieveServerSettings;
 };
 
 #endif // SIEVEEDITORMANAGESIEVEWIDGET_H

@@ -42,8 +42,7 @@ bool SieveEditorManageSieveWidget::refreshList()
     bool noImapFound = true;
     SieveTreeWidgetItem *last = nullptr;
 
-    const QVector<SieveEditorUtil::SieveServerConfig> listConfig = SieveEditorUtil::readServerSieveConfig();
-    for (const SieveEditorUtil::SieveServerConfig &conf : listConfig) {
+    for (const SieveEditorUtil::SieveServerConfig &conf : mSieveServerSettings) {
         last = new SieveTreeWidgetItem(treeView(), last);
         last->setText(0, conf.sieveSettings.serverName + QStringLiteral(" (%1)").arg(conf.sieveSettings.userName));
         last->setIcon(0, QIcon::fromTheme(QStringLiteral("network-server")));
@@ -68,4 +67,10 @@ bool SieveEditorManageSieveWidget::refreshList()
         noImapFound = false;
     }
     return noImapFound;
+}
+
+void SieveEditorManageSieveWidget::updateSieveSettings()
+{
+    mSieveServerSettings = SieveEditorUtil::readServerSieveConfig();
+    Q_EMIT updateSieveSettingsDone();
 }
