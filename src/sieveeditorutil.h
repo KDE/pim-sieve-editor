@@ -32,8 +32,6 @@ class Wallet;
 namespace SieveEditorUtil {
 struct LIBSIEVEEDITOR_EXPORT SieveAccountSettings {
     SieveAccountSettings()
-        : authenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN)
-        , port(-1)
     {
     }
 
@@ -42,14 +40,12 @@ struct LIBSIEVEEDITOR_EXPORT SieveAccountSettings {
     QString serverName;
     QString userName;
     QString password;
-    MailTransport::Transport::EnumAuthenticationType::type authenticationType;
-    int port;
+    MailTransport::Transport::EnumAuthenticationType::type authenticationType = MailTransport::Transport::EnumAuthenticationType::PLAIN;
+    int port = -1;
 };
 
 struct LIBSIEVEEDITOR_EXPORT SieveServerConfig {
     SieveServerConfig()
-        : enabled(true)
-        , useImapCustomServer(false)
     {
     }
 
@@ -58,8 +54,8 @@ struct LIBSIEVEEDITOR_EXPORT SieveServerConfig {
     SieveAccountSettings sieveSettings;
     KSieveUi::SieveImapAccountSettings sieveImapAccountSettings;
     bool operator ==(const SieveServerConfig &other) const;
-    bool enabled;
-    bool useImapCustomServer;
+    bool enabled = true;
+    bool useImapCustomServer = false;
 };
 
 void writeServerSieveConfig(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig);
