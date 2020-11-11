@@ -20,6 +20,7 @@
 #include "serversievelistwidget.h"
 #include "serversievesettingsdialog.h"
 #include "sieveserversettings.h"
+#include "readserversieveconfigjob.h"
 #include <KLocalizedString>
 
 #include <QListWidgetItem>
@@ -38,8 +39,14 @@ ServerSieveListWidget::~ServerSieveListWidget()
 
 void ServerSieveListWidget::readConfig()
 {
-    const QVector<SieveEditorUtil::SieveServerConfig> lstServer = SieveEditorUtil::readServerSieveConfig();
-    for (const SieveEditorUtil::SieveServerConfig &conf : lstServer) {
+    ReadServerSieveConfigJob *job = new ReadServerSieveConfigJob(this);
+    connect(job, &ReadServerSieveConfigJob::finished, this, &ServerSieveListWidget::slotReadServerSieveConfigDone);
+    job->start();
+}
+
+void ServerSieveListWidget::slotReadServerSieveConfigDone(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig)
+{
+    for (const SieveEditorUtil::SieveServerConfig &conf : lstConfig) {
         auto *item = new ServerSieveListWidgetItem(this);
         item->setServerConfig(conf);
     }

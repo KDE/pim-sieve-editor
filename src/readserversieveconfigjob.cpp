@@ -97,5 +97,6 @@ void ReadServerSieveConfigJob::start()
         }
         lstConfig.append(sieve);
     }
-    //return lstConfig;
+    Q_EMIT finished(lstConfig);
+    deleteLater();
 }
