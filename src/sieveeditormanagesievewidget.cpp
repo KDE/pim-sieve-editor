@@ -17,6 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
+#include "readserversieveconfigjob.h"
 #include "sieveeditormanagesievewidget.h"
 #include "sieveeditorutil.h"
 #include <KSieveUi/SieveTreeWidgetItem>
@@ -71,6 +72,13 @@ bool SieveEditorManageSieveWidget::refreshList()
 
 void SieveEditorManageSieveWidget::updateSieveSettings()
 {
-    mSieveServerSettings = SieveEditorUtil::readServerSieveConfig();
+    ReadServerSieveConfigJob *job = new ReadServerSieveConfigJob(this);
+    connect(job, &ReadServerSieveConfigJob::finished, this, &SieveEditorManageSieveWidget::slotReadServerSieveConfigDone);
+    job->start();
+}
+
+void SieveEditorManageSieveWidget::slotReadServerSieveConfigDone(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig)
+{
+    mSieveServerSettings = lstConfig;
     Q_EMIT updateSieveSettingsDone();
 }

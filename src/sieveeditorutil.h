@@ -62,7 +62,6 @@ struct LIBSIEVEEDITOR_EXPORT SieveServerConfig {
     bool useImapCustomServer;
 };
 
-QVector<SieveServerConfig> readServerSieveConfig();
 void writeServerSieveConfig(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig);
 void addServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf);
 void writeSieveSettings(KWallet::Wallet *wallet, const KSharedConfigPtr &cfg, const SieveEditorUtil::SieveServerConfig &conf, int index);
