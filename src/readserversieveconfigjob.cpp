@@ -30,7 +30,7 @@
 ReadServerSieveConfigJob::ReadServerSieveConfigJob(QObject *parent)
     : QObject(parent)
 {
-
+    connect(this, &ReadServerSieveConfigJob::loadNextConfig, this, &ReadServerSieveConfigJob::slotReadNextConfig);
 }
 
 ReadServerSieveConfigJob::~ReadServerSieveConfigJob()
@@ -41,63 +41,72 @@ ReadServerSieveConfigJob::~ReadServerSieveConfigJob()
 void ReadServerSieveConfigJob::loadSettings(const QString &conf)
 {
     KWallet::Wallet *wallet = SieveEditorUtil::selectWalletFolder();
-    SieveEditorUtil::SieveServerConfig sieve;
+    mCurrentSieveServerConfig = {};
     KSharedConfigPtr cfg = KSharedConfig::openConfig();
     KConfigGroup group = cfg->group(conf);
     //Sieve Account Settings
-    sieve.sieveSettings.port = group.readEntry(QStringLiteral("Port"), 0);
-    sieve.sieveSettings.serverName = group.readEntry(QStringLiteral("ServerName"));
-    sieve.sieveSettings.userName = group.readEntry(QStringLiteral("UserName"));
-    sieve.enabled = group.readEntry(QStringLiteral("Enabled"), true);
-    const QString walletEntry = sieve.sieveSettings.userName + QLatin1Char('@') + sieve.sieveSettings.serverName;
+    mCurrentSieveServerConfig.sieveSettings.port = group.readEntry(QStringLiteral("Port"), 0);
+    mCurrentSieveServerConfig.sieveSettings.serverName = group.readEntry(QStringLiteral("ServerName"));
+    mCurrentSieveServerConfig.sieveSettings.userName = group.readEntry(QStringLiteral("UserName"));
+    mCurrentSieveServerConfig.enabled = group.readEntry(QStringLiteral("Enabled"), true);
+    mCurrentSieveServerConfig.sieveSettings.authenticationType
+            = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(group.readEntry(QStringLiteral("Authentication"),
+                                                                                                  static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
+    //Read wallet
+    const QString walletEntry = mCurrentSieveServerConfig.sieveSettings.userName + QLatin1Char('@') + mCurrentSieveServerConfig.sieveSettings.serverName;
     if (wallet && wallet->hasEntry(walletEntry)) {
         QString passwd;
         wallet->readPassword(walletEntry, passwd);
-        sieve.sieveSettings.password = passwd;
+        mCurrentSieveServerConfig.sieveSettings.password = passwd;
     }
-    sieve.sieveSettings.authenticationType
-            = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(group.readEntry(QStringLiteral("Authentication"),
-                                                                                                  static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
 
     //Imap Account Settings
-    sieve.sieveImapAccountSettings.setPort(group.readEntry(QStringLiteral("ImapPort"), 0));
-    sieve.sieveImapAccountSettings.setServerName(group.readEntry(QStringLiteral("ImapServerName")));
-    sieve.sieveImapAccountSettings.setUserName(group.readEntry(QStringLiteral("ImapUserName")));
-    sieve.sieveImapAccountSettings.setAuthenticationType(
+    mCurrentSieveServerConfig.sieveImapAccountSettings.setPort(group.readEntry(QStringLiteral("ImapPort"), 0));
+    mCurrentSieveServerConfig.sieveImapAccountSettings.setServerName(group.readEntry(QStringLiteral("ImapServerName")));
+    mCurrentSieveServerConfig.sieveImapAccountSettings.setUserName(group.readEntry(QStringLiteral("ImapUserName")));
+    mCurrentSieveServerConfig.sieveImapAccountSettings.setAuthenticationType(
                 static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(group.readEntry(QStringLiteral("ImapAuthentication"), static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
-    sieve.sieveImapAccountSettings.setEncryptionMode(
+    mCurrentSieveServerConfig.sieveImapAccountSettings.setEncryptionMode(
                 static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(KSieveUi::SieveImapAccountSettings::SSLorTLS))));
 
-    if (!sieve.sieveImapAccountSettings.userName().isEmpty()
-            && !sieve.sieveImapAccountSettings.serverName().isEmpty()
-            && (sieve.sieveImapAccountSettings.userName() != sieve.sieveSettings.userName)
-            && (sieve.sieveImapAccountSettings.serverName() != sieve.sieveSettings.serverName)) {
-        const QString imapWalletEntry = QLatin1String("Imap") + sieve.sieveImapAccountSettings.userName() + QLatin1Char('@') + sieve.sieveImapAccountSettings.serverName();
+    if (!mCurrentSieveServerConfig.sieveImapAccountSettings.userName().isEmpty()
+            && !mCurrentSieveServerConfig.sieveImapAccountSettings.serverName().isEmpty()
+            && (mCurrentSieveServerConfig.sieveImapAccountSettings.userName() != mCurrentSieveServerConfig.sieveSettings.userName)
+            && (mCurrentSieveServerConfig.sieveImapAccountSettings.serverName() != mCurrentSieveServerConfig.sieveSettings.serverName)) {
+        const QString imapWalletEntry = QLatin1String("Imap") + mCurrentSieveServerConfig.sieveImapAccountSettings.userName() + QLatin1Char('@') + mCurrentSieveServerConfig.sieveImapAccountSettings.serverName();
         if (wallet && wallet->hasEntry(imapWalletEntry)) {
             QString passwd;
             wallet->readPassword(imapWalletEntry, passwd);
-            sieve.sieveImapAccountSettings.setPassword(passwd);
+            mCurrentSieveServerConfig.sieveImapAccountSettings.setPassword(passwd);
         }
-        sieve.useImapCustomServer = true;
+        mCurrentSieveServerConfig.useImapCustomServer = true;
     } else {
         //Use Sieve Account Settings
-        sieve.sieveImapAccountSettings.setUserName(sieve.sieveSettings.userName);
-        sieve.sieveImapAccountSettings.setServerName(sieve.sieveSettings.serverName);
-        sieve.sieveImapAccountSettings.setPassword(sieve.sieveSettings.password);
-        sieve.useImapCustomServer = false;
+        mCurrentSieveServerConfig.sieveImapAccountSettings.setUserName(mCurrentSieveServerConfig.sieveSettings.userName);
+        mCurrentSieveServerConfig.sieveImapAccountSettings.setServerName(mCurrentSieveServerConfig.sieveSettings.serverName);
+        mCurrentSieveServerConfig.sieveImapAccountSettings.setPassword(mCurrentSieveServerConfig.sieveSettings.password);
+        mCurrentSieveServerConfig.useImapCustomServer = false;
     }
-    mLstConfig.append(sieve);
+    mLstConfig.append(mCurrentSieveServerConfig);
+    Q_EMIT loadNextConfig();
 }
 
 void ReadServerSieveConfigJob::start()
 {
     KSharedConfigPtr cfg = KSharedConfig::openConfig();
     QRegularExpression re(QStringLiteral("^ServerSieve (.+)$"));
-    const QStringList groups = cfg->groupList().filter(re);
+    mGroupsConfigs = cfg->groupList().filter(re);
 
-    for (const QString &conf : groups) {
+    slotReadNextConfig();
+}
+
+void ReadServerSieveConfigJob::slotReadNextConfig()
+{
+    if (mGroupsConfigs.isEmpty()) {
+        Q_EMIT finished(mLstConfig);
+        deleteLater();
+    } else {
+        const QString conf = mGroupsConfigs.takeFirst();
         loadSettings(conf);
     }
-    Q_EMIT finished(mLstConfig);
-    deleteLater();
 }

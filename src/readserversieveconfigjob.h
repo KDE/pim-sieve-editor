@@ -33,9 +33,13 @@ public:
     void start();
 Q_SIGNALS:
     void finished(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig);
+    void loadNextConfig();
 private:
     void loadSettings(const QString &conf);
+    void slotReadNextConfig();
     QVector<SieveEditorUtil::SieveServerConfig> mLstConfig;
+    SieveEditorUtil::SieveServerConfig mCurrentSieveServerConfig;
+    QStringList mGroupsConfigs;
 };
 
 #endif // READSERVERSIEVECONFIGJOB_H
