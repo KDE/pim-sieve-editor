@@ -59,7 +59,12 @@ void ReadServerSieveConfigJob::loadSettings(const QString &conf)
         wallet->readPassword(walletEntry, passwd);
         mCurrentSieveServerConfig.sieveSettings.password = passwd;
     }
+    loadImapAccountSettings(group);
+}
 
+void ReadServerSieveConfigJob::loadImapAccountSettings(const KConfigGroup &group)
+{
+    KWallet::Wallet *wallet = SieveEditorUtil::selectWalletFolder();
     //Imap Account Settings
     mCurrentSieveServerConfig.sieveImapAccountSettings.setPort(group.readEntry(QStringLiteral("ImapPort"), 0));
     mCurrentSieveServerConfig.sieveImapAccountSettings.setServerName(group.readEntry(QStringLiteral("ImapServerName")));

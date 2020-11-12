@@ -37,6 +37,7 @@ Q_SIGNALS:
 private:
     void loadSettings(const QString &conf);
     void slotReadNextConfig();
+    void loadImapAccountSettings(const KConfigGroup &group);
     QVector<SieveEditorUtil::SieveServerConfig> mLstConfig;
     SieveEditorUtil::SieveServerConfig mCurrentSieveServerConfig;
     QStringList mGroupsConfigs;
