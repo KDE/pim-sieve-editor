@@ -64,6 +64,7 @@ void ServerSieveListWidget::writeConfig()
         }
     }
     SieveEditorUtil::writeServerSieveConfig(lstServerConfig);
+    deletePasswords();
 }
 
 void ServerSieveListWidget::deletePasswords()
