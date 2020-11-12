@@ -37,6 +37,7 @@ void ImportImapSettingsAkonadiPassword::importPasswords(SieveEditorUtil::SieveSe
     QString customPassword;
     if (wallet) {
         bool passwordStoredInWallet = false;
+        //Make async
         if (wallet && wallet->hasFolder(QStringLiteral("imap"))) {
             wallet->setFolder(QStringLiteral("imap"));
             wallet->readPassword(filename, password);

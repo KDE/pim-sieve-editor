@@ -63,6 +63,7 @@ void ReadServerSieveConfigJob::loadSettings(const QString &conf)
                 static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(KSieveUi::SieveImapAccountSettings::SSLorTLS))));
 
     //Read wallet
+    //Make async
     const QString walletEntry = mCurrentSieveServerConfig.sieveSettings.userName + QLatin1Char('@') + mCurrentSieveServerConfig.sieveSettings.serverName;
     if (wallet && wallet->hasEntry(walletEntry)) {
         QString passwd;
@@ -86,22 +87,31 @@ void ReadServerSieveConfigJob::loadImapAccountSettings()
             && !mCurrentSieveServerConfig.sieveImapAccountSettings.serverName().isEmpty()
             && (mCurrentSieveServerConfig.sieveImapAccountSettings.userName() != mCurrentSieveServerConfig.sieveSettings.userName)
             && (mCurrentSieveServerConfig.sieveImapAccountSettings.serverName() != mCurrentSieveServerConfig.sieveSettings.serverName)) {
+        mCurrentSieveServerConfig.useImapCustomServer = true;
+
+        //TODO make async
         const QString imapWalletEntry = QLatin1String("Imap") + mCurrentSieveServerConfig.sieveImapAccountSettings.userName() + QLatin1Char('@') + mCurrentSieveServerConfig.sieveImapAccountSettings.serverName();
         if (wallet && wallet->hasEntry(imapWalletEntry)) {
             QString passwd;
             wallet->readPassword(imapWalletEntry, passwd);
             mCurrentSieveServerConfig.sieveImapAccountSettings.setPassword(passwd);
         }
-        mCurrentSieveServerConfig.useImapCustomServer = true;
+        mLstConfig.append(mCurrentSieveServerConfig);
+        Q_EMIT loadNextConfig();
     } else {
         //Use Sieve Account Settings
         mCurrentSieveServerConfig.sieveImapAccountSettings.setUserName(mCurrentSieveServerConfig.sieveSettings.userName);
         mCurrentSieveServerConfig.sieveImapAccountSettings.setServerName(mCurrentSieveServerConfig.sieveSettings.serverName);
         mCurrentSieveServerConfig.sieveImapAccountSettings.setPassword(mCurrentSieveServerConfig.sieveSettings.password);
         mCurrentSieveServerConfig.useImapCustomServer = false;
+        mLstConfig.append(mCurrentSieveServerConfig);
+        Q_EMIT loadNextConfig();
     }
-    mLstConfig.append(mCurrentSieveServerConfig);
-    Q_EMIT loadNextConfig();
+}
+
+void ReadServerSieveConfigJob::readImapPasswordFinished()
+{
+    //TODO
 }
 
 void ReadServerSieveConfigJob::start()

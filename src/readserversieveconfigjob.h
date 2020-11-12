@@ -39,6 +39,7 @@ private:
     void slotReadNextConfig();
     void loadImapAccountSettings();
     void readSieveServerPasswordFinished();
+    void readImapPasswordFinished();
     QVector<SieveEditorUtil::SieveServerConfig> mLstConfig;
     SieveEditorUtil::SieveServerConfig mCurrentSieveServerConfig;
     QStringList mGroupsConfigs;
