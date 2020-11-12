@@ -52,19 +52,7 @@ void ReadServerSieveConfigJob::loadSettings(const QString &conf)
     mCurrentSieveServerConfig.sieveSettings.authenticationType
             = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(group.readEntry(QStringLiteral("Authentication"),
                                                                                                   static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
-    //Read wallet
-    const QString walletEntry = mCurrentSieveServerConfig.sieveSettings.userName + QLatin1Char('@') + mCurrentSieveServerConfig.sieveSettings.serverName;
-    if (wallet && wallet->hasEntry(walletEntry)) {
-        QString passwd;
-        wallet->readPassword(walletEntry, passwd);
-        mCurrentSieveServerConfig.sieveSettings.password = passwd;
-    }
-    loadImapAccountSettings(group);
-}
 
-void ReadServerSieveConfigJob::loadImapAccountSettings(const KConfigGroup &group)
-{
-    KWallet::Wallet *wallet = SieveEditorUtil::selectWalletFolder();
     //Imap Account Settings
     mCurrentSieveServerConfig.sieveImapAccountSettings.setPort(group.readEntry(QStringLiteral("ImapPort"), 0));
     mCurrentSieveServerConfig.sieveImapAccountSettings.setServerName(group.readEntry(QStringLiteral("ImapServerName")));
@@ -73,6 +61,26 @@ void ReadServerSieveConfigJob::loadImapAccountSettings(const KConfigGroup &group
                 static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(group.readEntry(QStringLiteral("ImapAuthentication"), static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
     mCurrentSieveServerConfig.sieveImapAccountSettings.setEncryptionMode(
                 static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(KSieveUi::SieveImapAccountSettings::SSLorTLS))));
+
+    //Read wallet
+    const QString walletEntry = mCurrentSieveServerConfig.sieveSettings.userName + QLatin1Char('@') + mCurrentSieveServerConfig.sieveSettings.serverName;
+    if (wallet && wallet->hasEntry(walletEntry)) {
+        QString passwd;
+        wallet->readPassword(walletEntry, passwd);
+        mCurrentSieveServerConfig.sieveSettings.password = passwd;
+        //Q_EMIT loadImapAccountSettingsRequested();
+    }
+    readSieveServerPasswordFinished();
+}
+
+void ReadServerSieveConfigJob::readSieveServerPasswordFinished()
+{
+    loadImapAccountSettings();
+}
+
+void ReadServerSieveConfigJob::loadImapAccountSettings()
+{
+    KWallet::Wallet *wallet = SieveEditorUtil::selectWalletFolder();
 
     if (!mCurrentSieveServerConfig.sieveImapAccountSettings.userName().isEmpty()
             && !mCurrentSieveServerConfig.sieveImapAccountSettings.serverName().isEmpty()
