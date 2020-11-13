@@ -20,8 +20,7 @@
 #include "sieveeditorutil.h"
 #include "sieveserversettings.h"
 #include "sieveeditor_debug.h"
-
-#include <KWallet>
+#include "sieveeditorsavepasswordjob.h"
 
 #include <KConfig>
 
@@ -30,6 +29,10 @@
 #include <QRegularExpression>
 #include <QUrlQuery>
 #include <KSharedConfig>
+
+#include <qt5keychain/keychain.h>
+using namespace QKeychain;
+
 
 QUrl SieveEditorUtil::SieveServerConfig::url() const
 {
@@ -98,10 +101,8 @@ void SieveEditorUtil::writeServerSieveConfig(const QVector<SieveServerConfig> &l
     }
 
     int i = 0;
-    KWallet::Wallet *wallet = SieveEditorUtil::selectWalletFolder();
-
     for (const SieveEditorUtil::SieveServerConfig &conf : lstConfig) {
-        writeSieveSettings(wallet, cfg, conf, i);
+        writeSieveSettings(cfg, conf, i);
         ++i;
     }
     cfg->sync();
@@ -118,17 +119,22 @@ QString SieveEditorUtil::imapPasswordIdentifier(const QString &userName, const Q
     return QLatin1String("Imap") + userName + QLatin1Char('@') + serverName;
 }
 
-void SieveEditorUtil::writeSieveSettings(KWallet::Wallet *wallet, const KSharedConfigPtr &cfg, const SieveEditorUtil::SieveServerConfig &conf, int index)
+void SieveEditorUtil::writeSieveSettings(const KSharedConfigPtr &cfg, const SieveEditorUtil::SieveServerConfig &conf, int index)
 {
     KConfigGroup group = cfg->group(QStringLiteral("ServerSieve %1").arg(index));
     group.writeEntry(QStringLiteral("Port"), conf.sieveSettings.port);
     group.writeEntry(QStringLiteral("ServerName"), conf.sieveSettings.serverName);
     group.writeEntry(QStringLiteral("UserName"), conf.sieveSettings.userName);
     group.writeEntry(QStringLiteral("Enabled"), conf.enabled);
+
     const QString walletEntry = SieveEditorUtil::sievePasswordIdentifier(conf.sieveSettings.userName, conf.sieveSettings.serverName);
-    if (wallet) {
-        wallet->writePassword(walletEntry, conf.sieveSettings.password);
-    }
+    auto *writeJob = new SieveEditorSavePasswordJob;
+    writeJob->setName(SieveEditorUtil::walletFolderName());
+    writeJob->setPassword(conf.sieveSettings.password);
+    writeJob->setKey(walletEntry);
+
+    writeJob->start();
+
     group.writeEntry(QStringLiteral("Authentication"), static_cast<int>(conf.sieveSettings.authenticationType));
 
     //Imap Account Settings
@@ -143,32 +149,27 @@ void SieveEditorUtil::writeSieveSettings(KWallet::Wallet *wallet, const KSharedC
         group.writeEntry(QStringLiteral("ImapServerName"), conf.sieveImapAccountSettings.serverName());
         group.writeEntry(QStringLiteral("ImapUserName"), conf.sieveImapAccountSettings.userName());
         const QString imapWalletEntry = imapPasswordIdentifier(conf.sieveImapAccountSettings.userName(), conf.sieveImapAccountSettings.serverName());
-        if (wallet) {
-            wallet->writePassword(imapWalletEntry, conf.sieveImapAccountSettings.password());
-        }
+
+        auto *writeImapSettingJob = new SieveEditorSavePasswordJob;
+        writeImapSettingJob->setName(SieveEditorUtil::walletFolderName());
+        writeImapSettingJob->setPassword(conf.sieveImapAccountSettings.password());
+        writeImapSettingJob->setKey(imapWalletEntry);
+        writeImapSettingJob->start();
     }
 }
 
-KWallet::Wallet * SieveEditorUtil::selectWalletFolder()
+QString SieveEditorUtil::walletFolderName()
 {
-    KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
-    if (wallet) {
-        if (!wallet->hasFolder(QStringLiteral("sieveeditor"))) {
-            wallet->createFolder(QStringLiteral("sieveeditor"));
-        }
-        wallet->setFolder(QStringLiteral("sieveeditor"));
-    }
-    return wallet;
+    return QStringLiteral("sieveeditor");
 }
 
 void SieveEditorUtil::addServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf)
 {
-    KWallet::Wallet *wallet = SieveEditorUtil::selectWalletFolder();
     KSharedConfigPtr cfg = KSharedConfig::openConfig();
     const QRegularExpression re(QStringLiteral("^ServerSieve (.+)$"));
     const QStringList groups = cfg->groupList().filter(re);
 
-    writeSieveSettings(wallet, cfg, conf, groups.count());
+    writeSieveSettings(cfg, conf, groups.count());
     cfg->sync();
 }
 

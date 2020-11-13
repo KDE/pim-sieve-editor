@@ -51,6 +51,7 @@ void ImportImapSettingsAkonadiCheckJob::start()
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*rc"));
         for (const QString &file : fileNames) {
             if (resourceCanHaveSieveSupport(file)) {
+                //Move as Async
                 if (importSettings(dir, file)) {
                     mSettingsWereImported = true;
                 }

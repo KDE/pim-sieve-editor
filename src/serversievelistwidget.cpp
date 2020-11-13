@@ -25,9 +25,9 @@
 
 #include <QListWidgetItem>
 #include <QPointer>
-#include <KWallet>
-#include <qt5keychain/keychain.h>
 
+#include <qt5keychain/keychain.h>
+using namespace QKeychain;
 ServerSieveListWidget::ServerSieveListWidget(QWidget *parent)
     : QListWidget(parent)
 {
@@ -71,17 +71,10 @@ void ServerSieveListWidget::writeConfig()
 void ServerSieveListWidget::deletePasswords()
 {
     if (!mNeedToRemovePasswordInWallet.isEmpty()) {
-        KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
-        if (wallet && wallet->isOpen()) {
-            if (wallet->hasFolder(QStringLiteral("sieveeditor"))) {
-                wallet->setFolder(QStringLiteral("sieveeditor"));
-                for (const QString &identifier : mNeedToRemovePasswordInWallet) {
-                    //TODO move to qtkeychain
-                    if (wallet->hasEntry(identifier)) {
-                        wallet->removeEntry(identifier);
-                    }
-                }
-            }
+        for (const QString &identifier : mNeedToRemovePasswordInWallet) {
+            auto deleteJob = new DeletePasswordJob(QStringLiteral("sieveeditor"));
+            deleteJob->setKey(identifier);
+            deleteJob->start();
         }
     }
 }

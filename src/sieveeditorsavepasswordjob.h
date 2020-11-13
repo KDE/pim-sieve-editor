@@ -17,33 +17,37 @@
    Boston, MA 02110-1301, USA.
 */
 
-
-#ifndef READSERVERSIEVECONFIGJOB_H
-#define READSERVERSIEVECONFIGJOB_H
+#ifndef SIEVEEDITORSAVEPASSWORDJOB_H
+#define SIEVEEDITORSAVEPASSWORDJOB_H
 
 #include <QObject>
+#include "libsieveeditor_export.h"
 #include <qt5keychain/keychain.h>
-#include "sieveeditorutil.h"
-class ReadServerSieveConfigJob : public QObject
+class LIBSIEVEEDITOR_EXPORT SieveEditorSavePasswordJob : public QObject
 {
     Q_OBJECT
 public:
-    explicit ReadServerSieveConfigJob(QObject *parent = nullptr);
-    ~ReadServerSieveConfigJob();
+    explicit SieveEditorSavePasswordJob(QObject *parent = nullptr);
+    ~SieveEditorSavePasswordJob();
+
+    Q_REQUIRED_RESULT bool canStart() const;
 
     void start();
-Q_SIGNALS:
-    void finished(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig);
-    void loadNextConfig();
+
+    Q_REQUIRED_RESULT QString password() const;
+    void setPassword(const QString &password);
+
+    Q_REQUIRED_RESULT QString key() const;
+    void setKey(const QString &key);
+
+    Q_REQUIRED_RESULT QString name() const;
+    void setName(const QString &name);
+
 private:
-    void loadSettings(const QString &conf);
-    void slotReadNextConfig();
-    void loadImapAccountSettings();
-    void readSieveServerPasswordFinished(QKeychain::Job *baseJob);
-    void readImapPasswordFinished(QKeychain::Job *baseJob);
-    QVector<SieveEditorUtil::SieveServerConfig> mLstConfig;
-    SieveEditorUtil::SieveServerConfig mCurrentSieveServerConfig;
-    QStringList mGroupsConfigs;
+    void slotPasswordWritten(QKeychain::Job *baseJob);
+    QString mPassword;
+    QString mKey;
+    QString mName;
 };
 
-#endif // READSERVERSIEVECONFIGJOB_H
+#endif // SIEVEEDITORSAVEPASSWORDJOB_H

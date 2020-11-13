@@ -29,6 +29,8 @@ public:
     AbstractImapSettingsPassword();
     virtual ~AbstractImapSettingsPassword();
     virtual void importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings);
+Q_SIGNALS:
+    void importPasswordDone();
 };
 
 #endif // ABSTRACTIMAPSETTINGSPASSWORD_H

@@ -56,6 +56,7 @@ set(sieveeditor_LIB_SRCS
     sieveeditoremptytabwidgetlabel.cpp
     sievepurposemenuwidget.cpp
     readserversieveconfigjob.cpp
+    sieveeditorsavepasswordjob.cpp
     ${sieveeditor_importimapsettings_SRCS}
     ${sieveeditor_importimapsettings_check_SRCS}
     )
@@ -94,6 +95,7 @@ target_link_libraries(libsieveeditor
     KF5::PimCommon
     KF5::KSieveUi
     KF5::KManageSieve
+    qt5keychain
     ${libsieveeditor_userfeedback_LIB}
     )
 

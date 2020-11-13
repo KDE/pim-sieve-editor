@@ -20,12 +20,14 @@
 #include "readserversieveconfigjob.h"
 
 #include "sieveserversettings.h"
+#include "sieveeditor_debug.h"
 
 #include <KSharedConfig>
-#include <KWallet>
 #include <KConfig>
 #include <QRegularExpression>
 #include <QVector>
+
+using namespace QKeychain;
 
 ReadServerSieveConfigJob::ReadServerSieveConfigJob(QObject *parent)
     : QObject(parent)
@@ -40,7 +42,6 @@ ReadServerSieveConfigJob::~ReadServerSieveConfigJob()
 
 void ReadServerSieveConfigJob::loadSettings(const QString &conf)
 {
-    KWallet::Wallet *wallet = SieveEditorUtil::selectWalletFolder();
     mCurrentSieveServerConfig = {};
     KSharedConfigPtr cfg = KSharedConfig::openConfig();
     KConfigGroup group = cfg->group(conf);
@@ -62,42 +63,39 @@ void ReadServerSieveConfigJob::loadSettings(const QString &conf)
     mCurrentSieveServerConfig.sieveImapAccountSettings.setEncryptionMode(
                 static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(KSieveUi::SieveImapAccountSettings::SSLorTLS))));
 
-    //Read wallet
-    //Make async
     const QString walletEntry = mCurrentSieveServerConfig.sieveSettings.userName + QLatin1Char('@') + mCurrentSieveServerConfig.sieveSettings.serverName;
-    if (wallet && wallet->hasEntry(walletEntry)) {
-        QString passwd;
-        wallet->readPassword(walletEntry, passwd);
-        mCurrentSieveServerConfig.sieveSettings.password = passwd;
-        //Q_EMIT loadImapAccountSettingsRequested();
-    }
-    readSieveServerPasswordFinished();
+    auto readJob = new ReadPasswordJob(SieveEditorUtil::walletFolderName(), this);
+    connect(readJob, &Job::finished, this, &ReadServerSieveConfigJob::readSieveServerPasswordFinished);
+    readJob->setKey(walletEntry);
+    readJob->start();
 }
 
-void ReadServerSieveConfigJob::readSieveServerPasswordFinished()
+void ReadServerSieveConfigJob::readSieveServerPasswordFinished(QKeychain::Job *baseJob)
 {
+    auto *job = qobject_cast<ReadPasswordJob *>(baseJob);
+    Q_ASSERT(job);
+    if (!job->error()) {
+        mCurrentSieveServerConfig.sieveSettings.password = job->textData();
+    } else {
+        qCWarning(SIEVEEDITOR_LOG) << "We have an error during reading password " << job->errorString();
+    }
+
     loadImapAccountSettings();
 }
 
 void ReadServerSieveConfigJob::loadImapAccountSettings()
 {
-    KWallet::Wallet *wallet = SieveEditorUtil::selectWalletFolder();
-
     if (!mCurrentSieveServerConfig.sieveImapAccountSettings.userName().isEmpty()
             && !mCurrentSieveServerConfig.sieveImapAccountSettings.serverName().isEmpty()
             && (mCurrentSieveServerConfig.sieveImapAccountSettings.userName() != mCurrentSieveServerConfig.sieveSettings.userName)
             && (mCurrentSieveServerConfig.sieveImapAccountSettings.serverName() != mCurrentSieveServerConfig.sieveSettings.serverName)) {
         mCurrentSieveServerConfig.useImapCustomServer = true;
 
-        //TODO make async
         const QString imapWalletEntry = QLatin1String("Imap") + mCurrentSieveServerConfig.sieveImapAccountSettings.userName() + QLatin1Char('@') + mCurrentSieveServerConfig.sieveImapAccountSettings.serverName();
-        if (wallet && wallet->hasEntry(imapWalletEntry)) {
-            QString passwd;
-            wallet->readPassword(imapWalletEntry, passwd);
-            mCurrentSieveServerConfig.sieveImapAccountSettings.setPassword(passwd);
-        }
-        mLstConfig.append(mCurrentSieveServerConfig);
-        Q_EMIT loadNextConfig();
+        auto readJob = new ReadPasswordJob(SieveEditorUtil::walletFolderName(), this);
+        connect(readJob, &Job::finished, this, &ReadServerSieveConfigJob::readImapPasswordFinished);
+        readJob->setKey(imapWalletEntry);
+        readJob->start();
     } else {
         //Use Sieve Account Settings
         mCurrentSieveServerConfig.sieveImapAccountSettings.setUserName(mCurrentSieveServerConfig.sieveSettings.userName);
@@ -109,9 +107,17 @@ void ReadServerSieveConfigJob::loadImapAccountSettings()
     }
 }
 
-void ReadServerSieveConfigJob::readImapPasswordFinished()
+void ReadServerSieveConfigJob::readImapPasswordFinished(QKeychain::Job *baseJob)
 {
-    //TODO
+    auto *job = qobject_cast<ReadPasswordJob *>(baseJob);
+    Q_ASSERT(job);
+    if (!job->error()) {
+        mCurrentSieveServerConfig.sieveImapAccountSettings.setPassword(job->textData());
+    } else {
+        qCWarning(SIEVEEDITOR_LOG) << "We have an error during reading password (imap) " << job->errorString();
+    }
+    mLstConfig.append(mCurrentSieveServerConfig);
+    Q_EMIT loadNextConfig();
 }
 
 void ReadServerSieveConfigJob::start()
