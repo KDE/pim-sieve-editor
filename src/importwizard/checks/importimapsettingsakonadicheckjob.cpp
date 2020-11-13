@@ -63,20 +63,18 @@ void ImportImapSettingsAkonadiCheckJob::loadSieveServerSettings()
     QMapIterator<QString, QString> i(mSieveServerLst);
     while (i.hasNext()) {
         i.next();
-        if (importSettings(i.key(), i.value())) {
-            mSettingsWereImported = true;
-        }
+        importSettings(i.key(), i.value());
     }
     checkNoSettingsImported();
 }
 
-bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory, const QString &filename)
+void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory, const QString &filename)
 {
     const QString filePath = directory +  QLatin1Char('/') + filename;
     //qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
     if (!QFileInfo::exists(filePath)) {
         qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filePath;
-        return false;
+        return;
     }
     SieveEditorUtil::SieveServerConfig config;
     const bool isKolabSettings = filePath.contains(QLatin1String("/akonadi_kolab_resource"));
@@ -133,10 +131,9 @@ bool ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
         mPasswordImporter->importPasswords(config, filename, reuseImapSettings);
         if (config.isValid()) {
             Q_EMIT importSetting(filename, config);
-            return true;
+            mSettingsWereImported = true;
         }
     }
-    return false;
 }
 
 bool ImportImapSettingsAkonadiCheckJob::settingsCanBeImported() const
