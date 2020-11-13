@@ -51,11 +51,20 @@ void ImportImapSettingsAkonadiCheckJob::start()
         const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*rc"));
         for (const QString &file : fileNames) {
             if (resourceCanHaveSieveSupport(file)) {
-                //Move as Async
-                if (importSettings(dir, file)) {
-                    mSettingsWereImported = true;
-                }
+                mSieveServerLst.insert(dir, file);
             }
+        }
+    }
+    loadSieveServerSettings();
+}
+
+void ImportImapSettingsAkonadiCheckJob::loadSieveServerSettings()
+{
+    QMapIterator<QString, QString> i(mSieveServerLst);
+    while (i.hasNext()) {
+        i.next();
+        if (importSettings(i.key(), i.value())) {
+            mSettingsWereImported = true;
         }
     }
     checkNoSettingsImported();

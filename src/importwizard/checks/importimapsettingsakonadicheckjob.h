@@ -35,8 +35,10 @@ public:
     Q_REQUIRED_RESULT QString name() const override;
 
 private:
-    inline bool resourceCanHaveSieveSupport(const QString &filename) const;
-    bool importSettings(const QString &directory, const QString &filename);
+    inline Q_REQUIRED_RESULT bool resourceCanHaveSieveSupport(const QString &filename) const;
+    void loadSieveServerSettings();
+    Q_REQUIRED_RESULT bool importSettings(const QString &directory, const QString &filename);
+    QMultiMap<QString, QString> mSieveServerLst;
 };
 
 #endif // IMPORTIMAPSETTINGSAKONADICHECKJOB_H
