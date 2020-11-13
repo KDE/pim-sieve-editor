@@ -55,9 +55,6 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     mServerWidget = new SieveEditorConfigureServerWidget;
     layout->addWidget(mServerWidget);
 
-    mCloseWallet = new QCheckBox(i18n("Close wallet when close application"));
-    layout->addWidget(mCloseWallet);
-
     KPageWidgetItem *serverPageWidgetPage = new KPageWidgetItem(serverConfigureWiget, i18n("Sieve Server"));
     serverPageWidgetPage->setIcon(QIcon::fromTheme(QStringLiteral("network-workgroup")));
     addPage(serverPageWidgetPage);
@@ -105,14 +102,12 @@ SieveEditorConfigureDialog::~SieveEditorConfigureDialog()
 void SieveEditorConfigureDialog::loadServerSieveConfig()
 {
     mServerWidget->readConfig();
-    PimCommon::ConfigureImmutableWidgetUtils::loadWidget(mCloseWallet, SieveEditorGlobalConfig::self()->closeWalletItem());
     PimCommon::ConfigureImmutableWidgetUtils::loadWidget(mWrapText, SieveEditorGlobalConfig::self()->wrapTextItem());
 }
 
 void SieveEditorConfigureDialog::saveServerSieveConfig()
 {
     mServerWidget->writeConfig();
-    PimCommon::ConfigureImmutableWidgetUtils::saveCheckBox(mCloseWallet, SieveEditorGlobalConfig::self()->closeWalletItem());
     PimCommon::ConfigureImmutableWidgetUtils::saveCheckBox(mWrapText, SieveEditorGlobalConfig::self()->wrapTextItem());
     SieveEditorGlobalConfig::self()->save();
 #ifdef WITH_KUSERFEEDBACK

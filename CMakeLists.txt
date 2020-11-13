@@ -77,7 +77,7 @@ find_package(Qt5Keychain CONFIG)
 set_package_properties(Qt5Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"
                                    URL "https://github.com/frankosterfeld/qtkeychain"
-                                   TYPE OPTIONAL)
+                                   TYPE REQUIRED)
 
 include_directories(${sieveeditor_SOURCE_DIR} ${sieveeditor_BINARY_DIR})
 

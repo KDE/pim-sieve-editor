@@ -43,7 +43,6 @@ private:
     void writeConfig();
     void loadServerSieveConfig();
     SieveEditorConfigureServerWidget *mServerWidget = nullptr;
-    QCheckBox *mCloseWallet = nullptr;
     QCheckBox *mWrapText = nullptr;
 #ifdef WITH_KUSERFEEDBACK
     KUserFeedback::FeedbackConfigWidget *mUserFeedbackWidget = nullptr;

@@ -48,11 +48,6 @@ KWallet::Wallet *SieveServerSettings::wallet()
     return mWallet;
 }
 
-void SieveServerSettings::closeWallet()
-{
-    KWallet::Wallet::closeWallet(KWallet::Wallet::LocalWallet(), true);
-}
-
 void SieveServerSettings::slotWalletClosed()
 {
     delete mWallet;
