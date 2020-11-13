@@ -26,6 +26,7 @@
 #include <QListWidgetItem>
 #include <QPointer>
 #include <KWallet>
+#include <qt5keychain/keychain.h>
 
 ServerSieveListWidget::ServerSieveListWidget(QWidget *parent)
     : QListWidget(parent)
