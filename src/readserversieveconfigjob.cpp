@@ -37,7 +37,6 @@ ReadServerSieveConfigJob::ReadServerSieveConfigJob(QObject *parent)
 
 ReadServerSieveConfigJob::~ReadServerSieveConfigJob()
 {
-
 }
 
 void ReadServerSieveConfigJob::loadSettings(const QString &conf)
@@ -51,17 +50,17 @@ void ReadServerSieveConfigJob::loadSettings(const QString &conf)
     mCurrentSieveServerConfig.sieveSettings.userName = group.readEntry(QStringLiteral("UserName"));
     mCurrentSieveServerConfig.enabled = group.readEntry(QStringLiteral("Enabled"), true);
     mCurrentSieveServerConfig.sieveSettings.authenticationType
-            = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(group.readEntry(QStringLiteral("Authentication"),
-                                                                                                  static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
+        = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(group.readEntry(QStringLiteral("Authentication"),
+                                                                                              static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
 
     //Imap Account Settings
     mCurrentSieveServerConfig.sieveImapAccountSettings.setPort(group.readEntry(QStringLiteral("ImapPort"), 0));
     mCurrentSieveServerConfig.sieveImapAccountSettings.setServerName(group.readEntry(QStringLiteral("ImapServerName")));
     mCurrentSieveServerConfig.sieveImapAccountSettings.setUserName(group.readEntry(QStringLiteral("ImapUserName")));
     mCurrentSieveServerConfig.sieveImapAccountSettings.setAuthenticationType(
-                static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(group.readEntry(QStringLiteral("ImapAuthentication"), static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
+        static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(group.readEntry(QStringLiteral("ImapAuthentication"), static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
     mCurrentSieveServerConfig.sieveImapAccountSettings.setEncryptionMode(
-                static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(KSieveUi::SieveImapAccountSettings::SSLorTLS))));
+        static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(KSieveUi::SieveImapAccountSettings::SSLorTLS))));
 
     const QString walletEntry = mCurrentSieveServerConfig.sieveSettings.userName + QLatin1Char('@') + mCurrentSieveServerConfig.sieveSettings.serverName;
     auto readJob = new ReadPasswordJob(SieveEditorUtil::walletFolderName(), this);
@@ -86,9 +85,9 @@ void ReadServerSieveConfigJob::readSieveServerPasswordFinished(QKeychain::Job *b
 void ReadServerSieveConfigJob::loadImapAccountSettings()
 {
     if (!mCurrentSieveServerConfig.sieveImapAccountSettings.userName().isEmpty()
-            && !mCurrentSieveServerConfig.sieveImapAccountSettings.serverName().isEmpty()
-            && (mCurrentSieveServerConfig.sieveImapAccountSettings.userName() != mCurrentSieveServerConfig.sieveSettings.userName)
-            && (mCurrentSieveServerConfig.sieveImapAccountSettings.serverName() != mCurrentSieveServerConfig.sieveSettings.serverName)) {
+        && !mCurrentSieveServerConfig.sieveImapAccountSettings.serverName().isEmpty()
+        && (mCurrentSieveServerConfig.sieveImapAccountSettings.userName() != mCurrentSieveServerConfig.sieveSettings.userName)
+        && (mCurrentSieveServerConfig.sieveImapAccountSettings.serverName() != mCurrentSieveServerConfig.sieveSettings.serverName)) {
         mCurrentSieveServerConfig.useImapCustomServer = true;
 
         const QString imapWalletEntry = QLatin1String("Imap") + mCurrentSieveServerConfig.sieveImapAccountSettings.userName() + QLatin1Char('@') + mCurrentSieveServerConfig.sieveImapAccountSettings.serverName();

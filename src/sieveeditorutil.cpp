@@ -33,7 +33,6 @@
 #include <qt5keychain/keychain.h>
 using namespace QKeychain;
 
-
 QUrl SieveEditorUtil::SieveServerConfig::url() const
 {
     QUrl u;
@@ -87,7 +86,6 @@ bool SieveEditorUtil::SieveServerConfig::operator ==(const SieveEditorUtil::Siev
     }
     return result;
 }
-
 
 void SieveEditorUtil::writeServerSieveConfig(const QVector<SieveServerConfig> &lstConfig)
 {

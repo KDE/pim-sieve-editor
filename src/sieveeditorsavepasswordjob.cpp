@@ -24,12 +24,10 @@ using namespace QKeychain;
 SieveEditorSavePasswordJob::SieveEditorSavePasswordJob(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 SieveEditorSavePasswordJob::~SieveEditorSavePasswordJob()
 {
-
 }
 
 bool SieveEditorSavePasswordJob::canStart() const
