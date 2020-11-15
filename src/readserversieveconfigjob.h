@@ -28,7 +28,7 @@ class ReadServerSieveConfigJob : public QObject
     Q_OBJECT
 public:
     explicit ReadServerSieveConfigJob(QObject *parent = nullptr);
-    ~ReadServerSieveConfigJob();
+    ~ReadServerSieveConfigJob() override;
 
     void start();
 Q_SIGNALS:

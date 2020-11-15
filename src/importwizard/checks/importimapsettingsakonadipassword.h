@@ -21,6 +21,7 @@
 #define IMPORTIMAPSETTINGSAKONADIPASSWORD_H
 
 #include "abstractimapsettingspassword.h"
+#include <qt5keychain/keychain.h>
 
 class ImportImapSettingsAkonadiPassword : public AbstractImapSettingsPassword
 {

@@ -20,6 +20,7 @@
 #include "importimapsettingsakonadipassword.h"
 #include "sieveserversettings.h"
 #include <KWallet>
+using namespace QKeychain;
 
 ImportImapSettingsAkonadiPassword::ImportImapSettingsAkonadiPassword(QObject *parent)
     : AbstractImapSettingsPassword(parent)
