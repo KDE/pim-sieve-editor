@@ -31,12 +31,33 @@ ImportImapSettingsAkonadiPassword::~ImportImapSettingsAkonadiPassword()
 {
 }
 
+void ImportImapSettingsAkonadiPassword::readSieveServerPasswordFinished(QKeychain::Job *baseJob)
+{
+    auto *job = qobject_cast<ReadPasswordJob *>(baseJob);
+    Q_ASSERT(job);
+    if (!job->error()) {
+//        mCurrentSieveServerConfig.sieveSettings.password = job->textData();
+    } else {
+//        qCWarning(SIEVEEDITOR_LOG) << "We have an error during reading password " << job->errorString();
+    }
+
+//    loadImapAccountSettings();
+}
+
 void ImportImapSettingsAkonadiPassword::importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings)
 {
+    mReuseImapSettings = reuseImapSettings;
     mFileName = filename;
     KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
     QString password;
     QString customPassword;
+#if 0
+    auto readJob = new ReadPasswordJob(QStringLiteral("imap"), this);
+    connect(readJob, &Job::finished, this, &ImportImapSettingsAkonadiPassword::readSieveServerPasswordFinished);
+    readJob->setKey(mFileName);
+    readJob->start();
+#endif
+
     if (wallet) {
         bool passwordStoredInWallet = false;
         //Make async

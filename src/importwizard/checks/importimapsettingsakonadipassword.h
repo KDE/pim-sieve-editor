@@ -31,6 +31,9 @@ public:
     ~ImportImapSettingsAkonadiPassword() override;
 
     void importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings) override;
+private:
+    void readSieveServerPasswordFinished(QKeychain::Job *baseJob);
+    bool mReuseImapSettings = false;
 };
 
 #endif // IMPORTIMAPSETTINGSAKONADIPASSWORD_H
