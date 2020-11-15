@@ -60,10 +60,10 @@ void ImportImapSettingsAkonadiCheckJob::start()
 
 void ImportImapSettingsAkonadiCheckJob::loadSieveServerSettings()
 {
-    QMapIterator<QString, QString> i(mSieveServerLst);
-    while (i.hasNext()) {
-        i.next();
+    QMap<QString, QString>::const_iterator i = mSieveServerLst.constBegin();
+    while (i != mSieveServerLst.constEnd()) {
         importSettings(i.key(), i.value());
+        ++i;
     }
     checkNoSettingsImported();
 }
