@@ -31,6 +31,8 @@
 ImportImapSettingsAkonadiCheckJob::ImportImapSettingsAkonadiCheckJob(QObject *parent)
     : AbstractImapSettingsCheckJob(parent)
 {
+    connect(mPasswordImporter, &AbstractImapSettingsPassword::importPasswordDone,
+            this, &ImportImapSettingsAkonadiCheckJob::slotImportNextServerSieveDone);
 }
 
 ImportImapSettingsAkonadiCheckJob::~ImportImapSettingsAkonadiCheckJob()
@@ -58,14 +60,30 @@ void ImportImapSettingsAkonadiCheckJob::start()
     loadSieveServerSettings();
 }
 
+void ImportImapSettingsAkonadiCheckJob::slotImportNextServerSieveDone(const QString &filename)
+{
+    if (mCurrentSieveServerConfig.isValid()) {
+        Q_EMIT importSetting(filename, mCurrentSieveServerConfig);
+        mSettingsWereImported = true;
+    }
+}
+
 void ImportImapSettingsAkonadiCheckJob::loadSieveServerSettings()
 {
-    QMap<QString, QString>::const_iterator i = mSieveServerLst.constBegin();
-    while (i != mSieveServerLst.constEnd()) {
-        importSettings(i.key(), i.value());
-        ++i;
+    mSieveServerMapIterator = mSieveServerLst.constBegin();
+    if (mSieveServerMapIterator != mSieveServerLst.constEnd()) {
+        importSettings(mSieveServerMapIterator.key(), mSieveServerMapIterator.value());
     }
-    checkNoSettingsImported();
+}
+
+void ImportImapSettingsAkonadiCheckJob::importNextServerSieve()
+{
+    ++mSieveServerMapIterator;
+    if(mSieveServerMapIterator != mSieveServerLst.constEnd()) {
+        importSettings(mSieveServerMapIterator.key(), mSieveServerMapIterator.value());
+    } else {
+        checkNoSettingsImported();
+    }
 }
 
 void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory, const QString &filename)
@@ -74,9 +92,10 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
     //qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
     if (!QFileInfo::exists(filePath)) {
         qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filePath;
+        importNextServerSieve();
         return;
     }
-    SieveEditorUtil::SieveServerConfig config;
+    mCurrentSieveServerConfig = {};
     const bool isKolabSettings = filePath.contains(QLatin1String("/akonadi_kolab_resource"));
     KSharedConfigPtr resourceConfig = KSharedConfig::openConfig(filePath);
 
@@ -88,51 +107,47 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
         const QString userName = networkGroup.readEntry(QStringLiteral("UserName"), QString());
         const QString imapServerName = networkGroup.readEntry(QStringLiteral("ImapServer"), QString());
         const int imapPort = networkGroup.readEntry(QStringLiteral("ImapPort"), isKolabSettings ? 143 : 993);
-        config.sieveImapAccountSettings.setUserName(userName);
-        config.sieveImapAccountSettings.setServerName(imapServerName);
-        config.sieveImapAccountSettings.setPort(imapPort);
-        config.sieveImapAccountSettings.setAuthenticationType(
+        mCurrentSieveServerConfig.sieveImapAccountSettings.setUserName(userName);
+        mCurrentSieveServerConfig.sieveImapAccountSettings.setServerName(imapServerName);
+        mCurrentSieveServerConfig.sieveImapAccountSettings.setPort(imapPort);
+        mCurrentSieveServerConfig.sieveImapAccountSettings.setAuthenticationType(
             static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(
                 networkGroup.readEntry(QStringLiteral("Authentication"),
                                        static_cast<int>(KSieveUi::SieveImapAccountSettings::Plain))));
         const QString encryption = networkGroup.readEntry(QStringLiteral("Safety"));
         if (encryption == QLatin1String("SSL")) {
-            config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::SSLorTLS);
+            mCurrentSieveServerConfig.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::SSLorTLS);
         } else if (encryption == QLatin1String("STARTTLS")) {
-            config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::STARTTLS);
+            mCurrentSieveServerConfig.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::STARTTLS);
         } else if (encryption == QLatin1String("None")) {
-            config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::Unencrypted);
+            mCurrentSieveServerConfig.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::Unencrypted);
         } else if (encryption.isEmpty()) { //Default value
             if (isKolabSettings) {
-                config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::STARTTLS);
+                mCurrentSieveServerConfig.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::STARTTLS);
             } else {
-                config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::Unencrypted);
+                mCurrentSieveServerConfig.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::Unencrypted);
             }
         } else {
             qCWarning(SIEVEEDITOR_LOG) << "Unknown encryption mode " << encryption;
         }
         const int sievePort = sieveGroup.readEntry(QStringLiteral("SievePort"), 4190);
         if (sievePort != -1) {
-            config.sieveSettings.port = sievePort;
+            mCurrentSieveServerConfig.sieveSettings.port = sievePort;
         }
         if (reuseImapSettings) {
-            config.sieveSettings.serverName = imapServerName;
-            config.sieveSettings.userName = userName;
-            config.sieveSettings.authenticationType
+            mCurrentSieveServerConfig.sieveSettings.serverName = imapServerName;
+            mCurrentSieveServerConfig.sieveSettings.userName = userName;
+            mCurrentSieveServerConfig.sieveSettings.authenticationType
                 = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(sieveGroup.readEntry(QStringLiteral("Authentication"),
                                                                                                            static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
         } else {
             const QString sieveCustomUserName = sieveGroup.readEntry(QStringLiteral("SieveCustomUsername"));
-            config.sieveSettings.userName = sieveCustomUserName;
-            config.sieveSettings.serverName = imapServerName; //FIXME
+            mCurrentSieveServerConfig.sieveSettings.userName = sieveCustomUserName;
+            mCurrentSieveServerConfig.sieveSettings.serverName = imapServerName; //FIXME
             //TODO
         }
         Q_ASSERT_X(mPasswordImporter, "Missing mPasswordImporter", "You must create a mPasswordImporter");
-        mPasswordImporter->importPasswords(config, filename, reuseImapSettings);
-        if (config.isValid()) {
-            Q_EMIT importSetting(filename, config);
-            mSettingsWereImported = true;
-        }
+        mPasswordImporter->importPasswords(mCurrentSieveServerConfig, filename, reuseImapSettings);
     }
 }
 

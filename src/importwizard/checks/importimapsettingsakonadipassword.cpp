@@ -21,8 +21,8 @@
 #include "sieveserversettings.h"
 #include <KWallet>
 
-ImportImapSettingsAkonadiPassword::ImportImapSettingsAkonadiPassword()
-    : AbstractImapSettingsPassword()
+ImportImapSettingsAkonadiPassword::ImportImapSettingsAkonadiPassword(QObject *parent)
+    : AbstractImapSettingsPassword(parent)
 {
 }
 
@@ -32,6 +32,7 @@ ImportImapSettingsAkonadiPassword::~ImportImapSettingsAkonadiPassword()
 
 void ImportImapSettingsAkonadiPassword::importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings)
 {
+    mFileName = filename;
     KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
     QString password;
     QString customPassword;
@@ -55,4 +56,5 @@ void ImportImapSettingsAkonadiPassword::importPasswords(SieveEditorUtil::SieveSe
             }
         }
     }
+    Q_EMIT importPasswordDone(mFileName);
 }

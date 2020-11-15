@@ -23,14 +23,17 @@
 #include <sieveeditorutil.h>
 
 #include "libsieveeditor_private_export.h"
-class LIBSIEVEEDITOR_TESTS_EXPORT AbstractImapSettingsPassword
+class LIBSIEVEEDITOR_TESTS_EXPORT AbstractImapSettingsPassword : public QObject
 {
+    Q_OBJECT
 public:
-    AbstractImapSettingsPassword();
-    virtual ~AbstractImapSettingsPassword();
+    explicit AbstractImapSettingsPassword(QObject *parent = nullptr);
+    ~AbstractImapSettingsPassword() override;
     virtual void importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings);
 Q_SIGNALS:
-    void importPasswordDone();
+    void importPasswordDone(const QString &filename);
+protected:
+    QString mFileName;
 };
 
 #endif // ABSTRACTIMAPSETTINGSPASSWORD_H

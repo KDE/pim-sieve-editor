@@ -24,8 +24,9 @@
 
 class ImportImapSettingsAkonadiPassword : public AbstractImapSettingsPassword
 {
+    Q_OBJECT
 public:
-    ImportImapSettingsAkonadiPassword();
+    explicit ImportImapSettingsAkonadiPassword(QObject *parent = nullptr);
     ~ImportImapSettingsAkonadiPassword() override;
 
     void importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings) override;

@@ -19,7 +19,8 @@
 
 #include "abstractimapsettingspassword.h"
 
-AbstractImapSettingsPassword::AbstractImapSettingsPassword()
+AbstractImapSettingsPassword::AbstractImapSettingsPassword(QObject *parent)
+    : QObject(parent)
 {
 }
 
@@ -29,7 +30,7 @@ AbstractImapSettingsPassword::~AbstractImapSettingsPassword()
 
 void AbstractImapSettingsPassword::importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings)
 {
-    Q_UNUSED(config);
-    Q_UNUSED(filename);
-    Q_UNUSED(reuseImapSettings);
+    Q_UNUSED(config)
+    Q_UNUSED(filename)
+    Q_UNUSED(reuseImapSettings)
 }

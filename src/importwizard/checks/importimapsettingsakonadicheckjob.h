@@ -37,8 +37,12 @@ public:
 private:
     inline Q_REQUIRED_RESULT bool resourceCanHaveSieveSupport(const QString &filename) const;
     void loadSieveServerSettings();
+    void slotImportNextServerSieveDone(const QString &filename);
+    void importNextServerSieve();
     void importSettings(const QString &directory, const QString &filename);
     QMultiMap<QString, QString> mSieveServerLst;
+    QMap<QString, QString>::const_iterator mSieveServerMapIterator;
+    SieveEditorUtil::SieveServerConfig mCurrentSieveServerConfig;
 };
 
 #endif // IMPORTIMAPSETTINGSAKONADICHECKJOB_H
