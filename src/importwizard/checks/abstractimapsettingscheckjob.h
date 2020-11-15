@@ -29,7 +29,7 @@ class LIBSIEVEEDITOR_TESTS_EXPORT AbstractImapSettingsCheckJob : public QObject
     Q_OBJECT
 public:
     explicit AbstractImapSettingsCheckJob(QObject *parent = nullptr);
-    ~AbstractImapSettingsCheckJob();
+    ~AbstractImapSettingsCheckJob() override;
     virtual void start() = 0;
 
     virtual Q_REQUIRED_RESULT bool settingsCanBeImported() const = 0;
