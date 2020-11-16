@@ -64,6 +64,7 @@ void ImportImapSettingsAkonadiCheckJob::slotImportNextServerSieveDone(const Siev
         Q_EMIT importSetting(filename, config);
         mSettingsWereImported = true;
     }
+    importNextServerSieve();
 }
 
 void ImportImapSettingsAkonadiCheckJob::loadSieveServerSettings()
@@ -146,6 +147,8 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
         }
         Q_ASSERT_X(mPasswordImporter, "Missing mPasswordImporter", "You must create a mPasswordImporter");
         mPasswordImporter->importPasswords(config, filename, reuseImapSettings);
+    } else {
+        importNextServerSieve();
     }
 }
 
