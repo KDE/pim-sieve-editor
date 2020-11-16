@@ -30,7 +30,7 @@ public:
     explicit ImportImapSettingsAkonadiPassword(QObject *parent = nullptr);
     ~ImportImapSettingsAkonadiPassword() override;
 
-    void importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings) override;
+    void importPasswords(const SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings) override;
 private:
     void readSieveServerPasswordFinished(QKeychain::Job *baseJob);
     bool mReuseImapSettings = false;

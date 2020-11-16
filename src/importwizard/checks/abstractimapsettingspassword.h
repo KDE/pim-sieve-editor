@@ -29,9 +29,9 @@ class LIBSIEVEEDITOR_TESTS_EXPORT AbstractImapSettingsPassword : public QObject
 public:
     explicit AbstractImapSettingsPassword(QObject *parent = nullptr);
     ~AbstractImapSettingsPassword() override;
-    virtual void importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings);
+    virtual void importPasswords(const SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings);
 Q_SIGNALS:
-    void importPasswordDone(const QString &filename);
+    void importPasswordDone(const SieveEditorUtil::SieveServerConfig &config, const QString &filename);
 protected:
     QString mFileName;
 };

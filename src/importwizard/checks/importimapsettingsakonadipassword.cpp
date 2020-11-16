@@ -44,8 +44,9 @@ void ImportImapSettingsAkonadiPassword::readSieveServerPasswordFinished(QKeychai
 //    loadImapAccountSettings();
 }
 
-void ImportImapSettingsAkonadiPassword::importPasswords(SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings)
+void ImportImapSettingsAkonadiPassword::importPasswords(const SieveEditorUtil::SieveServerConfig &_config, const QString &filename, bool reuseImapSettings)
 {
+    SieveEditorUtil::SieveServerConfig config = _config;
     mReuseImapSettings = reuseImapSettings;
     mFileName = filename;
     KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
@@ -78,5 +79,5 @@ void ImportImapSettingsAkonadiPassword::importPasswords(SieveEditorUtil::SieveSe
             }
         }
     }
-    Q_EMIT importPasswordDone(mFileName);
+    Q_EMIT importPasswordDone(config, mFileName);
 }

@@ -43,7 +43,7 @@ SieveEditorScriptManagerWidget::~SieveEditorScriptManagerWidget()
 
 void SieveEditorScriptManagerWidget::slotUpdateButtons(QTreeWidgetItem *item)
 {
-    Q_UNUSED(item);
+    Q_UNUSED(item)
     bool newScriptAction;
     bool editScriptAction;
     bool deleteScriptAction;
