@@ -32,7 +32,7 @@ class LIBSIEVEEDITOR_TESTS_EXPORT ImportImapSettingProgressPage : public QWidget
     Q_OBJECT
 public:
     explicit ImportImapSettingProgressPage(QWidget *parent = nullptr);
-    ~ImportImapSettingProgressPage();
+    ~ImportImapSettingProgressPage() override;
     void addProgressInfo(const QString &str);
     void setSelectedPrograms(const QStringList &programs);
     void setListCheckJob(const QMap<QString, AbstractImapSettingsCheckJob *> &listCheckJob);
