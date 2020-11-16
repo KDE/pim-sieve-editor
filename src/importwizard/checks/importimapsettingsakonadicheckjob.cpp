@@ -31,8 +31,6 @@
 ImportImapSettingsAkonadiCheckJob::ImportImapSettingsAkonadiCheckJob(QObject *parent)
     : AbstractImapSettingsCheckJob(parent)
 {
-    connect(mPasswordImporter, &AbstractImapSettingsPassword::importPasswordDone,
-            this, &ImportImapSettingsAkonadiCheckJob::slotImportNextServerSieveDone);
 }
 
 ImportImapSettingsAkonadiCheckJob::~ImportImapSettingsAkonadiCheckJob()
@@ -168,4 +166,11 @@ bool ImportImapSettingsAkonadiCheckJob::settingsCanBeImported() const
 QString ImportImapSettingsAkonadiCheckJob::name() const
 {
     return i18n("Akonadi IMAP Settings");
+}
+
+void ImportImapSettingsAkonadiCheckJob::setImapSettingsPassword(AbstractImapSettingsPassword *passwordImporter)
+{
+    mPasswordImporter = passwordImporter;
+    connect(mPasswordImporter, &AbstractImapSettingsPassword::importPasswordDone,
+            this, &ImportImapSettingsAkonadiCheckJob::slotImportNextServerSieveDone);
 }

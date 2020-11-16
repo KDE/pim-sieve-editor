@@ -33,6 +33,7 @@ public:
 
     Q_REQUIRED_RESULT bool settingsCanBeImported() const override;
     Q_REQUIRED_RESULT QString name() const override;
+    void setImapSettingsPassword(AbstractImapSettingsPassword *passwordImporter) override;
 
 private:
     inline Q_REQUIRED_RESULT bool resourceCanHaveSieveSupport(const QString &filename) const;
@@ -42,6 +43,7 @@ private:
     void importSettings(const QString &directory, const QString &filename);
     QMultiMap<QString, QString> mSieveServerLst;
     QMap<QString, QString>::const_iterator mSieveServerMapIterator;
+
 };
 
 #endif // IMPORTIMAPSETTINGSAKONADICHECKJOB_H

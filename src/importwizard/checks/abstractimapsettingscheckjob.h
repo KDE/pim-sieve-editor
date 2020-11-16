@@ -35,7 +35,7 @@ public:
     virtual Q_REQUIRED_RESULT bool settingsCanBeImported() const = 0;
     virtual Q_REQUIRED_RESULT QString name() const = 0;
 
-    void setImapSettingsPassword(AbstractImapSettingsPassword *passwordImporter);
+    virtual void setImapSettingsPassword(AbstractImapSettingsPassword *passwordImporter);
 
 Q_SIGNALS:
     void importSetting(const QString &name, const SieveEditorUtil::SieveServerConfig &settings);
