@@ -39,7 +39,7 @@ void ImportImapSettingsAkonadiPassword::readSieveServerPasswordFinished(QKeychai
     if (!job->error()) {
         mCurrentConfig.sieveImapAccountSettings.setPassword(job->textData());
     } else {
-        qCWarning(SIEVEEDITOR_LOG) << "We have an error during reading password " << job->errorString();
+        qCWarning(SIEVEEDITOR_LOG) << "An error occurred while reading password: " << job->errorString();
     }
 
     if (mReuseImapSettings) {
@@ -57,7 +57,7 @@ void ImportImapSettingsAkonadiPassword::readSieveServerCustomPasswordFinished(Jo
     if (!job->error()) {
         mCurrentConfig.sieveSettings.password = job->textData();
     } else {
-        qCWarning(SIEVEEDITOR_LOG) << "We have an error during reading password " << job->errorString();
+        qCWarning(SIEVEEDITOR_LOG) << "An error occurred while reading password: " << job->errorString();
     }
     Q_EMIT importPasswordDone(mCurrentConfig, mFileName);
 }
