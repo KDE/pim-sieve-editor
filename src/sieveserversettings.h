@@ -21,26 +21,17 @@
 #define SieveServerSettings_H
 
 #include <QObject>
-namespace KWallet {
-class Wallet;
-}
 class SieveServerSettings : public QObject
 {
     Q_OBJECT
 public:
-    ~SieveServerSettings();
+    ~SieveServerSettings() override;
     static SieveServerSettings *self();
-
-    KWallet::Wallet *wallet();
-
-private:
-    void slotWalletClosed();
 
 private:
     Q_DISABLE_COPY(SieveServerSettings)
     explicit SieveServerSettings(QObject *parent = nullptr);
     friend class SieveServerSettingsPrivate;
-    KWallet::Wallet *mWallet = nullptr;
 };
 
 #endif // SieveServerSettings_H

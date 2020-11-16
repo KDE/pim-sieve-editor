@@ -19,7 +19,8 @@
 
 #include "importimapsettingsakonadipassword.h"
 #include "sieveserversettings.h"
-#include <KWallet>
+#include "sieveeditor_debug.h"
+
 using namespace QKeychain;
 
 ImportImapSettingsAkonadiPassword::ImportImapSettingsAkonadiPassword(QObject *parent)
@@ -36,48 +37,46 @@ void ImportImapSettingsAkonadiPassword::readSieveServerPasswordFinished(QKeychai
     auto *job = qobject_cast<ReadPasswordJob *>(baseJob);
     Q_ASSERT(job);
     if (!job->error()) {
-//        mCurrentSieveServerConfig.sieveSettings.password = job->textData();
+        mCurrentConfig.sieveImapAccountSettings.setPassword(job->textData());
     } else {
-//        qCWarning(SIEVEEDITOR_LOG) << "We have an error during reading password " << job->errorString();
+        qCWarning(SIEVEEDITOR_LOG) << "We have an error during reading password " << job->errorString();
     }
 
-//    loadImapAccountSettings();
+    if (mReuseImapSettings) {
+        mCurrentConfig.sieveSettings.password = mCurrentConfig.sieveImapAccountSettings.password();
+        Q_EMIT importPasswordDone(mCurrentConfig, mFileName);
+    } else {
+        loadImapAccountSettings();
+    }
+}
+
+void ImportImapSettingsAkonadiPassword::readSieveServerCustomPasswordFinished(Job *baseJob)
+{
+    auto *job = qobject_cast<ReadPasswordJob *>(baseJob);
+    Q_ASSERT(job);
+    if (!job->error()) {
+        mCurrentConfig.sieveSettings.password = job->textData();
+    } else {
+        qCWarning(SIEVEEDITOR_LOG) << "We have an error during reading password " << job->errorString();
+    }
+    Q_EMIT importPasswordDone(mCurrentConfig, mFileName);
+}
+
+void ImportImapSettingsAkonadiPassword::loadImapAccountSettings()
+{
+    auto readJob = new ReadPasswordJob(QStringLiteral("imap"), this);
+    connect(readJob, &Job::finished, this, &ImportImapSettingsAkonadiPassword::readSieveServerCustomPasswordFinished);
+    readJob->setKey(QStringLiteral("custom_sieve_") + mFileName);
+    readJob->start();
 }
 
 void ImportImapSettingsAkonadiPassword::importPasswords(const SieveEditorUtil::SieveServerConfig &_config, const QString &filename, bool reuseImapSettings)
 {
-    SieveEditorUtil::SieveServerConfig config = _config;
+    mCurrentConfig = _config;
     mReuseImapSettings = reuseImapSettings;
     mFileName = filename;
-    KWallet::Wallet *wallet = SieveServerSettings::self()->wallet();
-    QString password;
-    QString customPassword;
-#if 0
     auto readJob = new ReadPasswordJob(QStringLiteral("imap"), this);
     connect(readJob, &Job::finished, this, &ImportImapSettingsAkonadiPassword::readSieveServerPasswordFinished);
     readJob->setKey(mFileName);
     readJob->start();
-#endif
-
-    if (wallet) {
-        bool passwordStoredInWallet = false;
-        //Make async
-        if (wallet && wallet->hasFolder(QStringLiteral("imap"))) {
-            wallet->setFolder(QStringLiteral("imap"));
-            wallet->readPassword(filename, password);
-            if (!reuseImapSettings) { //Custom Password
-                wallet->readPassword(QStringLiteral("custom_sieve_") + filename, customPassword);
-            }
-            passwordStoredInWallet = true;
-        }
-        if (passwordStoredInWallet) {
-            config.sieveImapAccountSettings.setPassword(password);
-            if (reuseImapSettings) {
-                config.sieveSettings.password = password;
-            } else {
-                config.sieveSettings.password = customPassword;
-            }
-        }
-    }
-    Q_EMIT importPasswordDone(config, mFileName);
 }

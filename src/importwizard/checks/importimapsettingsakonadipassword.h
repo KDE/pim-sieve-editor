@@ -32,7 +32,10 @@ public:
 
     void importPasswords(const SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings) override;
 private:
+    void loadImapAccountSettings();
     void readSieveServerPasswordFinished(QKeychain::Job *baseJob);
+    void readSieveServerCustomPasswordFinished(QKeychain::Job *baseJob);
+    SieveEditorUtil::SieveServerConfig mCurrentConfig;
     bool mReuseImapSettings = false;
 };
 
