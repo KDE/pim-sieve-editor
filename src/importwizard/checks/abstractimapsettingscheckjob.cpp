@@ -40,4 +40,5 @@ void AbstractImapSettingsCheckJob::checkNoSettingsImported()
     if (!mSettingsWereImported) {
         Q_EMIT noSettingsImported(name());
     }
+    deleteLater();
 }
