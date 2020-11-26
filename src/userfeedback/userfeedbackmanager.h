@@ -35,7 +35,7 @@ public:
     KUserFeedback::Provider *userFeedbackProvider() const;
 
 private:
-    KUserFeedback::Provider *mUserFeedbackProvider = nullptr;
+    KUserFeedback::Provider *const mUserFeedbackProvider;
 };
 
 #endif // USERFEEDBACKMANAGER_H

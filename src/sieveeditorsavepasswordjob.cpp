@@ -19,6 +19,8 @@
 
 #include "sieveeditorsavepasswordjob.h"
 #include "sieveeditor_debug.h"
+#include <qt5keychain/keychain.h>
+
 using namespace QKeychain;
 
 SieveEditorSavePasswordJob::SieveEditorSavePasswordJob(QObject *parent)

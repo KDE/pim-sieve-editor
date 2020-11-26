@@ -34,7 +34,7 @@ class SieveEditorConfigureDialog : public KPageDialog
     Q_OBJECT
 public:
     explicit SieveEditorConfigureDialog(QWidget *parent = nullptr);
-    ~SieveEditorConfigureDialog();
+    ~SieveEditorConfigureDialog() override;
 
     void saveServerSieveConfig();
 

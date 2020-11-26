@@ -26,7 +26,7 @@ class SieveEditorTabWidget : public QTabWidget
     Q_OBJECT
 public:
     explicit SieveEditorTabWidget(KActionCollection *ac, QWidget *parent = nullptr);
-    ~SieveEditorTabWidget();
+    ~SieveEditorTabWidget() override;
 
 Q_SIGNALS:
     void tabRemoveAllExclude(int index);

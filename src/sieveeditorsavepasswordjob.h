@@ -22,13 +22,15 @@
 
 #include <QObject>
 #include "libsieveeditor_export.h"
-#include <qt5keychain/keychain.h>
+namespace QKeychain {
+class Job;
+}
 class LIBSIEVEEDITOR_EXPORT SieveEditorSavePasswordJob : public QObject
 {
     Q_OBJECT
 public:
     explicit SieveEditorSavePasswordJob(QObject *parent = nullptr);
-    ~SieveEditorSavePasswordJob();
+    ~SieveEditorSavePasswordJob() override;
 
     Q_REQUIRED_RESULT bool canStart() const;
 

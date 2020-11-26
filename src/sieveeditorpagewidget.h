@@ -35,7 +35,7 @@ class SieveEditorPageWidget : public QWidget
     Q_OBJECT
 public:
     explicit SieveEditorPageWidget(QWidget *parent = nullptr);
-    ~SieveEditorPageWidget();
+    ~SieveEditorPageWidget() override;
 
     void loadScript(const KSieveUi::ManageSieveWidget::ScriptInfo &info);
     Q_REQUIRED_RESULT QUrl currentUrl() const;

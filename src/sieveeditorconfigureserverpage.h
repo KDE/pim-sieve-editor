@@ -28,7 +28,7 @@ class LIBSIEVEEDITOR_TESTS_EXPORT SieveEditorConfigureServerPage : public QWidge
     Q_OBJECT
 public:
     explicit SieveEditorConfigureServerPage(QWidget *parent = nullptr);
-    ~SieveEditorConfigureServerPage();
+    ~SieveEditorConfigureServerPage() override;
 
 Q_SIGNALS:
     void configureClicked();

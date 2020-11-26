@@ -29,8 +29,8 @@
 
 UserFeedBackManager::UserFeedBackManager(QObject *parent)
     : QObject(parent)
+    , mUserFeedbackProvider(new KUserFeedback::Provider(this))
 {
-    mUserFeedbackProvider = new KUserFeedback::Provider(this);
     mUserFeedbackProvider->setProductIdentifier(QStringLiteral("org.kde.pim-sieve-editor"));
     mUserFeedbackProvider->setFeedbackServer(QUrl(QStringLiteral("https://telemetry.kde.org/")));
     mUserFeedbackProvider->setSubmissionInterval(7);

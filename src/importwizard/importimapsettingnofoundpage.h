@@ -28,7 +28,7 @@ class LIBSIEVEEDITOR_TESTS_EXPORT ImportImapSettingNoFoundPage : public QWidget
     Q_OBJECT
 public:
     explicit ImportImapSettingNoFoundPage(QWidget *parent = nullptr);
-    ~ImportImapSettingNoFoundPage();
+    ~ImportImapSettingNoFoundPage() override;
 };
 
 #endif // IMPORTIMAPSETTINGNOFOUNDPAGE_H

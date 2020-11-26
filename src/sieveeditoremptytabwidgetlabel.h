@@ -48,7 +48,7 @@ class SieveEditorEmptyTabWidgetLabel : public QLabel
     Q_OBJECT
 public:
     explicit SieveEditorEmptyTabWidgetLabel(QWidget *parent = nullptr);
-    ~SieveEditorEmptyTabWidgetLabel();
+    ~SieveEditorEmptyTabWidgetLabel() override;
 
 private:
     struct placeHolderTextInfo {

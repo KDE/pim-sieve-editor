@@ -33,7 +33,7 @@ class SieveEditorScriptManagerWidget : public QWidget
     Q_OBJECT
 public:
     explicit SieveEditorScriptManagerWidget(QWidget *parent = nullptr);
-    ~SieveEditorScriptManagerWidget();
+    ~SieveEditorScriptManagerWidget() override;
 
     void updateServerList();
     void editScript();

@@ -29,7 +29,7 @@ class LIBSIEVEEDITOR_TESTS_EXPORT ImportImapSettingSearchPage : public QWidget
     Q_OBJECT
 public:
     explicit ImportImapSettingSearchPage(QWidget *parent = nullptr);
-    ~ImportImapSettingSearchPage();
+    ~ImportImapSettingSearchPage() override;
 
     void setProgramList(const QStringList &lst);
     Q_REQUIRED_RESULT QStringList selectedPrograms() const;

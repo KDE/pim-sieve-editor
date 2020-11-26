@@ -27,7 +27,7 @@ class LIBSIEVEEDITOR_TESTS_EXPORT ImportImapSettingFinishPage : public QWidget
     Q_OBJECT
 public:
     explicit ImportImapSettingFinishPage(QWidget *parent = nullptr);
-    ~ImportImapSettingFinishPage();
+    ~ImportImapSettingFinishPage() override;
 
     void addSummary(const QString &name);
 

@@ -27,7 +27,7 @@ class ServerSieveListWidgetItem : public QListWidgetItem
 {
 public:
     explicit ServerSieveListWidgetItem(QListWidget *parent = nullptr);
-    ~ServerSieveListWidgetItem();
+    ~ServerSieveListWidgetItem() override;
 
     Q_REQUIRED_RESULT SieveEditorUtil::SieveServerConfig serverConfig() const;
     void setServerConfig(const SieveEditorUtil::SieveServerConfig &conf);
@@ -41,7 +41,7 @@ class ServerSieveListWidget : public QListWidget
     Q_OBJECT
 public:
     explicit ServerSieveListWidget(QWidget *parent = nullptr);
-    ~ServerSieveListWidget();
+    ~ServerSieveListWidget() override;
 
     void readConfig();
     void writeConfig();

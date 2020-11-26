@@ -29,7 +29,7 @@ class ServerSieveSettingsDialog : public QDialog
     Q_OBJECT
 public:
     explicit ServerSieveSettingsDialog(QWidget *parent = nullptr);
-    ~ServerSieveSettingsDialog();
+    ~ServerSieveSettingsDialog() override;
 
     Q_REQUIRED_RESULT QString serverName() const;
     void setServerName(const QString &name);
