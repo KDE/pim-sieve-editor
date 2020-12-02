@@ -25,7 +25,6 @@
 #include <KSharedConfig>
 #include <KConfig>
 #include <QRegularExpression>
-#include <QVector>
 
 using namespace QKeychain;
 
