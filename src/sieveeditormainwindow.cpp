@@ -153,7 +153,7 @@ void SieveEditorMainWindow::setupActions()
     mNewScript = new QAction(i18n("Create New Script..."), this);
     connect(mNewScript, &QAction::triggered, this, &SieveEditorMainWindow::slotCreateNewScript);
     ac->addAction(QStringLiteral("create_new_script"), mNewScript);
-    ac->setDefaultShortcut(mNewScript, QKeySequence(Qt::CTRL + Qt::Key_N));
+    ac->setDefaultShortcut(mNewScript, QKeySequence(Qt::CTRL | Qt::Key_N));
     mNewScript->setEnabled(false);
 
     mEditScript = new QAction(i18n("Edit Script..."), this);
@@ -175,7 +175,7 @@ void SieveEditorMainWindow::setupActions()
     mGoToLine = new QAction(i18n("Go to Line..."), this);
     connect(mGoToLine, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotGoToLine);
     mGoToLine->setIcon(QIcon::fromTheme(QStringLiteral("go-jump")));
-    ac->setDefaultShortcut(mGoToLine, QKeySequence(Qt::CTRL + Qt::Key_G));
+    ac->setDefaultShortcut(mGoToLine, QKeySequence(Qt::CTRL | Qt::Key_G));
     ac->addAction(QStringLiteral("gotoline"), mGoToLine);
     mGoToLine->setEnabled(false);
 
@@ -227,12 +227,12 @@ void SieveEditorMainWindow::setupActions()
     mCommentAction = new QAction(i18n("Comment"), this);
     connect(mCommentAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotComment);
     ac->addAction(QStringLiteral("comment_code"), mCommentAction);
-    ac->setDefaultShortcut(mCommentAction, Qt::CTRL + Qt::Key_D);
+    ac->setDefaultShortcut(mCommentAction, Qt::CTRL | Qt::Key_D);
 
     mUncommentAction = new QAction(i18n("Uncomment"), this);
     connect(mUncommentAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotUncomment);
     ac->addAction(QStringLiteral("uncomment_code"), mUncommentAction);
-    ac->setDefaultShortcut(mUncommentAction, Qt::CTRL + Qt::SHIFT + Qt::Key_D);
+    ac->setDefaultShortcut(mUncommentAction, Qt::CTRL | Qt::SHIFT | Qt::Key_D);
 
     mZoomInAction = KStandardAction::zoomIn(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotZoomIn, this);
     ac->addAction(QStringLiteral("zoom_in"), mZoomInAction);
@@ -259,7 +259,7 @@ void SieveEditorMainWindow::setupActions()
     mDebugSieveScriptAction = new QAction(i18n("Debug Sieve Script..."), this);
     connect(mDebugSieveScriptAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotDebugSieveScript);
     ac->addAction(QStringLiteral("debug_sieve"), mDebugSieveScriptAction);
-    ac->setDefaultShortcut(mDebugSieveScriptAction, QKeySequence(Qt::SHIFT + Qt::ALT + Qt::Key_D));
+    ac->setDefaultShortcut(mDebugSieveScriptAction, QKeySequence(Qt::SHIFT | Qt::ALT | Qt::Key_D));
 
     mWrapTextAction = new QAction(i18n("Wordwrap"), this);
     mWrapTextAction->setCheckable(true);
