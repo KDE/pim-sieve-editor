@@ -76,7 +76,7 @@ ecm_qt_declare_logging_category(sieveeditor_LIB_SRCS HEADER sieveeditor_debug.h
 	DESCRIPTION "sieveeditor (sieveeditor)" EXPORT SIEVEEDITOR)
 
 add_library(libsieveeditor ${sieveeditor_LIB_SRCS})
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(libsieveeditor PROPERTIES UNITY_BUILD ON)
 endif()
 generate_export_header(libsieveeditor BASE_NAME libsieveeditor)
