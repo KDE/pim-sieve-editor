@@ -38,12 +38,12 @@ void ImportImapSettingProgressPageTest::shouldHaveDefaultValue()
 {
     ImportImapSettingProgressPage w;
 
-    auto *mProgressTextEdit = w.findChild<QTextEdit *>(QStringLiteral("textedit"));
+    auto mProgressTextEdit = w.findChild<QTextEdit *>(QStringLiteral("textedit"));
     QVERIFY(mProgressTextEdit);
     QVERIFY(mProgressTextEdit->isReadOnly());
     QVERIFY(mProgressTextEdit->document()->isEmpty());
 
-    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 }
 

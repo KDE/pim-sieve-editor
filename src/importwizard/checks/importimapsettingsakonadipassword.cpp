@@ -34,7 +34,7 @@ ImportImapSettingsAkonadiPassword::~ImportImapSettingsAkonadiPassword()
 
 void ImportImapSettingsAkonadiPassword::readSieveServerPasswordFinished(QKeychain::Job *baseJob)
 {
-    auto *job = qobject_cast<ReadPasswordJob *>(baseJob);
+    auto job = qobject_cast<ReadPasswordJob *>(baseJob);
     Q_ASSERT(job);
     if (!job->error()) {
         mCurrentConfig.sieveImapAccountSettings.setPassword(job->textData());
@@ -52,7 +52,7 @@ void ImportImapSettingsAkonadiPassword::readSieveServerPasswordFinished(QKeychai
 
 void ImportImapSettingsAkonadiPassword::readSieveServerCustomPasswordFinished(Job *baseJob)
 {
-    auto *job = qobject_cast<ReadPasswordJob *>(baseJob);
+    auto job = qobject_cast<ReadPasswordJob *>(baseJob);
     Q_ASSERT(job);
     if (!job->error()) {
         mCurrentConfig.sieveSettings.password = job->textData();

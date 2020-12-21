@@ -35,11 +35,11 @@ ImportImapSettingNoFoundPageTest::~ImportImapSettingNoFoundPageTest()
 void ImportImapSettingNoFoundPageTest::shouldHaveDefaultValue()
 {
     ImportImapSettingNoFoundPage w;
-    auto *lab = w.findChild<QLabel *>(QStringLiteral("label"));
+    auto lab = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
 
-    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 }
 

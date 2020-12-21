@@ -126,7 +126,7 @@ void SieveEditorUtil::writeSieveSettings(const KSharedConfigPtr &cfg, const Siev
     group.writeEntry(QStringLiteral("Enabled"), conf.enabled);
 
     const QString walletEntry = SieveEditorUtil::sievePasswordIdentifier(conf.sieveSettings.userName, conf.sieveSettings.serverName);
-    auto *writeJob = new SieveEditorSavePasswordJob;
+    auto writeJob = new SieveEditorSavePasswordJob;
     writeJob->setName(SieveEditorUtil::walletFolderName());
     writeJob->setPassword(conf.sieveSettings.password);
     writeJob->setKey(walletEntry);
@@ -148,7 +148,7 @@ void SieveEditorUtil::writeSieveSettings(const KSharedConfigPtr &cfg, const Siev
         group.writeEntry(QStringLiteral("ImapUserName"), conf.sieveImapAccountSettings.userName());
         const QString imapWalletEntry = imapPasswordIdentifier(conf.sieveImapAccountSettings.userName(), conf.sieveImapAccountSettings.serverName());
 
-        auto *writeImapSettingJob = new SieveEditorSavePasswordJob;
+        auto writeImapSettingJob = new SieveEditorSavePasswordJob;
         writeImapSettingJob->setName(SieveEditorUtil::walletFolderName());
         writeImapSettingJob->setPassword(conf.sieveImapAccountSettings.password());
         writeImapSettingJob->setKey(imapWalletEntry);

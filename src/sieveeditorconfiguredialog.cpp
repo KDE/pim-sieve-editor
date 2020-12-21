@@ -50,8 +50,8 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     connect(buttonBox(), &QDialogButtonBox::rejected, this, &SieveEditorConfigureDialog::reject);
 
     //Server page
-    auto *serverConfigureWiget = new QWidget;
-    auto *layout = new QVBoxLayout(serverConfigureWiget);
+    auto serverConfigureWiget = new QWidget;
+    auto layout = new QVBoxLayout(serverConfigureWiget);
     mServerWidget = new SieveEditorConfigureServerWidget;
     layout->addWidget(mServerWidget);
 
@@ -60,7 +60,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     addPage(serverPageWidgetPage);
 
     //Editor page
-    auto *editorWidget = new QWidget;
+    auto editorWidget = new QWidget;
     editorWidget->setObjectName(QStringLiteral("editorwidget"));
 
     layout = new QVBoxLayout(editorWidget);
@@ -75,12 +75,12 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
 
     //UserFeedBack config
 #ifdef WITH_KUSERFEEDBACK
-    auto *userFeedBackWidget = new QWidget;
+    auto userFeedBackWidget = new QWidget;
     userFeedBackWidget->setObjectName(QStringLiteral("userFeedBackWidget"));
 
     mUserFeedbackWidget = new KUserFeedback::FeedbackConfigWidget(this);
 
-    auto *userFeedBackLayout = new QHBoxLayout(userFeedBackWidget);
+    auto userFeedBackLayout = new QHBoxLayout(userFeedBackWidget);
     userFeedBackLayout->setContentsMargins({});
     userFeedBackLayout->addWidget(mUserFeedbackWidget);
 

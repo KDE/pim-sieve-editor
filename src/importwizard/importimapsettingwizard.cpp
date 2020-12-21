@@ -71,14 +71,14 @@ ImportImapSettingWizard::~ImportImapSettingWizard()
 void ImportImapSettingWizard::initializeWizard()
 {
     bool hasSettingToImport = false;
-    auto *thjob = new ImportImapSettingsThunderbirdCheckJob(this);
+    auto thjob = new ImportImapSettingsThunderbirdCheckJob(this);
     if (thjob->settingsCanBeImported()) {
         mListCheckJob.insert(thjob->name(), thjob);
         hasSettingToImport = true;
     } else {
         delete thjob;
     }
-    auto *akonadiJob = new ImportImapSettingsAkonadiCheckJob(this);
+    auto akonadiJob = new ImportImapSettingsAkonadiCheckJob(this);
     akonadiJob->setImapSettingsPassword(new ImportImapSettingsAkonadiPassword);
     if (akonadiJob->settingsCanBeImported()) {
         mListCheckJob.insert(akonadiJob->name(), akonadiJob);

@@ -70,7 +70,7 @@ void ReadServerSieveConfigJob::loadSettings(const QString &conf)
 
 void ReadServerSieveConfigJob::readSieveServerPasswordFinished(QKeychain::Job *baseJob)
 {
-    auto *job = qobject_cast<ReadPasswordJob *>(baseJob);
+    auto job = qobject_cast<ReadPasswordJob *>(baseJob);
     Q_ASSERT(job);
     if (!job->error()) {
         mCurrentSieveServerConfig.sieveSettings.password = job->textData();
@@ -107,7 +107,7 @@ void ReadServerSieveConfigJob::loadImapAccountSettings()
 
 void ReadServerSieveConfigJob::readImapPasswordFinished(QKeychain::Job *baseJob)
 {
-    auto *job = qobject_cast<ReadPasswordJob *>(baseJob);
+    auto job = qobject_cast<ReadPasswordJob *>(baseJob);
     Q_ASSERT(job);
     if (!job->error()) {
         mCurrentSieveServerConfig.sieveImapAccountSettings.setPassword(job->textData());

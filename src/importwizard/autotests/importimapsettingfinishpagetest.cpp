@@ -36,16 +36,16 @@ ImportImapSettingFinishPageTest::~ImportImapSettingFinishPageTest()
 void ImportImapSettingFinishPageTest::shouldHaveDefaultValue()
 {
     ImportImapSettingFinishPage w;
-    auto *label = w.findChild<QLabel *>(QStringLiteral("label"));
+    auto label = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(label);
     QVERIFY(!label->text().isEmpty());
 
-    auto *mTextEdit = w.findChild<QTextEdit *>(QStringLiteral("textedit"));
+    auto mTextEdit = w.findChild<QTextEdit *>(QStringLiteral("textedit"));
     QVERIFY(mTextEdit);
     QVERIFY(mTextEdit->isReadOnly());
     QVERIFY(mTextEdit->document()->isEmpty());
 
-    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 }
 

@@ -78,7 +78,7 @@ SieveEditorMainWidget::~SieveEditorMainWidget()
 QWidget *SieveEditorMainWidget::hasExistingPage(const QUrl &url)
 {
     for (int i = 0; i < mTabWidget->count(); ++i) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(mTabWidget->widget(i));
+        auto page = qobject_cast<SieveEditorPageWidget *>(mTabWidget->widget(i));
         if (page) {
             if (page->currentUrl() == url) {
                 return page;
@@ -111,7 +111,7 @@ void SieveEditorMainWidget::slotScriptRenamed(const QUrl &oldUrl, const QUrl &ne
 {
     QWidget *page = hasExistingPage(oldUrl);
     if (page) {
-        if (auto *editor = qobject_cast<SieveEditorPageWidget *>(page)) {
+        if (auto editor = qobject_cast<SieveEditorPageWidget *>(page)) {
             editor->setCurrentUrl(newUrl);
             const QString newScriptName = newUrl.fileName();
             mTabWidget->setTabText(mTabWidget->indexOf(page), newScriptName);
@@ -127,7 +127,7 @@ void SieveEditorMainWidget::slotCreateScriptPage(const KSieveUi::ManageSieveWidg
     if (page) {
         mTabWidget->setCurrentWidget(page);
     } else {
-        auto *editor = new SieveEditorPageWidget;
+        auto editor = new SieveEditorPageWidget;
         connect(editor, &SieveEditorPageWidget::refreshList, this, &SieveEditorMainWidget::updateScriptList);
         connect(editor, &SieveEditorPageWidget::scriptModified, this, &SieveEditorMainWidget::slotScriptModified);
         connect(editor, &SieveEditorPageWidget::modeEditorChanged, this, &SieveEditorMainWidget::modeEditorChanged);
@@ -181,7 +181,7 @@ void SieveEditorMainWidget::uploadScript()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->uploadScript();
         }
@@ -192,7 +192,7 @@ bool SieveEditorMainWidget::needToSaveScript()
 {
     bool scriptSaved = false;
     for (int i = 0; i < mTabWidget->count(); ++i) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(mTabWidget->widget(i));
+        auto page = qobject_cast<SieveEditorPageWidget *>(mTabWidget->widget(i));
         if (page) {
             const bool result = page->needToSaveScript();
             if (result) {
@@ -212,7 +212,7 @@ bool SieveEditorMainWidget::isUndoAvailable() const
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             return page->isUndoAvailable();
         }
@@ -224,7 +224,7 @@ bool SieveEditorMainWidget::isRedoAvailable() const
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             return page->isRedoAvailable();
         }
@@ -236,7 +236,7 @@ bool SieveEditorMainWidget::isWordWrap() const
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             return page->isWordWrap();
         }
@@ -248,7 +248,7 @@ bool SieveEditorMainWidget::hasSelection() const
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             return page->hasSelection();
         }
@@ -260,7 +260,7 @@ void SieveEditorMainWidget::slotSelectAll()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->selectAll();
         }
@@ -271,7 +271,7 @@ void SieveEditorMainWidget::slotCopy()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->copy();
         }
@@ -282,7 +282,7 @@ void SieveEditorMainWidget::slotPaste()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->paste();
         }
@@ -293,7 +293,7 @@ void SieveEditorMainWidget::slotCut()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->cut();
         }
@@ -304,7 +304,7 @@ void SieveEditorMainWidget::slotUndo()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->undo();
         }
@@ -315,7 +315,7 @@ void SieveEditorMainWidget::slotRedo()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->redo();
         }
@@ -326,7 +326,7 @@ void SieveEditorMainWidget::slotGoToLine()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->goToLine();
         }
@@ -337,7 +337,7 @@ void SieveEditorMainWidget::slotFind()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->find();
         }
@@ -348,7 +348,7 @@ void SieveEditorMainWidget::slotReplace()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->replace();
         }
@@ -359,7 +359,7 @@ void SieveEditorMainWidget::slotShareScript()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->shareScript();
         }
@@ -370,7 +370,7 @@ QString SieveEditorMainWidget::currentText() const
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             return page->currentText();
         }
@@ -382,7 +382,7 @@ void SieveEditorMainWidget::slotCreateRulesGraphically()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->createRulesGraphically();
         }
@@ -393,7 +393,7 @@ void SieveEditorMainWidget::slotCheckSyntax()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->checkSyntax();
         }
@@ -404,7 +404,7 @@ void SieveEditorMainWidget::slotComment()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->comment();
         }
@@ -415,7 +415,7 @@ void SieveEditorMainWidget::slotUncomment()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->uncomment();
         }
@@ -426,7 +426,7 @@ void SieveEditorMainWidget::slotImport()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->import();
         }
@@ -437,7 +437,7 @@ void SieveEditorMainWidget::slotCheckSpelling()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->checkSpelling();
         }
@@ -448,7 +448,7 @@ void SieveEditorMainWidget::slotSaveAs()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->saveAs();
         }
@@ -459,7 +459,7 @@ void SieveEditorMainWidget::slotReverseCase()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->reverseCase();
         }
@@ -470,7 +470,7 @@ void SieveEditorMainWidget::slotDebugSieveScript()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->debugSieveScript();
         }
@@ -481,7 +481,7 @@ void SieveEditorMainWidget::slotUpperCase()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->upperCase();
         }
@@ -492,7 +492,7 @@ void SieveEditorMainWidget::slotSentenceCase()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->sentenceCase();
         }
@@ -503,7 +503,7 @@ void SieveEditorMainWidget::slotLowerCase()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->lowerCase();
         }
@@ -525,7 +525,7 @@ void SieveEditorMainWidget::slotZoomIn()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->zoomIn();
         }
@@ -536,7 +536,7 @@ void SieveEditorMainWidget::slotZoomOut()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->zoomOut();
         }
@@ -547,7 +547,7 @@ void SieveEditorMainWidget::slotZoomReset()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->zoomReset();
         }
@@ -558,7 +558,7 @@ void SieveEditorMainWidget::slotWordWrap(bool state)
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->wordWrap(state);
         }
@@ -569,7 +569,7 @@ void SieveEditorMainWidget::slotPrintPreview()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->printPreview();
         }
@@ -580,7 +580,7 @@ void SieveEditorMainWidget::slotPrint()
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->print();
         }
@@ -599,7 +599,7 @@ void SieveEditorMainWidget::slotGeneralPaletteChanged()
 
 void SieveEditorMainWidget::forceCloseTab(int index)
 {
-    auto *page = qobject_cast<SieveEditorPageWidget *>(mTabWidget->widget(index));
+    auto page = qobject_cast<SieveEditorPageWidget *>(mTabWidget->widget(index));
     if (page) {
         mTabWidget->removeTab(index);
         delete page;
@@ -609,7 +609,7 @@ void SieveEditorMainWidget::forceCloseTab(int index)
 
 void SieveEditorMainWidget::slotTabCloseRequested(int index)
 {
-    auto *page = qobject_cast<SieveEditorPageWidget *>(mTabWidget->widget(index));
+    auto page = qobject_cast<SieveEditorPageWidget *>(mTabWidget->widget(index));
     if (page) {
         if (page->isModified()) {
             const int result = KMessageBox::questionYesNoCancel(this, i18n("Script was modified. Do you want to save before closing?"), i18n("Close script"));
@@ -648,7 +648,7 @@ KSieveUi::SieveEditorWidget::EditorMode SieveEditorMainWidget::pageMode() const
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             return page->pageMode();
         }
@@ -660,7 +660,7 @@ void SieveEditorMainWidget::openBookmarkUrl(const QUrl &url)
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             page->openBookmarkUrl(url);
         }
@@ -671,7 +671,7 @@ QString SieveEditorMainWidget::currentHelpTitle() const
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             return page->currentHelpTitle();
         }
@@ -683,7 +683,7 @@ QUrl SieveEditorMainWidget::currentHelpUrl() const
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             return page->currentHelpUrl();
         }
@@ -695,7 +695,7 @@ bool SieveEditorMainWidget::printSupportEnabled() const
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             return page->printSupportEnabled();
         }
@@ -707,7 +707,7 @@ bool SieveEditorMainWidget::isTextEditor() const
 {
     QWidget *w = mTabWidget->currentWidget();
     if (w) {
-        auto *page = qobject_cast<SieveEditorPageWidget *>(w);
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
             return page->isTextEditor();
         }

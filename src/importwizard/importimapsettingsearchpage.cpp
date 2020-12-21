@@ -27,7 +27,7 @@
 ImportImapSettingSearchPage::ImportImapSettingSearchPage(QWidget *parent)
     : QWidget(parent)
 {
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     QLabel *label = new QLabel(i18n("Please select the program from which you like to import IMAP settings:"), this);
     label->setObjectName(QStringLiteral("label"));
@@ -46,7 +46,7 @@ ImportImapSettingSearchPage::~ImportImapSettingSearchPage()
 void ImportImapSettingSearchPage::setProgramList(const QStringList &lst)
 {
     for (const QString &prog : lst) {
-        auto *item = new QListWidgetItem(prog, mFoundProgramList);
+        auto item = new QListWidgetItem(prog, mFoundProgramList);
         item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
         item->setCheckState(Qt::Unchecked);
     }
