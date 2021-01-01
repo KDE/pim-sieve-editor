@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2013-2020 Laurent Montel <montel@kde.org>
+   Copyright (C) 2013-2021 Laurent Montel <montel@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -52,7 +52,7 @@ int main(int argc, char **argv)
                          QStringLiteral(SIEVEEDITOR_VERSION),
                          i18n("Sieve Editor"),
                          KAboutLicense::GPL_V2,
-                         i18n("Copyright © 2013-2020 sieveeditor authors"));
+                         i18n("Copyright © 2013-2021 sieveeditor authors"));
     aboutData.addAuthor(i18n("Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
 
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("kmail")));
