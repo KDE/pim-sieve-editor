@@ -21,9 +21,9 @@
 #include "serversievesettings.h"
 
 #include <KLocalizedString>
-#include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 ServerSieveSettingsDialog::ServerSieveSettingsDialog(QWidget *parent)
     : QDialog(parent)

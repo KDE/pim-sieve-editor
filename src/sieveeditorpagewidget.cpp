@@ -18,8 +18,8 @@
 */
 
 #include "sieveeditorpagewidget.h"
-#include <KSieveUi/CheckScriptJob>
 #include "sieveeditorglobalconfig.h"
+#include <KSieveUi/CheckScriptJob>
 
 #include <KManageSieve/SieveJob>
 
@@ -147,8 +147,7 @@ void SieveEditorPageWidget::slotPutResult(KManageSieve::SieveJob *job, bool succ
     }
     if (success) {
         if (job->property("showuploadinformation").toBool()) {
-            KMessageBox::information(this, i18n("The Sieve script was successfully uploaded."),
-                                     i18n("Sieve Script Upload"));
+            KMessageBox::information(this, i18n("The Sieve script was successfully uploaded."), i18n("Sieve Script Upload"));
         }
         mIsNewScript = false;
         mSieveEditorWidget->updateOriginalScript();
@@ -162,7 +161,8 @@ void SieveEditorPageWidget::slotPutResult(KManageSieve::SieveJob *job, bool succ
         if (!msg.isEmpty()) {
             KMessageBox::error(this,
                                i18n("Uploading the Sieve script failed.\n"
-                                    "The server responded:\n%1", msg),
+                                    "The server responded:\n%1",
+                                    msg),
                                i18n("Sieve Error"));
         } else {
             KMessageBox::error(this,

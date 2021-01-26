@@ -20,10 +20,10 @@
 #ifndef SIEVEEDITORMAINWIDGET_H
 #define SIEVEEDITORMAINWIDGET_H
 
+#include <KSieveUi/ManageSieveWidget>
+#include <KSieveUi/SieveEditorWidget>
 #include <QSplitter>
 #include <QUrl>
-#include <KSieveUi/SieveEditorWidget>
-#include <KSieveUi/ManageSieveWidget>
 class QTabWidget;
 class QStackedWidget;
 class SieveEditorTabWidget;
@@ -113,6 +113,7 @@ private:
     void slotTabCloseRequested(int index);
     void slotTabRemoveAllExclude(int index);
     void slotTabCloseAllRequested();
+
 private:
     void updateStackedWidget();
     QWidget *hasExistingPage(const QUrl &url);

@@ -32,6 +32,7 @@ public:
     virtual void importPasswords(const SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings);
 Q_SIGNALS:
     void importPasswordDone(const SieveEditorUtil::SieveServerConfig &config, const QString &filename);
+
 protected:
     QString mFileName;
 };

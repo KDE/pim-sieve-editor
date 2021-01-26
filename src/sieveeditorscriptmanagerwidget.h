@@ -20,13 +20,14 @@
 #ifndef SIEVEEDITORSCRIPTMANAGERWIDGET_H
 #define SIEVEEDITORSCRIPTMANAGERWIDGET_H
 
-#include <QWidget>
-#include <QUrl>
 #include <KSieveUi/ManageSieveWidget>
+#include <QUrl>
+#include <QWidget>
 
 class SieveEditorManageSieveWidget;
 class QTreeWidgetItem;
-namespace KSieveUi {
+namespace KSieveUi
+{
 }
 class SieveEditorScriptManagerWidget : public QWidget
 {

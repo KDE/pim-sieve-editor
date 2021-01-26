@@ -20,9 +20,10 @@
 #ifndef USERFEEDBACKMANAGER_H
 #define USERFEEDBACKMANAGER_H
 
-#include <QObject>
 #include "libsieveeditor_export.h"
-namespace KUserFeedback {
+#include <QObject>
+namespace KUserFeedback
+{
 class Provider;
 }
 class LIBSIEVEEDITOR_EXPORT UserFeedBackManager : public QObject

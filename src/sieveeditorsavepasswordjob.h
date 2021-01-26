@@ -20,9 +20,10 @@
 #ifndef SIEVEEDITORSAVEPASSWORDJOB_H
 #define SIEVEEDITORSAVEPASSWORDJOB_H
 
-#include <QObject>
 #include "libsieveeditor_export.h"
-namespace QKeychain {
+#include <QObject>
+namespace QKeychain
+{
 class Job;
 }
 class LIBSIEVEEDITOR_EXPORT SieveEditorSavePasswordJob : public QObject

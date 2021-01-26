@@ -20,8 +20,8 @@
 #ifndef SERVERSIEVELISTWIDGET_H
 #define SERVERSIEVELISTWIDGET_H
 
-#include <QListWidget>
 #include "sieveeditorutil.h"
+#include <QListWidget>
 
 class ServerSieveListWidgetItem : public QListWidgetItem
 {

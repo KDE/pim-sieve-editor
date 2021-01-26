@@ -31,6 +31,7 @@ public:
 
     Q_REQUIRED_RESULT QByteArray text() override;
     void setEditorWidget(SieveEditorMainWidget *editor);
+
 private:
     SieveEditorMainWidget *mSieveEditorWidget = nullptr;
 };

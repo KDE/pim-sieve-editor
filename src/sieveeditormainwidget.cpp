@@ -18,18 +18,18 @@
 */
 
 #include "sieveeditormainwidget.h"
-#include "sieveeditorscriptmanagerwidget.h"
-#include "sieveeditorpagewidget.h"
-#include "sieveeditortabwidget.h"
 #include "sieveeditoremptytabwidgetlabel.h"
+#include "sieveeditorpagewidget.h"
+#include "sieveeditorscriptmanagerwidget.h"
+#include "sieveeditortabwidget.h"
 #include <KSieveUi/SieveEditor>
 
-#include <KLocalizedString>
+#include <KColorScheme>
 #include <KConfigGroup>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <KSharedConfig>
 #include <QTabWidget>
-#include <KColorScheme>
-#include <KMessageBox>
 
 #include <QStackedWidget>
 #include <QTabBar>

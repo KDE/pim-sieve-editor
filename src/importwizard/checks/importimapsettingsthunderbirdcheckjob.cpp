@@ -19,9 +19,9 @@
 
 #include "importimapsettingsthunderbirdcheckjob.h"
 #include "sieveeditor_debug.h"
-#include <KLocalizedString>
 #include <KConfig>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <QDir>
 #include <QFile>
 #include <QRegularExpression>
@@ -37,13 +37,13 @@ ImportImapSettingsThunderbirdCheckJob::~ImportImapSettingsThunderbirdCheckJob()
 {
 }
 
-//Copy from mailimporter
+// Copy from mailimporter
 QMap<QString, QString> ImportImapSettingsThunderbirdCheckJob::listProfile(QString &currentProfile, const QString &defaultSettingPath)
 {
     const QString thunderbirdPath = defaultSettingPath + QLatin1String("/profiles.ini");
     QMap<QString, QString> lstProfile;
     if (QFileInfo::exists(thunderbirdPath)) {
-        //ini file.
+        // ini file.
         KConfig config(thunderbirdPath);
         const QStringList profileList = config.groupList().filter(QRegularExpression(QStringLiteral("Profile\\d+")));
         const bool uniqProfile = (profileList.count() == 1);
@@ -94,8 +94,8 @@ void ImportImapSettingsThunderbirdCheckJob::start()
 
 bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &directory, const QString &defaultProfile)
 {
-    const QString filePath = directory +  QLatin1Char('/') + defaultProfile + QStringLiteral("/prefs.js");
-    //qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
+    const QString filePath = directory + QLatin1Char('/') + defaultProfile + QStringLiteral("/prefs.js");
+    // qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
     QFile file(filePath);
     if (!file.open(QIODevice::ReadOnly)) {
         qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filePath;
@@ -105,17 +105,12 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
     while (!stream.atEnd()) {
         const QString line = stream.readLine();
         if (line.startsWith(QLatin1String("user_pref"))) {
-            if (line.contains(QLatin1String("mail.server."))
-                || line.contains(QLatin1String("mail.account."))
-                || line.contains(QLatin1String("mail.accountmanager."))
-                || line.contains(QLatin1String("extensions.sieve.account."))) {
+            if (line.contains(QLatin1String("mail.server.")) || line.contains(QLatin1String("mail.account."))
+                || line.contains(QLatin1String("mail.accountmanager.")) || line.contains(QLatin1String("extensions.sieve.account."))) {
                 insertIntoMap(line);
             }
         } else {
-            if (!line.startsWith(QLatin1Char('#'))
-                && line.isEmpty()
-                && line.startsWith(QLatin1String("/*"))
-                && line.startsWith(QLatin1String(" */"))
+            if (!line.startsWith(QLatin1Char('#')) && line.isEmpty() && line.startsWith(QLatin1String("/*")) && line.startsWith(QLatin1String(" */"))
                 && line.startsWith(QLatin1String(" *"))) {
                 qCDebug(SIEVEEDITOR_LOG) << " unstored line :" << line;
             }
@@ -134,32 +129,32 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
         const QString accountName = QStringLiteral("mail.server.%1").arg(serverName);
         const QString type = mHashConfig.value(accountName + QStringLiteral(".type")).toString();
         if (type == QLatin1String("imap")) {
-            //Sieve settings == username@account
+            // Sieve settings == username@account
 
             const QString imapServerName = mHashConfig.value(accountName + QStringLiteral(".hostname")).toString();
             QString userName = mHashConfig.value(accountName + QStringLiteral(".userName")).toString();
-            //Convert @ in username in %40
+            // Convert @ in username in %40
             QString userNameSieveConverted = userName;
             userNameSieveConverted.replace(QLatin1Char('@'), QStringLiteral("%40"));
             const QString sieveKeyServerUserName = QLatin1String("extensions.sieve.account.") + userNameSieveConverted + QLatin1Char('@') + imapServerName;
-            //user_pref("extensions.sieve.account.<username>@<server>.enabled", true);
+            // user_pref("extensions.sieve.account.<username>@<server>.enabled", true);
             if (mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".enabled"), false).toBool()) {
-                //TODO
-                //user_pref("extensions.sieve.account.<username>@<server>.TLS", true);
-                //user_pref("extensions.sieve.account.<username>@<server>.TLS.forced", true);
-                //user_pref("extensions.sieve.account.<username>@<server>.activeAuthorization", 1);
-                //user_pref("extensions.sieve.account.<username>@<server>.activeHost", 1);
-                //user_pref("extensions.sieve.account.<username>@<server>.activeLogin", 1);
+                // TODO
+                // user_pref("extensions.sieve.account.<username>@<server>.TLS", true);
+                // user_pref("extensions.sieve.account.<username>@<server>.TLS.forced", true);
+                // user_pref("extensions.sieve.account.<username>@<server>.activeAuthorization", 1);
+                // user_pref("extensions.sieve.account.<username>@<server>.activeHost", 1);
+                // user_pref("extensions.sieve.account.<username>@<server>.activeLogin", 1);
                 SieveEditorUtil::SieveServerConfig config;
-                //0 4190
-                //1 2000
-                //2 custom
-                //Default == 4190
-                //user_pref("extensions.sieve.account.<username>@<server>.port", 1255);
+                // 0 4190
+                // 1 2000
+                // 2 custom
+                // Default == 4190
+                // user_pref("extensions.sieve.account.<username>@<server>.port", 1255);
                 config.sieveSettings.port = mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".port"), 4190).toInt();
-                //not necessary to import this one : user_pref("extensions.sieve.account.<username>@<server>.port.type", 1);
+                // not necessary to import this one : user_pref("extensions.sieve.account.<username>@<server>.port.type", 1);
 
-                //user_pref("extensions.sieve.account.<username>@<server>.hostname", "sdfsfsqsdf");
+                // user_pref("extensions.sieve.account.<username>@<server>.hostname", "sdfsfsqsdf");
                 const QString sieveHostName = mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".hostname")).toString();
                 if (sieveHostName.isEmpty()) {
                     config.sieveSettings.serverName = imapServerName;
@@ -168,16 +163,16 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
                 }
 
                 const QString sieveUserName = mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".login.username")).toString();
-                //user_pref("extensions.sieve.account.<username>@<server>.login.username", "newuser");
+                // user_pref("extensions.sieve.account.<username>@<server>.login.username", "newuser");
                 if (sieveUserName.isEmpty()) {
                     config.sieveSettings.userName = userName;
                 } else {
                     config.sieveSettings.userName = sieveUserName;
                 }
 
-                //not necessary to import this one : user_pref("extensions.sieve.account.<username>@<server>.proxy.type", 1);
+                // not necessary to import this one : user_pref("extensions.sieve.account.<username>@<server>.proxy.type", 1);
 
-                //qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
+                // qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
                 const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
                 bool found;
                 const int sievePort = mHashConfig.value(accountName + QStringLiteral(".port")).toInt(&found);
@@ -195,13 +190,13 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
                 }
             }
         } else {
-            //qCDebug(SIEVEEDITOR_LOG) << "Account " << accountName << " is not a imap account. Skip it.";
+            // qCDebug(SIEVEEDITOR_LOG) << "Account " << accountName << " is not a imap account. Skip it.";
         }
     }
     return atLeastAnAccountFound;
 }
 
-//Stolen from import-wizard
+// Stolen from import-wizard
 void ImportImapSettingsThunderbirdCheckJob::encryption(SieveEditorUtil::SieveServerConfig &config, const QString &accountName)
 {
     bool found;
@@ -209,15 +204,15 @@ void ImportImapSettingsThunderbirdCheckJob::encryption(SieveEditorUtil::SieveSer
     if (found) {
         switch (socketType) {
         case 0:
-            //None
+            // None
             config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::Unencrypted);
             break;
         case 2:
-            //STARTTLS
+            // STARTTLS
             config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::STARTTLS);
             break;
         case 3:
-            //SSL/TLS
+            // SSL/TLS
             config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::SSLorTLS);
             break;
         default:
@@ -238,20 +233,20 @@ void ImportImapSettingsThunderbirdCheckJob::addAuth(SieveEditorUtil::SieveServer
             case 0:
                 config.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::Plain);
                 break;
-            case 4: //Encrypted password ???
+            case 4: // Encrypted password ???
                 config.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::Login);
                 qCDebug(SIEVEEDITOR_LOG) << " authmethod == encrypt password";
                 break;
-            case 5: //GSSAPI
+            case 5: // GSSAPI
                 config.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::GSSAPI);
                 break;
-            case 6: //NTLM
+            case 6: // NTLM
                 config.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::NTLM);
                 break;
-            case 7: //TLS
+            case 7: // TLS
                 qCDebug(SIEVEEDITOR_LOG) << " authmethod method == TLS"; //????
                 break;
-            case 10: //OAuth2
+            case 10: // OAuth2
                 config.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::XOAuth2);
                 qCDebug(SIEVEEDITOR_LOG) << " authmethod method == OAuth2"; //????
                 break;
@@ -280,7 +275,7 @@ void ImportImapSettingsThunderbirdCheckJob::insertIntoMap(const QString &line)
         if (valueStr.at(pos) == QLatin1Char('"')) {
             valueStr.remove(pos, 1);
         }
-        //Store as String
+        // Store as String
         mHashConfig.insert(key, valueStr);
     } else {
         if (valueStr == QLatin1String("true")) {
@@ -288,7 +283,7 @@ void ImportImapSettingsThunderbirdCheckJob::insertIntoMap(const QString &line)
         } else if (valueStr == QLatin1String("false")) {
             mHashConfig.insert(key, false);
         } else {
-            //Store as integer
+            // Store as integer
             const int value = valueStr.toInt();
             mHashConfig.insert(key, value);
         }

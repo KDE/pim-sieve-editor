@@ -19,13 +19,13 @@
 
 #include "userfeedbackmanager.h"
 #include <KUserFeedback/ApplicationVersionSource>
+#include <KUserFeedback/LocaleInfoSource>
 #include <KUserFeedback/PlatformInfoSource>
-#include <KUserFeedback/ScreenInfoSource>
-#include <KUserFeedback/QtVersionSource>
 #include <KUserFeedback/Provider>
+#include <KUserFeedback/QtVersionSource>
+#include <KUserFeedback/ScreenInfoSource>
 #include <KUserFeedback/StartCountSource>
 #include <KUserFeedback/UsageTimeSource>
-#include <KUserFeedback/LocaleInfoSource>
 
 UserFeedBackManager::UserFeedBackManager(QObject *parent)
     : QObject(parent)

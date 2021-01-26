@@ -19,12 +19,12 @@
 
 #include "sieveeditorbookmarks.h"
 #include "sieveeditormainwindow.h"
-#include <QStandardPaths>
+#include <KActionCollection>
 #include <KBookmarkManager>
 #include <KBookmarkMenu>
 #include <QDir>
-#include <KActionCollection>
 #include <QMenu>
+#include <QStandardPaths>
 
 SieveEditorBookmarks::SieveEditorBookmarks(SieveEditorMainWindow *mainWindow, KActionCollection *collection, QMenu *menu, QObject *parent)
     : QObject(parent)

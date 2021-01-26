@@ -18,8 +18,8 @@
 */
 
 #include "sieveeditorcentralwidget.h"
-#include "sieveeditormainwidget.h"
 #include "sieveeditorconfigureserverpage.h"
+#include "sieveeditormainwidget.h"
 
 SieveEditorCentralWidget::SieveEditorCentralWidget(QWidget *parent, KActionCollection *ac)
     : QStackedWidget(parent)

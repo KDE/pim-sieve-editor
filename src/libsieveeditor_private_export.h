@@ -24,11 +24,11 @@
 
 /* Classes which are exported only for unit tests */
 #ifdef BUILD_TESTING
-# ifndef LIBSIEVEEDITOR_TESTS_EXPORT
-#  define LIBSIEVEEDITOR_TESTS_EXPORT LIBSIEVEEDITOR_EXPORT
-# endif
+#ifndef LIBSIEVEEDITOR_TESTS_EXPORT
+#define LIBSIEVEEDITOR_TESTS_EXPORT LIBSIEVEEDITOR_EXPORT
+#endif
 #else /* not compiling tests */
-# define LIBSIEVEEDITOR_TESTS_EXPORT
+#define LIBSIEVEEDITOR_TESTS_EXPORT
 #endif
 
 #endif

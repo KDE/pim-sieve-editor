@@ -20,9 +20,9 @@
 #include "importimapsettingsthunderbirdcheckjobtest.h"
 #include "importwizard/checks/importimapsettingsthunderbirdcheckjob.h"
 #include "libsieveeditor_export.h"
-#include <QTest>
-#include <QStandardPaths>
 #include <QSignalSpy>
+#include <QStandardPaths>
+#include <QTest>
 
 Q_DECLARE_METATYPE(SieveEditorUtil::SieveServerConfig)
 extern LIBSIEVEEDITOR_EXPORT QString sieveeditor_thunderbird_default_toplevel_path;
@@ -118,7 +118,8 @@ void ImportImapSettingsThunderbirdCheckJobTest::shouldImportSieveSettings_data()
         settings.sieveSettings.serverName = QStringLiteral("sever.foo.org");
         settings.sieveSettings.port = 4190;
 
-        QTest::newRow("thunderbirdencryptionnoneoneaccount") << QStringLiteral("/thunderbirdencryptionnoneoneaccount") << QStringLiteral("bla@kde.org") << settings;
+        QTest::newRow("thunderbirdencryptionnoneoneaccount")
+            << QStringLiteral("/thunderbirdencryptionnoneoneaccount") << QStringLiteral("bla@kde.org") << settings;
     }
     {
         SieveEditorUtil::SieveServerConfig settings;
@@ -131,7 +132,8 @@ void ImportImapSettingsThunderbirdCheckJobTest::shouldImportSieveSettings_data()
         settings.sieveSettings.serverName = QStringLiteral("sever.foo.org");
         settings.sieveSettings.port = 4190;
 
-        QTest::newRow("thunderbirdencryptionssloneaccount") << QStringLiteral("/thunderbirdencryptionssloneaccount") << QStringLiteral("bla@kde.org") << settings;
+        QTest::newRow("thunderbirdencryptionssloneaccount")
+            << QStringLiteral("/thunderbirdencryptionssloneaccount") << QStringLiteral("bla@kde.org") << settings;
     }
 
     {
@@ -145,7 +147,8 @@ void ImportImapSettingsThunderbirdCheckJobTest::shouldImportSieveSettings_data()
         settings.sieveSettings.serverName = QStringLiteral("sever.foo.org");
         settings.sieveSettings.port = 4190;
 
-        QTest::newRow("thunderbirdencryptionstarttlsoneaccount") << QStringLiteral("/thunderbirdencryptionstarttlsoneaccount") << QStringLiteral("bla@kde.org") << settings;
+        QTest::newRow("thunderbirdencryptionstarttlsoneaccount")
+            << QStringLiteral("/thunderbirdencryptionstarttlsoneaccount") << QStringLiteral("bla@kde.org") << settings;
     }
 }
 

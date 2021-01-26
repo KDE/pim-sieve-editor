@@ -17,11 +17,11 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "readserversieveconfigjob.h"
 #include "sieveeditormanagesievewidget.h"
+#include "readserversieveconfigjob.h"
 #include "sieveeditorutil.h"
-#include <KSieveUi/SieveTreeWidgetItem>
 #include <KSieveUi/ManageSieveTreeView>
+#include <KSieveUi/SieveTreeWidgetItem>
 
 #include <KManageSieve/SieveJob>
 

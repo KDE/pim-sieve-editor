@@ -22,17 +22,18 @@
 
 #include "libsieveeditor_export.h"
 #include "libsieveeditor_private_export.h"
+#include <KSieveUi/SieveImapAccountSettings>
+#include <MailTransport/Transport>
 #include <QString>
 #include <QUrl>
-#include <MailTransport/Transport>
-#include <KSieveUi/SieveImapAccountSettings>
-namespace SieveEditorUtil {
+namespace SieveEditorUtil
+{
 struct LIBSIEVEEDITOR_EXPORT SieveAccountSettings {
     SieveAccountSettings()
     {
     }
 
-    Q_REQUIRED_RESULT bool operator ==(const SieveAccountSettings &other) const;
+    Q_REQUIRED_RESULT bool operator==(const SieveAccountSettings &other) const;
     Q_REQUIRED_RESULT bool isValid() const;
     QString serverName;
     QString userName;
@@ -50,7 +51,7 @@ struct LIBSIEVEEDITOR_EXPORT SieveServerConfig {
     Q_REQUIRED_RESULT QUrl url() const;
     SieveAccountSettings sieveSettings;
     KSieveUi::SieveImapAccountSettings sieveImapAccountSettings;
-    bool operator ==(const SieveServerConfig &other) const;
+    bool operator==(const SieveServerConfig &other) const;
     bool enabled = true;
     bool useImapCustomServer = false;
 };
@@ -63,6 +64,6 @@ Q_REQUIRED_RESULT QString imapPasswordIdentifier(const QString &userName, const 
 Q_REQUIRED_RESULT QString walletFolderName();
 }
 Q_DECLARE_TYPEINFO(SieveEditorUtil::SieveServerConfig, Q_MOVABLE_TYPE);
-LIBSIEVEEDITOR_TESTS_EXPORT QDebug operator <<(QDebug d, const SieveEditorUtil::SieveAccountSettings &settings);
-LIBSIEVEEDITOR_TESTS_EXPORT QDebug operator <<(QDebug d, const SieveEditorUtil::SieveServerConfig &settings);
+LIBSIEVEEDITOR_TESTS_EXPORT QDebug operator<<(QDebug d, const SieveEditorUtil::SieveAccountSettings &settings);
+LIBSIEVEEDITOR_TESTS_EXPORT QDebug operator<<(QDebug d, const SieveEditorUtil::SieveServerConfig &settings);
 #endif // SIEVEEDITORUTIL_H

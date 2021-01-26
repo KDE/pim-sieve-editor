@@ -20,8 +20,8 @@
 #ifndef IMPORTIMAPSETTINGWIZARD_H
 #define IMPORTIMAPSETTINGWIZARD_H
 
-#include <KAssistantDialog>
 #include "libsieveeditor_export.h"
+#include <KAssistantDialog>
 
 class ImportImapSettingSearchPage;
 class ImportImapSettingNoFoundPage;

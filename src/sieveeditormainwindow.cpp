@@ -19,34 +19,34 @@
 
 #include "sieveeditormainwindow.h"
 
-#include "sieveeditormainwidget.h"
-#include "sieveeditorconfiguredialog.h"
-#include "serversievesettingsdialog.h"
-#include "sieveserversettings.h"
-#include "sieveeditorcentralwidget.h"
-#include "sieveeditorglobalconfig.h"
-#include "sievepurposemenuwidget.h"
-#include "sieveeditorbookmarks.h"
 #include "importwizard/importimapsettingwizard.h"
+#include "serversievesettingsdialog.h"
+#include "sieveeditorbookmarks.h"
+#include "sieveeditorcentralwidget.h"
+#include "sieveeditorconfiguredialog.h"
+#include "sieveeditorglobalconfig.h"
+#include "sieveeditormainwidget.h"
+#include "sievepurposemenuwidget.h"
+#include "sieveserversettings.h"
 #include <PimCommon/KActionMenuChangeCase>
 
-#include <KSharedConfig>
 #include <KIconEngine>
 #include <KIconLoader>
+#include <KSharedConfig>
 #include <PimCommon/NetworkManager>
 
-#include <KLocalizedString>
-#include <KConfigGroup>
-#include <KStandardAction>
 #include <KActionCollection>
+#include <KConfigGroup>
+#include <KLocalizedString>
+#include <KStandardAction>
 #include <QAction>
-#include <QStatusBar>
 #include <QIcon>
+#include <QStatusBar>
 
-#include <QPointer>
-#include <QLabel>
 #include <QCloseEvent>
+#include <QLabel>
 #include <QNetworkConfigurationManager>
+#include <QPointer>
 #ifdef WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
 #include <KUserFeedback/NotificationPopup>
@@ -58,7 +58,7 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
 {
     mMainWidget = new SieveEditorCentralWidget(this, actionCollection());
 #ifdef WITH_KUSERFEEDBACK
-    //Initialize
+    // Initialize
     (void)UserFeedBackManager::self();
 #endif
     connect(mMainWidget, &SieveEditorCentralWidget::configureClicked, this, &SieveEditorMainWindow::slotConfigure);
@@ -69,8 +69,10 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     setupGUI();
     readConfig();
     initStatusBar();
-    connect(PimCommon::NetworkManager::self()->networkConfigureManager(), &QNetworkConfigurationManager::onlineStateChanged,
-            this, &SieveEditorMainWindow::slotSystemNetworkOnlineStateChanged);
+    connect(PimCommon::NetworkManager::self()->networkConfigureManager(),
+            &QNetworkConfigurationManager::onlineStateChanged,
+            this,
+            &SieveEditorMainWindow::slotSystemNetworkOnlineStateChanged);
 
     connect(mMainWidget->sieveEditorMainWidget()->tabWidget(), &QTabWidget::currentChanged, this, &SieveEditorMainWindow::slotUpdateActions);
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::modeEditorChanged, this, &SieveEditorMainWindow::slotUpdateActions);
@@ -248,8 +250,14 @@ void SieveEditorMainWindow::setupActions()
     mMenuChangeCaseAction->appendInActionCollection(ac);
     connect(mMenuChangeCaseAction, &PimCommon::KActionMenuChangeCase::upperCase, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotUpperCase);
     connect(mMenuChangeCaseAction, &PimCommon::KActionMenuChangeCase::lowerCase, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotLowerCase);
-    connect(mMenuChangeCaseAction, &PimCommon::KActionMenuChangeCase::sentenceCase, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotSentenceCase);
-    connect(mMenuChangeCaseAction, &PimCommon::KActionMenuChangeCase::reverseCase, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotReverseCase);
+    connect(mMenuChangeCaseAction,
+            &PimCommon::KActionMenuChangeCase::sentenceCase,
+            mMainWidget->sieveEditorMainWidget(),
+            &SieveEditorMainWidget::slotSentenceCase);
+    connect(mMenuChangeCaseAction,
+            &PimCommon::KActionMenuChangeCase::reverseCase,
+            mMainWidget->sieveEditorMainWidget(),
+            &SieveEditorMainWidget::slotReverseCase);
 
     mBookmarkMenu = new KActionMenu(i18nc("@title:menu", "&Bookmarks"), ac);
     mSieveEditorBookmarks = new SieveEditorBookmarks(this, ac, mBookmarkMenu->menu(), this);

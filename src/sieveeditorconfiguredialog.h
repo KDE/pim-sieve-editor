@@ -24,7 +24,8 @@
 class QCheckBox;
 class SieveEditorConfigureServerWidget;
 #ifdef WITH_KUSERFEEDBACK
-namespace KUserFeedback {
+namespace KUserFeedback
+{
 class FeedbackConfigWidget;
 }
 #endif

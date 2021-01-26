@@ -20,23 +20,23 @@
 #include "sieveeditorconfiguredialog.h"
 #include "serversievelistwidget.h"
 #include "sieveeditorconfigureserverwidget.h"
-#include <PimCommon/ConfigureImmutableWidgetUtils>
 #include "sieveeditorglobalconfig.h"
+#include <PimCommon/ConfigureImmutableWidgetUtils>
 
 #ifdef WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
-#include <KUserFeedback/Provider>
 #include <KUserFeedback/FeedbackConfigWidget>
+#include <KUserFeedback/Provider>
 #endif
 
 #include <KLocalizedString>
 #include <KSharedConfig>
 
-#include <QVBoxLayout>
-#include <QCheckBox>
 #include <KConfigGroup>
+#include <QCheckBox>
 #include <QDialogButtonBox>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     : KPageDialog(parent)
@@ -44,12 +44,12 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     setWindowTitle(i18nc("@title:window", "Configure"));
     setFaceType(KPageDialog::List);
 
-    buttonBox()->setStandardButtons(QDialogButtonBox::Ok| QDialogButtonBox::Cancel);
+    buttonBox()->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
 
     connect(buttonBox(), &QDialogButtonBox::accepted, this, &SieveEditorConfigureDialog::accept);
     connect(buttonBox(), &QDialogButtonBox::rejected, this, &SieveEditorConfigureDialog::reject);
 
-    //Server page
+    // Server page
     auto serverConfigureWiget = new QWidget;
     auto layout = new QVBoxLayout(serverConfigureWiget);
     mServerWidget = new SieveEditorConfigureServerWidget;
@@ -59,7 +59,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     serverPageWidgetPage->setIcon(QIcon::fromTheme(QStringLiteral("network-workgroup")));
     addPage(serverPageWidgetPage);
 
-    //Editor page
+    // Editor page
     auto editorWidget = new QWidget;
     editorWidget->setObjectName(QStringLiteral("editorwidget"));
 
@@ -73,7 +73,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     editorPageWidgetPage->setIcon(QIcon::fromTheme(QStringLiteral("accessories-text-editor")));
     addPage(editorPageWidgetPage);
 
-    //UserFeedBack config
+    // UserFeedBack config
 #ifdef WITH_KUSERFEEDBACK
     auto userFeedBackWidget = new QWidget;
     userFeedBackWidget->setObjectName(QStringLiteral("userFeedBackWidget"));

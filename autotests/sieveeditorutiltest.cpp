@@ -18,8 +18,8 @@
 */
 
 #include "sieveeditorutiltest.h"
-#include <QTest>
 #include "../src/sieveeditorutil.h"
+#include <QTest>
 
 SieveEditorUtilTest::SieveEditorUtilTest(QObject *parent)
     : QObject(parent)

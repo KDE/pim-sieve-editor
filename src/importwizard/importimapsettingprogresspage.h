@@ -20,10 +20,10 @@
 #ifndef IMPORTIMAPSETTINGPROGRESSPAGE_H
 #define IMPORTIMAPSETTINGPROGRESSPAGE_H
 
-#include <QWidget>
-#include <QMap>
-#include "sieveeditorutil.h"
 #include "libsieveeditor_private_export.h"
+#include "sieveeditorutil.h"
+#include <QMap>
+#include <QWidget>
 
 class QTextEdit;
 class AbstractImapSettingsCheckJob;

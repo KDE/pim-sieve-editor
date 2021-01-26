@@ -33,6 +33,7 @@ public:
 protected:
     Q_REQUIRED_RESULT bool refreshList() override;
     void updateSieveSettings() override;
+
 private:
     void slotReadServerSieveConfigDone(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig);
     QVector<SieveEditorUtil::SieveServerConfig> mSieveServerSettings;

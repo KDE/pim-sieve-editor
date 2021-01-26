@@ -20,9 +20,9 @@
 #ifndef ABSTRACTIMAPSETTINGSCHECKJOB_H
 #define ABSTRACTIMAPSETTINGSCHECKJOB_H
 
-#include <QObject>
 #include "../../sieveeditorutil.h"
 #include "libsieveeditor_private_export.h"
+#include <QObject>
 class AbstractImapSettingsPassword;
 class LIBSIEVEEDITOR_TESTS_EXPORT AbstractImapSettingsCheckJob : public QObject
 {

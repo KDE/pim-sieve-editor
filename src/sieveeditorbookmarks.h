@@ -20,8 +20,8 @@
 #ifndef SIEVEEDITORBOOKMARKS_H
 #define SIEVEEDITORBOOKMARKS_H
 
-#include <QObject>
 #include <KBookmarkOwner>
+#include <QObject>
 class KBookmarkMenu;
 class QMenu;
 class KActionCollection;

@@ -19,14 +19,16 @@
 
 #ifndef SIEVEEDITORPAGEWIDGET_H
 #define SIEVEEDITORPAGEWIDGET_H
-#include <QWidget>
-#include <QUrl>
-#include <KSieveUi/SieveEditorWidget>
 #include <KSieveUi/ManageSieveWidget>
-namespace KManageSieve {
+#include <KSieveUi/SieveEditorWidget>
+#include <QUrl>
+#include <QWidget>
+namespace KManageSieve
+{
 class SieveJob;
 }
-namespace KSieveUi {
+namespace KSieveUi
+{
 class SieveEditorWidget;
 }
 

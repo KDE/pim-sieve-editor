@@ -43,7 +43,6 @@ private:
     void importSettings(const QString &directory, const QString &filename);
     QMultiMap<QString, QString> mSieveServerLst;
     QMap<QString, QString>::const_iterator mSieveServerMapIterator;
-
 };
 
 #endif // IMPORTIMAPSETTINGSAKONADICHECKJOB_H

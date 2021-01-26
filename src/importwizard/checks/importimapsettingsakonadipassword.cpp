@@ -18,8 +18,8 @@
 */
 
 #include "importimapsettingsakonadipassword.h"
-#include "sieveserversettings.h"
 #include "sieveeditor_debug.h"
+#include "sieveserversettings.h"
 
 using namespace QKeychain;
 

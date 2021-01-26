@@ -20,8 +20,8 @@
 #ifndef SieveEditorConfigureServerPage_H
 #define SieveEditorConfigureServerPage_H
 
-#include <QWidget>
 #include "libsieveeditor_private_export.h"
+#include <QWidget>
 
 class LIBSIEVEEDITOR_TESTS_EXPORT SieveEditorConfigureServerPage : public QWidget
 {

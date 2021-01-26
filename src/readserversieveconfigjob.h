@@ -20,9 +20,9 @@
 #ifndef READSERVERSIEVECONFIGJOB_H
 #define READSERVERSIEVECONFIGJOB_H
 
+#include "sieveeditorutil.h"
 #include <QObject>
 #include <qt5keychain/keychain.h>
-#include "sieveeditorutil.h"
 class ReadServerSieveConfigJob : public QObject
 {
     Q_OBJECT
@@ -34,6 +34,7 @@ public:
 Q_SIGNALS:
     void finished(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig);
     void loadNextConfig();
+
 private:
     void loadSettings(const QString &conf);
     void slotReadNextConfig();

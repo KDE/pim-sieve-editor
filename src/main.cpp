@@ -20,17 +20,17 @@
 #include "sieveeditor-version.h"
 #include "sieveeditormainwindow.h"
 #include <KAboutData>
+#include <KCrash>
+#include <KDBusService>
 #include <KLocalizedString>
 #include <Kdelibs4ConfigMigrator>
 #include <QApplication>
-#include <KDBusService>
 #include <QCommandLineParser>
-#include <KCrash>
 #include <QTextStream>
 #ifdef WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
-#include <KUserFeedback/Provider>
 #include <KUserFeedback/FeedbackConfigWidget>
+#include <KUserFeedback/Provider>
 #endif
 
 int main(int argc, char **argv)

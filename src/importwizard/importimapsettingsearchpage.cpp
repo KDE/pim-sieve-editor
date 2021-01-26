@@ -19,10 +19,10 @@
 
 #include "importimapsettingsearchpage.h"
 
+#include <KLocalizedString>
 #include <QLabel>
 #include <QListWidget>
 #include <QVBoxLayout>
-#include <KLocalizedString>
 
 ImportImapSettingSearchPage::ImportImapSettingSearchPage(QWidget *parent)
     : QWidget(parent)

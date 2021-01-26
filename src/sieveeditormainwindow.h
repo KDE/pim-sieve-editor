@@ -20,14 +20,15 @@
 #ifndef SIEVEEDITORMAINWINDOW_H
 #define SIEVEEDITORMAINWINDOW_H
 
-#include <KXmlGuiWindow>
 #include "libsieveeditor_export.h"
+#include <KXmlGuiWindow>
 class QAction;
 class SieveEditorCentralWidget;
 class QLabel;
 class SieveEditorBookmarks;
 class KActionMenu;
-namespace PimCommon {
+namespace PimCommon
+{
 class KActionMenuChangeCase;
 }
 class LIBSIEVEEDITOR_EXPORT SieveEditorMainWindow : public KXmlGuiWindow
@@ -60,6 +61,7 @@ private:
     void slotCopyAvailable(bool b);
     void slotOpenBookmarkUrl(const QUrl &url);
     void slotImportImapSettings();
+
 private:
     void initStatusBar();
     void readConfig();

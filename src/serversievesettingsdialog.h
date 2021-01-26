@@ -20,8 +20,8 @@
 #ifndef SERVERSIEVESETTINGSDIALOG_H
 #define SERVERSIEVESETTINGSDIALOG_H
 
-#include <QDialog>
 #include "sieveeditorutil.h"
+#include <QDialog>
 class ServerSieveSettings;
 class QPushButton;
 class ServerSieveSettingsDialog : public QDialog

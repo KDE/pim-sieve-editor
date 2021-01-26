@@ -20,14 +20,16 @@
 #ifndef SERVERSIEVESETTINGS_H
 #define SERVERSIEVESETTINGS_H
 
-#include <QWidget>
-#include "sieveeditorutil.h"
 #include "libsieveeditor_private_export.h"
+#include "sieveeditorutil.h"
+#include <QWidget>
 
-namespace Ui {
+namespace Ui
+{
 class ServerSieveSettings;
 }
-namespace MailTransport {
+namespace MailTransport
+{
 class ServerTest;
 }
 class QComboBox;
@@ -77,6 +79,7 @@ private:
 
     void slotFinished(const QVector<int> &testResult);
     void slotEncryptionRadioChanged();
+
 private:
     void populateDefaultAuthenticationOptions(QComboBox *combobox);
     void slotSafetyChanged();

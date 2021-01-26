@@ -17,8 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include <QApplication>
 #include "../importimapsettingwizard.h"
+#include <QApplication>
 #include <QStandardPaths>
 
 int main(int argc, char *argv[])

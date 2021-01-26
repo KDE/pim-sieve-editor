@@ -18,18 +18,18 @@
 */
 
 #include "serversievesettings.h"
+#include "sieveeditor_debug.h"
 #include "ui_serversievesettings.h"
-#include <MailTransport/Transport>
-#include <MailTransport/ServerTest>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include "sieveeditor_debug.h"
+#include <MailTransport/ServerTest>
+#include <MailTransport/Transport>
 
 /** static helper functions **/
 static QString authenticationModeString(MailTransport::Transport::EnumAuthenticationType::type mode)
 {
     switch (mode) {
-    case  MailTransport::Transport::EnumAuthenticationType::LOGIN:
+    case MailTransport::Transport::EnumAuthenticationType::LOGIN:
         return QStringLiteral("LOGIN");
     case MailTransport::Transport::EnumAuthenticationType::PLAIN:
         return QStringLiteral("PLAIN");
@@ -53,28 +53,31 @@ static QString authenticationModeString(MailTransport::Transport::EnumAuthentica
 
 static void addAuthenticationItem(QComboBox *authCombo, MailTransport::Transport::EnumAuthenticationType::type authtype)
 {
-    //qCDebug(SIEVEEDITOR_LOG) << "adding auth item " << authenticationModeString( authtype );
+    // qCDebug(SIEVEEDITOR_LOG) << "adding auth item " << authenticationModeString( authtype );
     authCombo->addItem(authenticationModeString(authtype), QVariant(authtype));
 }
 
 static MailTransport::Transport::EnumAuthenticationType::type getCurrentAuthMode(QComboBox *authCombo)
 {
-    MailTransport::Transport::EnumAuthenticationType::type authtype = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(authCombo->itemData(authCombo->currentIndex()).toInt());
-    //qCDebug(SIEVEEDITOR_LOG) << "current auth mode: " << authenticationModeString( authtype );
+    MailTransport::Transport::EnumAuthenticationType::type authtype =
+        static_cast<MailTransport::Transport::EnumAuthenticationType::type>(authCombo->itemData(authCombo->currentIndex()).toInt());
+    // qCDebug(SIEVEEDITOR_LOG) << "current auth mode: " << authenticationModeString( authtype );
     return authtype;
 }
 
 static void setCurrentAuthMode(QComboBox *authCombo, MailTransport::Transport::EnumAuthenticationType::type authtype)
 {
-    //qCDebug(SIEVEEDITOR_LOG) << "setting authcombo: " << authenticationModeString( authtype );
+    // qCDebug(SIEVEEDITOR_LOG) << "setting authcombo: " << authenticationModeString( authtype );
     int index = authCombo->findData(authtype);
     if (index == -1) {
         qCWarning(SIEVEEDITOR_LOG) << "desired authmode not in the combo";
     }
-    //qCDebug(SIEVEEDITOR_LOG) << "found corresponding index: " << index << "with data" << authenticationModeString( (MailTransport::Transport::EnumAuthenticationType::type) authCombo->itemData( index ).toInt() );
+    // qCDebug(SIEVEEDITOR_LOG) << "found corresponding index: " << index << "with data" << authenticationModeString(
+    // (MailTransport::Transport::EnumAuthenticationType::type) authCombo->itemData( index ).toInt() );
     authCombo->setCurrentIndex(index);
-    MailTransport::Transport::EnumAuthenticationType::type t = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(authCombo->itemData(authCombo->currentIndex()).toInt());
-    //qCDebug(SIEVEEDITOR_LOG) << "selected auth mode:" << authenticationModeString( t );
+    MailTransport::Transport::EnumAuthenticationType::type t =
+        static_cast<MailTransport::Transport::EnumAuthenticationType::type>(authCombo->itemData(authCombo->currentIndex()).toInt());
+    // qCDebug(SIEVEEDITOR_LOG) << "selected auth mode:" << authenticationModeString( t );
     Q_ASSERT(t == authtype);
 }
 
@@ -276,7 +279,7 @@ void ServerSieveSettings::slotTest()
         KMessageBox::error(this, i18n("Server is not defined"), i18n("Check Server"));
         return;
     }
-    //qCDebug(SIEVEEDITOR_LOG) << ui->imapServer->text();
+    // qCDebug(SIEVEEDITOR_LOG) << ui->imapServer->text();
     ui->testButton->setEnabled(false);
     ui->safeImap->setEnabled(false);
     ui->imapAuthenticationCombo->setEnabled(false);
@@ -334,8 +337,9 @@ void ServerSieveSettings::slotFinished(const QVector<int> &testResult)
         text = i18n("<qt><b>SSL is supported and recommended.</b></qt>");
     } else if (testResult.contains(Transport::EnumEncryption::None)) {
         ui->noRadio->setChecked(true);
-        text = i18n("<qt><b>No security is supported. It is not "
-                    "recommended to connect to this server.</b></qt>");
+        text = i18n(
+            "<qt><b>No security is supported. It is not "
+            "recommended to connect to this server.</b></qt>");
     } else {
         text = i18n("<qt><b>It is not possible to use this server.</b></qt>");
     }

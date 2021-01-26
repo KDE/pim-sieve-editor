@@ -18,15 +18,15 @@
 */
 
 #include "importimapsettingwizard.h"
-#include "importimapsettingsearchpage.h"
-#include "importimapsettingnofoundpage.h"
-#include "importimapsettingfinishpage.h"
-#include "importimapsettingprogresspage.h"
 #include "checks/importimapsettingsakonadicheckjob.h"
 #include "checks/importimapsettingsthunderbirdcheckjob.h"
+#include "importimapsettingfinishpage.h"
+#include "importimapsettingnofoundpage.h"
+#include "importimapsettingprogresspage.h"
+#include "importimapsettingsearchpage.h"
 
-#include <KLocalizedString>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
 #include <PimCommon/PimUtil>
 #include <importwizard/checks/importimapsettingsakonadipassword.h>
@@ -88,7 +88,7 @@ void ImportImapSettingWizard::initializeWizard()
     }
 
     if (hasSettingToImport) {
-        //Initialize list
+        // Initialize list
         mSearchPage->setProgramList(mListCheckJob.keys());
         setAppropriate(mNoFoundPageItem, false);
         setAppropriate(mSearchPageItem, false);
@@ -116,12 +116,12 @@ void ImportImapSettingWizard::next()
     if (currentPage() == mSearchPageItem) {
         const QStringList programs = mSearchPage->selectedPrograms();
         if (programs.isEmpty()) {
-            //Go to end
+            // Go to end
             setAppropriate(mProgressPageItem, false);
         } else {
             mProgressPage->setListCheckJob(mListCheckJob);
             mProgressPage->setSelectedPrograms(programs);
-            //Start importation
+            // Start importation
             mProgressPage->start();
         }
     }

@@ -32,6 +32,7 @@ public:
     void start() override;
     Q_REQUIRED_RESULT bool settingsCanBeImported() const override;
     Q_REQUIRED_RESULT QString name() const override;
+
 private:
     Q_REQUIRED_RESULT bool importSettings(const QString &directory, const QString &defaultProfile);
     Q_REQUIRED_RESULT QMap<QString, QString> listProfile(QString &currentProfile, const QString &defaultSettingPath);

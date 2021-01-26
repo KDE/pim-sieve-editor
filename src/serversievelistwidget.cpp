@@ -18,9 +18,9 @@
 */
 
 #include "serversievelistwidget.h"
+#include "readserversieveconfigjob.h"
 #include "serversievesettingsdialog.h"
 #include "sieveserversettings.h"
-#include "readserversieveconfigjob.h"
 #include <KLocalizedString>
 
 #include <QListWidgetItem>
@@ -103,7 +103,8 @@ void ServerSieveListWidget::deleteServerConfig(QListWidgetItem *item)
     SieveEditorUtil::SieveServerConfig conf = serverSieveListItem->serverConfig();
 
     mNeedToRemovePasswordInWallet.append(SieveEditorUtil::sievePasswordIdentifier(conf.sieveSettings.userName, conf.sieveSettings.serverName));
-    const QString imapIdentifier = SieveEditorUtil::imapPasswordIdentifier(conf.sieveImapAccountSettings.userName(), conf.sieveImapAccountSettings.serverName());
+    const QString imapIdentifier =
+        SieveEditorUtil::imapPasswordIdentifier(conf.sieveImapAccountSettings.userName(), conf.sieveImapAccountSettings.serverName());
     if (!imapIdentifier.isEmpty()) {
         mNeedToRemovePasswordInWallet.append(imapIdentifier);
     }

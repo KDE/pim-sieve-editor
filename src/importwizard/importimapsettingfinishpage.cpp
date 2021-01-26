@@ -18,10 +18,10 @@
 */
 
 #include "importimapsettingfinishpage.h"
-#include <QVBoxLayout>
 #include <KLocalizedString>
-#include <QTextEdit>
 #include <QLabel>
+#include <QTextEdit>
+#include <QVBoxLayout>
 
 ImportImapSettingFinishPage::ImportImapSettingFinishPage(QWidget *parent)
     : QWidget(parent)

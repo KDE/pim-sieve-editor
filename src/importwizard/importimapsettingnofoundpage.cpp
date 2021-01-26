@@ -18,9 +18,9 @@
 */
 
 #include "importimapsettingnofoundpage.h"
-#include <QVBoxLayout>
-#include <QLabel>
 #include <KLocalizedString>
+#include <QLabel>
+#include <QVBoxLayout>
 
 ImportImapSettingNoFoundPage::ImportImapSettingNoFoundPage(QWidget *parent)
     : QWidget(parent)

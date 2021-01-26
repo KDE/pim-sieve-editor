@@ -19,10 +19,10 @@
 
 #include "importimapsettingprogresspagetest.h"
 #include "../importimapsettingprogresspage.h"
+#include <QStandardPaths>
 #include <QTest>
 #include <QTextEdit>
 #include <QVBoxLayout>
-#include <QStandardPaths>
 
 ImportImapSettingProgressPageTest::ImportImapSettingProgressPageTest(QObject *parent)
     : QObject(parent)

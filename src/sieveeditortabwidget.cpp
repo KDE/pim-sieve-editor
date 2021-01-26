@@ -19,13 +19,13 @@
 
 #include "sieveeditortabwidget.h"
 
-#include <KLocalizedString>
 #include <KActionCollection>
-#include <QMenu>
+#include <KLocalizedString>
 #include <QIcon>
+#include <QMenu>
 
-#include <QTabBar>
 #include <QAction>
+#include <QTabBar>
 
 SieveEditorTabWidget::SieveEditorTabWidget(KActionCollection *ac, QWidget *parent)
     : QTabWidget(parent)
@@ -69,7 +69,7 @@ void SieveEditorTabWidget::slotTabContextMenuRequest(const QPoint &pos)
 
     QAction *action = menu.exec(mapToGlobal(pos));
 
-    if (action == allOther) {   // Close all other tabs
+    if (action == allOther) { // Close all other tabs
         Q_EMIT tabRemoveAllExclude(indexBar);
     } else if (action == closeTab) {
         Q_EMIT tabCloseRequestedIndex(indexBar);

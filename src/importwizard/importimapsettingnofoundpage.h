@@ -20,8 +20,8 @@
 #ifndef IMPORTIMAPSETTINGNOFOUNDPAGE_H
 #define IMPORTIMAPSETTINGNOFOUNDPAGE_H
 
-#include <QWidget>
 #include "libsieveeditor_private_export.h"
+#include <QWidget>
 
 class LIBSIEVEEDITOR_TESTS_EXPORT ImportImapSettingNoFoundPage : public QWidget
 {

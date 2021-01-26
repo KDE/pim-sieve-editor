@@ -21,9 +21,9 @@
 #include "../importimapsettingsearchpage.h"
 #include <QLabel>
 #include <QListWidget>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
-#include <QStandardPaths>
 ImportImapSettingSearchPageTest::ImportImapSettingSearchPageTest(QObject *parent)
     : QObject(parent)
 {
@@ -52,9 +52,7 @@ void ImportImapSettingSearchPageTest::shouldHaveDefaultValue()
 void ImportImapSettingSearchPageTest::shouldAddCheckPrograms()
 {
     ImportImapSettingSearchPage w;
-    const QStringList lst {
-        QStringLiteral("foo"), QStringLiteral("bla"), QStringLiteral("do")
-    };
+    const QStringList lst{QStringLiteral("foo"), QStringLiteral("bla"), QStringLiteral("do")};
 
     w.setProgramList(lst);
     auto mFoundProgramList = w.findChild<QListWidget *>(QStringLiteral("foundprogramlist"));
