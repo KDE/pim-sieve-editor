@@ -59,6 +59,7 @@ set(sieveeditor_LIB_SRCS
     sieveeditorsavepasswordjob.cpp
     ${sieveeditor_importimapsettings_SRCS}
     ${sieveeditor_importimapsettings_check_SRCS}
+    sieveeditor.qrc
     )
 
 
@@ -66,9 +67,6 @@ ki18n_wrap_ui(sieveeditor_LIB_SRCS
     ui/serversievesettings.ui
     ui/sieveeditorconfigureserverwidget.ui
     )
-
-qt5_add_resources(sieveeditor_LIB_SRCS sieveeditor.qrc)
-
 ecm_qt_declare_logging_category(sieveeditor_LIB_SRCS HEADER sieveeditor_debug.h 
 	IDENTIFIER SIEVEEDITOR_LOG 
 	CATEGORY_NAME org.kde.pim.sieveeditor 
