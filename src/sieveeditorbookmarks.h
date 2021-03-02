@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SIEVEEDITORBOOKMARKS_H
-#define SIEVEEDITORBOOKMARKS_H
+#pragma once
 
 #include <KBookmarkOwner>
 #include <QObject>
@@ -50,4 +49,3 @@ private:
     SieveEditorMainWindow *const mMainWindow;
 };
 
-#endif // SIEVEEDITORBOOKMARKS_H

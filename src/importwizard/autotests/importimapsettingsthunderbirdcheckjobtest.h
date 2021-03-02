@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef IMPORTIMAPSETTINGSTHUNDERBIRDCHECKJOBTEST_H
-#define IMPORTIMAPSETTINGSTHUNDERBIRDCHECKJOBTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -40,4 +39,3 @@ private Q_SLOTS:
     void shouldImportSieveSettings();
 };
 
-#endif // IMPORTIMAPSETTINGSTHUNDERBIRDCHECKJOBTEST_H

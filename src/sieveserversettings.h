@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SieveServerSettings_H
-#define SieveServerSettings_H
+#pragma once
 
 #include <QObject>
 class SieveServerSettings : public QObject
@@ -34,4 +33,3 @@ private:
     friend class SieveServerSettingsPrivate;
 };
 
-#endif // SieveServerSettings_H

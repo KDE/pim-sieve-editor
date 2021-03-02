@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SERVERSIEVELISTWIDGET_H
-#define SERVERSIEVELISTWIDGET_H
+#pragma once
 
 #include "sieveeditorutil.h"
 #include <QListWidget>
@@ -57,4 +56,3 @@ private:
     QStringList mNeedToRemovePasswordInWallet;
 };
 
-#endif // SERVERSIEVELISTWIDGET_H

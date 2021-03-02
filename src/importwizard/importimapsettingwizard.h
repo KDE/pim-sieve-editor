@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef IMPORTIMAPSETTINGWIZARD_H
-#define IMPORTIMAPSETTINGWIZARD_H
+#pragma once
 
 #include "libsieveeditor_export.h"
 #include <KAssistantDialog>
@@ -61,4 +60,3 @@ private:
     KPageWidgetItem *mFinishPageItem = nullptr;
 };
 
-#endif // IMPORTIMAPSETTINGWIZARD_H

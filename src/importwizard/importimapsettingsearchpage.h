@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef IMPORTIMAPSETTINGSEARCHPAGE_H
-#define IMPORTIMAPSETTINGSEARCHPAGE_H
+#pragma once
 
 #include "libsieveeditor_private_export.h"
 #include <QWidget>
@@ -42,4 +41,3 @@ private:
     QListWidget *mFoundProgramList = nullptr;
 };
 
-#endif // IMPORTIMAPSETTINGSEARCHPAGE_H

@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef IMPORTIMAPSETTINGNOFOUNDPAGE_H
-#define IMPORTIMAPSETTINGNOFOUNDPAGE_H
+#pragma once
 
 #include "libsieveeditor_private_export.h"
 #include <QWidget>
@@ -31,4 +30,3 @@ public:
     ~ImportImapSettingNoFoundPage() override;
 };
 
-#endif // IMPORTIMAPSETTINGNOFOUNDPAGE_H

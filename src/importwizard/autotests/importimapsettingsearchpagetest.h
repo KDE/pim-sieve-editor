@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef IMPORTIMAPSETTINGSEARCHPAGETEST_H
-#define IMPORTIMAPSETTINGSEARCHPAGETEST_H
+#pragma once
 
 #include <QObject>
 
@@ -33,4 +32,3 @@ private Q_SLOTS:
     void shouldAddCheckPrograms();
 };
 
-#endif // IMPORTIMAPSETTINGSEARCHPAGETEST_H

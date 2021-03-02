@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SERVERSIEVESETTINGSDIALOG_H
-#define SERVERSIEVESETTINGSDIALOG_H
+#pragma once
 
 #include "sieveeditorutil.h"
 #include <QDialog>
@@ -54,4 +53,3 @@ private:
     QPushButton *mOkButton = nullptr;
 };
 
-#endif // SERVERSIEVESETTINGSDIALOG_H

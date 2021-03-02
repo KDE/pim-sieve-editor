@@ -17,8 +17,7 @@
     Boston, MA 02110-1301, USA.
 */
 
-#ifndef LIBSIEVEEDITORPRIVATE_EXPORT_H
-#define LIBSIEVEEDITORPRIVATE_EXPORT_H
+#pragma once
 
 #include "libsieveeditor_export.h"
 
@@ -31,4 +30,3 @@
 #define LIBSIEVEEDITOR_TESTS_EXPORT
 #endif
 
-#endif

@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef IMPORTIMAPSETTINGFINISHPAGETEST_H
-#define IMPORTIMAPSETTINGFINISHPAGETEST_H
+#pragma once
 
 #include <QObject>
 
@@ -32,4 +31,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
 
-#endif // IMPORTIMAPSETTINGFINISHPAGETEST_H

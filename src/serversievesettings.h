@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SERVERSIEVESETTINGS_H
-#define SERVERSIEVESETTINGS_H
+#pragma once
 
 #include "libsieveeditor_private_export.h"
 #include "sieveeditorutil.h"
@@ -88,4 +87,3 @@ private:
     MailTransport::ServerTest *mServerTest = nullptr;
 };
 
-#endif // SERVERSIEVESETTINGS_H

@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef ABSTRACTIMAPSETTINGSPASSWORD_H
-#define ABSTRACTIMAPSETTINGSPASSWORD_H
+#pragma once
 
 #include <sieveeditorutil.h>
 
@@ -37,4 +36,3 @@ protected:
     QString mFileName;
 };
 
-#endif // ABSTRACTIMAPSETTINGSPASSWORD_H

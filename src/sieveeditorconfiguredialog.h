@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SIEVEEDITORCONFIGUREDIALOG_H
-#define SIEVEEDITORCONFIGUREDIALOG_H
+#pragma once
 
 #include <KPageDialog>
 class QCheckBox;
@@ -50,4 +49,3 @@ private:
 #endif
 };
 
-#endif // SIEVEEDITORCONFIGUREDIALOG_H

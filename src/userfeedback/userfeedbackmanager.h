@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef USERFEEDBACKMANAGER_H
-#define USERFEEDBACKMANAGER_H
+#pragma once
 
 #include "libsieveeditor_export.h"
 #include <QObject>
@@ -39,4 +38,3 @@ private:
     KUserFeedback::Provider *const mUserFeedbackProvider;
 };
 
-#endif // USERFEEDBACKMANAGER_H

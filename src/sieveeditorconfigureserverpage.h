@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SieveEditorConfigureServerPage_H
-#define SieveEditorConfigureServerPage_H
+#pragma once
 
 #include "libsieveeditor_private_export.h"
 #include <QWidget>
@@ -35,4 +34,3 @@ Q_SIGNALS:
     void importSieveSettings();
 };
 
-#endif // SieveEditorConfigureServerPage_H

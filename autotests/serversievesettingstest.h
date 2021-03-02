@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SERVERSIEVESETTINGSTEST_H
-#define SERVERSIEVESETTINGSTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -36,4 +35,3 @@ private Q_SLOTS:
     void shouldEmitSignalWithValueTrue();
 };
 
-#endif // SERVERSIEVESETTINGSTEST_H

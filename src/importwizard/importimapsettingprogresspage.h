@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef IMPORTIMAPSETTINGPROGRESSPAGE_H
-#define IMPORTIMAPSETTINGPROGRESSPAGE_H
+#pragma once
 
 #include "libsieveeditor_private_export.h"
 #include "sieveeditorutil.h"
@@ -52,4 +51,3 @@ private:
     bool mSettingsFound = false;
 };
 
-#endif // IMPORTIMAPSETTINGPROGRESSPAGE_H

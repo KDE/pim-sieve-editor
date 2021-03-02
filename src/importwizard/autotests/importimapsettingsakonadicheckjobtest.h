@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef IMPORTIMAPSETTINGSAKONADICHECKJOBTEST_H
-#define IMPORTIMAPSETTINGSAKONADICHECKJOBTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -42,4 +41,3 @@ private Q_SLOTS:
     void shouldImportSieveSettings();
 };
 
-#endif // IMPORTIMAPSETTINGSAKONADICHECKJOBTEST_H

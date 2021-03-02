@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SIEVEEDITORMAINWINDOW_H
-#define SIEVEEDITORMAINWINDOW_H
+#pragma once
 
 #include "libsieveeditor_export.h"
 #include <KXmlGuiWindow>
@@ -108,4 +107,3 @@ private:
     bool mNetworkIsDown = false;
 };
 
-#endif // SIEVEEDITORMAINWINDOW_H

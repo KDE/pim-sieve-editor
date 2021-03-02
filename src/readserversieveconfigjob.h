@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef READSERVERSIEVECONFIGJOB_H
-#define READSERVERSIEVECONFIGJOB_H
+#pragma once
 
 #include "sieveeditorutil.h"
 #include <QObject>
@@ -46,4 +45,3 @@ private:
     QStringList mGroupsConfigs;
 };
 
-#endif // READSERVERSIEVECONFIGJOB_H

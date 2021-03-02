@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SIEVEEDITORSAVEPASSWORDJOB_H
-#define SIEVEEDITORSAVEPASSWORDJOB_H
+#pragma once
 
 #include "libsieveeditor_export.h"
 #include <QObject>
@@ -53,4 +52,3 @@ private:
     QString mName;
 };
 
-#endif // SIEVEEDITORSAVEPASSWORDJOB_H

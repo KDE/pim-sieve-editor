@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef IMPORTIMAPSETTINGSPASSWORDTEST_H
-#define IMPORTIMAPSETTINGSPASSWORDTEST_H
+#pragma once
 
 #include <importwizard/checks/abstractimapsettingspassword.h>
 
@@ -29,4 +28,3 @@ public:
     void importPasswords(const SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings) override;
 };
 
-#endif // IMPORTIMAPSETTINGSPASSWORDTEST_H

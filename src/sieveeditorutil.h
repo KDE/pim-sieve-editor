@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SIEVEEDITORUTIL_H
-#define SIEVEEDITORUTIL_H
+#pragma once
 
 #include "libsieveeditor_export.h"
 #include "libsieveeditor_private_export.h"
@@ -66,4 +65,3 @@ Q_REQUIRED_RESULT QString walletFolderName();
 Q_DECLARE_TYPEINFO(SieveEditorUtil::SieveServerConfig, Q_MOVABLE_TYPE);
 LIBSIEVEEDITOR_TESTS_EXPORT QDebug operator<<(QDebug d, const SieveEditorUtil::SieveAccountSettings &settings);
 LIBSIEVEEDITOR_TESTS_EXPORT QDebug operator<<(QDebug d, const SieveEditorUtil::SieveServerConfig &settings);
-#endif // SIEVEEDITORUTIL_H

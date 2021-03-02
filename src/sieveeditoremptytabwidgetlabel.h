@@ -37,8 +37,7 @@
 
 */
 
-#ifndef SIEVEEDITOREMPTYTABWIDGETLABEL_H
-#define SIEVEEDITOREMPTYTABWIDGETLABEL_H
+#pragma once
 
 #include <QLabel>
 #include <QVector>
@@ -70,4 +69,3 @@ private:
     void init();
 };
 
-#endif // SIEVEEDITOREMPTYTABWIDGETLABEL_H

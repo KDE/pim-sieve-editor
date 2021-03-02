@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef IMPORTIMAPSETTINGSAKONADIPASSWORD_H
-#define IMPORTIMAPSETTINGSAKONADIPASSWORD_H
+#pragma once
 
 #include "abstractimapsettingspassword.h"
 #include <qt5keychain/keychain.h>
@@ -40,4 +39,3 @@ private:
     bool mReuseImapSettings = false;
 };
 
-#endif // IMPORTIMAPSETTINGSAKONADIPASSWORD_H

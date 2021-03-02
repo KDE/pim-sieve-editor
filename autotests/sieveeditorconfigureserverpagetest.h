@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SIEVEEDITORCONFIGURESERVERPAGETEST_H
-#define SIEVEEDITORCONFIGURESERVERPAGETEST_H
+#pragma once
 
 #include <QObject>
 
@@ -35,4 +34,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
 
-#endif // SIEVEEDITORCONFIGURESERVERPAGETEST_H

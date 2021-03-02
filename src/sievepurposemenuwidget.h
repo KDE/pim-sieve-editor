@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SIEVEPURPOSEMENUWIDGET_H
-#define SIEVEPURPOSEMENUWIDGET_H
+#pragma once
 
 #include <PimCommon/PurposeMenuWidget>
 class SieveEditorMainWidget;
@@ -36,4 +35,3 @@ private:
     SieveEditorMainWidget *mSieveEditorWidget = nullptr;
 };
 
-#endif // SIEVEPURPOSEMENUWIDGET_H

@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SIEVEEDITORPAGEWIDGET_H
-#define SIEVEEDITORPAGEWIDGET_H
+#pragma once
 #include <KSieveUi/ManageSieveWidget>
 #include <KSieveUi/SieveEditorWidget>
 #include <QUrl>
@@ -115,4 +114,3 @@ private:
     bool mIsNewScript = false;
 };
 
-#endif // SIEVEEDITORPAGEWIDGET_H

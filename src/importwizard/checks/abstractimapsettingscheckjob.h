@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef ABSTRACTIMAPSETTINGSCHECKJOB_H
-#define ABSTRACTIMAPSETTINGSCHECKJOB_H
+#pragma once
 
 #include "../../sieveeditorutil.h"
 #include "libsieveeditor_private_export.h"
@@ -48,4 +47,3 @@ protected:
     bool mSettingsWereImported = false;
 };
 
-#endif // ABSTRACTIMAPSETTINGSCHECKJOB_H

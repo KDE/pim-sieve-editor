@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef IMPORTIMAPSETTINGSTHUNDERBIRDCHECKJOB_H
-#define IMPORTIMAPSETTINGSTHUNDERBIRDCHECKJOB_H
+#pragma once
 
 #include "abstractimapsettingscheckjob.h"
 #include "libsieveeditor_private_export.h"
@@ -44,4 +43,3 @@ private:
     QHash<QString, QVariant> mHashConfig;
 };
 
-#endif // IMPORTIMAPSETTINGSTHUNDERBIRDCHECKJOB_H

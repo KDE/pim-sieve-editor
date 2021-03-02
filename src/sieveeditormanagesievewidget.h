@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SIEVEEDITORMANAGESIEVEWIDGET_H
-#define SIEVEEDITORMANAGESIEVEWIDGET_H
+#pragma once
 
 #include "sieveeditorutil.h"
 #include <KSieveUi/ManageSieveWidget>
@@ -39,4 +38,3 @@ private:
     QVector<SieveEditorUtil::SieveServerConfig> mSieveServerSettings;
 };
 
-#endif // SIEVEEDITORMANAGESIEVEWIDGET_H

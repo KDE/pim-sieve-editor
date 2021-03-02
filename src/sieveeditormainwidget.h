@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SIEVEEDITORMAINWIDGET_H
-#define SIEVEEDITORMAINWIDGET_H
+#pragma once
 
 #include <KSieveUi/ManageSieveWidget>
 #include <KSieveUi/SieveEditorWidget>
@@ -125,4 +124,3 @@ private:
     SieveEditorEmptyTabWidgetLabel *mEditorEmptyLabel = nullptr;
 };
 
-#endif // SIEVEEDITORMAINWIDGET_H

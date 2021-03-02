@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SIEVEEDITORCENTRALWIDGET_H
-#define SIEVEEDITORCENTRALWIDGET_H
+#pragma once
 
 #include <QStackedWidget>
 class SieveEditorConfigureServerPage;
@@ -43,4 +42,3 @@ private:
     SieveEditorMainWidget *mSieveEditorMainWidget = nullptr;
 };
 
-#endif // SIEVEEDITORCENTRALWIDGET_H

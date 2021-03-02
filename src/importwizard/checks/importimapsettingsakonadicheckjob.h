@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef IMPORTIMAPSETTINGSAKONADICHECKJOB_H
-#define IMPORTIMAPSETTINGSAKONADICHECKJOB_H
+#pragma once
 
 #include "abstractimapsettingscheckjob.h"
 #include "libsieveeditor_private_export.h"
@@ -45,4 +44,3 @@ private:
     QMap<QString, QString>::const_iterator mSieveServerMapIterator;
 };
 
-#endif // IMPORTIMAPSETTINGSAKONADICHECKJOB_H

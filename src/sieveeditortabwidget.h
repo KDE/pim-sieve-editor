@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SIEVEEDITORTABWIDGET_H
-#define SIEVEEDITORTABWIDGET_H
+#pragma once
 #include <QTabWidget>
 class KActionCollection;
 class SieveEditorTabWidget : public QTabWidget
@@ -41,4 +40,3 @@ private:
     void initActions(KActionCollection *ac);
 };
 
-#endif // SIEVEEDITORTABWIDGET_H
