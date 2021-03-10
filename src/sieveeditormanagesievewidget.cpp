@@ -6,7 +6,6 @@
 
 #include "sieveeditormanagesievewidget.h"
 #include "readserversieveconfigjob.h"
-#include "sieveeditorutil.h"
 #include <KSieveUi/ManageSieveTreeView>
 #include <KSieveUi/SieveTreeWidgetItem>
 
