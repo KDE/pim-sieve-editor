@@ -46,7 +46,7 @@ ServerSieveSettingsDialog::~ServerSieveSettingsDialog()
 
 void ServerSieveSettingsDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "ServerSieveSettingsDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "ServerSieveSettingsDialog");
     const QSize size = group.readEntry("Size", QSize(450, 350));
     if (size.isValid()) {
         resize(size);
@@ -55,7 +55,7 @@ void ServerSieveSettingsDialog::readConfig()
 
 void ServerSieveSettingsDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "ServerSieveSettingsDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "ServerSieveSettingsDialog");
     group.writeEntry("Size", size());
     group.sync();
 }
