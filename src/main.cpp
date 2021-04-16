@@ -22,7 +22,6 @@
 
 int main(int argc, char **argv)
 {
-    qputenv("QTWEBENGINE_DISABLE_SANDBOX", "1");
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication app(argc, argv);
