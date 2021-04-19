@@ -10,7 +10,10 @@
 #include <KCrash>
 #include <KDBusService>
 #include <KLocalizedString>
+#include <kcoreaddons_version.h>
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <Kdelibs4ConfigMigrator>
+#endif
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QTextStream>
@@ -27,11 +30,13 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     app.setDesktopFileName(QStringLiteral("org.kde.sieveeditor"));
     KCrash::initialize();
+
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(6, 0, 0)
     Kdelibs4ConfigMigrator migrate(QStringLiteral("sieveeditor"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("sieveeditorrc") << QStringLiteral("sievetemplaterc"));
     migrate.setUiFiles(QStringList() << QStringLiteral("sieveeditorui.rc"));
     migrate.migrate();
-
+#endif
     KLocalizedString::setApplicationDomain("sieveeditor");
 
     KAboutData aboutData(QStringLiteral("sieveeditor"),
