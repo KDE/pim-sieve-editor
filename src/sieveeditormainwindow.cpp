@@ -17,13 +17,12 @@
 #include "sieveserversettings.h"
 #include <PimCommon/KActionMenuChangeCase>
 
-#include <KIconEngine>
-#include <KIconLoader>
 #include <KSharedConfig>
 #include <PimCommon/NetworkManager>
 
 #include <KActionCollection>
 #include <KConfigGroup>
+#include <KIconUtils>
 #include <KLocalizedString>
 #include <KStandardAction>
 #include <QAction>
@@ -194,7 +193,7 @@ void SieveEditorMainWindow::setupActions()
     connect(mShareHotNewStuffAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotShareScript);
     ac->addAction(QStringLiteral("share_hot_new_stuff_script"), mShareHotNewStuffAction);
     const QStringList overlays = QStringList() << QStringLiteral("list-add");
-    mShareHotNewStuffAction->setIcon(QIcon(new KIconEngine(QStringLiteral("get-hot-new-stuff"), KIconLoader::global(), overlays)));
+    mShareHotNewStuffAction->setIcon(KIconUtils::addOverlays(QStringLiteral("get-hot-new-stuff"), overlays));
     mShareHotNewStuffAction->setEnabled(false);
 
     mSpellCheckAction = new QAction(i18n("Check Spelling..."), this);

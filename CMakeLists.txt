@@ -11,7 +11,7 @@ if (POLICY CMP0063)
 endif()
 
 
-set(KF5_MIN_VERSION "5.81.0")
+set(KF5_MIN_VERSION "5.82.0")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -60,11 +60,11 @@ set(QT_REQUIRED_VERSION "5.15.0")
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network Test)
 
 # Find KF5 package
+find_package(KF5GuiAddons ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF5DBusAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5DocTools ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF5Crash ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF5Bookmarks ${KF5_MIN_VERSION} REQUIRED)
-find_package(KF5IconThemes ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF5KIO ${KF5_MIN_VERSION} REQUIRED)
 
 # Find KdepimLibs Package
