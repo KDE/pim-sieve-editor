@@ -17,8 +17,6 @@
 #include "sieveserversettings.h"
 #include <PimCommon/KActionMenuChangeCase>
 
-#include <KIconEngine>
-#include <KIconLoader>
 #include <KSharedConfig>
 #include <PimCommon/NetworkManager>
 

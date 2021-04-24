@@ -59,7 +59,6 @@ find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network)
 find_package(KF5DBusAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Crash ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF5Bookmarks ${KF5_MIN_VERSION} REQUIRED)
-find_package(KF5IconThemes ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF5KIO ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF5DocTools ${KF5_MIN_VERSION})
 set_package_properties(KF5DocTools PROPERTIES DESCRIPTION
