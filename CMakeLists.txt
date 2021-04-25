@@ -61,11 +61,16 @@ find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network Test)
 
 # Find KF5 package
 find_package(KF5DBusAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5DocTools ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF5Crash ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF5Bookmarks ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF5IconThemes ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF5KIO ${KF5_MIN_VERSION} REQUIRED)
+find_package(KF5DocTools ${KF5_MIN_VERSION})
+set_package_properties(KF5DocTools PROPERTIES DESCRIPTION
+    "Tools to generate documentation"
+    TYPE OPTIONAL
+)
+
 
 # Find KdepimLibs Package
 find_package(KF5PimTextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
@@ -106,9 +111,13 @@ if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
-add_subdirectory(doc)
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 ki18n_install(po)
-kdoctools_install(po)
+
+if(KF5DocTools_FOUND)
+    kdoctools_install(po)
+    add_subdirectory(doc)
+endif()
+
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
