@@ -178,7 +178,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings()
     job.start();
     QCOMPARE(spy.count(), 1);
     QCOMPARE(spy.at(0).at(0).toString(), name);
-    SieveEditorUtil::SieveServerConfig importSettings = spy.at(0).at(1).value<SieveEditorUtil::SieveServerConfig>();
+    auto importSettings = spy.at(0).at(1).value<SieveEditorUtil::SieveServerConfig>();
     QCOMPARE(importSettings, settings);
 }
 

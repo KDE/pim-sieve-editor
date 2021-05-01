@@ -68,7 +68,7 @@ void SieveEditorTabWidget::slotTabContextMenuRequest(const QPoint &pos)
 void SieveEditorTabWidget::initActions(KActionCollection *ac)
 {
     if (ac) {
-        QAction *closeCurrentTabAct = new QAction(i18nc("@action:inmenu", "Close Tab"), this);
+        auto closeCurrentTabAct = new QAction(i18nc("@action:inmenu", "Close Tab"), this);
         ac->addAction(QStringLiteral("close_current_tab"), closeCurrentTabAct);
         ac->setDefaultShortcut(closeCurrentTabAct, QKeySequence(Qt::CTRL | Qt::Key_W));
         closeCurrentTabAct->setIcon(QIcon::fromTheme(QStringLiteral("tab-close")));

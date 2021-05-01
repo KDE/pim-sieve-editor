@@ -27,7 +27,7 @@ ServerSieveListWidget::~ServerSieveListWidget()
 
 void ServerSieveListWidget::readConfig()
 {
-    ReadServerSieveConfigJob *job = new ReadServerSieveConfigJob(this);
+    auto job = new ReadServerSieveConfigJob(this);
     connect(job, &ReadServerSieveConfigJob::finished, this, &ServerSieveListWidget::slotReadServerSieveConfigDone);
     job->start();
 }

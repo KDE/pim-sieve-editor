@@ -57,7 +57,7 @@ bool SieveEditorManageSieveWidget::refreshList()
 
 void SieveEditorManageSieveWidget::updateSieveSettings()
 {
-    ReadServerSieveConfigJob *job = new ReadServerSieveConfigJob(this);
+    auto job = new ReadServerSieveConfigJob(this);
     connect(job, &ReadServerSieveConfigJob::finished, this, &SieveEditorManageSieveWidget::slotReadServerSieveConfigDone);
     job->start();
 }

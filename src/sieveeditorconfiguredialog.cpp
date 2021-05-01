@@ -42,7 +42,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     mServerWidget = new SieveEditorConfigureServerWidget;
     layout->addWidget(mServerWidget);
 
-    KPageWidgetItem *serverPageWidgetPage = new KPageWidgetItem(serverConfigureWiget, i18n("Sieve Server"));
+    auto serverPageWidgetPage = new KPageWidgetItem(serverConfigureWiget, i18n("Sieve Server"));
     serverPageWidgetPage->setIcon(QIcon::fromTheme(QStringLiteral("network-workgroup")));
     addPage(serverPageWidgetPage);
 
@@ -56,7 +56,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     layout->addWidget(mWrapText);
     layout->addStretch(100);
 
-    KPageWidgetItem *editorPageWidgetPage = new KPageWidgetItem(editorWidget, i18n("Editor"));
+    auto editorPageWidgetPage = new KPageWidgetItem(editorWidget, i18n("Editor"));
     editorPageWidgetPage->setIcon(QIcon::fromTheme(QStringLiteral("accessories-text-editor")));
     addPage(editorPageWidgetPage);
 
@@ -72,7 +72,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     userFeedBackLayout->addWidget(mUserFeedbackWidget);
 
     mUserFeedbackWidget->setFeedbackProvider(UserFeedBackManager::self()->userFeedbackProvider());
-    KPageWidgetItem *userFeedBackPageWidgetPage = new KPageWidgetItem(userFeedBackWidget, i18n("User Feedback"));
+    auto userFeedBackPageWidgetPage = new KPageWidgetItem(userFeedBackWidget, i18n("User Feedback"));
     userFeedBackPageWidgetPage->setIcon(QIcon::fromTheme(QStringLiteral("preferences-other")));
     addPage(userFeedBackPageWidgetPage);
 #endif

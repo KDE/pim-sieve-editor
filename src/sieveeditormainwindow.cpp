@@ -129,7 +129,7 @@ void SieveEditorMainWindow::setupActions()
     mUploadScript->setText(i18n("Upload"));
     mUploadScript->setEnabled(false);
 
-    QAction *act = new QAction(i18n("Add Sieve Server..."), this);
+    auto act = new QAction(i18n("Add Sieve Server..."), this);
     connect(act, &QAction::triggered, this, &SieveEditorMainWindow::slotAddServerSieve);
     ac->addAction(QStringLiteral("add_server_sieve"), act);
 
