@@ -3,12 +3,11 @@
 # SPDX-License-Identifier: BSD-3-Clause
 configure_file(sieveeditor-version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/sieveeditor-version.h @ONLY)
 
+add_library(libsieveeditor)
 
-set( sieveeditor_kcfg_SRCS settings/sieveeditorglobalconfig.kcfgc )
+kconfig_add_kcfg_files(libsieveeditor settings/sieveeditorglobalconfig.kcfgc)
 
-kconfig_add_kcfg_files(sieveeditor_kcfg_SRCS ${sieveeditor_kcfg_SRCS})
-
-set(sieveeditor_importimapsettings_SRCS
+target_sources(libsieveeditor PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/importimapsettingwizard.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/importimapsettingsearchpage.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/importimapsettingnofoundpage.cpp
@@ -16,7 +15,7 @@ set(sieveeditor_importimapsettings_SRCS
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/importimapsettingfinishpage.cpp
     )
 
-set(sieveeditor_importimapsettings_check_SRCS
+target_sources(libsieveeditor PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/checks/importimapsettingsakonadicheckjob.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/checks/abstractimapsettingscheckjob.cpp
@@ -29,17 +28,14 @@ if (TARGET KUserFeedbackWidgets)
 endif()
 
 
-set(sieveeditor_userfeedback_SRCS)
 if (TARGET KUserFeedbackWidgets)
-    set(sieveeditor_userfeedback_SRCS ${sieveeditor_userfeedback_SRCS}
+    target_sources(libsieveeditor PRIVATE
         userfeedback/userfeedbackmanager.cpp
         )
 endif()
 
 
-set(sieveeditor_LIB_SRCS
-    ${sieveeditor_userfeedback_SRCS}
-    ${sieveeditor_kcfg_SRCS}
+target_sources(libsieveeditor PRIVATE
     sieveeditormainwindow.cpp
     serversievesettingsdialog.cpp
     serversievesettings.cpp
@@ -60,23 +56,20 @@ set(sieveeditor_LIB_SRCS
     sievepurposemenuwidget.cpp
     readserversieveconfigjob.cpp
     sieveeditorsavepasswordjob.cpp
-    ${sieveeditor_importimapsettings_SRCS}
-    ${sieveeditor_importimapsettings_check_SRCS}
     sieveeditor.qrc
     )
 
 
-ki18n_wrap_ui(sieveeditor_LIB_SRCS
+ki18n_wrap_ui(libsieveeditor
     ui/serversievesettings.ui
     ui/sieveeditorconfigureserverwidget.ui
     )
-ecm_qt_declare_logging_category(sieveeditor_LIB_SRCS HEADER sieveeditor_debug.h 
+ecm_qt_declare_logging_category(libsieveeditor HEADER sieveeditor_debug.h
 	IDENTIFIER SIEVEEDITOR_LOG 
 	CATEGORY_NAME org.kde.pim.sieveeditor 
 	OLD_CATEGORY_NAMES log_sieveeditor 
 	DESCRIPTION "sieveeditor (sieveeditor)" EXPORT SIEVEEDITOR)
 
-add_library(libsieveeditor ${sieveeditor_LIB_SRCS})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(libsieveeditor PROPERTIES UNITY_BUILD ON)
 endif()
