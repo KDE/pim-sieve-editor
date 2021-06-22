@@ -101,10 +101,10 @@ endif()
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
+   find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
 endif()
 add_subdirectory(src)
 if (BUILD_TESTING)
-	find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
     add_subdirectory(autotests)
 endif()
 
