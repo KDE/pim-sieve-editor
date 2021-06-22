@@ -53,7 +53,7 @@ set(KIMAP_LIB_VERSION "5.17.40")
 
 
 set(QT_REQUIRED_VERSION "5.15.0")
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network Test)
+find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network)
 
 # Find KF5 package
 find_package(KF5DBusAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
@@ -104,6 +104,7 @@ if(BUILD_TESTING)
 endif()
 add_subdirectory(src)
 if (BUILD_TESTING)
+	find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
     add_subdirectory(autotests)
 endif()
 
