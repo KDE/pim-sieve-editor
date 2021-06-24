@@ -7,6 +7,7 @@
 #include "serversievesettings.h"
 #include "sieveeditor_debug.h"
 #include "ui_serversievesettings.h"
+#include <KAuthorized>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <MailTransport/ServerTest>
@@ -77,6 +78,8 @@ ServerSieveSettings::ServerSieveSettings(QWidget *parent)
     ui->testInfo->clear();
     ui->testInfo->hide();
     ui->testProgress->hide();
+    ui->password->setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
+    ui->imapPassword->setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
 
     ui->safeImapGroup->setId(ui->noRadio, KSieveUi::SieveImapAccountSettings::Unencrypted);
     ui->safeImapGroup->setId(ui->sslRadio, KSieveUi::SieveImapAccountSettings::SSLorTLS);
