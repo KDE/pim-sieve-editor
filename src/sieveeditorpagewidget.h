@@ -50,7 +50,6 @@ public:
     void selectAll();
     void saveAs();
     void checkSpelling();
-    void shareScript();
     void import();
     void createRulesGraphically();
     void checkSyntax();

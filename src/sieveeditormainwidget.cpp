@@ -342,17 +342,6 @@ void SieveEditorMainWidget::slotReplace()
     }
 }
 
-void SieveEditorMainWidget::slotShareScript()
-{
-    QWidget *w = mTabWidget->currentWidget();
-    if (w) {
-        auto page = qobject_cast<SieveEditorPageWidget *>(w);
-        if (page) {
-            page->shareScript();
-        }
-    }
-}
-
 QString SieveEditorMainWidget::currentText() const
 {
     QWidget *w = mTabWidget->currentWidget();

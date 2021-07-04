@@ -85,7 +85,6 @@ private:
     QAction *mWrapTextAction = nullptr;
     QAction *mPrintAction = nullptr;
     QAction *mPrintPreviewAction = nullptr;
-    QAction *mShareHotNewStuffAction = nullptr;
     PimCommon::KActionMenuChangeCase *mMenuChangeCaseAction = nullptr;
 
     QLabel *mStatusBarInfo = nullptr;
