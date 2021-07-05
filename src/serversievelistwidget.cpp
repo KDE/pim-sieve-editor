@@ -58,7 +58,7 @@ void ServerSieveListWidget::writeConfig()
 void ServerSieveListWidget::deletePasswords()
 {
     if (!mNeedToRemovePasswordInWallet.isEmpty()) {
-        for (const QString &identifier : qAsConst(mNeedToRemovePasswordInWallet)) {
+        for (const QString &identifier : std::as_const(mNeedToRemovePasswordInWallet)) {
             auto deleteJob = new DeletePasswordJob(QStringLiteral("sieveeditor"));
             deleteJob->setKey(identifier);
             deleteJob->start();

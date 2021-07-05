@@ -390,7 +390,7 @@ void ServerSieveSettings::slotSafetyChanged()
 
     ui->imapAuthenticationCombo->clear();
     addAuthenticationItem(ui->imapAuthenticationCombo, MailTransport::Transport::EnumAuthenticationType::CLEAR);
-    for (int prot : qAsConst(protocols)) {
+    for (int prot : std::as_const(protocols)) {
         addAuthenticationItem(ui->imapAuthenticationCombo, static_cast<MailTransport::Transport::EnumAuthenticationType::type>(prot));
     }
     if (protocols.isEmpty()) {

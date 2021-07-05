@@ -53,7 +53,7 @@ void ImportImapSettingProgressPage::start()
         Q_EMIT finished();
         return;
     }
-    for (const QString &prg : qAsConst(mSelectedPrograms)) {
+    for (const QString &prg : std::as_const(mSelectedPrograms)) {
         AbstractImapSettingsCheckJob *job = mListCheckJob.value(prg);
         connect(job, &AbstractImapSettingsCheckJob::importSetting, this, &ImportImapSettingProgressPage::slotImportSettingsDone);
         connect(job, &AbstractImapSettingsCheckJob::noSettingsImported, this, &ImportImapSettingProgressPage::noSettingsImported);
