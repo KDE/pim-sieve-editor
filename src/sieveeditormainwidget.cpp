@@ -21,6 +21,10 @@
 #include <QStackedWidget>
 #include <QTabBar>
 
+namespace
+{
+static const char mySieveEditorMainWidgetConfigGroupName[] = "SieveEditorMainWidget";
+}
 SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *parent)
     : QSplitter(parent)
 {
@@ -49,7 +53,7 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
     setChildrenCollapsible(false);
     QList<int> splitterSizes;
     splitterSizes << 80 << 20;
-    KConfigGroup myGroup(KSharedConfig::openConfig(), "SieveEditorMainWidget");
+    KConfigGroup myGroup(KSharedConfig::openStateConfig(), mySieveEditorMainWidgetConfigGroupName);
     setSizes(myGroup.readEntry("mainSplitter", splitterSizes));
     updateStackedWidget();
 }
@@ -57,7 +61,7 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
 SieveEditorMainWidget::~SieveEditorMainWidget()
 {
     disconnect(mScriptManagerWidget, &SieveEditorScriptManagerWidget::updateButtons, this, &SieveEditorMainWidget::updateButtons);
-    KConfigGroup myGroup(KSharedConfig::openConfig(), "SieveEditorMainWidget");
+    KConfigGroup myGroup(KSharedConfig::openStateConfig(), mySieveEditorMainWidgetConfigGroupName);
     myGroup.writeEntry("mainSplitter", sizes());
     myGroup.sync();
 }

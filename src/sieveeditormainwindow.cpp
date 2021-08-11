@@ -40,6 +40,10 @@
 #include <KUserFeedback/Provider>
 #endif
 
+namespace
+{
+static const char mySieveEditorMainWindowConfigGroupName[] = "SieveEditorMainWindow";
+}
 SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     : KXmlGuiWindow(parent)
 {
@@ -77,8 +81,8 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
 
 SieveEditorMainWindow::~SieveEditorMainWindow()
 {
-    KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    KConfigGroup group = config->group(QStringLiteral("SieveEditorMainWindow"));
+    KSharedConfig::Ptr config = KSharedConfig::openStateConfig();
+    KConfigGroup group = config->group(mySieveEditorMainWindowConfigGroupName);
     group.writeEntry("Size", size());
 }
 
@@ -110,8 +114,8 @@ void SieveEditorMainWindow::slotUpdateButtons(bool newScriptAction, bool editScr
 
 void SieveEditorMainWindow::readConfig()
 {
-    KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    KConfigGroup group = KConfigGroup(config, "SieveEditorMainWindow");
+    KSharedConfig::Ptr config = KSharedConfig::openStateConfig();
+    KConfigGroup group = KConfigGroup(config, mySieveEditorMainWindowConfigGroupName);
     const QSize sizeDialog = group.readEntry("Size", QSize(800, 600));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);
