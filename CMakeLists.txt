@@ -52,7 +52,7 @@ set(PIMCOMMON_LIB_VERSION "5.18.40")
 set(KIMAP_LIB_VERSION "5.18.40")
 
 
-set(QT_REQUIRED_VERSION "5.15.0")
+set(QT_REQUIRED_VERSION "5.15.2")
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network)
 
 # Find KF5 package
@@ -87,7 +87,7 @@ set_package_properties(Qt5Keychain PROPERTIES
 
 include_directories(${sieveeditor_SOURCE_DIR} ${sieveeditor_BINARY_DIR})
 
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
 add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055600)
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
