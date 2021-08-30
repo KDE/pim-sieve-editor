@@ -23,7 +23,6 @@ include(ECMGenerateHeaders)
 include(FeatureSummary)
 include(KDEGitCommitHooks)
 include(CheckFunctionExists)
-include(ECMGeneratePriFile)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
