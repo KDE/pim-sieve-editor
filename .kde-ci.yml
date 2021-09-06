@@ -4,6 +4,7 @@
 Dependencies:
 - 'on': ['@all']
   'require':
+    'frameworks/extra-cmake-modules': '@latest'
     'kde/pim/kimap' : '@same'
     'kde/pim/kmailtransport' : '@same'
     'kde/pim/kpimtextedit' : '@same'
