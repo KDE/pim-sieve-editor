@@ -4,8 +4,8 @@
 Dependencies:
 - 'on': ['@all']
   'require':
-    'kde/pim/kimap' : '@latest'
-    'kde/pim/kmailtransport' : '@latest'
-    'kde/pim/kpimtextedit' : '@latest'
-    'kde/pim/libksieve' : '@latest'
-    'kde/pim/pimcommon' : '@latest'
+    'kde/pim/kimap' : '@same'
+    'kde/pim/kmailtransport' : '@same'
+    'kde/pim/kpimtextedit' : '@same'
+    'kde/pim/libksieve' : '@same'
+    'kde/pim/pimcommon' : '@same'
