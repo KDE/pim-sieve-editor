@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Sieve Editor
 Name[ar]=محرّر «سِڤ»
+Name[az]=Sieve süzgəci redaktoru
 Name[bs]=Sieve uređivač
 Name[ca]=Editor de «Sieve»
 Name[ca@valencia]=Editor de «Sieve»
@@ -44,6 +45,7 @@ Exec=sieveeditor
 Icon=kmail
 X-DocPath=sieveeditor/index.html
 GenericName=Editor for email filter Sieve scripts
+GenericName[az]=E-poçtların süzgəcləmə skriptləri üçün redaktor
 GenericName[ca]=Editor per als scripts de «Sieve» del filtratge de correu
 GenericName[ca@valencia]=Editor per als scripts de «Sieve» del filtratge de correu
 GenericName[cs]=Editor skriptů pro filtrování e-mailů Sieve
@@ -74,6 +76,7 @@ GenericName[x-test]=xxEditor for email filter Sieve scriptsxx
 GenericName[zh_TW]=用來編輯郵件過濾 Sieve 文稿的編輯器
 Comment=Edit IMAP Sieve filters
 Comment[ar]=حرّر مرشّحات «سِڤ» IMAP
+Comment[az]=İMAP üçün Sieve süzgəcləmənə düzəliş
 Comment[ca]=Edita els filtres «Sieve» per a IMAP
 Comment[ca@valencia]=Edita els filtres «Sieve» per a IMAP
 Comment[cs]=Upravit filtry IMAP Sieve
