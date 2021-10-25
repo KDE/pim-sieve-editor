@@ -13,7 +13,7 @@ class ImportImapSettingsAkonadiCheckJobTest : public QObject
     Q_OBJECT
 public:
     explicit ImportImapSettingsAkonadiCheckJobTest(QObject *parent = nullptr);
-    ~ImportImapSettingsAkonadiCheckJobTest();
+    ~ImportImapSettingsAkonadiCheckJobTest() override;
 private Q_SLOTS:
     void initTestCase();
     void shouldHaveSettingsFiles();

@@ -13,7 +13,7 @@ class ServerSieveSettingsTest : public QObject
     Q_OBJECT
 public:
     explicit ServerSieveSettingsTest(QObject *parent = nullptr);
-    ~ServerSieveSettingsTest();
+    ~ServerSieveSettingsTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

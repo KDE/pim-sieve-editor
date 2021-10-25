@@ -13,7 +13,7 @@ class ImportImapSettingsThunderbirdCheckJobTest : public QObject
     Q_OBJECT
 public:
     explicit ImportImapSettingsThunderbirdCheckJobTest(QObject *parent = nullptr);
-    ~ImportImapSettingsThunderbirdCheckJobTest();
+    ~ImportImapSettingsThunderbirdCheckJobTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldBeAbleToImportSettings();

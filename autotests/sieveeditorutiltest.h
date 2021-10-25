@@ -13,7 +13,7 @@ class SieveEditorUtilTest : public QObject
     Q_OBJECT
 public:
     explicit SieveEditorUtilTest(QObject *parent = nullptr);
-    ~SieveEditorUtilTest();
+    ~SieveEditorUtilTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldTestSieveAccountSettingsDefaultValue();

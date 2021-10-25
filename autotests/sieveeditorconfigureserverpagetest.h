@@ -13,7 +13,7 @@ class SieveEditorConfigureServerPageTest : public QObject
     Q_OBJECT
 public:
     explicit SieveEditorConfigureServerPageTest(QObject *parent = nullptr);
-    ~SieveEditorConfigureServerPageTest();
+    ~SieveEditorConfigureServerPageTest() override;
 
 private Q_SLOTS:
     void shouldEmitSignalWhenClickOnConfigureButton();

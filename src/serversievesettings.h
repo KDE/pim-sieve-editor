@@ -25,7 +25,7 @@ class LIBSIEVEEDITOR_TESTS_EXPORT ServerSieveSettings : public QWidget
 
 public:
     explicit ServerSieveSettings(QWidget *parent = nullptr);
-    ~ServerSieveSettings();
+    ~ServerSieveSettings() override;
 
     Q_REQUIRED_RESULT QString serverName() const;
     void setServerName(const QString &name);

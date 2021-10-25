@@ -23,7 +23,7 @@ class SieveEditorMainWidget : public QSplitter
     Q_OBJECT
 public:
     explicit SieveEditorMainWidget(KActionCollection *ac, QWidget *parent = nullptr);
-    ~SieveEditorMainWidget();
+    ~SieveEditorMainWidget() override;
 
     void createNewScript();
     void deleteScript();

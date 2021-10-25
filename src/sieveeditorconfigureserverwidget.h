@@ -19,7 +19,7 @@ class SieveEditorConfigureServerWidget : public QWidget
 
 public:
     explicit SieveEditorConfigureServerWidget(QWidget *parent = nullptr);
-    ~SieveEditorConfigureServerWidget();
+    ~SieveEditorConfigureServerWidget() override;
 
     void readConfig();
     void writeConfig();

@@ -13,7 +13,7 @@ class ImportImapSettingFinishPageTest : public QObject
     Q_OBJECT
 public:
     explicit ImportImapSettingFinishPageTest(QObject *parent = nullptr);
-    ~ImportImapSettingFinishPageTest();
+    ~ImportImapSettingFinishPageTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
