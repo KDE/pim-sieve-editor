@@ -1,8 +1,6 @@
 # SPDX-FileCopyrightText: 2013-2021 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
-set(sieveeditorimportwizardtest_SRCS main.cpp)
-
-add_executable(sieveeditorimportwizardtest ${sieveeditorimportwizardtest_SRCS})
+add_executable(sieveeditorimportwizardtest main.cpp)
 
 target_link_libraries(sieveeditorimportwizardtest
     Qt::Widgets

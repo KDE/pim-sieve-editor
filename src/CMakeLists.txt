@@ -30,6 +30,7 @@ endif()
 if (TARGET KUserFeedbackWidgets)
     target_sources(libsieveeditor PRIVATE
         userfeedback/userfeedbackmanager.cpp
+        userfeedback/userfeedbackmanager.h
         )
 endif()
 
@@ -56,6 +57,38 @@ target_sources(libsieveeditor PRIVATE
     readserversieveconfigjob.cpp
     sieveeditorsavepasswordjob.cpp
     sieveeditor.qrc
+    libsieveeditor_private_export.h
+    sieveeditortabwidget.h
+    sieveeditoremptytabwidgetlabel.h
+    sieveeditormainwindow.h
+    sieveserversettings.h
+    sievepurposemenuwidget.h
+    sieveeditormainwidget.h
+    sieveeditorconfiguredialog.h
+    readserversieveconfigjob.h
+    sieveeditorconfigureserverwidget.h
+    serversievesettings.h
+    serversievelistwidget.h
+    sieveeditorscriptmanagerwidget.h
+    sieveeditorcentralwidget.h
+    sieveeditorutil.h
+    serversievesettingsdialog.h
+    sieveeditormanagesievewidget.h
+    importwizard/importimapsettingfinishpage.h
+    importwizard/checks/abstractimapsettingscheckjob.h
+    importwizard/checks/importimapsettingsakonadicheckjob.h
+    importwizard/checks/importimapsettingsthunderbirdcheckjob.h
+    importwizard/checks/importimapsettingsakonadipassword.h
+    importwizard/checks/abstractimapsettingspassword.h
+    importwizard/importimapsettingwizard.h
+    importwizard/importimapsettingprogresspage.h
+    importwizard/importimapsettingnofoundpage.h
+    importwizard/importimapsettingsearchpage.h
+    sieveeditorsavepasswordjob.h
+    sieveeditorbookmarks.h
+    sieveeditorpagewidget.h
+    sieveeditorconfigureserverpage.h
+
     )
 
 
