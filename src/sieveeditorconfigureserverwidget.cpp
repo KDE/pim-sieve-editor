@@ -55,7 +55,11 @@ void SieveEditorConfigureServerWidget::slotDeleteServer()
         return;
     }
     if (KMessageBox::Yes
-        == KMessageBox::questionYesNo(this, i18n("Do you want to remove this server \'%1\'?", item->text()), i18nc("@title:window", "Remove Sieve Server"))) {
+        == KMessageBox::questionYesNo(this,
+                                      i18n("Do you want to remove this server \'%1\'?", item->text()),
+                                      i18nc("@title:window", "Remove Sieve Server"),
+                                      KStandardGuiItem::remove(),
+                                      KStandardGuiItem::cancel())) {
         ui->serverSieveListWidget->deleteServerConfig(item);
         delete item;
         slotItemSelectionChanged();

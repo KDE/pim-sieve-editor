@@ -592,7 +592,12 @@ void SieveEditorMainWidget::slotTabCloseRequested(int index)
     auto page = qobject_cast<SieveEditorPageWidget *>(mTabWidget->widget(index));
     if (page) {
         if (page->isModified()) {
-            const int result = KMessageBox::questionYesNoCancel(this, i18n("Script was modified. Do you want to save before closing?"), i18n("Close script"));
+            const int result = KMessageBox::questionYesNoCancel(this,
+                                                                i18n("Script was modified. Do you want to save before closing?"),
+                                                                i18n("Close script"),
+                                                                KStandardGuiItem::close(),
+                                                                KStandardGuiItem::no(),
+                                                                KStandardGuiItem::cancel());
             if (result == KMessageBox::Yes) {
                 if (page->uploadScriptAndCloseTab(index)) {
                     return;
