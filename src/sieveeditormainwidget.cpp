@@ -595,7 +595,7 @@ void SieveEditorMainWidget::slotTabCloseRequested(int index)
             const int result = KMessageBox::questionYesNoCancel(this,
                                                                 i18n("Script was modified. Do you want to save before closing?"),
                                                                 i18n("Close script"),
-                                                                KStandardGuiItem::close(),
+                                                                KStandardGuiItem::save(),
                                                                 KStandardGuiItem::no(),
                                                                 KStandardGuiItem::cancel());
             if (result == KMessageBox::Yes) {
