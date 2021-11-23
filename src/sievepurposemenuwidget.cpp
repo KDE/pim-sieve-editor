@@ -12,9 +12,7 @@ SievePurposeMenuWidget::SievePurposeMenuWidget(QWidget *parentWidget, QObject *p
 {
 }
 
-SievePurposeMenuWidget::~SievePurposeMenuWidget()
-{
-}
+SievePurposeMenuWidget::~SievePurposeMenuWidget() = default;
 
 QByteArray SievePurposeMenuWidget::text()
 {

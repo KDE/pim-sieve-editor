@@ -15,9 +15,7 @@ SieveEditorSavePasswordJob::SieveEditorSavePasswordJob(QObject *parent)
 {
 }
 
-SieveEditorSavePasswordJob::~SieveEditorSavePasswordJob()
-{
-}
+SieveEditorSavePasswordJob::~SieveEditorSavePasswordJob() = default;
 
 bool SieveEditorSavePasswordJob::canStart() const
 {

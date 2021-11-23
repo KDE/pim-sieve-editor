@@ -25,9 +25,7 @@ SieveEditorTabWidget::SieveEditorTabWidget(KActionCollection *ac, QWidget *paren
     connect(this, &SieveEditorTabWidget::customContextMenuRequested, this, &SieveEditorTabWidget::slotTabContextMenuRequest);
 }
 
-SieveEditorTabWidget::~SieveEditorTabWidget()
-{
-}
+SieveEditorTabWidget::~SieveEditorTabWidget() = default;
 
 void SieveEditorTabWidget::slotTabContextMenuRequest(const QPoint &pos)
 {

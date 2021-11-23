@@ -15,9 +15,7 @@
 namespace SieveEditorUtil
 {
 struct LIBSIEVEEDITOR_EXPORT SieveAccountSettings {
-    SieveAccountSettings()
-    {
-    }
+    SieveAccountSettings() = default;
 
     Q_REQUIRED_RESULT bool operator==(const SieveAccountSettings &other) const;
     Q_REQUIRED_RESULT bool isValid() const;
@@ -29,9 +27,7 @@ struct LIBSIEVEEDITOR_EXPORT SieveAccountSettings {
 };
 
 struct LIBSIEVEEDITOR_EXPORT SieveServerConfig {
-    SieveServerConfig()
-    {
-    }
+    SieveServerConfig() = default;
 
     Q_REQUIRED_RESULT bool isValid() const;
     Q_REQUIRED_RESULT QUrl url() const;

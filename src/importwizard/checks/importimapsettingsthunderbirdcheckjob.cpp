@@ -20,9 +20,7 @@ ImportImapSettingsThunderbirdCheckJob::ImportImapSettingsThunderbirdCheckJob(QOb
 {
 }
 
-ImportImapSettingsThunderbirdCheckJob::~ImportImapSettingsThunderbirdCheckJob()
-{
-}
+ImportImapSettingsThunderbirdCheckJob::~ImportImapSettingsThunderbirdCheckJob() = default;
 
 // Copy from mailimporter
 QMap<QString, QString> ImportImapSettingsThunderbirdCheckJob::listProfile(QString &currentProfile, const QString &defaultSettingPath)

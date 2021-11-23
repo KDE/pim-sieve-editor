@@ -26,9 +26,7 @@ ImportImapSettingSearchPage::ImportImapSettingSearchPage(QWidget *parent)
     connect(mFoundProgramList, &QListWidget::itemChanged, this, &ImportImapSettingSearchPage::slotItemChanged);
 }
 
-ImportImapSettingSearchPage::~ImportImapSettingSearchPage()
-{
-}
+ImportImapSettingSearchPage::~ImportImapSettingSearchPage() = default;
 
 void ImportImapSettingSearchPage::setProgramList(const QStringList &lst)
 {

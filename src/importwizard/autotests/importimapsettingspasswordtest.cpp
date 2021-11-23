@@ -6,9 +6,7 @@
 
 #include "importimapsettingspasswordtest.h"
 
-ImportImapSettingsPasswordTest::ImportImapSettingsPasswordTest()
-{
-}
+ImportImapSettingsPasswordTest::ImportImapSettingsPasswordTest() = default;
 
 void ImportImapSettingsPasswordTest::importPasswords(const SieveEditorUtil::SieveServerConfig &_config, const QString &filename, bool reuseImapSettings)
 {

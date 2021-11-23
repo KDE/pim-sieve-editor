@@ -15,9 +15,7 @@ ImportImapSettingsAkonadiPassword::ImportImapSettingsAkonadiPassword(QObject *pa
 {
 }
 
-ImportImapSettingsAkonadiPassword::~ImportImapSettingsAkonadiPassword()
-{
-}
+ImportImapSettingsAkonadiPassword::~ImportImapSettingsAkonadiPassword() = default;
 
 void ImportImapSettingsAkonadiPassword::readSieveServerPasswordFinished(QKeychain::Job *baseJob)
 {

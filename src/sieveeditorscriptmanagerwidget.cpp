@@ -24,9 +24,7 @@ SieveEditorScriptManagerWidget::SieveEditorScriptManagerWidget(QWidget *parent)
     hbox->addWidget(mTreeView);
 }
 
-SieveEditorScriptManagerWidget::~SieveEditorScriptManagerWidget()
-{
-}
+SieveEditorScriptManagerWidget::~SieveEditorScriptManagerWidget() = default;
 
 void SieveEditorScriptManagerWidget::slotUpdateButtons(QTreeWidgetItem *item)
 {

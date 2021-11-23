@@ -25,6 +25,4 @@ ImportImapSettingNoFoundPage::ImportImapSettingNoFoundPage(QWidget *parent)
     mainLayout->addWidget(lab);
 }
 
-ImportImapSettingNoFoundPage::~ImportImapSettingNoFoundPage()
-{
-}
+ImportImapSettingNoFoundPage::~ImportImapSettingNoFoundPage() = default;

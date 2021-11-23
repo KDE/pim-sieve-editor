@@ -17,9 +17,7 @@ ImportImapSettingSearchPageTest::ImportImapSettingSearchPageTest(QObject *parent
     QStandardPaths::setTestModeEnabled(true);
 }
 
-ImportImapSettingSearchPageTest::~ImportImapSettingSearchPageTest()
-{
-}
+ImportImapSettingSearchPageTest::~ImportImapSettingSearchPageTest() = default;
 
 void ImportImapSettingSearchPageTest::shouldHaveDefaultValue()
 {

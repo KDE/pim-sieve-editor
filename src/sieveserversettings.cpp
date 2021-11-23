@@ -11,9 +11,7 @@ SieveServerSettings::SieveServerSettings(QObject *parent)
 {
 }
 
-SieveServerSettings::~SieveServerSettings()
-{
-}
+SieveServerSettings::~SieveServerSettings() = default;
 
 SieveServerSettings *SieveServerSettings::self()
 {

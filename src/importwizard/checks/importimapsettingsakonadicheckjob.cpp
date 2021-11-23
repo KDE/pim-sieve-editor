@@ -20,9 +20,7 @@ ImportImapSettingsAkonadiCheckJob::ImportImapSettingsAkonadiCheckJob(QObject *pa
 {
 }
 
-ImportImapSettingsAkonadiCheckJob::~ImportImapSettingsAkonadiCheckJob()
-{
-}
+ImportImapSettingsAkonadiCheckJob::~ImportImapSettingsAkonadiCheckJob() = default;
 
 bool ImportImapSettingsAkonadiCheckJob::resourceCanHaveSieveSupport(const QString &filename) const
 {

@@ -15,9 +15,7 @@ SieveEditorConfigureServerPageTest::SieveEditorConfigureServerPageTest(QObject *
 {
 }
 
-SieveEditorConfigureServerPageTest::~SieveEditorConfigureServerPageTest()
-{
-}
+SieveEditorConfigureServerPageTest::~SieveEditorConfigureServerPageTest() = default;
 
 void SieveEditorConfigureServerPageTest::shouldHaveDefaultValue()
 {

@@ -13,9 +13,7 @@ SieveEditorEmptyTabWidgetLabel::SieveEditorEmptyTabWidgetLabel(QWidget *parent)
     init();
 }
 
-SieveEditorEmptyTabWidgetLabel::~SieveEditorEmptyTabWidgetLabel()
-{
-}
+SieveEditorEmptyTabWidgetLabel::~SieveEditorEmptyTabWidgetLabel() = default;
 
 void SieveEditorEmptyTabWidgetLabel::init()
 {

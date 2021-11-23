@@ -31,9 +31,7 @@ SieveEditorPageWidget::SieveEditorPageWidget(QWidget *parent)
     connect(mSieveEditorWidget, &KSieveUi::SieveEditorWidget::sieveEditorTabCurrentChanged, this, &SieveEditorPageWidget::sieveEditorTabCurrentChanged);
 }
 
-SieveEditorPageWidget::~SieveEditorPageWidget()
-{
-}
+SieveEditorPageWidget::~SieveEditorPageWidget() = default;
 
 void SieveEditorPageWidget::slotCheckSyntaxClicked()
 {

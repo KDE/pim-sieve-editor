@@ -13,9 +13,7 @@ ServerSieveSettingsTest::ServerSieveSettingsTest(QObject *parent)
 {
 }
 
-ServerSieveSettingsTest::~ServerSieveSettingsTest()
-{
-}
+ServerSieveSettingsTest::~ServerSieveSettingsTest() = default;
 
 void ServerSieveSettingsTest::shouldHaveDefaultValue()
 {

@@ -19,9 +19,7 @@ ImportImapSettingsAkonadiCheckJobTest::ImportImapSettingsAkonadiCheckJobTest(QOb
     qRegisterMetaType<SieveEditorUtil::SieveServerConfig>();
 }
 
-ImportImapSettingsAkonadiCheckJobTest::~ImportImapSettingsAkonadiCheckJobTest()
-{
-}
+ImportImapSettingsAkonadiCheckJobTest::~ImportImapSettingsAkonadiCheckJobTest() = default;
 
 void ImportImapSettingsAkonadiCheckJobTest::initTestCase()
 {

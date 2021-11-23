@@ -13,9 +13,7 @@ SieveEditorUtilTest::SieveEditorUtilTest(QObject *parent)
 {
 }
 
-SieveEditorUtilTest::~SieveEditorUtilTest()
-{
-}
+SieveEditorUtilTest::~SieveEditorUtilTest() = default;
 
 void SieveEditorUtilTest::shouldHaveDefaultValue()
 {

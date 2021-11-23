@@ -15,9 +15,7 @@ ImportImapSettingNoFoundPageTest::ImportImapSettingNoFoundPageTest(QObject *pare
 {
 }
 
-ImportImapSettingNoFoundPageTest::~ImportImapSettingNoFoundPageTest()
-{
-}
+ImportImapSettingNoFoundPageTest::~ImportImapSettingNoFoundPageTest() = default;
 
 void ImportImapSettingNoFoundPageTest::shouldHaveDefaultValue()
 {

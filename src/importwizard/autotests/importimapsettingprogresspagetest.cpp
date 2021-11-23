@@ -17,9 +17,7 @@ ImportImapSettingProgressPageTest::ImportImapSettingProgressPageTest(QObject *pa
     QStandardPaths::setTestModeEnabled(true);
 }
 
-ImportImapSettingProgressPageTest::~ImportImapSettingProgressPageTest()
-{
-}
+ImportImapSettingProgressPageTest::~ImportImapSettingProgressPageTest() = default;
 
 void ImportImapSettingProgressPageTest::shouldHaveDefaultValue()
 {

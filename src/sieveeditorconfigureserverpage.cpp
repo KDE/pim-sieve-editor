@@ -31,6 +31,4 @@ SieveEditorConfigureServerPage::SieveEditorConfigureServerPage(QWidget *parent)
     hbox->addStretch(1);
 }
 
-SieveEditorConfigureServerPage::~SieveEditorConfigureServerPage()
-{
-}
+SieveEditorConfigureServerPage::~SieveEditorConfigureServerPage() = default;

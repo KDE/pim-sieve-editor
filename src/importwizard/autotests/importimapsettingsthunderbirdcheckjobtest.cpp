@@ -21,9 +21,7 @@ ImportImapSettingsThunderbirdCheckJobTest::ImportImapSettingsThunderbirdCheckJob
     sieveeditor_thunderbird_default_toplevel_path = QString();
 }
 
-ImportImapSettingsThunderbirdCheckJobTest::~ImportImapSettingsThunderbirdCheckJobTest()
-{
-}
+ImportImapSettingsThunderbirdCheckJobTest::~ImportImapSettingsThunderbirdCheckJobTest() = default;
 
 void ImportImapSettingsThunderbirdCheckJobTest::shouldHaveDefaultValue()
 {

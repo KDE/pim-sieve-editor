@@ -16,9 +16,7 @@ ImportImapSettingFinishPageTest::ImportImapSettingFinishPageTest(QObject *parent
 {
 }
 
-ImportImapSettingFinishPageTest::~ImportImapSettingFinishPageTest()
-{
-}
+ImportImapSettingFinishPageTest::~ImportImapSettingFinishPageTest() = default;
 
 void ImportImapSettingFinishPageTest::shouldHaveDefaultValue()
 {

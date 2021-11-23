@@ -27,9 +27,7 @@ ImportImapSettingFinishPage::ImportImapSettingFinishPage(QWidget *parent)
     mainlayout->addWidget(mTextEdit);
 }
 
-ImportImapSettingFinishPage::~ImportImapSettingFinishPage()
-{
-}
+ImportImapSettingFinishPage::~ImportImapSettingFinishPage() = default;
 
 void ImportImapSettingFinishPage::addSummary(const QString &name)
 {

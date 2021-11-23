@@ -21,9 +21,7 @@ ServerSieveListWidget::ServerSieveListWidget(QWidget *parent)
     connect(this, &ServerSieveListWidget::itemDoubleClicked, this, &ServerSieveListWidget::modifyServerConfig);
 }
 
-ServerSieveListWidget::~ServerSieveListWidget()
-{
-}
+ServerSieveListWidget::~ServerSieveListWidget() = default;
 
 void ServerSieveListWidget::readConfig()
 {
@@ -112,9 +110,7 @@ ServerSieveListWidgetItem::ServerSieveListWidgetItem(QListWidget *parent)
 {
 }
 
-ServerSieveListWidgetItem::~ServerSieveListWidgetItem()
-{
-}
+ServerSieveListWidgetItem::~ServerSieveListWidgetItem() = default;
 
 SieveEditorUtil::SieveServerConfig ServerSieveListWidgetItem::serverConfig() const
 {

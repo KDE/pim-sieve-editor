@@ -21,9 +21,7 @@ ReadServerSieveConfigJob::ReadServerSieveConfigJob(QObject *parent)
     connect(this, &ReadServerSieveConfigJob::loadNextConfig, this, &ReadServerSieveConfigJob::slotReadNextConfig);
 }
 
-ReadServerSieveConfigJob::~ReadServerSieveConfigJob()
-{
-}
+ReadServerSieveConfigJob::~ReadServerSieveConfigJob() = default;
 
 void ReadServerSieveConfigJob::loadSettings(const QString &conf)
 {

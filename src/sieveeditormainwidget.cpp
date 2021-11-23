@@ -661,7 +661,7 @@ QString SieveEditorMainWidget::currentHelpTitle() const
             return page->currentHelpTitle();
         }
     }
-    return QString();
+    return {};
 }
 
 QUrl SieveEditorMainWidget::currentHelpUrl() const
@@ -673,7 +673,7 @@ QUrl SieveEditorMainWidget::currentHelpUrl() const
             return page->currentHelpUrl();
         }
     }
-    return QUrl();
+    return {};
 }
 
 bool SieveEditorMainWidget::printSupportEnabled() const

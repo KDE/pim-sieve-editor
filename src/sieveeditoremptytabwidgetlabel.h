@@ -18,9 +18,7 @@ public:
 
 private:
     struct placeHolderTextInfo {
-        placeHolderTextInfo()
-        {
-        }
+        placeHolderTextInfo() = default;
 
         placeHolderTextInfo(const QString &t, const QString &info)
             : text(t)

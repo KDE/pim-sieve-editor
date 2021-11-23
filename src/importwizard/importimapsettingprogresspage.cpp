@@ -22,9 +22,7 @@ ImportImapSettingProgressPage::ImportImapSettingProgressPage(QWidget *parent)
     mainLayout->addWidget(mProgressTextEdit);
 }
 
-ImportImapSettingProgressPage::~ImportImapSettingProgressPage()
-{
-}
+ImportImapSettingProgressPage::~ImportImapSettingProgressPage() = default;
 
 void ImportImapSettingProgressPage::addProgressInfo(const QString &str)
 {

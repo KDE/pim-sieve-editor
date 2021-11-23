@@ -20,9 +20,7 @@ SieveEditorManageSieveWidget::SieveEditorManageSieveWidget(QWidget *parent)
 {
 }
 
-SieveEditorManageSieveWidget::~SieveEditorManageSieveWidget()
-{
-}
+SieveEditorManageSieveWidget::~SieveEditorManageSieveWidget() = default;
 
 bool SieveEditorManageSieveWidget::refreshList()
 {

@@ -21,9 +21,7 @@ SieveEditorCentralWidget::SieveEditorCentralWidget(QWidget *parent, KActionColle
     setCurrentWidget(mConfigureWidget);
 }
 
-SieveEditorCentralWidget::~SieveEditorCentralWidget()
-{
-}
+SieveEditorCentralWidget::~SieveEditorCentralWidget() = default;
 
 void SieveEditorCentralWidget::slotServerSieveFound(bool hasServer)
 {
