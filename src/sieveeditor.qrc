@@ -1,4 +1,8 @@
 <!DOCTYPE RCC>
+<!--
+    SPDX-FileCopyrightText: 2014 Montel Laurent <montel@kde.org>
+    SPDX-License-Identifier: CC0-1.0
+-->
 <RCC version="1.0">
     <qresource prefix="/kxmlgui5/sieveeditor">
         <file>sieveeditorui.rc</file>
