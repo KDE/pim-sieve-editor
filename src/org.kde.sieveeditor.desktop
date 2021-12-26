@@ -116,3 +116,4 @@ Categories=Qt;KDE;Office;Network;X-KDE-Sieve;
 InitialPreference=10
 X-DBUS-StartupType=Unique
 X-DBUS-ServiceName=org.kde.sieveeditor
+X-GNOME-SingleWindow=true
