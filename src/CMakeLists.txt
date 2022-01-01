@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2013-2021 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2013-2022 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 configure_file(sieveeditor-version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/sieveeditor-version.h @ONLY)
 
