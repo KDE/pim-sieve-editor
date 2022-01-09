@@ -55,7 +55,7 @@ set(KIMAP_LIB_VERSION "5.19.40")
 
 
 set(QT_REQUIRED_VERSION "5.15.2")
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network)
+find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network)
 
 # Find KF5 package
 find_package(KF5DBusAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
@@ -80,8 +80,8 @@ find_package(KF5IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KUserFeedback 1.0.0 CONFIG) # Needs Provider::describeDataSources()
 set_package_properties(KUserFeedback PROPERTIES DESCRIPTION "User Feedback lib" TYPE OPTIONAL PURPOSE "Allow to send Telemetry Information (optional). It can be disable in apps.")
 
-find_package(Qt5Keychain CONFIG)
-set_package_properties(Qt5Keychain PROPERTIES
+find_package(Qt${QT_MAJOR_VERSION}Keychain CONFIG)
+set_package_properties(Qt${QT_MAJOR_VERSION}Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"
                                    URL "https://github.com/frankosterfeld/qtkeychain"
                                    TYPE REQUIRED)
@@ -100,7 +100,7 @@ endif()
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
-   find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
+   find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
 endif()
 add_subdirectory(src)
 if (BUILD_TESTING)

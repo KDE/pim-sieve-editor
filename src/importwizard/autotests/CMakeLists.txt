@@ -7,7 +7,8 @@ macro(add_sieveeditor_importwizard_unittest _source _additionsource)
     ecm_add_test(${_source} ${_additionsource}
         TEST_NAME ${_name}
         NAME_PREFIX "sieveeditor-importwizard-"
-        LINK_LIBRARIES Qt::Test KF5::I18n Qt::Gui Qt::Widgets KF5::MailTransport KF5::ConfigCore KF5::ConfigGui KF5::KSieveUi libsieveeditor
+        LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test KF5::I18n Qt${QT_MAJOR_VERSION}::Gui Qt${QT_MAJOR_VERSION}::Widgets
+        KF5::MailTransport KF5::ConfigCore KF5::ConfigGui KF5::KSieveUi libsieveeditor
         )
 endmacro()
 

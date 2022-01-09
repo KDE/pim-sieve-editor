@@ -122,9 +122,13 @@ target_link_libraries(libsieveeditor
     KF5::PimCommon
     KF5::KSieveUi
     KF5::KManageSieve
-    qt5keychain
     ${libsieveeditor_userfeedback_LIB}
     )
+if (QT_MAJOR_VERSION STREQUAL "6")
+    target_link_libraries(libsieveeditor PRIVATE qt6keychain)
+else()
+    target_link_libraries(libsieveeditor PRIVATE qt5keychain)
+endif()
 
 set_target_properties(libsieveeditor
     PROPERTIES OUTPUT_NAME sieveeditor VERSION ${KDEPIM_LIB_VERSION} SOVERSION ${KDEPIM_LIB_SOVERSION}
