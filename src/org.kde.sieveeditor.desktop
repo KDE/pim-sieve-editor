@@ -45,6 +45,7 @@ Exec=sieveeditor
 Icon=kmail
 X-DocPath=sieveeditor/index.html
 GenericName=Editor for email filter Sieve scripts
+GenericName[ar]=محرر لسكربتات ترشيح عناوين البريد الإلكتروني
 GenericName[az]=E-poçtların süzgəcləmə skriptləri üçün redaktor
 GenericName[ca]=Editor per als scripts de «Sieve» del filtratge de correu
 GenericName[ca@valencia]=Editor per als scripts de «Sieve» del filtratge de correu
