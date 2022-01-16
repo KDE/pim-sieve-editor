@@ -58,8 +58,8 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     setupGUI();
     readConfig();
     initStatusBar();
-    connect(PimCommon::NetworkManager::self()->networkConfigureManager(),
-            &QNetworkConfigurationManager::onlineStateChanged,
+    connect(PimCommon::NetworkManager::self(),
+            &PimCommon::NetworkManager::networkStatusChanged,
             this,
             &SieveEditorMainWindow::slotSystemNetworkOnlineStateChanged);
 
