@@ -30,7 +30,6 @@
 
 #include <QCloseEvent>
 #include <QLabel>
-#include <QNetworkConfigurationManager>
 #include <QPointer>
 #ifdef WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
