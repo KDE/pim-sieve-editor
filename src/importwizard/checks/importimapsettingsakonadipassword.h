@@ -7,7 +7,12 @@
 #pragma once
 
 #include "abstractimapsettingspassword.h"
+
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <qt5keychain/keychain.h>
+#else
+#include <qt6keychain/keychain.h>
+#endif
 
 class ImportImapSettingsAkonadiPassword : public AbstractImapSettingsPassword
 {
