@@ -53,7 +53,6 @@ target_sources(libsieveeditor PRIVATE
     sieveeditorconfigureserverpage.cpp
     sieveeditorbookmarks.cpp
     sieveeditoremptytabwidgetlabel.cpp
-    sievepurposemenuwidget.cpp
     readserversieveconfigjob.cpp
     sieveeditorsavepasswordjob.cpp
     sieveeditor.qrc
@@ -62,7 +61,6 @@ target_sources(libsieveeditor PRIVATE
     sieveeditoremptytabwidgetlabel.h
     sieveeditormainwindow.h
     sieveserversettings.h
-    sievepurposemenuwidget.h
     sieveeditormainwidget.h
     sieveeditorconfiguredialog.h
     readserversieveconfigjob.h
@@ -89,9 +87,14 @@ target_sources(libsieveeditor PRIVATE
     sieveeditorpagewidget.h
     sieveeditorconfigureserverpage.h
 
+)
+if (TARGET KF5::Purpose)
+    target_sources(libsieveeditor PRIVATE
+        sievepurposemenuwidget.cpp
+        sievepurposemenuwidget.h
+
     )
-
-
+endif()
 ki18n_wrap_ui(libsieveeditor
     ui/serversievesettings.ui
     ui/sieveeditorconfigureserverwidget.ui

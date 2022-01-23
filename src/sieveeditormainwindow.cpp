@@ -30,6 +30,7 @@
 
 #include <QCloseEvent>
 #include <QLabel>
+#include <QMenu>
 #include <QPointer>
 #ifdef WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
@@ -184,12 +185,14 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("import_script"), mImportAction);
     mImportAction->setEnabled(false);
 
+#ifdef HAVE_PURPOSE_SUPPORT
     auto purposeMenu = new SievePurposeMenuWidget(this, this);
     mShareAction = new QAction(i18n("Share..."), this);
     ac->addAction(QStringLiteral("share_script"), mShareAction);
     mShareAction->setMenu(purposeMenu->menu());
     mShareAction->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
     purposeMenu->setEditorWidget(mMainWidget->sieveEditorMainWidget());
+#endif
 
     mSpellCheckAction = new QAction(i18n("Check Spelling..."), this);
     connect(mSpellCheckAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotCheckSpelling);

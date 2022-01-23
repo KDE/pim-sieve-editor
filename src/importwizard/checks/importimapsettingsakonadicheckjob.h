@@ -28,6 +28,6 @@ private:
     void importNextServerSieve();
     void importSettings(const QString &directory, const QString &filename);
     QMultiMap<QString, QString> mSieveServerLst;
-    QMap<QString, QString>::const_iterator mSieveServerMapIterator;
+    QMultiMap<QString, QString>::const_iterator mSieveServerMapIterator;
 };
 
