@@ -77,13 +77,6 @@ find_package(KF5PimCommon ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5LibKSieve ${LIBKSIEVE_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    find_package(KF5Purpose ${KF5_MIN_VERSION} CONFIG)
-endif()
-if (TARGET KF5::Purpose)
-    add_definitions(-DHAVE_PURPOSE_SUPPORT)
-endif()
-
 find_package(KUserFeedback 1.0.0 CONFIG) # Needs Provider::describeDataSources()
 set_package_properties(KUserFeedback PROPERTIES DESCRIPTION "User Feedback lib" TYPE OPTIONAL PURPOSE "Allow to send Telemetry Information (optional). It can be disable in apps.")
 

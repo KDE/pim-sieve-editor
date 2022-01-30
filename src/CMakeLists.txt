@@ -86,15 +86,10 @@ target_sources(libsieveeditor PRIVATE
     sieveeditorbookmarks.h
     sieveeditorpagewidget.h
     sieveeditorconfigureserverpage.h
-
+    sievepurposemenuwidget.cpp
+    sievepurposemenuwidget.h
 )
-if (TARGET KF5::Purpose)
-    target_sources(libsieveeditor PRIVATE
-        sievepurposemenuwidget.cpp
-        sievepurposemenuwidget.h
 
-    )
-endif()
 ki18n_wrap_ui(libsieveeditor
     ui/serversievesettings.ui
     ui/sieveeditorconfigureserverwidget.ui
