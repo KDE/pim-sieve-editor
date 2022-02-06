@@ -8,6 +8,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>SieveEditor</name>
+  <name xml:lang="ar">محرّر سِف</name>
   <name xml:lang="ca">SieveEditor</name>
   <name xml:lang="ca-valencia">SieveEditor</name>
   <name xml:lang="cs">SieveEditor</name>
@@ -37,6 +38,7 @@
   <name xml:lang="zh-CN">SieveEditor</name>
   <name xml:lang="zh-TW">篩選器編輯器</name>
   <summary>Editor for email filter Sieve scripts</summary>
+  <summary xml:lang="ar">محرر سكربتات ترشيح عناوين البريد الإلكتروني</summary>
   <summary xml:lang="ca">Editor per als scripts de «Sieve» del filtratge de correu</summary>
   <summary xml:lang="ca-valencia">Editor per als scripts de «Sieve» del filtratge de correu</summary>
   <summary xml:lang="cs">Editor skriptů pro filtrování e-mailů Sieve</summary>
@@ -65,6 +67,7 @@
   <summary xml:lang="x-test">xxEditor for email filter Sieve scriptsxx</summary>
   <summary xml:lang="zh-CN">电子邮件过滤器 Sieve 脚本编辑器</summary>
   <developer_name>Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="ar">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ca">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ca-valencia">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="cs">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
@@ -97,6 +100,7 @@
     <p>
       SieveEditor allows to edit, create, delete sieve scripts.
     </p>
+    <p xml:lang="ar">يسمح لك محرر سف بإنشاء وتحرير وحذف سكربتات سِف</p>
     <p xml:lang="ca">El SieveEditor permet editar, crear i suprimir scripts de «Sieve».</p>
     <p xml:lang="ca-valencia">El SieveEditor permet editar, crear i suprimir scripts de «Sieve».</p>
     <p xml:lang="cs">SieveEditor vám umožňuje upravit, vytvářet a mazat skripty sieve.</p>
