@@ -89,7 +89,7 @@ set_package_properties(Qt${QT_MAJOR_VERSION}Keychain PROPERTIES
 
 include_directories(${sieveeditor_SOURCE_DIR} ${sieveeditor_BINARY_DIR})
 
-ecm_set_disabled_deprecation_versions(QT 5.15.2 KF 5.91.0)
+ecm_set_disabled_deprecation_versions(QT 5.15.2 KF 5.92.0)
 
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
