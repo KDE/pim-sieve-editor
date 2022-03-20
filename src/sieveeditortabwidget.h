@@ -26,4 +26,3 @@ private:
 private:
     void initActions(KActionCollection *ac);
 };
-

@@ -20,4 +20,3 @@ public:
 private:
     QTextEdit *mTextEdit = nullptr;
 };
-

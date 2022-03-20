@@ -24,4 +24,3 @@ private:
     void slotReadServerSieveConfigDone(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig);
     QVector<SieveEditorUtil::SieveServerConfig> mSieveServerSettings;
 };
-

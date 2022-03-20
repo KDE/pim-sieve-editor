@@ -73,4 +73,3 @@ private:
     Ui::ServerSieveSettings *const ui;
     MailTransport::ServerTest *mServerTest = nullptr;
 };
-

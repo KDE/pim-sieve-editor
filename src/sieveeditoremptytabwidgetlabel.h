@@ -33,4 +33,3 @@ private:
     void addInfo(QString &placeholderText, const QVector<placeHolderTextInfo> &map);
     void init();
 };
-

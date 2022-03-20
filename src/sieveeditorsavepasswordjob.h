@@ -38,4 +38,3 @@ private:
     QString mKey;
     QString mName;
 };
-

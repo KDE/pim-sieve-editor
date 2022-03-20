@@ -92,4 +92,3 @@ private:
     KActionMenu *mBookmarkMenu = nullptr;
     bool mNetworkIsDown = false;
 };
-

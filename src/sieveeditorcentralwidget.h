@@ -28,4 +28,3 @@ private:
     SieveEditorConfigureServerPage *mConfigureWidget = nullptr;
     SieveEditorMainWidget *mSieveEditorMainWidget = nullptr;
 };
-

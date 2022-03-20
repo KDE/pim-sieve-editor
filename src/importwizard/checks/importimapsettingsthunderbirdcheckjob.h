@@ -29,4 +29,3 @@ private:
 
     QHash<QString, QVariant> mHashConfig;
 };
-

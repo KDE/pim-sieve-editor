@@ -16,4 +16,3 @@ public:
     explicit ImportImapSettingNoFoundPage(QWidget *parent = nullptr);
     ~ImportImapSettingNoFoundPage() override;
 };
-

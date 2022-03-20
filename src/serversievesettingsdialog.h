@@ -39,4 +39,3 @@ private:
     ServerSieveSettings *mServerSieveSettings = nullptr;
     QPushButton *mOkButton = nullptr;
 };
-

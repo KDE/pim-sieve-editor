@@ -47,4 +47,3 @@ private:
 private:
     SieveEditorManageSieveWidget *mTreeView = nullptr;
 };
-

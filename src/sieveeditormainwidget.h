@@ -109,4 +109,3 @@ private:
     QStackedWidget *mStackedWidget = nullptr;
     SieveEditorEmptyTabWidgetLabel *mEditorEmptyLabel = nullptr;
 };
-

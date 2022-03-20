@@ -16,4 +16,3 @@
 #else /* not compiling tests */
 #define LIBSIEVEEDITOR_TESTS_EXPORT
 #endif
-

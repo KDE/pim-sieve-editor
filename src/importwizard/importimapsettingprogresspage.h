@@ -37,4 +37,3 @@ private:
     QMap<QString, AbstractImapSettingsCheckJob *> mListCheckJob;
     bool mSettingsFound = false;
 };
-

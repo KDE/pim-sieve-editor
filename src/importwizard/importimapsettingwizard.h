@@ -46,4 +46,3 @@ private:
     ImportImapSettingFinishPage *mFinishPage = nullptr;
     KPageWidgetItem *mFinishPageItem = nullptr;
 };
-

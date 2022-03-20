@@ -21,4 +21,3 @@ public:
 private:
     SieveEditorMainWidget *mSieveEditorWidget = nullptr;
 };
-

@@ -30,4 +30,3 @@ private:
     SieveEditorUtil::SieveServerConfig mCurrentConfig;
     bool mReuseImapSettings = false;
 };
-

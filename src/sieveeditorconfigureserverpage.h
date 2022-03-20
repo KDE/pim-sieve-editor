@@ -20,4 +20,3 @@ Q_SIGNALS:
     void configureClicked();
     void importSieveSettings();
 };
-

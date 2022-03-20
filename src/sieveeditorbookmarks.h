@@ -35,4 +35,3 @@ private:
     QMenu *const mMenu;
     SieveEditorMainWindow *const mMainWindow;
 };
-

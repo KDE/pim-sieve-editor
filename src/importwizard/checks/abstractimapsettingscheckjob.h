@@ -33,4 +33,3 @@ protected:
     AbstractImapSettingsPassword *mPasswordImporter = nullptr;
     bool mSettingsWereImported = false;
 };
-

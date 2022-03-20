@@ -35,4 +35,3 @@ private:
     SieveEditorUtil::SieveServerConfig mCurrentSieveServerConfig;
     QStringList mGroupsConfigs;
 };
-

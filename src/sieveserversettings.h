@@ -19,4 +19,3 @@ private:
     explicit SieveServerSettings(QObject *parent = nullptr);
     friend class SieveServerSettingsPrivate;
 };
-

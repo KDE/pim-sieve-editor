@@ -33,4 +33,3 @@ private:
 private:
     Ui::SieveEditorConfigureServerWidget *const ui;
 };
-

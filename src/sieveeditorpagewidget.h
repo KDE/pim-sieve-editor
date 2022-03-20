@@ -99,4 +99,3 @@ private:
     bool mWasActive = false;
     bool mIsNewScript = false;
 };
-

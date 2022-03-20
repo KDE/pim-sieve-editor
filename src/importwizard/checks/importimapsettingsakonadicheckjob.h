@@ -30,4 +30,3 @@ private:
     QMultiMap<QString, QString> mSieveServerLst;
     QMultiMap<QString, QString>::const_iterator mSieveServerMapIterator;
 };
-

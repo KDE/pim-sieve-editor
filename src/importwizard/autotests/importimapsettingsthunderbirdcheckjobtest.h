@@ -25,4 +25,3 @@ private Q_SLOTS:
     void shouldImportSieveSettings_data();
     void shouldImportSieveSettings();
 };
-

@@ -14,4 +14,3 @@ public:
     ImportImapSettingsPasswordTest();
     void importPasswords(const SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings) override;
 };
-
