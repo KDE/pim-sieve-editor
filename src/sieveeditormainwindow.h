@@ -13,6 +13,8 @@ class SieveEditorCentralWidget;
 class QLabel;
 class SieveEditorBookmarks;
 class KActionMenu;
+class KToggleFullScreenAction;
+
 namespace PimCommon
 {
 class KActionMenuChangeCase;
@@ -47,12 +49,11 @@ private:
     void slotCopyAvailable(bool b);
     void slotOpenBookmarkUrl(const QUrl &url);
     void slotImportImapSettings();
-
-private:
     void initStatusBar();
     void readConfig();
     void setupActions();
-    QString currentText() const;
+    Q_REQUIRED_RESULT QString currentText() const;
+    void slotFullScreen(bool t);
 
     SieveEditorCentralWidget *mMainWidget = nullptr;
     QAction *mDeleteScript = nullptr;
@@ -90,5 +91,6 @@ private:
     QLabel *mStatusBarInfo = nullptr;
     SieveEditorBookmarks *mSieveEditorBookmarks = nullptr;
     KActionMenu *mBookmarkMenu = nullptr;
+    KToggleFullScreenAction *mShowFullScreenAction = nullptr;
     bool mNetworkIsDown = false;
 };

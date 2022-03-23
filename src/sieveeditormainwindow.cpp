@@ -24,14 +24,18 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KStandardAction>
-#include <QAction>
-#include <QIcon>
-#include <QStatusBar>
+#include <KToggleFullScreenAction>
 
+#include <QAction>
 #include <QCloseEvent>
+#include <QFontDatabase>
+#include <QIcon>
 #include <QLabel>
 #include <QMenu>
+#include <QMenuBar>
 #include <QPointer>
+#include <QStatusBar>
+#include <QToolButton>
 #ifdef WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
 #include <KUserFeedback/NotificationPopup>
@@ -263,6 +267,10 @@ void SieveEditorMainWindow::setupActions()
     act = new QAction(i18n("Import IMAP Settings..."), this);
     ac->addAction(QStringLiteral("import_imap_settings"), act);
     connect(act, &QAction::triggered, this, &SieveEditorMainWindow::slotImportImapSettings);
+
+    mShowFullScreenAction = KStandardAction::fullScreen(nullptr, nullptr, this, ac);
+    ac->setDefaultShortcut(mShowFullScreenAction, Qt::Key_F11);
+    connect(mShowFullScreenAction, &QAction::toggled, this, &SieveEditorMainWindow::slotFullScreen);
 }
 
 void SieveEditorMainWindow::slotImportImapSettings()
@@ -309,6 +317,26 @@ void SieveEditorMainWindow::slotDeleteScript()
 QString SieveEditorMainWindow::currentText() const
 {
     return mMainWidget->sieveEditorMainWidget()->currentText();
+}
+
+void SieveEditorMainWindow::slotFullScreen(bool t)
+{
+    KToggleFullScreenAction::setFullScreen(this, t);
+    QMenuBar *mb = menuBar();
+    if (t) {
+        auto b = new QToolButton(mb);
+        b->setDefaultAction(mShowFullScreenAction);
+        b->setSizePolicy(QSizePolicy(QSizePolicy::Minimum, QSizePolicy::Ignored));
+        b->setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
+        mb->setCornerWidget(b, Qt::TopRightCorner);
+        b->setVisible(true);
+        b->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    } else {
+        QWidget *w = mb->cornerWidget(Qt::TopRightCorner);
+        if (w) {
+            w->deleteLater();
+        }
+    }
 }
 
 void SieveEditorMainWindow::closeEvent(QCloseEvent *e)
