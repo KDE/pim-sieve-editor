@@ -133,6 +133,7 @@ set(sieveeditor_SRCS main.cpp)
 add_executable(sieveeditor ${sieveeditor_SRCS} )
 
 target_link_libraries(sieveeditor
+    KF5::CoreAddons
     KF5::Crash
     libsieveeditor
     KF5::XmlGui
