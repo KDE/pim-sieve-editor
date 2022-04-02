@@ -18,6 +18,7 @@
 #include <KSharedConfig>
 #include <QTabWidget>
 
+#include <QApplication>
 #include <QStackedWidget>
 #include <QTabBar>
 
@@ -56,6 +57,9 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
     KConfigGroup myGroup(KSharedConfig::openStateConfig(), mySieveEditorMainWidgetConfigGroupName);
     setSizes(myGroup.readEntry("mainSplitter", splitterSizes));
     updateStackedWidget();
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    connect(qApp, &QApplication::paletteChanged, this, &SieveEditorMainWidget::slotGeneralPaletteChanged);
+#endif
 }
 
 SieveEditorMainWidget::~SieveEditorMainWidget()
@@ -495,9 +499,20 @@ void SieveEditorMainWidget::slotScriptModified(bool modified, SieveEditorPageWid
     const int index = mTabWidget->indexOf(page);
     if (index >= 0) {
         if (!mScriptColor.isValid()) {
-            slotGeneralPaletteChanged();
+            updatePaletteColor();
         }
         mTabWidget->tabBar()->setTabTextColor(index, modified ? mModifiedScriptColor : mScriptColor);
+    }
+}
+
+void SieveEditorMainWidget::slotGeneralPaletteChanged()
+{
+    updatePaletteColor();
+    for (int i = mTabWidget->count() - 1; i >= 0; --i) {
+        auto page = qobject_cast<SieveEditorPageWidget *>(mTabWidget->widget(i));
+        if (page) {
+            mTabWidget->tabBar()->setTabTextColor(i, page->isModified() ? mModifiedScriptColor : mScriptColor);
+        }
     }
 }
 
@@ -567,13 +582,11 @@ void SieveEditorMainWidget::slotPrint()
     }
 }
 
-void SieveEditorMainWidget::slotGeneralPaletteChanged()
+void SieveEditorMainWidget::updatePaletteColor()
 {
-    const QPalette pal = palette();
-    mScriptColor = pal.text().color();
-    mModifiedScriptColor = pal.text().color();
-
     const KColorScheme scheme(QPalette::Active, KColorScheme::View);
+    mScriptColor = scheme.foreground(KColorScheme::NormalText).color();
+
     mModifiedScriptColor = scheme.foreground(KColorScheme::NegativeText).color();
 }
 
@@ -698,4 +711,14 @@ bool SieveEditorMainWidget::isTextEditor() const
         }
     }
     return false;
+}
+
+bool SieveEditorMainWidget::event(QEvent *e)
+{
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    if (e->type() == QEvent::ApplicationPaletteChange) {
+        slotGeneralPaletteChanged();
+    }
+#endif
+    return QSplitter::event(e);
 }
