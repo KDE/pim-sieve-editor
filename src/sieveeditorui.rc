@@ -3,7 +3,7 @@
   SPDX-License-Identifier: CC0-1.0
   SPDX-FileCopyrightText: 2013-2022 Laurent Montel <montel@kde.org>
 -->
-<gui name="sieveeditor" version="22">
+<gui name="sieveeditor" version="23">
  <MenuBar>
   <Menu name="file" >
    <Action name="add_server_sieve" />
@@ -40,6 +40,10 @@
    <Action name="zoom_reset" />
    <Separator/>
    <Action name="fullscreen"/>
+  </Menu>
+  <Menu name="settings" append="settings_merge">
+    <text>&amp;Settings</text>
+    <Action name="colorscheme_menu" />
   </Menu>
   <Action name="bookmark"/>
   <Menu name="Tools" >

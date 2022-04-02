@@ -26,6 +26,7 @@
 #include <KStandardAction>
 #include <KToggleFullScreenAction>
 
+#include <KColorSchemeManager>
 #include <QAction>
 #include <QCloseEvent>
 #include <QFontDatabase>
@@ -271,6 +272,9 @@ void SieveEditorMainWindow::setupActions()
     mShowFullScreenAction = KStandardAction::fullScreen(nullptr, nullptr, this, ac);
     ac->setDefaultShortcut(mShowFullScreenAction, Qt::Key_F11);
     connect(mShowFullScreenAction, &QAction::toggled, this, &SieveEditorMainWindow::slotFullScreen);
+
+    auto manager = new KColorSchemeManager(this);
+    ac->addAction(QStringLiteral("colorscheme_menu"), manager->createSchemeSelectionMenu(this));
 }
 
 void SieveEditorMainWindow::slotImportImapSettings()
