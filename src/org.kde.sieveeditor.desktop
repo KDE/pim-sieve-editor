@@ -118,3 +118,4 @@ InitialPreference=10
 X-DBUS-StartupType=Unique
 X-DBUS-ServiceName=org.kde.sieveeditor
 SingleMainWindow=true
+Version=1.5
