@@ -67,7 +67,7 @@ public:
     void openBookmarkUrl(const QUrl &url);
     void debugSieveScript();
     void zoomReset();
-    void wordWrap(bool state);
+    void setWordWrap(bool state);
     Q_REQUIRED_RESULT bool isWordWrap() const;
     void print();
     void printPreview();

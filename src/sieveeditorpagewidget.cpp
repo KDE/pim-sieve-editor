@@ -72,7 +72,7 @@ void SieveEditorPageWidget::loadScript(const KSieveUi::ManageSieveWidget::Script
     mSieveEditorWidget->setSieveImapAccountSettings(info.sieveImapAccountSettings);
     mSieveEditorWidget->setListOfIncludeFile(info.scriptList);
     mSieveEditorWidget->setReadOnly(true);
-    mSieveEditorWidget->wordWrap(SieveEditorGlobalConfig::self()->wrapText());
+    mSieveEditorWidget->setWordWrap(SieveEditorGlobalConfig::self()->wrapText());
     KManageSieve::SieveJob *job = KManageSieve::SieveJob::get(mCurrentURL);
     connect(job, &KManageSieve::SieveJob::result, this, &SieveEditorPageWidget::slotGetResult);
 }
@@ -333,9 +333,9 @@ QString SieveEditorPageWidget::currentText() const
     return mSieveEditorWidget->script();
 }
 
-void SieveEditorPageWidget::wordWrap(bool state)
+void SieveEditorPageWidget::setWordWrap(bool state)
 {
-    mSieveEditorWidget->wordWrap(state);
+    mSieveEditorWidget->setWordWrap(state);
 }
 
 bool SieveEditorPageWidget::isWordWrap() const

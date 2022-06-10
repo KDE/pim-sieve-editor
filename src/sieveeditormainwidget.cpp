@@ -555,7 +555,7 @@ void SieveEditorMainWidget::slotWordWrap(bool state)
     if (w) {
         auto page = qobject_cast<SieveEditorPageWidget *>(w);
         if (page) {
-            page->wordWrap(state);
+            page->setWordWrap(state);
         }
     }
 }
