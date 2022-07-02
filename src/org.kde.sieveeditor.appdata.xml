@@ -10,6 +10,7 @@
   <name>SieveEditor</name>
   <name xml:lang="ar">محرّر سِف</name>
   <name xml:lang="az">Süzgəclər redaktoru</name>
+  <name xml:lang="bg">SieveEditor</name>
   <name xml:lang="ca">SieveEditor</name>
   <name xml:lang="ca-valencia">SieveEditor</name>
   <name xml:lang="cs">SieveEditor</name>
@@ -42,6 +43,7 @@
   <summary>Editor for email filter Sieve scripts</summary>
   <summary xml:lang="ar">محرر سكربتات ترشيح عناوين البريد الإلكتروني</summary>
   <summary xml:lang="az">E-poçtların süzgəcləmə skriptləri üçün redaktor</summary>
+  <summary xml:lang="bg">Редактор за скриптове на Sieve за филтриране на електронна поща</summary>
   <summary xml:lang="ca">Editor per als scripts de «Sieve» del filtratge de correu</summary>
   <summary xml:lang="ca-valencia">Editor per als scripts de «Sieve» del filtratge de correu</summary>
   <summary xml:lang="cs">Editor skriptů pro filtrování e-mailů Sieve</summary>
@@ -73,6 +75,7 @@
   <developer_name>Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ar">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="az">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="bg">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ca">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ca-valencia">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="cs">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
@@ -108,6 +111,7 @@
     </p>
     <p xml:lang="ar">يسمح لك محرر سف بإنشاء وتحرير وحذف سكربتات سِف</p>
     <p xml:lang="az">Süzgəc redaktoru, süzgəc skriptlərinə düzəliş etməyə, onları yaratmağa və silməyə imkan verir.</p>
+    <p xml:lang="bg">SieveEditor позволява редактиране, създаване и изтриване на скриптове на Sieve.</p>
     <p xml:lang="ca">El SieveEditor permet editar, crear i suprimir scripts de «Sieve».</p>
     <p xml:lang="ca-valencia">El SieveEditor permet editar, crear i suprimir scripts de «Sieve».</p>
     <p xml:lang="cs">SieveEditor vám umožňuje upravit, vytvářet a mazat skripty sieve.</p>
