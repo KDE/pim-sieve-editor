@@ -4,7 +4,7 @@ add_definitions( -DIMPORTWIZARD_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data" )
 
 macro(add_sieveeditor_importwizard_unittest _source _additionsource)
     get_filename_component(_name ${_source} NAME_WE)
-    ecm_add_test(${_source} ${_additionsource}
+    ecm_add_test(${_source} ${_additionsource} ${_name}.h
         TEST_NAME ${_name}
         NAME_PREFIX "sieveeditor-importwizard-"
         LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test KF5::I18n Qt${QT_MAJOR_VERSION}::Gui Qt${QT_MAJOR_VERSION}::Widgets
