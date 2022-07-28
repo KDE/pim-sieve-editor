@@ -309,7 +309,7 @@ void ServerSieveSettings::slotFinished(const QVector<int> &testResult)
     using namespace MailTransport;
 
     if (!mServerTest->isNormalPossible() && !mServerTest->isSecurePossible()) {
-        KMessageBox::sorry(this, i18n("Unable to connect to the server, please verify the server address."));
+        KMessageBox::error(this, i18n("Unable to connect to the server, please verify the server address."));
     }
 
     ui->testInfo->show();
