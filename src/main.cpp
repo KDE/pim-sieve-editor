@@ -54,13 +54,14 @@ int main(int argc, char **argv)
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
 #ifdef WITH_KUSERFEEDBACK
-    parser.addOption(QCommandLineOption(QStringLiteral("feedback"), i18n("Lists the available options for user feedback")));
+    const QCommandLineOption feedbackOption(QStringLiteral("feedback"), i18n("Lists the available options for user feedback"));
+    parser.addOption(feedbackOption);
 #endif
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
 #ifdef WITH_KUSERFEEDBACK
-    if (parser.isSet(QStringLiteral("feedback"))) {
+    if (parser.isSet(feedbackOption)) {
         QTextStream(stdout) << UserFeedBackManager::self()->userFeedbackProvider()->describeDataSources() << '\n';
         return 0;
     }
