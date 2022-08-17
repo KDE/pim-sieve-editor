@@ -3,7 +3,7 @@
 add_executable(sieveeditorimportwizardtest main.cpp)
 
 target_link_libraries(sieveeditorimportwizardtest
-    Qt${QT_MAJOR_VERSION}::Widgets
+    Qt::Widgets
     KF5::WidgetsAddons
     KF5::I18n
     KF5::ConfigCore

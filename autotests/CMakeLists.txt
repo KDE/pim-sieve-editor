@@ -3,13 +3,13 @@
 add_executable( serversievesettingstest  serversievesettingstest.cpp)
 add_test(NAME serversievesettingstest COMMAND serversievesettingstest)
 ecm_mark_as_test(serversievesettingstest)
-target_link_libraries( serversievesettingstest Qt${QT_MAJOR_VERSION}::Test Qt${QT_MAJOR_VERSION}::Widgets KF5::MailTransport KF5::I18n KF5::ConfigGui KF5::KSieveUi libsieveeditor)
+target_link_libraries( serversievesettingstest Qt::Test Qt::Widgets KF5::MailTransport KF5::I18n KF5::ConfigGui KF5::KSieveUi libsieveeditor)
 
 set( sieveeditorutiltest_source sieveeditorutiltest.cpp )
 add_executable( sieveeditorutiltest ${sieveeditorutiltest_source})
 add_test(NAME sieveeditorutiltest COMMAND sieveeditorutiltest)
 ecm_mark_as_test(sieveeditorutiltest)
-target_link_libraries( sieveeditorutiltest Qt${QT_MAJOR_VERSION}::Test KF5::MailTransport KF5::I18n KF5::ConfigGui KF5::KSieveUi libsieveeditor)
+target_link_libraries( sieveeditorutiltest Qt::Test KF5::MailTransport KF5::I18n KF5::ConfigGui KF5::KSieveUi libsieveeditor)
 
 # convenience macro to add qtest unit tests
 macro(add_sieveserver_unittest _source)
@@ -19,8 +19,8 @@ macro(add_sieveserver_unittest _source)
     add_test( NAME ${_name} COMMAND ${_name} )
     ecm_mark_as_test(sieveserver-${_name})
     target_link_libraries( ${_name}
-        Qt${QT_MAJOR_VERSION}::Test
-        Qt${QT_MAJOR_VERSION}::Widgets
+        Qt::Test
+        Qt::Widgets
         KF5::I18n
         KF5::MailTransport
         KF5::KSieveUi
