@@ -116,7 +116,6 @@ Comment[uk]=Редагувати фільтри IMAP
 Comment[x-test]=xxEdit IMAP Sieve filtersxx
 Comment[zh_CN]=编辑 IMAP 筛选过滤器
 Comment[zh_TW]=編輯 IMAP 篩選器
-Terminal=false
 Categories=Qt;KDE;Office;Network;X-KDE-Sieve;
 InitialPreference=10
 X-DBUS-StartupType=Unique
