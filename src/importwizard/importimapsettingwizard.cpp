@@ -18,7 +18,9 @@
 #include <PimCommon/PimUtil>
 #include <importwizard/checks/importimapsettingsakonadipassword.h>
 
+#include <KWindowConfig>
 #include <QPushButton>
+#include <QWindow>
 
 ImportImapSettingWizard::ImportImapSettingWizard(QWidget *parent)
     : KAssistantDialog(parent)
@@ -117,17 +119,17 @@ void ImportImapSettingWizard::next()
 
 void ImportImapSettingWizard::readConfig()
 {
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(600, 400));
     KConfigGroup group(KSharedConfig::openStateConfig(), "SieveEditorConfigureDialog");
-    const QSize size = group.readEntry("Size", QSize(600, 400));
-    if (size.isValid()) {
-        resize(size);
-    }
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ImportImapSettingWizard::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), "SieveEditorConfigureDialog");
-    group.writeEntry("Size", size());
+    KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }
 

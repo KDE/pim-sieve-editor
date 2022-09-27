@@ -5,7 +5,6 @@
 */
 
 #include "sieveeditorconfiguredialog.h"
-#include "serversievelistwidget.h"
 #include "sieveeditorconfigureserverwidget.h"
 #include "sieveeditorglobalconfig.h"
 #include <PimCommon/ConfigureImmutableWidgetUtils>
@@ -20,10 +19,12 @@
 #include <KSharedConfig>
 
 #include <KConfigGroup>
+#include <KWindowConfig>
 #include <QCheckBox>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QWindow>
 
 SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     : KPageDialog(parent)
@@ -106,16 +107,16 @@ void SieveEditorConfigureDialog::saveServerSieveConfig()
 
 void SieveEditorConfigureDialog::readConfig()
 {
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(600, 400));
     KConfigGroup group(KSharedConfig::openStateConfig(), "SieveEditorConfigureDialog");
-    const QSize size = group.readEntry("Size", QSize(600, 400));
-    if (size.isValid()) {
-        resize(size);
-    }
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void SieveEditorConfigureDialog::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), "SieveEditorConfigureDialog");
-    group.writeEntry("Size", size());
+    KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }

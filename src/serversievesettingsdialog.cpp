@@ -8,9 +8,11 @@
 #include "serversievesettings.h"
 
 #include <KLocalizedString>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QWindow>
 
 ServerSieveSettingsDialog::ServerSieveSettingsDialog(QWidget *parent)
     : QDialog(parent)
@@ -46,17 +48,17 @@ ServerSieveSettingsDialog::~ServerSieveSettingsDialog()
 
 void ServerSieveSettingsDialog::readConfig()
 {
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(450, 350));
     KConfigGroup group(KSharedConfig::openStateConfig(), "ServerSieveSettingsDialog");
-    const QSize size = group.readEntry("Size", QSize(450, 350));
-    if (size.isValid()) {
-        resize(size);
-    }
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ServerSieveSettingsDialog::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), "ServerSieveSettingsDialog");
-    group.writeEntry("Size", size());
+    KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }
 
