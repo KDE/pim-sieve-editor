@@ -14,6 +14,11 @@
 #include <QVBoxLayout>
 #include <QWindow>
 
+namespace
+{
+static const char myServerSieveSettingsDialog[] = "ServerSieveSettingsDialog";
+}
+
 ServerSieveSettingsDialog::ServerSieveSettingsDialog(QWidget *parent)
     : QDialog(parent)
 {
@@ -50,14 +55,14 @@ void ServerSieveSettingsDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(450, 350));
-    KConfigGroup group(KSharedConfig::openStateConfig(), "ServerSieveSettingsDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myServerSieveSettingsDialog);
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ServerSieveSettingsDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "ServerSieveSettingsDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myServerSieveSettingsDialog);
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }

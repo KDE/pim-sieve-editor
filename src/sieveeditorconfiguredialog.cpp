@@ -26,6 +26,11 @@
 #include <QVBoxLayout>
 #include <QWindow>
 
+namespace
+{
+static const char mySieveEditorConfigureDialog[] = "SieveEditorConfigureDialog";
+}
+
 SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     : KPageDialog(parent)
 {
@@ -109,14 +114,14 @@ void SieveEditorConfigureDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(600, 400));
-    KConfigGroup group(KSharedConfig::openStateConfig(), "SieveEditorConfigureDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), mySieveEditorConfigureDialog);
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void SieveEditorConfigureDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "SieveEditorConfigureDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), mySieveEditorConfigureDialog);
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }
