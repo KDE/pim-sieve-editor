@@ -1,0 +1,240 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY i18n-kapplication "<application
+>Sieve-editor</application
+>">
+  <!ENTITY kappname "&i18n-kapplication;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE"
+> 
+]>
+
+<book id="sieveeditor" lang="&language;">
+
+<bookinfo id="sieveeditorinfo">
+
+<title
+>Het handboek van &i18n-kapplication;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2016-04-14</date>
+<releaseinfo
+>Applications 16.04</releaseinfo>
+
+<abstract>
+<para
+>&i18n-kapplication; is een editor voor Sieve-scripts gebruikt voor filtering van e-mailberichten op een e-mailserver. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sieve</keyword>
+</keywordset>
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Inleiding</title>
+<para
+>&i18n-kapplication; is een editor voor <ulink url="https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)"
+>Sieve</ulink
+>-scripts gebruikt voor filtering van e-mailberichten op een e-mailserver.</para>
+
+<sect1 id="using-kapp">
+<title
+>&i18n-kapplication; gebruiken</title>
+
+<para
+>&i18n-kapplication; biedt een &GUI; om deze taken uit te voeren:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Beheer uw Sieve-servers</para
+></listitem>
+<listitem
+><para
+>Scripts uploaden, importeren en deactiveren, ververs de lijst met scripts</para
+></listitem>
+<listitem
+><para
+>Sieve-scripts maken en bewerken</para
+></listitem>
+<listitem
+><para
+>Scripts importeren en delen</para
+></listitem>
+<listitem
+><para
+>De syntaxis van het script controleren, autogeneratie en debuggen van scripts</para
+></listitem>
+</itemizedlist>
+
+<para
+>&i18n-kapplication; kan onafhankelijk van Akonadi of &kmail; gebruikt worden, u hebt alleen een e-mailserver nodig met ondersteuning voor Sieve scripts.</para>
+
+<para
+>In een &plasma-desktop; worden de wachtwoorden opgeslagen in &kwallet5;</para>
+
+<sect2 id="first-start">
+<title
+>Eerste keer</title>
+<para
+>Bij de eerste keer starten van &i18n-kapplication; zal de instellingendialoog van de server worden getoond.</para>
+<screenshot>
+<screeninfo
+>Serverconfiguratie</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="first-start.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Serverconfiguratie</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+<para
+>In deze dialoog kunt u uw e-mailservers toevoegen, wijzigen en verwijderen.</para>
+<para
+>Later kunt u <menuchoice
+><guimenu
+>Bestand</guimenu
+><guimenuitem
+>Server toevoegen</guimenuitem
+></menuchoice
+> of de instellingendialoog voor deze taken gebruiken.</para>
+<para
+>Bij de volgende start zal &i18n-kapplication; automatisch alle beschikbare scripts uit de servers ophalen.</para>
+</sect2>
+
+<sect2 id="script-edit">
+<title
+>Bewerken van scripts</title>
+<para
+>De editor ondersteunt automatisch aanvullen en accentuering van syntaxis.</para>
+<screenshot>
+<screeninfo
+>Bewerken van scripts</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-edit.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Bewerken van scripts</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="script-tools">
+<title
+>Hulpmiddelen voor scripts</title>
+
+<para
+>De acties in het menu <guimenu
+>hulpmiddelen</guimenu
+> biedt u om accentuering van syntaxis van uw scripts in te schakelen, ze automatisch te genereren en te debuggen.</para>
+
+<screenshot>
+<screeninfo
+>Scripts automatisch genereren</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-tools.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Scripts automatisch genereren</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="script-help">
+<title
+>Geïntegreerde hulp</title>
+
+<para
+>U kunt het geïntegreerde hulp en ondersteuning gebruiken en met de &RMB; klikken op een sleutelwoord van de taal van Sieve. Daarna wordt de betreffende sectie van de documentatie gedownload vanaf het internet en getoond in het tabblad <guilabel
+>Help</guilabel
+>.</para>
+<screenshot>
+<screeninfo
+>Geïntegreerde hulp</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-help.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Geïntegreerde hulp</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Dankbetuigingen en licentie</title>
+
+<para
+>&i18n-kapplication;</para>
+<para
+>Programma copyright 2013-2017 &Laurent.Montel; &Laurent.Montel.mail; </para>
+<para
+>Documentatie Copyright &copy; &Laurent.Montel; &Laurent.Montel.mail; </para>
+
+&meld.fouten;&vertaling.freek; &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

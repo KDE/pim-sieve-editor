@@ -1,0 +1,261 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY i18n-kapplication "<application
+>Editor do Sieve</application
+>">
+  <!ENTITY kappname "&i18n-kapplication;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Portuguese "INCLUDE"
+> 
+]>
+
+<book id="sieveeditor" lang="&language;">
+
+<bookinfo id="sieveeditorinfo">
+
+<title
+>O Manual do &i18n-kapplication;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2016-04-14</date>
+<releaseinfo
+>Aplicações 16.04</releaseinfo>
+
+<abstract>
+<para
+>O &i18n-kapplication; é um editor para programas em Sieve que é usado para a filtragem de e-mail num servidor de e-mail. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sieve</keyword>
+</keywordset>
+</bookinfo>
+
+<!-- info + screenshots from http://www.aegiap.eu/kdeblog/2014/01/new-in-kdepim-4-13-sieveeditor/ -->
+
+<chapter id="introduction">
+<title
+>Introdução</title>
+<para
+>O &i18n-kapplication; é um editor de programas do <ulink url="https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)"
+>Sieve</ulink
+>, usados para filtrar mensagens num servidor de e-mail.</para>
+
+<sect1 id="using-kapp">
+<title
+>Usar o &i18n-kapplication;</title>
+
+<para
+>O &i18n-kapplication; oferece uma interface &GUI; para efectuar estas tarefas:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Gerir os seus servidores de Sieve</para
+></listitem>
+<listitem
+><para
+>Enviar, importar e desactivar programas, actualizar a lista com os programas</para
+></listitem>
+<listitem
+><para
+>Criar e editar programas em Sieve</para
+></listitem>
+<listitem
+><para
+>Importar e partilhar programas</para
+></listitem>
+<listitem
+><para
+>Verificar a sintaxe dos programas, auto-gerar e depurar programas</para
+></listitem>
+</itemizedlist>
+
+<para
+>O &i18n-kapplication; pode ser usado de forma independente do Akonadi ou do &kmail;, pelo que só precisa de um servidor de correio com suporte para programas em Sieve.</para>
+
+<para
+>Num &plasma-desktop;, as senhas são guardadas no &kwallet5;</para>
+
+<sect2 id="first-start">
+<title
+>Primeira Introdução</title>
+<para
+>No primeiro arranque do &i18n-kapplication;, é apresentada a janela de configuração do servidor.</para>
+<screenshot>
+<screeninfo
+>Configuração do Servidor</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="first-start.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Configuração do Servidor</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+<para
+>Nesta janela, poderá adicionar, modificar e remover os seus servidores de e-mail.</para>
+<para
+>Mais tarde poderá usar a opção <menuchoice
+><guimenu
+>Ficheiro</guimenu
+><guimenuitem
+>Adicionar um Servidor</guimenuitem
+></menuchoice
+> ou a janela de configuração para essas tarefas.</para>
+<para
+>No próximo arranque, o &i18n-kapplication; recebe automaticamente todos os programas disponíveis a partir dos servidores.</para>
+</sect2>
+
+<sect2 id="script-edit">
+<title
+>Edição do Programa</title>
+<para
+>O editor suporta a completação automática e o realce de sintaxe.</para>
+<screenshot>
+<screeninfo
+>Edição do Programa</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-edit.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Edição do Programa</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="script-tools">
+<title
+>Ferramentas do Programa</title>
+
+<para
+>As acções do menu <guimenu
+>Ferramentas</guimenu
+> permitem-lhe verificar a sintaxe dos seus programas, bem como gerar automaticamente e depurar os mesmos.</para>
+
+<screenshot>
+<screeninfo
+>Gerar automaticamente os programas</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-tools.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Gerar automaticamente os programas</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="script-help">
+<title
+>Ajuda Integrada</title>
+
+<para
+>Poderá usar o suporte de ajuda integrado e carregar com o &RMB; sobre uma palavra-chave da linguagem Sieve. Depois, a secção correspondente da documentação será transferida da Internet e apresentada na página de <guilabel
+>Ajuda</guilabel
+>.</para>
+<screenshot>
+<screeninfo
+>Ajuda Integrada</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-help.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Ajuda Integrada</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Créditos e Licença</title>
+
+<para
+>&i18n-kapplication;</para>
+<para
+>Programa com 'copyright' 2013-2017 de &Laurent.Montel; &Laurent.Montel.mail; </para>
+<para
+>Documentação com 'copyright' &copy; &Laurent.Montel; &Laurent.Montel.mail; </para>
+
+<para
+>Tradução de José Nuno Pires <email
+>zepires@gmail.com</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

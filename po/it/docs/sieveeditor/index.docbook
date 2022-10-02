@@ -1,0 +1,258 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY i18n-kapplication "<application
+>Editor Sieve</application
+>">
+  <!ENTITY kappname "&i18n-kapplication;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Italian "INCLUDE"
+> 
+]>
+
+<book id="sieveeditor" lang="&language;">
+
+<bookinfo id="sieveeditorinfo">
+
+<title
+>Manuale di &i18n-kapplication;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Luigi</firstname
+> <surname
+>Toscano</surname
+> <affiliation
+><address
+><email
+>luigi.toscano@tiscali.it</email
+></address
+></affiliation
+> <contrib
+>Traduzione del documento</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2016-04-14</date>
+<releaseinfo
+>Applications 16.04</releaseinfo>
+
+<abstract>
+<para
+>&i18n-kapplication; è un editor per script Sieve, usati per filtrare i messaggi di posta in un server di posta elettronica. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sieve</keyword>
+</keywordset>
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introduzione</title>
+<para
+>&i18n-kapplication; è un editor per script <ulink url="https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)"
+>Sieve</ulink
+>, usati per filtrare i messaggi di posta in un server di posta elettronica.</para>
+
+<sect1 id="using-kapp">
+<title
+>Utilizzare &i18n-kapplication;</title>
+
+<para
+>&i18n-kapplication; fornisce una &GUI; per eseguire le seguenti operazioni:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Gestire i server Sieve</para
+></listitem>
+<listitem
+><para
+>Caricare, importare e disattivare gli script, aggiornare l'elenco degli script</para
+></listitem>
+<listitem
+><para
+>Creare e modificare script Sieve</para
+></listitem>
+<listitem
+><para
+>Importare e condividere script</para
+></listitem>
+<listitem
+><para
+>Controllare la sintassi degli script, generare automaticamente ed effettuare il debug di script</para
+></listitem>
+</itemizedlist>
+
+<para
+>&i18n-kapplication; può essere usato indipendentemente da Akonadi o &kmail;, serve solamente un server di posta con supporto agli script Sieve.</para>
+
+<para
+>In una sessione di &plasma-desktop; le password sono memorizzate in &kwallet5;</para>
+
+<sect2 id="first-start">
+<title
+>Primo avvio</title>
+<para
+>Al primo avvio di &i18n-kapplication; viene mostrata la finestra di dialogo di configurazione del server.</para>
+<screenshot>
+<screeninfo
+>Configurazione server</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="first-start.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Configurazione server</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+<para
+>Da questa finestra di dialogo è possibile aggiungere, modificare e rimuovere i server di posta.</para>
+<para
+>Successivamente puoi usare <menuchoice
+><guimenu
+>File</guimenu
+><guimenuitem
+>Aggiungi server</guimenuitem
+></menuchoice
+> o la finestra di dialogo di configurazione per questi compiti.</para>
+<para
+>Al prossimo avvio &i18n-kapplication; recupererà automaticamente  dai server tutti gli script disponibili.</para>
+</sect2>
+
+<sect2 id="script-edit">
+<title
+>Modifica degli script</title>
+<para
+>L'editor supporta il completamento automatico e l'evidenziazione della sintassi.</para>
+<screenshot>
+<screeninfo
+>Modifica degli script</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-edit.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Modifica degli script</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="script-tools">
+<title
+>Strumenti per gli script</title>
+
+<para
+>Le azioni nel menu <guimenu
+>Strumenti</guimenu
+> permettono la verifica della sintassi, la generazione automatica ed il debug degli script.</para>
+
+<screenshot>
+<screeninfo
+>Generazione automatica degli script</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-tools.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Generazione automatica degli script</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="script-help">
+<title
+>Aiuto integrato</title>
+
+<para
+>Puoi usare l'aiuto integrato e fare clic con il &RMB; su un parola chiave del linguaggio Sieve. La sezione corrispondente della documentazione verrà scaricata da Internet e mostrata nella scheda <guilabel
+>Aiuto</guilabel
+>.</para>
+<screenshot>
+<screeninfo
+>Aiuto integrato</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-help.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Aiuto integrato</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Riconoscimenti e licenza</title>
+
+<para
+>&i18n-kapplication;</para>
+<para
+>Copyright del programma 2013-2017 &Laurent.Montel; &Laurent.Montel.mail; </para>
+<para
+>Copyright della documentazione &copy; &Laurent.Montel; &Laurent.Montel.mail; </para>
+
+<para
+>Traduzione italiana di Luigi Toscano <email
+>luigi.toscano@tiscali.it</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

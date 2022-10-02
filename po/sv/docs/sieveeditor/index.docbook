@@ -1,0 +1,258 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY i18n-kapplication "<application
+>Sieve-editor</application
+>">
+  <!ENTITY kappname "&i18n-kapplication;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE"
+> 
+]>
+
+<book id="sieveeditor" lang="&language;">
+
+<bookinfo id="sieveeditorinfo">
+
+<title
+>Handbok &i18n-kapplication;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2016-04-14</date>
+<releaseinfo
+>Program 16.04</releaseinfo>
+
+<abstract>
+<para
+>&i18n-kapplication; är en editor för Sieve-skript använda för filtrering av e-post på en e-postserver. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sieve</keyword>
+</keywordset>
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Inledning</title>
+<para
+>&i18n-kapplication; är en editor för <ulink url="https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)"
+>Sieve</ulink
+>-skript använda för filtrering av e-post på en e-postserver.</para>
+
+<sect1 id="using-kapp">
+<title
+>Använda &i18n-kapplication;</title>
+
+<para
+>&i18n-kapplication; tillhandahåller ett grafiskt användargränssnitt för att utföra följande uppgifter:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Hantera Sieve-servrar</para
+></listitem>
+<listitem
+><para
+>Ladda upp, importera och inaktivera skript, uppdatera skriptlistan</para
+></listitem>
+<listitem
+><para
+>Skapa och redigera Sieve-skript</para
+></listitem>
+<listitem
+><para
+>Importera och dela skript</para
+></listitem>
+<listitem
+><para
+>Kontrollera skriptens syntax, generera skript automatiskt och felsöka skript</para
+></listitem>
+</itemizedlist>
+
+<para
+>&i18n-kapplication; kan använda oberoende av Akonadi eller &kmail;, det behövs bara en e-postserver med stöd för Sieve-skript.</para>
+
+<para
+>På ett Plasma-skrivbord lagras lösenorden i plånboken</para>
+
+<sect2 id="first-start">
+<title
+>Komma igång</title>
+<para
+>Första gången &i18n-kapplication; startas, visas serverinställningsdialogrutan.</para>
+<screenshot>
+<screeninfo
+>Serverinställning</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="first-start.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Serverinställning</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+<para
+>I den här dialogrutan kan man lägga till, ändra och ta bort e-postservrar.</para>
+<para
+>Senare kan man använda <menuchoice
+><guimenu
+>Arkiv</guimenu
+> <guimenuitem
+>Lägg till server</guimenuitem
+></menuchoice
+> eller inställningsdialogrutan för sådana uppgifter.</para>
+<para
+>Vid nästa start hämtar &i18n-kapplication; automatiskt alla tillgängliga skript från servrarna.</para>
+</sect2>
+
+<sect2 id="script-edit">
+<title
+>Skriptredigering</title>
+<para
+>Editorn stöder automatisk komplettering och syntaxfärgläggning.</para>
+<screenshot>
+<screeninfo
+>Skriptredigering</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-edit.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Skriptredigering</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="script-tools">
+<title
+>Skriptverktyg</title>
+
+<para
+>Alternativen i menyn <guimenu
+>Verktyg</guimenu
+> gör det möjligt att kontrollera skriptens syntax, generera skript automatiskt och felsöka skript.</para>
+
+<screenshot>
+<screeninfo
+>Generera skript automatiskt</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-tools.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Generera skript automatiskt</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="script-help">
+<title
+>Integrerad hjälp</title>
+
+<para
+>Man kan använda den integrerade hjälpfunktionen och klicka med höger musknapp på ett nyckelord i Sieve-språket. Då laddas motsvarande sektion av dokumentationen ner från Internet och visas under fliken <guilabel
+>Hjälp</guilabel
+>.</para>
+<screenshot>
+<screeninfo
+>Integrerad hjälp</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-help.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Integrerad hjälp</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Tack till och licens</title>
+
+<para
+>&i18n-kapplication;</para>
+<para
+>Program copyright 2013-2017 &Laurent.Montel; &Laurent.Montel.mail; </para>
+<para
+>Dokumentation Copyright &copy; &Laurent.Montel; &Laurent.Montel.mail; </para>
+
+<para
+>Översättning Stefan Asserhäll <email
+>stefan.asserhall@bredband.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

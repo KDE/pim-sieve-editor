@@ -1,0 +1,261 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY i18n-kapplication "<application
+>Editor de Sieve</application
+>">
+  <!ENTITY kappname "&i18n-kapplication;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Spanish "INCLUDE"
+> 
+]>
+
+<book id="sieveeditor" lang="&language;">
+
+<bookinfo id="sieveeditorinfo">
+
+<title
+>El manual de &i18n-kapplication;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Javier</firstname
+> <surname
+>Viñal</surname
+> <affiliation
+><address
+><email
+>fjvinal@gmail.com</email
+></address
+> </affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2016-04-14</date>
+<releaseinfo
+>Aplicaciones 16.04</releaseinfo>
+
+<abstract>
+<para
+>&i18n-kapplication; es un editor para guiones Sieve usado para filtrado de correo en un servidor de correo. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sieve</keyword>
+</keywordset>
+</bookinfo>
+
+<!-- info + screenshots from http://www.aegiap.eu/kdeblog/2014/01/new-in-kdepim-4-13-sieveeditor/ -->
+
+<chapter id="introduction">
+<title
+>Introducción</title>
+<para
+>&i18n-kapplication; es un editor para guiones <ulink url="https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)"
+>Sieve</ulink
+>  usado para filtrado de correo en un servidor de correo.</para>
+
+<sect1 id="using-kapp">
+<title
+>Uso de &i18n-kapplication;</title>
+
+<para
+>&i18n-kapplication; proporciona una &GUI; para ejecutar esas tareas:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Gestionar sus guiones Sieve</para
+></listitem>
+<listitem
+><para
+>Cargar, importar y desactivar guiones, refrescar la lista con guiones</para
+></listitem>
+<listitem
+><para
+>Crear y editar guiones Sieve</para
+></listitem>
+<listitem
+><para
+>Importar y compartir guiones</para
+></listitem>
+<listitem
+><para
+>Comprobar la sintaxis del guion, autogenerar y depurar guiones</para
+></listitem>
+</itemizedlist>
+
+<para
+>&i18n-kapplication; puede usarse independientemente de Akonadi o &kmail;, usted solo necesita un servidor de correo que admita guiones Sieve.</para>
+
+<para
+>En un &plasma-desktop; las contraseñas se almacenan en &kwallet5;</para>
+
+<sect2 id="first-start">
+<title
+>Primer inicio</title>
+<para
+>En el primer inicio de &i18n-kapplication; se muestra la configuración del diálogo del servidor.</para>
+<screenshot>
+<screeninfo
+>Configuración del servidor</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="first-start.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Configuración del servidor</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+<para
+>En este diálogo usted puede añadir, modificar y eliminar sus servidores de correo.</para>
+<para
+>Posteriormente usted puede usar <menuchoice
+><guimenu
+>Archivo</guimenu
+><guimenuitem
+>Añadir servidor</guimenuitem
+></menuchoice
+> o el diálogo de configuración para esas tareas.</para>
+<para
+>En el siguiente inicio &i18n-kapplication; recupera automáticamente todos los guiones disponibles desde los servidores.</para>
+</sect2>
+
+<sect2 id="script-edit">
+<title
+>Edición de guiones</title>
+<para
+>El editor implementa autocompletado y resaltado de sintaxis</para>
+<screenshot>
+<screeninfo
+>Edición de guiones</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-edit.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Edición de guiones</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="script-tools">
+<title
+>Herramientas de guiones</title>
+
+<para
+>Las acciones en el menú <guimenu
+>Herramientas</guimenu
+> le permiten comprobar la sintaxis de sus guiones y autogenerar y depurar guiones.</para>
+
+<screenshot>
+<screeninfo
+>Autogenerar guiones</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-tools.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Autogenerar guiones</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="script-help">
+<title
+>Ayuda integrada</title>
+
+<para
+>Usted puede usar la ayuda integrada y pulsar con el &RMB; en una palabra clave del lenguaje Sieve. A continuación, se descarga la correspondiente sección de la documentación desde Internet y se muestra en la pestaña <guilabel
+>Ayuda</guilabel
+>.</para>
+<screenshot>
+<screeninfo
+>Ayuda integrada</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-help.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Ayuda integrada</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Créditos y licencia</title>
+
+<para
+>&i18n-kapplication;</para>
+<para
+>Derechos de autor del programa 2013-2017 &Laurent.Montel; &Laurent.Montel.mail; </para>
+<para
+>Derechos de autor de la documentación &copy;  &Laurent.Montel; &Laurent.Montel.mail; </para>
+
+<para
+>Traducido por Javier Viñal <email
+>fjvinal@gmail.com</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

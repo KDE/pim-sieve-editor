@@ -1,0 +1,242 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY i18n-kapplication "<application
+>Editor de «Sieve»</application
+>">
+  <!ENTITY kappname "&i18n-kapplication;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE"
+> 
+]>
+
+<book id="sieveeditor" lang="&language;">
+
+<bookinfo id="sieveeditorinfo">
+
+<title
+>El manual de l'&i18n-kapplication;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>14 d'abril de 2016</date>
+<releaseinfo
+>Aplicacions 16.04</releaseinfo>
+
+<abstract>
+<para
+>L'&i18n-kapplication; és un editor per a scripts de «Sieve» emprats pel filtratge de correu electrònic en un servidor de correu. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sieve</keyword>
+</keywordset>
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introducció</title>
+<para
+>L'&i18n-kapplication; és un editor per a scripts de «<ulink url="https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)"
+>Sieve</ulink
+>» emprats pel filtratge de correu electrònic en un servidor de correu.</para>
+
+<sect1 id="using-kapp">
+<title
+>Ús de l'&i18n-kapplication;</title>
+
+<para
+>L'&i18n-kapplication; proporciona una &IGU; per dur a terme aquestes tasques:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Gestionar els servidors amb «Sieve»</para
+></listitem>
+<listitem
+><para
+>Pujar, importar i desactivar els scripts, actualitzar la llista dels scripts</para
+></listitem>
+<listitem
+><para
+>Crear i editar scripts de «Sieve»</para
+></listitem>
+<listitem
+><para
+>Importar i compartir els scripts</para
+></listitem>
+<listitem
+><para
+>Comprovar la sintaxi de l'script, auto generar i depurar els scripts</para
+></listitem>
+</itemizedlist>
+
+<para
+>L'&i18n-kapplication; es pot utilitzar independentment de l'Akonadi o el &kmail;, només es necessita un servidor de correu amb suport per a scripts de «Sieve».</para>
+
+<para
+>En un &plasma-desktop;, les contrasenyes s'emmagatzemen al &kwallet5;</para>
+
+<sect2 id="first-start">
+<title
+>Primera vegada</title>
+<para
+>La primera vegada que inicieu l'&i18n-kapplication;, es mostrarà el diàleg de configuració del servidor.</para>
+<screenshot>
+<screeninfo
+>Configuració del servidor</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="first-start.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Configuració del servidor</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+<para
+>En aquest diàleg podreu afegir, modificar i eliminar els servidors de correu.</para>
+<para
+>Després podreu utilitzar <menuchoice
+><guimenu
+>Fitxer</guimenu
+><guimenuitem
+>Afegeix un servidor</guimenuitem
+></menuchoice
+> o el diàleg de configuració per a aquestes tasques.</para>
+<para
+>En el següent inici, l'&i18n-kapplication; obtindrà automàticament tots els scripts disponibles des dels servidors.</para>
+</sect2>
+
+<sect2 id="script-edit">
+<title
+>Editar un script</title>
+<para
+>L'editor permet l'autocompleció i el ressaltat de la sintaxi.</para>
+<screenshot>
+<screeninfo
+>Edició d'un script</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-edit.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Edició d'un script</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="script-tools">
+<title
+>Eines per a l'script</title>
+
+<para
+>Les accions del menú <guimenu
+>Eines</guimenu
+> permeten comprovar la sintaxi dels scripts, auto generar i depurar els scripts.</para>
+
+<screenshot>
+<screeninfo
+>Generació automàtica dels scripts</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-tools.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Generació automàtica dels scripts</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="script-help">
+<title
+>Ajuda integrada</title>
+
+<para
+>Podeu utilitzar el suport d'ajuda integrat i fer clic amb el &BDR; en una paraula clau del llenguatge «Sieve». A continuació, es baixarà la secció corresponent de la documentació des d'Internet i es mostrarà a la pestanya <guilabel
+>Ajuda</guilabel
+>.</para>
+<screenshot>
+<screeninfo
+>Ajuda integrada</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-help.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Ajuda integrada</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Crèdits i llicència</title>
+
+<para
+>&i18n-kapplication;</para>
+<para
+>Copyright del programa 2013-2017 &Laurent.Montel; &Laurent.Montel.mail; </para>
+<para
+>Copyright de la documentació &copy; 2013 &Laurent.Montel; &Laurent.Montel.mail; </para>
+
+<para
+>Traductor/Revisor de la documentació: &credits.Antoni.Bella;</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

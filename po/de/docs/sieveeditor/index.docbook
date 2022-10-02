@@ -1,0 +1,258 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY i18n-kapplication "<application
+>Sieve-Editor</application
+>">
+  <!ENTITY kappname "&i18n-kapplication;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % German "INCLUDE"
+> 
+]>
+
+<book id="sieveeditor" lang="&language;">
+
+<bookinfo id="sieveeditorinfo">
+
+<title
+>Das Handbuch zu &i18n-kapplication;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+><affiliation
+><address
+><email
+>lueck@hube-lueck.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2016-04-14</date>
+<releaseinfo
+>Anwendungen 16.04</releaseinfo>
+
+<abstract>
+<para
+>&i18n-kapplication; ist ein Editor für Sieve-Skripte, die auf einem Server zur Filterung von E-Mails benutzt werden. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sieve</keyword>
+</keywordset>
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Einleitung</title>
+<para
+>&i18n-kapplication; ist ein Editor für <ulink url="https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)"
+>Sieve</ulink
+>-Skripte, die auf einem Server zur Filterung von E-Mails benutzt werden.</para>
+
+<sect1 id="using-kapp">
+<title
+>&i18n-kapplication; verwenden</title>
+
+<para
+>&i18n-kapplication; ist eine Anwendung mit grafischer Bedienungsoberfläche für folgende Aufgaben:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Verwaltung von Sieve-Servern</para
+></listitem>
+<listitem
+><para
+>Hochladen, importieren und deaktivieren von Skripten, erneutes Laden der Liste mit Skripten</para
+></listitem>
+<listitem
+><para
+>Sieve-Skripte erstellen und bearbeiten</para
+></listitem>
+<listitem
+><para
+>Skripte importieren und freigeben</para
+></listitem>
+<listitem
+><para
+>Syntax-Prüfung der Skripte, automatische Generierung und Fehlersuche in Skripten</para
+></listitem>
+</itemizedlist>
+
+<para
+>&i18n-kapplication; kann unabhängig von Akonadi oder &kmail; verwendet werden, Sie brauchen nur einen E-Mail-Server, der Sieve-Skripts unterstützt.</para>
+
+<para
+>Im &plasma-desktop; werden die Passwörter in &kwallet5; gespeichert</para>
+
+<sect2 id="first-start">
+<title
+>Der erste Start</title>
+<para
+>Beim ersten Start von &i18n-kapplication; wird der Einrichtungsdialog für Server angezeigt.</para>
+<screenshot>
+<screeninfo
+>Einrichtung des Servers</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="first-start.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Einrichtung des Servers</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+<para
+>In diesem Dialog können Sie Mail-Server hinzufügen, bearbeiten und entfernen.</para>
+<para
+>Später können Sie <menuchoice
+><guimenu
+>Datei</guimenu
+><guimenuitem
+>Server hinzufügen</guimenuitem
+></menuchoice
+> oder den Einrichtungsdialog für diese Aufgabe benutzen.</para>
+<para
+>Beim nächsten Start von &i18n-kapplication; werden alle vorhandenen Skripte von den definierten Servern geholt.</para>
+</sect2>
+
+<sect2 id="script-edit">
+<title
+>Skript-Bearbeitung</title>
+<para
+>Der Editor unterstützt die automatische Vervollständigung und Syntaxhervorhebung.</para>
+<screenshot>
+<screeninfo
+>Skript-Bearbeitung</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-edit.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Skript-Bearbeitung</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="script-tools">
+<title
+>Skript-Dienstprogramme</title>
+
+<para
+>Mit den Aktionen im Menü <guimenu
+>Extras</guimenu
+> können Sie die Syntax der Skripte überprüfen, Skripte automatisch generieren und Fehler in Skripten suchen.</para>
+
+<screenshot>
+<screeninfo
+>Automatische Generierung von Skripten</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-tools.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Automatische Generierung von Skripten</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="script-help">
+<title
+>Integrierte Hilfe</title>
+
+<para
+>Verwenden Sie die integrierte Hilfe und klicken Sie mit der &RMBn; auf ein Schlüsselwort der Sprache Sieve. Dann wird der zugehörige Abschnitt der Dokumentation aus dem Internet heruntergeladen und im Unterfenster <guilabel
+>Hilfe</guilabel
+> angezeigt.</para>
+<screenshot>
+<screeninfo
+>Integrierte Hilfe</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-help.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Integrierte Hilfe</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Danksagungen und Lizenz</title>
+
+<para
+>&i18n-kapplication;</para>
+<para
+>Programm Copyright 2017 &Laurent.Montel; &Laurent.Montel.mail; </para>
+<para
+>Copyright für die Dokumentation &copy; 2013 &Laurent.Montel; &Laurent.Montel.mail; </para>
+
+<para
+>Übersetzung Burkhard Lück<email
+>lueck@hube-lueck.de</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

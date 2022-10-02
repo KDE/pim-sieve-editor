@@ -1,0 +1,265 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY i18n-kapplication "<application
+>Editor Sieve</application
+>">
+  <!ENTITY kappname "&i18n-kapplication;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Brazilian-Portuguese "INCLUDE"
+> 
+]>
+
+<book id="sieveeditor" lang="&language;">
+
+<bookinfo id="sieveeditorinfo">
+
+<title
+>Manual do &i18n-kapplication;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+<othercredit role="translator"
+><firstname
+>André Marcelo</firstname
+><surname
+>Alvarenga</surname
+><affiliation
+><address
+><email
+>alvarenga@kde.org</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>14/04/2016</date>
+<releaseinfo
+>Applications 16.04</releaseinfo>
+
+<abstract>
+<para
+>&i18n-kapplication; é um editor de scripts Sieve para filtragem de mensagens em um servidor de e-mail. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sieve</keyword>
+</keywordset>
+</bookinfo>
+
+<!-- info + screenshots from http://www.aegiap.eu/kdeblog/2014/01/new-in-kdepim-4-13-sieveeditor/ -->
+
+<chapter id="introduction">
+<title
+>Introdução</title>
+<para
+>&i18n-kapplication; é um editor de scripts <ulink url="https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)"
+>Sieve</ulink
+> para filtragem de mensagens em um servidor de e-mail.</para>
+
+<sect1 id="using-kapp">
+<title
+>Usando o &i18n-kapplication;</title>
+
+<para
+>O &i18n-kapplication; oferece uma interface gráfica para efetuar estas tarefas:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Gerenciar os seus servidores Sieve</para
+></listitem>
+<listitem
+><para
+>Enviar, importar e desativar scripts, atualizar a lista de scripts</para
+></listitem>
+<listitem
+><para
+>Criar e editar scripts Sieve</para
+></listitem>
+<listitem
+><para
+>Importar e compartilhar scripts</para
+></listitem>
+<listitem
+><para
+>Verificar a sintaxe dos scripts, autogerar e depurar scripts</para
+></listitem>
+</itemizedlist>
+
+<para
+>O &i18n-kapplication; pode ser usado de forma independente do Akonadi ou do &kmail;, sendo necessário apenas um servidor de e-mail com suporte a scripts Sieve.</para>
+
+<para
+>No &plasma-desktop;, as senhas são armazenadas no &kwallet5;</para>
+
+<sect2 id="first-start">
+<title
+>Primeira execução</title>
+<para
+>Na primeira execução do &i18n-kapplication;, é apresentada a caixa de diálogo de configuração do servidor.</para>
+<screenshot>
+<screeninfo
+>Configuração do servidor</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="first-start.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Configuração do servidor</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+<para
+>Nesta caixa de diálogo você pode adicionar, modificar e remover seus servidores de e-mail</para>
+<para
+>Mais tarde você poderá usar a opção <menuchoice
+><guimenu
+>Arquivo</guimenu
+><guimenuitem
+>Adicionar servidor</guimenuitem
+></menuchoice
+> ou a caixa de diálogo de configuração para essas tarefas.</para>
+<para
+>Na próxima vez que iniciar o &i18n-kapplication;, todos os scripts disponíveis no servidor serão automaticamente recebidos.</para>
+</sect2>
+
+<sect2 id="script-edit">
+<title
+>Edição de scripts</title>
+<para
+>O editor tem suporte a completação automática e o realce de sintaxe.</para>
+<screenshot>
+<screeninfo
+>Edição de scripts</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-edit.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Edição de scripts</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+<para
+>Para obter informações detalhadas sobre o editor, leia a <ulink url="help:kartpart"
+>documentação do KatePart</ulink
+>.</para>
+
+</sect2>
+
+<sect2 id="script-tools">
+<title
+>Ferramentas de script</title>
+
+<para
+>As ações do menu <guimenu
+>Ferramentas</guimenu
+> permitem-lhe verificar a sintaxe, gerar automaticamente e depurar os seus scripts.</para>
+
+<screenshot>
+<screeninfo
+>Gerar automaticamente os scripts</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-tools.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Gerar automaticamente os scripts</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="script-help">
+<title
+>Suporte à Ajuda</title>
+
+<para
+>Você pode usar o suporte de ajuda integrado e clicar com o &RMB; sobre uma palavra-chave da linguagem Sieve. Então, a seção correspondente da documentação será baixada da Internet e apresentada na aba <guilabel
+>Ajuda</guilabel
+>.</para>
+<screenshot>
+<screeninfo
+>Suporte à Ajuda</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-help.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Suporte à Ajuda</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Créditos e licença</title>
+
+<para
+>&i18n-kapplication;</para>
+<para
+>Direitos autorais do programa 2013 &Laurent.Montel; &Laurent.Montel.mail; </para>
+<para
+>Direitos autorais da documentação Copyright &copy; 2013 &Laurent.Montel; &Laurent.Montel.mail; </para>
+
+<para
+>Tradução de André Marcelo Alvarenga <email
+>alvarenga@kde.org</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->
