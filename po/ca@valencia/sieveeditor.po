@@ -496,7 +496,7 @@ msgstr "Visualitza"
 #: sieveeditorui.rc:45
 #, kde-format
 msgid "&Settings"
-msgstr "&Configuració"
+msgstr "Con&figuració"
 
 #. i18n: ectx: Menu (Tools)
 #: sieveeditorui.rc:50
