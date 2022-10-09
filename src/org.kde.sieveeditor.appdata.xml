@@ -26,6 +26,7 @@
   <name xml:lang="ia">SieveEditor</name>
   <name xml:lang="id">SieveEditor</name>
   <name xml:lang="it">SieveEditor</name>
+  <name xml:lang="ka">SieveEditor</name>
   <name xml:lang="ko">SieveEditor</name>
   <name xml:lang="nl">SieveEditor</name>
   <name xml:lang="pl">EdytorSieve</name>
@@ -59,6 +60,7 @@
   <summary xml:lang="ia">Editor (redactor) per scripts de Sieve de filtro de e-posta </summary>
   <summary xml:lang="id">Pengedit untuk skrip Sieve filter email</summary>
   <summary xml:lang="it">Editor di script per i filtri Sieve della posta elettronica</summary>
+  <summary xml:lang="ka">ელფოსტის Sieve-ის სკრიპტების რედაქტორი</summary>
   <summary xml:lang="ko">이메일 필터 Sieve 스크립트 편집기</summary>
   <summary xml:lang="nl">Bewerker voor Sieve-scripts met e-mailfilters</summary>
   <summary xml:lang="pl">Edytor dla skryptów filtrów pocztowych Sieve</summary>
@@ -91,6 +93,7 @@
   <developer_name xml:lang="ia">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="id">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="it">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="ka">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ko">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="nl">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="pl">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
@@ -127,6 +130,7 @@
     <p xml:lang="ia">SieveEditor te permitte modificart, crear, deler scripts de sieve.</p>
     <p xml:lang="id">SieveEditor memungkinkan untuk edit, cipta, hapus skrip sieve.</p>
     <p xml:lang="it">SieveEditor permette di modificare, creare ed eliminare script sieve.</p>
+    <p xml:lang="ka">SieveEditor საშუალებას გაძლევთ, Sieve-ის სკრიპტები ჩაასწოროთ, შექმნათ და წაშალოთ.</p>
     <p xml:lang="ko">SieveEditor에서는 Sieve 스크립트를 편집, 생성, 삭제할 수 있습니다.</p>
     <p xml:lang="nl">SieveEditor biedt u om sieve-scripts te bewerken, aan te maken en te verwijderen.</p>
     <p xml:lang="pl">EdytorSieve umożliwia edycję, tworzenie oraz usuwanie skryptów sieve.</p>
