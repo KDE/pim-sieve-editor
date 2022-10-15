@@ -10,6 +10,7 @@
 
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <kwidgetsaddons_version.h>
 
 SieveEditorConfigureServerWidget::SieveEditorConfigureServerWidget(QWidget *parent)
     : QWidget(parent)
@@ -54,12 +55,17 @@ void SieveEditorConfigureServerWidget::slotDeleteServer()
     if (!item) {
         return;
     }
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    if (KMessageBox::ButtonCode::PrimaryAction
+        == KMessageBox::questionTwoActions(this,
+#else
     if (KMessageBox::Yes
         == KMessageBox::questionYesNo(this,
-                                      i18n("Do you want to remove this server \'%1\'?", item->text()),
-                                      i18nc("@title:window", "Remove Sieve Server"),
-                                      KStandardGuiItem::remove(),
-                                      KStandardGuiItem::cancel())) {
+#endif
+                                           i18n("Do you want to remove this server \'%1\'?", item->text()),
+                                           i18nc("@title:window", "Remove Sieve Server"),
+                                           KStandardGuiItem::remove(),
+                                           KStandardGuiItem::cancel())) {
         ui->serverSieveListWidget->deleteServerConfig(item);
         delete item;
         slotItemSelectionChanged();

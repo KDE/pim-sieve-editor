@@ -21,6 +21,7 @@
 #include <QApplication>
 #include <QStackedWidget>
 #include <QTabBar>
+#include <kwidgetsaddons_version.h>
 
 namespace
 {
@@ -605,13 +606,21 @@ void SieveEditorMainWidget::slotTabCloseRequested(int index)
     auto page = qobject_cast<SieveEditorPageWidget *>(mTabWidget->widget(index));
     if (page) {
         if (page->isModified()) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            const int result = KMessageBox::questionTwoActionsCancel(this,
+#else
             const int result = KMessageBox::questionYesNoCancel(this,
-                                                                i18n("Script was modified. Do you want to save before closing?"),
-                                                                i18n("Close script"),
-                                                                KStandardGuiItem::save(),
-                                                                KStandardGuiItem::no(),
-                                                                KStandardGuiItem::cancel());
+#endif
+                                                                     i18n("Script was modified. Do you want to save before closing?"),
+                                                                     i18n("Close script"),
+                                                                     KStandardGuiItem::save(),
+                                                                     KStandardGuiItem::close(),
+                                                                     KStandardGuiItem::cancel());
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            if (result == KMessageBox::ButtonCode::PrimaryAction) {
+#else
             if (result == KMessageBox::Yes) {
+#endif
                 if (page->uploadScriptAndCloseTab(index)) {
                     return;
                 }
