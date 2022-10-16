@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:50+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-04-03 08:45+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -231,12 +231,12 @@ msgstr "Налаштувати…"
 msgid "Import Sieve Settings..."
 msgstr "Імпортувати параметри фільтрування…"
 
-#: sieveeditorconfigureserverwidget.cpp:59
+#: sieveeditorconfigureserverwidget.cpp:65
 #, kde-format
 msgid "Do you want to remove this server '%1'?"
 msgstr "Хочете вилучити запис сервера «%1»?"
 
-#: sieveeditorconfigureserverwidget.cpp:60
+#: sieveeditorconfigureserverwidget.cpp:66
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Sieve Server"
@@ -286,12 +286,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Інструменти > Імпортувати параметри IMAP"
 
-#: sieveeditormainwidget.cpp:609
+#: sieveeditormainwidget.cpp:614
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "До скрипту було внесено зміни. Хочете зберегти ці зміни?"
 
-#: sieveeditormainwidget.cpp:610
+#: sieveeditormainwidget.cpp:615
 #, kde-format
 msgid "Close script"
 msgstr "Закриття скрипту"
@@ -412,22 +412,22 @@ msgstr "Не налаштовано адресу фільтрування"
 msgid "(Disabled) %1"
 msgstr "(Вимкнено) %1"
 
-#: sieveeditorpagewidget.cpp:42
+#: sieveeditorpagewidget.cpp:43
 #, kde-format
 msgid "Uploading script to server for checking it, please wait..."
 msgstr "Вивантажуємо скрипт на сервер для перевірки, будь ласка, зачекайте…"
 
-#: sieveeditorpagewidget.cpp:135
+#: sieveeditorpagewidget.cpp:136
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "Успішно вивантажено скрипт фільтрування."
 
-#: sieveeditorpagewidget.cpp:135
+#: sieveeditorpagewidget.cpp:136
 #, kde-format
 msgid "Sieve Script Upload"
 msgstr "Вивантаження скрипту фільтрування"
 
-#: sieveeditorpagewidget.cpp:148
+#: sieveeditorpagewidget.cpp:149
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -438,12 +438,12 @@ msgstr ""
 "Відповідь сервера:\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
+#: sieveeditorpagewidget.cpp:152 sieveeditorpagewidget.cpp:157
 #, kde-format
 msgid "Sieve Error"
 msgstr "Помилка фільтрування"
 
-#: sieveeditorpagewidget.cpp:154
+#: sieveeditorpagewidget.cpp:155
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -452,12 +452,18 @@ msgstr ""
 "Не вдалося вивантажити скрипт фільтрування.\n"
 "Причину не відома.\n"
 
-#: sieveeditorpagewidget.cpp:165
+#: sieveeditorpagewidget.cpp:168 sieveeditorpagewidget.cpp:173
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Скрипт «%1» є новим. Хочете його зберегти?"
 
-#: sieveeditorpagewidget.cpp:174
+#: sieveeditorpagewidget.cpp:169 sieveeditorpagewidget.cpp:190
+#, fuzzy, kde-format
+#| msgid "Share Script..."
+msgid "Save Script"
+msgstr "Оприлюднити скрипт…"
+
+#: sieveeditorpagewidget.cpp:189 sieveeditorpagewidget.cpp:194
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "До скрипту «%1» було внесено зміни. Хочете зберегти ці зміни?"
@@ -731,9 +737,6 @@ msgstr "Змінити…"
 #, kde-format
 msgid "Remove"
 msgstr "Вилучити"
-
-#~ msgid "Share Script..."
-#~ msgstr "Оприлюднити скрипт…"
 
 #~ msgid "Close wallet when close application"
 #~ msgstr "Закривати торбинку, якщо завершено роботу програми"

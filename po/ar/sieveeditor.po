@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:50+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-04-07 09:36+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -225,12 +225,12 @@ msgstr "اضبط..."
 msgid "Import Sieve Settings..."
 msgstr "استورد إعدادات «سِڤ»..."
 
-#: sieveeditorconfigureserverwidget.cpp:59
+#: sieveeditorconfigureserverwidget.cpp:65
 #, kde-format
 msgid "Do you want to remove this server '%1'?"
 msgstr "أتريد إزالة هذا الخادوم ’%1‘؟"
 
-#: sieveeditorconfigureserverwidget.cpp:60
+#: sieveeditorconfigureserverwidget.cpp:66
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Sieve Server"
@@ -280,12 +280,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "أدوات > استورد إعدادات IMAP"
 
-#: sieveeditormainwidget.cpp:609
+#: sieveeditormainwidget.cpp:614
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "لم يُعدّل السّكربت. أتريد الحفظ قبل الإغلاق؟"
 
-#: sieveeditormainwidget.cpp:610
+#: sieveeditormainwidget.cpp:615
 #, kde-format
 msgid "Close script"
 msgstr "أغلق السّكربت"
@@ -406,22 +406,22 @@ msgstr "لم يُضبط مسار «سِڤ»"
 msgid "(Disabled) %1"
 msgstr "(معطّل) %1"
 
-#: sieveeditorpagewidget.cpp:42
+#: sieveeditorpagewidget.cpp:43
 #, kde-format
 msgid "Uploading script to server for checking it, please wait..."
 msgstr "يرفع سكربتًا إلى الخادوم لفحص، رجاءً انتظر..."
 
-#: sieveeditorpagewidget.cpp:135
+#: sieveeditorpagewidget.cpp:136
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "رُفع سكربت «سِڤ» بنجاح."
 
-#: sieveeditorpagewidget.cpp:135
+#: sieveeditorpagewidget.cpp:136
 #, kde-format
 msgid "Sieve Script Upload"
 msgstr "رفع سكربت «سِڤ»"
 
-#: sieveeditorpagewidget.cpp:148
+#: sieveeditorpagewidget.cpp:149
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -432,12 +432,12 @@ msgstr ""
 "ردّ الخادوم بِ‍:\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
+#: sieveeditorpagewidget.cpp:152 sieveeditorpagewidget.cpp:157
 #, kde-format
 msgid "Sieve Error"
 msgstr "خطأ في «سِڤ»"
 
-#: sieveeditorpagewidget.cpp:154
+#: sieveeditorpagewidget.cpp:155
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -446,12 +446,18 @@ msgstr ""
 "فشل رفع سكربت «سِڤ».\n"
 "السّبب مجهول\n"
 
-#: sieveeditorpagewidget.cpp:165
+#: sieveeditorpagewidget.cpp:168 sieveeditorpagewidget.cpp:173
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "السّكربت ’%1‘ سكربت جديد. أتريد حفظه؟"
 
-#: sieveeditorpagewidget.cpp:174
+#: sieveeditorpagewidget.cpp:169 sieveeditorpagewidget.cpp:190
+#, fuzzy, kde-format
+#| msgid "Share..."
+msgid "Save Script"
+msgstr "شارِك..."
+
+#: sieveeditorpagewidget.cpp:189 sieveeditorpagewidget.cpp:194
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "تغيّر السّكربت ’%1‘. أتريد حفظه؟"
@@ -703,11 +709,6 @@ msgstr "عدّل..."
 #, kde-format
 msgid "Remove"
 msgstr "أزِل"
-
-#, fuzzy
-#~| msgid "Share..."
-#~ msgid "Share Script..."
-#~ msgstr "شارِك..."
 
 #~ msgid "Close wallet when close application"
 #~ msgstr "أغلق المحفظة عند إغلاق التّطبيق"

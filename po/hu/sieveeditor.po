@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-28 00:50+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-01-03 16:14+0100\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -228,12 +228,12 @@ msgstr "Beállítás…"
 msgid "Import Sieve Settings..."
 msgstr "Sieve beállítások importálása…"
 
-#: sieveeditorconfigureserverwidget.cpp:59
+#: sieveeditorconfigureserverwidget.cpp:65
 #, kde-format
 msgid "Do you want to remove this server '%1'?"
 msgstr "Szeretné eltávolítani ezt a kiszolgálót: „%1”?"
 
-#: sieveeditorconfigureserverwidget.cpp:60
+#: sieveeditorconfigureserverwidget.cpp:66
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Sieve Server"
@@ -283,12 +283,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Eszközök > IMAP beállítások importálása"
 
-#: sieveeditormainwidget.cpp:609
+#: sieveeditormainwidget.cpp:614
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "A parancsfájl megváltozott. Szeretné elmenteni bezárás előtt?"
 
-#: sieveeditormainwidget.cpp:610
+#: sieveeditormainwidget.cpp:615
 #, kde-format
 msgid "Close script"
 msgstr "Parancsfájl bezárása"
@@ -409,22 +409,22 @@ msgstr "Nincs beállítva Sieve URL"
 msgid "(Disabled) %1"
 msgstr "(Letiltva) %1"
 
-#: sieveeditorpagewidget.cpp:42
+#: sieveeditorpagewidget.cpp:43
 #, kde-format
 msgid "Uploading script to server for checking it, please wait..."
 msgstr "Szkript feltöltése a kiszolgálóra az ellenőrzéshez, kérem várjon…"
 
-#: sieveeditorpagewidget.cpp:135
+#: sieveeditorpagewidget.cpp:136
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "A Sieve parancsfájl sikeresen feltöltve."
 
-#: sieveeditorpagewidget.cpp:135
+#: sieveeditorpagewidget.cpp:136
 #, kde-format
 msgid "Sieve Script Upload"
 msgstr "Sieve parancsfájl feltöltés"
 
-#: sieveeditorpagewidget.cpp:148
+#: sieveeditorpagewidget.cpp:149
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -435,12 +435,12 @@ msgstr ""
 "A kiszolgáló válasza:\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
+#: sieveeditorpagewidget.cpp:152 sieveeditorpagewidget.cpp:157
 #, kde-format
 msgid "Sieve Error"
 msgstr "Sieve hiba"
 
-#: sieveeditorpagewidget.cpp:154
+#: sieveeditorpagewidget.cpp:155
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -449,12 +449,18 @@ msgstr ""
 "A Sieve szkript feltöltése meghiúsult.\n"
 "ismeretlen ok\n"
 
-#: sieveeditorpagewidget.cpp:165
+#: sieveeditorpagewidget.cpp:168 sieveeditorpagewidget.cpp:173
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "A(z) „%1” parancsfájl új. Szeretné elmenteni?"
 
-#: sieveeditorpagewidget.cpp:174
+#: sieveeditorpagewidget.cpp:169 sieveeditorpagewidget.cpp:190
+#, fuzzy, kde-format
+#| msgid "Share Script..."
+msgid "Save Script"
+msgstr "Szkript megosztása…"
+
+#: sieveeditorpagewidget.cpp:189 sieveeditorpagewidget.cpp:194
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "A(z) „%1” parancsfájl megváltozott. Szeretné elmenteni?"
@@ -727,9 +733,6 @@ msgstr "Módosítás…"
 #, kde-format
 msgid "Remove"
 msgstr "Eltávolítás"
-
-#~ msgid "Share Script..."
-#~ msgstr "Szkript megosztása…"
 
 #~ msgid "Close wallet when close application"
 #~ msgstr "Jelszótároló bezárása az alkalmazás bezárásakor"
