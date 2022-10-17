@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-04-03 08:45+0300\n"
+"PO-Revision-Date: 2022-10-16 08:40+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -458,10 +458,9 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Скрипт «%1» є новим. Хочете його зберегти?"
 
 #: sieveeditorpagewidget.cpp:169 sieveeditorpagewidget.cpp:190
-#, fuzzy, kde-format
-#| msgid "Share Script..."
+#, kde-format
 msgid "Save Script"
-msgstr "Оприлюднити скрипт…"
+msgstr "Зберегти скрипт"
 
 #: sieveeditorpagewidget.cpp:189 sieveeditorpagewidget.cpp:194
 #, kde-format

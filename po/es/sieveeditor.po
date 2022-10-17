@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-04-03 11:57+0200\n"
+"PO-Revision-Date: 2022-10-16 11:52+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.03.80\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -233,7 +233,7 @@ msgstr "Importar preferencias de Sieve..."
 #: sieveeditorconfigureserverwidget.cpp:65
 #, kde-format
 msgid "Do you want to remove this server '%1'?"
-msgstr "¿Quiere usted eliminar este servidor «%1»?"
+msgstr "¿Desea eliminar este servidor «%1»?"
 
 #: sieveeditorconfigureserverwidget.cpp:66
 #, kde-format
@@ -288,7 +288,7 @@ msgstr "Herramientas> Importar preferencias de IMAP"
 #: sieveeditormainwidget.cpp:614
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
-msgstr "El guion se modificó. ¿Quiere usted guardarlo antes de cerrar?"
+msgstr "El guion se ha modificado. ¿Desea guardarlo antes de cerrar?"
 
 #: sieveeditormainwidget.cpp:615
 #, kde-format
@@ -454,18 +454,17 @@ msgstr ""
 #: sieveeditorpagewidget.cpp:168 sieveeditorpagewidget.cpp:173
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
-msgstr "El guion «%1» es nuevo. ¿Quiere usted guardarlo?"
+msgstr "El guion «%1» es nuevo. ¿Desea guardarlo?"
 
 #: sieveeditorpagewidget.cpp:169 sieveeditorpagewidget.cpp:190
-#, fuzzy, kde-format
-#| msgid "Share Script..."
+#, kde-format
 msgid "Save Script"
-msgstr "Compartir guion..."
+msgstr "Guardar guion"
 
 #: sieveeditorpagewidget.cpp:189 sieveeditorpagewidget.cpp:194
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
-msgstr "El guion «%1» se cambió. ¿Quiere usted guardarlo?"
+msgstr "El guion «%1» ha cambiado. ¿Desea guardarlo?"
 
 #: sieveeditortabwidget.cpp:43 sieveeditortabwidget.cpp:69
 #, kde-format
@@ -576,8 +575,8 @@ msgid ""
 "IMAP settings is necessary if you want to be able to list folders from "
 "server."
 msgstr ""
-"Las preferencias de IMAP son necesarias si usted quiere ser capaz de listar "
-"carpetas desde el servidor."
+"Las preferencias de IMAP son necesarias si quiere listar las carpetas del "
+"servidor."
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, safeImap)
 #: ui/serversievesettings.ui:160

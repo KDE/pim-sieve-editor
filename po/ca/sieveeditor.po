@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-07-08 14:55+0200\n"
+"PO-Revision-Date: 2022-10-16 10:19+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -458,10 +458,9 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "L'script «%1» és nou. Voleu desar-lo?"
 
 #: sieveeditorpagewidget.cpp:169 sieveeditorpagewidget.cpp:190
-#, fuzzy, kde-format
-#| msgid "Share Script..."
+#, kde-format
 msgid "Save Script"
-msgstr "Comparteix l'script..."
+msgstr "Desa l'script"
 
 #: sieveeditorpagewidget.cpp:189 sieveeditorpagewidget.cpp:194
 #, kde-format
@@ -735,6 +734,3 @@ msgstr "Modifica..."
 #, kde-format
 msgid "Remove"
 msgstr "Elimina"
-
-#~ msgid "Close wallet when close application"
-#~ msgstr "Tanca la cartera en sortir de l'aplicació"
