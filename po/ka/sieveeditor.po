@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-10-08 07:21+0200\n"
+"PO-Revision-Date: 2022-10-17 07:50+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -284,7 +284,7 @@ msgstr "ხელსაწყოები > IMAP-ის პარამეტრ
 #: sieveeditormainwidget.cpp:614
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
-msgstr ""
+msgstr "სკრიპტი შეიცვალა. გნებავთ მისი დახურვა შენახვამდე?"
 
 #: sieveeditormainwidget.cpp:615
 #, kde-format
@@ -410,7 +410,7 @@ msgstr "(გათიშულია) %1"
 #: sieveeditorpagewidget.cpp:43
 #, kde-format
 msgid "Uploading script to server for checking it, please wait..."
-msgstr ""
+msgstr "სკრიპტის სერვერზე შესამოწმებლად ატვირთვა. მოითმინეთ..."
 
 #: sieveeditorpagewidget.cpp:136
 #, kde-format
@@ -429,6 +429,9 @@ msgid ""
 "The server responded:\n"
 "%1"
 msgstr ""
+"Sieve სკრიპტის ატვირთვის შეცდომა.\n"
+"სერვერის პასუხია:\n"
+"%1"
 
 #: sieveeditorpagewidget.cpp:152 sieveeditorpagewidget.cpp:157
 #, kde-format
@@ -441,22 +444,24 @@ msgid ""
 "Uploading the Sieve script failed.\n"
 "unknown reason\n"
 msgstr ""
+"Sieve სკრიპტის ატვირთვის შეცდომა.\n"
+"მიზეზი უცნობია\n"
+"\n"
 
 #: sieveeditorpagewidget.cpp:168 sieveeditorpagewidget.cpp:173
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
-msgstr ""
+msgstr "სკრიპტი %1 ახალია. გნებავთ, შეინახოთ?"
 
 #: sieveeditorpagewidget.cpp:169 sieveeditorpagewidget.cpp:190
-#, fuzzy, kde-format
-#| msgid "Deactivate Script"
+#, kde-format
 msgid "Save Script"
-msgstr "სკრიპტის დეაქტივაცია"
+msgstr "სკრიპტის შენახვა"
 
 #: sieveeditorpagewidget.cpp:189 sieveeditorpagewidget.cpp:194
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
-msgstr ""
+msgstr "სკრიპტი %1 შეიცვალა. გნებავთ, შეინახოთ?"
 
 #: sieveeditortabwidget.cpp:43 sieveeditortabwidget.cpp:69
 #, kde-format
@@ -535,6 +540,9 @@ msgid ""
 "Old server implementations still use port 2000, while newer standard conform "
 "server can only be accessed via port 4190."
 msgstr ""
+"სერვერის პორტი შეიცვალა, როცა ManageSieve სრულ RFC სტანდარტზე გადავიდა. "
+"ძველი სერვერი ჯერ კიდევ იყენებს პორტს ნომრით 2000, როცა ახალი სტანდარტის "
+"სერვერის პოვნა შეგიძლიათ პორტზე 4190."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (text), widget (QLabel, label_13)
@@ -563,6 +571,7 @@ msgid ""
 "IMAP settings is necessary if you want to be able to list folders from "
 "server."
 msgstr ""
+"საქაღალდეების სიის სერვერიდან სანახავად საჭიროა IMAP პარამეტრების მითითება."
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, safeImap)
 #: ui/serversievesettings.ui:160
