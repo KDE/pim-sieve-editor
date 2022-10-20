@@ -168,7 +168,7 @@ bool SieveEditorPageWidget::needToSaveScript()
                                                                         i18n("Script '%1' is new. Do you want to save it?", mCurrentURL.fileName()),
                                                                         i18n("Save Script"),
                                                                         KStandardGuiItem::save(),
-                                                                        KStandardGuiItem::cancel());
+                                                                        KStandardGuiItem::discard());
 #else
         const int resultQuestion = KMessageBox::warningYesNoCancel(this, i18n("Script '%1' is new. Do you want to save it?", mCurrentURL.fileName()));
 #endif
@@ -189,7 +189,7 @@ bool SieveEditorPageWidget::needToSaveScript()
                                                                             i18n("Script '%1' was changed. Do you want to save it ?", mCurrentURL.fileName()),
                                                                             i18n("Save Script"),
                                                                             KStandardGuiItem::save(),
-                                                                            KStandardGuiItem::cancel());
+                                                                            KStandardGuiItem::discard());
 #else
             const int resultQuestion = KMessageBox::warningYesNoCancel(this, i18n("Script '%1' was changed. Do you want to save it ?", mCurrentURL.fileName()));
 #endif
