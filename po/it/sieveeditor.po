@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:48+0000\n"
-"PO-Revision-Date: 2022-04-06 00:46+0200\n"
+"PO-Revision-Date: 2022-11-13 00:05+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -452,10 +452,9 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Lo script «%1» è nuovo. Vuoi salvarlo?"
 
 #: sieveeditorpagewidget.cpp:169 sieveeditorpagewidget.cpp:190
-#, fuzzy, kde-format
-#| msgid "Share Script..."
+#, kde-format
 msgid "Save Script"
-msgstr "Condividi script..."
+msgstr "Salva script"
 
 #: sieveeditorpagewidget.cpp:189 sieveeditorpagewidget.cpp:194
 #, kde-format
