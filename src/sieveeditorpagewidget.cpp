@@ -15,7 +15,6 @@
 
 #include "sieveeditor_debug.h"
 #include <QVBoxLayout>
-#include <kwidgetsaddons_version.h>
 
 SieveEditorPageWidget::SieveEditorPageWidget(QWidget *parent)
     : QWidget(parent)
@@ -163,20 +162,12 @@ bool SieveEditorPageWidget::needToSaveScript()
 {
     bool result = false;
     if (mIsNewScript) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         const int resultQuestion = KMessageBox::warningTwoActionsCancel(this,
                                                                         i18n("Script '%1' is new. Do you want to save it?", mCurrentURL.fileName()),
                                                                         i18n("Save Script"),
                                                                         KStandardGuiItem::save(),
                                                                         KStandardGuiItem::discard());
-#else
-        const int resultQuestion = KMessageBox::warningYesNoCancel(this, i18n("Script '%1' is new. Do you want to save it?", mCurrentURL.fileName()));
-#endif
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         if (resultQuestion == KMessageBox::ButtonCode::PrimaryAction) {
-#else
-        if (resultQuestion == KMessageBox::Yes) {
-#endif
             uploadScript();
             result = true;
         } else if (resultQuestion == KMessageBox::Cancel) {
@@ -184,20 +175,12 @@ bool SieveEditorPageWidget::needToSaveScript()
         }
     } else {
         if (mSieveEditorWidget->isModified()) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             const int resultQuestion = KMessageBox::warningTwoActionsCancel(this,
                                                                             i18n("Script '%1' was changed. Do you want to save it ?", mCurrentURL.fileName()),
                                                                             i18n("Save Script"),
                                                                             KStandardGuiItem::save(),
                                                                             KStandardGuiItem::discard());
-#else
-            const int resultQuestion = KMessageBox::warningYesNoCancel(this, i18n("Script '%1' was changed. Do you want to save it ?", mCurrentURL.fileName()));
-#endif
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             if (resultQuestion == KMessageBox::ButtonCode::PrimaryAction) {
-#else
-            if (resultQuestion == KMessageBox::Yes) {
-#endif
                 uploadScript();
                 result = true;
             } else if (resultQuestion == KMessageBox::Cancel) {
