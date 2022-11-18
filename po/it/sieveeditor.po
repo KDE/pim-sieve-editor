@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:48+0000\n"
+"POT-Creation-Date: 2022-11-18 00:46+0000\n"
 "PO-Revision-Date: 2022-11-13 00:05+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -225,12 +225,12 @@ msgstr "Configura..."
 msgid "Import Sieve Settings..."
 msgstr "Importa impostazioni di sieve..."
 
-#: sieveeditorconfigureserverwidget.cpp:65
+#: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
 msgid "Do you want to remove this server '%1'?"
 msgstr "Vuoi rimuovere il server «%1»?"
 
-#: sieveeditorconfigureserverwidget.cpp:66
+#: sieveeditorconfigureserverwidget.cpp:60
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Sieve Server"
@@ -280,12 +280,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Strumenti -> Importa impostazioni IMAP"
 
-#: sieveeditormainwidget.cpp:614
+#: sieveeditormainwidget.cpp:609
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Lo script è stato modificato. Vuoi salvarlo prima di chiudere?"
 
-#: sieveeditormainwidget.cpp:615
+#: sieveeditormainwidget.cpp:610
 #, kde-format
 msgid "Close script"
 msgstr "Chiudi script"
@@ -406,22 +406,22 @@ msgstr "Nessun URL Sieve configurato"
 msgid "(Disabled) %1"
 msgstr "(disabilitato) %1"
 
-#: sieveeditorpagewidget.cpp:43
+#: sieveeditorpagewidget.cpp:42
 #, kde-format
 msgid "Uploading script to server for checking it, please wait..."
 msgstr "Invio dello script al server per la verifica, attendere..."
 
-#: sieveeditorpagewidget.cpp:136
+#: sieveeditorpagewidget.cpp:135
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "Lo script di sieve è stato inviato correttamente."
 
-#: sieveeditorpagewidget.cpp:136
+#: sieveeditorpagewidget.cpp:135
 #, kde-format
 msgid "Sieve Script Upload"
 msgstr "Invio script Sieve"
 
-#: sieveeditorpagewidget.cpp:149
+#: sieveeditorpagewidget.cpp:148
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -432,12 +432,12 @@ msgstr ""
 "Il server ha risposto:\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:152 sieveeditorpagewidget.cpp:157
+#: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
 #, kde-format
 msgid "Sieve Error"
 msgstr "Errore di Sieve"
 
-#: sieveeditorpagewidget.cpp:155
+#: sieveeditorpagewidget.cpp:154
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -446,17 +446,17 @@ msgstr ""
 "Invio dello script Sieve non riuscito.\n"
 "motivo sconosciuto\n"
 
-#: sieveeditorpagewidget.cpp:168 sieveeditorpagewidget.cpp:173
+#: sieveeditorpagewidget.cpp:166
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Lo script «%1» è nuovo. Vuoi salvarlo?"
 
-#: sieveeditorpagewidget.cpp:169 sieveeditorpagewidget.cpp:190
+#: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
 #, kde-format
 msgid "Save Script"
 msgstr "Salva script"
 
-#: sieveeditorpagewidget.cpp:189 sieveeditorpagewidget.cpp:194
+#: sieveeditorpagewidget.cpp:179
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "Lo script «%1» è stato modificato. Vuoi salvarlo?"

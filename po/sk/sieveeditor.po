@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:48+0000\n"
+"POT-Creation-Date: 2022-11-18 00:46+0000\n"
 "PO-Revision-Date: 2022-04-15 19:14+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -224,12 +224,12 @@ msgstr "Nastaviť..."
 msgid "Import Sieve Settings..."
 msgstr "Importovať nastavenia Sieve..."
 
-#: sieveeditorconfigureserverwidget.cpp:65
+#: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
 msgid "Do you want to remove this server '%1'?"
 msgstr "Chcete odstrániť tento server '%1'?"
 
-#: sieveeditorconfigureserverwidget.cpp:66
+#: sieveeditorconfigureserverwidget.cpp:60
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Sieve Server"
@@ -279,12 +279,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Nástroje -> Importovať nastavenia IMAP"
 
-#: sieveeditormainwidget.cpp:614
+#: sieveeditormainwidget.cpp:609
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Skript sa zmenil. Chcete ho uložiť pred zatvorením?"
 
-#: sieveeditormainwidget.cpp:615
+#: sieveeditormainwidget.cpp:610
 #, kde-format
 msgid "Close script"
 msgstr "Zavrieť skript"
@@ -405,22 +405,22 @@ msgstr "Nenastavený Sieve URL"
 msgid "(Disabled) %1"
 msgstr "(Zakázané) %1"
 
-#: sieveeditorpagewidget.cpp:43
+#: sieveeditorpagewidget.cpp:42
 #, kde-format
 msgid "Uploading script to server for checking it, please wait..."
 msgstr "Nahrávanie skriptu na server na kontrolu, prosím čakajte..."
 
-#: sieveeditorpagewidget.cpp:136
+#: sieveeditorpagewidget.cpp:135
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "Sieve skript bol úspešne nahraný."
 
-#: sieveeditorpagewidget.cpp:136
+#: sieveeditorpagewidget.cpp:135
 #, kde-format
 msgid "Sieve Script Upload"
 msgstr "Nahranie Sieve skriptu"
 
-#: sieveeditorpagewidget.cpp:149
+#: sieveeditorpagewidget.cpp:148
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -431,12 +431,12 @@ msgstr ""
 "Server odpovedal:\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:152 sieveeditorpagewidget.cpp:157
+#: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
 #, kde-format
 msgid "Sieve Error"
 msgstr "Chyba Sieve"
 
-#: sieveeditorpagewidget.cpp:155
+#: sieveeditorpagewidget.cpp:154
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -445,18 +445,18 @@ msgstr ""
 "Nahrávanie Sieve skriptu zlyhalo.\n"
 "neznáma príčina\n"
 
-#: sieveeditorpagewidget.cpp:168 sieveeditorpagewidget.cpp:173
+#: sieveeditorpagewidget.cpp:166
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Skript '%1' je nový. Chcete ho uložiť?"
 
-#: sieveeditorpagewidget.cpp:169 sieveeditorpagewidget.cpp:190
+#: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
 #, fuzzy, kde-format
 #| msgid "Share Script..."
 msgid "Save Script"
 msgstr "Zdieľať skript..."
 
-#: sieveeditorpagewidget.cpp:189 sieveeditorpagewidget.cpp:194
+#: sieveeditorpagewidget.cpp:179
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "Skript '%1' sa zmenil. Chcete ho uložiť?"

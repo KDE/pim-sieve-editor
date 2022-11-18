@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:48+0000\n"
+"POT-Creation-Date: 2022-11-18 00:46+0000\n"
 "PO-Revision-Date: 2022-10-17 07:50+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -226,12 +226,12 @@ msgstr "მორგება..."
 msgid "Import Sieve Settings..."
 msgstr "Sieve-ის პარამეტრების შემოტანა..."
 
-#: sieveeditorconfigureserverwidget.cpp:65
+#: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
 msgid "Do you want to remove this server '%1'?"
 msgstr "ნამდვილად გნებავთ %1 სერვერის წაშლა?"
 
-#: sieveeditorconfigureserverwidget.cpp:66
+#: sieveeditorconfigureserverwidget.cpp:60
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Sieve Server"
@@ -281,12 +281,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "ხელსაწყოები > IMAP-ის პარამეტრების შემოტანა"
 
-#: sieveeditormainwidget.cpp:614
+#: sieveeditormainwidget.cpp:609
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "სკრიპტი შეიცვალა. გნებავთ მისი დახურვა შენახვამდე?"
 
-#: sieveeditormainwidget.cpp:615
+#: sieveeditormainwidget.cpp:610
 #, kde-format
 msgid "Close script"
 msgstr "სკრიპტის დახურვა"
@@ -407,22 +407,22 @@ msgstr "Sieve-ის URL-ი მორგებული არაა"
 msgid "(Disabled) %1"
 msgstr "(გათიშულია) %1"
 
-#: sieveeditorpagewidget.cpp:43
+#: sieveeditorpagewidget.cpp:42
 #, kde-format
 msgid "Uploading script to server for checking it, please wait..."
 msgstr "სკრიპტის სერვერზე შესამოწმებლად ატვირთვა. მოითმინეთ..."
 
-#: sieveeditorpagewidget.cpp:136
+#: sieveeditorpagewidget.cpp:135
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "Sieve-ის სკრიპტი წარმატებით აიტვირთა."
 
-#: sieveeditorpagewidget.cpp:136
+#: sieveeditorpagewidget.cpp:135
 #, kde-format
 msgid "Sieve Script Upload"
 msgstr "Sieve -ის სკრიპტის ატვირთვა"
 
-#: sieveeditorpagewidget.cpp:149
+#: sieveeditorpagewidget.cpp:148
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -433,12 +433,12 @@ msgstr ""
 "სერვერის პასუხია:\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:152 sieveeditorpagewidget.cpp:157
+#: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
 #, kde-format
 msgid "Sieve Error"
 msgstr "Sieve -ის შეცდომა"
 
-#: sieveeditorpagewidget.cpp:155
+#: sieveeditorpagewidget.cpp:154
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -448,17 +448,17 @@ msgstr ""
 "მიზეზი უცნობია\n"
 "\n"
 
-#: sieveeditorpagewidget.cpp:168 sieveeditorpagewidget.cpp:173
+#: sieveeditorpagewidget.cpp:166
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "სკრიპტი %1 ახალია. გნებავთ, შეინახოთ?"
 
-#: sieveeditorpagewidget.cpp:169 sieveeditorpagewidget.cpp:190
+#: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
 #, kde-format
 msgid "Save Script"
 msgstr "სკრიპტის შენახვა"
 
-#: sieveeditorpagewidget.cpp:189 sieveeditorpagewidget.cpp:194
+#: sieveeditorpagewidget.cpp:179
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "სკრიპტი %1 შეიცვალა. გნებავთ, შეინახოთ?"
