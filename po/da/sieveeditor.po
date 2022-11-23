@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:46+0000\n"
-"PO-Revision-Date: 2022-08-08 17:29+0200\n"
+"PO-Revision-Date: 2022-11-22 18:08+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
@@ -452,10 +452,9 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Scriptet \"%1\" er nyt. Vil du gemme det?"
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
-#, fuzzy, kde-format
-#| msgid "Share Script..."
+#, kde-format
 msgid "Save Script"
-msgstr "Del script..."
+msgstr "Gem script"
 
 #: sieveeditorpagewidget.cpp:179
 #, kde-format
