@@ -10,5 +10,7 @@ Dependencies:
     'pim/kpimtextedit' : '@same'
     'pim/libksieve' : '@same'
     'pim/pimcommon' : '@same'
+    'third-party/qtkeychain': '@latest'
+
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD' ]      
