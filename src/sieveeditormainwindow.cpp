@@ -43,6 +43,9 @@
 #include <KUserFeedback/Provider>
 #endif
 
+#include <KWindowConfig>
+#include <QWindow>
+
 namespace
 {
 static const char mySieveEditorMainWindowConfigGroupName[] = "SieveEditorMainWindow";
@@ -84,9 +87,23 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
 
 SieveEditorMainWindow::~SieveEditorMainWindow()
 {
-    KSharedConfig::Ptr config = KSharedConfig::openStateConfig();
-    KConfigGroup group = config->group(mySieveEditorMainWindowConfigGroupName);
-    group.writeEntry("Size", size());
+    writeConfig();
+}
+
+void SieveEditorMainWindow::readConfig()
+{
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(800, 600));
+    KConfigGroup group(KSharedConfig::openStateConfig(), mySieveEditorMainWindowConfigGroupName);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
+}
+
+void SieveEditorMainWindow::writeConfig()
+{
+    KConfigGroup group(KSharedConfig::openStateConfig(), mySieveEditorMainWindowConfigGroupName);
+    KWindowConfig::saveWindowSize(windowHandle(), group);
+    group.sync();
 }
 
 void SieveEditorMainWindow::initStatusBar()
@@ -113,16 +130,6 @@ void SieveEditorMainWindow::slotUpdateButtons(bool newScriptAction, bool editScr
     mNewScript->setEnabled(newScriptAction);
     mEditScript->setEnabled(editScriptAction);
     mDesactivateScript->setEnabled(desactivateScriptAction);
-}
-
-void SieveEditorMainWindow::readConfig()
-{
-    KSharedConfig::Ptr config = KSharedConfig::openStateConfig();
-    KConfigGroup group = KConfigGroup(config, mySieveEditorMainWindowConfigGroupName);
-    const QSize sizeDialog = group.readEntry("Size", QSize(800, 600));
-    if (sizeDialog.isValid()) {
-        resize(sizeDialog);
-    }
 }
 
 void SieveEditorMainWindow::setupActions()

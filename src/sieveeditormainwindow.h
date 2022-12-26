@@ -54,6 +54,7 @@ private:
     void setupActions();
     Q_REQUIRED_RESULT QString currentText() const;
     void slotFullScreen(bool t);
+    void writeConfig();
 
     SieveEditorCentralWidget *mMainWidget = nullptr;
     QAction *mDeleteScript = nullptr;
