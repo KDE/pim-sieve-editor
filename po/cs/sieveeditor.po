@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:46+0000\n"
+"POT-Creation-Date: 2022-12-27 00:49+0000\n"
 "PO-Revision-Date: 2022-01-05 12:27+0100\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -291,108 +291,108 @@ msgstr ""
 msgid "Close script"
 msgstr "Zavřít skript"
 
-#: sieveeditormainwindow.cpp:102
+#: sieveeditormainwindow.cpp:119
 #, kde-format
 msgid "Network is Up."
 msgstr "Síť běží."
 
-#: sieveeditormainwindow.cpp:104
+#: sieveeditormainwindow.cpp:121
 #, kde-format
 msgid "Network is Down."
 msgstr "Síť neběží."
 
-#: sieveeditormainwindow.cpp:136
+#: sieveeditormainwindow.cpp:143
 #, kde-format
 msgid "Upload"
 msgstr "Odeslat"
 
-#: sieveeditormainwindow.cpp:139
+#: sieveeditormainwindow.cpp:146
 #, kde-format
 msgid "Add Sieve Server..."
 msgstr "Přidat server Sieve..."
 
-#: sieveeditormainwindow.cpp:143
+#: sieveeditormainwindow.cpp:150
 #, kde-format
 msgid "Delete Script"
 msgstr "Smazat skript"
 
-#: sieveeditormainwindow.cpp:149
+#: sieveeditormainwindow.cpp:156
 #, kde-format
 msgid "Create New Script..."
 msgstr "Vytvořit nový skript..."
 
-#: sieveeditormainwindow.cpp:155
+#: sieveeditormainwindow.cpp:162
 #, kde-format
 msgid "Edit Script..."
 msgstr "Upravit skript..."
 
-#: sieveeditormainwindow.cpp:160
+#: sieveeditormainwindow.cpp:167
 #, kde-format
 msgid "Deactivate Script"
 msgstr "Deaktivovat skript"
 
-#: sieveeditormainwindow.cpp:165
+#: sieveeditormainwindow.cpp:172
 #, kde-format
 msgid "Refresh List"
 msgstr "Obnovit seznam"
 
-#: sieveeditormainwindow.cpp:171
+#: sieveeditormainwindow.cpp:178
 #, kde-format
 msgid "Go to Line..."
 msgstr "Přejít na řádek..."
 
-#: sieveeditormainwindow.cpp:188
+#: sieveeditormainwindow.cpp:195
 #, kde-format
 msgid "Import..."
 msgstr "Importovat..."
 
-#: sieveeditormainwindow.cpp:194
+#: sieveeditormainwindow.cpp:201
 #, kde-format
 msgid "Share..."
 msgstr "Sdílet..."
 
-#: sieveeditormainwindow.cpp:200
+#: sieveeditormainwindow.cpp:207
 #, kde-format
 msgid "Check Spelling..."
 msgstr "Zkontrolovat pravopis..."
 
-#: sieveeditormainwindow.cpp:206
+#: sieveeditormainwindow.cpp:213
 #, kde-format
 msgid "Check Syntax"
 msgstr "Zkontrolovat syntaxi"
 
-#: sieveeditormainwindow.cpp:211
+#: sieveeditormainwindow.cpp:218
 #, kde-format
 msgid "Create Rules Graphically..."
 msgstr "Vytvořit pravidla graficky..."
 
-#: sieveeditormainwindow.cpp:216
+#: sieveeditormainwindow.cpp:223
 #, kde-format
 msgid "Comment"
 msgstr "Komentář"
 
-#: sieveeditormainwindow.cpp:221
+#: sieveeditormainwindow.cpp:228
 #, kde-format
 msgid "Uncomment"
 msgstr "Odkomentovat"
 
-#: sieveeditormainwindow.cpp:249
+#: sieveeditormainwindow.cpp:256
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Záložky"
 
-#: sieveeditormainwindow.cpp:254
+#: sieveeditormainwindow.cpp:261
 #, kde-format
 msgid "Debug Sieve Script..."
 msgstr "Ladit skript Sieve..."
 
-#: sieveeditormainwindow.cpp:259
+#: sieveeditormainwindow.cpp:266
 #, kde-format
 msgid "Wordwrap"
 msgstr "Zalamování slov"
 
-#: sieveeditormainwindow.cpp:268
+#: sieveeditormainwindow.cpp:275
 #, kde-format
 msgid "Import IMAP Settings..."
 msgstr "Importovat nastavení IMAP..."

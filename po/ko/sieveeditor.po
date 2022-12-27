@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:46+0000\n"
+"POT-Creation-Date: 2022-12-27 00:49+0000\n"
 "PO-Revision-Date: 2022-05-15 22:42+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -290,108 +290,108 @@ msgstr "스크립트가 변경되었습니다. 닫기 전에 저장하시겠습�
 msgid "Close script"
 msgstr "스크립트 닫기"
 
-#: sieveeditormainwindow.cpp:102
+#: sieveeditormainwindow.cpp:119
 #, kde-format
 msgid "Network is Up."
 msgstr "네트워크 사용 가능."
 
-#: sieveeditormainwindow.cpp:104
+#: sieveeditormainwindow.cpp:121
 #, kde-format
 msgid "Network is Down."
 msgstr "네트워크 사용 불가능."
 
-#: sieveeditormainwindow.cpp:136
+#: sieveeditormainwindow.cpp:143
 #, kde-format
 msgid "Upload"
 msgstr "업로드"
 
-#: sieveeditormainwindow.cpp:139
+#: sieveeditormainwindow.cpp:146
 #, kde-format
 msgid "Add Sieve Server..."
 msgstr "Sieve 서버 추가..."
 
-#: sieveeditormainwindow.cpp:143
+#: sieveeditormainwindow.cpp:150
 #, kde-format
 msgid "Delete Script"
 msgstr "스크립트 삭제"
 
-#: sieveeditormainwindow.cpp:149
+#: sieveeditormainwindow.cpp:156
 #, kde-format
 msgid "Create New Script..."
 msgstr "새 스크립트 만들기..."
 
-#: sieveeditormainwindow.cpp:155
+#: sieveeditormainwindow.cpp:162
 #, kde-format
 msgid "Edit Script..."
 msgstr "스크립트 편집..."
 
-#: sieveeditormainwindow.cpp:160
+#: sieveeditormainwindow.cpp:167
 #, kde-format
 msgid "Deactivate Script"
 msgstr "스크립트 비활성화"
 
-#: sieveeditormainwindow.cpp:165
+#: sieveeditormainwindow.cpp:172
 #, kde-format
 msgid "Refresh List"
 msgstr "목록 새로 고침"
 
-#: sieveeditormainwindow.cpp:171
+#: sieveeditormainwindow.cpp:178
 #, kde-format
 msgid "Go to Line..."
 msgstr "줄로 이동..."
 
-#: sieveeditormainwindow.cpp:188
+#: sieveeditormainwindow.cpp:195
 #, kde-format
 msgid "Import..."
 msgstr "가져오기..."
 
-#: sieveeditormainwindow.cpp:194
+#: sieveeditormainwindow.cpp:201
 #, kde-format
 msgid "Share..."
 msgstr "공유..."
 
-#: sieveeditormainwindow.cpp:200
+#: sieveeditormainwindow.cpp:207
 #, kde-format
 msgid "Check Spelling..."
 msgstr "맞춤법 검사..."
 
-#: sieveeditormainwindow.cpp:206
+#: sieveeditormainwindow.cpp:213
 #, kde-format
 msgid "Check Syntax"
 msgstr "문법 검사"
 
-#: sieveeditormainwindow.cpp:211
+#: sieveeditormainwindow.cpp:218
 #, kde-format
 msgid "Create Rules Graphically..."
 msgstr "그래픽 환경에서 규칙 생성..."
 
-#: sieveeditormainwindow.cpp:216
+#: sieveeditormainwindow.cpp:223
 #, kde-format
 msgid "Comment"
 msgstr "주석"
 
-#: sieveeditormainwindow.cpp:221
+#: sieveeditormainwindow.cpp:228
 #, kde-format
 msgid "Uncomment"
 msgstr "주석 해제"
 
-#: sieveeditormainwindow.cpp:249
+#: sieveeditormainwindow.cpp:256
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "책갈피(&B)"
 
-#: sieveeditormainwindow.cpp:254
+#: sieveeditormainwindow.cpp:261
 #, kde-format
 msgid "Debug Sieve Script..."
 msgstr "Sieve 스크립트 디버그..."
 
-#: sieveeditormainwindow.cpp:259
+#: sieveeditormainwindow.cpp:266
 #, kde-format
 msgid "Wordwrap"
 msgstr "자동 줄 바꿈"
 
-#: sieveeditormainwindow.cpp:268
+#: sieveeditormainwindow.cpp:275
 #, kde-format
 msgid "Import IMAP Settings..."
 msgstr "IMAP 설정 가져오기..."
