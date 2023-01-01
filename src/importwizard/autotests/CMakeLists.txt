@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2013-2022 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 add_definitions( -DIMPORTWIZARD_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data" )
 

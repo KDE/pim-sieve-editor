@@ -1,7 +1,7 @@
 <!DOCTYPE gui SYSTEM "kpartgui.dtd">
 <!--
   SPDX-License-Identifier: CC0-1.0
-  SPDX-FileCopyrightText: 2013-2022 Laurent Montel <montel@kde.org>
+  SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
 -->
 <gui name="sieveeditor" version="23">
  <MenuBar>
