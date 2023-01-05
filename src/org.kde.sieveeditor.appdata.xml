@@ -19,6 +19,7 @@
   <name xml:lang="en-GB">SieveEditor</name>
   <name xml:lang="es">SieveEditor</name>
   <name xml:lang="et">SieveEditor</name>
+  <name xml:lang="eu">SieveEditor</name>
   <name xml:lang="fi">SieveEditor</name>
   <name xml:lang="fr">SieveEditor</name>
   <name xml:lang="gl">SieveEditor</name>
@@ -53,6 +54,7 @@
   <summary xml:lang="en-GB">Editor for email filter Sieve scripts</summary>
   <summary xml:lang="es">Editor para filtro de correo con guiones Sieve</summary>
   <summary xml:lang="et">E-posti filtri Sieve skriptide redaktor</summary>
+  <summary xml:lang="eu">E-posta iragazteko «Sieve» (bahe) gidoi editorea</summary>
   <summary xml:lang="fi">Sieve-komentosarjamuokkain</summary>
   <summary xml:lang="fr">Éditeur de scripts « Sieve » de filtrage de courriels</summary>
   <summary xml:lang="gl">Editor de scripts de Sieve para filtrar mensaxes de correo electrónico</summary>
@@ -86,6 +88,7 @@
   <developer_name xml:lang="en-GB">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="es">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="et">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="eu">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="fi">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="fr">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="gl">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
@@ -123,6 +126,7 @@
     <p xml:lang="en-GB">SieveEditor allows to edit, create, delete sieve scripts.</p>
     <p xml:lang="es">SieveEditor permite editar, crear o borrar guiones de sieve.</p>
     <p xml:lang="et">SieveEditor võimaldab muuta, luua ja kustutada Sieve skripte.</p>
+    <p xml:lang="eu">«SieveEditor»eak «sieve» (bahe) gidoiak editatzeko, sortzeko, ezabatzeko aukera ematen du.</p>
     <p xml:lang="fi">SieveEditorilla voit luoda, muokata ja poista Sieve-komentojonoja.</p>
     <p xml:lang="fr">SieveEditor permet de créer, de modifier et de supprimer des scripts sieve.</p>
     <p xml:lang="gl">SieveEditor permite editar, crear e eliminar scripts de filtro.</p>
