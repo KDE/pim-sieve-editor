@@ -3,169 +3,106 @@
 "dtd/kdedbx45.dtd" [
   <!-- Define an entity for your application if it is not part of KDE
        CVS -->
-  <!ENTITY i18n-kapplication "<application
->Sieve-Editor</application
->">
+  <!ENTITY i18n-kapplication "<application>Sieve Editor</application>">
   <!ENTITY kappname "&i18n-kapplication;">
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % German "INCLUDE"
-> 
+  <!ENTITY % English "INCLUDE"> 
 ]>
 
 <book id="sieveeditor" lang="&language;">
 
 <bookinfo id="sieveeditorinfo">
 
-<title
->Das Handbuch zu &i18n-kapplication;</title>
+<title>The &i18n-kapplication; Handbook</title>
 
 <authorgroup>
-<author
-><personname
-> <firstname
->Laurent</firstname
-> <surname
->Montel</surname
-> </personname
-> <email
->montel@kde.org</email
-> </author>
-<othercredit role="translator"
-><firstname
->Burkhard</firstname
-><surname
->Lück</surname
-><affiliation
-><address
-><email
->lueck@hube-lueck.de</email
-></address
-></affiliation
-><contrib
->Übersetzung</contrib
-></othercredit
-> 
+<author>
+<personname>
+<firstname>Laurent</firstname>
+<surname>Montel</surname>
+</personname>
+<email>montel@kde.org</email>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
 <copyright>
-<year
->2013</year>
-<holder
->Laurent Montel</holder>
+<year>2013</year>
+<holder>Laurent Montel</holder>
 </copyright>
 
-<legalnotice
->&FDLNotice;</legalnotice>
+<legalnotice>&FDLNotice;</legalnotice>
 
-<date
->2016-04-14</date>
-<releaseinfo
->Anwendungen 16.04</releaseinfo>
+<date>2016-04-14</date>
+<releaseinfo>Applications 16.04</releaseinfo>
 
 <abstract>
-<para
->&i18n-kapplication; ist ein Editor für Sieve-Skripte, die auf einem Server zur Filterung von E-Mails benutzt werden. </para>
+<para>
+&i18n-kapplication; is an editor for Sieve scripts used for email filtering on a mail server.
+</para>
 </abstract>
 
 <keywordset>
-<keyword
->KDE</keyword>
-<keyword
->Sieve</keyword>
+<keyword>KDE</keyword>
+<keyword>Sieve</keyword>
 </keywordset>
 </bookinfo>
 
 <chapter id="introduction">
-<title
->Einleitung</title>
-<para
->&i18n-kapplication; ist ein Editor für <ulink url="https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)"
->Sieve</ulink
->-Skripte, die auf einem Server zur Filterung von E-Mails benutzt werden.</para>
+<title>Introduction</title>
+<para>&i18n-kapplication; is an editor for
+<ulink url="https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)">Sieve</ulink>
+scripts used for email filtering on a mail server.</para>
 
 <sect1 id="using-kapp">
-<title
->&i18n-kapplication; verwenden</title>
+<title>Using &i18n-kapplication;</title>
 
-<para
->&i18n-kapplication; ist eine Anwendung mit grafischer Bedienungsoberfläche für folgende Aufgaben:</para>
+<para>&i18n-kapplication; provides a &GUI; to perform these tasks:</para>
 
 <itemizedlist>
-<listitem
-><para
->Verwaltung von Sieve-Servern</para
-></listitem>
-<listitem
-><para
->Hochladen, importieren und deaktivieren von Skripten, erneutes Laden der Liste mit Skripten</para
-></listitem>
-<listitem
-><para
->Sieve-Skripte erstellen und bearbeiten</para
-></listitem>
-<listitem
-><para
->Skripte importieren und freigeben</para
-></listitem>
-<listitem
-><para
->Syntax-Prüfung der Skripte, automatische Generierung und Fehlersuche in Skripten</para
-></listitem>
+<listitem><para>Manage your Sieve servers</para></listitem>
+<listitem><para>Upload, import and deactivate scripts, refresh the list with scripts</para></listitem>
+<listitem><para>Create and edit Sieve scripts</para></listitem>
+<listitem><para>Import and share scripts</para></listitem>
+<listitem><para>Check the script syntax, autogenerate and debug scripts</para></listitem>
 </itemizedlist>
 
-<para
->&i18n-kapplication; kann unabhängig von Akonadi oder &kmail; verwendet werden, Sie brauchen nur einen E-Mail-Server, der Sieve-Skripts unterstützt.</para>
+<para>&i18n-kapplication; can be used independent from Akonadi or &kmail;,
+you only need a mail server with support for Sieve scripts.</para>
 
-<para
->Im &plasma-desktop; werden die Passwörter in &kwallet5; gespeichert</para>
+<para>In a &plasma-desktop; the passwords are stored in &kwallet5;</para>
 
 <sect2 id="first-start">
-<title
->Der erste Start</title>
-<para
->Beim ersten Start von &i18n-kapplication; wird der Einrichtungsdialog für Server angezeigt.</para>
+<title>First Start</title>
+<para>At the first start of &i18n-kapplication; the server configuration dialog is displayed.</para>
 <screenshot>
-<screeninfo
->Einrichtung des Servers</screeninfo>
+<screeninfo>Server Configuration</screeninfo>
         <mediaobject>
           <imageobject>
             <imagedata fileref="first-start.png" format="PNG"/>
           </imageobject>
           <textobject>
-            <phrase
->Einrichtung des Servers</phrase>
+            <phrase>Server Configuration</phrase>
           </textobject>
         </mediaobject>
 </screenshot>
-<para
->In diesem Dialog können Sie Mail-Server hinzufügen, bearbeiten und entfernen.</para>
-<para
->Später können Sie <menuchoice
-><guimenu
->Datei</guimenu
-><guimenuitem
->Server hinzufügen</guimenuitem
-></menuchoice
-> oder den Einrichtungsdialog für diese Aufgabe benutzen.</para>
-<para
->Beim nächsten Start von &i18n-kapplication; werden alle vorhandenen Skripte von den definierten Servern geholt.</para>
+<para>In this dialog you can add, modify and remove your mails servers.</para>
+<para>Later you can use <menuchoice><guimenu>File</guimenu><guimenuitem>Add Server</guimenuitem></menuchoice>
+or the configuration dialog for these tasks.</para>
+<para>On the next start &i18n-kapplication; automatically fetches all available scripts from the servers.</para>
 </sect2>
 
 <sect2 id="script-edit">
-<title
->Skript-Bearbeitung</title>
-<para
->Der Editor unterstützt die automatische Vervollständigung und Syntaxhervorhebung.</para>
+<title>Script Editing</title>
+<para>The editor supports autocompletion and syntax highlighting.</para>
 <screenshot>
-<screeninfo
->Skript-Bearbeitung</screeninfo>
+<screeninfo>Script Editing</screeninfo>
         <mediaobject>
           <imageobject>
             <imagedata fileref="script-edit.png" format="PNG"/>
           </imageobject>
           <textobject>
-            <phrase
->Skript-Bearbeitung</phrase>
+            <phrase>Script Editing</phrase>
           </textobject>
         </mediaobject>
 </screenshot>
@@ -173,47 +110,36 @@
 </sect2>
 
 <sect2 id="script-tools">
-<title
->Skript-Dienstprogramme</title>
+<title>Script Tools</title>
 
-<para
->Mit den Aktionen im Menü <guimenu
->Extras</guimenu
-> können Sie die Syntax der Skripte überprüfen, Skripte automatisch generieren und Fehler in Skripten suchen.</para>
+<para>The actions in the <guimenu>Tools</guimenu> menu enable you to check the syntax of your scripts, autogenerate and debug scripts.</para>
 
 <screenshot>
-<screeninfo
->Automatische Generierung von Skripten</screeninfo>
+<screeninfo>Autogenerate scripts</screeninfo>
         <mediaobject>
           <imageobject>
             <imagedata fileref="script-tools.png" format="PNG"/>
           </imageobject>
           <textobject>
-            <phrase
->Automatische Generierung von Skripten</phrase>
+            <phrase>Autogenerate scripts</phrase>
           </textobject>
         </mediaobject>
 </screenshot>
 </sect2>
 
 <sect2 id="script-help">
-<title
->Integrierte Hilfe</title>
+<title>Integrated Help</title>
 
-<para
->Verwenden Sie die integrierte Hilfe und klicken Sie mit der &RMBn; auf ein Schlüsselwort der Sprache Sieve. Dann wird der zugehörige Abschnitt der Dokumentation aus dem Internet heruntergeladen und im Unterfenster <guilabel
->Hilfe</guilabel
-> angezeigt.</para>
+<para>You can use the integrated help support and click with the &RMB; on a keyword of the Sieve language.
+Then the corresponding section of the documentation is downloaded from the Internet and displayed in the <guilabel>Help</guilabel> tab.</para>
 <screenshot>
-<screeninfo
->Integrierte Hilfe</screeninfo>
+<screeninfo>Integrated Help</screeninfo>
         <mediaobject>
           <imageobject>
             <imagedata fileref="script-help.png" format="PNG"/>
           </imageobject>
           <textobject>
-            <phrase
->Integrierte Hilfe</phrase>
+            <phrase>Integrated Help</phrase>
           </textobject>
         </mediaobject>
 </screenshot>
@@ -225,21 +151,21 @@
 
 <chapter id="credits">
 
-<title
->Danksagungen und Lizenz</title>
+<title>Credits and License</title>
 
-<para
->&i18n-kapplication;</para>
-<para
->Programm Copyright 2017 &Laurent.Montel; &Laurent.Montel.mail; </para>
-<para
->Copyright für die Dokumentation &copy; 2013 &Laurent.Montel; &Laurent.Montel.mail; </para>
+<para>&i18n-kapplication;</para>
+<para>
+Program copyright 2013-2017 &Laurent.Montel; &Laurent.Montel.mail;
+</para>
+<para>
+Documentation Copyright &copy; &Laurent.Montel; &Laurent.Montel.mail;
+</para>
 
-<para
->Übersetzung Burkhard Lück<email
->lueck@hube-lueck.de</email
-></para
-> &underFDL; &underGPL; </chapter>
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+
+&underFDL;               <!-- FDL: do not remove -->
+&underGPL;        	 <!-- GPL License -->
+</chapter>
 
 &documentation.index;
 </book>
