@@ -30,13 +30,13 @@ void SieveEditorSavePasswordJob::start()
 {
     if (!canStart()) {
         if (mName.isEmpty()) {
-            qCWarning(SIEVEEDITOR_LOG) << "Error missing mName";
+            qCWarning(SIEVEEDITOR_LOG) << "Error missing name info";
         }
         if (mKey.isEmpty()) {
-            qCWarning(SIEVEEDITOR_LOG) << "Error missing mKey";
+            qCWarning(SIEVEEDITOR_LOG) << "Error missing key";
         }
         if (mPassword.isEmpty()) {
-            qCWarning(SIEVEEDITOR_LOG) << "Error missing mName";
+            qCWarning(SIEVEEDITOR_LOG) << "Error missing password";
         }
         deleteLater();
         return;
