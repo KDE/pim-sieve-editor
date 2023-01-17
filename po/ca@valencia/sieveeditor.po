@@ -76,7 +76,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Import IMAP Settings"
-msgstr "Importació de la configuració de l'IMAP"
+msgstr "Importeu la configuració de l'IMAP"
 
 #: importwizard/importimapsettingwizard.cpp:31
 #, kde-format
@@ -127,7 +127,7 @@ msgstr "Llista les opcions disponibles per als comentaris dels usuaris"
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Settings"
-msgstr "Modificació de la configuració"
+msgstr "Modifiqueu la configuració"
 
 #: serversievelistwidget.cpp:127
 #, kde-format
@@ -513,7 +513,7 @@ msgstr "Eines"
 #: ui/serversievesettings.ui:37
 #, kde-format
 msgid "Sieve Settings"
-msgstr "Configuració de «Sieve»"
+msgstr "Configureu «Sieve»"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
@@ -631,7 +631,7 @@ msgstr ""
 #: ui/serversievesettings.ui:163
 #, kde-format
 msgid "Connection Settings"
-msgstr "Configuració de la connexió"
+msgstr "Configureu la connexió"
 
 #. i18n: ectx: property (text), widget (QPushButton, testButton)
 #: ui/serversievesettings.ui:175
