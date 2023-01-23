@@ -34,6 +34,15 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
 
+if (QT_MAJOR_VERSION STREQUAL "6")
+    set(QT_REQUIRED_VERSION "6.4.0")
+    set(KF_MIN_VERSION "5.240.0")
+    set(KF_MAJOR_VERSION "6")
+else()
+    set(KF_MIN_VERSION "5.100.0")
+    set(KF_MAJOR_VERSION "5")
+endif()
+
 # Do NOT add quote
 set(KDEPIM_DEV_VERSION alpha)
 
@@ -62,13 +71,13 @@ endif()
 find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network)
 
 # Find KF5 package
-find_package(KF5DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5CoreAddons ${KF_MIN_VERSION} REQUIRED)
-find_package(KF5Crash ${KF_MIN_VERSION} REQUIRED)
-find_package(KF5Bookmarks ${KF_MIN_VERSION} REQUIRED)
-find_package(KF5KIO ${KF_MIN_VERSION} REQUIRED)
-find_package(KF5DocTools ${KF_MIN_VERSION})
-set_package_properties(KF5DocTools PROPERTIES DESCRIPTION
+find_package(KF${KF_MAJOR_VERSION}DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF${KF_MAJOR_VERSION}CoreAddons ${KF_MIN_VERSION} REQUIRED)
+find_package(KF${KF_MAJOR_VERSION}Crash ${KF_MIN_VERSION} REQUIRED)
+find_package(KF${KF_MAJOR_VERSION}Bookmarks ${KF_MIN_VERSION} REQUIRED)
+find_package(KF${KF_MAJOR_VERSION}KIO ${KF_MIN_VERSION} REQUIRED)
+find_package(KF${KF_MAJOR_VERSION}DocTools ${KF_MIN_VERSION})
+set_package_properties(KF${KF_MAJOR_VERSION}DocTools PROPERTIES DESCRIPTION
     "Tools to generate documentation"
     TYPE OPTIONAL
 )

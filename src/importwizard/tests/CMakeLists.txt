@@ -4,10 +4,10 @@ add_executable(sieveeditorimportwizardtest main.cpp)
 
 target_link_libraries(sieveeditorimportwizardtest
     Qt::Widgets
-    KF5::WidgetsAddons
-    KF5::I18n
-    KF5::ConfigCore
-    KF5::ConfigGui
+    KF${KF_MAJOR_VERSION}::WidgetsAddons
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::ConfigCore
+    KF${KF_MAJOR_VERSION}::ConfigGui
     KF5::MailTransport
     KF5::KSieveUi
     libsieveeditor

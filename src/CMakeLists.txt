@@ -114,9 +114,9 @@ endif()
 target_link_libraries(libsieveeditor
     PRIVATE
     KF5::MailTransport
-    KF5::Bookmarks
-    KF5::I18n
-    KF5::XmlGui
+    KF${KF_MAJOR_VERSION}::Bookmarks
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::XmlGui
     KF5::PimCommon
     KF5::KSieveUi
     KF5::KManageSieve
@@ -133,12 +133,12 @@ set(sieveeditor_SRCS main.cpp)
 add_executable(sieveeditor ${sieveeditor_SRCS} )
 
 target_link_libraries(sieveeditor
-    KF5::CoreAddons
-    KF5::Crash
+    KF${KF_MAJOR_VERSION}::CoreAddons
+    KF${KF_MAJOR_VERSION}::Crash
     libsieveeditor
-    KF5::XmlGui
-    KF5::I18n
-    KF5::DBusAddons
+    KF${KF_MAJOR_VERSION}::XmlGui
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::DBusAddons
     ${libsieveeditor_userfeedback_LIB}
     )
 
