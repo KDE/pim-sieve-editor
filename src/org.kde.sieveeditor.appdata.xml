@@ -158,7 +158,7 @@
     <binary>sieveeditor</binary>
   </provides>
   <screenshots>
-    <screenshot>
+    <screenshot type="default">
       <image>https://cdn.kde.org/screenshots/sieveeditor/sieveeditor.png</image>
     </screenshot>
   </screenshots>
