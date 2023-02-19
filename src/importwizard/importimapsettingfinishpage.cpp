@@ -12,6 +12,7 @@
 
 ImportImapSettingFinishPage::ImportImapSettingFinishPage(QWidget *parent)
     : QWidget(parent)
+    , mTextEdit(new QTextEdit(this))
 {
     auto mainlayout = new QVBoxLayout(this);
     mainlayout->setObjectName(QStringLiteral("mainlayout"));
@@ -20,7 +21,6 @@ ImportImapSettingFinishPage::ImportImapSettingFinishPage(QWidget *parent)
     label->setObjectName(QStringLiteral("label"));
     mainlayout->addWidget(label);
 
-    mTextEdit = new QTextEdit(this);
     mTextEdit->setObjectName(QStringLiteral("textedit"));
     mTextEdit->setAcceptRichText(true);
     mTextEdit->setReadOnly(true);

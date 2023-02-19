@@ -18,5 +18,5 @@ public:
     void addSummary(const QString &name);
 
 private:
-    QTextEdit *mTextEdit = nullptr;
+    QTextEdit *const mTextEdit;
 };

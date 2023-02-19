@@ -21,13 +21,13 @@ SieveEditorConfigureServerPage::SieveEditorConfigureServerPage(QWidget *parent)
     button->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     connect(button, &QAbstractButton::clicked, this, &SieveEditorConfigureServerPage::configureClicked);
 
-    auto importSieveSettings = new QPushButton(i18n("Import Sieve Settings..."));
-    importSieveSettings->setObjectName(QStringLiteral("import_sieve_settings_button"));
-    importSieveSettings->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    connect(importSieveSettings, &QAbstractButton::clicked, this, &SieveEditorConfigureServerPage::importSieveSettings);
+    auto importSieveSettingsButton = new QPushButton(i18n("Import Sieve Settings..."));
+    importSieveSettingsButton->setObjectName(QStringLiteral("import_sieve_settings_button"));
+    importSieveSettingsButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    connect(importSieveSettingsButton, &QAbstractButton::clicked, this, &SieveEditorConfigureServerPage::importSieveSettings);
 
     hbox->addWidget(button);
-    hbox->addWidget(importSieveSettings);
+    hbox->addWidget(importSieveSettingsButton);
     hbox->addStretch(1);
 }
 
