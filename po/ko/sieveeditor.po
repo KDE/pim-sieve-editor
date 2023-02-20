@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:49+0000\n"
+"POT-Creation-Date: 2023-02-20 00:58+0000\n"
 "PO-Revision-Date: 2022-05-15 22:42+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -37,7 +37,7 @@ msgstr "Akonadi IMAP 설정"
 msgid "Thunderbird IMAP Settings"
 msgstr "Thunderbird IMAP 설정"
 
-#: importwizard/importimapsettingfinishpage.cpp:19
+#: importwizard/importimapsettingfinishpage.cpp:20
 #, kde-format
 msgid "IMAP settings were imported:"
 msgstr "IMAP 설정을 가져왔습니다:"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:49+0000\n"
+"POT-Creation-Date: 2023-02-20 00:58+0000\n"
 "PO-Revision-Date: 2013-12-24 01:18-0800\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid "Thunderbird IMAP Settings"
 msgstr ""
 
-#: importwizard/importimapsettingfinishpage.cpp:19
+#: importwizard/importimapsettingfinishpage.cpp:20
 #, kde-format
 msgid "IMAP settings were imported:"
 msgstr ""

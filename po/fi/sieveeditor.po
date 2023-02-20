@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:49+0000\n"
+"POT-Creation-Date: 2023-02-20 00:58+0000\n"
 "PO-Revision-Date: 2022-04-04 13:48+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr "Akonadin IMAP-asetukset"
 msgid "Thunderbird IMAP Settings"
 msgstr "Thunderbirdin IMAP-asetukset"
 
-#: importwizard/importimapsettingfinishpage.cpp:19
+#: importwizard/importimapsettingfinishpage.cpp:20
 #, kde-format
 msgid "IMAP settings were imported:"
 msgstr "IMAP-asetukset tuotiin:"

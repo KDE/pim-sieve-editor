@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-27 00:49+0000\n"
+"POT-Creation-Date: 2023-02-20 00:58+0000\n"
 "PO-Revision-Date: 2022-10-16 08:40+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -40,7 +40,7 @@ msgstr "Параметри IMAP Akonadi"
 msgid "Thunderbird IMAP Settings"
 msgstr "Параметри IMAP Thunderbird"
 
-#: importwizard/importimapsettingfinishpage.cpp:19
+#: importwizard/importimapsettingfinishpage.cpp:20
 #, kde-format
 msgid "IMAP settings were imported:"
 msgstr "Було імпортовано такі параметри IMAP:"
