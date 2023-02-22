@@ -113,7 +113,7 @@ endif()
 
 target_link_libraries(libsieveeditor
     PRIVATE
-    KF5::MailTransport
+    KPim${KF_MAJOR_VERSION}::MailTransport
     KF${KF_MAJOR_VERSION}::Bookmarks
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::XmlGui
