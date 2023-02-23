@@ -9,7 +9,7 @@ target_link_libraries(sieveeditorimportwizardtest
     KF${KF_MAJOR_VERSION}::ConfigCore
     KF${KF_MAJOR_VERSION}::ConfigGui
     KPim${KF_MAJOR_VERSION}::MailTransport
-    KF5::KSieveUi
+    KPim${KF_MAJOR_VERSION}::KSieveUi
     libsieveeditor
     )
 
