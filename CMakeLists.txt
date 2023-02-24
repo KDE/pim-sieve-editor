@@ -89,7 +89,7 @@ find_package(KPim${KF_MAJOR_VERSION}MailTransport ${KMAILTRANSPORT_LIB_VERSION} 
 
 find_package(KF5PimCommon ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim${KF_MAJOR_VERSION}LibKSieve ${LIBKSIEVE_LIB_VERSION} CONFIG REQUIRED)
-find_package(KF5IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim${KF_MAJOR_VERSION}IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(KUserFeedback 1.2.0 CONFIG)
 set_package_properties(KUserFeedback PROPERTIES DESCRIPTION "User Feedback lib" TYPE OPTIONAL PURPOSE "Allow to send Telemetry Information (optional).")
