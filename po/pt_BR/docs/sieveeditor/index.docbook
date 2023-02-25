@@ -75,8 +75,6 @@
 </keywordset>
 </bookinfo>
 
-<!-- info + screenshots from http://www.aegiap.eu/kdeblog/2014/01/new-in-kdepim-4-13-sieveeditor/ -->
-
 <chapter id="introduction">
 <title
 >Introdução</title>
@@ -171,10 +169,6 @@
           </textobject>
         </mediaobject>
 </screenshot>
-<para
->Para obter informações detalhadas sobre o editor, leia a <ulink url="help:kartpart"
->documentação do KatePart</ulink
->.</para>
 
 </sect2>
 
@@ -204,7 +198,7 @@
 
 <sect2 id="script-help">
 <title
->Suporte à Ajuda</title>
+>Ajuda integrada</title>
 
 <para
 >Você pode usar o suporte de ajuda integrado e clicar com o &RMB; sobre uma palavra-chave da linguagem Sieve. Então, a seção correspondente da documentação será baixada da Internet e apresentada na aba <guilabel
@@ -212,14 +206,14 @@
 >.</para>
 <screenshot>
 <screeninfo
->Suporte à Ajuda</screeninfo>
+>Ajuda integrada</screeninfo>
         <mediaobject>
           <imageobject>
             <imagedata fileref="script-help.png" format="PNG"/>
           </imageobject>
           <textobject>
             <phrase
->Suporte à Ajuda</phrase>
+>Ajuda integrada</phrase>
           </textobject>
         </mediaobject>
 </screenshot>
@@ -237,7 +231,7 @@
 <para
 >&i18n-kapplication;</para>
 <para
->Direitos autorais do programa 2013 &Laurent.Montel; &Laurent.Montel.mail; </para>
+>Direitos autorais do programa 2013-2017 &Laurent.Montel; &Laurent.Montel.mail; </para>
 <para
 >Direitos autorais da documentação Copyright &copy; 2013 &Laurent.Montel; &Laurent.Montel.mail; </para>
 
@@ -245,8 +239,7 @@
 >Tradução de André Marcelo Alvarenga <email
 >alvarenga@kde.org</email
 ></para
-> 
-&underFDL; &underGPL; </chapter>
+> &underFDL; &underGPL; </chapter>
 
 &documentation.index;
 </book>
