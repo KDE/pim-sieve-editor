@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-20 00:58+0000\n"
-"PO-Revision-Date: 2022-05-15 22:42+0200\n"
+"PO-Revision-Date: 2023-03-01 01:38+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -453,10 +453,9 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "스크립트 '%1'은(는) 새 스크립트입니다. 저장하시겠습니까?"
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
-#, fuzzy, kde-format
-#| msgid "Share Script..."
+#, kde-format
 msgid "Save Script"
-msgstr "스크립트 공유..."
+msgstr "스크립트 저장"
 
 #: sieveeditorpagewidget.cpp:179
 #, kde-format
