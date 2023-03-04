@@ -22,12 +22,12 @@ target_sources(libsieveeditor PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/checks/importimapsettingsakonadipassword.cpp
     )
 
-if (TARGET KUserFeedbackWidgets)
+if (TARGET KUserFeedbackWidgets${KUSERFEEDBACK_SUFFIX})
     add_definitions(-DWITH_KUSERFEEDBACK)
 endif()
 
 
-if (TARGET KUserFeedbackWidgets)
+if (TARGET KUserFeedbackWidgets${KUSERFEEDBACK_SUFFIX})
     target_sources(libsieveeditor PRIVATE
         userfeedback/userfeedbackmanager.cpp
         userfeedback/userfeedbackmanager.h
@@ -106,8 +106,8 @@ endif()
 generate_export_header(libsieveeditor BASE_NAME libsieveeditor)
 
 set(libsieveeditor_userfeedback_LIB)
-if (TARGET KUserFeedbackWidgets)
-    set(libsieveeditor_userfeedback_LIB KUserFeedbackWidgets)
+if (TARGET KUserFeedbackWidgets${KUSERFEEDBACK_SUFFIX})
+    set(libsieveeditor_userfeedback_LIB KUserFeedbackWidgets${KUSERFEEDBACK_SUFFIX})
 endif()
 
 
