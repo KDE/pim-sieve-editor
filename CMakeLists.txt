@@ -92,11 +92,13 @@ find_package(KPim${KF_MAJOR_VERSION}LibKSieve ${LIBKSIEVE_LIB_VERSION} CONFIG RE
 find_package(KPim${KF_MAJOR_VERSION}IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 
 set(KUSERFEEDBACK_SUFFIX)
-# Laurent reactivate when I will merge KuserFeedBack
-#if (QT_MAJOR_VERSION STREQUAL "6")
-#    set(KUSERFEEDBACK_SUFFIX "Qt6")
-#endif()
-find_package(KUserFeedback${KUSERFEEDBACK_SUFFIX} 1.2.0 CONFIG)
+if (QT_MAJOR_VERSION STREQUAL "6")
+    set(KUSERFEEDBACK_SUFFIX "Qt6")
+    find_package(KUserFeedback${KUSERFEEDBACK_SUFFIX} 1.2.1 CONFIG)
+    add_definitions(-DUSE_KUSERFEEDBACK_QT6)
+else()
+    find_package(KUserFeedback${KUSERFEEDBACK_SUFFIX} 1.2.0 CONFIG)
+endif()
 set_package_properties(KUserFeedback${KUSERFEEDBACK_SUFFIX} PROPERTIES DESCRIPTION "User Feedback lib" TYPE OPTIONAL PURPOSE "Allow to send Telemetry Information (optional).")
 
 find_package(Qt${QT_MAJOR_VERSION}Keychain CONFIG)

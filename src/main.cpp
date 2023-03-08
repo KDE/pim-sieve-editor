@@ -18,7 +18,11 @@
 #include <QTextStream>
 #ifdef WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
+#ifdef USE_KUSERFEEDBACK_QT6
+#include <KUserFeedbackQt6/Provider>
+#else
 #include <KUserFeedback/Provider>
+#endif
 #endif
 
 int main(int argc, char **argv)
