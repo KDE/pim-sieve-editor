@@ -22,7 +22,7 @@ struct LIBSIEVEEDITOR_EXPORT SieveAccountSettings {
     QString serverName;
     QString userName;
     QString password;
-    MailTransport::Transport::EnumAuthenticationType::type authenticationType = MailTransport::Transport::EnumAuthenticationType::PLAIN;
+    MailTransport::Transport::EnumAuthenticationType authenticationType = MailTransport::Transport::EnumAuthenticationType::PLAIN;
     int port = -1;
 };
 

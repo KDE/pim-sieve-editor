@@ -33,7 +33,7 @@ void ReadServerSieveConfigJob::loadSettings(const QString &conf)
     mCurrentSieveServerConfig.sieveSettings.serverName = group.readEntry(QStringLiteral("ServerName"));
     mCurrentSieveServerConfig.sieveSettings.userName = group.readEntry(QStringLiteral("UserName"));
     mCurrentSieveServerConfig.enabled = group.readEntry(QStringLiteral("Enabled"), true);
-    mCurrentSieveServerConfig.sieveSettings.authenticationType = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(
+    mCurrentSieveServerConfig.sieveSettings.authenticationType = static_cast<MailTransport::Transport::EnumAuthenticationType>(
         group.readEntry(QStringLiteral("Authentication"), static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
 
     // Imap Account Settings

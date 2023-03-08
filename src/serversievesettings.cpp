@@ -14,7 +14,7 @@
 #include <MailTransport/Transport>
 
 /** static helper functions **/
-static QString authenticationModeString(MailTransport::Transport::EnumAuthenticationType::type mode)
+static QString authenticationModeString(MailTransport::Transport::EnumAuthenticationType mode)
 {
     switch (mode) {
     case MailTransport::Transport::EnumAuthenticationType::LOGIN:
@@ -39,21 +39,20 @@ static QString authenticationModeString(MailTransport::Transport::EnumAuthentica
     return {};
 }
 
-static void addAuthenticationItem(QComboBox *authCombo, MailTransport::Transport::EnumAuthenticationType::type authtype)
+static void addAuthenticationItem(QComboBox *authCombo, MailTransport::Transport::EnumAuthenticationType authtype)
 {
     // qCDebug(SIEVEEDITOR_LOG) << "adding auth item " << authenticationModeString( authtype );
     authCombo->addItem(authenticationModeString(authtype), QVariant(authtype));
 }
 
-static MailTransport::Transport::EnumAuthenticationType::type getCurrentAuthMode(QComboBox *authCombo)
+static MailTransport::Transport::EnumAuthenticationType getCurrentAuthMode(QComboBox *authCombo)
 {
-    MailTransport::Transport::EnumAuthenticationType::type authtype =
-        static_cast<MailTransport::Transport::EnumAuthenticationType::type>(authCombo->itemData(authCombo->currentIndex()).toInt());
+    auto authtype = static_cast<MailTransport::Transport::EnumAuthenticationType>(authCombo->itemData(authCombo->currentIndex()).toInt());
     // qCDebug(SIEVEEDITOR_LOG) << "current auth mode: " << authenticationModeString( authtype );
     return authtype;
 }
 
-static void setCurrentAuthMode(QComboBox *authCombo, MailTransport::Transport::EnumAuthenticationType::type authtype)
+static void setCurrentAuthMode(QComboBox *authCombo, MailTransport::Transport::EnumAuthenticationType authtype)
 {
     // qCDebug(SIEVEEDITOR_LOG) << "setting authcombo: " << authenticationModeString( authtype );
     int index = authCombo->findData(authtype);
@@ -61,10 +60,10 @@ static void setCurrentAuthMode(QComboBox *authCombo, MailTransport::Transport::E
         qCWarning(SIEVEEDITOR_LOG) << "desired authmode not in the combo";
     }
     // qCDebug(SIEVEEDITOR_LOG) << "found corresponding index: " << index << "with data" << authenticationModeString(
-    // (MailTransport::Transport::EnumAuthenticationType::type) authCombo->itemData( index ).toInt() );
+    // (MailTransport::Transport::EnumAuthenticationType) authCombo->itemData( index ).toInt() );
     authCombo->setCurrentIndex(index);
-    MailTransport::Transport::EnumAuthenticationType::type t =
-        static_cast<MailTransport::Transport::EnumAuthenticationType::type>(authCombo->itemData(authCombo->currentIndex()).toInt());
+    MailTransport::Transport::EnumAuthenticationType t =
+        static_cast<MailTransport::Transport::EnumAuthenticationType>(authCombo->itemData(authCombo->currentIndex()).toInt());
     // qCDebug(SIEVEEDITOR_LOG) << "selected auth mode:" << authenticationModeString( t );
     Q_ASSERT(t == authtype);
 }
@@ -203,7 +202,7 @@ void ServerSieveSettings::setImapPassword(const QString &pass)
 
 void ServerSieveSettings::setAuthenticationType(KSieveUi::SieveImapAccountSettings::AuthenticationMode type)
 {
-    setCurrentAuthMode(ui->imapAuthenticationCombo, static_cast<MailTransport::Transport::EnumAuthenticationType::type>(type));
+    setCurrentAuthMode(ui->imapAuthenticationCombo, static_cast<MailTransport::Transport::EnumAuthenticationType>(type));
 }
 
 KSieveUi::SieveImapAccountSettings::AuthenticationMode ServerSieveSettings::authenticationType() const
@@ -241,7 +240,7 @@ SieveEditorUtil::SieveServerConfig ServerSieveSettings::serverSieveConfig() cons
     conf.sieveSettings.port = port();
     conf.sieveSettings.serverName = serverName();
     conf.sieveSettings.userName = userName();
-    const MailTransport::Transport::EnumAuthenticationType::type authtype = getCurrentAuthMode(ui->authenticationCombo);
+    const MailTransport::Transport::EnumAuthenticationType authtype = getCurrentAuthMode(ui->authenticationCombo);
     conf.sieveSettings.authenticationType = authtype;
 
     conf.useImapCustomServer = ui->alternateServer->isChecked();
@@ -391,12 +390,12 @@ void ServerSieveSettings::slotSafetyChanged()
     ui->imapAuthenticationCombo->clear();
     addAuthenticationItem(ui->imapAuthenticationCombo, MailTransport::Transport::EnumAuthenticationType::CLEAR);
     for (int prot : std::as_const(protocols)) {
-        addAuthenticationItem(ui->imapAuthenticationCombo, static_cast<MailTransport::Transport::EnumAuthenticationType::type>(prot));
+        addAuthenticationItem(ui->imapAuthenticationCombo, static_cast<MailTransport::Transport::EnumAuthenticationType>(prot));
     }
     if (protocols.isEmpty()) {
         qCDebug(SIEVEEDITOR_LOG) << "no authmodes found";
     } else {
-        setCurrentAuthMode(ui->imapAuthenticationCombo, static_cast<MailTransport::Transport::EnumAuthenticationType::type>(protocols.constFirst()));
+        setCurrentAuthMode(ui->imapAuthenticationCombo, static_cast<MailTransport::Transport::EnumAuthenticationType>(protocols.constFirst()));
     }
     mServerTest->deleteLater();
     mServerTest = nullptr;

@@ -118,7 +118,7 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
         if (reuseImapSettings) {
             config.sieveSettings.serverName = imapServerName;
             config.sieveSettings.userName = userName;
-            config.sieveSettings.authenticationType = static_cast<MailTransport::Transport::EnumAuthenticationType::type>(
+            config.sieveSettings.authenticationType = static_cast<MailTransport::Transport::EnumAuthenticationType>(
                 sieveGroup.readEntry(QStringLiteral("Authentication"), static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
         } else {
             const QString sieveCustomUserName = sieveGroup.readEntry(QStringLiteral("SieveCustomUsername"));
