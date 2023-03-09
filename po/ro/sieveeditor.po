@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-20 00:58+0000\n"
+"POT-Creation-Date: 2023-03-09 00:47+0000\n"
 "PO-Revision-Date: 2020-09-08 19:22+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -93,32 +93,32 @@ msgstr ""
 msgid "Finish"
 msgstr ""
 
-#: main.cpp:43
+#: main.cpp:47
 #, kde-format
 msgid "KSieve Editor"
 msgstr ""
 
-#: main.cpp:45
+#: main.cpp:49
 #, kde-format
 msgid "Sieve Editor"
 msgstr "Redactor Sieve"
 
-#: main.cpp:47
+#: main.cpp:51
 #, kde-format
 msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr ""
 
-#: main.cpp:48
+#: main.cpp:52
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:48
+#: main.cpp:52
 #, kde-format
 msgid "Maintainer"
 msgstr "Responsabil"
 
-#: main.cpp:56
+#: main.cpp:60
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr ""
@@ -150,40 +150,40 @@ msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anonim"
 
-#: serversievesettings.cpp:269
+#: serversievesettings.cpp:268
 #, kde-format
 msgid "Server is not defined"
 msgstr ""
 
-#: serversievesettings.cpp:269
+#: serversievesettings.cpp:268
 #, fuzzy, kde-format
 #| msgid "Server Sieve"
 msgid "Check Server"
 msgstr "Server Sieve"
 
-#: serversievesettings.cpp:312
+#: serversievesettings.cpp:311
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr ""
 
-#: serversievesettings.cpp:324
+#: serversievesettings.cpp:323
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr ""
 
-#: serversievesettings.cpp:327
+#: serversievesettings.cpp:326
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr ""
 
-#: serversievesettings.cpp:331
+#: serversievesettings.cpp:330
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
 "server.</b></qt>"
 msgstr ""
 
-#: serversievesettings.cpp:334
+#: serversievesettings.cpp:333
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr ""
@@ -195,31 +195,31 @@ msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Adaugă server Sieve"
 
-#: sieveeditorconfiguredialog.cpp:37
+#: sieveeditorconfiguredialog.cpp:42
 #, fuzzy, kde-format
 #| msgid "Configure"
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Configurează"
 
-#: sieveeditorconfiguredialog.cpp:51
+#: sieveeditorconfiguredialog.cpp:56
 #, fuzzy, kde-format
 #| msgid "Server Sieve"
 msgid "Sieve Server"
 msgstr "Server Sieve"
 
-#: sieveeditorconfiguredialog.cpp:60
+#: sieveeditorconfiguredialog.cpp:65
 #, kde-format
 msgid "Wrap Text"
 msgstr ""
 
-#: sieveeditorconfiguredialog.cpp:65
+#: sieveeditorconfiguredialog.cpp:70
 #, fuzzy, kde-format
 #| msgid "Sieve Editor"
 msgid "Editor"
 msgstr "Redactor Sieve"
 
-#: sieveeditorconfiguredialog.cpp:81
+#: sieveeditorconfiguredialog.cpp:86
 #, kde-format
 msgid "User Feedback"
 msgstr ""
@@ -306,111 +306,111 @@ msgstr "Scriptul a fost modificat. Doriți să-l salvați înainte de a închide
 msgid "Close script"
 msgstr "Închide script"
 
-#: sieveeditormainwindow.cpp:119
+#: sieveeditormainwindow.cpp:124
 #, kde-format
 msgid "Network is Up."
 msgstr ""
 
-#: sieveeditormainwindow.cpp:121
+#: sieveeditormainwindow.cpp:126
 #, kde-format
 msgid "Network is Down."
 msgstr ""
 
-#: sieveeditormainwindow.cpp:143
+#: sieveeditormainwindow.cpp:148
 #, kde-format
 msgid "Upload"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:146
+#: sieveeditormainwindow.cpp:151
 #, fuzzy, kde-format
 #| msgid "Add Server Sieve..."
 msgid "Add Sieve Server..."
 msgstr "Adaugă server Sieve..."
 
-#: sieveeditormainwindow.cpp:150
+#: sieveeditormainwindow.cpp:155
 #, kde-format
 msgid "Delete Script"
 msgstr "Șterge scriptul"
 
-#: sieveeditormainwindow.cpp:156
+#: sieveeditormainwindow.cpp:161
 #, kde-format
 msgid "Create New Script..."
 msgstr "Creează script nou..."
 
-#: sieveeditormainwindow.cpp:162
+#: sieveeditormainwindow.cpp:167
 #, fuzzy, kde-format
 #| msgid "Edit Script"
 msgid "Edit Script..."
 msgstr "Redactează scriptul"
 
-#: sieveeditormainwindow.cpp:167
+#: sieveeditormainwindow.cpp:172
 #, kde-format
 msgid "Deactivate Script"
 msgstr "Dezactivează scriptul"
 
-#: sieveeditormainwindow.cpp:172
+#: sieveeditormainwindow.cpp:177
 #, kde-format
 msgid "Refresh List"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:178
+#: sieveeditormainwindow.cpp:183
 #, kde-format
 msgid "Go to Line..."
 msgstr ""
 
-#: sieveeditormainwindow.cpp:195
+#: sieveeditormainwindow.cpp:200
 #, kde-format
 msgid "Import..."
 msgstr ""
 
-#: sieveeditormainwindow.cpp:201
+#: sieveeditormainwindow.cpp:206
 #, kde-format
 msgid "Share..."
 msgstr ""
 
-#: sieveeditormainwindow.cpp:207
+#: sieveeditormainwindow.cpp:212
 #, kde-format
 msgid "Check Spelling..."
 msgstr ""
 
-#: sieveeditormainwindow.cpp:213
+#: sieveeditormainwindow.cpp:218
 #, kde-format
 msgid "Check Syntax"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:218
+#: sieveeditormainwindow.cpp:223
 #, kde-format
 msgid "Create Rules Graphically..."
 msgstr ""
 
-#: sieveeditormainwindow.cpp:223
+#: sieveeditormainwindow.cpp:228
 #, kde-format
 msgid "Comment"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:228
+#: sieveeditormainwindow.cpp:233
 #, kde-format
 msgid "Uncomment"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:256
+#: sieveeditormainwindow.cpp:261
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:261
+#: sieveeditormainwindow.cpp:266
 #, fuzzy, kde-format
 #| msgid "Create New Script..."
 msgid "Debug Sieve Script..."
 msgstr "Creează script nou..."
 
-#: sieveeditormainwindow.cpp:266
+#: sieveeditormainwindow.cpp:271
 #, kde-format
 msgid "Wordwrap"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:275
+#: sieveeditormainwindow.cpp:280
 #, kde-format
 msgid "Import IMAP Settings..."
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-20 00:58+0000\n"
+"POT-Creation-Date: 2023-03-09 00:47+0000\n"
 "PO-Revision-Date: 2019-01-19 19:51+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -90,33 +90,33 @@ msgstr "匯入中......"
 msgid "Finish"
 msgstr "完成"
 
-#: main.cpp:43
+#: main.cpp:47
 #, kde-format
 msgid "KSieve Editor"
 msgstr "KSieve 編輯器"
 
-#: main.cpp:45
+#: main.cpp:49
 #, kde-format
 msgid "Sieve Editor"
 msgstr "過濾編輯器"
 
-#: main.cpp:47
+#: main.cpp:51
 #, fuzzy, kde-format
 #| msgid "Copyright © 2013-2019 sieveeditor authors"
 msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Copyright © 2013-2019 sieveeditor 作者群"
 
-#: main.cpp:48
+#: main.cpp:52
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:48
+#: main.cpp:52
 #, kde-format
 msgid "Maintainer"
 msgstr "維護者"
 
-#: main.cpp:56
+#: main.cpp:60
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr ""
@@ -148,39 +148,39 @@ msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "匿名"
 
-#: serversievesettings.cpp:269
+#: serversievesettings.cpp:268
 #, kde-format
 msgid "Server is not defined"
 msgstr "未定義伺服器"
 
-#: serversievesettings.cpp:269
+#: serversievesettings.cpp:268
 #, kde-format
 msgid "Check Server"
 msgstr "檢查伺服器"
 
-#: serversievesettings.cpp:312
+#: serversievesettings.cpp:311
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr "無法連線到伺服器，請檢查伺服器位址是否正確。"
 
-#: serversievesettings.cpp:324
+#: serversievesettings.cpp:323
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<qt><b>支援 TLS 並建議使用。</b></qt>"
 
-#: serversievesettings.cpp:327
+#: serversievesettings.cpp:326
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<qt><b>支援 SSL 並建議使用。</b></qt>"
 
-#: serversievesettings.cpp:331
+#: serversievesettings.cpp:330
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
 "server.</b></qt>"
 msgstr "<qt><b>不支援任何安全協議，因此不建議連線到此伺服器。</b></qt>"
 
-#: serversievesettings.cpp:334
+#: serversievesettings.cpp:333
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>無法使用此伺服器。</b></qt>"
@@ -191,29 +191,29 @@ msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "新增過濾伺服器"
 
-#: sieveeditorconfiguredialog.cpp:37
+#: sieveeditorconfiguredialog.cpp:42
 #, fuzzy, kde-format
 #| msgid "Configure"
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "設定"
 
-#: sieveeditorconfiguredialog.cpp:51
+#: sieveeditorconfiguredialog.cpp:56
 #, kde-format
 msgid "Sieve Server"
 msgstr "過濾伺服器"
 
-#: sieveeditorconfiguredialog.cpp:60
+#: sieveeditorconfiguredialog.cpp:65
 #, kde-format
 msgid "Wrap Text"
 msgstr "文字折行"
 
-#: sieveeditorconfiguredialog.cpp:65
+#: sieveeditorconfiguredialog.cpp:70
 #, kde-format
 msgid "Editor"
 msgstr "編輯器"
 
-#: sieveeditorconfiguredialog.cpp:81
+#: sieveeditorconfiguredialog.cpp:86
 #, kde-format
 msgid "User Feedback"
 msgstr ""
@@ -294,108 +294,108 @@ msgstr "文稿已變更。您要在關閉前先儲存嗎？"
 msgid "Close script"
 msgstr "關閉文稿"
 
-#: sieveeditormainwindow.cpp:119
+#: sieveeditormainwindow.cpp:124
 #, kde-format
 msgid "Network is Up."
 msgstr "網路已連線。"
 
-#: sieveeditormainwindow.cpp:121
+#: sieveeditormainwindow.cpp:126
 #, kde-format
 msgid "Network is Down."
 msgstr "網路未連線。"
 
-#: sieveeditormainwindow.cpp:143
+#: sieveeditormainwindow.cpp:148
 #, kde-format
 msgid "Upload"
 msgstr "上傳"
 
-#: sieveeditormainwindow.cpp:146
+#: sieveeditormainwindow.cpp:151
 #, kde-format
 msgid "Add Sieve Server..."
 msgstr "新增過濾伺服器..."
 
-#: sieveeditormainwindow.cpp:150
+#: sieveeditormainwindow.cpp:155
 #, kde-format
 msgid "Delete Script"
 msgstr "刪除文稿"
 
-#: sieveeditormainwindow.cpp:156
+#: sieveeditormainwindow.cpp:161
 #, kde-format
 msgid "Create New Script..."
 msgstr "建立新文稿..."
 
-#: sieveeditormainwindow.cpp:162
+#: sieveeditormainwindow.cpp:167
 #, kde-format
 msgid "Edit Script..."
 msgstr "編輯文稿..."
 
-#: sieveeditormainwindow.cpp:167
+#: sieveeditormainwindow.cpp:172
 #, kde-format
 msgid "Deactivate Script"
 msgstr "關閉文稿"
 
-#: sieveeditormainwindow.cpp:172
+#: sieveeditormainwindow.cpp:177
 #, kde-format
 msgid "Refresh List"
 msgstr "刷新清單"
 
-#: sieveeditormainwindow.cpp:178
+#: sieveeditormainwindow.cpp:183
 #, kde-format
 msgid "Go to Line..."
 msgstr "跳至行號..."
 
-#: sieveeditormainwindow.cpp:195
+#: sieveeditormainwindow.cpp:200
 #, kde-format
 msgid "Import..."
 msgstr "匯入..."
 
-#: sieveeditormainwindow.cpp:201
+#: sieveeditormainwindow.cpp:206
 #, kde-format
 msgid "Share..."
 msgstr "分享..."
 
-#: sieveeditormainwindow.cpp:207
+#: sieveeditormainwindow.cpp:212
 #, kde-format
 msgid "Check Spelling..."
 msgstr "拼字檢查..."
 
-#: sieveeditormainwindow.cpp:213
+#: sieveeditormainwindow.cpp:218
 #, kde-format
 msgid "Check Syntax"
 msgstr "檢查語法"
 
-#: sieveeditormainwindow.cpp:218
+#: sieveeditormainwindow.cpp:223
 #, kde-format
 msgid "Create Rules Graphically..."
 msgstr "用圖形介面建立規則..."
 
-#: sieveeditormainwindow.cpp:223
+#: sieveeditormainwindow.cpp:228
 #, kde-format
 msgid "Comment"
 msgstr "註解"
 
-#: sieveeditormainwindow.cpp:228
+#: sieveeditormainwindow.cpp:233
 #, kde-format
 msgid "Uncomment"
 msgstr "取消註解"
 
-#: sieveeditormainwindow.cpp:256
+#: sieveeditormainwindow.cpp:261
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "書籤(&B)"
 
-#: sieveeditormainwindow.cpp:261
+#: sieveeditormainwindow.cpp:266
 #, kde-format
 msgid "Debug Sieve Script..."
 msgstr "除錯過濾文稿..."
 
-#: sieveeditormainwindow.cpp:266
+#: sieveeditormainwindow.cpp:271
 #, kde-format
 msgid "Wordwrap"
 msgstr "自動換行"
 
-#: sieveeditormainwindow.cpp:275
+#: sieveeditormainwindow.cpp:280
 #, kde-format
 msgid "Import IMAP Settings..."
 msgstr "匯入 IMAP 設定..."

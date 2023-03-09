@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-20 00:58+0000\n"
+"POT-Creation-Date: 2023-03-09 00:47+0000\n"
 "PO-Revision-Date: 2022-10-16 08:40+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -92,32 +92,32 @@ msgstr "Триває імпортування…"
 msgid "Finish"
 msgstr "Завершення"
 
-#: main.cpp:43
+#: main.cpp:47
 #, kde-format
 msgid "KSieve Editor"
 msgstr "Редактор фільтрів KSieve"
 
-#: main.cpp:45
+#: main.cpp:49
 #, kde-format
 msgid "Sieve Editor"
 msgstr "Редактор фільтрів"
 
-#: main.cpp:47
+#: main.cpp:51
 #, kde-format
 msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "© Автори sieveeditor, 2013–%1"
 
-#: main.cpp:48
+#: main.cpp:52
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:48
+#: main.cpp:52
 #, kde-format
 msgid "Maintainer"
 msgstr "Супровідник"
 
-#: main.cpp:56
+#: main.cpp:60
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Показати доступні варіанти для відгуків користувача"
@@ -148,34 +148,34 @@ msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Анонімне"
 
-#: serversievesettings.cpp:269
+#: serversievesettings.cpp:268
 #, kde-format
 msgid "Server is not defined"
 msgstr "Сервер не визначено"
 
-#: serversievesettings.cpp:269
+#: serversievesettings.cpp:268
 #, kde-format
 msgid "Check Server"
 msgstr "Перевірити сервер"
 
-#: serversievesettings.cpp:312
+#: serversievesettings.cpp:311
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr ""
 "Не вдалося встановити з’єднання з сервером, будь ласка, перевірте адресу "
 "сервера."
 
-#: serversievesettings.cpp:324
+#: serversievesettings.cpp:323
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<qt><b>TLS підтримується, рекомендуємо ним скористатися.</b></qt>"
 
-#: serversievesettings.cpp:327
+#: serversievesettings.cpp:326
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<qt><b>SSL підтримується, рекомендуємо ним скористатися.</b></qt>"
 
-#: serversievesettings.cpp:331
+#: serversievesettings.cpp:330
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
@@ -184,7 +184,7 @@ msgstr ""
 "<qt><b>Шифрування не підтримується. Не рекомендуємо з’єднуватися з цим "
 "сервером.</b></qt>"
 
-#: serversievesettings.cpp:334
+#: serversievesettings.cpp:333
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>Використання цього сервера неможливе.</b></qt>"
@@ -195,28 +195,28 @@ msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Додавання сервера фільтрування"
 
-#: sieveeditorconfiguredialog.cpp:37
+#: sieveeditorconfiguredialog.cpp:42
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Налаштовування"
 
-#: sieveeditorconfiguredialog.cpp:51
+#: sieveeditorconfiguredialog.cpp:56
 #, kde-format
 msgid "Sieve Server"
 msgstr "Сервер фільтрування"
 
-#: sieveeditorconfiguredialog.cpp:60
+#: sieveeditorconfiguredialog.cpp:65
 #, kde-format
 msgid "Wrap Text"
 msgstr "Перенесення рядків"
 
-#: sieveeditorconfiguredialog.cpp:65
+#: sieveeditorconfiguredialog.cpp:70
 #, kde-format
 msgid "Editor"
 msgstr "Редактор"
 
-#: sieveeditorconfiguredialog.cpp:81
+#: sieveeditorconfiguredialog.cpp:86
 #, kde-format
 msgid "User Feedback"
 msgstr "Відгуки користувача"
@@ -296,108 +296,108 @@ msgstr "До скрипту було внесено зміни. Хочете з�
 msgid "Close script"
 msgstr "Закриття скрипту"
 
-#: sieveeditormainwindow.cpp:119
+#: sieveeditormainwindow.cpp:124
 #, kde-format
 msgid "Network is Up."
 msgstr "Мережа працює."
 
-#: sieveeditormainwindow.cpp:121
+#: sieveeditormainwindow.cpp:126
 #, kde-format
 msgid "Network is Down."
 msgstr "Мережу вимкнено."
 
-#: sieveeditormainwindow.cpp:143
+#: sieveeditormainwindow.cpp:148
 #, kde-format
 msgid "Upload"
 msgstr "Вивантажити"
 
-#: sieveeditormainwindow.cpp:146
+#: sieveeditormainwindow.cpp:151
 #, kde-format
 msgid "Add Sieve Server..."
 msgstr "Додати сервер фільтрування…"
 
-#: sieveeditormainwindow.cpp:150
+#: sieveeditormainwindow.cpp:155
 #, kde-format
 msgid "Delete Script"
 msgstr "Вилучити скрипт"
 
-#: sieveeditormainwindow.cpp:156
+#: sieveeditormainwindow.cpp:161
 #, kde-format
 msgid "Create New Script..."
 msgstr "Створити новий скрипт…"
 
-#: sieveeditormainwindow.cpp:162
+#: sieveeditormainwindow.cpp:167
 #, kde-format
 msgid "Edit Script..."
 msgstr "Змінити скрипт…"
 
-#: sieveeditormainwindow.cpp:167
+#: sieveeditormainwindow.cpp:172
 #, kde-format
 msgid "Deactivate Script"
 msgstr "Вимкнути скрипт"
 
-#: sieveeditormainwindow.cpp:172
+#: sieveeditormainwindow.cpp:177
 #, kde-format
 msgid "Refresh List"
 msgstr "Оновити список"
 
-#: sieveeditormainwindow.cpp:178
+#: sieveeditormainwindow.cpp:183
 #, kde-format
 msgid "Go to Line..."
 msgstr "Перейти до рядка…"
 
-#: sieveeditormainwindow.cpp:195
+#: sieveeditormainwindow.cpp:200
 #, kde-format
 msgid "Import..."
 msgstr "Імпортувати…"
 
-#: sieveeditormainwindow.cpp:201
+#: sieveeditormainwindow.cpp:206
 #, kde-format
 msgid "Share..."
 msgstr "Оприлюднити…"
 
-#: sieveeditormainwindow.cpp:207
+#: sieveeditormainwindow.cpp:212
 #, kde-format
 msgid "Check Spelling..."
 msgstr "Перевірити правопис…"
 
-#: sieveeditormainwindow.cpp:213
+#: sieveeditormainwindow.cpp:218
 #, kde-format
 msgid "Check Syntax"
 msgstr "Перевірити синтаксис"
 
-#: sieveeditormainwindow.cpp:218
+#: sieveeditormainwindow.cpp:223
 #, kde-format
 msgid "Create Rules Graphically..."
 msgstr "Створити правила у графічному режимі…"
 
-#: sieveeditormainwindow.cpp:223
+#: sieveeditormainwindow.cpp:228
 #, kde-format
 msgid "Comment"
 msgstr "Закоментувати"
 
-#: sieveeditormainwindow.cpp:228
+#: sieveeditormainwindow.cpp:233
 #, kde-format
 msgid "Uncomment"
 msgstr "Розкоментувати"
 
-#: sieveeditormainwindow.cpp:256
+#: sieveeditormainwindow.cpp:261
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Закладки"
 
-#: sieveeditormainwindow.cpp:261
+#: sieveeditormainwindow.cpp:266
 #, kde-format
 msgid "Debug Sieve Script..."
 msgstr "Діагностика скрипту фільтрування…"
 
-#: sieveeditormainwindow.cpp:266
+#: sieveeditormainwindow.cpp:271
 #, kde-format
 msgid "Wordwrap"
 msgstr "Перенесення рядків"
 
-#: sieveeditormainwindow.cpp:275
+#: sieveeditormainwindow.cpp:280
 #, kde-format
 msgid "Import IMAP Settings..."
 msgstr "Імпортувати параметри IMAP…"
