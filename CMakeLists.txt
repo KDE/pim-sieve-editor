@@ -7,7 +7,7 @@ project( sieveeditor VERSION ${PIM_VERSION})
 set(RELEASE_SERVICE_VERSION "23.07.40")
 
 
-set(KF_MIN_VERSION "5.103.0")
+set(KF_MIN_VERSION "5.104.0")
 
 find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -39,7 +39,6 @@ if (QT_MAJOR_VERSION STREQUAL "6")
     set(KF_MIN_VERSION "5.240.0")
     set(KF_MAJOR_VERSION "6")
 else()
-    set(KF_MIN_VERSION "5.100.0")
     set(KF_MAJOR_VERSION "5")
 endif()
 
