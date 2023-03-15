@@ -117,7 +117,7 @@ target_link_libraries(libsieveeditor
     KF${KF_MAJOR_VERSION}::Bookmarks
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::XmlGui
-    KF5::PimCommon
+    KPim${KF_MAJOR_VERSION}::PimCommon
     KPim${KF_MAJOR_VERSION}::KSieveUi
     KPim${KF_MAJOR_VERSION}::KManageSieve
     ${libsieveeditor_userfeedback_LIB}
