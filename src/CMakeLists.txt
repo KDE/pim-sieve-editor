@@ -113,13 +113,13 @@ endif()
 
 target_link_libraries(libsieveeditor
     PRIVATE
-    KPim${KF_MAJOR_VERSION}::MailTransport
-    KF${KF_MAJOR_VERSION}::Bookmarks
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::XmlGui
-    KPim${KF_MAJOR_VERSION}::PimCommon
-    KPim${KF_MAJOR_VERSION}::KSieveUi
-    KPim${KF_MAJOR_VERSION}::KManageSieve
+    KPim6::MailTransport
+    KF6::Bookmarks
+    KF6::I18n
+    KF6::XmlGui
+    KPim6::PimCommon
+    KPim6::KSieveUi
+    KPim6::KManageSieve
     ${libsieveeditor_userfeedback_LIB}
     )
 target_link_libraries(libsieveeditor PRIVATE qt${QT_MAJOR_VERSION}keychain)
@@ -133,12 +133,12 @@ set(sieveeditor_SRCS main.cpp)
 add_executable(sieveeditor ${sieveeditor_SRCS} )
 
 target_link_libraries(sieveeditor
-    KF${KF_MAJOR_VERSION}::CoreAddons
-    KF${KF_MAJOR_VERSION}::Crash
+    KF6::CoreAddons
+    KF6::Crash
     libsieveeditor
-    KF${KF_MAJOR_VERSION}::XmlGui
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::DBusAddons
+    KF6::XmlGui
+    KF6::I18n
+    KF6::DBusAddons
     ${libsieveeditor_userfeedback_LIB}
     )
 

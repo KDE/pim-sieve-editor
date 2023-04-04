@@ -7,7 +7,7 @@ project( sieveeditor VERSION ${PIM_VERSION})
 set(RELEASE_SERVICE_VERSION "23.07.40")
 
 
-set(KF_MIN_VERSION "5.105.0")
+set(KF_MIN_VERSION "5.240.0")
 
 find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -34,14 +34,6 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(QT_REQUIRED_VERSION "6.4.0")
-    set(KF_MIN_VERSION "5.240.0")
-    set(KF_MAJOR_VERSION "6")
-else()
-    set(KF_MAJOR_VERSION "5")
-endif()
-
 # Do NOT add quote
 set(KDEPIM_DEV_VERSION alpha)
 
@@ -56,52 +48,43 @@ set(KMAILTRANSPORT_LIB_VERSION "5.23.40")
 set(KPIMTEXTEDIT_LIB_VERSION "5.23.40")
 
 set(KDEPIM_LIB_VERSION "${PIM_VERSION}")
-set(KDEPIM_LIB_SOVERSION "5")
+set(KDEPIM_LIB_SOVERSION "6")
 
 set(LIBKSIEVE_LIB_VERSION "5.23.40")
 set(PIMCOMMON_LIB_VERSION "5.23.40")
 set(KIMAP_LIB_VERSION "5.23.40")
 
 
-set(QT_REQUIRED_VERSION "5.15.2")
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(QT_REQUIRED_VERSION "6.4.0")
-endif()
-find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network)
+find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network)
 
-# Find KF5 package
-find_package(KF${KF_MAJOR_VERSION}DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}CoreAddons ${KF_MIN_VERSION} REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}Crash ${KF_MIN_VERSION} REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}Bookmarks ${KF_MIN_VERSION} REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}KIO ${KF_MIN_VERSION} REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}DocTools ${KF_MIN_VERSION})
-set_package_properties(KF${KF_MAJOR_VERSION}DocTools PROPERTIES DESCRIPTION
+# Find KF6 package
+find_package(KF6DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6CoreAddons ${KF_MIN_VERSION} REQUIRED)
+find_package(KF6Crash ${KF_MIN_VERSION} REQUIRED)
+find_package(KF6Bookmarks ${KF_MIN_VERSION} REQUIRED)
+find_package(KF6KIO ${KF_MIN_VERSION} REQUIRED)
+find_package(KF6DocTools ${KF_MIN_VERSION})
+set_package_properties(KF6DocTools PROPERTIES DESCRIPTION
     "Tools to generate documentation"
     TYPE OPTIONAL
 )
 
 
 # Find KdepimLibs Package
-find_package(KPim${KF_MAJOR_VERSION}TextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6TextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
 
-find_package(KPim${KF_MAJOR_VERSION}PimCommon ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}LibKSieve ${LIBKSIEVE_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6PimCommon ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6LibKSieve ${LIBKSIEVE_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 
-set(KUSERFEEDBACK_SUFFIX)
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(KUSERFEEDBACK_SUFFIX "Qt6")
-    find_package(KUserFeedback${KUSERFEEDBACK_SUFFIX} 1.2.1 CONFIG)
-    add_definitions(-DUSE_KUSERFEEDBACK_QT6)
-else()
-    find_package(KUserFeedback${KUSERFEEDBACK_SUFFIX} 1.2.0 CONFIG)
-endif()
+set(KUSERFEEDBACK_SUFFIX "Qt6")
+find_package(KUserFeedback${KUSERFEEDBACK_SUFFIX} 1.2.1 CONFIG)
+add_definitions(-DUSE_KUSERFEEDBACK_QT6)
 set_package_properties(KUserFeedback${KUSERFEEDBACK_SUFFIX} PROPERTIES DESCRIPTION "User Feedback lib" TYPE OPTIONAL PURPOSE "Allow to send Telemetry Information (optional).")
 
-find_package(Qt${QT_MAJOR_VERSION}Keychain CONFIG)
-set_package_properties(Qt${QT_MAJOR_VERSION}Keychain PROPERTIES
+find_package(Qt6Keychain CONFIG)
+set_package_properties(Qt6Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"
                                    URL "https://github.com/frankosterfeld/qtkeychain"
                                    TYPE REQUIRED)
@@ -120,7 +103,7 @@ endif()
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
-   find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
+   find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
 endif()
 add_subdirectory(src)
 if (BUILD_TESTING)
@@ -130,7 +113,7 @@ endif()
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 ki18n_install(po)
 
-if(KF${KF_MAJOR_VERSION}DocTools_FOUND)
+if(KF6DocTools_FOUND)
     kdoctools_install(po)
     add_subdirectory(doc)
 endif()
