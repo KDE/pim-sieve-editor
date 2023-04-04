@@ -78,10 +78,8 @@ find_package(KPim6PimCommon ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6LibKSieve ${LIBKSIEVE_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 
-set(KUSERFEEDBACK_SUFFIX "Qt6")
-find_package(KUserFeedback${KUSERFEEDBACK_SUFFIX} 1.2.1 CONFIG)
-add_definitions(-DUSE_KUSERFEEDBACK_QT6)
-set_package_properties(KUserFeedback${KUSERFEEDBACK_SUFFIX} PROPERTIES DESCRIPTION "User Feedback lib" TYPE OPTIONAL PURPOSE "Allow to send Telemetry Information (optional).")
+find_package(KUserFeedbackQt6 1.2.1 CONFIG)
+set_package_properties(KUserFeedbackQt6 PROPERTIES DESCRIPTION "User Feedback lib" TYPE OPTIONAL PURPOSE "Allow to send Telemetry Information (optional).")
 
 find_package(Qt6Keychain CONFIG)
 set_package_properties(Qt6Keychain PROPERTIES
