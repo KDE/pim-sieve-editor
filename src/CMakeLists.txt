@@ -122,7 +122,7 @@ target_link_libraries(libsieveeditor
     KPim6::KManageSieve
     ${libsieveeditor_userfeedback_LIB}
     )
-target_link_libraries(libsieveeditor PRIVATE qt${QT_MAJOR_VERSION}keychain)
+target_link_libraries(libsieveeditor PRIVATE qt6keychain)
 
 set_target_properties(libsieveeditor
     PROPERTIES OUTPUT_NAME sieveeditor VERSION ${KDEPIM_LIB_VERSION} SOVERSION ${KDEPIM_LIB_SOVERSION}
