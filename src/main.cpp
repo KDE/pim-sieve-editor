@@ -10,37 +10,20 @@
 #include <KCrash>
 #include <KDBusService>
 #include <KLocalizedString>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <Kdelibs4ConfigMigrator>
-#endif
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QTextStream>
 #ifdef WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
-#ifdef USE_KUSERFEEDBACK_QT6
 #include <KUserFeedbackQt6/Provider>
-#else
-#include <KUserFeedback/Provider>
-#endif
 #endif
 
 int main(int argc, char **argv)
 {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling, true);
-    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
-#endif
     QApplication app(argc, argv);
     app.setDesktopFileName(QStringLiteral("org.kde.sieveeditor"));
     KCrash::initialize();
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    Kdelibs4ConfigMigrator migrate(QStringLiteral("sieveeditor"));
-    migrate.setConfigFiles(QStringList() << QStringLiteral("sieveeditorrc") << QStringLiteral("sievetemplaterc"));
-    migrate.setUiFiles(QStringList() << QStringLiteral("sieveeditorui.rc"));
-    migrate.migrate();
-#endif
     KLocalizedString::setApplicationDomain("sieveeditor");
 
     KAboutData aboutData(QStringLiteral("sieveeditor"),

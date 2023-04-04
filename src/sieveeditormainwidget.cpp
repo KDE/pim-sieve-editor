@@ -57,9 +57,6 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
     KConfigGroup myGroup(KSharedConfig::openStateConfig(), mySieveEditorMainWidgetConfigGroupName);
     setSizes(myGroup.readEntry("mainSplitter", splitterSizes));
     updateStackedWidget();
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    connect(qApp, &QApplication::paletteChanged, this, &SieveEditorMainWidget::slotGeneralPaletteChanged);
-#endif
 }
 
 SieveEditorMainWidget::~SieveEditorMainWidget()
@@ -715,10 +712,8 @@ bool SieveEditorMainWidget::isTextEditor() const
 
 bool SieveEditorMainWidget::event(QEvent *e)
 {
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     if (e->type() == QEvent::ApplicationPaletteChange) {
         slotGeneralPaletteChanged();
     }
-#endif
     return QSplitter::event(e);
 }
