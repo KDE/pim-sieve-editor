@@ -30,7 +30,7 @@ void ServerSieveListWidget::readConfig()
     job->start();
 }
 
-void ServerSieveListWidget::slotReadServerSieveConfigDone(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig)
+void ServerSieveListWidget::slotReadServerSieveConfigDone(const QList<SieveEditorUtil::SieveServerConfig> &lstConfig)
 {
     for (const SieveEditorUtil::SieveServerConfig &conf : lstConfig) {
         auto item = new ServerSieveListWidgetItem(this);
@@ -40,7 +40,7 @@ void ServerSieveListWidget::slotReadServerSieveConfigDone(const QVector<SieveEdi
 
 void ServerSieveListWidget::writeConfig()
 {
-    QVector<SieveEditorUtil::SieveServerConfig> lstServerConfig;
+    QList<SieveEditorUtil::SieveServerConfig> lstServerConfig;
     for (int i = 0; i < count(); ++i) {
         auto serverSieveItem = static_cast<ServerSieveListWidgetItem *>(item(i));
         if (serverSieveItem) {

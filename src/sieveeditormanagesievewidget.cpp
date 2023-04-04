@@ -60,7 +60,7 @@ void SieveEditorManageSieveWidget::updateSieveSettings()
     job->start();
 }
 
-void SieveEditorManageSieveWidget::slotReadServerSieveConfigDone(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig)
+void SieveEditorManageSieveWidget::slotReadServerSieveConfigDone(const QList<SieveEditorUtil::SieveServerConfig> &lstConfig)
 {
     mSieveServerSettings = lstConfig;
     Q_EMIT updateSieveSettingsDone();

@@ -63,7 +63,7 @@ private:
     void slotUserServerNameChanged();
     void slotTest();
 
-    void slotFinished(const QVector<int> &testResult);
+    void slotFinished(const QList<int> &testResult);
     void slotEncryptionRadioChanged();
 
 private:

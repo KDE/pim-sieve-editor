@@ -7,7 +7,7 @@
 #pragma once
 
 #include <QLabel>
-#include <QVector>
+#include <QList>
 
 class SieveEditorEmptyTabWidgetLabel : public QLabel
 {
@@ -30,6 +30,6 @@ private:
         QString menuInfo;
     };
 
-    void addInfo(QString &placeholderText, const QVector<placeHolderTextInfo> &map);
+    void addInfo(QString &placeholderText, const QList<placeHolderTextInfo> &map);
     void init();
 };

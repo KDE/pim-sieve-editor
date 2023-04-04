@@ -18,7 +18,7 @@ public:
 
     void start();
 Q_SIGNALS:
-    void finished(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig);
+    void finished(const QList<SieveEditorUtil::SieveServerConfig> &lstConfig);
     void loadNextConfig();
 
 private:
@@ -27,7 +27,7 @@ private:
     void loadImapAccountSettings();
     void readSieveServerPasswordFinished(QKeychain::Job *baseJob);
     void readImapPasswordFinished(QKeychain::Job *baseJob);
-    QVector<SieveEditorUtil::SieveServerConfig> mLstConfig;
+    QList<SieveEditorUtil::SieveServerConfig> mLstConfig;
     SieveEditorUtil::SieveServerConfig mCurrentSieveServerConfig;
     QStringList mGroupsConfigs;
 };

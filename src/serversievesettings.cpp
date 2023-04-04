@@ -298,7 +298,7 @@ void ServerSieveSettings::slotTest()
     mServerTest->start();
 }
 
-void ServerSieveSettings::slotFinished(const QVector<int> &testResult)
+void ServerSieveSettings::slotFinished(const QList<int> &testResult)
 {
     qCDebug(SIEVEEDITOR_LOG) << testResult;
 
@@ -368,7 +368,7 @@ void ServerSieveSettings::slotSafetyChanged()
         return;
     }
 
-    QVector<int> protocols;
+    QList<int> protocols;
 
     switch (ui->safeImapGroup->checkedId()) {
     case KSieveUi::SieveImapAccountSettings::Unencrypted:

@@ -73,7 +73,7 @@ bool SieveEditorUtil::SieveServerConfig::operator==(const SieveEditorUtil::Sieve
     return result;
 }
 
-void SieveEditorUtil::writeServerSieveConfig(const QVector<SieveServerConfig> &lstConfig)
+void SieveEditorUtil::writeServerSieveConfig(const QList<SieveServerConfig> &lstConfig)
 {
     KSharedConfigPtr cfg = KSharedConfig::openConfig();
     const QRegularExpression re(QStringLiteral("^ServerSieve (.+)$"));

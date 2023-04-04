@@ -38,7 +38,7 @@ public Q_SLOTS:
     void modifyServerConfig();
 
 private:
-    void slotReadServerSieveConfigDone(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig);
+    void slotReadServerSieveConfigDone(const QList<SieveEditorUtil::SieveServerConfig> &lstConfig);
     void deletePasswords();
     QStringList mNeedToRemovePasswordInWallet;
 };

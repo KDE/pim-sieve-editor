@@ -21,6 +21,6 @@ protected:
     void updateSieveSettings() override;
 
 private:
-    void slotReadServerSieveConfigDone(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig);
-    QVector<SieveEditorUtil::SieveServerConfig> mSieveServerSettings;
+    void slotReadServerSieveConfigDone(const QList<SieveEditorUtil::SieveServerConfig> &lstConfig);
+    QList<SieveEditorUtil::SieveServerConfig> mSieveServerSettings;
 };

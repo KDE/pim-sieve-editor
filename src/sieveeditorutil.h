@@ -38,7 +38,7 @@ struct LIBSIEVEEDITOR_EXPORT SieveServerConfig {
     bool useImapCustomServer = false;
 };
 
-void writeServerSieveConfig(const QVector<SieveEditorUtil::SieveServerConfig> &lstConfig);
+void writeServerSieveConfig(const QList<SieveEditorUtil::SieveServerConfig> &lstConfig);
 void addServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf);
 void writeSieveSettings(const KSharedConfigPtr &cfg, const SieveEditorUtil::SieveServerConfig &conf, int index);
 Q_REQUIRED_RESULT QString sievePasswordIdentifier(const QString &userName, const QString &serverName);
