@@ -12,15 +12,5 @@ Dependencies:
     'pim/pimcommon' : '@same'
     'third-party/qtkeychain': '@latest'
 
-- 'on': ['Linux/Qt6', 'FreeBSD/Qt6', 'Windows/Qt6']
-  'require':
-    'frameworks/extra-cmake-modules': '@latest-kf6'
-    'pim/kimap' : '@latest-kf6'
-    'pim/kmailtransport' : '@latest-kf6'
-    'pim/kpimtextedit' : '@latest-kf6'
-    'pim/libksieve' : '@latest-kf6'
-    'pim/pimcommon' : '@latest-kf6'
-    'third-party/qtkeychain': '@latest-kf6'
-
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD' ]      
