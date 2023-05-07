@@ -21,6 +21,7 @@
 #include <PimCommon/NetworkManager>
 
 #include <KActionCollection>
+#include <KColorSchemeMenu>
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KStandardAction>
@@ -281,7 +282,7 @@ void SieveEditorMainWindow::setupActions()
     connect(mShowFullScreenAction, &QAction::toggled, this, &SieveEditorMainWindow::slotFullScreen);
 
     auto manager = new KColorSchemeManager(this);
-    ac->addAction(QStringLiteral("colorscheme_menu"), manager->createSchemeSelectionMenu(this));
+    ac->addAction(QStringLiteral("colorscheme_menu"), KColorSchemeMenu::createMenu(manager, this));
 }
 
 void SieveEditorMainWindow::slotImportImapSettings()
