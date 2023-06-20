@@ -177,13 +177,13 @@ msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
 "server.</b></qt>"
 msgstr ""
-"<qt><b>Non se admite ningún tipo de seguranza. Non se recomenda ligar con "
+"<qt><b>Non se admite ningún tipo de seguridade. Non se recomenda ligar con "
 "este servidor.</b></qt>"
 
 #: serversievesettings.cpp:333
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
-msgstr "<qt><b>Non é posíbel empregar este servidor.</b></qt>"
+msgstr "<qt><b>Non é posíbel usar este servidor.</b></qt>"
 
 #: serversievesettingsdialog.cpp:25
 #, kde-format
@@ -541,9 +541,9 @@ msgid ""
 "server can only be accessed via port 4190."
 msgstr ""
 "O porto do servidor cambiou cando ManageSieve se converteu nun estándar de "
-"RFC completo. As realizacións antigas do servidor empregan aínda o porto "
-"2000, mentres que aos servidores que cumpren o novo estándar só é posíbel "
-"acceder a través do porto 4190."
+"RFC completo. As realizacións antigas do servidor usan aínda o porto 2000, "
+"mentres que aos servidores que cumpren o novo estándar só é posíbel acceder "
+"a través do porto 4190."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (text), widget (QLabel, label_13)
