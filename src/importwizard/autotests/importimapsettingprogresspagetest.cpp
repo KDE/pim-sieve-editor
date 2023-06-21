@@ -33,3 +33,5 @@ void ImportImapSettingProgressPageTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ImportImapSettingProgressPageTest)
+
+#include "moc_importimapsettingprogresspagetest.cpp"

@@ -65,3 +65,5 @@ void SieveEditorManageSieveWidget::slotReadServerSieveConfigDone(const QList<Sie
     mSieveServerSettings = lstConfig;
     Q_EMIT updateSieveSettingsDone();
 }
+
+#include "moc_sieveeditormanagesievewidget.cpp"

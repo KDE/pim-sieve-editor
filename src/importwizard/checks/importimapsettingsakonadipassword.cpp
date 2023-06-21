@@ -65,3 +65,5 @@ void ImportImapSettingsAkonadiPassword::importPasswords(const SieveEditorUtil::S
     readJob->setKey(mFileName);
     readJob->start();
 }
+
+#include "moc_importimapsettingsakonadipassword.cpp"

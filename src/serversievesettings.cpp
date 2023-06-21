@@ -400,3 +400,5 @@ void ServerSieveSettings::slotSafetyChanged()
     mServerTest->deleteLater();
     mServerTest = nullptr;
 }
+
+#include "moc_serversievesettings.cpp"

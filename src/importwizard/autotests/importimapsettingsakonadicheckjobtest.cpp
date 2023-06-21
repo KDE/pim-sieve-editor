@@ -181,3 +181,5 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings()
 }
 
 QTEST_MAIN(ImportImapSettingsAkonadiCheckJobTest)
+
+#include "moc_importimapsettingsakonadicheckjobtest.cpp"

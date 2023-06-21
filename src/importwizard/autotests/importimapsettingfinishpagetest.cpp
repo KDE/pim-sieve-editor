@@ -35,3 +35,5 @@ void ImportImapSettingFinishPageTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ImportImapSettingFinishPageTest)
+
+#include "moc_importimapsettingfinishpagetest.cpp"

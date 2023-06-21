@@ -33,3 +33,5 @@ void ImportImapSettingFinishPage::addSummary(const QString &name)
 {
     mTextEdit->append(name);
 }
+
+#include "moc_importimapsettingfinishpage.cpp"

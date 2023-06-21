@@ -290,3 +290,5 @@ QString ImportImapSettingsThunderbirdCheckJob::name() const
 {
     return i18n("Thunderbird IMAP Settings");
 }
+
+#include "moc_importimapsettingsthunderbirdcheckjob.cpp"

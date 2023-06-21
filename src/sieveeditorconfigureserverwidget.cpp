@@ -72,3 +72,5 @@ void SieveEditorConfigureServerWidget::slotItemSelectionChanged()
     ui->modifyServer->setEnabled(hasItemSelected);
     ui->removeServer->setEnabled(hasItemSelected);
 }
+
+#include "moc_sieveeditorconfigureserverwidget.cpp"

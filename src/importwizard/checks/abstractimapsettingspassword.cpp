@@ -19,3 +19,5 @@ void AbstractImapSettingsPassword::importPasswords(const SieveEditorUtil::SieveS
     Q_UNUSED(filename)
     Q_UNUSED(reuseImapSettings)
 }
+
+#include "moc_abstractimapsettingspassword.cpp"

@@ -148,3 +148,5 @@ void ImportImapSettingWizard::slotHelpClicked()
 {
     PimCommon::Util::invokeHelp(QStringLiteral("sieveeditor/index.html"));
 }
+
+#include "moc_importimapsettingwizard.cpp"

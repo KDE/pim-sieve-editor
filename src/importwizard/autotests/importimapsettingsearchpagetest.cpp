@@ -48,3 +48,5 @@ void ImportImapSettingSearchPageTest::shouldAddCheckPrograms()
 }
 
 QTEST_MAIN(ImportImapSettingSearchPageTest)
+
+#include "moc_importimapsettingsearchpagetest.cpp"

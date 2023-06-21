@@ -390,3 +390,5 @@ QUrl SieveEditorPageWidget::currentHelpUrl() const
 {
     return mSieveEditorWidget->currentHelpUrl();
 }
+
+#include "moc_sieveeditorpagewidget.cpp"

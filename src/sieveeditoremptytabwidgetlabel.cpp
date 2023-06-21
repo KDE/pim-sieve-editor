@@ -45,3 +45,5 @@ void SieveEditorEmptyTabWidgetLabel::addInfo(QString &placeholderText, const QLi
                                .arg(map.at(i).text, map.at(i).menuInfo);
     }
 }
+
+#include "moc_sieveeditoremptytabwidgetlabel.cpp"

@@ -36,3 +36,5 @@ SieveEditorMainWidget *SieveEditorCentralWidget::sieveEditorMainWidget() const
 {
     return mSieveEditorMainWidget;
 }
+
+#include "moc_sieveeditorcentralwidget.cpp"

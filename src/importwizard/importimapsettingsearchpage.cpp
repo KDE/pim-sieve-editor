@@ -63,3 +63,5 @@ void ImportImapSettingSearchPage::slotItemChanged()
     }
     Q_EMIT needToImportSettings(hasSelectedItem);
 }
+
+#include "moc_importimapsettingsearchpage.cpp"

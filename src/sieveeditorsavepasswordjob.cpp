@@ -81,3 +81,5 @@ void SieveEditorSavePasswordJob::setPassword(const QString &password)
 {
     mPassword = password;
 }
+
+#include "moc_sieveeditorsavepasswordjob.cpp"

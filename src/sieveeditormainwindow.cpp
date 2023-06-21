@@ -461,3 +461,5 @@ QUrl SieveEditorMainWindow::currentHelpUrl() const
 {
     return mMainWidget->sieveEditorMainWidget()->currentHelpUrl();
 }
+
+#include "moc_sieveeditormainwindow.cpp"

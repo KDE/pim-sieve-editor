@@ -717,3 +717,5 @@ bool SieveEditorMainWidget::event(QEvent *e)
     }
     return QSplitter::event(e);
 }
+
+#include "moc_sieveeditormainwidget.cpp"

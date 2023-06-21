@@ -60,3 +60,5 @@ QUrl SieveEditorBookmarks::currentUrl() const
 {
     return mMainWindow->currentHelpUrl();
 }
+
+#include "moc_sieveeditorbookmarks.cpp"

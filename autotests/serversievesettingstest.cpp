@@ -87,3 +87,5 @@ void ServerSieveSettingsTest::shouldEmitSignalWithValueTrue()
 }
 
 QTEST_MAIN(ServerSieveSettingsTest)
+
+#include "moc_serversievesettingstest.cpp"

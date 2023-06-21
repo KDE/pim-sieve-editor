@@ -29,3 +29,5 @@ void ImportImapSettingNoFoundPageTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ImportImapSettingNoFoundPageTest)
+
+#include "moc_importimapsettingnofoundpagetest.cpp"

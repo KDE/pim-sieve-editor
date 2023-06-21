@@ -123,3 +123,5 @@ void ServerSieveListWidgetItem::setServerConfig(const SieveEditorUtil::SieveServ
     setText(i18nc("server name (username)", "%1 (%2)", conf.sieveSettings.serverName, conf.sieveSettings.userName));
     mServerConfig = conf;
 }
+
+#include "moc_serversievelistwidget.cpp"

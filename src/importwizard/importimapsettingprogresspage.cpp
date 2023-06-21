@@ -72,3 +72,5 @@ void ImportImapSettingProgressPage::slotImportSettingsDone(const QString &name, 
     SieveEditorUtil::addServerSieveConfig(settings);
     mSettingsFound = true;
 }
+
+#include "moc_importimapsettingprogresspage.cpp"

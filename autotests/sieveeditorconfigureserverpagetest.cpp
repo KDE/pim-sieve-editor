@@ -46,3 +46,5 @@ void SieveEditorConfigureServerPageTest::shouldEmitSignalWhenClickOnImportSieveB
 }
 
 QTEST_MAIN(SieveEditorConfigureServerPageTest)
+
+#include "moc_sieveeditorconfigureserverpagetest.cpp"

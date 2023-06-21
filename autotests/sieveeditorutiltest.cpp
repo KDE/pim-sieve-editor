@@ -74,3 +74,5 @@ void SieveEditorUtilTest::shouldBeEqual()
 }
 
 QTEST_APPLESS_MAIN(SieveEditorUtilTest)
+
+#include "moc_sieveeditorutiltest.cpp"

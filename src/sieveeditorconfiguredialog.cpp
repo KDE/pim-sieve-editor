@@ -125,3 +125,5 @@ void SieveEditorConfigureDialog::writeConfig()
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }
+
+#include "moc_sieveeditorconfiguredialog.cpp"

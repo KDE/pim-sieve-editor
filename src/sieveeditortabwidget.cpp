@@ -81,3 +81,5 @@ void SieveEditorTabWidget::slotCloseCurrentTab()
         Q_EMIT tabCloseRequestedIndex(curIndex);
     }
 }
+
+#include "moc_sieveeditortabwidget.cpp"

@@ -32,3 +32,5 @@ SieveEditorConfigureServerPage::SieveEditorConfigureServerPage(QWidget *parent)
 }
 
 SieveEditorConfigureServerPage::~SieveEditorConfigureServerPage() = default;
+
+#include "moc_sieveeditorconfigureserverpage.cpp"

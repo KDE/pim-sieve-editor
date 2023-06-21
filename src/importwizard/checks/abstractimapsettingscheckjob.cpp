@@ -29,3 +29,5 @@ void AbstractImapSettingsCheckJob::checkNoSettingsImported()
     }
     deleteLater();
 }
+
+#include "moc_abstractimapsettingscheckjob.cpp"

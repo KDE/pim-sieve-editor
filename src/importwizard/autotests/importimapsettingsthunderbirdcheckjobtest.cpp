@@ -154,3 +154,5 @@ void ImportImapSettingsThunderbirdCheckJobTest::shouldImportSieveSettings()
 }
 
 QTEST_MAIN(ImportImapSettingsThunderbirdCheckJobTest)
+
+#include "moc_importimapsettingsthunderbirdcheckjobtest.cpp"

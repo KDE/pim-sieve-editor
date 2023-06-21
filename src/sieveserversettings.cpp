@@ -18,3 +18,5 @@ SieveServerSettings *SieveServerSettings::self()
     static SieveServerSettings s_self;
     return &s_self;
 }
+
+#include "moc_sieveserversettings.cpp"

@@ -157,3 +157,5 @@ void ImportImapSettingsAkonadiCheckJob::setImapSettingsPassword(AbstractImapSett
     mPasswordImporter = passwordImporter;
     connect(mPasswordImporter, &AbstractImapSettingsPassword::importPasswordDone, this, &ImportImapSettingsAkonadiCheckJob::slotImportNextServerSieveDone);
 }
+
+#include "moc_importimapsettingsakonadicheckjob.cpp"

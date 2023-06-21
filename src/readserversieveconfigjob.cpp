@@ -121,3 +121,5 @@ void ReadServerSieveConfigJob::slotReadNextConfig()
         loadSettings(conf);
     }
 }
+
+#include "moc_readserversieveconfigjob.cpp"

@@ -26,3 +26,5 @@ ImportImapSettingNoFoundPage::ImportImapSettingNoFoundPage(QWidget *parent)
 }
 
 ImportImapSettingNoFoundPage::~ImportImapSettingNoFoundPage() = default;
+
+#include "moc_importimapsettingnofoundpage.cpp"
