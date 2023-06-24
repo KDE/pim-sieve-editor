@@ -241,7 +241,7 @@ msgstr "Retirar un servidor de Sieve"
 #: sieveeditoremptytabwidgetlabel.cpp:25
 #, kde-format
 msgid "Import script:"
-msgstr "Importar un script:"
+msgstr "Importar un guión:"
 
 #: sieveeditoremptytabwidgetlabel.cpp:25
 #, kde-format
@@ -258,18 +258,18 @@ msgstr "Crear regras graficamente:"
 #, kde-format
 msgctxt "Action is from menu tools, submenu autogenerate script"
 msgid "Tools > Autogenerate script"
-msgstr "Ferramentas → Xerar o script automaticamente"
+msgstr "Ferramentas → Xerar o guión automaticamente"
 
 #: sieveeditoremptytabwidgetlabel.cpp:27
 #, kde-format
 msgid "Debug a script:"
-msgstr "Depurar un script:"
+msgstr "Depurar un guión:"
 
 #: sieveeditoremptytabwidgetlabel.cpp:27
 #, kde-format
 msgctxt "These action in from menu tools submenu debug sieve script"
 msgid "Tools > Debug Sieve Script"
-msgstr "Ferramentas → Depurar un script de Sieve"
+msgstr "Ferramentas → Depurar un guión de Sieve"
 
 #: sieveeditoremptytabwidgetlabel.cpp:28
 #, kde-format
@@ -285,12 +285,12 @@ msgstr "Ferramentas → Importar unha configuración de IMAP"
 #: sieveeditormainwidget.cpp:609
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
-msgstr "Modificouse o script. Quere gardalo antes de pechar?"
+msgstr "Modificouse o guión. Quere gardalo antes de pechar?"
 
 #: sieveeditormainwidget.cpp:610
 #, kde-format
 msgid "Close script"
-msgstr "Pechar o script"
+msgstr "Pechar o guión"
 
 #: sieveeditormainwindow.cpp:124
 #, kde-format
@@ -315,22 +315,22 @@ msgstr "Engadir un servidor de Sieve…"
 #: sieveeditormainwindow.cpp:155
 #, kde-format
 msgid "Delete Script"
-msgstr "Eliminar o script"
+msgstr "Eliminar o guión"
 
 #: sieveeditormainwindow.cpp:161
 #, kde-format
 msgid "Create New Script..."
-msgstr "Crear un novo script…"
+msgstr "Crear un novo guión…"
 
 #: sieveeditormainwindow.cpp:167
 #, kde-format
 msgid "Edit Script..."
-msgstr "Editar o script…"
+msgstr "Editar o guión…"
 
 #: sieveeditormainwindow.cpp:172
 #, kde-format
 msgid "Deactivate Script"
-msgstr "Desactivar o script"
+msgstr "Desactivar o guión"
 
 #: sieveeditormainwindow.cpp:177
 #, kde-format
@@ -386,7 +386,7 @@ msgstr "&Marcadores"
 #: sieveeditormainwindow.cpp:266
 #, kde-format
 msgid "Debug Sieve Script..."
-msgstr "Depurar o script de Sieve…"
+msgstr "Depurar o guión de Sieve…"
 
 #: sieveeditormainwindow.cpp:271
 #, kde-format
@@ -411,17 +411,17 @@ msgstr "(desactivado) %1"
 #: sieveeditorpagewidget.cpp:42
 #, kde-format
 msgid "Uploading script to server for checking it, please wait..."
-msgstr "Enviando o script ao servidor para revisalo, agarde…"
+msgstr "Enviando o guión ao servidor para revisalo, agarde…"
 
 #: sieveeditorpagewidget.cpp:135
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
-msgstr "Enviouse o script de Sieve."
+msgstr "Enviouse o guión de Sieve."
 
 #: sieveeditorpagewidget.cpp:135
 #, kde-format
 msgid "Sieve Script Upload"
-msgstr "Envío do script de Sieve"
+msgstr "Envío do guión de Sieve"
 
 #: sieveeditorpagewidget.cpp:148
 #, kde-format
@@ -430,7 +430,7 @@ msgid ""
 "The server responded:\n"
 "%1"
 msgstr ""
-"Enviar o script de Sieve fallou.\n"
+"Enviar o guión de Sieve fallou.\n"
 "O servidor respondeu:\n"
 "%1"
 
@@ -445,23 +445,23 @@ msgid ""
 "Uploading the Sieve script failed.\n"
 "unknown reason\n"
 msgstr ""
-"O envío do script de Sieve fallou.\n"
+"O envío do guión de Sieve fallou.\n"
 "Descoñécese o motivo.\n"
 
 #: sieveeditorpagewidget.cpp:166
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
-msgstr "O script «%1» é novo. Quere gardalo?"
+msgstr "O guión «%1» é novo. Quere gardalo?"
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
 #, kde-format
 msgid "Save Script"
-msgstr "Gardar o script"
+msgstr "Gardar o guión"
 
 #: sieveeditorpagewidget.cpp:179
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
-msgstr "Cambiouse o script «%1». Quere gardalo?"
+msgstr "Cambiouse o guión «%1». Quere gardalo?"
 
 #: sieveeditortabwidget.cpp:43 sieveeditortabwidget.cpp:69
 #, kde-format
