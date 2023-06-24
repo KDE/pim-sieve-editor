@@ -59,7 +59,7 @@
   <summary xml:lang="eu">E-posta iragazteko «Sieve» (bahe) gidoi editorea</summary>
   <summary xml:lang="fi">Sieve-komentosarjamuokkain</summary>
   <summary xml:lang="fr">Éditeur de scripts « Sieve » de filtrage de courriels</summary>
-  <summary xml:lang="gl">Editor de scripts de Sieve para filtrar mensaxes de correo electrónico</summary>
+  <summary xml:lang="gl">Editor de guións de Sieve para filtrar mensaxes de correo electrónico</summary>
   <summary xml:lang="hu">Szerkesztő e-mailszűrő Sieve szkriptekhez</summary>
   <summary xml:lang="ia">Editor (redactor) per scripts de Sieve de filtro de e-posta </summary>
   <summary xml:lang="id">Pengedit untuk skrip Sieve filter email</summary>
@@ -133,7 +133,7 @@
     <p xml:lang="eu">«SieveEditor»eak «sieve» (bahe) gidoiak editatzeko, sortzeko, ezabatzeko aukera ematen du.</p>
     <p xml:lang="fi">SieveEditorilla voit luoda, muokata ja poista Sieve-komentojonoja.</p>
     <p xml:lang="fr">SieveEditor permet de créer, de modifier et de supprimer des scripts sieve.</p>
-    <p xml:lang="gl">SieveEditor permite editar, crear e eliminar scripts de filtro.</p>
+    <p xml:lang="gl">SieveEditor permite editar, crear e eliminar guións de filtro.</p>
     <p xml:lang="hu">A SieveEditor lehetővé teszi Sieve szkriptek szerkesztését, létrehozását és törlését.</p>
     <p xml:lang="ia">SieveEditor te permitte modificart, crear, deler scripts de sieve.</p>
     <p xml:lang="id">SieveEditor memungkinkan untuk edit, cipta, hapus skrip sieve.</p>
