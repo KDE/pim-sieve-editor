@@ -80,9 +80,9 @@ ServerSieveSettings::ServerSieveSettings(QWidget *parent)
     ui->password->setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
     ui->imapPassword->setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
 
-    ui->safeImapGroup->setId(ui->noRadio, KSieveUi::SieveImapAccountSettings::Unencrypted);
-    ui->safeImapGroup->setId(ui->sslRadio, KSieveUi::SieveImapAccountSettings::SSLorTLS);
-    ui->safeImapGroup->setId(ui->tlsRadio, KSieveUi::SieveImapAccountSettings::STARTTLS);
+    ui->safeImapGroup->setId(ui->noRadio, KSieveCore::SieveImapAccountSettings::Unencrypted);
+    ui->safeImapGroup->setId(ui->sslRadio, KSieveCore::SieveImapAccountSettings::SSLorTLS);
+    ui->safeImapGroup->setId(ui->tlsRadio, KSieveCore::SieveImapAccountSettings::STARTTLS);
 
     connect(ui->testButton, &QPushButton::pressed, this, &ServerSieveSettings::slotTest);
 
@@ -200,14 +200,14 @@ void ServerSieveSettings::setImapPassword(const QString &pass)
     ui->imapPassword->setPassword(pass);
 }
 
-void ServerSieveSettings::setAuthenticationType(KSieveUi::SieveImapAccountSettings::AuthenticationMode type)
+void ServerSieveSettings::setAuthenticationType(KSieveCore::SieveImapAccountSettings::AuthenticationMode type)
 {
     setCurrentAuthMode(ui->imapAuthenticationCombo, static_cast<MailTransport::Transport::EnumAuthenticationType>(type));
 }
 
-KSieveUi::SieveImapAccountSettings::AuthenticationMode ServerSieveSettings::authenticationType() const
+KSieveCore::SieveImapAccountSettings::AuthenticationMode ServerSieveSettings::authenticationType() const
 {
-    return static_cast<KSieveUi::SieveImapAccountSettings::AuthenticationMode>(getCurrentAuthMode(ui->imapAuthenticationCombo));
+    return static_cast<KSieveCore::SieveImapAccountSettings::AuthenticationMode>(getCurrentAuthMode(ui->imapAuthenticationCombo));
 }
 
 void ServerSieveSettings::setServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf)
@@ -256,7 +256,7 @@ SieveEditorUtil::SieveServerConfig ServerSieveSettings::serverSieveConfig() cons
     if (ui->safeImap->isChecked()) {
         conf.sieveImapAccountSettings.setPort(imapPort());
         conf.sieveImapAccountSettings.setAuthenticationType(authenticationType());
-        conf.sieveImapAccountSettings.setEncryptionMode(static_cast<KSieveUi::SieveImapAccountSettings::EncryptionMode>(ui->safeImapGroup->checkedId()));
+        conf.sieveImapAccountSettings.setEncryptionMode(static_cast<KSieveCore::SieveImapAccountSettings::EncryptionMode>(ui->safeImapGroup->checkedId()));
     }
     return conf;
 }
@@ -344,11 +344,11 @@ void ServerSieveSettings::slotFinished(const QList<int> &testResult)
 void ServerSieveSettings::slotEncryptionRadioChanged()
 {
     switch (ui->safeImapGroup->checkedId()) {
-    case KSieveUi::SieveImapAccountSettings::Unencrypted:
-    case KSieveUi::SieveImapAccountSettings::STARTTLS:
+    case KSieveCore::SieveImapAccountSettings::Unencrypted:
+    case KSieveCore::SieveImapAccountSettings::STARTTLS:
         ui->imapPort->setValue(143);
         break;
-    case KSieveUi::SieveImapAccountSettings::SSLorTLS:
+    case KSieveCore::SieveImapAccountSettings::SSLorTLS:
         ui->imapPort->setValue(993);
         break;
     default:
@@ -371,15 +371,15 @@ void ServerSieveSettings::slotSafetyChanged()
     QList<int> protocols;
 
     switch (ui->safeImapGroup->checkedId()) {
-    case KSieveUi::SieveImapAccountSettings::Unencrypted:
+    case KSieveCore::SieveImapAccountSettings::Unencrypted:
         qCDebug(SIEVEEDITOR_LOG) << "safeImapGroup: unencrypted";
         protocols = mServerTest->normalProtocols();
         break;
-    case KSieveUi::SieveImapAccountSettings::SSLorTLS:
+    case KSieveCore::SieveImapAccountSettings::SSLorTLS:
         protocols = mServerTest->secureProtocols();
         qCDebug(SIEVEEDITOR_LOG) << "safeImapGroup: SSL";
         break;
-    case KSieveUi::SieveImapAccountSettings::STARTTLS:
+    case KSieveCore::SieveImapAccountSettings::STARTTLS:
         protocols = mServerTest->tlsProtocols();
         qCDebug(SIEVEEDITOR_LOG) << "safeImapGroup: starttls";
         break;

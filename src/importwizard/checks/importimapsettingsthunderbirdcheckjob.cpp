@@ -190,15 +190,15 @@ void ImportImapSettingsThunderbirdCheckJob::encryption(SieveEditorUtil::SieveSer
         switch (socketType) {
         case 0:
             // None
-            config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::Unencrypted);
+            config.sieveImapAccountSettings.setEncryptionMode(KSieveCore::SieveImapAccountSettings::EncryptionMode::Unencrypted);
             break;
         case 2:
             // STARTTLS
-            config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::STARTTLS);
+            config.sieveImapAccountSettings.setEncryptionMode(KSieveCore::SieveImapAccountSettings::EncryptionMode::STARTTLS);
             break;
         case 3:
             // SSL/TLS
-            config.sieveImapAccountSettings.setEncryptionMode(KSieveUi::SieveImapAccountSettings::EncryptionMode::SSLorTLS);
+            config.sieveImapAccountSettings.setEncryptionMode(KSieveCore::SieveImapAccountSettings::EncryptionMode::SSLorTLS);
             break;
         default:
             qCDebug(SIEVEEDITOR_LOG) << "Unknown encryption mode " << socketType;
@@ -216,23 +216,23 @@ void ImportImapSettingsThunderbirdCheckJob::addAuth(SieveEditorUtil::SieveServer
         if (found) {
             switch (authMethod) {
             case 0:
-                config.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::Plain);
+                config.sieveImapAccountSettings.setAuthenticationType(KSieveCore::SieveImapAccountSettings::Plain);
                 break;
             case 4: // Encrypted password ???
-                config.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::Login);
+                config.sieveImapAccountSettings.setAuthenticationType(KSieveCore::SieveImapAccountSettings::Login);
                 qCDebug(SIEVEEDITOR_LOG) << " authmethod == encrypt password";
                 break;
             case 5: // GSSAPI
-                config.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::GSSAPI);
+                config.sieveImapAccountSettings.setAuthenticationType(KSieveCore::SieveImapAccountSettings::GSSAPI);
                 break;
             case 6: // NTLM
-                config.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::NTLM);
+                config.sieveImapAccountSettings.setAuthenticationType(KSieveCore::SieveImapAccountSettings::NTLM);
                 break;
             case 7: // TLS
                 qCDebug(SIEVEEDITOR_LOG) << " authmethod method == TLS"; //????
                 break;
             case 10: // OAuth2
-                config.sieveImapAccountSettings.setAuthenticationType(KSieveUi::SieveImapAccountSettings::XOAuth2);
+                config.sieveImapAccountSettings.setAuthenticationType(KSieveCore::SieveImapAccountSettings::XOAuth2);
                 qCDebug(SIEVEEDITOR_LOG) << " authmethod method == OAuth2"; //????
                 break;
             default:

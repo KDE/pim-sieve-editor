@@ -6,7 +6,7 @@
 
 #include "sieveeditorpagewidget.h"
 #include "sieveeditorglobalconfig.h"
-#include <KSieveUi/CheckScriptJob>
+#include <KSieveCore/CheckScriptJob>
 
 #include <KManageSieve/SieveJob>
 
@@ -41,8 +41,8 @@ void SieveEditorPageWidget::slotCheckSyntaxClicked()
     }
     mSieveEditorWidget->addNormalMessage(i18n("Uploading script to server for checking it, please wait..."));
 
-    auto checkScriptJob = new KSieveUi::CheckScriptJob(this);
-    connect(checkScriptJob, &KSieveUi::CheckScriptJob::finished, this, &SieveEditorPageWidget::slotCheckScriptJobFinished);
+    auto checkScriptJob = new KSieveCore::CheckScriptJob(this);
+    connect(checkScriptJob, &KSieveCore::CheckScriptJob::finished, this, &SieveEditorPageWidget::slotCheckScriptJobFinished);
     checkScriptJob->setUrl(mCurrentURL);
     checkScriptJob->setIsActive(mWasActive);
     checkScriptJob->setCurrentScript(script);

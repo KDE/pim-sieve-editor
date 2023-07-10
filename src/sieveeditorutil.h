@@ -8,7 +8,7 @@
 
 #include "libsieveeditor_export.h"
 #include "libsieveeditor_private_export.h"
-#include <KSieveUi/SieveImapAccountSettings>
+#include <KSieveCore/SieveImapAccountSettings>
 #include <MailTransport/Transport>
 #include <QString>
 #include <QUrl>
@@ -32,7 +32,7 @@ struct LIBSIEVEEDITOR_EXPORT SieveServerConfig {
     Q_REQUIRED_RESULT bool isValid() const;
     Q_REQUIRED_RESULT QUrl url() const;
     SieveAccountSettings sieveSettings;
-    KSieveUi::SieveImapAccountSettings sieveImapAccountSettings;
+    KSieveCore::SieveImapAccountSettings sieveImapAccountSettings;
     bool operator==(const SieveServerConfig &other) const;
     bool enabled = true;
     bool useImapCustomServer = false;
