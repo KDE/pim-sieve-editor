@@ -38,7 +38,7 @@
   <name xml:lang="sk">SieveEditor</name>
   <name xml:lang="sl">SieveEditor</name>
   <name xml:lang="sv">Sieveeditor</name>
-  <name xml:lang="tr">Sieve Düzenleyici</name>
+  <name xml:lang="tr">Sieve Düzenleyicisi</name>
   <name xml:lang="uk">Редактор фільтрів</name>
   <name xml:lang="x-test">xxSieveEditorxx</name>
   <name xml:lang="zh-CN">SieveEditor</name>
@@ -148,7 +148,7 @@
     <p xml:lang="sk">SieveEditor umožňuje upravovať, vytvárať a mazať Sieve skripty.</p>
     <p xml:lang="sl">SieveEditor dovoljuje urejanje, kreiranje in brisanje skriptov sieve.</p>
     <p xml:lang="sv">Sieveeditor gör det möjligt att redigera, skapa och ta bort Sieve-skript.</p>
-    <p xml:lang="tr">Sieve Düzenleyici, Sieve betikleri düzenlemenize, oluşturmanıza ve silmenize izin verir.</p>
+    <p xml:lang="tr">Sieve Düzenleyicisi, Sieve betikleri düzenlemenize, oluşturmanıza ve silmenize olanak tanır.</p>
     <p xml:lang="uk">За допомогою редактора фільтрів ви зможете редагувати, створювати та вилучати скрипти фільтрування пошти.</p>
     <p xml:lang="x-test">xxSieveEditor allows to edit, create, delete sieve scripts.xx</p>
     <p xml:lang="zh-CN">SieveEditor 可用于编辑，创建，及删除 sieve 脚本。</p>
