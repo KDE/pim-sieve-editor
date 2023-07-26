@@ -45,6 +45,6 @@ Q_REQUIRED_RESULT QString sievePasswordIdentifier(const QString &userName, const
 Q_REQUIRED_RESULT QString imapPasswordIdentifier(const QString &userName, const QString &serverName);
 Q_REQUIRED_RESULT QString walletFolderName();
 }
-Q_DECLARE_TYPEINFO(SieveEditorUtil::SieveServerConfig, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(SieveEditorUtil::SieveServerConfig, Q_RELOCATABLE_TYPE);
 LIBSIEVEEDITOR_TESTS_EXPORT QDebug operator<<(QDebug d, const SieveEditorUtil::SieveAccountSettings &settings);
 LIBSIEVEEDITOR_TESTS_EXPORT QDebug operator<<(QDebug d, const SieveEditorUtil::SieveServerConfig &settings);
