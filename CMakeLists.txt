@@ -89,6 +89,11 @@ set_package_properties(Qt6Keychain PROPERTIES
                                    URL "https://github.com/frankosterfeld/qtkeychain"
                                    TYPE REQUIRED)
 
+if (Qt6Keychain_VERSION VERSION_LESS 0.14.99)
+     MESSAGE(STATUS "Qt6KeyChain version is less 0.14.99. It will not support KWallet 6... It will not able to load password. Please update it.")
+endif()
+
+
 include_directories(${sieveeditor_SOURCE_DIR} ${sieveeditor_BINARY_DIR})
 
 ecm_set_disabled_deprecation_versions(QT 6.5  KF 5.240.0)
