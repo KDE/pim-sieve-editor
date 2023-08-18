@@ -7,7 +7,6 @@ Dependencies:
     'frameworks/extra-cmake-modules': '@latest-kf6'
     'pim/kimap' : '@latest-kf6'
     'pim/kmailtransport' : '@latest-kf6'
-    'pim/kpimtextedit' : '@latest-kf6'
     'pim/libksieve' : '@latest-kf6'
     'pim/pimcommon' : '@latest-kf6'
     'frameworks/kxmlgui': '@latest-kf6'
