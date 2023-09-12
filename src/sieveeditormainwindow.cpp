@@ -204,6 +204,8 @@ void SieveEditorMainWindow::setupActions()
     mShareAction->setMenu(purposeMenu->menu());
     mShareAction->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
     purposeMenu->setEditorWidget(mMainWidget->sieveEditorMainWidget());
+    connect(purposeMenu, &SievePurposeMenuWidget::shareError, mMainWidget, &SieveEditorCentralWidget::slotShareError);
+    connect(purposeMenu, &SievePurposeMenuWidget::shareSuccess, mMainWidget, &SieveEditorCentralWidget::slotShareSuccess);
 
     mSpellCheckAction = new QAction(i18n("Check Spelling..."), this);
     connect(mSpellCheckAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotCheckSpelling);

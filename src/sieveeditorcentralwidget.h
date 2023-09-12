@@ -10,6 +10,10 @@
 class SieveEditorConfigureServerPage;
 class SieveEditorMainWidget;
 class KActionCollection;
+namespace PimCommon
+{
+class PurposeMenuMessageWidget;
+}
 class SieveEditorCentralWidget : public QStackedWidget
 {
     Q_OBJECT
@@ -19,6 +23,8 @@ public:
 
     SieveEditorMainWidget *sieveEditorMainWidget() const;
 
+    void slotShareError(const QString &message);
+    void slotShareSuccess(const QString &message);
 Q_SIGNALS:
     void configureClicked();
     void importSieveSettings();
@@ -27,4 +33,6 @@ private:
     void slotServerSieveFound(bool hasServer);
     SieveEditorConfigureServerPage *mConfigureWidget = nullptr;
     SieveEditorMainWidget *mSieveEditorMainWidget = nullptr;
+    PimCommon::PurposeMenuMessageWidget *const mPurposeMenuMessageWidget;
+    QWidget *const mMainWidget;
 };
