@@ -5,10 +5,10 @@ Dependencies:
 - 'on': ['Linux', 'FreeBSD', 'Windows']
   'require':
     'frameworks/extra-cmake-modules': '@latest-kf6'
-    'pim/kimap' : '@latest-kf6'
-    'pim/kmailtransport' : '@latest-kf6'
-    'pim/libksieve' : '@latest-kf6'
-    'pim/pimcommon' : '@latest-kf6'
+    'pim/kimap' : '@same'
+    'pim/kmailtransport' : '@same'
+    'pim/libksieve' : '@same'
+    'pim/pimcommon' : '@same'
     'frameworks/kxmlgui': '@latest-kf6'
     'third-party/qtkeychain': '@latest-kf6'
     'libraries/kuserfeedback': '@latest-kf6'
