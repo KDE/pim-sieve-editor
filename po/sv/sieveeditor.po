@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:47+0000\n"
+"POT-Creation-Date: 2023-09-21 00:46+0000\n"
 "PO-Revision-Date: 2023-07-31 10:43+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -88,43 +88,43 @@ msgstr "Import pågår..."
 msgid "Finish"
 msgstr "Slutför"
 
-#: main.cpp:47
+#: main.cpp:30
 #, kde-format
 msgid "KSieve Editor"
 msgstr "KSieve-editor"
 
-#: main.cpp:49
+#: main.cpp:32
 #, kde-format
 msgid "Sieve Editor"
 msgstr "Sieve-editor"
 
-#: main.cpp:51
+#: main.cpp:34
 #, kde-format
 msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Copyright © 2013-%1 Upphovsmännen till Sieve-editor"
 
-#: main.cpp:52
+#: main.cpp:35
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:52
+#: main.cpp:35
 #, kde-format
 msgid "Maintainer"
 msgstr "Underhåll"
 
-#: main.cpp:60
+#: main.cpp:43
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Lista tillgängliga alternativ för användaråterkoppling"
 
-#: serversievelistwidget.cpp:81
+#: serversievelistwidget.cpp:77
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Settings"
 msgstr "Ändra inställningar"
 
-#: serversievelistwidget.cpp:127
+#: serversievelistwidget.cpp:123
 #, kde-format
 msgctxt "server name (username)"
 msgid "%1 (%2)"
@@ -189,28 +189,28 @@ msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Lägg till Sieve på server"
 
-#: sieveeditorconfiguredialog.cpp:42
+#: sieveeditorconfiguredialog.cpp:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Anpassa"
 
-#: sieveeditorconfiguredialog.cpp:56
+#: sieveeditorconfiguredialog.cpp:51
 #, kde-format
 msgid "Sieve Server"
 msgstr "Sieve på server"
 
-#: sieveeditorconfiguredialog.cpp:65
+#: sieveeditorconfiguredialog.cpp:60
 #, kde-format
 msgid "Wrap Text"
 msgstr "Radbryt text"
 
-#: sieveeditorconfiguredialog.cpp:70
+#: sieveeditorconfiguredialog.cpp:65
 #, kde-format
 msgid "Editor"
 msgstr "Editor"
 
-#: sieveeditorconfiguredialog.cpp:86
+#: sieveeditorconfiguredialog.cpp:81
 #, kde-format
 msgid "User Feedback"
 msgstr "Användaråterkoppling"
@@ -280,118 +280,118 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Verktyg, Importera IMAP-inställningar"
 
-#: sieveeditormainwidget.cpp:609
+#: sieveeditormainwidget.cpp:606
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Skriptet har ändrats. Vill du spara det innan programmet avslutas?"
 
-#: sieveeditormainwidget.cpp:610
+#: sieveeditormainwidget.cpp:607
 #, kde-format
 msgid "Close script"
 msgstr "Stäng skript"
 
-#: sieveeditormainwindow.cpp:124
+#: sieveeditormainwindow.cpp:120
 #, kde-format
 msgid "Network is Up."
 msgstr "Nätverket är uppkopplat."
 
-#: sieveeditormainwindow.cpp:126
+#: sieveeditormainwindow.cpp:122
 #, kde-format
 msgid "Network is Down."
 msgstr "Nätverket är nerkopplat."
 
-#: sieveeditormainwindow.cpp:148
+#: sieveeditormainwindow.cpp:144
 #, kde-format
 msgid "Upload"
 msgstr "Ladda upp"
 
-#: sieveeditormainwindow.cpp:151
+#: sieveeditormainwindow.cpp:147
 #, kde-format
 msgid "Add Sieve Server..."
 msgstr "Lägg till Sieve på server..."
 
-#: sieveeditormainwindow.cpp:155
+#: sieveeditormainwindow.cpp:151
 #, kde-format
 msgid "Delete Script"
 msgstr "Ta bort skript"
 
-#: sieveeditormainwindow.cpp:161
+#: sieveeditormainwindow.cpp:157
 #, kde-format
 msgid "Create New Script..."
 msgstr "Skapa nytt skript..."
 
-#: sieveeditormainwindow.cpp:167
+#: sieveeditormainwindow.cpp:163
 #, kde-format
 msgid "Edit Script..."
 msgstr "Redigera skript..."
 
-#: sieveeditormainwindow.cpp:172
+#: sieveeditormainwindow.cpp:168
 #, kde-format
 msgid "Deactivate Script"
 msgstr "Inaktivera skript"
 
-#: sieveeditormainwindow.cpp:177
+#: sieveeditormainwindow.cpp:173
 #, kde-format
 msgid "Refresh List"
 msgstr "Uppdatera lista"
 
-#: sieveeditormainwindow.cpp:183
+#: sieveeditormainwindow.cpp:179
 #, kde-format
 msgid "Go to Line..."
 msgstr "Gå till rad..."
 
-#: sieveeditormainwindow.cpp:200
+#: sieveeditormainwindow.cpp:196
 #, kde-format
 msgid "Import..."
 msgstr "Importera..."
 
-#: sieveeditormainwindow.cpp:206
+#: sieveeditormainwindow.cpp:202
 #, kde-format
 msgid "Share..."
 msgstr "Dela..."
 
-#: sieveeditormainwindow.cpp:212
+#: sieveeditormainwindow.cpp:210
 #, kde-format
 msgid "Check Spelling..."
 msgstr "Kontrollera stavning..."
 
-#: sieveeditormainwindow.cpp:218
+#: sieveeditormainwindow.cpp:216
 #, kde-format
 msgid "Check Syntax"
 msgstr "Kontrollera syntax"
 
-#: sieveeditormainwindow.cpp:223
+#: sieveeditormainwindow.cpp:221
 #, kde-format
 msgid "Create Rules Graphically..."
 msgstr "Skapa regler grafiskt..."
 
-#: sieveeditormainwindow.cpp:228
+#: sieveeditormainwindow.cpp:226
 #, kde-format
 msgid "Comment"
 msgstr "Lägg till kommentar"
 
-#: sieveeditormainwindow.cpp:233
+#: sieveeditormainwindow.cpp:231
 #, kde-format
 msgid "Uncomment"
 msgstr "Ta bort kommentar"
 
-#: sieveeditormainwindow.cpp:261
+#: sieveeditormainwindow.cpp:259
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Bokmärken"
 
-#: sieveeditormainwindow.cpp:266
+#: sieveeditormainwindow.cpp:264
 #, kde-format
 msgid "Debug Sieve Script..."
 msgstr "Felsök Sieve-skript..."
 
-#: sieveeditormainwindow.cpp:271
+#: sieveeditormainwindow.cpp:269
 #, kde-format
 msgid "Wordwrap"
 msgstr "Bryt rader"
 
-#: sieveeditormainwindow.cpp:280
+#: sieveeditormainwindow.cpp:278
 #, kde-format
 msgid "Import IMAP Settings..."
 msgstr "Importera IMAP-inställningar..."
