@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-05-12 03:47+0200\n"
+"POT-Creation-Date: 2023-09-21 00:46+0000\n"
 "PO-Revision-Date: 2018-01-06 09:21+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -28,111 +28,111 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "caslav.ilic@gmx.net"
 
-#: importwizard/checks/importimapsettingsakonadicheckjob.cpp:148
+#: importwizard/checks/importimapsettingsakonadicheckjob.cpp:152
 #, kde-format
 msgid "Akonadi IMAP Settings"
 msgstr "Аконадијеве поставке ИМАП‑а"
 
-#: importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp:311
+#: importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp:291
 #, kde-format
 msgid "Thunderbird IMAP Settings"
 msgstr "Тандербердове поставке ИМАП‑а"
 
-#: importwizard/importimapsettingfinishpage.cpp:33
+#: importwizard/importimapsettingfinishpage.cpp:20
 #, kde-format
 msgid "IMAP settings were imported:"
 msgstr "Увезене поставке ИМАП‑а:"
 
-#: importwizard/importimapsettingnofoundpage.cpp:32
+#: importwizard/importimapsettingnofoundpage.cpp:18
 #, kde-format
 msgid "No settings found to import."
 msgstr "Нису нађене поставке за увоз."
 
-#: importwizard/importimapsettingprogresspage.cpp:78
+#: importwizard/importimapsettingprogresspage.cpp:61
 #, kde-format
 msgid "No settings found."
 msgstr "Поставке нису нађене."
 
 # >> @info:progress
-#: importwizard/importimapsettingprogresspage.cpp:86
+#: importwizard/importimapsettingprogresspage.cpp:68
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "Увозим поставке из %1...|/|Увозим поставке из $[ген %1]..."
 
 # >> @info:progress
-#: importwizard/importimapsettingprogresspage.cpp:90
+#: importwizard/importimapsettingprogresspage.cpp:70
 #, kde-format
 msgid "Import settings from %1 done"
 msgstr "Увоз поставки из %1 завршен|/|Увоз поставки из $[ген %1] завршен"
 
-#: importwizard/importimapsettingsearchpage.cpp:33
+#: importwizard/importimapsettingsearchpage.cpp:19
 #, kde-format
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr "Изаберите програм из кога треба увести поставке ИМАП‑а:"
 
 # >> @title:window
-#: importwizard/importimapsettingwizard.cpp:39
+#: importwizard/importimapsettingwizard.cpp:28
 #, fuzzy, kde-format
 #| msgid "Import IMAP Settings"
 msgctxt "@title:window"
 msgid "Import IMAP Settings"
 msgstr "Увоз поставки ИМАП‑а"
 
-#: importwizard/importimapsettingwizard.cpp:42
+#: importwizard/importimapsettingwizard.cpp:31
 #, kde-format
 msgid "Select Import Settings"
 msgstr "Избор поставки за увоз"
 
-#: importwizard/importimapsettingwizard.cpp:50
+#: importwizard/importimapsettingwizard.cpp:39
 #, kde-format
 msgid "Import in Progress..."
 msgstr "Увоз у току..."
 
-#: importwizard/importimapsettingwizard.cpp:57
+#: importwizard/importimapsettingwizard.cpp:46
 #, kde-format
 msgid "Finish"
 msgstr "Крај"
 
-#: main.cpp:51
+#: main.cpp:30
 #, kde-format
 msgid "KSieve Editor"
 msgstr "Сито уређивач"
 
-#: main.cpp:53
+#: main.cpp:32
 #, kde-format
 msgid "Sieve Editor"
 msgstr "Сито уређивач"
 
-#: main.cpp:55
+#: main.cpp:34
 #, fuzzy, kde-format
 #| msgid "Copyright © 2013-2018 sieveeditor authors"
-msgid "Copyright © 2013-2020 sieveeditor authors"
+msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "© 2013–2018, аутори сито уређивача"
 
-#: main.cpp:56
+#: main.cpp:35
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Лорен Монтел"
 
-#: main.cpp:56
+#: main.cpp:35
 #, kde-format
 msgid "Maintainer"
 msgstr "Одржавалац"
 
-#: main.cpp:64
+#: main.cpp:43
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr ""
 
 # >> @title:window
-#: serversievelistwidget.cpp:73
+#: serversievelistwidget.cpp:77
 #, fuzzy, kde-format
 #| msgid "Modify Settings"
 msgctxt "@title:window"
 msgid "Modify Settings"
 msgstr "Измена поставки"
 
-#: serversievelistwidget.cpp:120
+#: serversievelistwidget.cpp:123
 #, kde-format
 msgctxt "server name (username)"
 msgid "%1 (%2)"
@@ -140,7 +140,7 @@ msgstr "%1 (%2)"
 
 # >> @item
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
-#: serversievesettings.cpp:45 ui/serversievesettings.ui:255
+#: serversievesettings.cpp:33 ui/serversievesettings.ui:259
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
@@ -148,38 +148,38 @@ msgstr "чисти текст"
 
 # >> @item
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
-#: serversievesettings.cpp:47 ui/serversievesettings.ui:290
+#: serversievesettings.cpp:35 ui/serversievesettings.ui:294
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "анонимно"
 
-#: serversievesettings.cpp:276
+#: serversievesettings.cpp:268
 #, kde-format
 msgid "Server is not defined"
 msgstr "Сервер није дефинисан"
 
-#: serversievesettings.cpp:276
+#: serversievesettings.cpp:268
 #, kde-format
 msgid "Check Server"
 msgstr "Провери сервер"
 
-#: serversievesettings.cpp:319
+#: serversievesettings.cpp:311
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr "Не могу да се повежем са сервером, проверите адресу сервера."
 
-#: serversievesettings.cpp:331
+#: serversievesettings.cpp:323
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<qt><b>ТЛС је подржан и препоручен.</b></qt>"
 
-#: serversievesettings.cpp:334
+#: serversievesettings.cpp:326
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<qt><b>ССЛ је подржан и препоручен.</b></qt>"
 
-#: serversievesettings.cpp:337
+#: serversievesettings.cpp:330
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
@@ -188,266 +188,255 @@ msgstr ""
 "<qt><b>Није подржана ниједна опција безбедности. Не препоручујемо повезивање "
 "са овим сервером.</b></qt>"
 
-#: serversievesettings.cpp:340
+#: serversievesettings.cpp:333
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>Овај сервер не може да се користи.</b></qt>"
 
-#: serversievesettingsdialog.cpp:31
+#: serversievesettingsdialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Додавање сито сервера"
 
 # >> @title:window
-#: sieveeditorconfiguredialog.cpp:44
+#: sieveeditorconfiguredialog.cpp:37
 #, fuzzy, kde-format
 #| msgid "Configure"
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Подешавање"
 
-#: sieveeditorconfiguredialog.cpp:58
-#, kde-format
-msgid "Close wallet when close application"
-msgstr "Затвори новчаник по затварању програма"
-
-#: sieveeditorconfiguredialog.cpp:61
+#: sieveeditorconfiguredialog.cpp:51
 #, kde-format
 msgid "Sieve Server"
 msgstr "Сито сервер"
 
-#: sieveeditorconfiguredialog.cpp:70
+#: sieveeditorconfiguredialog.cpp:60
 #, kde-format
 msgid "Wrap Text"
 msgstr "Преломи текст"
 
-#: sieveeditorconfiguredialog.cpp:75
+#: sieveeditorconfiguredialog.cpp:65
 #, kde-format
 msgid "Editor"
 msgstr "Уређивач"
 
-#: sieveeditorconfiguredialog.cpp:91
+#: sieveeditorconfiguredialog.cpp:81
 #, kde-format
 msgid "User Feedback"
 msgstr ""
 
-#: sieveeditorconfigureserverpage.cpp:32
+#: sieveeditorconfigureserverpage.cpp:19
 #, kde-format
 msgid "Configure..."
 msgstr "Подеси..."
 
-#: sieveeditorconfigureserverpage.cpp:37
+#: sieveeditorconfigureserverpage.cpp:24
 #, kde-format
 msgid "Import Sieve Settings..."
 msgstr "Увези сито поставке..."
 
-#: sieveeditorconfigureserverwidget.cpp:70
+#: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
 msgid "Do you want to remove this server '%1'?"
 msgstr "Желите ли заиста да уклоните сервер „%1“?"
 
-#: sieveeditorconfigureserverwidget.cpp:71
+#: sieveeditorconfigureserverwidget.cpp:60
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Sieve Server"
 msgstr "Уклањање сито сервера"
 
-#: sieveeditoremptytabwidgetlabel.cpp:39
+#: sieveeditoremptytabwidgetlabel.cpp:25
 #, kde-format
 msgid "Import script:"
 msgstr "Увези скрипту:"
 
-#: sieveeditoremptytabwidgetlabel.cpp:39
+#: sieveeditoremptytabwidgetlabel.cpp:25
 #, kde-format
 msgctxt "Action is from file menu, import submenu"
 msgid "File > Import"
 msgstr "Фајл > Увези"
 
-#: sieveeditoremptytabwidgetlabel.cpp:40
+#: sieveeditoremptytabwidgetlabel.cpp:26
 #, kde-format
 msgid "Create Rules Graphically:"
 msgstr "Састави правила графички:"
 
-#: sieveeditoremptytabwidgetlabel.cpp:40
+#: sieveeditoremptytabwidgetlabel.cpp:26
 #, kde-format
 msgctxt "Action is from menu tools, submenu autogenerate script"
 msgid "Tools > Autogenerate script"
 msgstr "Алатке > Аутоматски генериши скрипту"
 
-#: sieveeditoremptytabwidgetlabel.cpp:41
+#: sieveeditoremptytabwidgetlabel.cpp:27
 #, kde-format
 msgid "Debug a script:"
 msgstr "Исправљај скрипту:"
 
-#: sieveeditoremptytabwidgetlabel.cpp:41
+#: sieveeditoremptytabwidgetlabel.cpp:27
 #, kde-format
 msgctxt "These action in from menu tools submenu debug sieve script"
 msgid "Tools > Debug Sieve Script"
 msgstr "Алатке > Исправљај сито скрипту"
 
-#: sieveeditoremptytabwidgetlabel.cpp:42
+#: sieveeditoremptytabwidgetlabel.cpp:28
 #, fuzzy, kde-format
 #| msgid "Import Sieve Settings"
 msgid "Import Sieve Settings:"
 msgstr "Увези сито поставке"
 
-#: sieveeditoremptytabwidgetlabel.cpp:42
+#: sieveeditoremptytabwidgetlabel.cpp:28
 #, kde-format
 msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Алатке > Увези ИМАП поставке"
 
-#: sieveeditormainwidget.cpp:616
+#: sieveeditormainwidget.cpp:606
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Скрипта је измењена. Желите ли да је сачувате пре затварања?"
 
 # >> @title:window
-#: sieveeditormainwidget.cpp:616
+#: sieveeditormainwidget.cpp:607
 #, kde-format
 msgid "Close script"
 msgstr "Затварање скрипте"
 
-#: sieveeditormainwindow.cpp:109
+#: sieveeditormainwindow.cpp:120
 #, kde-format
 msgid "Network is Up."
 msgstr "Мрежа је активна"
 
-#: sieveeditormainwindow.cpp:111
+#: sieveeditormainwindow.cpp:122
 #, kde-format
 msgid "Network is Down."
 msgstr "Мрежа је недоступна"
 
-#: sieveeditormainwindow.cpp:143
+#: sieveeditormainwindow.cpp:144
 #, kde-format
 msgid "Upload"
 msgstr "Отпреми"
 
-#: sieveeditormainwindow.cpp:146
+#: sieveeditormainwindow.cpp:147
 #, kde-format
 msgid "Add Sieve Server..."
 msgstr "Додај сито сервер..."
 
-#: sieveeditormainwindow.cpp:150
+#: sieveeditormainwindow.cpp:151
 #, kde-format
 msgid "Delete Script"
 msgstr "Обриши скрипту"
 
-#: sieveeditormainwindow.cpp:156
+#: sieveeditormainwindow.cpp:157
 #, kde-format
 msgid "Create New Script..."
 msgstr "Направи нову скрипту..."
 
-#: sieveeditormainwindow.cpp:162
+#: sieveeditormainwindow.cpp:163
 #, kde-format
 msgid "Edit Script..."
 msgstr "Уреди скрипту..."
 
-#: sieveeditormainwindow.cpp:167
+#: sieveeditormainwindow.cpp:168
 #, kde-format
 msgid "Deactivate Script"
 msgstr "Деактивирај скрипту"
 
 # skip-rule: t-list_tg
-#: sieveeditormainwindow.cpp:172
+#: sieveeditormainwindow.cpp:173
 #, kde-format
 msgid "Refresh List"
 msgstr "Освјежи списак"
 
-#: sieveeditormainwindow.cpp:178
+#: sieveeditormainwindow.cpp:179
 #, kde-format
 msgid "Go to Line..."
 msgstr "Иди на ред..."
 
-#: sieveeditormainwindow.cpp:195
+#: sieveeditormainwindow.cpp:196
 #, kde-format
 msgid "Import..."
 msgstr "Увези..."
 
-#: sieveeditormainwindow.cpp:201
+#: sieveeditormainwindow.cpp:202
 #, kde-format
 msgid "Share..."
 msgstr "Дели..."
 
-#: sieveeditormainwindow.cpp:207
-#, fuzzy, kde-format
-#| msgid "Share..."
-msgid "Share Script..."
-msgstr "Дели..."
-
-#: sieveeditormainwindow.cpp:214
+#: sieveeditormainwindow.cpp:210
 #, kde-format
 msgid "Check Spelling..."
 msgstr "Провери правопис..."
 
-#: sieveeditormainwindow.cpp:220
+#: sieveeditormainwindow.cpp:216
 #, kde-format
 msgid "Check Syntax"
 msgstr "Провери синтаксу"
 
-#: sieveeditormainwindow.cpp:225
+#: sieveeditormainwindow.cpp:221
 #, kde-format
 msgid "Create Rules Graphically..."
 msgstr "Састави правила графички..."
 
-#: sieveeditormainwindow.cpp:230
+#: sieveeditormainwindow.cpp:226
 #, kde-format
 msgid "Comment"
 msgstr "Закоментариши"
 
-#: sieveeditormainwindow.cpp:235
+#: sieveeditormainwindow.cpp:231
 #, kde-format
 msgid "Uncomment"
 msgstr "Откоментариши"
 
-#: sieveeditormainwindow.cpp:257
+#: sieveeditormainwindow.cpp:259
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Обиљеживачи"
 
-#: sieveeditormainwindow.cpp:262
+#: sieveeditormainwindow.cpp:264
 #, kde-format
 msgid "Debug Sieve Script..."
 msgstr "Исправљај сито скрипту..."
 
-#: sieveeditormainwindow.cpp:267
+#: sieveeditormainwindow.cpp:269
 #, kde-format
 msgid "Wordwrap"
 msgstr "Прелом текста"
 
-#: sieveeditormainwindow.cpp:276
+#: sieveeditormainwindow.cpp:278
 #, kde-format
 msgid "Import IMAP Settings..."
 msgstr "Увези поставке ИМАП‑а..."
 
-#: sieveeditormanagesievewidget.cpp:54
+#: sieveeditormanagesievewidget.cpp:37
 #, kde-format
 msgid "No Sieve URL configured"
 msgstr "Није подешен сито УРЛ"
 
-#: sieveeditormanagesievewidget.cpp:59
+#: sieveeditormanagesievewidget.cpp:42
 #, kde-format
 msgid "(Disabled) %1"
 msgstr "(искључено) %1"
 
-#: sieveeditorpagewidget.cpp:58
+#: sieveeditorpagewidget.cpp:42
 #, kde-format
 msgid "Uploading script to server for checking it, please wait..."
 msgstr "Отпремам скрипту на сервер ради провере, сачекајте..."
 
-#: sieveeditorpagewidget.cpp:151
+#: sieveeditorpagewidget.cpp:135
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "Сито скрипта је успешно отпремљена."
 
-#: sieveeditorpagewidget.cpp:152
+#: sieveeditorpagewidget.cpp:135
 #, kde-format
 msgid "Sieve Script Upload"
 msgstr "Отпремање сито скрипте"
 
-#: sieveeditorpagewidget.cpp:165
+#: sieveeditorpagewidget.cpp:148
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -458,12 +447,12 @@ msgstr ""
 "Сервер одговара:\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:172
+#: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
 #, kde-format
 msgid "Sieve Error"
 msgstr "Сито грешка"
 
-#: sieveeditorpagewidget.cpp:170
+#: sieveeditorpagewidget.cpp:154
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -472,81 +461,94 @@ msgstr ""
 "Отпремање сито скрипте пропало.\n"
 "Разлог непознат.\n"
 
-#: sieveeditorpagewidget.cpp:181
+#: sieveeditorpagewidget.cpp:166
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Скрипта „%1“ је нова. Желите ли да је сачувате?"
 
-#: sieveeditorpagewidget.cpp:190
+#: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
+#, fuzzy, kde-format
+#| msgid "Share..."
+msgid "Save Script"
+msgstr "Дели..."
+
+#: sieveeditorpagewidget.cpp:179
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "Скрипта „%1“ је измењена. Желите ли да је сачувате?"
 
-#: sieveeditortabwidget.cpp:58 sieveeditortabwidget.cpp:84
+#: sieveeditortabwidget.cpp:43 sieveeditortabwidget.cpp:69
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Close Tab"
 msgstr "Затвори језичак"
 
-#: sieveeditortabwidget.cpp:62
+#: sieveeditortabwidget.cpp:47
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Close All Other Tabs"
 msgstr "Затвори све друге језичке"
 
-#: sieveeditortabwidget.cpp:66
+#: sieveeditortabwidget.cpp:51
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Close All Tabs"
 msgstr "Затвори све језичке"
 
 #. i18n: ectx: Menu (edit)
-#: sieveeditorui.rc:21
+#: sieveeditorui.rc:23
 #, kde-format
 msgid "&Edit"
 msgstr "&Уређивање"
 
 #. i18n: ectx: Menu (view)
-#: sieveeditorui.rc:34
+#: sieveeditorui.rc:36
 #, kde-format
 msgid "View"
 msgstr "Приказ"
 
+#. i18n: ectx: Menu (settings)
+#: sieveeditorui.rc:45
+#, fuzzy, kde-format
+#| msgid "IMAP Settings"
+msgid "&Settings"
+msgstr "Поставке ИМАП‑а"
+
 #. i18n: ectx: Menu (Tools)
-#: sieveeditorui.rc:42
+#: sieveeditorui.rc:50
 #, kde-format
 msgid "Tools"
 msgstr "Алатке"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: ui/serversievesettings.ui:33
+#: ui/serversievesettings.ui:37
 #, kde-format
 msgid "Sieve Settings"
 msgstr "Сито поставке"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: ui/serversievesettings.ui:41 ui/serversievesettings.ui:315
+#: ui/serversievesettings.ui:45 ui/serversievesettings.ui:319
 #, kde-format
 msgid "Server Name:"
 msgstr "Име сервера:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: ui/serversievesettings.ui:58 ui/serversievesettings.ui:332
+#: ui/serversievesettings.ui:62 ui/serversievesettings.ui:336
 #, kde-format
 msgid "Username:"
 msgstr "Корисничко име:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: ui/serversievesettings.ui:75 ui/serversievesettings.ui:349
+#: ui/serversievesettings.ui:79 ui/serversievesettings.ui:353
 #, kde-format
 msgid "Password:"
 msgstr "Лозинка:"
 
 #. i18n: ectx: property (text), widget (QLabel, serversievelabel)
-#: ui/serversievesettings.ui:88
+#: ui/serversievesettings.ui:92
 #, kde-format
 msgid ""
 "The server port changed when ManageSieve turned into a full RFC Standard. "
@@ -559,27 +561,27 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (text), widget (QLabel, label_13)
-#: ui/serversievesettings.ui:98 ui/serversievesettings.ui:227
+#: ui/serversievesettings.ui:102 ui/serversievesettings.ui:231
 #, kde-format
 msgid "Port:"
 msgstr "Порт:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: ui/serversievesettings.ui:121 ui/serversievesettings.ui:247
+#: ui/serversievesettings.ui:125 ui/serversievesettings.ui:251
 #, kde-format
 msgid "Authentication:"
 msgstr "Аутентификација:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
-#: ui/serversievesettings.ui:137
+#: ui/serversievesettings.ui:141
 #, kde-format
 msgid "IMAP Settings"
 msgstr "Поставке ИМАП‑а"
 
 # rewrite-msgid: /settings/configure/
 #. i18n: ectx: property (text), widget (QLabel, label_11)
-#: ui/serversievesettings.ui:143
+#: ui/serversievesettings.ui:147
 #, fuzzy, kde-format
 #| msgid ""
 #| "IMAP settings is necessary if you want to be able to list folders from "
@@ -590,7 +592,7 @@ msgid ""
 msgstr "Треба да подесите ИМАП ако желите да листате фасцикле на серверу"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, safeImap)
-#: ui/serversievesettings.ui:156
+#: ui/serversievesettings.ui:160
 #, kde-format
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
@@ -621,110 +623,113 @@ msgstr ""
 "пребацити на безбедну везу. Ова поставка се не препоручује.</p></html>"
 
 #. i18n: ectx: property (title), widget (QGroupBox, safeImap)
-#: ui/serversievesettings.ui:159
+#: ui/serversievesettings.ui:163
 #, kde-format
 msgid "Connection Settings"
 msgstr "Поставке повезивања"
 
 #. i18n: ectx: property (text), widget (QPushButton, testButton)
-#: ui/serversievesettings.ui:171
+#: ui/serversievesettings.ui:175
 #, kde-format
 msgid "Auto Detect"
 msgstr "Откриј аутоматски"
 
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: ui/serversievesettings.ui:183
+#: ui/serversievesettings.ui:187
 #, kde-format
 msgid "Encryption:"
 msgstr "Шифровање:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, noRadio)
-#: ui/serversievesettings.ui:192
+#: ui/serversievesettings.ui:196
 #, kde-format
 msgid "None"
 msgstr "ништа"
 
 #. i18n: ectx: property (text), widget (QRadioButton, sslRadio)
-#: ui/serversievesettings.ui:205
+#: ui/serversievesettings.ui:209
 #, kde-format
 msgid "SSL/TLS"
 msgstr "ССЛ/ТЛС"
 
 #. i18n: ectx: property (text), widget (QRadioButton, tlsRadio)
-#: ui/serversievesettings.ui:215
+#: ui/serversievesettings.ui:219
 #, kde-format
 msgid "STARTTLS"
 msgstr "накнадно ТЛС"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
-#: ui/serversievesettings.ui:260
+#: ui/serversievesettings.ui:264
 #, kde-format
 msgctxt "Authentication method"
 msgid "LOGIN"
 msgstr "ЛОГИН"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
-#: ui/serversievesettings.ui:265
+#: ui/serversievesettings.ui:269
 #, kde-format
 msgctxt "Authentication method"
 msgid "PLAIN"
 msgstr "ПЛЕЈН"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
-#: ui/serversievesettings.ui:270
+#: ui/serversievesettings.ui:274
 #, kde-format
 msgctxt "Authentication method"
 msgid "CRAM-MD5"
 msgstr "ЦРАМ‑МД5"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
-#: ui/serversievesettings.ui:275
+#: ui/serversievesettings.ui:279
 #, kde-format
 msgctxt "Authentication method"
 msgid "DIGEST-MD5"
 msgstr "ДАЈЏЕСТ‑МД5"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
-#: ui/serversievesettings.ui:280
+#: ui/serversievesettings.ui:284
 #, kde-format
 msgctxt "Authentication method"
 msgid "NTLM"
 msgstr "НТЛМ"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
-#: ui/serversievesettings.ui:285
+#: ui/serversievesettings.ui:289
 #, kde-format
 msgctxt "Authentication method"
 msgid "GSSAPI"
 msgstr "ГССАПИ"
 
 #. i18n: ectx: property (title), widget (QGroupBox, alternateServer)
-#: ui/serversievesettings.ui:303
+#: ui/serversievesettings.ui:307
 #, kde-format
 msgid "Alternate Server"
 msgstr "Алтернативни сервер"
 
 #. i18n: ectx: property (text), widget (QLabel, testInfo)
-#: ui/serversievesettings.ui:371
+#: ui/serversievesettings.ui:375
 #, kde-format
 msgid "Empty"
 msgstr "Празно"
 
 #. i18n: ectx: property (text), widget (QPushButton, addServer)
-#: ui/sieveeditorconfigureserverwidget.ui:25
+#: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
 msgid "Add..."
 msgstr "Додај..."
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
-#: ui/sieveeditorconfigureserverwidget.ui:32
+#: ui/sieveeditorconfigureserverwidget.ui:36
 #, kde-format
 msgid "Modify..."
 msgstr "Измени..."
 
 # >> @title:window
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
-#: ui/sieveeditorconfigureserverwidget.ui:39
+#: ui/sieveeditorconfigureserverwidget.ui:43
 #, kde-format
 msgid "Remove"
 msgstr "Уклони"
+
+#~ msgid "Close wallet when close application"
+#~ msgstr "Затвори новчаник по затварању програма"
