@@ -132,7 +132,7 @@ void SieveEditorPageWidget::slotPutResult(KManageSieve::SieveJob *job, bool succ
     }
     if (success) {
         if (job->property("showuploadinformation").toBool()) {
-            KMessageBox::information(this, i18n("The Sieve script was successfully uploaded."), i18n("Sieve Script Upload"));
+            KMessageBox::information(this, i18n("The Sieve script was successfully uploaded."), i18nc("@title:window", "Sieve Script Upload"));
         }
         mIsNewScript = false;
         mSieveEditorWidget->updateOriginalScript();
@@ -148,12 +148,12 @@ void SieveEditorPageWidget::slotPutResult(KManageSieve::SieveJob *job, bool succ
                                i18n("Uploading the Sieve script failed.\n"
                                     "The server responded:\n%1",
                                     msg),
-                               i18n("Sieve Error"));
+                               i18nc("@title:window", "Sieve Error"));
         } else {
             KMessageBox::error(this,
                                i18n("Uploading the Sieve script failed.\n"
                                     "unknown reason\n"),
-                               i18n("Sieve Error"));
+                               i18nc("@title:window", "Sieve Error"));
         }
     }
 }
@@ -164,7 +164,7 @@ bool SieveEditorPageWidget::needToSaveScript()
     if (mIsNewScript) {
         const int resultQuestion = KMessageBox::warningTwoActionsCancel(this,
                                                                         i18n("Script '%1' is new. Do you want to save it?", mCurrentURL.fileName()),
-                                                                        i18n("Save Script"),
+                                                                        i18nc("@title:window", "Save Script"),
                                                                         KStandardGuiItem::save(),
                                                                         KStandardGuiItem::discard());
         if (resultQuestion == KMessageBox::ButtonCode::PrimaryAction) {
@@ -177,7 +177,7 @@ bool SieveEditorPageWidget::needToSaveScript()
         if (mSieveEditorWidget->isModified()) {
             const int resultQuestion = KMessageBox::warningTwoActionsCancel(this,
                                                                             i18n("Script '%1' was changed. Do you want to save it ?", mCurrentURL.fileName()),
-                                                                            i18n("Save Script"),
+                                                                            i18nc("@title:window", "Save Script"),
                                                                             KStandardGuiItem::save(),
                                                                             KStandardGuiItem::discard());
             if (resultQuestion == KMessageBox::ButtonCode::PrimaryAction) {
