@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2014-09-13 18:25+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -153,6 +153,7 @@ msgstr ""
 
 #: serversievesettings.cpp:268
 #, kde-format
+msgctxt "@title:window"
 msgid "Check Server"
 msgstr ""
 
@@ -288,7 +289,9 @@ msgid "Script was modified. Do you want to save before closing?"
 msgstr "Skriptet ble endret. Vil du lagre det før lukking?"
 
 #: sieveeditormainwidget.cpp:607
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Close script"
+msgctxt "@title:window"
 msgid "Close script"
 msgstr "Lukk skriptet"
 
@@ -419,7 +422,9 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "Sieve-skriptet ble lastet opp."
 
 #: sieveeditorpagewidget.cpp:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sieve Script Upload"
+msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Last opp Sieve-skript"
 
@@ -432,7 +437,9 @@ msgid ""
 msgstr ""
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sieve Error"
+msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Sieve-feil"
 
@@ -449,9 +456,11 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Skriptet «%1» er nytt. Vil du lagre det?"
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Deactivate Script"
+msgctxt "@title:window"
 msgid "Save Script"
-msgstr ""
+msgstr "Skru av skript"
 
 #: sieveeditorpagewidget.cpp:179
 #, kde-format

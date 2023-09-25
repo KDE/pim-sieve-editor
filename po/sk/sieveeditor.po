@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2022-04-15 19:14+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -149,7 +149,9 @@ msgid "Server is not defined"
 msgstr "Server nie je definovaný"
 
 #: serversievesettings.cpp:268
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check Server"
+msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Skontrolovať server"
 
@@ -285,7 +287,9 @@ msgid "Script was modified. Do you want to save before closing?"
 msgstr "Skript sa zmenil. Chcete ho uložiť pred zatvorením?"
 
 #: sieveeditormainwidget.cpp:607
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Close script"
+msgctxt "@title:window"
 msgid "Close script"
 msgstr "Zavrieť skript"
 
@@ -416,7 +420,9 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "Sieve skript bol úspešne nahraný."
 
 #: sieveeditorpagewidget.cpp:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sieve Script Upload"
+msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Nahranie Sieve skriptu"
 
@@ -432,7 +438,9 @@ msgstr ""
 "%1"
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sieve Error"
+msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Chyba Sieve"
 
@@ -453,6 +461,7 @@ msgstr "Skript '%1' je nový. Chcete ho uložiť?"
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
 #, fuzzy, kde-format
 #| msgid "Share Script..."
+msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Zdieľať skript..."
 

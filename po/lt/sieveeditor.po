@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2014-01-21 01:37+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
@@ -152,6 +152,7 @@ msgstr ""
 
 #: serversievesettings.cpp:268
 #, kde-format
+msgctxt "@title:window"
 msgid "Check Server"
 msgstr ""
 
@@ -286,6 +287,7 @@ msgstr ""
 
 #: sieveeditormainwidget.cpp:607
 #, kde-format
+msgctxt "@title:window"
 msgid "Close script"
 msgstr ""
 
@@ -417,6 +419,7 @@ msgstr ""
 
 #: sieveeditorpagewidget.cpp:135
 #, kde-format
+msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr ""
 
@@ -430,6 +433,7 @@ msgstr ""
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
 #, kde-format
+msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr ""
 
@@ -447,6 +451,7 @@ msgstr ""
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
 #, kde-format
+msgctxt "@title:window"
 msgid "Save Script"
 msgstr ""
 

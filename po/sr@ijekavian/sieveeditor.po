@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2018-01-06 09:21+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -160,7 +160,9 @@ msgid "Server is not defined"
 msgstr "Сервер није дефинисан"
 
 #: serversievesettings.cpp:268
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check Server"
+msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Провери сервер"
 
@@ -300,7 +302,9 @@ msgstr "Скрипта је измењена. Желите ли да је сач
 
 # >> @title:window
 #: sieveeditormainwidget.cpp:607
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Close script"
+msgctxt "@title:window"
 msgid "Close script"
 msgstr "Затварање скрипте"
 
@@ -432,7 +436,9 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "Сито скрипта је успешно отпремљена."
 
 #: sieveeditorpagewidget.cpp:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sieve Script Upload"
+msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Отпремање сито скрипте"
 
@@ -448,7 +454,9 @@ msgstr ""
 "%1"
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sieve Error"
+msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Сито грешка"
 
@@ -469,6 +477,7 @@ msgstr "Скрипта „%1“ је нова. Желите ли да је са�
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
 #, fuzzy, kde-format
 #| msgid "Share..."
+msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Дели..."
 

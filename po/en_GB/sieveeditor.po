@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2022-12-31 15:20+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -150,7 +150,9 @@ msgid "Server is not defined"
 msgstr "Server is not defined"
 
 #: serversievesettings.cpp:268
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check Server"
+msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Check Server"
 
@@ -286,7 +288,9 @@ msgid "Script was modified. Do you want to save before closing?"
 msgstr "Script was modified. Do you want to save before closing?"
 
 #: sieveeditormainwidget.cpp:607
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Close script"
+msgctxt "@title:window"
 msgid "Close script"
 msgstr "Close script"
 
@@ -417,7 +421,9 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "The Sieve script was successfully uploaded."
 
 #: sieveeditorpagewidget.cpp:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sieve Script Upload"
+msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Sieve Script Upload"
 
@@ -433,7 +439,9 @@ msgstr ""
 "%1"
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sieve Error"
+msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Sieve Error"
 
@@ -452,7 +460,9 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Script '%1' is new. Do you want to save it?"
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Script"
+msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Save Script"
 

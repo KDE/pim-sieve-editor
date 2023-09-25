@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2023-01-04 10:17+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -154,7 +154,9 @@ msgid "Server is not defined"
 msgstr "Zerbitzaria ez da definitu"
 
 #: serversievesettings.cpp:268
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check Server"
+msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Egiaztatu zerbitzaria"
 
@@ -292,7 +294,9 @@ msgid "Script was modified. Do you want to save before closing?"
 msgstr "Gidoia aldatu da. Itxi aurretik gorde nahi duzu?"
 
 #: sieveeditormainwidget.cpp:607
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Close script"
+msgctxt "@title:window"
 msgid "Close script"
 msgstr "Itxi gidoia"
 
@@ -423,7 +427,9 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "«Sieve» gidoia ondo zama-igo da."
 
 #: sieveeditorpagewidget.cpp:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sieve Script Upload"
+msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "«Sieve» gidoia zama-igotzea"
 
@@ -439,7 +445,9 @@ msgstr ""
 "%1"
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sieve Error"
+msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "«Sieve» errorea"
 
@@ -458,7 +466,9 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "'%1' gidoia berria da. Gorde nahi duzu?"
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Script"
+msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Gorde gidoia"
 

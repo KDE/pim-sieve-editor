@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2020-09-08 19:22+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -158,6 +158,7 @@ msgstr ""
 #: serversievesettings.cpp:268
 #, fuzzy, kde-format
 #| msgid "Server Sieve"
+msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Server Sieve"
 
@@ -302,7 +303,9 @@ msgid "Script was modified. Do you want to save before closing?"
 msgstr "Scriptul a fost modificat. Doriți să-l salvați înainte de a închide?"
 
 #: sieveeditormainwidget.cpp:607
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Close script"
+msgctxt "@title:window"
 msgid "Close script"
 msgstr "Închide script"
 
@@ -436,9 +439,11 @@ msgid "The Sieve script was successfully uploaded."
 msgstr ""
 
 #: sieveeditorpagewidget.cpp:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Script"
+msgctxt "@title:window"
 msgid "Sieve Script Upload"
-msgstr ""
+msgstr "Redactează scriptul"
 
 #: sieveeditorpagewidget.cpp:148
 #, kde-format
@@ -451,6 +456,7 @@ msgstr ""
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
 #, fuzzy, kde-format
 #| msgid "Sieve Editor"
+msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Redactor Sieve"
 
@@ -469,6 +475,7 @@ msgstr ""
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
 #, fuzzy, kde-format
 #| msgid "Edit Script"
+msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Redactează scriptul"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: $2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2014-02-01 00:37+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: none\n"
@@ -163,6 +163,7 @@ msgstr ""
 #: serversievesettings.cpp:268
 #, fuzzy, kde-format
 #| msgid "Server Sieve"
+msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Server Sieve"
 
@@ -311,6 +312,7 @@ msgstr "Skripra „%1“ je izmijenjena. Želite li da jr snimite?"
 #: sieveeditormainwidget.cpp:607
 #, fuzzy, kde-format
 #| msgid "Delete Script"
+msgctxt "@title:window"
 msgid "Close script"
 msgstr "Obriši skriptu"
 
@@ -444,7 +446,9 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "Sieve skripta je uspješno poslata."
 
 #: sieveeditorpagewidget.cpp:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sieve Script Upload"
+msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Slanje Sieve skripte"
 
@@ -459,6 +463,7 @@ msgstr ""
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
 #, fuzzy, kde-format
 #| msgid "Sieve Editor"
+msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Sieve uređivač"
 
@@ -478,6 +483,7 @@ msgstr "Skripra „%1“ je izmijenjena. Želite li da jr snimite?"
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
 #, fuzzy, kde-format
 #| msgid "Edit Script"
+msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Izmijeni skriptu"
 

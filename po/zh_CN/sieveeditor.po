@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2023-09-16 10:09\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -150,7 +150,9 @@ msgid "Server is not defined"
 msgstr "服务器未定义"
 
 #: serversievesettings.cpp:268
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check Server"
+msgctxt "@title:window"
 msgid "Check Server"
 msgstr "检查服务器"
 
@@ -284,7 +286,9 @@ msgid "Script was modified. Do you want to save before closing?"
 msgstr "脚本已修改。您想要在关闭前保存吗？"
 
 #: sieveeditormainwidget.cpp:607
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Close script"
+msgctxt "@title:window"
 msgid "Close script"
 msgstr "关闭脚本"
 
@@ -415,7 +419,9 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "筛选脚本已成功上传。"
 
 #: sieveeditorpagewidget.cpp:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sieve Script Upload"
+msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "上传筛选脚本"
 
@@ -431,7 +437,9 @@ msgstr ""
 "%1"
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sieve Error"
+msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Sieve 错误"
 
@@ -450,9 +458,11 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "脚本“%1”是新建的。您想要保存它吗？"
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Deactivate Script"
+msgctxt "@title:window"
 msgid "Save Script"
-msgstr ""
+msgstr "取消激活脚本"
 
 #: sieveeditorpagewidget.cpp:179
 #, kde-format
