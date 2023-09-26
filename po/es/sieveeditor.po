@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Javier Vinal <fjvinal@gmail.com>, 2013, 2014, 2015, 2016, 2017, 2018.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:41+0000\n"
-"PO-Revision-Date: 2022-10-16 11:52+0200\n"
+"PO-Revision-Date: 2023-09-26 01:27+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,17 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Javier Viñal"
+msgstr "Eloy Cuadra,Javier Viñal"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "fjvinal@gmail.com"
+msgstr "ecuadra@eloihr.net,fjvinal@gmail.com"
 
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:152
 #, kde-format
@@ -41,34 +41,34 @@ msgstr "Preferencias IMAP de Thunderbird"
 #: importwizard/importimapsettingfinishpage.cpp:20
 #, kde-format
 msgid "IMAP settings were imported:"
-msgstr "Se importaron las preferencias de IMAP:"
+msgstr "Se han importado las preferencias de IMAP:"
 
 #: importwizard/importimapsettingnofoundpage.cpp:18
 #, kde-format
 msgid "No settings found to import."
-msgstr "No se encontraron preferencias que importar."
+msgstr "No se han encontrado preferencias para importar."
 
 #: importwizard/importimapsettingprogresspage.cpp:61
 #, kde-format
 msgid "No settings found."
-msgstr "No se encontraron preferencias."
+msgstr "No se han encontrado preferencias."
 
 #: importwizard/importimapsettingprogresspage.cpp:68
 #, kde-format
 msgid "Import settings from %1..."
-msgstr "Importar preferencias desde %1..."
+msgstr "Importar preferencias de %1..."
 
 #: importwizard/importimapsettingprogresspage.cpp:70
 #, kde-format
 msgid "Import settings from %1 done"
-msgstr "Importar preferencias desde %1 hecho"
+msgstr "Importación de preferencias de %1 terminada"
 
 #: importwizard/importimapsettingsearchpage.cpp:19
 #, kde-format
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr ""
-"Por favor, seleccione el programa con el que le gustaría importar las "
-"preferencias de IMAP:"
+"Seleccione el programa con el que le gustaría importar las preferencias de "
+"IMAP:"
 
 #: importwizard/importimapsettingwizard.cpp:28
 #, kde-format
@@ -153,18 +153,16 @@ msgid "Server is not defined"
 msgstr "Servidor no definido"
 
 #: serversievesettings.cpp:268
-#, fuzzy, kde-format
-#| msgid "Check Server"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
-msgstr "Comprobar servidor"
+msgstr "Comprobar el servidor"
 
 #: serversievesettings.cpp:311
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr ""
-"No es posible conectar al servidor, por favor verifique la dirección del "
-"servidor."
+"No se puede conectar con el servidor. Compruebe la dirección del servidor."
 
 #: serversievesettings.cpp:323
 #, kde-format
@@ -210,7 +208,7 @@ msgstr "Servidor Sieve"
 #: sieveeditorconfiguredialog.cpp:60
 #, kde-format
 msgid "Wrap Text"
-msgstr "Enrollar texto"
+msgstr "Ajustar el texto"
 
 #: sieveeditorconfiguredialog.cpp:65
 #, kde-format
@@ -241,7 +239,7 @@ msgstr "¿Desea eliminar este servidor «%1»?"
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Sieve Server"
-msgstr "Servidor remoto Sieve"
+msgstr "Servidor Sieve remoto"
 
 #: sieveeditoremptytabwidgetlabel.cpp:25
 #, kde-format
@@ -263,7 +261,7 @@ msgstr "Crear reglas gráficamente:"
 #, kde-format
 msgctxt "Action is from menu tools, submenu autogenerate script"
 msgid "Tools > Autogenerate script"
-msgstr "Herramientas -> Autogenerar guion"
+msgstr "Herramientas -> Generar guion automáticamente"
 
 #: sieveeditoremptytabwidgetlabel.cpp:27
 #, kde-format
@@ -274,7 +272,7 @@ msgstr "Depurar un guion:"
 #, kde-format
 msgctxt "These action in from menu tools submenu debug sieve script"
 msgid "Tools > Debug Sieve Script"
-msgstr "Herramientas -> Depurar guion Sieve"
+msgstr "Herramientas -> Depurar guion de Sieve"
 
 #: sieveeditoremptytabwidgetlabel.cpp:28
 #, kde-format
@@ -293,11 +291,10 @@ msgid "Script was modified. Do you want to save before closing?"
 msgstr "El guion se ha modificado. ¿Desea guardarlo antes de cerrar?"
 
 #: sieveeditormainwidget.cpp:607
-#, fuzzy, kde-format
-#| msgid "Close script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Close script"
-msgstr "Cerrar guion"
+msgstr "Cerrar el guion"
 
 #: sieveeditormainwindow.cpp:120
 #, kde-format
@@ -312,7 +309,7 @@ msgstr "La red está caída."
 #: sieveeditormainwindow.cpp:144
 #, kde-format
 msgid "Upload"
-msgstr "Cargar"
+msgstr "Enviar"
 
 #: sieveeditormainwindow.cpp:147
 #, kde-format
@@ -362,12 +359,12 @@ msgstr "Compartir..."
 #: sieveeditormainwindow.cpp:210
 #, kde-format
 msgid "Check Spelling..."
-msgstr "Revisión de ortografía..."
+msgstr "Comprobar la ortografía..."
 
 #: sieveeditormainwindow.cpp:216
 #, kde-format
 msgid "Check Syntax"
-msgstr "Comprobar sintaxis"
+msgstr "Comprobar la sintaxis"
 
 #: sieveeditormainwindow.cpp:221
 #, kde-format
@@ -393,12 +390,12 @@ msgstr "&Marcadores"
 #: sieveeditormainwindow.cpp:264
 #, kde-format
 msgid "Debug Sieve Script..."
-msgstr "Depurar guion sieve..."
+msgstr "Depurar guion de Sieve..."
 
 #: sieveeditormainwindow.cpp:269
 #, kde-format
 msgid "Wordwrap"
-msgstr "Cortar palabras"
+msgstr "Ajuste de línea"
 
 #: sieveeditormainwindow.cpp:278
 #, kde-format
@@ -418,19 +415,18 @@ msgstr "(Desactivado) %1"
 #: sieveeditorpagewidget.cpp:42
 #, kde-format
 msgid "Uploading script to server for checking it, please wait..."
-msgstr "Subiendo el guion al servidor para comprobarlo, por favor, espere..."
+msgstr "Enviando el guion al servidor para comprobarlo. Espere un momento..."
 
 #: sieveeditorpagewidget.cpp:135
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
-msgstr "El guion Sieve se ha cargado satisfactoriamente."
+msgstr "El guion de Sieve se ha enviado correctamente."
 
 #: sieveeditorpagewidget.cpp:135
-#, fuzzy, kde-format
-#| msgid "Sieve Script Upload"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
-msgstr "Carga de guion Sieve"
+msgstr "Envío de guion de Sieve"
 
 #: sieveeditorpagewidget.cpp:148
 #, kde-format
@@ -439,13 +435,12 @@ msgid ""
 "The server responded:\n"
 "%1"
 msgstr ""
-"El envío del guion Sieve ha fallado.\n"
+"El envío del guion de Sieve ha fallado.\n"
 "El servidor ha respondido:\n"
 "%1"
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, fuzzy, kde-format
-#| msgid "Sieve Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Error de Sieve"
@@ -456,8 +451,8 @@ msgid ""
 "Uploading the Sieve script failed.\n"
 "unknown reason\n"
 msgstr ""
-"La carga del guion Sieve ha fallado.\n"
-"motivo desconocido:\n"
+"El envío del guion de Sieve ha fallado.\n"
+"Motivo desconocido\n"
 
 #: sieveeditorpagewidget.cpp:166
 #, kde-format
@@ -465,8 +460,7 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "El guion «%1» es nuevo. ¿Desea guardarlo?"
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
-#, fuzzy, kde-format
-#| msgid "Save Script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Guardar guion"
@@ -486,7 +480,7 @@ msgstr "Cerrar pestaña"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Close All Other Tabs"
-msgstr "Cerrar todas las otras pestañas"
+msgstr "Cerrar las demás pestañas"
 
 #: sieveeditortabwidget.cpp:51
 #, kde-format
@@ -553,10 +547,10 @@ msgid ""
 "Old server implementations still use port 2000, while newer standard conform "
 "server can only be accessed via port 4190."
 msgstr ""
-"El puerto del servidor cambió mientras ManageSieve se transformó en un "
-"estándar completo RFC. Las implementaciones antiguas del servidor todavía "
-"usan el puerto 2000, mientras que los servidores conformes con el nuevo "
-"estándar solo pueden accederse vía el puerto 4190."
+"El puerto del servidor cambió cuando ManageSieve se convirtió en un estándar "
+"completo RFC. Las implementaciones antiguas del servidor todavía usan el "
+"puerto 2000, mientras que los servidores compatibles con el nuevo estándar "
+"solo pueden usar el puerto 4190."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (text), widget (QLabel, label_13)
@@ -632,7 +626,7 @@ msgstr ""
 "segura directamente tras conectar;</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'Sans Serif'; font-weight:600;\">None</span><span style=\" font-"
+"family:'Sans Serif'; font-weight:600;\">Ninguna</span><span style=\" font-"
 "family:'Sans Serif';\"> conectará al puerto 143, pero no cambiará a una "
 "conexión segura. No se recomienda esta configuración.</span></p></body></"
 "html>"
@@ -641,7 +635,7 @@ msgstr ""
 #: ui/serversievesettings.ui:163
 #, kde-format
 msgid "Connection Settings"
-msgstr "Preferencias de conexión"
+msgstr "Preferencias de la conexión"
 
 #. i18n: ectx: property (text), widget (QPushButton, testButton)
 #: ui/serversievesettings.ui:175

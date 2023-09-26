@@ -151,11 +151,10 @@ msgid "Server is not defined"
 msgstr "Server nebyl určen"
 
 #: serversievesettings.cpp:268
-#, fuzzy, kde-format
-#| msgid "Check Server"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
-msgstr "Zkontrolovat server"
+msgstr ""
 
 #: serversievesettings.cpp:311
 #, kde-format
@@ -289,11 +288,10 @@ msgid "Script was modified. Do you want to save before closing?"
 msgstr ""
 
 #: sieveeditormainwidget.cpp:607
-#, fuzzy, kde-format
-#| msgid "Close script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Close script"
-msgstr "Zavřít skript"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:120
 #, kde-format
@@ -422,11 +420,10 @@ msgid "The Sieve script was successfully uploaded."
 msgstr ""
 
 #: sieveeditorpagewidget.cpp:135
-#, fuzzy, kde-format
-#| msgid "Save Script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
-msgstr "Uložit skript"
+msgstr ""
 
 #: sieveeditorpagewidget.cpp:148
 #, kde-format
@@ -440,11 +437,10 @@ msgstr ""
 "%1"
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, fuzzy, kde-format
-#| msgid "Sieve Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
-msgstr "Chyba Sieve"
+msgstr ""
 
 #: sieveeditorpagewidget.cpp:154
 #, kde-format
@@ -461,8 +457,7 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr ""
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
-#, fuzzy, kde-format
-#| msgid "Save Script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Uložit skript"

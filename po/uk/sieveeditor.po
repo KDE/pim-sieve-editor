@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:41+0000\n"
-"PO-Revision-Date: 2022-10-16 08:40+0300\n"
+"PO-Revision-Date: 2023-09-25 09:02+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -154,11 +154,10 @@ msgid "Server is not defined"
 msgstr "Сервер не визначено"
 
 #: serversievesettings.cpp:268
-#, fuzzy, kde-format
-#| msgid "Check Server"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
-msgstr "Перевірити сервер"
+msgstr "Перевірка сервера"
 
 #: serversievesettings.cpp:311
 #, kde-format
@@ -294,8 +293,7 @@ msgid "Script was modified. Do you want to save before closing?"
 msgstr "До скрипту було внесено зміни. Хочете зберегти ці зміни?"
 
 #: sieveeditormainwidget.cpp:607
-#, fuzzy, kde-format
-#| msgid "Close script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Close script"
 msgstr "Закриття скрипту"
@@ -427,8 +425,7 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "Успішно вивантажено скрипт фільтрування."
 
 #: sieveeditorpagewidget.cpp:135
-#, fuzzy, kde-format
-#| msgid "Sieve Script Upload"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Вивантаження скрипту фільтрування"
@@ -445,8 +442,7 @@ msgstr ""
 "%1"
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, fuzzy, kde-format
-#| msgid "Sieve Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Помилка фільтрування"
@@ -466,11 +462,10 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Скрипт «%1» є новим. Хочете його зберегти?"
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
-#, fuzzy, kde-format
-#| msgid "Save Script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
-msgstr "Зберегти скрипт"
+msgstr "Збереження скрипту"
 
 #: sieveeditorpagewidget.cpp:179
 #, kde-format
