@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:41+0000\n"
-"PO-Revision-Date: 2023-07-13 23:48+0300\n"
+"PO-Revision-Date: 2023-09-26 06:57+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -150,8 +150,7 @@ msgid "Server is not defined"
 msgstr "Sunucu tanımlı değil"
 
 #: serversievesettings.cpp:268
-#, fuzzy, kde-format
-#| msgid "Check Server"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Sunucuyu Denetle"
@@ -288,11 +287,10 @@ msgid "Script was modified. Do you want to save before closing?"
 msgstr "Betik değiştirilmiş. Kapatmadan önce kaydetmek istiyor musunuz?"
 
 #: sieveeditormainwidget.cpp:607
-#, fuzzy, kde-format
-#| msgid "Close script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Close script"
-msgstr "Betiği kapat"
+msgstr "Betiği Kapat"
 
 #: sieveeditormainwindow.cpp:120
 #, kde-format
@@ -421,11 +419,10 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "Sieve betiği başarıyla gönderildi."
 
 #: sieveeditorpagewidget.cpp:135
-#, fuzzy, kde-format
-#| msgid "Sieve Script Upload"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
-msgstr "Sieve Betiği Yükle"
+msgstr "Sieve Betiği Karşıya Yükle"
 
 #: sieveeditorpagewidget.cpp:148
 #, kde-format
@@ -439,8 +436,7 @@ msgstr ""
 "%1"
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, fuzzy, kde-format
-#| msgid "Sieve Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Sieve Hatası"
@@ -460,8 +456,7 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "'%1' betiği yeni. Kaydetmek istiyor musunuz?"
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
-#, fuzzy, kde-format
-#| msgid "Save Script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Betiği Kaydet"

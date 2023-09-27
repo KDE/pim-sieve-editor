@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:41+0000\n"
-"PO-Revision-Date: 2022-10-17 07:50+0200\n"
+"PO-Revision-Date: 2023-09-26 05:36+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -151,8 +151,7 @@ msgid "Server is not defined"
 msgstr "სერვერი აღწერილი არაა"
 
 #: serversievesettings.cpp:268
-#, fuzzy, kde-format
-#| msgid "Check Server"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "სერვერის შემოწმება"
@@ -289,8 +288,7 @@ msgid "Script was modified. Do you want to save before closing?"
 msgstr "სკრიპტი შეიცვალა. გნებავთ მისი დახურვა შენახვამდე?"
 
 #: sieveeditormainwidget.cpp:607
-#, fuzzy, kde-format
-#| msgid "Close script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Close script"
 msgstr "სკრიპტის დახურვა"
@@ -422,11 +420,10 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "Sieve-ის სკრიპტი წარმატებით აიტვირთა."
 
 #: sieveeditorpagewidget.cpp:135
-#, fuzzy, kde-format
-#| msgid "Sieve Script Upload"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
-msgstr "Sieve -ის სკრიპტის ატვირთვა"
+msgstr "Sieve-ის სკრიპტის ატვირთვა"
 
 #: sieveeditorpagewidget.cpp:148
 #, kde-format
@@ -440,11 +437,10 @@ msgstr ""
 "%1"
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, fuzzy, kde-format
-#| msgid "Sieve Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
-msgstr "Sieve -ის შეცდომა"
+msgstr "Sieve-ის შეცდომა"
 
 #: sieveeditorpagewidget.cpp:154
 #, kde-format
@@ -462,8 +458,7 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "სკრიპტი %1 ახალია. გნებავთ, შეინახოთ?"
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
-#, fuzzy, kde-format
-#| msgid "Save Script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "სკრიპტის შენახვა"
