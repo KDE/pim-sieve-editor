@@ -74,7 +74,7 @@
 >Ús de l'&i18n-kapplication;</title>
 
 <para
->L'&i18n-kapplication; proporciona una &IGU; per dur a terme aquestes tasques:</para>
+>L'&i18n-kapplication; proporciona una &IGU; per a dur a terme aquestes tasques:</para>
 
 <itemizedlist>
 <listitem
@@ -95,7 +95,7 @@
 ></listitem>
 <listitem
 ><para
->Comprovar la sintaxi de l'script, auto generar i depurar els scripts</para
+>Comprovar la sintaxi de l'script, autogenerar i depurar els scripts</para
 ></listitem>
 </itemizedlist>
 
@@ -165,7 +165,7 @@
 <para
 >Les accions del menú <guimenu
 >Eines</guimenu
-> permeten comprovar la sintaxi dels scripts, auto generar i depurar els scripts.</para>
+> permeten comprovar la sintaxi dels scripts, autogenerar i depurar els scripts.</para>
 
 <screenshot>
 <screeninfo
