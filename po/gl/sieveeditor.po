@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Xosé <xosecalvo@gmail.com>, 2014.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020, 2023.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:41+0000\n"
-"PO-Revision-Date: 2023-06-17 14:47+0200\n"
+"PO-Revision-Date: 2023-09-30 12:43+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -113,7 +113,7 @@ msgstr "Laurent Montel"
 #: main.cpp:35
 #, kde-format
 msgid "Maintainer"
-msgstr "Mantedor"
+msgstr "Mantemento."
 
 #: main.cpp:43
 #, kde-format
@@ -137,7 +137,7 @@ msgstr "%1 (%2)"
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
-msgstr "Limpar o texto"
+msgstr "Borrar o texto"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
 #: serversievesettings.cpp:35 ui/serversievesettings.ui:294
@@ -152,8 +152,7 @@ msgid "Server is not defined"
 msgstr "O servidor non está definido"
 
 #: serversievesettings.cpp:268
-#, fuzzy, kde-format
-#| msgid "Check Server"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Comprobar o servidor"
@@ -161,17 +160,17 @@ msgstr "Comprobar o servidor"
 #: serversievesettings.cpp:311
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
-msgstr "Non se pode conectar co servidor; verifique o enderezo do servidor."
+msgstr "Non é posíbel conectar co servidor; verifique o enderezo do servidor."
 
 #: serversievesettings.cpp:323
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
-msgstr "<qt><b>Admítese TLS, e recoméndase.</b></qt>"
+msgstr "<qt><b>TLS permítese e recoméndase.</b></qt>"
 
 #: serversievesettings.cpp:326
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
-msgstr "<qt><b>Admítese, e recoméndase, SSL.</b></qt>"
+msgstr "<qt><b>SSL permítese e recoméndase.</b></qt>"
 
 #: serversievesettings.cpp:330
 #, kde-format
@@ -290,8 +289,7 @@ msgid "Script was modified. Do you want to save before closing?"
 msgstr "Modificouse o guión. Quere gardalo antes de pechar?"
 
 #: sieveeditormainwidget.cpp:607
-#, fuzzy, kde-format
-#| msgid "Close script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Close script"
 msgstr "Pechar o guión"
@@ -299,7 +297,7 @@ msgstr "Pechar o guión"
 #: sieveeditormainwindow.cpp:120
 #, kde-format
 msgid "Network is Up."
-msgstr "A rede está activada."
+msgstr "A rede está activa."
 
 #: sieveeditormainwindow.cpp:122
 #, kde-format
@@ -423,8 +421,7 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "Enviouse o guión de Sieve."
 
 #: sieveeditorpagewidget.cpp:135
-#, fuzzy, kde-format
-#| msgid "Sieve Script Upload"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Envío do guión de Sieve"
@@ -436,13 +433,12 @@ msgid ""
 "The server responded:\n"
 "%1"
 msgstr ""
-"Enviar o guión de Sieve fallou.\n"
+"Produciuse un erro ao enviar o guión de Sieve.\n"
 "O servidor respondeu:\n"
 "%1"
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, fuzzy, kde-format
-#| msgid "Sieve Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Produciuse un erro de Sieve"
@@ -453,7 +449,7 @@ msgid ""
 "Uploading the Sieve script failed.\n"
 "unknown reason\n"
 msgstr ""
-"O envío do guión de Sieve fallou.\n"
+"Produciuse un erro ao enviar o guión de Sieve.\n"
 "Descoñécese o motivo.\n"
 
 #: sieveeditorpagewidget.cpp:166
@@ -462,8 +458,7 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "O guión «%1» é novo. Quere gardalo?"
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
-#, fuzzy, kde-format
-#| msgid "Save Script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Gardar o guión"
@@ -477,19 +472,19 @@ msgstr "Cambiouse o guión «%1». Quere gardalo?"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Close Tab"
-msgstr "Pechar o separador"
+msgstr "Pechar a lapela"
 
 #: sieveeditortabwidget.cpp:47
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Close All Other Tabs"
-msgstr "Pechar os outros separadores"
+msgstr "Pechar as outras lapelas"
 
 #: sieveeditortabwidget.cpp:51
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Close All Tabs"
-msgstr "Pechar todos os separadores"
+msgstr "Pechar todas as lapelas"
 
 #. i18n: ectx: Menu (edit)
 #: sieveeditorui.rc:23
@@ -533,7 +528,7 @@ msgstr "Nome do servidor:"
 #: ui/serversievesettings.ui:62 ui/serversievesettings.ui:336
 #, kde-format
 msgid "Username:"
-msgstr "Nome de usuario:"
+msgstr "Nome de usuaria:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label_8)
