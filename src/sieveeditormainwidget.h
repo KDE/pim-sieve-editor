@@ -37,17 +37,17 @@ public:
     QTabWidget *tabWidget() const;
 
     KSieveUi::SieveEditorWidget::EditorMode pageMode() const;
-    Q_REQUIRED_RESULT bool isUndoAvailable() const;
-    Q_REQUIRED_RESULT bool isRedoAvailable() const;
-    Q_REQUIRED_RESULT bool isWordWrap() const;
+    [[nodiscard]] bool isUndoAvailable() const;
+    [[nodiscard]] bool isRedoAvailable() const;
+    [[nodiscard]] bool isWordWrap() const;
 
-    Q_REQUIRED_RESULT bool hasSelection() const;
-    Q_REQUIRED_RESULT QString currentHelpTitle() const;
-    Q_REQUIRED_RESULT QUrl currentHelpUrl() const;
+    [[nodiscard]] bool hasSelection() const;
+    [[nodiscard]] QString currentHelpTitle() const;
+    [[nodiscard]] QUrl currentHelpUrl() const;
     void openBookmarkUrl(const QUrl &url);
-    Q_REQUIRED_RESULT bool printSupportEnabled() const;
-    Q_REQUIRED_RESULT bool isTextEditor() const;
-    Q_REQUIRED_RESULT QString currentText() const;
+    [[nodiscard]] bool printSupportEnabled() const;
+    [[nodiscard]] bool isTextEditor() const;
+    [[nodiscard]] QString currentText() const;
     void forceCloseTab(int index);
 public Q_SLOTS:
     void slotDebugSieveScript();
@@ -90,7 +90,7 @@ Q_SIGNALS:
     void sieveEditorTabCurrentChanged();
 
 protected:
-    Q_REQUIRED_RESULT bool event(QEvent *e) override;
+    [[nodiscard]] bool event(QEvent *e) override;
 
 private:
     void slotCreateScriptPage(const KSieveUi::ManageSieveWidget::ScriptInfo &info, bool isNewScript);

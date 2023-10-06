@@ -26,26 +26,26 @@ public:
     ~SieveEditorPageWidget() override;
 
     void loadScript(const KSieveUi::ManageSieveWidget::ScriptInfo &info);
-    Q_REQUIRED_RESULT QUrl currentUrl() const;
+    [[nodiscard]] QUrl currentUrl() const;
     void setCurrentUrl(const QUrl &url);
     void setIsNewScript(bool isNewScript);
     void uploadScript(bool showInformation = true, bool forceSave = false);
-    Q_REQUIRED_RESULT bool needToSaveScript();
+    [[nodiscard]] bool needToSaveScript();
 
-    Q_REQUIRED_RESULT bool isModified() const;
+    [[nodiscard]] bool isModified() const;
     void goToLine();
-    Q_REQUIRED_RESULT KSieveUi::SieveEditorWidget::EditorMode pageMode() const;
+    [[nodiscard]] KSieveUi::SieveEditorWidget::EditorMode pageMode() const;
 
     void find();
     void replace();
     void redo();
     void undo();
-    Q_REQUIRED_RESULT bool isUndoAvailable() const;
-    Q_REQUIRED_RESULT bool isRedoAvailable() const;
+    [[nodiscard]] bool isUndoAvailable() const;
+    [[nodiscard]] bool isRedoAvailable() const;
     void paste();
     void cut();
     void copy();
-    Q_REQUIRED_RESULT bool hasSelection() const;
+    [[nodiscard]] bool hasSelection() const;
 
     void selectAll();
     void saveAs();
@@ -61,20 +61,20 @@ public:
     void reverseCase();
     void zoomIn();
     void zoomOut();
-    Q_REQUIRED_RESULT QString currentText() const;
-    Q_REQUIRED_RESULT QString currentHelpTitle() const;
-    Q_REQUIRED_RESULT QUrl currentHelpUrl() const;
+    [[nodiscard]] QString currentText() const;
+    [[nodiscard]] QString currentHelpTitle() const;
+    [[nodiscard]] QUrl currentHelpUrl() const;
     void openBookmarkUrl(const QUrl &url);
     void debugSieveScript();
     void zoomReset();
     void setWordWrap(bool state);
-    Q_REQUIRED_RESULT bool isWordWrap() const;
+    [[nodiscard]] bool isWordWrap() const;
     void print();
     void printPreview();
     bool printSupportEnabled() const;
     bool isTextEditor() const;
     void renameScriptName(const QString &newName);
-    Q_REQUIRED_RESULT bool uploadScriptAndCloseTab(int index);
+    [[nodiscard]] bool uploadScriptAndCloseTab(int index);
 Q_SIGNALS:
     void refreshList();
     void scriptModified(bool, SieveEditorPageWidget *);

@@ -18,7 +18,7 @@ public:
     ~ImportImapSettingSearchPage() override;
 
     void setProgramList(const QStringList &lst);
-    Q_REQUIRED_RESULT QStringList selectedPrograms() const;
+    [[nodiscard]] QStringList selectedPrograms() const;
 
 Q_SIGNALS:
     void needToImportSettings(bool);

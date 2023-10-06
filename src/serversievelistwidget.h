@@ -15,7 +15,7 @@ public:
     explicit ServerSieveListWidgetItem(QListWidget *parent = nullptr);
     ~ServerSieveListWidgetItem() override;
 
-    Q_REQUIRED_RESULT SieveEditorUtil::SieveServerConfig serverConfig() const;
+    [[nodiscard]] SieveEditorUtil::SieveServerConfig serverConfig() const;
     void setServerConfig(const SieveEditorUtil::SieveServerConfig &conf);
 
 private:

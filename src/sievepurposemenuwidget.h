@@ -15,7 +15,7 @@ public:
     explicit SievePurposeMenuWidget(QWidget *parentWidget, QObject *parent = nullptr);
     ~SievePurposeMenuWidget() override;
 
-    Q_REQUIRED_RESULT QByteArray text() override;
+    [[nodiscard]] QByteArray text() override;
     void setEditorWidget(SieveEditorMainWidget *editor);
 
 private:

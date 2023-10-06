@@ -18,8 +18,8 @@ public:
     ~AbstractImapSettingsCheckJob() override;
     virtual void start() = 0;
 
-    Q_REQUIRED_RESULT virtual bool settingsCanBeImported() const = 0;
-    Q_REQUIRED_RESULT virtual QString name() const = 0;
+    [[nodiscard]] virtual bool settingsCanBeImported() const = 0;
+    [[nodiscard]] virtual QString name() const = 0;
 
     virtual void setImapSettingsPassword(AbstractImapSettingsPassword *passwordImporter);
 

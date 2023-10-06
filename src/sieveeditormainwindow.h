@@ -26,8 +26,8 @@ public:
     explicit SieveEditorMainWindow(QWidget *parent = nullptr);
     ~SieveEditorMainWindow() override;
 
-    Q_REQUIRED_RESULT QString currentHelpTitle() const;
-    Q_REQUIRED_RESULT QUrl currentHelpUrl() const;
+    [[nodiscard]] QString currentHelpTitle() const;
+    [[nodiscard]] QUrl currentHelpUrl() const;
 
 protected:
     void closeEvent(QCloseEvent *e) override;
@@ -52,7 +52,7 @@ private:
     void initStatusBar();
     void readConfig();
     void setupActions();
-    Q_REQUIRED_RESULT QString currentText() const;
+    [[nodiscard]] QString currentText() const;
     void slotFullScreen(bool t);
     void writeConfig();
 

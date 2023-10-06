@@ -17,8 +17,8 @@ namespace SieveEditorUtil
 struct LIBSIEVEEDITOR_EXPORT SieveAccountSettings {
     SieveAccountSettings() = default;
 
-    Q_REQUIRED_RESULT bool operator==(const SieveAccountSettings &other) const;
-    Q_REQUIRED_RESULT bool isValid() const;
+    [[nodiscard]] bool operator==(const SieveAccountSettings &other) const;
+    [[nodiscard]] bool isValid() const;
     QString serverName;
     QString userName;
     QString password;
@@ -29,8 +29,8 @@ struct LIBSIEVEEDITOR_EXPORT SieveAccountSettings {
 struct LIBSIEVEEDITOR_EXPORT SieveServerConfig {
     SieveServerConfig() = default;
 
-    Q_REQUIRED_RESULT bool isValid() const;
-    Q_REQUIRED_RESULT QUrl url() const;
+    [[nodiscard]] bool isValid() const;
+    [[nodiscard]] QUrl url() const;
     SieveAccountSettings sieveSettings;
     KSieveCore::SieveImapAccountSettings sieveImapAccountSettings;
     bool operator==(const SieveServerConfig &other) const;
@@ -41,9 +41,9 @@ struct LIBSIEVEEDITOR_EXPORT SieveServerConfig {
 void writeServerSieveConfig(const QList<SieveEditorUtil::SieveServerConfig> &lstConfig);
 void addServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf);
 void writeSieveSettings(const KSharedConfigPtr &cfg, const SieveEditorUtil::SieveServerConfig &conf, int index);
-Q_REQUIRED_RESULT QString sievePasswordIdentifier(const QString &userName, const QString &serverName);
-Q_REQUIRED_RESULT QString imapPasswordIdentifier(const QString &userName, const QString &serverName);
-Q_REQUIRED_RESULT QString walletFolderName();
+[[nodiscard]] QString sievePasswordIdentifier(const QString &userName, const QString &serverName);
+[[nodiscard]] QString imapPasswordIdentifier(const QString &userName, const QString &serverName);
+[[nodiscard]] QString walletFolderName();
 }
 Q_DECLARE_TYPEINFO(SieveEditorUtil::SieveServerConfig, Q_RELOCATABLE_TYPE);
 LIBSIEVEEDITOR_TESTS_EXPORT QDebug operator<<(QDebug d, const SieveEditorUtil::SieveAccountSettings &settings);

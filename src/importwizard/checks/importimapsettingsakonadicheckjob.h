@@ -17,12 +17,12 @@ public:
 
     void start() override;
 
-    Q_REQUIRED_RESULT bool settingsCanBeImported() const override;
-    Q_REQUIRED_RESULT QString name() const override;
+    [[nodiscard]] bool settingsCanBeImported() const override;
+    [[nodiscard]] QString name() const override;
     void setImapSettingsPassword(AbstractImapSettingsPassword *passwordImporter) override;
 
 private:
-    Q_REQUIRED_RESULT inline bool resourceCanHaveSieveSupport(const QString &filename) const;
+    [[nodiscard]] inline bool resourceCanHaveSieveSupport(const QString &filename) const;
     void loadSieveServerSettings();
     void slotImportNextServerSieveDone(const SieveEditorUtil::SieveServerConfig &config, const QString &filename);
     void importNextServerSieve();

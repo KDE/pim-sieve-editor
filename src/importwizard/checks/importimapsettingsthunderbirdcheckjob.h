@@ -16,13 +16,13 @@ public:
     ~ImportImapSettingsThunderbirdCheckJob() override;
 
     void start() override;
-    Q_REQUIRED_RESULT bool settingsCanBeImported() const override;
-    Q_REQUIRED_RESULT QString name() const override;
+    [[nodiscard]] bool settingsCanBeImported() const override;
+    [[nodiscard]] QString name() const override;
 
 private:
-    Q_REQUIRED_RESULT bool importSettings(const QString &directory, const QString &defaultProfile);
-    Q_REQUIRED_RESULT QMap<QString, QString> listProfile(QString &currentProfile, const QString &defaultSettingPath);
-    Q_REQUIRED_RESULT QString defaultPath() const;
+    [[nodiscard]] bool importSettings(const QString &directory, const QString &defaultProfile);
+    [[nodiscard]] QMap<QString, QString> listProfile(QString &currentProfile, const QString &defaultSettingPath);
+    [[nodiscard]] QString defaultPath() const;
     void insertIntoMap(const QString &line);
     void addAuth(SieveEditorUtil::SieveServerConfig &config, const QString &accountName);
     void encryption(SieveEditorUtil::SieveServerConfig &config, const QString &accountName);
