@@ -117,6 +117,7 @@ target_link_libraries(libsieveeditor
     KF6::Bookmarks
     KF6::I18n
     KF6::XmlGui
+    KF6::BookmarksWidgets
     KPim6::PimCommon
     KPim6::KSieveUi
     KPim6::KManageSieve
