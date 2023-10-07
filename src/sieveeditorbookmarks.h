@@ -6,8 +6,11 @@
 
 #pragma once
 
+#include <KBookmarkManager>
 #include <KBookmarkOwner>
+
 #include <QObject>
+
 class KBookmarkMenu;
 class QMenu;
 class KActionCollection;
@@ -31,6 +34,7 @@ Q_SIGNALS:
 
 private:
     Q_DISABLE_COPY(SieveEditorBookmarks)
+    KBookmarkManager *m_bookmarkManager;
     KBookmarkMenu *mBookmarkMenu = nullptr;
     QMenu *const mMenu;
     SieveEditorMainWindow *const mMainWindow;
