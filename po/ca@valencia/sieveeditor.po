@@ -343,7 +343,7 @@ msgstr "Actualitza la llista"
 #: sieveeditormainwindow.cpp:183
 #, kde-format
 msgid "Go to Line..."
-msgstr "Ves a la línia..."
+msgstr "Ves fins a la línia..."
 
 #: sieveeditormainwindow.cpp:200
 #, kde-format
