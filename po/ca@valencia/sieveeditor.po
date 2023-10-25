@@ -44,7 +44,7 @@ msgstr "Importa la configuració de Thunderbird"
 #: importwizard/importimapsettingfinishpage.cpp:20
 #, kde-format
 msgid "IMAP settings were imported:"
-msgstr "La configuració de l'IMAP ha sigut importada:"
+msgstr "La configuració d'IMAP ha sigut importada:"
 
 #: importwizard/importimapsettingnofoundpage.cpp:18
 #, kde-format
@@ -76,7 +76,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Import IMAP Settings"
-msgstr "Importeu la configuració de l'IMAP"
+msgstr "Importeu la configuració d'IMAP"
 
 #: importwizard/importimapsettingwizard.cpp:31
 #, kde-format
@@ -182,7 +182,7 @@ msgid ""
 "server.</b></qt>"
 msgstr ""
 "<qt><b>No està acceptat cap mètode de seguretat. No és recomanable connectar "
-"a este servidor.</b></qt>"
+"amb este servidor.</b></qt>"
 
 #: serversievesettings.cpp:333
 #, kde-format
@@ -284,7 +284,7 @@ msgstr "Importa la configuració de «Sieve»:"
 #, kde-format
 msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
-msgstr "Eines > Importa la configuració de l'IMAP"
+msgstr "Eines > Importa la configuració d'IMAP"
 
 #: sieveeditormainwidget.cpp:606
 #, kde-format
@@ -401,7 +401,7 @@ msgstr "Talla les paraules"
 #: sieveeditormainwindow.cpp:278
 #, kde-format
 msgid "Import IMAP Settings..."
-msgstr "Importa la configuració de l'IMAP..."
+msgstr "Importa la configuració d'IMAP..."
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
