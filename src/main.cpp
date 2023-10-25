@@ -24,7 +24,7 @@ int main(int argc, char **argv)
     app.setDesktopFileName(QStringLiteral("org.kde.sieveeditor"));
     KCrash::initialize();
 
-    KLocalizedString::setApplicationDomain("sieveeditor");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("sieveeditor"));
 
     KAboutData aboutData(QStringLiteral("sieveeditor"),
                          i18n("KSieve Editor"),
