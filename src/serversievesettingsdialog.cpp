@@ -55,14 +55,14 @@ void ServerSieveSettingsDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(450, 350));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myServerSieveSettingsDialog);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myServerSieveSettingsDialog));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ServerSieveSettingsDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), myServerSieveSettingsDialog);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myServerSieveSettingsDialog));
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }

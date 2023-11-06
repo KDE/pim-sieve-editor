@@ -121,14 +121,14 @@ void ImportImapSettingWizard::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(600, 400));
-    KConfigGroup group(KSharedConfig::openStateConfig(), "SieveEditorConfigureDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String("SieveEditorConfigureDialog"));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ImportImapSettingWizard::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "SieveEditorConfigureDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String("SieveEditorConfigureDialog"));
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }
