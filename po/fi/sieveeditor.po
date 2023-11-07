@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:41+0000\n"
-"PO-Revision-Date: 2023-01-17 15:56+0200\n"
+"PO-Revision-Date: 2023-10-12 18:33+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -151,8 +151,7 @@ msgid "Server is not defined"
 msgstr "Palvelinta ei ole määritetty"
 
 #: serversievesettings.cpp:268
-#, fuzzy, kde-format
-#| msgid "Check Server"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Tarkista palvelin"
@@ -289,11 +288,10 @@ msgid "Script was modified. Do you want to save before closing?"
 msgstr "Komentojonoa on muutettu. Haluatko tallentaa sen ennen sulkemista?"
 
 #: sieveeditormainwidget.cpp:607
-#, fuzzy, kde-format
-#| msgid "Close script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Close script"
-msgstr "Sulje komentojono"
+msgstr "Sulje skripti"
 
 #: sieveeditormainwindow.cpp:120
 #, kde-format
@@ -422,11 +420,10 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "Sieve-komentojono onnistuttiin lähettämään."
 
 #: sieveeditorpagewidget.cpp:135
-#, fuzzy, kde-format
-#| msgid "Sieve Script Upload"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
-msgstr "Sieve-komentojonon lähetys"
+msgstr "Sieve-skriptin lähetys"
 
 #: sieveeditorpagewidget.cpp:148
 #, kde-format
@@ -440,8 +437,7 @@ msgstr ""
 "%1"
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, fuzzy, kde-format
-#| msgid "Sieve Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Sieve-virhe"
@@ -461,8 +457,7 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Komentojono ”%1” on uusi. Haluatko tallentaa sen?"
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
-#, fuzzy, kde-format
-#| msgid "Save Script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Tallenna skripti"
