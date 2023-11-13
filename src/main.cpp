@@ -15,7 +15,7 @@
 #include <QTextStream>
 #ifdef WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
-#include <KUserFeedbackQt6/Provider>
+#include <KUserFeedback/Provider>
 #endif
 
 int main(int argc, char **argv)

@@ -11,8 +11,8 @@
 
 #ifdef WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
-#include <KUserFeedbackQt6/FeedbackConfigWidget>
-#include <KUserFeedbackQt6/Provider>
+#include <KUserFeedback/FeedbackConfigWidget>
+#include <KUserFeedback/Provider>
 #endif
 
 #include <KLocalizedString>

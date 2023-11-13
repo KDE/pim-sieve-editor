@@ -5,14 +5,14 @@
 */
 
 #include "userfeedbackmanager.h"
-#include <KUserFeedbackQt6/ApplicationVersionSource>
-#include <KUserFeedbackQt6/LocaleInfoSource>
-#include <KUserFeedbackQt6/PlatformInfoSource>
-#include <KUserFeedbackQt6/Provider>
-#include <KUserFeedbackQt6/QtVersionSource>
-#include <KUserFeedbackQt6/ScreenInfoSource>
-#include <KUserFeedbackQt6/StartCountSource>
-#include <KUserFeedbackQt6/UsageTimeSource>
+#include <KUserFeedback/ApplicationVersionSource>
+#include <KUserFeedback/LocaleInfoSource>
+#include <KUserFeedback/PlatformInfoSource>
+#include <KUserFeedback/Provider>
+#include <KUserFeedback/QtVersionSource>
+#include <KUserFeedback/ScreenInfoSource>
+#include <KUserFeedback/StartCountSource>
+#include <KUserFeedback/UsageTimeSource>
 
 UserFeedBackManager::UserFeedBackManager(QObject *parent)
     : QObject(parent)

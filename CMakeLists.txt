@@ -70,6 +70,8 @@ set_package_properties(KF6DocTools PROPERTIES DESCRIPTION
     "Tools to generate documentation"
     TYPE OPTIONAL
 )
+find_package(KF6UserFeedback ${KF_MIN_VERSION} CONFIG)
+set_package_properties(KF6::UserFeedback PROPERTIES DESCRIPTION "User Feedback lib" TYPE OPTIONAL PURPOSE "Allow to send Telemetry Information (optional).")
 
 
 # Find KdepimLibs Package
@@ -78,9 +80,6 @@ find_package(KPim6MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6PimCommon ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6KSieveUi ${LIBKSIEVE_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
-
-find_package(KUserFeedbackQt6 1.3.0 CONFIG)
-set_package_properties(KUserFeedbackQt6 PROPERTIES DESCRIPTION "User Feedback lib" TYPE OPTIONAL PURPOSE "Allow to send Telemetry Information (optional).")
 
 find_package(Qt6Keychain CONFIG)
 set_package_properties(Qt6Keychain PROPERTIES
