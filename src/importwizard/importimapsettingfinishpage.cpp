@@ -15,13 +15,13 @@ ImportImapSettingFinishPage::ImportImapSettingFinishPage(QWidget *parent)
     , mTextEdit(new QTextEdit(this))
 {
     auto mainlayout = new QVBoxLayout(this);
-    mainlayout->setObjectName(QStringLiteral("mainlayout"));
+    mainlayout->setObjectName(QLatin1StringView("mainlayout"));
 
     auto label = new QLabel(i18n("IMAP settings were imported:"), this);
-    label->setObjectName(QStringLiteral("label"));
+    label->setObjectName(QLatin1StringView("label"));
     mainlayout->addWidget(label);
 
-    mTextEdit->setObjectName(QStringLiteral("textedit"));
+    mTextEdit->setObjectName(QLatin1StringView("textedit"));
     mTextEdit->setAcceptRichText(true);
     mTextEdit->setReadOnly(true);
     mainlayout->addWidget(mTextEdit);

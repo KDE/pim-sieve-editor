@@ -30,7 +30,7 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
     : QSplitter(parent)
 {
     mStackedWidget = new QStackedWidget(this);
-    mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
+    mStackedWidget->setObjectName(QLatin1StringView("stackedwidget"));
 
     mEditorEmptyLabel = new SieveEditorEmptyTabWidgetLabel;
 

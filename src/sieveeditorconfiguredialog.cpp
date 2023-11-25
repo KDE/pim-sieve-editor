@@ -54,11 +54,11 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
 
     // Editor page
     auto editorWidget = new QWidget;
-    editorWidget->setObjectName(QStringLiteral("editorwidget"));
+    editorWidget->setObjectName(QLatin1StringView("editorwidget"));
 
     layout = new QVBoxLayout(editorWidget);
     mWrapText = new QCheckBox(i18n("Wrap Text"));
-    mWrapText->setObjectName(QStringLiteral("wraptext"));
+    mWrapText->setObjectName(QLatin1StringView("wraptext"));
     layout->addWidget(mWrapText);
     layout->addStretch(100);
 
@@ -69,7 +69,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     // UserFeedBack config
 #ifdef WITH_KUSERFEEDBACK
     auto userFeedBackWidget = new QWidget;
-    userFeedBackWidget->setObjectName(QStringLiteral("userFeedBackWidget"));
+    userFeedBackWidget->setObjectName(QLatin1StringView("userFeedBackWidget"));
 
     mUserFeedbackWidget = new KUserFeedback::FeedbackConfigWidget(this);
 

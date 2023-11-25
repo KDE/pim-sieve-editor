@@ -15,13 +15,13 @@ ImportImapSettingSearchPage::ImportImapSettingSearchPage(QWidget *parent)
     : QWidget(parent)
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     auto label = new QLabel(i18n("Please select the program from which you like to import IMAP settings:"), this);
-    label->setObjectName(QStringLiteral("label"));
+    label->setObjectName(QLatin1StringView("label"));
     mainLayout->addWidget(label);
 
     mFoundProgramList = new QListWidget(this);
-    mFoundProgramList->setObjectName(QStringLiteral("foundprogramlist"));
+    mFoundProgramList->setObjectName(QLatin1StringView("foundprogramlist"));
     mainLayout->addWidget(mFoundProgramList);
     connect(mFoundProgramList, &QListWidget::itemChanged, this, &ImportImapSettingSearchPage::slotItemChanged);
 }
