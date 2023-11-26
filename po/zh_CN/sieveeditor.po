@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-09 00:47+0000\n"
-"PO-Revision-Date: 2023-11-19 03:43\n"
+"PO-Revision-Date: 2023-11-25 02:32\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -91,12 +91,12 @@ msgstr "完成"
 #: main.cpp:47
 #, kde-format
 msgid "KSieve Editor"
-msgstr "K筛选编辑器"
+msgstr "KSieve 过滤编辑器"
 
 #: main.cpp:49
 #, kde-format
 msgid "Sieve Editor"
-msgstr "筛选编辑器"
+msgstr "过滤编辑器"
 
 #: main.cpp:51
 #, kde-format
@@ -397,7 +397,7 @@ msgstr "导入 IMAP 设置..."
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
 msgid "No Sieve URL configured"
-msgstr "没有配置筛选 URL"
+msgstr "没有配置过滤 URL"
 
 #: sieveeditormanagesievewidget.cpp:42
 #, kde-format
@@ -412,12 +412,12 @@ msgstr "正在将脚本上传到服务器以检查，请稍候..."
 #: sieveeditorpagewidget.cpp:135
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
-msgstr "筛选脚本已成功上传。"
+msgstr "过滤脚本已成功上传。"
 
 #: sieveeditorpagewidget.cpp:135
 #, kde-format
 msgid "Sieve Script Upload"
-msgstr "上传筛选脚本"
+msgstr "上传过滤脚本"
 
 #: sieveeditorpagewidget.cpp:148
 #, kde-format
