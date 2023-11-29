@@ -22,8 +22,11 @@ SieveEditorCentralWidget::SieveEditorCentralWidget(QWidget *parent, KActionColle
 
     auto mainWidgetLayout = new QVBoxLayout(mMainWidget);
     mainWidgetLayout->setContentsMargins({});
+    mainWidgetLayout->setSpacing(0);
 
     mSieveEditorMainWidget = new SieveEditorMainWidget(ac);
+
+    mPurposeMenuMessageWidget->setPosition(KMessageWidget::Header);
     mainWidgetLayout->addWidget(mPurposeMenuMessageWidget);
     mainWidgetLayout->addWidget(mSieveEditorMainWidget);
     connect(mSieveEditorMainWidget, &SieveEditorMainWidget::serverSieveFound, this, &SieveEditorCentralWidget::slotServerSieveFound);
