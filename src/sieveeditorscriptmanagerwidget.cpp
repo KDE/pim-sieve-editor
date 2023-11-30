@@ -14,6 +14,7 @@ SieveEditorScriptManagerWidget::SieveEditorScriptManagerWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto hbox = new QHBoxLayout(this);
+    hbox->setContentsMargins({});
     mTreeView = new SieveEditorManageSieveWidget(this);
     connect(mTreeView, &SieveEditorManageSieveWidget::newScript, this, &SieveEditorScriptManagerWidget::slotNewScript);
     connect(mTreeView, &SieveEditorManageSieveWidget::editScript, this, &SieveEditorScriptManagerWidget::slotEditScript);
