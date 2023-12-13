@@ -16,16 +16,20 @@
 #include "sievepurposemenuwidget.h"
 #include "sieveserversettings.h"
 #include <PimCommon/KActionMenuChangeCase>
+#include <PimCommon/NeedUpdateVersionUtils>
+#include <PimCommon/NeedUpdateVersionWidget>
 
 #include <KSharedConfig>
 #include <PimCommon/NetworkManager>
 
+#include <KAboutData>
 #include <KActionCollection>
 #include <KColorSchemeMenu>
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KStandardAction>
 #include <KToggleFullScreenAction>
+#include <QVBoxLayout>
 
 #include <KColorSchemeManager>
 #include <QAction>
@@ -54,7 +58,20 @@ static const char mySieveEditorMainWindowConfigGroupName[] = "SieveEditorMainWin
 SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     : KXmlGuiWindow(parent)
 {
+    auto mainWidget = new QWidget(this);
+    auto mainWidgetLayout = new QVBoxLayout(mainWidget);
+    mainWidgetLayout->setContentsMargins({});
+    if (PimCommon::NeedUpdateVersionUtils::checkVersion()) {
+        const auto status = PimCommon::NeedUpdateVersionUtils::obsoleteVersionStatus(KAboutData::applicationData().version(), QDate::currentDate());
+        if (status != PimCommon::NeedUpdateVersionUtils::ObsoleteVersion::NotObsoleteYet) {
+            auto needUpdateVersionWidget = new PimCommon::NeedUpdateVersionWidget(this);
+            mainWidgetLayout->addWidget(needUpdateVersionWidget);
+            needUpdateVersionWidget->setObsoleteVersion(status);
+        }
+    }
+
     mMainWidget = new SieveEditorCentralWidget(this, actionCollection());
+    mainWidgetLayout->addWidget(mMainWidget);
 #ifdef WITH_KUSERFEEDBACK
     // Initialize
     (void)UserFeedBackManager::self();
@@ -62,7 +79,7 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     connect(mMainWidget, &SieveEditorCentralWidget::configureClicked, this, &SieveEditorMainWindow::slotConfigure);
     connect(mMainWidget, &SieveEditorCentralWidget::importSieveSettings, this, &SieveEditorMainWindow::slotImportImapSettings);
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::updateButtons, this, &SieveEditorMainWindow::slotUpdateButtons);
-    setCentralWidget(mMainWidget);
+    setCentralWidget(mainWidget);
     setupActions();
     setupGUI();
     readConfig();
