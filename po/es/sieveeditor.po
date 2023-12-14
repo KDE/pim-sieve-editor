@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:41+0000\n"
+"POT-Creation-Date: 2023-12-14 01:35+0000\n"
 "PO-Revision-Date: 2023-09-26 01:27+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -296,108 +296,108 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "Cerrar el guion"
 
-#: sieveeditormainwindow.cpp:120
+#: sieveeditormainwindow.cpp:138
 #, kde-format
 msgid "Network is Up."
 msgstr "La red está activa."
 
-#: sieveeditormainwindow.cpp:122
+#: sieveeditormainwindow.cpp:140
 #, kde-format
 msgid "Network is Down."
 msgstr "La red está caída."
 
-#: sieveeditormainwindow.cpp:144
+#: sieveeditormainwindow.cpp:162
 #, kde-format
 msgid "Upload"
 msgstr "Enviar"
 
-#: sieveeditormainwindow.cpp:147
+#: sieveeditormainwindow.cpp:165
 #, kde-format
 msgid "Add Sieve Server..."
 msgstr "Añadir servidor Sieve..."
 
-#: sieveeditormainwindow.cpp:151
+#: sieveeditormainwindow.cpp:169
 #, kde-format
 msgid "Delete Script"
 msgstr "Borrar guion"
 
-#: sieveeditormainwindow.cpp:157
+#: sieveeditormainwindow.cpp:175
 #, kde-format
 msgid "Create New Script..."
 msgstr "Crear nuevo guion..."
 
-#: sieveeditormainwindow.cpp:163
+#: sieveeditormainwindow.cpp:181
 #, kde-format
 msgid "Edit Script..."
 msgstr "Editar guion..."
 
-#: sieveeditormainwindow.cpp:168
+#: sieveeditormainwindow.cpp:186
 #, kde-format
 msgid "Deactivate Script"
 msgstr "Desactivar guion"
 
-#: sieveeditormainwindow.cpp:173
+#: sieveeditormainwindow.cpp:191
 #, kde-format
 msgid "Refresh List"
 msgstr "Refrescar lista"
 
-#: sieveeditormainwindow.cpp:179
+#: sieveeditormainwindow.cpp:197
 #, kde-format
 msgid "Go to Line..."
 msgstr "Ir a la línea..."
 
-#: sieveeditormainwindow.cpp:196
+#: sieveeditormainwindow.cpp:214
 #, kde-format
 msgid "Import..."
 msgstr "Importar..."
 
-#: sieveeditormainwindow.cpp:202
+#: sieveeditormainwindow.cpp:220
 #, kde-format
 msgid "Share..."
 msgstr "Compartir..."
 
-#: sieveeditormainwindow.cpp:210
+#: sieveeditormainwindow.cpp:228
 #, kde-format
 msgid "Check Spelling..."
 msgstr "Comprobar la ortografía..."
 
-#: sieveeditormainwindow.cpp:216
+#: sieveeditormainwindow.cpp:234
 #, kde-format
 msgid "Check Syntax"
 msgstr "Comprobar la sintaxis"
 
-#: sieveeditormainwindow.cpp:221
+#: sieveeditormainwindow.cpp:239
 #, kde-format
 msgid "Create Rules Graphically..."
 msgstr "Crear reglas gráficamente..."
 
-#: sieveeditormainwindow.cpp:226
+#: sieveeditormainwindow.cpp:244
 #, kde-format
 msgid "Comment"
 msgstr "Comentar"
 
-#: sieveeditormainwindow.cpp:231
+#: sieveeditormainwindow.cpp:249
 #, kde-format
 msgid "Uncomment"
 msgstr "Descomentar"
 
-#: sieveeditormainwindow.cpp:259
+#: sieveeditormainwindow.cpp:277
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Marcadores"
 
-#: sieveeditormainwindow.cpp:264
+#: sieveeditormainwindow.cpp:282
 #, kde-format
 msgid "Debug Sieve Script..."
 msgstr "Depurar guion de Sieve..."
 
-#: sieveeditormainwindow.cpp:269
+#: sieveeditormainwindow.cpp:287
 #, kde-format
 msgid "Wordwrap"
 msgstr "Ajuste de línea"
 
-#: sieveeditormainwindow.cpp:278
+#: sieveeditormainwindow.cpp:296
 #, kde-format
 msgid "Import IMAP Settings..."
 msgstr "Importar preferencias de IMAP..."
