@@ -47,7 +47,12 @@
 #include <KUserFeedback/NotificationPopup>
 #include <KUserFeedback/Provider>
 #endif
-
+// signal handler for SIGINT & SIGTERM
+#ifdef Q_OS_UNIX
+#include <KSignalHandler>
+#include <signal.h>
+#include <unistd.h>
+#endif
 #include <KWindowConfig>
 #include <QWindow>
 
@@ -58,6 +63,20 @@ static const char mySieveEditorMainWindowConfigGroupName[] = "SieveEditorMainWin
 SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     : KXmlGuiWindow(parent)
 {
+#ifdef Q_OS_UNIX
+    /**
+     * Set up signal handler for SIGINT and SIGTERM
+     */
+    KSignalHandler::self()->watchSignal(SIGINT);
+    KSignalHandler::self()->watchSignal(SIGTERM);
+    connect(KSignalHandler::self(), &KSignalHandler::signalReceived, this, [this](int signal) {
+        if (signal == SIGINT || signal == SIGTERM) {
+            printf("Shutting down...\n");
+            close();
+        }
+    });
+#endif
+
     auto mainWidget = new QWidget(this);
     auto mainWidgetLayout = new QVBoxLayout(mainWidget);
     mainWidgetLayout->setContentsMargins({});
