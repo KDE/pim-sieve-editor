@@ -1,0 +1,376 @@
+{
+    "id": "org.kde.sieveeditor",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "6.6-kf6preview",
+    "base-version": "6.6",
+    "base": "io.qt.qtwebengine.BaseApp",
+    "sdk": "org.kde.Sdk",
+    "command": "sieveeditor",
+    "tags": ["nightly"],
+    "rename-icon": "sieveeditor",
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": [
+        "--device=dri",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--share=network",
+        "--talk-name=org.kde.StatusNotifierWatcher",
+        "--talk-name=org.kde.kwalletd6"
+    ],
+    "separate-locales": false,
+    "modules": [
+        {
+            "name": "libsecret",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libsecret/0.20/libsecret-0.20.5.tar.xz",
+                    "sha256": "3fb3ce340fcd7db54d87c893e69bfc2b1f6e4d4b279065ffe66dac9f0fd12b4d",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "libsecret",
+                        "stable-only": true
+                    }
+                }
+            ],
+            "config-opts": [
+                "-Dgcrypt=false",
+                "-Dgtk_doc=false",
+                "-Dintrospection=false",
+                "-Dmanpage=false",
+                "-Dvapi=false"
+            ]
+        },
+                {
+                    "name": "qtkeychain",
+                    "buildsystem": "cmake-ninja",
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "https://github.com/frankosterfeld/qtkeychain/archive/0.14.1.tar.gz",
+                            "sha256": "afb2d120722141aca85f8144c4ef017bd74977ed45b80e5d9e9614015dadd60c",
+                            "x-checker-data": {
+                                "type": "anitya",
+                                "project-id": 4138,
+                                "stable-only": true,
+                                "url-template": "https://github.com/frankosterfeld/qtkeychain/archive/$version.tar.gz"
+                            }
+                        }
+                    ],
+                    "config-opts": [
+                        "-DCMAKE_INSTALL_LIBDIR=/app/lib",
+                        "-DLIB_INSTALL_DIR=/app/lib",
+                        "-DBUILD_TRANSLATIONS=NO",
+                        "-DBUILD_WITH_QT6=ON"
+                    ],
+                    "cleanup": [
+                        "/include",
+                        "/lib/cmake",
+                        "/mkspecs"
+                    ],
+                    "modules": [
+                        {
+                            "name": "libsecret",
+                            "buildsystem": "meson",
+                            "config-opts": [
+                                "-Dmanpage=false",
+                                "-Dvapi=false",
+                                "-Dgtk_doc=false",
+                                "-Dintrospection=false",
+                                "-Dgcrypt=false"
+                            ],
+                            "sources": [
+                                {
+                                    "type": "archive",
+                                    "url": "https://download.gnome.org/sources/libsecret/0.20/libsecret-0.20.5.tar.xz",
+                                    "sha256": "3fb3ce340fcd7db54d87c893e69bfc2b1f6e4d4b279065ffe66dac9f0fd12b4d",
+                                    "x-checker-data": {
+                                        "type": "gnome",
+                                        "name": "libsecret",
+                                        "stable-only": true
+                                    }
+                                }
+                            ],
+                            "cleanup": [
+                                "/bin/secret-tool",
+                                "/include",
+                                "/lib/pkgconfig"
+                            ]
+                        }
+                    ]
+                },	
+        {
+            "name": "ktextaddons",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "url": "https://invent.kde.org/libraries/ktextaddons.git",
+                    "type": "git",
+                    "branch": "1.5"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DBUILD_WITH_QT6=ON"		
+            ]
+        },
+       {
+            "name": "ksmtp",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/ksmtp.git",
+                    "branch": "master"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ]
+        },
+        {
+            "name": "kgapi",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/libkgapi.git",
+                    "branch": "master"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ]
+        },	
+        {
+            "name": "mailtransport",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/kmailtransport.git",
+                    "branch": "master"
+                }
+            ]
+        },
+        {
+            "name": "kmime",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/kmime.git",
+                    "branch": "master"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ]
+        },
+        {
+            "name": "akonadi",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/akonadi.git",
+                    "branch": "master"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ]
+        },
+        {
+            "name": "akonadi-mime",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/akonadi-mime.git",
+                    "branch": "master"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ]
+        },	
+        {
+            "name": "kimap",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/kimap.git",
+                    "branch": "master"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ]
+        },
+        {
+            "name": "ktexttemplate",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/frameworks/ktexttemplate.git",
+                    "branch": "master"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ]
+        },	
+        {
+            "name": "grantleetheme",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/grantleetheme.git",
+                    "branch": "master"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ]
+        },	
+        {
+            "name": "akonadi-contact",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/akonadi-contacts.git",
+                    "branch": "master"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ]
+        },
+        {
+            "name": "kldap",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/kldap.git",
+                    "branch": "master"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ]
+        },
+        {
+            "name": "libkdepim",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/libkdepim.git",
+                    "branch": "master"
+                }        
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ]
+        },
+        {
+            "name": "krunner",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/frameworks/krunner.git",
+                    "branch": "master"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ]
+        },
+        {
+            "name": "pimcommon",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/pimcommon.git",
+                    "branch": "master"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+		"-DFORCE_DISABLE_AKONADI_SEARCH=ON"
+            ]
+        },
+        {
+            "name": "kpimtextedit",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/kpimtextedit.git",
+                    "branch": "master"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ]
+        },	
+        {   
+            "name": "kidentitymanager",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {   
+                    "type": "git",
+		    "url": "https://invent.kde.org/pim/kidentitymanagement.git",
+                    "branch": "master"
+                }       
+            ],          
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+		"-DBUILD_QUICK_SUPPORT=OFF"
+            ]
+        },
+        {
+            "name": "libksieve",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/libksieve.git",
+                    "branch": "master"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ]
+        },
+        {
+            "name": "sieveeditor",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://invent.kde.org/pim/pim-sieve-editor.git"
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ],
+            "cleanup": [
+                "/share/qlogging-categories5"
+            ]
+        }
+    ]
+}
