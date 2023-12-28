@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-19 01:34+0000\n"
-"PO-Revision-Date: 2023-01-12 11:20+0300\n"
+"PO-Revision-Date: 2023-12-27 10:17+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -160,8 +160,7 @@ msgid "Server is not defined"
 msgstr "Сервер не определён"
 
 #: serversievesettings.cpp:268
-#, fuzzy, kde-format
-#| msgid "Check Server"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Проверка сервера"
@@ -302,8 +301,7 @@ msgstr ""
 "Сохранить его перед закрытием?"
 
 #: sieveeditormainwidget.cpp:607
-#, fuzzy, kde-format
-#| msgid "Close script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Close script"
 msgstr "Закрытие сценария"
@@ -435,8 +433,7 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "Сценарий Sieve успешно сохранён на сервере."
 
 #: sieveeditorpagewidget.cpp:135
-#, fuzzy, kde-format
-#| msgid "Sieve Script Upload"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Сохранение сценария Sieve"
@@ -453,8 +450,7 @@ msgstr ""
 "%1"
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, fuzzy, kde-format
-#| msgid "Sieve Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Ошибка Sieve"
@@ -474,11 +470,10 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Сценарий «%1» — новый. Сохранить его?"
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
-#, fuzzy, kde-format
-#| msgid "Save Script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
-msgstr "Сохранить сценарий"
+msgstr "Сохранение сценария"
 
 #: sieveeditorpagewidget.cpp:179
 #, kde-format
@@ -585,7 +580,6 @@ msgstr "Порт:"
 msgid "Authentication:"
 msgstr "Метод аутентификации:"
 
-# BUGME: please change to "Configure Sieve Server" --aspotashev
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #: ui/serversievesettings.ui:141
 #, kde-format
