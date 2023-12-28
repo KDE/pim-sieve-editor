@@ -34,7 +34,7 @@ int main(int argc, char **argv)
                          i18n("Copyright © 2013-%1 sieveeditor authors", QStringLiteral("2023")));
     aboutData.addAuthor(i18n("Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
 
-    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("kmail")));
+    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("sieveeditor")));
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
