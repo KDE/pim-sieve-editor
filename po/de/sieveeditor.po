@@ -1,14 +1,13 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2016, 2018, 2020, 2022.
 # Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022, 2023.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-19 01:34+0000\n"
-"PO-Revision-Date: 2023-12-19 13:23+0100\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2023-06-19 16:03+0200\n"
+"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -427,7 +426,7 @@ msgstr "Das Sieve-Skript wurde erfolgreich hochgeladen."
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
-msgstr "Sieve-Skripts hochladen"
+msgstr "Hochladen des Sieve-Skripts"
 
 #: sieveeditorpagewidget.cpp:148
 #, kde-format
