@@ -27,7 +27,6 @@ SieveEditorBookmarks::SieveEditorBookmarks(SieveEditorMainWindow *mainWindow, KA
     }
 
     m_bookmarkManager = new KBookmarkManager(bookmarkFile, this);
-    m_bookmarkManager->setUpdate(true);
 
     mBookmarkMenu = new KBookmarkMenu(m_bookmarkManager, this, mMenu);
     collection->addActions(mMenu->actions());
