@@ -13,7 +13,7 @@
 #include <QFile>
 #include <QRegularExpression>
 
-LIBSIEVEEDITOR_EXPORT QString sieveeditor_thunderbird_default_toplevel_path = QDir::homePath() + QLatin1String("/.thunderbird/");
+LIBSIEVEEDITOR_EXPORT QString sieveeditor_thunderbird_default_toplevel_path = QDir::homePath() + QLatin1StringView("/.thunderbird/");
 
 ImportImapSettingsThunderbirdCheckJob::ImportImapSettingsThunderbirdCheckJob(QObject *parent)
     : AbstractImapSettingsCheckJob(parent)
@@ -25,7 +25,7 @@ ImportImapSettingsThunderbirdCheckJob::~ImportImapSettingsThunderbirdCheckJob() 
 // Copy from mailimporter
 QMap<QString, QString> ImportImapSettingsThunderbirdCheckJob::listProfile(QString &currentProfile, const QString &defaultSettingPath)
 {
-    const QString thunderbirdPath = defaultSettingPath + QLatin1String("/profiles.ini");
+    const QString thunderbirdPath = defaultSettingPath + QLatin1StringView("/profiles.ini");
     QMap<QString, QString> lstProfile;
     if (QFileInfo::exists(thunderbirdPath)) {
         // ini file.
@@ -89,14 +89,14 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
     QTextStream stream(&file);
     while (!stream.atEnd()) {
         const QString line = stream.readLine();
-        if (line.startsWith(QLatin1String("user_pref"))) {
-            if (line.contains(QLatin1String("mail.server.")) || line.contains(QLatin1String("mail.account."))
-                || line.contains(QLatin1String("mail.accountmanager.")) || line.contains(QLatin1String("extensions.sieve.account."))) {
+        if (line.startsWith(QLatin1StringView("user_pref"))) {
+            if (line.contains(QLatin1StringView("mail.server.")) || line.contains(QLatin1String("mail.account."))
+                || line.contains(QLatin1StringView("mail.accountmanager.")) || line.contains(QLatin1String("extensions.sieve.account."))) {
                 insertIntoMap(line);
             }
         } else {
-            if (!line.startsWith(QLatin1Char('#')) && line.isEmpty() && line.startsWith(QLatin1String("/*")) && line.startsWith(QLatin1String(" */"))
-                && line.startsWith(QLatin1String(" *"))) {
+            if (!line.startsWith(QLatin1Char('#')) && line.isEmpty() && line.startsWith(QLatin1StringView("/*")) && line.startsWith(QLatin1String(" */"))
+                && line.startsWith(QLatin1StringView(" *"))) {
                 qCDebug(SIEVEEDITOR_LOG) << " unstored line :" << line;
             }
         }
@@ -113,7 +113,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
         const QString serverName = mHashConfig.value(QStringLiteral("mail.account.%1").arg(account) + QStringLiteral(".server")).toString();
         const QString accountName = QStringLiteral("mail.server.%1").arg(serverName);
         const QString type = mHashConfig.value(accountName + QStringLiteral(".type")).toString();
-        if (type == QLatin1String("imap")) {
+        if (type == QLatin1StringView("imap")) {
             // Sieve settings == username@account
 
             const QString imapServerName = mHashConfig.value(accountName + QStringLiteral(".hostname")).toString();
@@ -121,7 +121,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
             // Convert @ in username in %40
             QString userNameSieveConverted = userName;
             userNameSieveConverted.replace(QLatin1Char('@'), QStringLiteral("%40"));
-            const QString sieveKeyServerUserName = QLatin1String("extensions.sieve.account.") + userNameSieveConverted + QLatin1Char('@') + imapServerName;
+            const QString sieveKeyServerUserName = QLatin1StringView("extensions.sieve.account.") + userNameSieveConverted + QLatin1Char('@') + imapServerName;
             // user_pref("extensions.sieve.account.<username>@<server>.enabled", true);
             if (mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".enabled"), false).toBool()) {
                 // TODO
@@ -263,9 +263,9 @@ void ImportImapSettingsThunderbirdCheckJob::insertIntoMap(const QString &line)
         // Store as String
         mHashConfig.insert(key, valueStr);
     } else {
-        if (valueStr == QLatin1String("true")) {
+        if (valueStr == QLatin1StringView("true")) {
             mHashConfig.insert(key, true);
-        } else if (valueStr == QLatin1String("false")) {
+        } else if (valueStr == QLatin1StringView("false")) {
             mHashConfig.insert(key, false);
         } else {
             // Store as integer

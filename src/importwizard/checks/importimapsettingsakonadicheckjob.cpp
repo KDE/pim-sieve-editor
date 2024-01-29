@@ -24,7 +24,7 @@ ImportImapSettingsAkonadiCheckJob::~ImportImapSettingsAkonadiCheckJob() = defaul
 
 bool ImportImapSettingsAkonadiCheckJob::resourceCanHaveSieveSupport(const QString &filename) const
 {
-    return filename.startsWith(QLatin1String("akonadi_kolab_resource")) || filename.startsWith(QLatin1String("akonadi_imap_resource"));
+    return filename.startsWith(QLatin1StringView("akonadi_kolab_resource")) || filename.startsWith(QLatin1String("akonadi_imap_resource"));
 }
 
 void ImportImapSettingsAkonadiCheckJob::start()
@@ -79,7 +79,7 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
         return;
     }
     SieveEditorUtil::SieveServerConfig config;
-    const bool isKolabSettings = filePath.contains(QLatin1String("/akonadi_kolab_resource"));
+    const bool isKolabSettings = filePath.contains(QLatin1StringView("/akonadi_kolab_resource"));
     KSharedConfigPtr resourceConfig = KSharedConfig::openConfig(filePath);
 
     KConfigGroup sieveGroup = resourceConfig->group(QStringLiteral("siever"));
@@ -96,11 +96,11 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
         config.sieveImapAccountSettings.setAuthenticationType(static_cast<KSieveCore::SieveImapAccountSettings::AuthenticationMode>(
             networkGroup.readEntry(QStringLiteral("Authentication"), static_cast<int>(KSieveCore::SieveImapAccountSettings::Plain))));
         const QString encryption = networkGroup.readEntry(QStringLiteral("Safety"));
-        if (encryption == QLatin1String("SSL")) {
+        if (encryption == QLatin1StringView("SSL")) {
             config.sieveImapAccountSettings.setEncryptionMode(KSieveCore::SieveImapAccountSettings::EncryptionMode::SSLorTLS);
-        } else if (encryption == QLatin1String("STARTTLS")) {
+        } else if (encryption == QLatin1StringView("STARTTLS")) {
             config.sieveImapAccountSettings.setEncryptionMode(KSieveCore::SieveImapAccountSettings::EncryptionMode::STARTTLS);
-        } else if (encryption == QLatin1String("None")) {
+        } else if (encryption == QLatin1StringView("None")) {
             config.sieveImapAccountSettings.setEncryptionMode(KSieveCore::SieveImapAccountSettings::EncryptionMode::Unencrypted);
         } else if (encryption.isEmpty()) { // Default value
             if (isKolabSettings) {
