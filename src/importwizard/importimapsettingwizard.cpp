@@ -12,11 +12,11 @@
 #include "importimapsettingprogresspage.h"
 #include "importimapsettingsearchpage.h"
 
+#include "importwizard/checks/importimapsettingsakonadipassword.h"
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <PimCommon/PimUtil>
-#include <importwizard/checks/importimapsettingsakonadipassword.h>
 
 #include <KWindowConfig>
 #include <QPushButton>

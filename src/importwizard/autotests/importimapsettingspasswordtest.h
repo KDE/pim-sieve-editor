@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <importwizard/checks/abstractimapsettingspassword.h>
+#include "importwizard/checks/abstractimapsettingspassword.h"
 
 class ImportImapSettingsPasswordTest : public AbstractImapSettingsPassword
 {

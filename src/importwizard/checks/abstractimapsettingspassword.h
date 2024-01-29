@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <sieveeditorutil.h>
+#include "sieveeditorutil.h"
 
 #include "libsieveeditor_private_export.h"
 class LIBSIEVEEDITOR_TESTS_EXPORT AbstractImapSettingsPassword : public QObject
