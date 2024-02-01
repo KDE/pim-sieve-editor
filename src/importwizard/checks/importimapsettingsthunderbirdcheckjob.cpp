@@ -90,12 +90,12 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
     while (!stream.atEnd()) {
         const QString line = stream.readLine();
         if (line.startsWith(QLatin1StringView("user_pref"))) {
-            if (line.contains(QLatin1StringView("mail.server.")) || line.contains(QLatin1String("mail.account."))
-                || line.contains(QLatin1StringView("mail.accountmanager.")) || line.contains(QLatin1String("extensions.sieve.account."))) {
+            if (line.contains(QLatin1StringView("mail.server.")) || line.contains(QLatin1StringView("mail.account."))
+                || line.contains(QLatin1StringView("mail.accountmanager.")) || line.contains(QLatin1StringView("extensions.sieve.account."))) {
                 insertIntoMap(line);
             }
         } else {
-            if (!line.startsWith(QLatin1Char('#')) && line.isEmpty() && line.startsWith(QLatin1StringView("/*")) && line.startsWith(QLatin1String(" */"))
+            if (!line.startsWith(QLatin1Char('#')) && line.isEmpty() && line.startsWith(QLatin1StringView("/*")) && line.startsWith(QLatin1StringView(" */"))
                 && line.startsWith(QLatin1StringView(" *"))) {
                 qCDebug(SIEVEEDITOR_LOG) << " unstored line :" << line;
             }
