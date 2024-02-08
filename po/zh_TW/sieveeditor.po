@@ -3,13 +3,13 @@
 #
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2014, 2015, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-19 01:34+0000\n"
-"PO-Revision-Date: 2023-12-09 19:14+0900\n"
+"PO-Revision-Date: 2024-02-07 23:33+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.01.80\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -118,7 +118,7 @@ msgstr "維護者"
 #: main.cpp:43
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr ""
+msgstr "列出可用的使用者回饋選項"
 
 #: serversievelistwidget.cpp:77
 #, kde-format
@@ -271,10 +271,9 @@ msgid "Tools > Debug Sieve Script"
 msgstr "工具 ─ 除錯過濾文稿"
 
 #: sieveeditoremptytabwidgetlabel.cpp:28
-#, fuzzy, kde-format
-#| msgid "Import Sieve Settings"
+#, kde-format
 msgid "Import Sieve Settings:"
-msgstr "匯入過濾設定"
+msgstr "匯入 Sieve 設定："
 
 #: sieveeditoremptytabwidgetlabel.cpp:28
 #, kde-format
@@ -420,11 +419,10 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "過濾文稿已經成功上傳。"
 
 #: sieveeditorpagewidget.cpp:135
-#, fuzzy, kde-format
-#| msgid "Sieve Script Upload"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
-msgstr "上傳過濾文稿"
+msgstr "上傳 Sieve 文稿"
 
 #: sieveeditorpagewidget.cpp:148
 #, kde-format
@@ -438,8 +436,7 @@ msgstr ""
 "%1"
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, fuzzy, kde-format
-#| msgid "Sieve Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Sieve 錯誤"
