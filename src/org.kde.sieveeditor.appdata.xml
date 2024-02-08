@@ -78,6 +78,7 @@
   <summary xml:lang="uk">Редактор скриптів фільтрування електронної пошти</summary>
   <summary xml:lang="x-test">xxEditor for email filter Sieve scriptsxx</summary>
   <summary xml:lang="zh-CN">电子邮件过滤器 Sieve 脚本编辑器</summary>
+  <summary xml:lang="zh-TW">電子郵件篩選器 Sieve 文稿的編輯器</summary>
   <developer_name>Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ar">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="az">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
