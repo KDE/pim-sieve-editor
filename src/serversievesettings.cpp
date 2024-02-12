@@ -12,6 +12,7 @@
 #include <KMessageBox>
 #include <MailTransport/ServerTest>
 #include <MailTransport/Transport>
+#include <kwidgetsaddons_version.h>
 
 /** static helper functions **/
 static QString authenticationModeString(MailTransport::Transport::EnumAuthenticationType mode)
@@ -77,8 +78,18 @@ ServerSieveSettings::ServerSieveSettings(QWidget *parent)
     ui->testInfo->clear();
     ui->testInfo->hide();
     ui->testProgress->hide();
+#if KWIDGETSADDONS_VERSION < QT_VERSION_CHECK(5, 249, 0)
     ui->password->setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
+#else
+    ui->password->setRevealPasswordMode(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")) ? KPassword::RevealMode::OnlyNew
+                                                                                                           : KPassword::RevealMode::Never);
+#endif
+#if KWIDGETSADDONS_VERSION < QT_VERSION_CHECK(5, 249, 0)
     ui->imapPassword->setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
+#else
+    ui->imapPassword->setRevealPasswordMode(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")) ? KPassword::RevealMode::OnlyNew
+                                                                                                               : KPassword::RevealMode::Never);
+#endif
 
     ui->safeImapGroup->setId(ui->noRadio, KSieveCore::SieveImapAccountSettings::Unencrypted);
     ui->safeImapGroup->setId(ui->sslRadio, KSieveCore::SieveImapAccountSettings::SSLorTLS);
