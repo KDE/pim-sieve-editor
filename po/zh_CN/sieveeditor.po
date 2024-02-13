@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-19 01:34+0000\n"
+"POT-Creation-Date: 2024-02-13 00:39+0000\n"
 "PO-Revision-Date: 2024-02-05 11:37\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -131,53 +131,53 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
-#: serversievesettings.cpp:33 ui/serversievesettings.ui:259
+#: serversievesettings.cpp:34 ui/serversievesettings.ui:259
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "明文"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
-#: serversievesettings.cpp:35 ui/serversievesettings.ui:294
+#: serversievesettings.cpp:36 ui/serversievesettings.ui:294
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "匿名"
 
-#: serversievesettings.cpp:268
+#: serversievesettings.cpp:279
 #, kde-format
 msgid "Server is not defined"
 msgstr "服务器未定义"
 
-#: serversievesettings.cpp:268
+#: serversievesettings.cpp:279
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "检查服务器"
 
-#: serversievesettings.cpp:311
+#: serversievesettings.cpp:322
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr "无法连接到服务器，请验证服务器地址。"
 
-#: serversievesettings.cpp:323
+#: serversievesettings.cpp:334
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<qt><b>TLS 是支持且受推荐的。</b></qt>"
 
-#: serversievesettings.cpp:326
+#: serversievesettings.cpp:337
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<qt><b>SSL 是支持且受推荐的。</b></qt>"
 
-#: serversievesettings.cpp:330
+#: serversievesettings.cpp:341
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
 "server.</b></qt>"
 msgstr "<qt><b>找不到安全连接方式。不推荐您连接到此服务器。</b></qt>"
 
-#: serversievesettings.cpp:333
+#: serversievesettings.cpp:344
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>无法使用此服务器。</b></qt>"

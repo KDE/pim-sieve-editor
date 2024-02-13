@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2018.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-19 01:34+0000\n"
-"PO-Revision-Date: 2022-10-22 19:04+0400\n"
+"POT-Creation-Date: 2024-02-13 00:39+0000\n"
+"PO-Revision-Date: 2024-02-12 12:14+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -133,54 +133,53 @@ msgid "%1 (%2)"
 msgstr "‏‎%1‎ ‏(‎%2‎)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
-#: serversievesettings.cpp:33 ui/serversievesettings.ui:259
+#: serversievesettings.cpp:34 ui/serversievesettings.ui:259
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "نصّ واضح"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
-#: serversievesettings.cpp:35 ui/serversievesettings.ui:294
+#: serversievesettings.cpp:36 ui/serversievesettings.ui:294
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "مجهّل"
 
-#: serversievesettings.cpp:268
+#: serversievesettings.cpp:279
 #, kde-format
 msgid "Server is not defined"
 msgstr "الخادوم غير معرّف"
 
-#: serversievesettings.cpp:268
-#, fuzzy, kde-format
-#| msgid "Check Server"
+#: serversievesettings.cpp:279
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "فحص الخادوم"
 
-#: serversievesettings.cpp:311
+#: serversievesettings.cpp:322
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr "تعذّر الاتّصال بالخادوم، رجاءً افحص عنوان الخادوم."
 
-#: serversievesettings.cpp:323
+#: serversievesettings.cpp:334
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<b>‏TLS مدعوم ومستحسن.</b>"
 
-#: serversievesettings.cpp:326
+#: serversievesettings.cpp:337
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<b>‏SSL مدعوم ومستحسن.</b>"
 
-#: serversievesettings.cpp:330
+#: serversievesettings.cpp:341
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
 "server.</b></qt>"
 msgstr "<b>لا أمن مدعوم. ليس مستحسنًا الاتّصال بهذا الخادوم.</b>"
 
-#: serversievesettings.cpp:333
+#: serversievesettings.cpp:344
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<b>الاتّصال بهذا الخادوم ليس ممكنًا.</b>"
@@ -288,8 +287,7 @@ msgid "Script was modified. Do you want to save before closing?"
 msgstr "لم يُعدّل السّكربت. أتريد الحفظ قبل الإغلاق؟"
 
 #: sieveeditormainwidget.cpp:607
-#, fuzzy, kde-format
-#| msgid "Close script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Close script"
 msgstr "أغلق السّكربت"
@@ -421,8 +419,7 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "رُفع سكربت «سِف» بنجاح."
 
 #: sieveeditorpagewidget.cpp:135
-#, fuzzy, kde-format
-#| msgid "Sieve Script Upload"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "رفع سكربت «سِف»"
@@ -439,8 +436,7 @@ msgstr ""
 "%1"
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, fuzzy, kde-format
-#| msgid "Sieve Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "خطأ في «سِف»"
@@ -460,11 +456,10 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "السّكربت ’%1‘ سكربت جديد. أتريد حفظه؟"
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
-#, fuzzy, kde-format
-#| msgid "Save Script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
-msgstr "احفظ البرنامج النصي"
+msgstr "احفظ السكربت"
 
 #: sieveeditorpagewidget.cpp:179
 #, kde-format
