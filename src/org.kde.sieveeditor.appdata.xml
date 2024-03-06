@@ -8,7 +8,6 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>SieveEditor</name>
-  <url type="homepage">https://kde.org</url>
   <name xml:lang="ar">محرّر سِف</name>
   <name xml:lang="az">Süzgəclər redaktoru</name>
   <name xml:lang="bg">SieveEditor</name>
@@ -44,6 +43,7 @@
   <name xml:lang="x-test">xxSieveEditorxx</name>
   <name xml:lang="zh-CN">SieveEditor</name>
   <name xml:lang="zh-TW">篩選器編輯器</name>
+  <url type="homepage">https://kde.org</url>
   <summary>Editor for email filter Sieve scripts</summary>
   <summary xml:lang="ar">محرر سكربتات ترشيح عناوين البريد الإلكتروني</summary>
   <summary xml:lang="az">E-poçtların süzgəcləmə skriptləri üçün redaktor</summary>
