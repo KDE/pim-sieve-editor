@@ -2,7 +2,7 @@
     "id": "org.kde.sieveeditor",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "6.6-kf6preview",
+    "runtime-version": "6.6",
     "base-version": "6.6",
     "base": "io.qt.qtwebengine.BaseApp",
     "sdk": "org.kde.Sdk",
