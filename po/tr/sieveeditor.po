@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-13 00:39+0000\n"
-"PO-Revision-Date: 2023-09-26 06:57+0300\n"
+"PO-Revision-Date: 2024-03-08 16:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -251,7 +251,7 @@ msgstr "Dosya > İçe Aktar"
 #: sieveeditoremptytabwidgetlabel.cpp:26
 #, kde-format
 msgid "Create Rules Graphically:"
-msgstr "Grafiksel Kurallar Oluştur:"
+msgstr "Kuralları grafiksel olarak oluştur:"
 
 #: sieveeditoremptytabwidgetlabel.cpp:26
 #, kde-format
@@ -273,7 +273,7 @@ msgstr "Araçlar > Sieve Betiği Hata Ayıklama"
 #: sieveeditoremptytabwidgetlabel.cpp:28
 #, kde-format
 msgid "Import Sieve Settings:"
-msgstr "Sieve Ayarlarını İçe Aktar:"
+msgstr "Sieve ayarlarını içe aktar:"
 
 #: sieveeditoremptytabwidgetlabel.cpp:28
 #, kde-format
@@ -519,7 +519,7 @@ msgstr "Sieve Ayarları"
 #: ui/serversievesettings.ui:45 ui/serversievesettings.ui:319
 #, kde-format
 msgid "Server Name:"
-msgstr "Sunucu Adı:"
+msgstr "Sunucu adı:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
@@ -559,7 +559,7 @@ msgstr "Kapı:"
 #: ui/serversievesettings.ui:125 ui/serversievesettings.ui:251
 #, kde-format
 msgid "Authentication:"
-msgstr "Kimlik Doğrulama:"
+msgstr "Kimlik doğrulaması:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #: ui/serversievesettings.ui:141
@@ -634,7 +634,7 @@ msgstr "Bağlantı Ayarları"
 #: ui/serversievesettings.ui:175
 #, kde-format
 msgid "Auto Detect"
-msgstr "Otomatik Algıla"
+msgstr "Kendiliğinden Algıla"
 
 #. i18n: ectx: property (text), widget (QLabel, label_12)
 #: ui/serversievesettings.ui:187
