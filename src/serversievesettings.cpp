@@ -78,6 +78,7 @@ ServerSieveSettings::ServerSieveSettings(QWidget *parent)
     ui->testInfo->clear();
     ui->testInfo->hide();
     ui->testProgress->hide();
+    ui->testProgress->setFormat(i18nc("Percent value; %p is the value, % is the percent sign", "%p%"));
     ui->password->setRevealPasswordMode(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")) ? KPassword::RevealMode::OnlyNew
                                                                                                            : KPassword::RevealMode::Never);
     ui->imapPassword->setRevealPasswordMode(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")) ? KPassword::RevealMode::OnlyNew
