@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:39+0000\n"
+"POT-Creation-Date: 2024-03-13 00:39+0000\n"
 "PO-Revision-Date: 2023-10-08 23:42+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -144,33 +144,39 @@ msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "익명"
 
-#: serversievesettings.cpp:279
+#: serversievesettings.cpp:81
+#, kde-format
+msgctxt "Percent value; %p is the value, % is the percent sign"
+msgid "%p%"
+msgstr ""
+
+#: serversievesettings.cpp:272
 #, kde-format
 msgid "Server is not defined"
 msgstr "서버가 정의되지 않았음"
 
-#: serversievesettings.cpp:279
+#: serversievesettings.cpp:272
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "서버 확인"
 
-#: serversievesettings.cpp:322
+#: serversievesettings.cpp:315
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr "서버에 연결할 수 없습니다. 서버 주소를 확인하십시오."
 
-#: serversievesettings.cpp:334
+#: serversievesettings.cpp:327
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<qt><b>TLS가 지원되며 추천합니다.</b></qt>"
 
-#: serversievesettings.cpp:337
+#: serversievesettings.cpp:330
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<qt><b>SSL이 지원되며 추천합니다.</b></qt>"
 
-#: serversievesettings.cpp:341
+#: serversievesettings.cpp:334
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
@@ -179,7 +185,7 @@ msgstr ""
 "<qt><b>보안 기능이 지원되지 않습니다. 이 서버에 연결하지 않는 것을 추천합니"
 "다.</b></qt>"
 
-#: serversievesettings.cpp:344
+#: serversievesettings.cpp:337
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>이 서버를 사용할 수 없습니다.</b></qt>"

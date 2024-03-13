@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:39+0000\n"
+"POT-Creation-Date: 2024-03-13 00:39+0000\n"
 "PO-Revision-Date: 2023-12-16 21:57+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -147,33 +147,39 @@ msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Névtelen"
 
-#: serversievesettings.cpp:279
+#: serversievesettings.cpp:81
+#, kde-format
+msgctxt "Percent value; %p is the value, % is the percent sign"
+msgid "%p%"
+msgstr ""
+
+#: serversievesettings.cpp:272
 #, kde-format
 msgid "Server is not defined"
 msgstr "A kiszolgáló nincs megadva"
 
-#: serversievesettings.cpp:279
+#: serversievesettings.cpp:272
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Kiszolgáló ellenőrzése"
 
-#: serversievesettings.cpp:322
+#: serversievesettings.cpp:315
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr "Nem lehet csatlakozni a kiszolgálóhoz, ellenőrizze a címet."
 
-#: serversievesettings.cpp:334
+#: serversievesettings.cpp:327
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<qt><b>A TLS támogatott és ajánlott.</b></qt>"
 
-#: serversievesettings.cpp:337
+#: serversievesettings.cpp:330
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<qt><b>Az SSL támogatott és ajánlott.</b></qt>"
 
-#: serversievesettings.cpp:341
+#: serversievesettings.cpp:334
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
@@ -182,7 +188,7 @@ msgstr ""
 "<qt><b>Semmilyen biztonsági módszer nem támogatott. Nem ajánlott csatlakozni "
 "ehhez a kiszolgálóhoz.</b></qt>"
 
-#: serversievesettings.cpp:344
+#: serversievesettings.cpp:337
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>Nem lehetséges csatlakozni ehhez a kiszolgálóhoz.</b></qt>"

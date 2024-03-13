@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:39+0000\n"
+"POT-Creation-Date: 2024-03-13 00:39+0000\n"
 "PO-Revision-Date: 2023-09-25 11:30+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -148,33 +148,39 @@ msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anonimno"
 
-#: serversievesettings.cpp:279
+#: serversievesettings.cpp:81
+#, kde-format
+msgctxt "Percent value; %p is the value, % is the percent sign"
+msgid "%p%"
+msgstr ""
+
+#: serversievesettings.cpp:272
 #, kde-format
 msgid "Server is not defined"
 msgstr "Strežnik ni določen"
 
-#: serversievesettings.cpp:279
+#: serversievesettings.cpp:272
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Preveri strežnik"
 
-#: serversievesettings.cpp:322
+#: serversievesettings.cpp:315
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr "Ni se mogoče povezati s strežnikom. Preverite njegov naslov."
 
-#: serversievesettings.cpp:334
+#: serversievesettings.cpp:327
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<qt><b>TLS je podprt in priporočen.</b></qt>"
 
-#: serversievesettings.cpp:337
+#: serversievesettings.cpp:330
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<qt><b>SSL je podprt in priporočen.</b></qt>"
 
-#: serversievesettings.cpp:341
+#: serversievesettings.cpp:334
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
@@ -183,7 +189,7 @@ msgstr ""
 "<qt><b>Varnostne podpore ni. Povezava na ta strežnik ni priporočljiva.</b></"
 "qt>"
 
-#: serversievesettings.cpp:344
+#: serversievesettings.cpp:337
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>Tega strežnika ni mogoče uporabiti.</b></qt>"

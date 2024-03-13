@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:39+0000\n"
+"POT-Creation-Date: 2024-03-13 00:39+0000\n"
 "PO-Revision-Date: 2024-02-12 12:14+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -146,40 +146,46 @@ msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "مجهّل"
 
-#: serversievesettings.cpp:279
+#: serversievesettings.cpp:81
+#, kde-format
+msgctxt "Percent value; %p is the value, % is the percent sign"
+msgid "%p%"
+msgstr ""
+
+#: serversievesettings.cpp:272
 #, kde-format
 msgid "Server is not defined"
 msgstr "الخادوم غير معرّف"
 
-#: serversievesettings.cpp:279
+#: serversievesettings.cpp:272
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "فحص الخادوم"
 
-#: serversievesettings.cpp:322
+#: serversievesettings.cpp:315
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr "تعذّر الاتّصال بالخادوم، رجاءً افحص عنوان الخادوم."
 
-#: serversievesettings.cpp:334
+#: serversievesettings.cpp:327
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<b>‏TLS مدعوم ومستحسن.</b>"
 
-#: serversievesettings.cpp:337
+#: serversievesettings.cpp:330
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<b>‏SSL مدعوم ومستحسن.</b>"
 
-#: serversievesettings.cpp:341
+#: serversievesettings.cpp:334
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
 "server.</b></qt>"
 msgstr "<b>لا أمن مدعوم. ليس مستحسنًا الاتّصال بهذا الخادوم.</b>"
 
-#: serversievesettings.cpp:344
+#: serversievesettings.cpp:337
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<b>الاتّصال بهذا الخادوم ليس ممكنًا.</b>"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:39+0000\n"
+"POT-Creation-Date: 2024-03-13 00:39+0000\n"
 "PO-Revision-Date: 2024-02-07 23:33+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -146,40 +146,46 @@ msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "匿名"
 
-#: serversievesettings.cpp:279
+#: serversievesettings.cpp:81
+#, kde-format
+msgctxt "Percent value; %p is the value, % is the percent sign"
+msgid "%p%"
+msgstr ""
+
+#: serversievesettings.cpp:272
 #, kde-format
 msgid "Server is not defined"
 msgstr "未定義伺服器"
 
-#: serversievesettings.cpp:279
+#: serversievesettings.cpp:272
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "檢查伺服器"
 
-#: serversievesettings.cpp:322
+#: serversievesettings.cpp:315
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr "無法連線到伺服器，請檢查伺服器位址是否正確。"
 
-#: serversievesettings.cpp:334
+#: serversievesettings.cpp:327
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<qt><b>支援 TLS 並建議使用。</b></qt>"
 
-#: serversievesettings.cpp:337
+#: serversievesettings.cpp:330
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<qt><b>支援 SSL 並建議使用。</b></qt>"
 
-#: serversievesettings.cpp:341
+#: serversievesettings.cpp:334
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
 "server.</b></qt>"
 msgstr "<qt><b>不支援任何安全協議，因此不建議連線到此伺服器。</b></qt>"
 
-#: serversievesettings.cpp:344
+#: serversievesettings.cpp:337
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>無法使用此伺服器。</b></qt>"
