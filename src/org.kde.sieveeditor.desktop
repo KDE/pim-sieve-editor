@@ -86,6 +86,7 @@ GenericName[sv]=Editor av Sieve-skript för filtrering av e-post
 GenericName[tr]=E-posta süzgeci Sieve betikleri için düzenleyici
 GenericName[uk]=Редактор скриптів фільтрування електронної пошти
 GenericName[x-test]=xxEditor for email filter Sieve scriptsxx
+GenericName[zh_CN]=电子邮件过滤器 Sieve 脚本编辑器
 GenericName[zh_TW]=用來編輯郵件過濾 Sieve 文稿的編輯器
 Comment=Edit IMAP Sieve filters
 Comment[ar]=حرّر مرشّحات سِف IMAP
