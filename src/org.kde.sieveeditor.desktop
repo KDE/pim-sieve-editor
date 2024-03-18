@@ -133,7 +133,5 @@ Comment[zh_CN]=编辑 IMAP 过滤器
 Comment[zh_TW]=編輯 IMAP 篩選器
 Categories=Qt;KDE;Office;Network;X-KDE-Sieve;
 InitialPreference=10
-X-DBUS-StartupType=Unique
-X-DBUS-ServiceName=org.kde.sieveeditor
 SingleMainWindow=true
 Version=1.5
