@@ -159,6 +159,7 @@
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=sieveeditor</url>
   <url type="help">https://docs.kde.org/?application=sieveeditor</url>
   <url type="donation">https://www.kde.org/community/donations/?app=sieveeditor</url>
+  <url type="vcs-browser">https://invent.kde.org/pim/pim-sieve-editor</url>
   <content_rating type="oars-1.1"/>
   <provides>
     <binary>sieveeditor</binary>
