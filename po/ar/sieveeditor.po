@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-13 00:39+0000\n"
-"PO-Revision-Date: 2024-02-12 12:14+0400\n"
+"PO-Revision-Date: 2024-03-30 10:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -150,7 +150,7 @@ msgstr "مجهّل"
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%p٪"
 
 #: serversievesettings.cpp:272
 #, kde-format
