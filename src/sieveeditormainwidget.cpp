@@ -5,6 +5,8 @@
 */
 
 #include "sieveeditormainwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "sieveeditoremptytabwidgetlabel.h"
 #include "sieveeditorpagewidget.h"
 #include "sieveeditorscriptmanagerwidget.h"
@@ -30,7 +32,7 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
     : QSplitter(parent)
 {
     mStackedWidget = new QStackedWidget(this);
-    mStackedWidget->setObjectName(QLatin1StringView("stackedwidget"));
+    mStackedWidget->setObjectName("stackedwidget"_L1);
 
     mEditorEmptyLabel = new SieveEditorEmptyTabWidgetLabel;
 

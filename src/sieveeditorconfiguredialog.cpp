@@ -5,6 +5,8 @@
 */
 
 #include "sieveeditorconfiguredialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "sieveeditorconfigureserverwidget.h"
 #include "sieveeditorglobalconfig.h"
 #include <PimCommon/ConfigureImmutableWidgetUtils>
@@ -54,11 +56,11 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
 
     // Editor page
     auto editorWidget = new QWidget;
-    editorWidget->setObjectName(QLatin1StringView("editorwidget"));
+    editorWidget->setObjectName("editorwidget"_L1);
 
     layout = new QVBoxLayout(editorWidget);
     mWrapText = new QCheckBox(i18n("Wrap Text"));
-    mWrapText->setObjectName(QLatin1StringView("wraptext"));
+    mWrapText->setObjectName("wraptext"_L1);
     layout->addWidget(mWrapText);
     layout->addStretch(100);
 
@@ -69,7 +71,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     // UserFeedBack config
 #ifdef WITH_KUSERFEEDBACK
     auto userFeedBackWidget = new QWidget;
-    userFeedBackWidget->setObjectName(QLatin1StringView("userFeedBackWidget"));
+    userFeedBackWidget->setObjectName("userFeedBackWidget"_L1);
 
     mUserFeedbackWidget = new KUserFeedback::FeedbackConfigWidget(this);
 

@@ -5,6 +5,7 @@
 */
 
 #include "sieveeditorconfigureserverpage.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 
@@ -17,12 +18,12 @@ SieveEditorConfigureServerPage::SieveEditorConfigureServerPage(QWidget *parent)
     auto hbox = new QHBoxLayout(this);
     hbox->addStretch(1);
     auto button = new QPushButton(i18n("Configure..."));
-    button->setObjectName(QLatin1StringView("configure_button"));
+    button->setObjectName("configure_button"_L1);
     button->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     connect(button, &QAbstractButton::clicked, this, &SieveEditorConfigureServerPage::configureClicked);
 
     auto importSieveSettingsButton = new QPushButton(i18n("Import Sieve Settings..."));
-    importSieveSettingsButton->setObjectName(QLatin1StringView("import_sieve_settings_button"));
+    importSieveSettingsButton->setObjectName("import_sieve_settings_button"_L1);
     importSieveSettingsButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     connect(importSieveSettingsButton, &QAbstractButton::clicked, this, &SieveEditorConfigureServerPage::importSieveSettings);
 

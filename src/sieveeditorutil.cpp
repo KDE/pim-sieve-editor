@@ -5,6 +5,8 @@
 */
 
 #include "sieveeditorutil.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "sieveeditor_debug.h"
 #include "sieveeditorsavepasswordjob.h"
 #include "sieveserversettings.h"
@@ -100,7 +102,7 @@ QString SieveEditorUtil::sievePasswordIdentifier(const QString &userName, const 
 
 QString SieveEditorUtil::imapPasswordIdentifier(const QString &userName, const QString &serverName)
 {
-    return QLatin1StringView("Imap") + userName + QLatin1Char('@') + serverName;
+    return "Imap"_L1 + userName + QLatin1Char('@') + serverName;
 }
 
 void SieveEditorUtil::writeSieveSettings(const KSharedConfigPtr &cfg, const SieveEditorUtil::SieveServerConfig &conf, int index)

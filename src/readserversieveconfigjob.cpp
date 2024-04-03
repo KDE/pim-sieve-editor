@@ -5,6 +5,7 @@
 */
 
 #include "readserversieveconfigjob.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "sieveeditor_debug.h"
 #include "sieveserversettings.h"
@@ -72,7 +73,7 @@ void ReadServerSieveConfigJob::loadImapAccountSettings()
         && (mCurrentSieveServerConfig.sieveImapAccountSettings.serverName() != mCurrentSieveServerConfig.sieveSettings.serverName)) {
         mCurrentSieveServerConfig.useImapCustomServer = true;
 
-        const QString imapWalletEntry = QLatin1StringView("Imap") + mCurrentSieveServerConfig.sieveImapAccountSettings.userName() + QLatin1Char('@')
+        const QString imapWalletEntry = "Imap"_L1 + mCurrentSieveServerConfig.sieveImapAccountSettings.userName() + QLatin1Char('@')
             + mCurrentSieveServerConfig.sieveImapAccountSettings.serverName();
         auto readJob = new ReadPasswordJob(SieveEditorUtil::walletFolderName(), this);
         connect(readJob, &Job::finished, this, &ReadServerSieveConfigJob::readImapPasswordFinished);

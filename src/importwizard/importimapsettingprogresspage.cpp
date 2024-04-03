@@ -5,6 +5,8 @@
 */
 
 #include "importimapsettingprogresspage.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "checks/abstractimapsettingscheckjob.h"
 #include "sieveeditor_debug.h"
 #include <KLocalizedString>
@@ -15,9 +17,9 @@ ImportImapSettingProgressPage::ImportImapSettingProgressPage(QWidget *parent)
     : QWidget(parent)
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
     mProgressTextEdit = new QTextEdit(this);
-    mProgressTextEdit->setObjectName(QLatin1StringView("textedit"));
+    mProgressTextEdit->setObjectName("textedit"_L1);
     mProgressTextEdit->setReadOnly(true);
     mainLayout->addWidget(mProgressTextEdit);
 }
