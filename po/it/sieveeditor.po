@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-13 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2024-03-14 21:58+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -38,32 +38,32 @@ msgstr "Impostazioni IMAP di Akonadi"
 msgid "Thunderbird IMAP Settings"
 msgstr "Impostazioni IMAP di Thunderbird"
 
-#: importwizard/importimapsettingfinishpage.cpp:20
+#: importwizard/importimapsettingfinishpage.cpp:22
 #, kde-format
 msgid "IMAP settings were imported:"
 msgstr "Le impostazioni IMAP sono state importate:"
 
-#: importwizard/importimapsettingnofoundpage.cpp:18
+#: importwizard/importimapsettingnofoundpage.cpp:20
 #, kde-format
 msgid "No settings found to import."
 msgstr "Non è stata trovata nessuna impostazione da importare."
 
-#: importwizard/importimapsettingprogresspage.cpp:61
+#: importwizard/importimapsettingprogresspage.cpp:63
 #, kde-format
 msgid "No settings found."
 msgstr "Nessuna impostazione trovata."
 
-#: importwizard/importimapsettingprogresspage.cpp:68
+#: importwizard/importimapsettingprogresspage.cpp:70
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "Importa le impostazioni da %1..."
 
-#: importwizard/importimapsettingprogresspage.cpp:70
+#: importwizard/importimapsettingprogresspage.cpp:72
 #, kde-format
 msgid "Import settings from %1 done"
 msgstr "Importazione completata delle impostazioni da %1"
 
-#: importwizard/importimapsettingsearchpage.cpp:19
+#: importwizard/importimapsettingsearchpage.cpp:20
 #, kde-format
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr "Seleziona il programma da cui vuoi importare le impostazioni IMAP:"
@@ -197,38 +197,38 @@ msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Aggiungi server Sieve"
 
-#: sieveeditorconfiguredialog.cpp:37
+#: sieveeditorconfiguredialog.cpp:39
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Configura"
 
-#: sieveeditorconfiguredialog.cpp:51
+#: sieveeditorconfiguredialog.cpp:53
 #, kde-format
 msgid "Sieve Server"
 msgstr "Server Sieve"
 
-#: sieveeditorconfiguredialog.cpp:60
+#: sieveeditorconfiguredialog.cpp:62
 #, kde-format
 msgid "Wrap Text"
 msgstr "Vai a capo automaticamente"
 
-#: sieveeditorconfiguredialog.cpp:65
+#: sieveeditorconfiguredialog.cpp:67
 #, kde-format
 msgid "Editor"
 msgstr "Editor"
 
-#: sieveeditorconfiguredialog.cpp:81
+#: sieveeditorconfiguredialog.cpp:83
 #, kde-format
 msgid "User Feedback"
 msgstr "Segnalazioni degli utenti"
 
-#: sieveeditorconfigureserverpage.cpp:19
+#: sieveeditorconfigureserverpage.cpp:20
 #, kde-format
 msgid "Configure..."
 msgstr "Configura..."
 
-#: sieveeditorconfigureserverpage.cpp:24
+#: sieveeditorconfigureserverpage.cpp:25
 #, kde-format
 msgid "Import Sieve Settings..."
 msgstr "Importa impostazioni di sieve..."
@@ -288,12 +288,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Strumenti -> Importa impostazioni IMAP"
 
-#: sieveeditormainwidget.cpp:606
+#: sieveeditormainwidget.cpp:608
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Lo script è stato modificato. Vuoi salvarlo prima di chiudere?"
 
-#: sieveeditormainwidget.cpp:607
+#: sieveeditormainwidget.cpp:609
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"

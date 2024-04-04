@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-13 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2023-05-29 19:03+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -37,32 +37,32 @@ msgstr "Akonadi IMAP ayarları"
 msgid "Thunderbird IMAP Settings"
 msgstr "Thunderbird IMAP ayarları"
 
-#: importwizard/importimapsettingfinishpage.cpp:20
+#: importwizard/importimapsettingfinishpage.cpp:22
 #, kde-format
 msgid "IMAP settings were imported:"
 msgstr "IMAP ayarları idxal olundu:"
 
-#: importwizard/importimapsettingnofoundpage.cpp:18
+#: importwizard/importimapsettingnofoundpage.cpp:20
 #, kde-format
 msgid "No settings found to import."
 msgstr "İdxal etmək üçün ayarlar tapılmadı."
 
-#: importwizard/importimapsettingprogresspage.cpp:61
+#: importwizard/importimapsettingprogresspage.cpp:63
 #, kde-format
 msgid "No settings found."
 msgstr "Heç bir ayar tapılmadı."
 
-#: importwizard/importimapsettingprogresspage.cpp:68
+#: importwizard/importimapsettingprogresspage.cpp:70
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "%1 ayarlarını idxal edin..."
 
-#: importwizard/importimapsettingprogresspage.cpp:70
+#: importwizard/importimapsettingprogresspage.cpp:72
 #, kde-format
 msgid "Import settings from %1 done"
 msgstr "%1 ayarlarının idxalı başa çatdı"
 
-#: importwizard/importimapsettingsearchpage.cpp:19
+#: importwizard/importimapsettingsearchpage.cpp:20
 #, kde-format
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr "Lütfən IMAP ayarlarının idxal ediləcəyiniz proqramı seçin:"
@@ -197,38 +197,38 @@ msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Süzgəcləmə serveri əlavə edin"
 
-#: sieveeditorconfiguredialog.cpp:37
+#: sieveeditorconfiguredialog.cpp:39
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Tənzimləyin"
 
-#: sieveeditorconfiguredialog.cpp:51
+#: sieveeditorconfiguredialog.cpp:53
 #, kde-format
 msgid "Sieve Server"
 msgstr "Süzgəcləmə serveri"
 
-#: sieveeditorconfiguredialog.cpp:60
+#: sieveeditorconfiguredialog.cpp:62
 #, kde-format
 msgid "Wrap Text"
 msgstr "Sətirdən-sətirə keçid"
 
-#: sieveeditorconfiguredialog.cpp:65
+#: sieveeditorconfiguredialog.cpp:67
 #, kde-format
 msgid "Editor"
 msgstr "Redaktor"
 
-#: sieveeditorconfiguredialog.cpp:81
+#: sieveeditorconfiguredialog.cpp:83
 #, kde-format
 msgid "User Feedback"
 msgstr "İstifadəçi rəyi"
 
-#: sieveeditorconfigureserverpage.cpp:19
+#: sieveeditorconfigureserverpage.cpp:20
 #, kde-format
 msgid "Configure..."
 msgstr "Tənzimləyin..."
 
-#: sieveeditorconfigureserverpage.cpp:24
+#: sieveeditorconfigureserverpage.cpp:25
 #, kde-format
 msgid "Import Sieve Settings..."
 msgstr "Süzgəcləmə ayarları idxal edin..."
@@ -288,12 +288,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Alətlər > IMAP ayarlarının idxalı"
 
-#: sieveeditormainwidget.cpp:606
+#: sieveeditormainwidget.cpp:608
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Skript yaradıldı. Bağlamadan öncə saxlamaq istəyirsiniz?"
 
-#: sieveeditormainwidget.cpp:607
+#: sieveeditormainwidget.cpp:609
 #, fuzzy, kde-format
 #| msgid "Close script"
 msgctxt "@title:window"

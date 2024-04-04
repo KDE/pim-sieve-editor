@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-13 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2018-01-06 09:21+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -38,34 +38,34 @@ msgstr "Akonadijeve postavke IMAP‑a"
 msgid "Thunderbird IMAP Settings"
 msgstr "Thunderbirdove postavke IMAP‑a"
 
-#: importwizard/importimapsettingfinishpage.cpp:20
+#: importwizard/importimapsettingfinishpage.cpp:22
 #, kde-format
 msgid "IMAP settings were imported:"
 msgstr "Uvezene postavke IMAP‑a:"
 
-#: importwizard/importimapsettingnofoundpage.cpp:18
+#: importwizard/importimapsettingnofoundpage.cpp:20
 #, kde-format
 msgid "No settings found to import."
 msgstr "Nisu nađene postavke za uvoz."
 
-#: importwizard/importimapsettingprogresspage.cpp:61
+#: importwizard/importimapsettingprogresspage.cpp:63
 #, kde-format
 msgid "No settings found."
 msgstr "Postavke nisu nađene."
 
 # >> @info:progress
-#: importwizard/importimapsettingprogresspage.cpp:68
+#: importwizard/importimapsettingprogresspage.cpp:70
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "Uvozim postavke iz %1...|/|Uvozim postavke iz $[gen %1]..."
 
 # >> @info:progress
-#: importwizard/importimapsettingprogresspage.cpp:70
+#: importwizard/importimapsettingprogresspage.cpp:72
 #, kde-format
 msgid "Import settings from %1 done"
 msgstr "Uvoz postavki iz %1 završen|/|Uvoz postavki iz $[gen %1] završen"
 
-#: importwizard/importimapsettingsearchpage.cpp:19
+#: importwizard/importimapsettingsearchpage.cpp:20
 #, kde-format
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr "Izaberite program iz koga treba uvesti postavke IMAP‑a:"
@@ -208,39 +208,39 @@ msgid "Add Sieve Server"
 msgstr "Dodavanje sito servera"
 
 # >> @title:window
-#: sieveeditorconfiguredialog.cpp:37
+#: sieveeditorconfiguredialog.cpp:39
 #, fuzzy, kde-format
 #| msgid "Configure"
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Podešavanje"
 
-#: sieveeditorconfiguredialog.cpp:51
+#: sieveeditorconfiguredialog.cpp:53
 #, kde-format
 msgid "Sieve Server"
 msgstr "Sito server"
 
-#: sieveeditorconfiguredialog.cpp:60
+#: sieveeditorconfiguredialog.cpp:62
 #, kde-format
 msgid "Wrap Text"
 msgstr "Prelomi tekst"
 
-#: sieveeditorconfiguredialog.cpp:65
+#: sieveeditorconfiguredialog.cpp:67
 #, kde-format
 msgid "Editor"
 msgstr "Uređivač"
 
-#: sieveeditorconfiguredialog.cpp:81
+#: sieveeditorconfiguredialog.cpp:83
 #, kde-format
 msgid "User Feedback"
 msgstr ""
 
-#: sieveeditorconfigureserverpage.cpp:19
+#: sieveeditorconfigureserverpage.cpp:20
 #, kde-format
 msgid "Configure..."
 msgstr "Podesi..."
 
-#: sieveeditorconfigureserverpage.cpp:24
+#: sieveeditorconfigureserverpage.cpp:25
 #, kde-format
 msgid "Import Sieve Settings..."
 msgstr "Uvezi sito postavke..."
@@ -301,13 +301,13 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Alatke > Uvezi IMAP postavke"
 
-#: sieveeditormainwidget.cpp:606
+#: sieveeditormainwidget.cpp:608
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Skripta je izmenjena. Želite li da je sačuvate pre zatvaranja?"
 
 # >> @title:window
-#: sieveeditormainwidget.cpp:607
+#: sieveeditormainwidget.cpp:609
 #, fuzzy, kde-format
 #| msgid "Close script"
 msgctxt "@title:window"
