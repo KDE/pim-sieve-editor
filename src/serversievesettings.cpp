@@ -12,7 +12,6 @@
 #include <KMessageBox>
 #include <MailTransport/ServerTest>
 #include <MailTransport/Transport>
-#include <kwidgetsaddons_version.h>
 
 /** static helper functions **/
 static QString authenticationModeString(MailTransport::Transport::EnumAuthenticationType mode)
