@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:39+0000\n"
+"POT-Creation-Date: 2024-04-05 00:38+0000\n"
 "PO-Revision-Date: 2023-12-27 10:17+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -141,52 +141,52 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
-#: serversievesettings.cpp:34 ui/serversievesettings.ui:259
+#: serversievesettings.cpp:33 ui/serversievesettings.ui:259
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Открытый текст"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
-#: serversievesettings.cpp:36 ui/serversievesettings.ui:294
+#: serversievesettings.cpp:35 ui/serversievesettings.ui:294
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Анонимный"
 
-#: serversievesettings.cpp:81
+#: serversievesettings.cpp:80
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr ""
 
-#: serversievesettings.cpp:272
+#: serversievesettings.cpp:271
 #, kde-format
 msgid "Server is not defined"
 msgstr "Сервер не определён"
 
-#: serversievesettings.cpp:272
+#: serversievesettings.cpp:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Проверка сервера"
 
-#: serversievesettings.cpp:315
+#: serversievesettings.cpp:314
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr "Не удалось подключиться к серверу. Проверьте адрес сервера."
 
-#: serversievesettings.cpp:327
+#: serversievesettings.cpp:326
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<qt><b>TLS поддерживается и рекомендуется.</b></qt>"
 
-#: serversievesettings.cpp:330
+#: serversievesettings.cpp:329
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<qt><b>SSL поддерживается и рекомендуется.</b></qt>"
 
-#: serversievesettings.cpp:334
+#: serversievesettings.cpp:333
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
@@ -195,7 +195,7 @@ msgstr ""
 "<qt><b>Безопасное подключение не поддерживается. Не рекомендуется "
 "подключаться  к этому серверу.</b></qt>"
 
-#: serversievesettings.cpp:337
+#: serversievesettings.cpp:336
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>Невозможно использовать этот сервер.</b></qt>"
