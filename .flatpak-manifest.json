@@ -220,7 +220,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/frameworks/ktexttemplate.git",
-                    "branch": "master"
+                    "tag": "v6.0.0"
                 }
             ],
             "config-opts": [
@@ -290,7 +290,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/frameworks/krunner.git",
-                    "branch": "master"
+                    "tag": "v6.0.0"
                 }
             ],
             "config-opts": [
