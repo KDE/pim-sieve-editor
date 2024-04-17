@@ -2,9 +2,9 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "6.0.40")
+set(PIM_VERSION "6.0.80")
 project( sieveeditor VERSION ${PIM_VERSION})
-set(RELEASE_SERVICE_VERSION "24.04.40")
+set(RELEASE_SERVICE_VERSION "24.05.0")
 
 
 set(KF_MIN_VERSION "6.0.0")
@@ -42,7 +42,7 @@ include(ECMDeprecationSettings)
 include(ECMFeatureSummary)
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION alpha)
+set(KDEPIM_DEV_VERSION beta)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
