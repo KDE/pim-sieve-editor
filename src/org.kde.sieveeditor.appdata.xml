@@ -24,6 +24,7 @@
   <name xml:lang="fi">SieveEditor</name>
   <name xml:lang="fr">SieveEditor</name>
   <name xml:lang="gl">SieveEditor</name>
+  <name xml:lang="he">SieveEditor</name>
   <name xml:lang="hu">SieveEditor</name>
   <name xml:lang="ia">SieveEditor</name>
   <name xml:lang="id">SieveEditor</name>
@@ -61,6 +62,7 @@
   <summary xml:lang="fi">Sieve-komentosarjamuokkain</summary>
   <summary xml:lang="fr">Éditeur de scripts « Sieve » de filtrage de courriels</summary>
   <summary xml:lang="gl">Editor de guións de Sieve para filtrar mensaxes de correo electrónico.</summary>
+  <summary xml:lang="he">עורך לסקריפטים לסינון דוא״ל מסוג Sieve</summary>
   <summary xml:lang="hu">Szerkesztő e-mailszűrő Sieve szkriptekhez</summary>
   <summary xml:lang="ia">Editor (redactor) per scripts de Sieve de filtro de e-posta </summary>
   <summary xml:lang="id">Pengedit untuk skrip Sieve filter email</summary>
@@ -97,6 +99,7 @@
   <developer_name xml:lang="fi">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="fr">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="gl">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
+  <developer_name xml:lang="he">לורנט מונטל &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="hu">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="ia">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
   <developer_name xml:lang="id">Laurent Montel &lt;montel@kde.org&gt;</developer_name>
@@ -136,6 +139,7 @@
     <p xml:lang="fi">SieveEditorilla voit luoda, muokata ja poista Sieve-komentojonoja.</p>
     <p xml:lang="fr">SieveEditor permet de créer, de modifier et de supprimer des scripts sieve.</p>
     <p xml:lang="gl">SieveEditor permite editar, crear e eliminar guións de filtro.</p>
+    <p xml:lang="he">SieveEditor מאפשר לערוך, ליצור ולמחוק סקריפטים מסוג Sieve.</p>
     <p xml:lang="hu">A SieveEditor lehetővé teszi Sieve szkriptek szerkesztését, létrehozását és törlését.</p>
     <p xml:lang="ia">SieveEditor te permitte modificart, crear, deler scripts de sieve.</p>
     <p xml:lang="id">SieveEditor memungkinkan untuk edit, cipta, hapus skrip sieve.</p>
