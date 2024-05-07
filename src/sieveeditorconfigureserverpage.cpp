@@ -17,12 +17,12 @@ SieveEditorConfigureServerPage::SieveEditorConfigureServerPage(QWidget *parent)
 {
     auto hbox = new QHBoxLayout(this);
     hbox->addStretch(1);
-    auto button = new QPushButton(i18n("Configure..."));
+    auto button = new QPushButton(i18n("Configure…"));
     button->setObjectName("configure_button"_L1);
     button->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     connect(button, &QAbstractButton::clicked, this, &SieveEditorConfigureServerPage::configureClicked);
 
-    auto importSieveSettingsButton = new QPushButton(i18n("Import Sieve Settings..."));
+    auto importSieveSettingsButton = new QPushButton(i18n("Import Sieve Settings…"));
     importSieveSettingsButton->setObjectName("import_sieve_settings_button"_L1);
     importSieveSettingsButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     connect(importSieveSettingsButton, &QAbstractButton::clicked, this, &SieveEditorConfigureServerPage::importSieveSettings);

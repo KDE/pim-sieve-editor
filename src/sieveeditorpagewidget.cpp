@@ -39,7 +39,7 @@ void SieveEditorPageWidget::slotCheckSyntaxClicked()
     if (script.isEmpty()) {
         return;
     }
-    mSieveEditorWidget->addNormalMessage(i18n("Uploading script to server for checking it, please wait..."));
+    mSieveEditorWidget->addNormalMessage(i18n("Uploading script to server for checking it, please wait…"));
 
     auto checkScriptJob = new KSieveCore::CheckScriptJob(this);
     connect(checkScriptJob, &KSieveCore::CheckScriptJob::finished, this, &SieveEditorPageWidget::slotCheckScriptJobFinished);
