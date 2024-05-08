@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:38+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2023-12-27 10:17+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -62,8 +62,9 @@ msgstr "Параметры не найдены."
 
 # BUGME: please change to "Configure Sieve Server" --aspotashev
 #: importwizard/importimapsettingprogresspage.cpp:70
-#, kde-format
-msgid "Import settings from %1..."
+#, fuzzy, kde-format
+#| msgid "Import settings from %1..."
+msgid "Import settings from %1…"
 msgstr "Импорт параметров из %1..."
 
 #: importwizard/importimapsettingprogresspage.cpp:72
@@ -88,8 +89,9 @@ msgid "Select Import Settings"
 msgstr "Выбор параметров для импорта"
 
 #: importwizard/importimapsettingwizard.cpp:39
-#, kde-format
-msgid "Import in Progress..."
+#, fuzzy, kde-format
+#| msgid "Import in Progress..."
+msgid "Import in Progress…"
 msgstr "Выполняется импорт..."
 
 #: importwizard/importimapsettingwizard.cpp:46
@@ -233,15 +235,18 @@ msgid "User Feedback"
 msgstr "Обратная связь"
 
 #: sieveeditorconfigureserverpage.cpp:20
-#, kde-format
-msgid "Configure..."
-msgstr "Настроить..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure"
+msgid "Configure…"
+msgstr "Настройка"
 
 # BUGME: please change to "Configure Sieve Server" --aspotashev
 #: sieveeditorconfigureserverpage.cpp:25
-#, kde-format
-msgid "Import Sieve Settings..."
-msgstr "Импортировать параметры Sieve..."
+#, fuzzy, kde-format
+#| msgid "Import Sieve Settings:"
+msgid "Import Sieve Settings…"
+msgstr "Импорт параметров Sieve:"
 
 #: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
@@ -328,9 +333,11 @@ msgid "Upload"
 msgstr "Сохранить на сервере"
 
 #: sieveeditormainwindow.cpp:184
-#, kde-format
-msgid "Add Sieve Server..."
-msgstr "Добавить сервер Sieve..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Sieve Server"
+msgid "Add Sieve Server…"
+msgstr "Добавление сервера Sieve"
 
 #: sieveeditormainwindow.cpp:188
 #, kde-format
@@ -338,13 +345,15 @@ msgid "Delete Script"
 msgstr "Удалить сценарий"
 
 #: sieveeditormainwindow.cpp:194
-#, kde-format
-msgid "Create New Script..."
+#, fuzzy, kde-format
+#| msgid "Create New Script..."
+msgid "Create New Script…"
 msgstr "Создать новый сценарий..."
 
 #: sieveeditormainwindow.cpp:200
-#, kde-format
-msgid "Edit Script..."
+#, fuzzy, kde-format
+#| msgid "Edit Script..."
+msgid "Edit Script…"
 msgstr "Изменить сценарий..."
 
 #: sieveeditormainwindow.cpp:205
@@ -358,23 +367,26 @@ msgid "Refresh List"
 msgstr "Обновить список"
 
 #: sieveeditormainwindow.cpp:216
-#, kde-format
-msgid "Go to Line..."
+#, fuzzy, kde-format
+#| msgid "Go to Line..."
+msgid "Go to Line…"
 msgstr "Перейти к строке..."
 
 #: sieveeditormainwindow.cpp:233
-#, kde-format
-msgid "Import..."
+#, fuzzy, kde-format
+#| msgid "Import..."
+msgid "Import…"
 msgstr "Импорт..."
 
 #: sieveeditormainwindow.cpp:239
-#, kde-format
-msgid "Share..."
+#, fuzzy, kde-format
+msgid "Share…"
 msgstr "Опубликовать..."
 
 #: sieveeditormainwindow.cpp:247
-#, kde-format
-msgid "Check Spelling..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling..."
+msgid "Check Spelling…"
 msgstr "Проверить орфографию..."
 
 #: sieveeditormainwindow.cpp:253
@@ -383,9 +395,10 @@ msgid "Check Syntax"
 msgstr "Проверить синтаксис"
 
 #: sieveeditormainwindow.cpp:258
-#, kde-format
-msgid "Create Rules Graphically..."
-msgstr "Создать правила в графическом виде..."
+#, fuzzy, kde-format
+#| msgid "Create Rules Graphically:"
+msgid "Create Rules Graphically…"
+msgstr "Создание правил в графическом виде:"
 
 #: sieveeditormainwindow.cpp:263
 #, kde-format
@@ -404,8 +417,9 @@ msgid "&Bookmarks"
 msgstr "&Закладки"
 
 #: sieveeditormainwindow.cpp:301
-#, kde-format
-msgid "Debug Sieve Script..."
+#, fuzzy, kde-format
+#| msgid "Debug Sieve Script..."
+msgid "Debug Sieve Script…"
 msgstr "Начать отладку сценария Sieve..."
 
 #: sieveeditormainwindow.cpp:306
@@ -414,9 +428,11 @@ msgid "Wordwrap"
 msgstr "Перенос слов"
 
 #: sieveeditormainwindow.cpp:315
-#, kde-format
-msgid "Import IMAP Settings..."
-msgstr "Импортировать параметры IMAP..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Import IMAP Settings"
+msgid "Import IMAP Settings…"
+msgstr "Импорт параметров IMAP"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -429,8 +445,9 @@ msgid "(Disabled) %1"
 msgstr "(Неактивен) %1"
 
 #: sieveeditorpagewidget.cpp:42
-#, kde-format
-msgid "Uploading script to server for checking it, please wait..."
+#, fuzzy, kde-format
+#| msgid "Uploading script to server for checking it, please wait..."
+msgid "Uploading script to server for checking it, please wait…"
 msgstr "Сохранение сценария на сервере для проверки, подождите..."
 
 #: sieveeditorpagewidget.cpp:135
@@ -743,13 +760,14 @@ msgstr "Пустой"
 #. i18n: ectx: property (text), widget (QPushButton, addServer)
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
-msgid "Add..."
-msgstr "Добавить..."
+msgid "Add…"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "Изменить..."
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
@@ -758,12 +776,30 @@ msgstr "Изменить..."
 msgid "Remove"
 msgstr "Удалить"
 
+#~ msgid "Configure..."
+#~ msgstr "Настроить..."
+
+# BUGME: please change to "Configure Sieve Server" --aspotashev
+#~ msgid "Import Sieve Settings..."
+#~ msgstr "Импортировать параметры Sieve..."
+
+#~ msgid "Add Sieve Server..."
+#~ msgstr "Добавить сервер Sieve..."
+
+#~ msgid "Share..."
+#~ msgstr "Опубликовать..."
+
+#~ msgid "Create Rules Graphically..."
+#~ msgstr "Создать правила в графическом виде..."
+
+#~ msgid "Import IMAP Settings..."
+#~ msgstr "Импортировать параметры IMAP..."
+
+#~ msgid "Add..."
+#~ msgstr "Добавить..."
+
 #~ msgid "Close wallet when close application"
 #~ msgstr "Закрыть бумажник при выходе из приложения"
-
-#, fuzzy
-#~ msgid "Share"
-#~ msgstr "Опубликовать..."
 
 #~ msgctxt "Reset the zoom"
 #~ msgid "Reset"

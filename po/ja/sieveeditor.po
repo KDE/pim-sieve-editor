@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:38+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2013-12-24 01:18-0800\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -51,7 +51,7 @@ msgstr ""
 
 #: importwizard/importimapsettingprogresspage.cpp:70
 #, kde-format
-msgid "Import settings from %1..."
+msgid "Import settings from %1…"
 msgstr ""
 
 #: importwizard/importimapsettingprogresspage.cpp:72
@@ -77,7 +77,7 @@ msgstr ""
 
 #: importwizard/importimapsettingwizard.cpp:39
 #, kde-format
-msgid "Import in Progress..."
+msgid "Import in Progress…"
 msgstr ""
 
 #: importwizard/importimapsettingwizard.cpp:46
@@ -219,12 +219,12 @@ msgstr ""
 
 #: sieveeditorconfigureserverpage.cpp:20
 #, kde-format
-msgid "Configure..."
+msgid "Configure…"
 msgstr ""
 
 #: sieveeditorconfigureserverpage.cpp:25
 #, kde-format
-msgid "Import Sieve Settings..."
+msgid "Import Sieve Settings…"
 msgstr ""
 
 #: sieveeditorconfigureserverwidget.cpp:59
@@ -310,7 +310,7 @@ msgstr ""
 
 #: sieveeditormainwindow.cpp:184
 #, kde-format
-msgid "Add Sieve Server..."
+msgid "Add Sieve Server…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:188
@@ -320,12 +320,12 @@ msgstr ""
 
 #: sieveeditormainwindow.cpp:194
 #, kde-format
-msgid "Create New Script..."
+msgid "Create New Script…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:200
 #, kde-format
-msgid "Edit Script..."
+msgid "Edit Script…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:205
@@ -340,22 +340,22 @@ msgstr ""
 
 #: sieveeditormainwindow.cpp:216
 #, kde-format
-msgid "Go to Line..."
+msgid "Go to Line…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:233
 #, kde-format
-msgid "Import..."
+msgid "Import…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:239
 #, kde-format
-msgid "Share..."
+msgid "Share…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:247
 #, kde-format
-msgid "Check Spelling..."
+msgid "Check Spelling…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:253
@@ -365,7 +365,7 @@ msgstr ""
 
 #: sieveeditormainwindow.cpp:258
 #, kde-format
-msgid "Create Rules Graphically..."
+msgid "Create Rules Graphically…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:263
@@ -386,7 +386,7 @@ msgstr ""
 
 #: sieveeditormainwindow.cpp:301
 #, kde-format
-msgid "Debug Sieve Script..."
+msgid "Debug Sieve Script…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:306
@@ -396,7 +396,7 @@ msgstr ""
 
 #: sieveeditormainwindow.cpp:315
 #, kde-format
-msgid "Import IMAP Settings..."
+msgid "Import IMAP Settings…"
 msgstr ""
 
 #: sieveeditormanagesievewidget.cpp:37
@@ -411,7 +411,7 @@ msgstr ""
 
 #: sieveeditorpagewidget.cpp:42
 #, kde-format
-msgid "Uploading script to server for checking it, please wait..."
+msgid "Uploading script to server for checking it, please wait…"
 msgstr ""
 
 #: sieveeditorpagewidget.cpp:135
@@ -688,13 +688,13 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, addServer)
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
-msgid "Add..."
+msgid "Add…"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
 #, kde-format
-msgid "Modify..."
+msgid "Modify…"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)

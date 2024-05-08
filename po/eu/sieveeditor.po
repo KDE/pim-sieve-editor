@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:38+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2024-03-23 22:35+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -56,8 +56,9 @@ msgid "No settings found."
 msgstr "Ez da ezarpenik aurkitu."
 
 #: importwizard/importimapsettingprogresspage.cpp:70
-#, kde-format
-msgid "Import settings from %1..."
+#, fuzzy, kde-format
+#| msgid "Import settings from %1..."
+msgid "Import settings from %1…"
 msgstr "Inportatu ezarpenak %1(e)tik..."
 
 #: importwizard/importimapsettingprogresspage.cpp:72
@@ -83,8 +84,9 @@ msgid "Select Import Settings"
 msgstr "Hautatu inportatzeko ezarpenak"
 
 #: importwizard/importimapsettingwizard.cpp:39
-#, kde-format
-msgid "Import in Progress..."
+#, fuzzy, kde-format
+#| msgid "Import in Progress..."
+msgid "Import in Progress…"
 msgstr "Inportatzen ari da..."
 
 #: importwizard/importimapsettingwizard.cpp:46
@@ -229,14 +231,17 @@ msgid "User Feedback"
 msgstr "Erabiltzaileen erreakzioa"
 
 #: sieveeditorconfigureserverpage.cpp:20
-#, kde-format
-msgid "Configure..."
-msgstr "Konfiguratu..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure"
+msgid "Configure…"
+msgstr "Konfiguratu"
 
 #: sieveeditorconfigureserverpage.cpp:25
-#, kde-format
-msgid "Import Sieve Settings..."
-msgstr "Inportatu «Sieve» (bahe) ezarpenak..."
+#, fuzzy, kde-format
+#| msgid "Import Sieve Settings:"
+msgid "Import Sieve Settings…"
+msgstr "Inportatu «Sieve» ezarpenak:"
 
 #: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
@@ -320,9 +325,11 @@ msgid "Upload"
 msgstr "Zama-igo"
 
 #: sieveeditormainwindow.cpp:184
-#, kde-format
-msgid "Add Sieve Server..."
-msgstr "Gehitu «Sieve» zerbitzaria..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Sieve Server"
+msgid "Add Sieve Server…"
+msgstr "Gehitu «Sieve» zerbitzaria"
 
 #: sieveeditormainwindow.cpp:188
 #, kde-format
@@ -330,13 +337,15 @@ msgid "Delete Script"
 msgstr "Ezabatu gidoia"
 
 #: sieveeditormainwindow.cpp:194
-#, kde-format
-msgid "Create New Script..."
+#, fuzzy, kde-format
+#| msgid "Create New Script..."
+msgid "Create New Script…"
 msgstr "Sortu gidoi berria..."
 
 #: sieveeditormainwindow.cpp:200
-#, kde-format
-msgid "Edit Script..."
+#, fuzzy, kde-format
+#| msgid "Edit Script..."
+msgid "Edit Script…"
 msgstr "Editatu gidoia..."
 
 #: sieveeditormainwindow.cpp:205
@@ -350,23 +359,27 @@ msgid "Refresh List"
 msgstr "Berritu zerrenda"
 
 #: sieveeditormainwindow.cpp:216
-#, kde-format
-msgid "Go to Line..."
+#, fuzzy, kde-format
+#| msgid "Go to Line..."
+msgid "Go to Line…"
 msgstr "Joan ... lerrora"
 
 #: sieveeditormainwindow.cpp:233
-#, kde-format
-msgid "Import..."
+#, fuzzy, kde-format
+#| msgid "Import..."
+msgid "Import…"
 msgstr "Inportatu..."
 
 #: sieveeditormainwindow.cpp:239
-#, kde-format
-msgid "Share..."
+#, fuzzy, kde-format
+#| msgid "Share..."
+msgid "Share…"
 msgstr "Partekatu..."
 
 #: sieveeditormainwindow.cpp:247
-#, kde-format
-msgid "Check Spelling..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling..."
+msgid "Check Spelling…"
 msgstr "Egiaztatu ortografia..."
 
 #: sieveeditormainwindow.cpp:253
@@ -375,9 +388,10 @@ msgid "Check Syntax"
 msgstr "Egiaztatu sintaxia"
 
 #: sieveeditormainwindow.cpp:258
-#, kde-format
-msgid "Create Rules Graphically..."
-msgstr "Sortu arauak grafikoki..."
+#, fuzzy, kde-format
+#| msgid "Create Rules Graphically:"
+msgid "Create Rules Graphically…"
+msgstr "Sortu arauak grafikoki:"
 
 #: sieveeditormainwindow.cpp:263
 #, kde-format
@@ -396,8 +410,9 @@ msgid "&Bookmarks"
 msgstr "&Laster-markak"
 
 #: sieveeditormainwindow.cpp:301
-#, kde-format
-msgid "Debug Sieve Script..."
+#, fuzzy, kde-format
+#| msgid "Debug Sieve Script..."
+msgid "Debug Sieve Script…"
 msgstr "Araztu «Sieve» gidoia..."
 
 #: sieveeditormainwindow.cpp:306
@@ -406,9 +421,11 @@ msgid "Wordwrap"
 msgstr "Itzulbiratzea"
 
 #: sieveeditormainwindow.cpp:315
-#, kde-format
-msgid "Import IMAP Settings..."
-msgstr "Inportatu IMAP ezarpenak..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Import IMAP Settings"
+msgid "Import IMAP Settings…"
+msgstr "Inportatu IMAP ezarpenak"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -421,8 +438,9 @@ msgid "(Disabled) %1"
 msgstr "(Ezgaituta) %1"
 
 #: sieveeditorpagewidget.cpp:42
-#, kde-format
-msgid "Uploading script to server for checking it, please wait..."
+#, fuzzy, kde-format
+#| msgid "Uploading script to server for checking it, please wait..."
+msgid "Uploading script to server for checking it, please wait…"
 msgstr "Gidoia egiaztatzeko zerbitzarira zama-igotzen, itxoin mesedez..."
 
 #: sieveeditorpagewidget.cpp:135
@@ -732,13 +750,14 @@ msgstr "Hutsik"
 #. i18n: ectx: property (text), widget (QPushButton, addServer)
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
-msgid "Add..."
-msgstr "Gehitu..."
+msgid "Add…"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "Aldatu..."
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
@@ -746,3 +765,21 @@ msgstr "Aldatu..."
 #, kde-format
 msgid "Remove"
 msgstr "Kendu"
+
+#~ msgid "Configure..."
+#~ msgstr "Konfiguratu..."
+
+#~ msgid "Import Sieve Settings..."
+#~ msgstr "Inportatu «Sieve» (bahe) ezarpenak..."
+
+#~ msgid "Add Sieve Server..."
+#~ msgstr "Gehitu «Sieve» zerbitzaria..."
+
+#~ msgid "Create Rules Graphically..."
+#~ msgstr "Sortu arauak grafikoki..."
+
+#~ msgid "Import IMAP Settings..."
+#~ msgstr "Inportatu IMAP ezarpenak..."
+
+#~ msgid "Add..."
+#~ msgstr "Gehitu..."

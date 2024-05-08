@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:38+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2024-03-13 07:45+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -56,8 +56,9 @@ msgid "No settings found."
 msgstr "Ni bilo najdenih nastavitev."
 
 #: importwizard/importimapsettingprogresspage.cpp:70
-#, kde-format
-msgid "Import settings from %1..."
+#, fuzzy, kde-format
+#| msgid "Import settings from %1..."
+msgid "Import settings from %1…"
 msgstr "Uvozi nastavitve iz %1 ..."
 
 #: importwizard/importimapsettingprogresspage.cpp:72
@@ -82,8 +83,9 @@ msgid "Select Import Settings"
 msgstr "Izberite nastavitve uvoza"
 
 #: importwizard/importimapsettingwizard.cpp:39
-#, kde-format
-msgid "Import in Progress..."
+#, fuzzy, kde-format
+#| msgid "Import in Progress..."
+msgid "Import in Progress…"
 msgstr "Uvažanje je v teku ..."
 
 #: importwizard/importimapsettingwizard.cpp:46
@@ -227,14 +229,17 @@ msgid "User Feedback"
 msgstr "Povratni odziv uporabnika"
 
 #: sieveeditorconfigureserverpage.cpp:20
-#, kde-format
-msgid "Configure..."
-msgstr "Nastavi ..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure"
+msgid "Configure…"
+msgstr "Nastavi"
 
 #: sieveeditorconfigureserverpage.cpp:25
-#, kde-format
-msgid "Import Sieve Settings..."
-msgstr "Uvozi nastavitve za Sieve ..."
+#, fuzzy, kde-format
+#| msgid "Import Sieve Settings:"
+msgid "Import Sieve Settings…"
+msgstr "Uvozi nastavitve za Sieve:"
 
 #: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
@@ -318,9 +323,11 @@ msgid "Upload"
 msgstr "Pošlji"
 
 #: sieveeditormainwindow.cpp:184
-#, kde-format
-msgid "Add Sieve Server..."
-msgstr "Dodaj strežnik Sieve ..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Sieve Server"
+msgid "Add Sieve Server…"
+msgstr "Dodaj strežnik Sieve"
 
 #: sieveeditormainwindow.cpp:188
 #, kde-format
@@ -328,13 +335,15 @@ msgid "Delete Script"
 msgstr "Izbriši skript"
 
 #: sieveeditormainwindow.cpp:194
-#, kde-format
-msgid "Create New Script..."
+#, fuzzy, kde-format
+#| msgid "Create New Script..."
+msgid "Create New Script…"
 msgstr "Ustvari nov skript ..."
 
 #: sieveeditormainwindow.cpp:200
-#, kde-format
-msgid "Edit Script..."
+#, fuzzy, kde-format
+#| msgid "Edit Script..."
+msgid "Edit Script…"
 msgstr "Uredi skript ..."
 
 #: sieveeditormainwindow.cpp:205
@@ -348,23 +357,27 @@ msgid "Refresh List"
 msgstr "Osveži seznam"
 
 #: sieveeditormainwindow.cpp:216
-#, kde-format
-msgid "Go to Line..."
+#, fuzzy, kde-format
+#| msgid "Go to Line..."
+msgid "Go to Line…"
 msgstr "Pojdi v vrstico ..."
 
 #: sieveeditormainwindow.cpp:233
-#, kde-format
-msgid "Import..."
+#, fuzzy, kde-format
+#| msgid "Import..."
+msgid "Import…"
 msgstr "Uvozi ..."
 
 #: sieveeditormainwindow.cpp:239
-#, kde-format
-msgid "Share..."
+#, fuzzy, kde-format
+#| msgid "Share..."
+msgid "Share…"
 msgstr "Deli ..."
 
 #: sieveeditormainwindow.cpp:247
-#, kde-format
-msgid "Check Spelling..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling..."
+msgid "Check Spelling…"
 msgstr "Preveri črkovanje ..."
 
 #: sieveeditormainwindow.cpp:253
@@ -373,9 +386,10 @@ msgid "Check Syntax"
 msgstr "Preveri skladnjo"
 
 #: sieveeditormainwindow.cpp:258
-#, kde-format
-msgid "Create Rules Graphically..."
-msgstr "Ustvari pravila v grafičnem načinu ..."
+#, fuzzy, kde-format
+#| msgid "Create Rules Graphically:"
+msgid "Create Rules Graphically…"
+msgstr "Ustvari pravila v grafičnem načinu:"
 
 #: sieveeditormainwindow.cpp:263
 #, kde-format
@@ -394,8 +408,9 @@ msgid "&Bookmarks"
 msgstr "Zaznamki"
 
 #: sieveeditormainwindow.cpp:301
-#, kde-format
-msgid "Debug Sieve Script..."
+#, fuzzy, kde-format
+#| msgid "Debug Sieve Script..."
+msgid "Debug Sieve Script…"
 msgstr "Razhrošči skript Sieve ..."
 
 #: sieveeditormainwindow.cpp:306
@@ -404,9 +419,11 @@ msgid "Wordwrap"
 msgstr "Prelom vrstic"
 
 #: sieveeditormainwindow.cpp:315
-#, kde-format
-msgid "Import IMAP Settings..."
-msgstr "Uvozi nastavitve IMAP ..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Import IMAP Settings"
+msgid "Import IMAP Settings…"
+msgstr "Uvozi nastavitve IMAP"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -419,8 +436,9 @@ msgid "(Disabled) %1"
 msgstr "(Onemogočeno) %1"
 
 #: sieveeditorpagewidget.cpp:42
-#, kde-format
-msgid "Uploading script to server for checking it, please wait..."
+#, fuzzy, kde-format
+#| msgid "Uploading script to server for checking it, please wait..."
+msgid "Uploading script to server for checking it, please wait…"
 msgstr "Pošiljanje skripta na strežnik za preverjanje, počakajte ..."
 
 #: sieveeditorpagewidget.cpp:135
@@ -726,13 +744,14 @@ msgstr "Prazno"
 #. i18n: ectx: property (text), widget (QPushButton, addServer)
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
-msgid "Add..."
-msgstr "Dodaj ..."
+msgid "Add…"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "Spremeni ..."
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
@@ -740,6 +759,24 @@ msgstr "Spremeni ..."
 #, kde-format
 msgid "Remove"
 msgstr "Odstrani"
+
+#~ msgid "Configure..."
+#~ msgstr "Nastavi ..."
+
+#~ msgid "Import Sieve Settings..."
+#~ msgstr "Uvozi nastavitve za Sieve ..."
+
+#~ msgid "Add Sieve Server..."
+#~ msgstr "Dodaj strežnik Sieve ..."
+
+#~ msgid "Create Rules Graphically..."
+#~ msgstr "Ustvari pravila v grafičnem načinu ..."
+
+#~ msgid "Import IMAP Settings..."
+#~ msgstr "Uvozi nastavitve IMAP ..."
+
+#~ msgid "Add..."
+#~ msgstr "Dodaj ..."
 
 #~ msgid "Close wallet when close application"
 #~ msgstr "Zapri listnico ob zaprtju programa"

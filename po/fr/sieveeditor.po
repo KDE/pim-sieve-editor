@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:38+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2024-03-14 08:56+0100\n"
 "Last-Translator: xavier <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -61,8 +61,9 @@ msgid "No settings found."
 msgstr "Aucun paramètre trouvé."
 
 #: importwizard/importimapsettingprogresspage.cpp:70
-#, kde-format
-msgid "Import settings from %1..."
+#, fuzzy, kde-format
+#| msgid "Import settings from %1..."
+msgid "Import settings from %1…"
 msgstr "Importer des paramètres depuis %1..."
 
 #: importwizard/importimapsettingprogresspage.cpp:72
@@ -89,8 +90,9 @@ msgid "Select Import Settings"
 msgstr "Sélectionner les paramètres d'importation"
 
 #: importwizard/importimapsettingwizard.cpp:39
-#, kde-format
-msgid "Import in Progress..."
+#, fuzzy, kde-format
+#| msgid "Import in Progress..."
+msgid "Import in Progress…"
 msgstr "Import en cours…"
 
 #: importwizard/importimapsettingwizard.cpp:46
@@ -235,14 +237,17 @@ msgid "User Feedback"
 msgstr "Retours des utilisateurs"
 
 #: sieveeditorconfigureserverpage.cpp:20
-#, kde-format
-msgid "Configure..."
-msgstr "Configurer..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure"
+msgid "Configure…"
+msgstr "Configurer"
 
 #: sieveeditorconfigureserverpage.cpp:25
-#, kde-format
-msgid "Import Sieve Settings..."
-msgstr "Importer des paramètres Sieve…"
+#, fuzzy, kde-format
+#| msgid "Import Sieve Settings:"
+msgid "Import Sieve Settings…"
+msgstr "Importer les paramètres de Sieve :"
 
 #: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
@@ -327,9 +332,11 @@ msgid "Upload"
 msgstr "Envoyer"
 
 #: sieveeditormainwindow.cpp:184
-#, kde-format
-msgid "Add Sieve Server..."
-msgstr "Ajouter un serveur Sieve…"
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Sieve Server"
+msgid "Add Sieve Server…"
+msgstr "Ajouter un serveur Sieve"
 
 #: sieveeditormainwindow.cpp:188
 #, kde-format
@@ -337,13 +344,15 @@ msgid "Delete Script"
 msgstr "Supprimer le script"
 
 #: sieveeditormainwindow.cpp:194
-#, kde-format
-msgid "Create New Script..."
+#, fuzzy, kde-format
+#| msgid "Create New Script..."
+msgid "Create New Script…"
 msgstr "Créer un nouveau script..."
 
 #: sieveeditormainwindow.cpp:200
-#, kde-format
-msgid "Edit Script..."
+#, fuzzy, kde-format
+#| msgid "Edit Script..."
+msgid "Edit Script…"
 msgstr "Modifier le script…"
 
 #: sieveeditormainwindow.cpp:205
@@ -357,23 +366,27 @@ msgid "Refresh List"
 msgstr "Actualiser la liste"
 
 #: sieveeditormainwindow.cpp:216
-#, kde-format
-msgid "Go to Line..."
+#, fuzzy, kde-format
+#| msgid "Go to Line..."
+msgid "Go to Line…"
 msgstr "Aller à la ligne…"
 
 #: sieveeditormainwindow.cpp:233
-#, kde-format
-msgid "Import..."
+#, fuzzy, kde-format
+#| msgid "Import..."
+msgid "Import…"
 msgstr "Importer..."
 
 #: sieveeditormainwindow.cpp:239
-#, kde-format
-msgid "Share..."
+#, fuzzy, kde-format
+#| msgid "Share"
+msgid "Share…"
 msgstr "Partager"
 
 #: sieveeditormainwindow.cpp:247
-#, kde-format
-msgid "Check Spelling..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling..."
+msgid "Check Spelling…"
 msgstr "Vérifier l'orthographe..."
 
 #: sieveeditormainwindow.cpp:253
@@ -382,9 +395,10 @@ msgid "Check Syntax"
 msgstr "Vérifier la syntaxe"
 
 #: sieveeditormainwindow.cpp:258
-#, kde-format
-msgid "Create Rules Graphically..."
-msgstr "Créer les règles graphiquement…"
+#, fuzzy, kde-format
+#| msgid "Create Rules Graphically:"
+msgid "Create Rules Graphically…"
+msgstr "Créer les règles graphiquement :"
 
 #: sieveeditormainwindow.cpp:263
 #, kde-format
@@ -403,8 +417,9 @@ msgid "&Bookmarks"
 msgstr "&Signets"
 
 #: sieveeditormainwindow.cpp:301
-#, kde-format
-msgid "Debug Sieve Script..."
+#, fuzzy, kde-format
+#| msgid "Debug Sieve Script..."
+msgid "Debug Sieve Script…"
 msgstr "Déboguer le script Sieve…"
 
 #: sieveeditormainwindow.cpp:306
@@ -413,9 +428,11 @@ msgid "Wordwrap"
 msgstr "Retour à la ligne"
 
 #: sieveeditormainwindow.cpp:315
-#, kde-format
-msgid "Import IMAP Settings..."
-msgstr "Importer les paramètres IMAP..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Import IMAP Settings"
+msgid "Import IMAP Settings…"
+msgstr "Importer les paramètres IMAP"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -428,8 +445,9 @@ msgid "(Disabled) %1"
 msgstr "(Désactivé) %1"
 
 #: sieveeditorpagewidget.cpp:42
-#, kde-format
-msgid "Uploading script to server for checking it, please wait..."
+#, fuzzy, kde-format
+#| msgid "Uploading script to server for checking it, please wait..."
+msgid "Uploading script to server for checking it, please wait…"
 msgstr ""
 "Téléchargement du script vers le serveur pour le vérifier, veuillez "
 "patienter…"
@@ -742,13 +760,14 @@ msgstr "Vide"
 #. i18n: ectx: property (text), widget (QPushButton, addServer)
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
-msgid "Add..."
-msgstr "Ajouter..."
+msgid "Add…"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "Modifier..."
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
@@ -757,14 +776,32 @@ msgstr "Modifier..."
 msgid "Remove"
 msgstr "Supprimer"
 
+#~ msgid "Configure..."
+#~ msgstr "Configurer..."
+
+#~ msgid "Import Sieve Settings..."
+#~ msgstr "Importer des paramètres Sieve…"
+
+#~ msgid "Add Sieve Server..."
+#~ msgstr "Ajouter un serveur Sieve…"
+
+#~ msgid "Share..."
+#~ msgstr "Partager"
+
+#~ msgid "Create Rules Graphically..."
+#~ msgstr "Créer les règles graphiquement…"
+
+#~ msgid "Import IMAP Settings..."
+#~ msgstr "Importer les paramètres IMAP..."
+
+#~ msgid "Add..."
+#~ msgstr "Ajouter..."
+
 #~ msgid "Close wallet when close application"
 #~ msgstr "Fermer les portefeuilles en quittant l'application"
 
 #~ msgid "There was a problem sharing the document: %1"
 #~ msgstr "Un problème est survenu lors du partage du document : %1"
-
-#~ msgid "Share"
-#~ msgstr "Partager"
 
 #~ msgid "File was shared."
 #~ msgstr "Le fichier a été partagé."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:38+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2024-03-14 03:58+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -54,8 +54,9 @@ msgid "No settings found."
 msgstr "პარამეტრები ვერ ვიპოვე."
 
 #: importwizard/importimapsettingprogresspage.cpp:70
-#, kde-format
-msgid "Import settings from %1..."
+#, fuzzy, kde-format
+#| msgid "Import settings from %1..."
+msgid "Import settings from %1…"
 msgstr "პარამეტრები შემოტანა %1-დან..."
 
 #: importwizard/importimapsettingprogresspage.cpp:72
@@ -80,8 +81,9 @@ msgid "Select Import Settings"
 msgstr "აირჩიეთ შემოსატანი პარამეტრები"
 
 #: importwizard/importimapsettingwizard.cpp:39
-#, kde-format
-msgid "Import in Progress..."
+#, fuzzy, kde-format
+#| msgid "Import in Progress..."
+msgid "Import in Progress…"
 msgstr "მიმდინარეობს შემოტანა..."
 
 #: importwizard/importimapsettingwizard.cpp:46
@@ -224,14 +226,17 @@ msgid "User Feedback"
 msgstr "მომხარებლის უკუკავშირი"
 
 #: sieveeditorconfigureserverpage.cpp:20
-#, kde-format
-msgid "Configure..."
-msgstr "მორგება..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure"
+msgid "Configure…"
+msgstr "მორგება"
 
 #: sieveeditorconfigureserverpage.cpp:25
-#, kde-format
-msgid "Import Sieve Settings..."
-msgstr "Sieve-ის პარამეტრების შემოტანა..."
+#, fuzzy, kde-format
+#| msgid "Import Sieve Settings:"
+msgid "Import Sieve Settings…"
+msgstr "Sieve-ის პარამეტრების შემოტანა:"
 
 #: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
@@ -315,9 +320,11 @@ msgid "Upload"
 msgstr "ატვირთვა"
 
 #: sieveeditormainwindow.cpp:184
-#, kde-format
-msgid "Add Sieve Server..."
-msgstr "Sieve-ის სერვერის დამატება..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Sieve Server"
+msgid "Add Sieve Server…"
+msgstr "Sieve-ის სერვერის დამატება"
 
 #: sieveeditormainwindow.cpp:188
 #, kde-format
@@ -325,13 +332,15 @@ msgid "Delete Script"
 msgstr "სკრიპტის წაშლა"
 
 #: sieveeditormainwindow.cpp:194
-#, kde-format
-msgid "Create New Script..."
+#, fuzzy, kde-format
+#| msgid "Create New Script..."
+msgid "Create New Script…"
 msgstr "ახალი სკრიპტის შექმნა..."
 
 #: sieveeditormainwindow.cpp:200
-#, kde-format
-msgid "Edit Script..."
+#, fuzzy, kde-format
+#| msgid "Edit Script..."
+msgid "Edit Script…"
 msgstr "სკრიპტის ჩასწორება..."
 
 #: sieveeditormainwindow.cpp:205
@@ -345,23 +354,27 @@ msgid "Refresh List"
 msgstr "სიის განახლება"
 
 #: sieveeditormainwindow.cpp:216
-#, kde-format
-msgid "Go to Line..."
+#, fuzzy, kde-format
+#| msgid "Go to Line..."
+msgid "Go to Line…"
 msgstr "ხაზზე გადასვლა..."
 
 #: sieveeditormainwindow.cpp:233
-#, kde-format
-msgid "Import..."
+#, fuzzy, kde-format
+#| msgid "Import..."
+msgid "Import…"
 msgstr "&შემოტანა..."
 
 #: sieveeditormainwindow.cpp:239
-#, kde-format
-msgid "Share..."
+#, fuzzy, kde-format
+#| msgid "Share..."
+msgid "Share…"
 msgstr "გაზიარება..."
 
 #: sieveeditormainwindow.cpp:247
-#, kde-format
-msgid "Check Spelling..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling..."
+msgid "Check Spelling…"
 msgstr "მართლწერის შემოწმება..."
 
 #: sieveeditormainwindow.cpp:253
@@ -370,9 +383,10 @@ msgid "Check Syntax"
 msgstr "სინტაქსის შემოწმება"
 
 #: sieveeditormainwindow.cpp:258
-#, kde-format
-msgid "Create Rules Graphically..."
-msgstr "წესების გრაფიკულად შექმნა..."
+#, fuzzy, kde-format
+#| msgid "Create Rules Graphically:"
+msgid "Create Rules Graphically…"
+msgstr "წესების გრაფიკულად შექმნა:"
 
 #: sieveeditormainwindow.cpp:263
 #, kde-format
@@ -391,8 +405,9 @@ msgid "&Bookmarks"
 msgstr "&სანიშნეები"
 
 #: sieveeditormainwindow.cpp:301
-#, kde-format
-msgid "Debug Sieve Script..."
+#, fuzzy, kde-format
+#| msgid "Debug Sieve Script..."
+msgid "Debug Sieve Script…"
 msgstr "Sieve-ის სკრიპტის გამართვა..."
 
 #: sieveeditormainwindow.cpp:306
@@ -401,9 +416,11 @@ msgid "Wordwrap"
 msgstr "სიტყვების გადატანა"
 
 #: sieveeditormainwindow.cpp:315
-#, kde-format
-msgid "Import IMAP Settings..."
-msgstr "IMAP-ის პარამეტრების შემოტანა..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Import IMAP Settings"
+msgid "Import IMAP Settings…"
+msgstr "IMAP-ის პარამეტრების შემოტანა"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -416,8 +433,9 @@ msgid "(Disabled) %1"
 msgstr "(გათიშულია) %1"
 
 #: sieveeditorpagewidget.cpp:42
-#, kde-format
-msgid "Uploading script to server for checking it, please wait..."
+#, fuzzy, kde-format
+#| msgid "Uploading script to server for checking it, please wait..."
+msgid "Uploading script to server for checking it, please wait…"
 msgstr "სკრიპტის სერვერზე შესამოწმებლად ატვირთვა. მოითმინეთ..."
 
 #: sieveeditorpagewidget.cpp:135
@@ -725,13 +743,14 @@ msgstr "ცარიელი"
 #. i18n: ectx: property (text), widget (QPushButton, addServer)
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
-msgid "Add..."
-msgstr "დამატება..."
+msgid "Add…"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "ჩასწორება..."
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
@@ -739,3 +758,21 @@ msgstr "ჩასწორება..."
 #, kde-format
 msgid "Remove"
 msgstr "წაშლა"
+
+#~ msgid "Configure..."
+#~ msgstr "მორგება..."
+
+#~ msgid "Import Sieve Settings..."
+#~ msgstr "Sieve-ის პარამეტრების შემოტანა..."
+
+#~ msgid "Add Sieve Server..."
+#~ msgstr "Sieve-ის სერვერის დამატება..."
+
+#~ msgid "Create Rules Graphically..."
+#~ msgstr "წესების გრაფიკულად შექმნა..."
+
+#~ msgid "Import IMAP Settings..."
+#~ msgstr "IMAP-ის პარამეტრების შემოტანა..."
+
+#~ msgid "Add..."
+#~ msgstr "დამატება..."

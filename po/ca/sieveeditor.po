@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:38+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2024-03-13 12:04+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -57,8 +57,9 @@ msgid "No settings found."
 msgstr "No s'ha trobat cap configuració."
 
 #: importwizard/importimapsettingprogresspage.cpp:70
-#, kde-format
-msgid "Import settings from %1..."
+#, fuzzy, kde-format
+#| msgid "Import settings from %1..."
+msgid "Import settings from %1…"
 msgstr "Importa la configuració des de %1..."
 
 #: importwizard/importimapsettingprogresspage.cpp:72
@@ -84,8 +85,9 @@ msgid "Select Import Settings"
 msgstr "Selecciona la configuració a importar"
 
 #: importwizard/importimapsettingwizard.cpp:39
-#, kde-format
-msgid "Import in Progress..."
+#, fuzzy, kde-format
+#| msgid "Import in Progress..."
+msgid "Import in Progress…"
 msgstr "La importació es troba en curs..."
 
 #: importwizard/importimapsettingwizard.cpp:46
@@ -228,14 +230,17 @@ msgid "User Feedback"
 msgstr "Comentaris de l'usuari"
 
 #: sieveeditorconfigureserverpage.cpp:20
-#, kde-format
-msgid "Configure..."
-msgstr "Configura..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure"
+msgid "Configure…"
+msgstr "Configuració"
 
 #: sieveeditorconfigureserverpage.cpp:25
-#, kde-format
-msgid "Import Sieve Settings..."
-msgstr "Importa la configuració de «Sieve»..."
+#, fuzzy, kde-format
+#| msgid "Import Sieve Settings:"
+msgid "Import Sieve Settings…"
+msgstr "Importa la configuració de «Sieve»:"
 
 #: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
@@ -319,9 +324,11 @@ msgid "Upload"
 msgstr "Pujada"
 
 #: sieveeditormainwindow.cpp:184
-#, kde-format
-msgid "Add Sieve Server..."
-msgstr "Afegeix un servidor de «Sieve»..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Sieve Server"
+msgid "Add Sieve Server…"
+msgstr "Afegeix un servidor de «Sieve»"
 
 #: sieveeditormainwindow.cpp:188
 #, kde-format
@@ -329,13 +336,15 @@ msgid "Delete Script"
 msgstr "Suprimeix l'script"
 
 #: sieveeditormainwindow.cpp:194
-#, kde-format
-msgid "Create New Script..."
+#, fuzzy, kde-format
+#| msgid "Create New Script..."
+msgid "Create New Script…"
 msgstr "Crea un script nou..."
 
 #: sieveeditormainwindow.cpp:200
-#, kde-format
-msgid "Edit Script..."
+#, fuzzy, kde-format
+#| msgid "Edit Script..."
+msgid "Edit Script…"
 msgstr "Edita un script..."
 
 #: sieveeditormainwindow.cpp:205
@@ -349,23 +358,27 @@ msgid "Refresh List"
 msgstr "Actualitza la llista"
 
 #: sieveeditormainwindow.cpp:216
-#, kde-format
-msgid "Go to Line..."
+#, fuzzy, kde-format
+#| msgid "Go to Line..."
+msgid "Go to Line…"
 msgstr "Ves a la línia..."
 
 #: sieveeditormainwindow.cpp:233
-#, kde-format
-msgid "Import..."
+#, fuzzy, kde-format
+#| msgid "Import..."
+msgid "Import…"
 msgstr "Importa..."
 
 #: sieveeditormainwindow.cpp:239
-#, kde-format
-msgid "Share..."
+#, fuzzy, kde-format
+#| msgid "Share..."
+msgid "Share…"
 msgstr "Comparteix..."
 
 #: sieveeditormainwindow.cpp:247
-#, kde-format
-msgid "Check Spelling..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling..."
+msgid "Check Spelling…"
 msgstr "Verifica l'ortografia..."
 
 #: sieveeditormainwindow.cpp:253
@@ -374,9 +387,10 @@ msgid "Check Syntax"
 msgstr "Comprova la sintaxi"
 
 #: sieveeditormainwindow.cpp:258
-#, kde-format
-msgid "Create Rules Graphically..."
-msgstr "Crea regles gràficament..."
+#, fuzzy, kde-format
+#| msgid "Create Rules Graphically:"
+msgid "Create Rules Graphically…"
+msgstr "Crea regles gràficament:"
 
 #: sieveeditormainwindow.cpp:263
 #, kde-format
@@ -395,8 +409,9 @@ msgid "&Bookmarks"
 msgstr "&Punts"
 
 #: sieveeditormainwindow.cpp:301
-#, kde-format
-msgid "Debug Sieve Script..."
+#, fuzzy, kde-format
+#| msgid "Debug Sieve Script..."
+msgid "Debug Sieve Script…"
 msgstr "Depura l'script de «Sieve»..."
 
 #: sieveeditormainwindow.cpp:306
@@ -405,9 +420,11 @@ msgid "Wordwrap"
 msgstr "Talla les paraules"
 
 #: sieveeditormainwindow.cpp:315
-#, kde-format
-msgid "Import IMAP Settings..."
-msgstr "Importa la configuració de l'IMAP..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Import IMAP Settings"
+msgid "Import IMAP Settings…"
+msgstr "Importació de la configuració de l'IMAP"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -420,8 +437,9 @@ msgid "(Disabled) %1"
 msgstr "(Desactivat) %1"
 
 #: sieveeditorpagewidget.cpp:42
-#, kde-format
-msgid "Uploading script to server for checking it, please wait..."
+#, fuzzy, kde-format
+#| msgid "Uploading script to server for checking it, please wait..."
+msgid "Uploading script to server for checking it, please wait…"
 msgstr ""
 "S'està pujant l'script al servidor per a comprovar-lo, espereu un moment..."
 
@@ -731,13 +749,14 @@ msgstr "Buit"
 #. i18n: ectx: property (text), widget (QPushButton, addServer)
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
-msgid "Add..."
-msgstr "Afegeix..."
+msgid "Add…"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "Modifica..."
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
@@ -745,3 +764,21 @@ msgstr "Modifica..."
 #, kde-format
 msgid "Remove"
 msgstr "Elimina"
+
+#~ msgid "Configure..."
+#~ msgstr "Configura..."
+
+#~ msgid "Import Sieve Settings..."
+#~ msgstr "Importa la configuració de «Sieve»..."
+
+#~ msgid "Add Sieve Server..."
+#~ msgstr "Afegeix un servidor de «Sieve»..."
+
+#~ msgid "Create Rules Graphically..."
+#~ msgstr "Crea regles gràficament..."
+
+#~ msgid "Import IMAP Settings..."
+#~ msgstr "Importa la configuració de l'IMAP..."
+
+#~ msgid "Add..."
+#~ msgstr "Afegeix..."

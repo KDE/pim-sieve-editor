@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:38+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2024-03-20 13:22+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -50,8 +50,9 @@ msgid "No settings found."
 msgstr "Няма намерени настройки."
 
 #: importwizard/importimapsettingprogresspage.cpp:70
-#, kde-format
-msgid "Import settings from %1..."
+#, fuzzy, kde-format
+#| msgid "Import settings from %1..."
+msgid "Import settings from %1…"
 msgstr "Импортиране на настройки от %1..."
 
 #: importwizard/importimapsettingprogresspage.cpp:72
@@ -77,8 +78,9 @@ msgid "Select Import Settings"
 msgstr "Избиране на настройки за импортиране"
 
 #: importwizard/importimapsettingwizard.cpp:39
-#, kde-format
-msgid "Import in Progress..."
+#, fuzzy, kde-format
+#| msgid "Import in Progress..."
+msgid "Import in Progress…"
 msgstr "Извършва се импортиране..."
 
 #: importwizard/importimapsettingwizard.cpp:46
@@ -223,14 +225,17 @@ msgid "User Feedback"
 msgstr "Обратна връзка"
 
 #: sieveeditorconfigureserverpage.cpp:20
-#, kde-format
-msgid "Configure..."
-msgstr "Конфигуриране..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure"
+msgid "Configure…"
+msgstr "Конфигуриране"
 
 #: sieveeditorconfigureserverpage.cpp:25
-#, kde-format
-msgid "Import Sieve Settings..."
-msgstr "Импортиране на настройки за Sieve..."
+#, fuzzy, kde-format
+#| msgid "Import Sieve Settings:"
+msgid "Import Sieve Settings…"
+msgstr "Импортиране на настройки за Sieve:"
 
 #: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
@@ -314,9 +319,11 @@ msgid "Upload"
 msgstr "Качване"
 
 #: sieveeditormainwindow.cpp:184
-#, kde-format
-msgid "Add Sieve Server..."
-msgstr "Добавяне на сървър за Sieve..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Sieve Server"
+msgid "Add Sieve Server…"
+msgstr "Добавяне на сървър за Sieve"
 
 #: sieveeditormainwindow.cpp:188
 #, kde-format
@@ -324,13 +331,15 @@ msgid "Delete Script"
 msgstr "Изтриване на скрипт"
 
 #: sieveeditormainwindow.cpp:194
-#, kde-format
-msgid "Create New Script..."
+#, fuzzy, kde-format
+#| msgid "Create New Script..."
+msgid "Create New Script…"
 msgstr "Създаване на нов скрипт..."
 
 #: sieveeditormainwindow.cpp:200
-#, kde-format
-msgid "Edit Script..."
+#, fuzzy, kde-format
+#| msgid "Edit Script..."
+msgid "Edit Script…"
 msgstr "Редактиране на скрипт..."
 
 #: sieveeditormainwindow.cpp:205
@@ -344,23 +353,27 @@ msgid "Refresh List"
 msgstr "Обновяване на списъка"
 
 #: sieveeditormainwindow.cpp:216
-#, kde-format
-msgid "Go to Line..."
+#, fuzzy, kde-format
+#| msgid "Go to Line..."
+msgid "Go to Line…"
 msgstr "Отиване на ред..."
 
 #: sieveeditormainwindow.cpp:233
-#, kde-format
-msgid "Import..."
+#, fuzzy, kde-format
+#| msgid "Import..."
+msgid "Import…"
 msgstr "Импортиране..."
 
 #: sieveeditormainwindow.cpp:239
-#, kde-format
-msgid "Share..."
+#, fuzzy, kde-format
+#| msgid "Share..."
+msgid "Share…"
 msgstr "Споделяне..."
 
 #: sieveeditormainwindow.cpp:247
-#, kde-format
-msgid "Check Spelling..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling..."
+msgid "Check Spelling…"
 msgstr "Проверка на правописа..."
 
 #: sieveeditormainwindow.cpp:253
@@ -369,9 +382,10 @@ msgid "Check Syntax"
 msgstr "Проверка на синтаксиса"
 
 #: sieveeditormainwindow.cpp:258
-#, kde-format
-msgid "Create Rules Graphically..."
-msgstr "Графично създаване на правила..."
+#, fuzzy, kde-format
+#| msgid "Create Rules Graphically:"
+msgid "Create Rules Graphically…"
+msgstr "Графично създаване на правила:"
 
 #: sieveeditormainwindow.cpp:263
 #, kde-format
@@ -390,8 +404,9 @@ msgid "&Bookmarks"
 msgstr "&Отметки"
 
 #: sieveeditormainwindow.cpp:301
-#, kde-format
-msgid "Debug Sieve Script..."
+#, fuzzy, kde-format
+#| msgid "Debug Sieve Script..."
+msgid "Debug Sieve Script…"
 msgstr "Откриване на грешки в Sieve скрипт..."
 
 #: sieveeditormainwindow.cpp:306
@@ -400,9 +415,11 @@ msgid "Wordwrap"
 msgstr "Пренасяне на думи"
 
 #: sieveeditormainwindow.cpp:315
-#, kde-format
-msgid "Import IMAP Settings..."
-msgstr "Импортиране на настройки за IMAP..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Import IMAP Settings"
+msgid "Import IMAP Settings…"
+msgstr "Импортиране на настройки за IMAP"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -415,8 +432,9 @@ msgid "(Disabled) %1"
 msgstr "(Деактивирано) %1"
 
 #: sieveeditorpagewidget.cpp:42
-#, kde-format
-msgid "Uploading script to server for checking it, please wait..."
+#, fuzzy, kde-format
+#| msgid "Uploading script to server for checking it, please wait..."
+msgid "Uploading script to server for checking it, please wait…"
 msgstr "Качване на скрипт на сървъра за проверка, моля, изчакайте..."
 
 #: sieveeditorpagewidget.cpp:135
@@ -724,13 +742,14 @@ msgstr "Празно"
 #. i18n: ectx: property (text), widget (QPushButton, addServer)
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
-msgid "Add..."
-msgstr "Добавяне..."
+msgid "Add…"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "Промяна..."
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
@@ -738,3 +757,21 @@ msgstr "Промяна..."
 #, kde-format
 msgid "Remove"
 msgstr "Премахване"
+
+#~ msgid "Configure..."
+#~ msgstr "Конфигуриране..."
+
+#~ msgid "Import Sieve Settings..."
+#~ msgstr "Импортиране на настройки за Sieve..."
+
+#~ msgid "Add Sieve Server..."
+#~ msgstr "Добавяне на сървър за Sieve..."
+
+#~ msgid "Create Rules Graphically..."
+#~ msgstr "Графично създаване на правила..."
+
+#~ msgid "Import IMAP Settings..."
+#~ msgstr "Импортиране на настройки за IMAP..."
+
+#~ msgid "Add..."
+#~ msgstr "Добавяне..."

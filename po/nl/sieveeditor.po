@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:38+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2024-03-13 11:35+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -53,8 +53,9 @@ msgid "No settings found."
 msgstr "Geen instellingen gevonden."
 
 #: importwizard/importimapsettingprogresspage.cpp:70
-#, kde-format
-msgid "Import settings from %1..."
+#, fuzzy, kde-format
+#| msgid "Import settings from %1..."
+msgid "Import settings from %1…"
 msgstr "Instellingen uit %1 importeren..."
 
 #: importwizard/importimapsettingprogresspage.cpp:72
@@ -79,8 +80,9 @@ msgid "Select Import Settings"
 msgstr "Import-instellingen selecteren"
 
 #: importwizard/importimapsettingwizard.cpp:39
-#, kde-format
-msgid "Import in Progress..."
+#, fuzzy, kde-format
+#| msgid "Import in Progress..."
+msgid "Import in Progress…"
 msgstr "Importeren wordt uitgevoerd..."
 
 #: importwizard/importimapsettingwizard.cpp:46
@@ -226,14 +228,17 @@ msgid "User Feedback"
 msgstr "Terugkoppeling van gebruiker"
 
 #: sieveeditorconfigureserverpage.cpp:20
-#, kde-format
-msgid "Configure..."
-msgstr "Configureren..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure"
+msgid "Configure…"
+msgstr "Configureren"
 
 #: sieveeditorconfigureserverpage.cpp:25
-#, kde-format
-msgid "Import Sieve Settings..."
-msgstr "Sieve-instellingen importeren..."
+#, fuzzy, kde-format
+#| msgid "Import Sieve Settings:"
+msgid "Import Sieve Settings…"
+msgstr "Sieve-instellingen importeren:"
 
 #: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
@@ -317,9 +322,11 @@ msgid "Upload"
 msgstr "Uploaden"
 
 #: sieveeditormainwindow.cpp:184
-#, kde-format
-msgid "Add Sieve Server..."
-msgstr "Sieve-server toevoegen..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Sieve Server"
+msgid "Add Sieve Server…"
+msgstr "Sieve-server toevoegen"
 
 #: sieveeditormainwindow.cpp:188
 #, kde-format
@@ -327,13 +334,15 @@ msgid "Delete Script"
 msgstr "Script verwijderen"
 
 #: sieveeditormainwindow.cpp:194
-#, kde-format
-msgid "Create New Script..."
+#, fuzzy, kde-format
+#| msgid "Create New Script..."
+msgid "Create New Script…"
 msgstr "Nieuw script aanmaken..."
 
 #: sieveeditormainwindow.cpp:200
-#, kde-format
-msgid "Edit Script..."
+#, fuzzy, kde-format
+#| msgid "Edit Script..."
+msgid "Edit Script…"
 msgstr "Script bewerken..."
 
 #: sieveeditormainwindow.cpp:205
@@ -347,23 +356,27 @@ msgid "Refresh List"
 msgstr "Lijst vernieuwen"
 
 #: sieveeditormainwindow.cpp:216
-#, kde-format
-msgid "Go to Line..."
+#, fuzzy, kde-format
+#| msgid "Go to Line..."
+msgid "Go to Line…"
 msgstr "Ga naar regel..."
 
 #: sieveeditormainwindow.cpp:233
-#, kde-format
-msgid "Import..."
+#, fuzzy, kde-format
+#| msgid "Import..."
+msgid "Import…"
 msgstr "Importeren..."
 
 #: sieveeditormainwindow.cpp:239
-#, kde-format
-msgid "Share..."
-msgstr "Delen..."
+#, fuzzy, kde-format
+#| msgid "Share"
+msgid "Share…"
+msgstr "Delen"
 
 #: sieveeditormainwindow.cpp:247
-#, kde-format
-msgid "Check Spelling..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling..."
+msgid "Check Spelling…"
 msgstr "Spelling controleren..."
 
 #: sieveeditormainwindow.cpp:253
@@ -372,9 +385,10 @@ msgid "Check Syntax"
 msgstr "Syntaxis controleren"
 
 #: sieveeditormainwindow.cpp:258
-#, kde-format
-msgid "Create Rules Graphically..."
-msgstr "Regels grafisch aanmaken..."
+#, fuzzy, kde-format
+#| msgid "Create Rules Graphically:"
+msgid "Create Rules Graphically…"
+msgstr "Regels grafisch aanmaken:"
 
 #: sieveeditormainwindow.cpp:263
 #, kde-format
@@ -393,8 +407,9 @@ msgid "&Bookmarks"
 msgstr "&Bladwijzers"
 
 #: sieveeditormainwindow.cpp:301
-#, kde-format
-msgid "Debug Sieve Script..."
+#, fuzzy, kde-format
+#| msgid "Debug Sieve Script..."
+msgid "Debug Sieve Script…"
 msgstr "Sieve-script debuggen..."
 
 #: sieveeditormainwindow.cpp:306
@@ -403,9 +418,11 @@ msgid "Wordwrap"
 msgstr "Regelafbreking"
 
 #: sieveeditormainwindow.cpp:315
-#, kde-format
-msgid "Import IMAP Settings..."
-msgstr "IMAP-instellingen importeren..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Import IMAP Settings"
+msgid "Import IMAP Settings…"
+msgstr "IMAP-instellingen importeren"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -418,8 +435,9 @@ msgid "(Disabled) %1"
 msgstr "(Uitgeschakeld) %1"
 
 #: sieveeditorpagewidget.cpp:42
-#, kde-format
-msgid "Uploading script to server for checking it, please wait..."
+#, fuzzy, kde-format
+#| msgid "Uploading script to server for checking it, please wait..."
+msgid "Uploading script to server for checking it, please wait…"
 msgstr "Uploaden van script naar server om het te controleren, even geduld...."
 
 #: sieveeditorpagewidget.cpp:135
@@ -729,13 +747,14 @@ msgstr "Leeg"
 #. i18n: ectx: property (text), widget (QPushButton, addServer)
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
-msgid "Add..."
-msgstr "Toevoegen..."
+msgid "Add…"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "Wijzigen..."
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
@@ -744,14 +763,32 @@ msgstr "Wijzigen..."
 msgid "Remove"
 msgstr "Verwijderen"
 
+#~ msgid "Configure..."
+#~ msgstr "Configureren..."
+
+#~ msgid "Import Sieve Settings..."
+#~ msgstr "Sieve-instellingen importeren..."
+
+#~ msgid "Add Sieve Server..."
+#~ msgstr "Sieve-server toevoegen..."
+
+#~ msgid "Share..."
+#~ msgstr "Delen..."
+
+#~ msgid "Create Rules Graphically..."
+#~ msgstr "Regels grafisch aanmaken..."
+
+#~ msgid "Import IMAP Settings..."
+#~ msgstr "IMAP-instellingen importeren..."
+
+#~ msgid "Add..."
+#~ msgstr "Toevoegen..."
+
 #~ msgid "Close wallet when close application"
 #~ msgstr "Portefeuille sluiten bij afsluiten van de toepassing"
 
 #~ msgid "There was a problem sharing the document: %1"
 #~ msgstr "Er was een probleem bij het delen van het document: %1"
-
-#~ msgid "Share"
-#~ msgstr "Delen"
 
 #~ msgid "File was shared."
 #~ msgstr "Bestand was gedeeld."

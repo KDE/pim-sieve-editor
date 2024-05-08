@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:38+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2014-08-13 23:53+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -58,7 +58,7 @@ msgstr "Keen Fehlers funnen."
 #: importwizard/importimapsettingprogresspage.cpp:70
 #, fuzzy, kde-format
 #| msgid "Modify Settings"
-msgid "Import settings from %1..."
+msgid "Import settings from %1…"
 msgstr "Instellen ännern"
 
 #: importwizard/importimapsettingprogresspage.cpp:72
@@ -86,7 +86,7 @@ msgstr ""
 
 #: importwizard/importimapsettingwizard.cpp:39
 #, kde-format
-msgid "Import in Progress..."
+msgid "Import in Progress…"
 msgstr ""
 
 #: importwizard/importimapsettingwizard.cpp:46
@@ -234,14 +234,15 @@ msgid "User Feedback"
 msgstr ""
 
 #: sieveeditorconfigureserverpage.cpp:20
-#, kde-format
-msgid "Configure..."
-msgstr "Instellen..."
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgid "Configure…"
+msgstr "Instellen"
 
 #: sieveeditorconfigureserverpage.cpp:25
 #, fuzzy, kde-format
 #| msgid "Modify Settings"
-msgid "Import Sieve Settings..."
+msgid "Import Sieve Settings…"
 msgstr "Instellen ännern"
 
 #: sieveeditorconfigureserverwidget.cpp:59
@@ -334,9 +335,9 @@ msgstr ""
 
 #: sieveeditormainwindow.cpp:184
 #, fuzzy, kde-format
-#| msgid "Add Server Sieve..."
-msgid "Add Sieve Server..."
-msgstr "Sieve-Server tofögen..."
+#| msgid "Add Server Sieve"
+msgid "Add Sieve Server…"
+msgstr "Siever-Server tofögen"
 
 #: sieveeditormainwindow.cpp:188
 #, kde-format
@@ -344,14 +345,15 @@ msgid "Delete Script"
 msgstr "Skript wegdoon"
 
 #: sieveeditormainwindow.cpp:194
-#, kde-format
-msgid "Create New Script..."
+#, fuzzy, kde-format
+#| msgid "Create New Script..."
+msgid "Create New Script…"
 msgstr "Nieg Skript opstellen ..."
 
 #: sieveeditormainwindow.cpp:200
 #, fuzzy, kde-format
 #| msgid "Edit Script"
-msgid "Edit Script..."
+msgid "Edit Script…"
 msgstr "Skript bewerken"
 
 #: sieveeditormainwindow.cpp:205
@@ -367,22 +369,22 @@ msgstr "List opfrischen"
 #: sieveeditormainwindow.cpp:216
 #, fuzzy, kde-format
 #| msgid "Go to Line"
-msgid "Go to Line..."
+msgid "Go to Line…"
 msgstr "Na Reeg gahn"
 
 #: sieveeditormainwindow.cpp:233
 #, kde-format
-msgid "Import..."
+msgid "Import…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:239
 #, kde-format
-msgid "Share..."
+msgid "Share…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:247
 #, kde-format
-msgid "Check Spelling..."
+msgid "Check Spelling…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:253
@@ -392,7 +394,7 @@ msgstr ""
 
 #: sieveeditormainwindow.cpp:258
 #, kde-format
-msgid "Create Rules Graphically..."
+msgid "Create Rules Graphically…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:263
@@ -414,7 +416,7 @@ msgstr ""
 #: sieveeditormainwindow.cpp:301
 #, fuzzy, kde-format
 #| msgid "Create New Script..."
-msgid "Debug Sieve Script..."
+msgid "Debug Sieve Script…"
 msgstr "Nieg Skript opstellen ..."
 
 #: sieveeditormainwindow.cpp:306
@@ -423,9 +425,10 @@ msgid "Wordwrap"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:315
-#, kde-format
-msgid "Import IMAP Settings..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Modify Settings"
+msgid "Import IMAP Settings…"
+msgstr "Instellen ännern"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -439,7 +442,7 @@ msgstr ""
 
 #: sieveeditorpagewidget.cpp:42
 #, kde-format
-msgid "Uploading script to server for checking it, please wait..."
+msgid "Uploading script to server for checking it, please wait…"
 msgstr ""
 
 #: sieveeditorpagewidget.cpp:135
@@ -731,13 +734,14 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, addServer)
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
-msgid "Add..."
-msgstr "Tofögen..."
+msgid "Add…"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "Ännern..."
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
@@ -746,6 +750,22 @@ msgstr "Ännern..."
 #| msgid "Remove..."
 msgid "Remove"
 msgstr "Wegmaken..."
+
+#~ msgid "Configure..."
+#~ msgstr "Instellen..."
+
+#, fuzzy
+#~| msgid "Modify Settings"
+#~ msgid "Import Sieve Settings..."
+#~ msgstr "Instellen ännern"
+
+#, fuzzy
+#~| msgid "Add Server Sieve..."
+#~ msgid "Add Sieve Server..."
+#~ msgstr "Sieve-Server tofögen..."
+
+#~ msgid "Add..."
+#~ msgstr "Tofögen..."
 
 #~ msgid "Close wallet when close application"
 #~ msgstr "Knipp tomaken, wenn dat Programm tomaakt warrt"
