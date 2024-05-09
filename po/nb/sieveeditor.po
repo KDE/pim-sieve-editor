@@ -745,6 +745,3 @@ msgstr "Endre …"
 #, kde-format
 msgid "Remove"
 msgstr ""
-
-#~ msgid "Add..."
-#~ msgstr "Legg til …"
