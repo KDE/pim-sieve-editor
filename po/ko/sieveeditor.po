@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-08 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2023-10-08 23:42+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -322,78 +322,98 @@ msgstr "업로드"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add Sieve Server"
+msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Sieve 서버 추가"
 
 #: sieveeditormainwindow.cpp:188
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete Script"
+msgctxt "@action"
 msgid "Delete Script"
 msgstr "스크립트 삭제"
 
 #: sieveeditormainwindow.cpp:194
 #, fuzzy, kde-format
 #| msgid "Create New Script..."
+msgctxt "@action"
 msgid "Create New Script…"
 msgstr "새 스크립트 만들기..."
 
 #: sieveeditormainwindow.cpp:200
 #, fuzzy, kde-format
 #| msgid "Edit Script..."
+msgctxt "@action"
 msgid "Edit Script…"
 msgstr "스크립트 편집..."
 
 #: sieveeditormainwindow.cpp:205
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Deactivate Script"
+msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "스크립트 비활성화"
 
 #: sieveeditormainwindow.cpp:210
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Refresh List"
+msgctxt "@action"
 msgid "Refresh List"
 msgstr "목록 새로 고침"
 
 #: sieveeditormainwindow.cpp:216
 #, fuzzy, kde-format
 #| msgid "Go to Line..."
+msgctxt "@action"
 msgid "Go to Line…"
 msgstr "줄로 이동..."
 
 #: sieveeditormainwindow.cpp:233
 #, fuzzy, kde-format
 #| msgid "Import..."
+msgctxt "@action"
 msgid "Import…"
 msgstr "가져오기..."
 
 #: sieveeditormainwindow.cpp:239
 #, fuzzy, kde-format
 #| msgid "Share..."
+msgctxt "@action"
 msgid "Share…"
 msgstr "공유..."
 
 #: sieveeditormainwindow.cpp:247
 #, fuzzy, kde-format
 #| msgid "Check Spelling..."
+msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "맞춤법 검사..."
 
 #: sieveeditormainwindow.cpp:253
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check Syntax"
+msgctxt "@action"
 msgid "Check Syntax"
 msgstr "문법 검사"
 
 #: sieveeditormainwindow.cpp:258
 #, fuzzy, kde-format
 #| msgid "Create Rules Graphically:"
+msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "그래픽 환경에서 규칙 생성:"
 
 #: sieveeditormainwindow.cpp:263
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgctxt "@action"
 msgid "Comment"
 msgstr "주석"
 
 #: sieveeditormainwindow.cpp:268
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Uncomment"
+msgctxt "@action"
 msgid "Uncomment"
 msgstr "주석 해제"
 
@@ -406,11 +426,14 @@ msgstr "책갈피(&B)"
 #: sieveeditormainwindow.cpp:301
 #, fuzzy, kde-format
 #| msgid "Debug Sieve Script..."
+msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Sieve 스크립트 디버그..."
 
 #: sieveeditormainwindow.cpp:306
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Wordwrap"
+msgctxt "@action"
 msgid "Wordwrap"
 msgstr "자동 줄 바꿈"
 
@@ -418,6 +441,7 @@ msgstr "자동 줄 바꿈"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Import IMAP Settings"
+msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "IMAP 설정 가져오기"
 

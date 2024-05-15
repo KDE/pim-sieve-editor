@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-08 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2023-11-07 21:27+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -313,71 +313,85 @@ msgstr ""
 
 #: sieveeditormainwindow.cpp:184
 #, kde-format
+msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:188
 #, kde-format
+msgctxt "@action"
 msgid "Delete Script"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:194
 #, kde-format
+msgctxt "@action"
 msgid "Create New Script…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:200
 #, kde-format
+msgctxt "@action"
 msgid "Edit Script…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:205
 #, kde-format
+msgctxt "@action"
 msgid "Deactivate Script"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:210
 #, kde-format
+msgctxt "@action"
 msgid "Refresh List"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:216
 #, kde-format
+msgctxt "@action"
 msgid "Go to Line…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:233
 #, kde-format
+msgctxt "@action"
 msgid "Import…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:239
 #, kde-format
+msgctxt "@action"
 msgid "Share…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:247
 #, kde-format
+msgctxt "@action"
 msgid "Check Spelling…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:253
 #, kde-format
+msgctxt "@action"
 msgid "Check Syntax"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:258
 #, kde-format
+msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:263
 #, kde-format
+msgctxt "@action"
 msgid "Comment"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:268
 #, kde-format
+msgctxt "@action"
 msgid "Uncomment"
 msgstr ""
 
@@ -389,16 +403,19 @@ msgstr ""
 
 #: sieveeditormainwindow.cpp:301
 #, kde-format
+msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:306
 #, kde-format
+msgctxt "@action"
 msgid "Wordwrap"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:315
 #, kde-format
+msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr ""
 

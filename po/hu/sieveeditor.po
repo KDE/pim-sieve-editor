@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-08 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-03-13 10:01+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -325,78 +325,98 @@ msgstr "Feltöltés"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add Sieve Server"
+msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Sieve kiszolgáló hozzáadása"
 
 #: sieveeditormainwindow.cpp:188
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete Script"
+msgctxt "@action"
 msgid "Delete Script"
 msgstr "Parancsfájl törlése"
 
 #: sieveeditormainwindow.cpp:194
 #, fuzzy, kde-format
 #| msgid "Create New Script..."
+msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Új parancsfájl létrehozása…"
 
 #: sieveeditormainwindow.cpp:200
 #, fuzzy, kde-format
 #| msgid "Edit Script..."
+msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Szkript szerkesztése…"
 
 #: sieveeditormainwindow.cpp:205
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Deactivate Script"
+msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Parancsfájl deaktiválása"
 
 #: sieveeditormainwindow.cpp:210
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Refresh List"
+msgctxt "@action"
 msgid "Refresh List"
 msgstr "Lista frissítése"
 
 #: sieveeditormainwindow.cpp:216
 #, fuzzy, kde-format
 #| msgid "Go to Line..."
+msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Ugrás sorra…"
 
 #: sieveeditormainwindow.cpp:233
 #, fuzzy, kde-format
 #| msgid "Import..."
+msgctxt "@action"
 msgid "Import…"
 msgstr "Importálás…"
 
 #: sieveeditormainwindow.cpp:239
 #, fuzzy, kde-format
 #| msgid "Share..."
+msgctxt "@action"
 msgid "Share…"
 msgstr "Megosztás…"
 
 #: sieveeditormainwindow.cpp:247
 #, fuzzy, kde-format
 #| msgid "Check Spelling..."
+msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Helyesírás-ellenőrzés…"
 
 #: sieveeditormainwindow.cpp:253
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check Syntax"
+msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Szintaxis-ellenőrzés"
 
 #: sieveeditormainwindow.cpp:258
 #, fuzzy, kde-format
 #| msgid "Create Rules Graphically:"
+msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Szabályok készítése grafikusan:"
 
 #: sieveeditormainwindow.cpp:263
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgctxt "@action"
 msgid "Comment"
 msgstr "Megjegyzéssé tétel"
 
 #: sieveeditormainwindow.cpp:268
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Uncomment"
+msgctxt "@action"
 msgid "Uncomment"
 msgstr "Megjegyzéssé tétel visszavonása"
 
@@ -409,11 +429,14 @@ msgstr "&Könyvjelzők"
 #: sieveeditormainwindow.cpp:301
 #, fuzzy, kde-format
 #| msgid "Debug Sieve Script..."
+msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Sieve szkript hibakeresése…"
 
 #: sieveeditormainwindow.cpp:306
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Wordwrap"
+msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Szótördelés"
 
@@ -421,6 +444,7 @@ msgstr "Szótördelés"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Import IMAP Settings"
+msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "IMAP beállítások importálása"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-08 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-05-09 10:06+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -314,72 +314,100 @@ msgid "Upload"
 msgstr "ارفع"
 
 #: sieveeditormainwindow.cpp:184
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Sieve Server…"
+msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "أضف خادوم «سِف»…"
 
 #: sieveeditormainwindow.cpp:188
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete Script"
+msgctxt "@action"
 msgid "Delete Script"
 msgstr "احذف السّكربت"
 
 #: sieveeditormainwindow.cpp:194
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create New Script…"
+msgctxt "@action"
 msgid "Create New Script…"
 msgstr "أنشئ سكربتًا جديدًا…"
 
 #: sieveeditormainwindow.cpp:200
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Script…"
+msgctxt "@action"
 msgid "Edit Script…"
 msgstr "حرّر السّكربت…"
 
 #: sieveeditormainwindow.cpp:205
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Deactivate Script"
+msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "ألغِ تفعيل السّكربت"
 
 #: sieveeditormainwindow.cpp:210
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Refresh List"
+msgctxt "@action"
 msgid "Refresh List"
 msgstr "أنعش القائمة"
 
 #: sieveeditormainwindow.cpp:216
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Go to Line…"
+msgctxt "@action"
 msgid "Go to Line…"
 msgstr "انتقل إلى سطر…"
 
 #: sieveeditormainwindow.cpp:233
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import…"
+msgctxt "@action"
 msgid "Import…"
 msgstr "استورد…"
 
 #: sieveeditormainwindow.cpp:239
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Share…"
+msgctxt "@action"
 msgid "Share…"
 msgstr "شارِك…"
 
 #: sieveeditormainwindow.cpp:247
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check Spelling…"
+msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "دقّق الإملاء…"
 
 #: sieveeditormainwindow.cpp:253
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check Syntax"
+msgctxt "@action"
 msgid "Check Syntax"
 msgstr "دقّق الصّياغة"
 
 #: sieveeditormainwindow.cpp:258
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Rules Graphically…"
+msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "أنشئ القواعد رسوميًّا…"
 
 #: sieveeditormainwindow.cpp:263
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgctxt "@action"
 msgid "Comment"
 msgstr "علّق"
 
 #: sieveeditormainwindow.cpp:268
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Uncomment"
+msgctxt "@action"
 msgid "Uncomment"
 msgstr "أزل التّعليق"
 
@@ -390,17 +418,23 @@ msgid "&Bookmarks"
 msgstr "&علامات"
 
 #: sieveeditormainwindow.cpp:301
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Debug Sieve Script…"
+msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "نقّح سكربت «سِف»…"
 
 #: sieveeditormainwindow.cpp:306
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Wordwrap"
+msgctxt "@action"
 msgid "Wordwrap"
 msgstr "لفّ الكلمات"
 
 #: sieveeditormainwindow.cpp:315
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import IMAP Settings…"
+msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "استيراد إعدادات IMAP…"
 
