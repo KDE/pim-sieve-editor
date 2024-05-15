@@ -32,7 +32,7 @@ int main(int argc, char **argv)
                          i18n("Sieve Editor"),
                          KAboutLicense::GPL_V2,
                          i18n("Copyright © 2013-%1 sieveeditor authors", QStringLiteral("2024")));
-    aboutData.addAuthor(i18n("Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
+    aboutData.addAuthor(i18nc("@info:credit", "Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
 
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("sieveeditor")));
     KAboutData::setApplicationData(aboutData);
