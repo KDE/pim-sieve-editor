@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
-"PO-Revision-Date: 2024-05-08 09:14+0300\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"PO-Revision-Date: 2024-05-15 06:59+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -105,7 +105,9 @@ msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "כל הזכויות שמורות © 2013-‏%1 ליוצרי sieveeditor"
 
 #: main.cpp:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "לורנט מונטל"
 
@@ -313,99 +315,85 @@ msgid "Upload"
 msgstr "העלאה"
 
 #: sieveeditormainwindow.cpp:184
-#, fuzzy, kde-format
-#| msgid "Add Sieve Server…"
+#, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "הוספת שרת Sieve…"
 
 #: sieveeditormainwindow.cpp:188
-#, fuzzy, kde-format
-#| msgid "Delete Script"
+#, kde-format
 msgctxt "@action"
 msgid "Delete Script"
-msgstr "מחיקת תסריט"
+msgstr "מחיקת סקריפט"
 
 #: sieveeditormainwindow.cpp:194
-#, fuzzy, kde-format
-#| msgid "Create New Script…"
+#, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "יצירת סקריפט חדש…"
 
 #: sieveeditormainwindow.cpp:200
-#, fuzzy, kde-format
-#| msgid "Edit Script…"
+#, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "עריכת סקריפט…"
 
 #: sieveeditormainwindow.cpp:205
-#, fuzzy, kde-format
-#| msgid "Deactivate Script"
+#, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "השבתת סקריפט"
 
 #: sieveeditormainwindow.cpp:210
-#, fuzzy, kde-format
-#| msgid "Refresh List"
+#, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "רענון רשימה"
 
 #: sieveeditormainwindow.cpp:216
-#, fuzzy, kde-format
-#| msgid "Go to Line…"
+#, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "מעבר לשורה…"
 
 #: sieveeditormainwindow.cpp:233
-#, fuzzy, kde-format
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "ייבוא…"
 
 #: sieveeditormainwindow.cpp:239
-#, fuzzy, kde-format
-#| msgid "Share…"
+#, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "שיתוף…"
 
 #: sieveeditormainwindow.cpp:247
-#, fuzzy, kde-format
-#| msgid "Check Spelling…"
+#, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "בדיקת איות…"
 
 #: sieveeditormainwindow.cpp:253
-#, fuzzy, kde-format
-#| msgid "Check Syntax"
+#, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "בדיקת תחביר"
 
 #: sieveeditormainwindow.cpp:258
-#, fuzzy, kde-format
-#| msgid "Create Rules Graphically…"
+#, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "יצירת כללים באופן חזותי…"
 
 #: sieveeditormainwindow.cpp:263
-#, fuzzy, kde-format
-#| msgid "Comment"
+#, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "הערה"
 
 #: sieveeditormainwindow.cpp:268
-#, fuzzy, kde-format
-#| msgid "Uncomment"
+#, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "ביטול הערה"
@@ -417,22 +405,19 @@ msgid "&Bookmarks"
 msgstr "&סימניות"
 
 #: sieveeditormainwindow.cpp:301
-#, fuzzy, kde-format
-#| msgid "Debug Sieve Script…"
+#, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "ניפוי שגיאות בסקריפט Sieve…"
 
 #: sieveeditormainwindow.cpp:306
-#, fuzzy, kde-format
-#| msgid "Wordwrap"
+#, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "גלישת שורות"
 
 #: sieveeditormainwindow.cpp:315
-#, fuzzy, kde-format
-#| msgid "Import IMAP Settings…"
+#, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "ייבוא הגדרות IMAP…"

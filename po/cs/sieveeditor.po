@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2024-04-26 10:32+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -54,10 +54,9 @@ msgid "No settings found."
 msgstr "Nenalezeny žádná nastavení."
 
 #: importwizard/importimapsettingprogresspage.cpp:70
-#, fuzzy, kde-format
-#| msgid "Import settings from %1..."
+#, kde-format
 msgid "Import settings from %1…"
-msgstr "Importovat nastavení z %1..."
+msgstr ""
 
 #: importwizard/importimapsettingprogresspage.cpp:72
 #, kde-format
@@ -81,10 +80,9 @@ msgid "Select Import Settings"
 msgstr "Vyberte nastavení importu"
 
 #: importwizard/importimapsettingwizard.cpp:39
-#, fuzzy, kde-format
-#| msgid "Import in Progress..."
+#, kde-format
 msgid "Import in Progress…"
-msgstr "Probíhá import..."
+msgstr ""
 
 #: importwizard/importimapsettingwizard.cpp:46
 #, kde-format
@@ -107,7 +105,9 @@ msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Autorská práva © 2013-%1 Vývojáři sieveeditor"
 
 #: main.cpp:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
@@ -226,17 +226,14 @@ msgid "User Feedback"
 msgstr "Zpětná vazba uživatele"
 
 #: sieveeditorconfigureserverpage.cpp:20
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure"
+#, kde-format
 msgid "Configure…"
-msgstr "Nastavit"
+msgstr "Nastavit…"
 
 #: sieveeditorconfigureserverpage.cpp:25
-#, fuzzy, kde-format
-#| msgid "Import Sieve Settings:"
+#, kde-format
 msgid "Import Sieve Settings…"
-msgstr "Importovat nastavení Sieve:"
+msgstr ""
 
 #: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
@@ -320,103 +317,88 @@ msgid "Upload"
 msgstr "Odeslat"
 
 #: sieveeditormainwindow.cpp:184
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Sieve Server"
+#, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
-msgstr "Přidat server Sieve"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:188
-#, fuzzy, kde-format
-#| msgid "Delete Script"
+#, kde-format
 msgctxt "@action"
 msgid "Delete Script"
-msgstr "Smazat skript"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:194
-#, fuzzy, kde-format
-#| msgid "Create New Script..."
+#, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
-msgstr "Vytvořit nový skript..."
+msgstr ""
 
 #: sieveeditormainwindow.cpp:200
-#, fuzzy, kde-format
-#| msgid "Edit Script..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
-msgstr "Upravit skript..."
+msgstr ""
 
 #: sieveeditormainwindow.cpp:205
-#, fuzzy, kde-format
-#| msgid "Deactivate Script"
+#, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
-msgstr "Deaktivovat skript"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:210
-#, fuzzy, kde-format
-#| msgid "Refresh List"
+#, kde-format
 msgctxt "@action"
 msgid "Refresh List"
-msgstr "Obnovit seznam"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:216
-#, fuzzy, kde-format
-#| msgid "Go to Line..."
+#, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
-msgstr "Přejít na řádek..."
+msgstr ""
 
 #: sieveeditormainwindow.cpp:233
-#, fuzzy, kde-format
-#| msgid "Import..."
+#, kde-format
 msgctxt "@action"
 msgid "Import…"
-msgstr "Importovat..."
+msgstr ""
 
 #: sieveeditormainwindow.cpp:239
-#, fuzzy, kde-format
-#| msgid "Share..."
+#, kde-format
 msgctxt "@action"
 msgid "Share…"
-msgstr "Sdílet..."
+msgstr ""
 
 #: sieveeditormainwindow.cpp:247
-#, fuzzy, kde-format
-#| msgid "Check Spelling..."
+#, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
-msgstr "Zkontrolovat pravopis..."
+msgstr ""
 
 #: sieveeditormainwindow.cpp:253
-#, fuzzy, kde-format
-#| msgid "Check Syntax"
+#, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
-msgstr "Zkontrolovat syntaxi"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:258
-#, fuzzy, kde-format
-#| msgid "Create Rules Graphically:"
+#, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
-msgstr "Vytvořit pravidla graficky:"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:263
-#, fuzzy, kde-format
-#| msgid "Comment"
+#, kde-format
 msgctxt "@action"
 msgid "Comment"
-msgstr "Komentář"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:268
-#, fuzzy, kde-format
-#| msgid "Uncomment"
+#, kde-format
 msgctxt "@action"
 msgid "Uncomment"
-msgstr "Odkomentovat"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:296
 #, kde-format
@@ -425,26 +407,22 @@ msgid "&Bookmarks"
 msgstr "&Záložky"
 
 #: sieveeditormainwindow.cpp:301
-#, fuzzy, kde-format
-#| msgid "Debug Sieve Script..."
+#, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
-msgstr "Ladit skript Sieve..."
+msgstr ""
 
 #: sieveeditormainwindow.cpp:306
-#, fuzzy, kde-format
-#| msgid "Wordwrap"
+#, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
-msgstr "Zalamování slov"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:315
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Import IMAP Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
-msgstr "Importovat nastavení IMAP"
+msgstr ""
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -457,10 +435,9 @@ msgid "(Disabled) %1"
 msgstr "(Zakázáno) %1"
 
 #: sieveeditorpagewidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Uploading script to server for checking it, please wait..."
+#, kde-format
 msgid "Uploading script to server for checking it, please wait…"
-msgstr "Odesílám soubor na server pro jeho kontrolu. Prosím, počkejte..."
+msgstr ""
 
 #: sieveeditorpagewidget.cpp:135
 #, kde-format
@@ -767,35 +744,16 @@ msgstr "Prázdné"
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Přidat…"
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgid "Modify…"
-msgstr "Změnit..."
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
 #: ui/sieveeditorconfigureserverwidget.ui:43
 #, kde-format
 msgid "Remove"
 msgstr "Odstranit"
-
-#~ msgid "Configure..."
-#~ msgstr "Nastavit..."
-
-#~ msgid "Import Sieve Settings..."
-#~ msgstr "Importovat nastavení Sieve..."
-
-#~ msgid "Add Sieve Server..."
-#~ msgstr "Přidat server Sieve..."
-
-#~ msgid "Create Rules Graphically..."
-#~ msgstr "Vytvořit pravidla graficky..."
-
-#~ msgid "Import IMAP Settings..."
-#~ msgstr "Importovat nastavení IMAP..."
-
-#~ msgid "Add..."
-#~ msgstr "Přidat..."

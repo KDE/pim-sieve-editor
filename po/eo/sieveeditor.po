@@ -1,7 +1,7 @@
 # translation sieveeditor.pot to Esperanto
 # Esperantaj mesaĝoj por "pim-sieve-editor"
 # Copyright (C) 2016 Free Software Foundation, Inc.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 # Minuskloj: ĉ ĝ ĵ ĥ ŝ ŭ   Majuskloj: Ĉ Ĝ Ĵ Ĥ Ŝ Ŭ
 #
@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
-"PO-Revision-Date: 2024-05-09 22:01+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"PO-Revision-Date: 2024-05-15 09:56+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr "Oliver Kellogg"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "okellogg@users.sourceforge.net"
+msgstr "olivermkellogg@gmail.com"
 
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:152
 #, kde-format
@@ -107,7 +107,9 @@ msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Kopirajto © 2013-%1 sieveeditor aŭtoroj"
 
 #: main.cpp:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
@@ -318,99 +320,85 @@ msgid "Upload"
 msgstr "Alŝuti"
 
 #: sieveeditormainwindow.cpp:184
-#, fuzzy, kde-format
-#| msgid "Add Sieve Server…"
+#, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Aldoni Sieve-Servilon…"
 
 #: sieveeditormainwindow.cpp:188
-#, fuzzy, kde-format
-#| msgid "Delete Script"
+#, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Forigi Skripton"
 
 #: sieveeditormainwindow.cpp:194
-#, fuzzy, kde-format
-#| msgid "Create New Script…"
+#, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Krei Novan Skripton…"
 
 #: sieveeditormainwindow.cpp:200
-#, fuzzy, kde-format
-#| msgid "Edit Script…"
+#, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Redakti Skripton…"
 
 #: sieveeditormainwindow.cpp:205
-#, fuzzy, kde-format
-#| msgid "Deactivate Script"
+#, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Malaktivigi Skripton"
 
 #: sieveeditormainwindow.cpp:210
-#, fuzzy, kde-format
-#| msgid "Refresh List"
+#, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Refreŝigi Listo"
 
 #: sieveeditormainwindow.cpp:216
-#, fuzzy, kde-format
-#| msgid "Go to Line…"
+#, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Iri al Linio…"
 
 #: sieveeditormainwindow.cpp:233
-#, fuzzy, kde-format
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "Enporti…"
 
 #: sieveeditormainwindow.cpp:239
-#, fuzzy, kde-format
-#| msgid "Share…"
+#, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Kunhavigi…"
 
 #: sieveeditormainwindow.cpp:247
-#, fuzzy, kde-format
-#| msgid "Check Spelling…"
+#, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Kontroli Ortografion…"
 
 #: sieveeditormainwindow.cpp:253
-#, fuzzy, kde-format
-#| msgid "Check Syntax"
+#, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Kontroli sintakson"
 
 #: sieveeditormainwindow.cpp:258
-#, fuzzy, kde-format
-#| msgid "Create Rules Graphically…"
+#, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Krei Regulojn Grafike…"
 
 #: sieveeditormainwindow.cpp:263
-#, fuzzy, kde-format
-#| msgid "Comment"
+#, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Komento"
 
 #: sieveeditormainwindow.cpp:268
-#, fuzzy, kde-format
-#| msgid "Uncomment"
+#, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Malkomento"
@@ -422,22 +410,19 @@ msgid "&Bookmarks"
 msgstr "&Legosignoj"
 
 #: sieveeditormainwindow.cpp:301
-#, fuzzy, kde-format
-#| msgid "Debug Sieve Script…"
+#, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Sencimigi Sieve-Skripton…"
 
 #: sieveeditormainwindow.cpp:306
-#, fuzzy, kde-format
-#| msgid "Wordwrap"
+#, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Vortvolvaĵo"
 
 #: sieveeditormainwindow.cpp:315
-#, fuzzy, kde-format
-#| msgid "Import IMAP Settings…"
+#, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "Enporti IMAP-Agordojn…"

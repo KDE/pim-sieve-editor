@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -104,7 +104,9 @@ msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Copyright © 2013-%1 sieveeditor authors"
 
 #: main.cpp:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
@@ -312,26 +314,22 @@ msgid "Upload"
 msgstr "上传"
 
 #: sieveeditormainwindow.cpp:184
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Sieve Server"
+#, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
-msgstr "添加 Sieve 服务器"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:188
-#, fuzzy, kde-format
-#| msgid "Delete Script"
+#, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "删除脚本"
 
 #: sieveeditormainwindow.cpp:194
-#, fuzzy, kde-format
-#| msgid "Delete Script"
+#, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
-msgstr "删除脚本"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:200
 #, kde-format
@@ -340,15 +338,13 @@ msgid "Edit Script…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:205
-#, fuzzy, kde-format
-#| msgid "Deactivate Script"
+#, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "取消激活脚本"
 
 #: sieveeditormainwindow.cpp:210
-#, fuzzy, kde-format
-#| msgid "Refresh List"
+#, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "刷新列表"
@@ -378,29 +374,25 @@ msgid "Check Spelling…"
 msgstr ""
 
 #: sieveeditormainwindow.cpp:253
-#, fuzzy, kde-format
-#| msgid "Check Syntax"
+#, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "检查语法"
 
 #: sieveeditormainwindow.cpp:258
-#, fuzzy, kde-format
-#| msgid "Create Rules Graphically:"
+#, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
-msgstr "以图形方式创建规则："
+msgstr ""
 
 #: sieveeditormainwindow.cpp:263
-#, fuzzy, kde-format
-#| msgid "Comment"
+#, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "注释"
 
 #: sieveeditormainwindow.cpp:268
-#, fuzzy, kde-format
-#| msgid "Uncomment"
+#, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "去注释"
@@ -412,27 +404,22 @@ msgid "&Bookmarks"
 msgstr "书签(&B)"
 
 #: sieveeditormainwindow.cpp:301
-#, fuzzy, kde-format
-#| msgctxt "These action in from menu tools submenu debug sieve script"
-#| msgid "Tools > Debug Sieve Script"
+#, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
-msgstr "工具 > 调试 Sieve 脚本"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:306
-#, fuzzy, kde-format
-#| msgid "Wordwrap"
+#, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "自动换行"
 
 #: sieveeditormainwindow.cpp:315
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Import IMAP Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
-msgstr "导入 IMAP 设置"
+msgstr ""
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format

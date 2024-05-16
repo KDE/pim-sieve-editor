@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
-"PO-Revision-Date: 2024-05-08 06:01+0200\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"PO-Revision-Date: 2024-05-15 06:08+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -105,7 +105,9 @@ msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Copyright © 2013-%1 sieveeditor authors"
 
 #: main.cpp:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
@@ -315,99 +317,85 @@ msgid "Upload"
 msgstr "ატვირთვა"
 
 #: sieveeditormainwindow.cpp:184
-#, fuzzy, kde-format
-#| msgid "Add Sieve Server…"
+#, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Sieve-ის სერვერის დამატება…"
 
 #: sieveeditormainwindow.cpp:188
-#, fuzzy, kde-format
-#| msgid "Delete Script"
+#, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "სკრიპტის წაშლა"
 
 #: sieveeditormainwindow.cpp:194
-#, fuzzy, kde-format
-#| msgid "Create New Script…"
+#, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "ახალი სკრიპტის შექმნა…"
 
 #: sieveeditormainwindow.cpp:200
-#, fuzzy, kde-format
-#| msgid "Edit Script…"
+#, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "სკრიპტის ჩასწორება…"
 
 #: sieveeditormainwindow.cpp:205
-#, fuzzy, kde-format
-#| msgid "Deactivate Script"
+#, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "სკრიპტის დეაქტივაცია"
 
 #: sieveeditormainwindow.cpp:210
-#, fuzzy, kde-format
-#| msgid "Refresh List"
+#, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "სიის განახლება"
 
 #: sieveeditormainwindow.cpp:216
-#, fuzzy, kde-format
-#| msgid "Go to Line…"
+#, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "ხაზზე გადასვლა…"
 
 #: sieveeditormainwindow.cpp:233
-#, fuzzy, kde-format
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "შემოტანა…"
 
 #: sieveeditormainwindow.cpp:239
-#, fuzzy, kde-format
-#| msgid "Share…"
+#, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "გაზიარება…"
 
 #: sieveeditormainwindow.cpp:247
-#, fuzzy, kde-format
-#| msgid "Check Spelling…"
+#, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "მართლწერის შემოწმება…"
 
 #: sieveeditormainwindow.cpp:253
-#, fuzzy, kde-format
-#| msgid "Check Syntax"
+#, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "სინტაქსის შემოწმება"
 
 #: sieveeditormainwindow.cpp:258
-#, fuzzy, kde-format
-#| msgid "Create Rules Graphically…"
+#, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "წესების გრაფიკულად შექმნა…"
 
 #: sieveeditormainwindow.cpp:263
-#, fuzzy, kde-format
-#| msgid "Comment"
+#, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "კომენტარი"
 
 #: sieveeditormainwindow.cpp:268
-#, fuzzy, kde-format
-#| msgid "Uncomment"
+#, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "კომენტარის მოცილება"
@@ -419,22 +407,19 @@ msgid "&Bookmarks"
 msgstr "&სანიშნეები"
 
 #: sieveeditormainwindow.cpp:301
-#, fuzzy, kde-format
-#| msgid "Debug Sieve Script…"
+#, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Sieve-ის სკრიპტის გამართვა…"
 
 #: sieveeditormainwindow.cpp:306
-#, fuzzy, kde-format
-#| msgid "Wordwrap"
+#, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "სიტყვების გადატანა"
 
 #: sieveeditormainwindow.cpp:315
-#, fuzzy, kde-format
-#| msgid "Import IMAP Settings…"
+#, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "IMAP-ის პარამეტრების შემოტანა…"

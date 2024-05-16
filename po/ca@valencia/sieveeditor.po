@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
-"PO-Revision-Date: 2024-05-08 19:54+0200\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"PO-Revision-Date: 2024-05-15 11:38+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -109,7 +109,9 @@ msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Copyright © 2013-%1, els autors de «sieveeditor»"
 
 #: main.cpp:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
@@ -319,99 +321,85 @@ msgid "Upload"
 msgstr "Pujada"
 
 #: sieveeditormainwindow.cpp:184
-#, fuzzy, kde-format
-#| msgid "Add Sieve Server…"
+#, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Afig un servidor de «Sieve»…"
 
 #: sieveeditormainwindow.cpp:188
-#, fuzzy, kde-format
-#| msgid "Delete Script"
+#, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Suprimix l'script"
 
 #: sieveeditormainwindow.cpp:194
-#, fuzzy, kde-format
-#| msgid "Create New Script…"
+#, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Crea un script nou…"
 
 #: sieveeditormainwindow.cpp:200
-#, fuzzy, kde-format
-#| msgid "Edit Script…"
+#, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Edita un script…"
 
 #: sieveeditormainwindow.cpp:205
-#, fuzzy, kde-format
-#| msgid "Deactivate Script"
+#, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Desactiva un script"
 
 #: sieveeditormainwindow.cpp:210
-#, fuzzy, kde-format
-#| msgid "Refresh List"
+#, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Actualitza la llista"
 
 #: sieveeditormainwindow.cpp:216
-#, fuzzy, kde-format
-#| msgid "Go to Line…"
+#, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Ves fins a la línia…"
 
 #: sieveeditormainwindow.cpp:233
-#, fuzzy, kde-format
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "Importa…"
 
 #: sieveeditormainwindow.cpp:239
-#, fuzzy, kde-format
-#| msgid "Share…"
+#, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Compartix…"
 
 #: sieveeditormainwindow.cpp:247
-#, fuzzy, kde-format
-#| msgid "Check Spelling…"
+#, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Verifica l'ortografia…"
 
 #: sieveeditormainwindow.cpp:253
-#, fuzzy, kde-format
-#| msgid "Check Syntax"
+#, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Comprova la sintaxi"
 
 #: sieveeditormainwindow.cpp:258
-#, fuzzy, kde-format
-#| msgid "Create Rules Graphically…"
+#, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Crea regles gràficament…"
 
 #: sieveeditormainwindow.cpp:263
-#, fuzzy, kde-format
-#| msgid "Comment"
+#, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Comenta"
 
 #: sieveeditormainwindow.cpp:268
-#, fuzzy, kde-format
-#| msgid "Uncomment"
+#, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Descomenta"
@@ -423,22 +411,19 @@ msgid "&Bookmarks"
 msgstr "&Punts"
 
 #: sieveeditormainwindow.cpp:301
-#, fuzzy, kde-format
-#| msgid "Debug Sieve Script…"
+#, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Depura l'script de «Sieve»…"
 
 #: sieveeditormainwindow.cpp:306
-#, fuzzy, kde-format
-#| msgid "Wordwrap"
+#, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Talla les paraules"
 
 #: sieveeditormainwindow.cpp:315
-#, fuzzy, kde-format
-#| msgid "Import IMAP Settings…"
+#, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "Importa la configuració d'IMAP…"
