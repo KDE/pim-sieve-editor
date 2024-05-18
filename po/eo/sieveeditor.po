@@ -1,7 +1,7 @@
 # translation sieveeditor.pot to Esperanto
 # Esperantaj mesaĝoj por "pim-sieve-editor"
 # Copyright (C) 2016 Free Software Foundation, Inc.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 # Minuskloj: ĉ ĝ ĵ ĥ ŝ ŭ   Majuskloj: Ĉ Ĝ Ĵ Ĥ Ŝ Ŭ
 #
@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-05 00:38+0000\n"
-"PO-Revision-Date: 2024-03-17 05:34+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-05-17 06:24+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr "Oliver Kellogg"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "okellogg@users.sourceforge.net"
+msgstr "olivermkellogg@gmail.com"
 
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:152
 #, kde-format
@@ -63,7 +63,7 @@ msgstr "Importi agordojn de %1..."
 #: importwizard/importimapsettingprogresspage.cpp:72
 #, kde-format
 msgid "Import settings from %1 done"
-msgstr "Importi agordojn de %1 farita"
+msgstr "Enporti agordojn de %1 farita"
 
 #: importwizard/importimapsettingsearchpage.cpp:20
 #, kde-format
@@ -119,7 +119,7 @@ msgstr "Prizorganto"
 #: main.cpp:43
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr "Listigas la disponeblajn opciojn por uzant-sugestoj"
+msgstr "Listigas la disponeblajn elekteblojn por uzant-sugestoj"
 
 #: serversievelistwidget.cpp:77
 #, kde-format
