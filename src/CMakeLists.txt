@@ -142,7 +142,9 @@ target_link_libraries(sieveeditor
     KF6::DBusAddons
     ${libsieveeditor_userfeedback_LIB}
     )
-
+if(TARGET KF6::IconThemes)
+    target_link_libraries(sieveeditor KF6::IconThemes)
+endif()
 install(TARGETS sieveeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(PROGRAMS org.kde.sieveeditor.desktop DESTINATION ${KDE_INSTALL_APPDIR})
