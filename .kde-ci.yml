@@ -12,6 +12,7 @@ Dependencies:
     'pim/pimcommon' : '@same'
     'frameworks/kxmlgui': '@latest-kf6'
     'third-party/qtkeychain': '@latest-kf6'
+    'frameworks/kiconthemes': '@latest-kf6'
 
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD' ]      
