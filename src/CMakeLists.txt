@@ -139,9 +139,11 @@ target_link_libraries(sieveeditor
     libsieveeditor
     KF6::XmlGui
     KF6::I18n
-    KF6::DBusAddons
     ${libsieveeditor_userfeedback_LIB}
     )
+if (NOT WIN32 AND NOT APPLE)
+    target_link_libraries(sieveeditor KF6::DBusAddons)
+endif()    	
 if(TARGET KF6::IconThemes)
     target_link_libraries(sieveeditor KF6::IconThemes)
 endif()

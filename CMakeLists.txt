@@ -64,7 +64,6 @@ set(KIMAP_LIB_VERSION "5.240.85")
 find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network)
 
 # Find KF6 package
-find_package(KF6DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6CoreAddons ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6Crash ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6Bookmarks ${KF_MIN_VERSION} REQUIRED)
@@ -79,6 +78,11 @@ set_package_properties(KF6DocTools PROPERTIES DESCRIPTION
 )
 find_package(KF6UserFeedback ${KF_MIN_VERSION} CONFIG)
 set_package_properties(KF6::UserFeedback PROPERTIES DESCRIPTION "User Feedback lib" TYPE OPTIONAL PURPOSE "Allow to send Telemetry Information (optional).")
+
+if (NOT WIN32 AND NOT APPLE) 
+   find_package(KF6DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
+endif()
+
 
 
 # Find KdepimLibs Package

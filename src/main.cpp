@@ -72,7 +72,9 @@ int main(int argc, char **argv)
     }
 #endif
 
+#if !defined(Q_OS_WIN) && !defined(Q_OS_MACOS)
     KDBusService service(KDBusService::Unique);
+#endif
 
     auto mw = new SieveEditorMainWindow();
     mw->show();
