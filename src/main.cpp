@@ -8,7 +8,9 @@
 #include "sieveeditormainwindow.h"
 #include <KAboutData>
 #include <KCrash>
+#if !defined(Q_OS_WIN) && !defined(Q_OS_MACOS)
 #include <KDBusService>
+#endif
 #include <KLocalizedString>
 #include <QApplication>
 #include <QCommandLineParser>
