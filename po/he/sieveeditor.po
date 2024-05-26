@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:40+0000\n"
+"POT-Creation-Date: 2024-05-26 00:39+0000\n"
 "PO-Revision-Date: 2024-05-16 06:39+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -89,33 +89,33 @@ msgstr "הייבוא מתבצע…"
 msgid "Finish"
 msgstr "סיום"
 
-#: main.cpp:49
+#: main.cpp:51
 #, kde-format
 msgid "KSieve Editor"
 msgstr "עורך KSieve"
 
-#: main.cpp:51
+#: main.cpp:53
 #, kde-format
 msgid "Sieve Editor"
 msgstr "עורך Sieve"
 
-#: main.cpp:53
+#: main.cpp:55
 #, kde-format
 msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "כל הזכויות שמורות © 2013-‏%1 ליוצרי sieveeditor"
 
-#: main.cpp:54
+#: main.cpp:56
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "לורנט מונטל"
 
-#: main.cpp:54
+#: main.cpp:56
 #, kde-format
 msgid "Maintainer"
 msgstr "מתחזק"
 
-#: main.cpp:62
+#: main.cpp:64
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "הצגת האפשרויות הזמינות למשוב משתמש"

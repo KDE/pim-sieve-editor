@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:40+0000\n"
+"POT-Creation-Date: 2024-05-26 00:39+0000\n"
 "PO-Revision-Date: 2024-05-16 09:08+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -92,33 +92,33 @@ msgstr "Триває імпортування…"
 msgid "Finish"
 msgstr "Завершення"
 
-#: main.cpp:49
+#: main.cpp:51
 #, kde-format
 msgid "KSieve Editor"
 msgstr "Редактор фільтрів KSieve"
 
-#: main.cpp:51
+#: main.cpp:53
 #, kde-format
 msgid "Sieve Editor"
 msgstr "Редактор фільтрів"
 
-#: main.cpp:53
+#: main.cpp:55
 #, kde-format
 msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "© Автори sieveeditor, 2013–%1"
 
-#: main.cpp:54
+#: main.cpp:56
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:54
+#: main.cpp:56
 #, kde-format
 msgid "Maintainer"
 msgstr "Супровідник"
 
-#: main.cpp:62
+#: main.cpp:64
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Показати доступні варіанти для відгуків користувача"
