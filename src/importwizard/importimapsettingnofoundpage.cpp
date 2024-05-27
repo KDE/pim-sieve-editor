@@ -17,7 +17,7 @@ ImportImapSettingNoFoundPage::ImportImapSettingNoFoundPage(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName("mainlayout"_L1);
 
-    auto lab = new QLabel(i18n("No settings found to import."));
+    auto lab = new QLabel(i18nc("@label:textbox", "No settings found to import."));
     QFont font = lab->font();
     font.setBold(true);
     font.setPointSizeF(font.pointSizeF() * 1.5);

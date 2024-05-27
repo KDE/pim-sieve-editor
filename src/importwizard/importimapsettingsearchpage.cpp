@@ -17,7 +17,7 @@ ImportImapSettingSearchPage::ImportImapSettingSearchPage(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName("mainlayout"_L1);
-    auto label = new QLabel(i18n("Please select the program from which you like to import IMAP settings:"), this);
+    auto label = new QLabel(i18nc("@label:textbox", "Please select the program from which you like to import IMAP settings:"), this);
     label->setObjectName("label"_L1);
     mainLayout->addWidget(label);
 
