@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-26 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2024-05-18 17:42+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -40,12 +40,16 @@ msgid "Thunderbird IMAP Settings"
 msgstr "Thunderbird IMAP 設定"
 
 #: importwizard/importimapsettingfinishpage.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "IMAP settings were imported:"
+msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
 msgstr "已匯入 IMAP 設定："
 
 #: importwizard/importimapsettingnofoundpage.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No settings found to import."
+msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "找不到可匯入的設定。"
 
@@ -65,7 +69,10 @@ msgid "Import settings from %1 done"
 msgstr "從 %1 匯入設定已完成。"
 
 #: importwizard/importimapsettingsearchpage.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Please select the program from which you like to import IMAP settings:"
+msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr "請選擇您要匯入 IMAP 設定的程式："
 

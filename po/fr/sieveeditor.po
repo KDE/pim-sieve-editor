@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-26 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2024-05-11 16:47+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -46,12 +46,16 @@ msgid "Thunderbird IMAP Settings"
 msgstr "Paramètres IMAP de Thunderbird"
 
 #: importwizard/importimapsettingfinishpage.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "IMAP settings were imported:"
+msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
 msgstr "Les paramètres IMAP ont été importés :"
 
 #: importwizard/importimapsettingnofoundpage.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No settings found to import."
+msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "Aucun paramètre trouvé pour l'importation."
 
@@ -71,7 +75,10 @@ msgid "Import settings from %1 done"
 msgstr "Import des paramètres depuis %1 terminé"
 
 #: importwizard/importimapsettingsearchpage.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Please select the program from which you like to import IMAP settings:"
+msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr ""
 "Veuillez sélectionner le programme à partir duquel vous souhaitez importer "

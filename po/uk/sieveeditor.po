@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-26 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2024-05-16 09:08+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -41,12 +41,16 @@ msgid "Thunderbird IMAP Settings"
 msgstr "Параметри IMAP Thunderbird"
 
 #: importwizard/importimapsettingfinishpage.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "IMAP settings were imported:"
+msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
 msgstr "Було імпортовано такі параметри IMAP:"
 
 #: importwizard/importimapsettingnofoundpage.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No settings found to import."
+msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "Не знайдено параметрів для імпортування."
 
@@ -66,7 +70,10 @@ msgid "Import settings from %1 done"
 msgstr "Імпортування параметрів з %1 завершено"
 
 #: importwizard/importimapsettingsearchpage.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Please select the program from which you like to import IMAP settings:"
+msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr ""
 "Будь ласка, виберіть програму, з якої слід імпортувати дані параметрів IMAP:"

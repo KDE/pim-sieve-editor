@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-26 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2023-10-08 23:42+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -38,12 +38,16 @@ msgid "Thunderbird IMAP Settings"
 msgstr "Thunderbird IMAP 설정"
 
 #: importwizard/importimapsettingfinishpage.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "IMAP settings were imported:"
+msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
 msgstr "IMAP 설정을 가져왔습니다:"
 
 #: importwizard/importimapsettingnofoundpage.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No settings found to import."
+msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "가져올 설정이 없습니다."
 
@@ -64,7 +68,10 @@ msgid "Import settings from %1 done"
 msgstr "%1에서 설정 가져오기 완료"
 
 #: importwizard/importimapsettingsearchpage.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Please select the program from which you like to import IMAP settings:"
+msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr "IMAP 설정을 가져올 프로그램을 선택하십시오:"
 
