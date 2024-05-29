@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-26 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2024-05-26 12:35+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -14,9 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10"
-" || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -39,12 +38,16 @@ msgid "Thunderbird IMAP Settings"
 msgstr "Ustawienia IMAP Thunderbirda"
 
 #: importwizard/importimapsettingfinishpage.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "IMAP settings were imported:"
+msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
 msgstr "Zaimportowano ustawienia IMAP:"
 
 #: importwizard/importimapsettingnofoundpage.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No settings found to import."
+msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "Brak ustawień do zaimportowania."
 
@@ -55,7 +58,6 @@ msgstr "Nie znaleziono ustawień."
 
 #: importwizard/importimapsettingprogresspage.cpp:70
 #, kde-format
-#| msgid "Import settings from %1..."
 msgid "Import settings from %1…"
 msgstr "Zaimportuj ustawienia z %1…"
 
@@ -65,7 +67,10 @@ msgid "Import settings from %1 done"
 msgstr "Ukończono importowanie ustawień z %1"
 
 #: importwizard/importimapsettingsearchpage.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Please select the program from which you like to import IMAP settings:"
+msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr "Wybierz program, z którego chcesz zaimportować ustawienia IMAP:"
 
@@ -82,7 +87,6 @@ msgstr "Wybierz ustawienia importowania"
 
 #: importwizard/importimapsettingwizard.cpp:39
 #, kde-format
-#| msgid "Import in Progress..."
 msgid "Import in Progress…"
 msgstr "Importowanie w trakcie…"
 
@@ -108,7 +112,6 @@ msgstr "Copyright © 2013-%1 Autorzy sieveeditor"
 
 #: main.cpp:56
 #, kde-format
-#| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -229,14 +232,11 @@ msgstr "Informacja zwrotna"
 
 #: sieveeditorconfigureserverpage.cpp:20
 #, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure"
 msgid "Configure…"
 msgstr "Ustawienia…"
 
 #: sieveeditorconfigureserverpage.cpp:25
 #, kde-format
-#| msgid "Import Sieve Settings:"
 msgid "Import Sieve Settings…"
 msgstr "Importowanie ustawień Sieve…"
 
@@ -323,99 +323,84 @@ msgstr "Wyślij"
 
 #: sieveeditormainwindow.cpp:184
 #, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Sieve Server"
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Dodaj serwer Sieve…"
 
 #: sieveeditormainwindow.cpp:188
 #, kde-format
-#| msgid "Delete Script"
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Usuń skrypt"
 
 #: sieveeditormainwindow.cpp:194
 #, kde-format
-#| msgid "Create New Script..."
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Utwórz nowy skrypt…"
 
 #: sieveeditormainwindow.cpp:200
 #, kde-format
-#| msgid "Edit Script..."
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Edytuj skrypt…"
 
 #: sieveeditormainwindow.cpp:205
 #, kde-format
-#| msgid "Deactivate Script"
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Dezaktywuj skrypt"
 
 #: sieveeditormainwindow.cpp:210
 #, kde-format
-#| msgid "Refresh List"
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Odśwież listę"
 
 #: sieveeditormainwindow.cpp:216
 #, kde-format
-#| msgid "Go to Line..."
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Przejdź do wiersza…"
 
 #: sieveeditormainwindow.cpp:233
 #, kde-format
-#| msgid "Import..."
 msgctxt "@action"
 msgid "Import…"
 msgstr "Zaimportuj…"
 
 #: sieveeditormainwindow.cpp:239
 #, kde-format
-#| msgid "Share..."
 msgctxt "@action"
 msgid "Share…"
 msgstr "Udostępnij…"
 
 #: sieveeditormainwindow.cpp:247
 #, kde-format
-#| msgid "Check Spelling..."
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Sprawdź pisownię…"
 
 #: sieveeditormainwindow.cpp:253
 #, kde-format
-#| msgid "Check Syntax"
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Sprawdź składnię"
 
 #: sieveeditormainwindow.cpp:258
 #, kde-format
-#| msgid "Create Rules Graphically:"
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Twórz zasady graficznie…"
 
 #: sieveeditormainwindow.cpp:263
 #, kde-format
-#| msgid "Comment"
 msgctxt "@action"
 msgid "Comment"
 msgstr "Komentuj"
 
 #: sieveeditormainwindow.cpp:268
 #, kde-format
-#| msgid "Uncomment"
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Odkomentuj"
@@ -428,22 +413,18 @@ msgstr "&Zakładki"
 
 #: sieveeditormainwindow.cpp:301
 #, kde-format
-#| msgid "Debug Sieve Script..."
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Diagnozuj skrypt Sieve…"
 
 #: sieveeditormainwindow.cpp:306
 #, kde-format
-#| msgid "Wordwrap"
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Zawijanie wierszy"
 
 #: sieveeditormainwindow.cpp:315
 #, kde-format
-#| msgctxt "@title:window"
-#| msgid "Import IMAP Settings"
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "Zaimportuj ustawienia IMAP…"
@@ -460,7 +441,6 @@ msgstr "(Wyłączone) %1"
 
 #: sieveeditorpagewidget.cpp:42
 #, kde-format
-#| msgid "Uploading script to server for checking it, please wait..."
 msgid "Uploading script to server for checking it, please wait…"
 msgstr "Wysyłanie skryptu na serwer celem jego sprawdzenia, oczekiwanie…"
 
@@ -776,7 +756,6 @@ msgstr "Dodaj…"
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
 #, kde-format
-#| msgid "Modify..."
 msgid "Modify…"
 msgstr "Zmień..."
 
@@ -855,5 +834,3 @@ msgstr "Usuń"
 #~ "size:20px\">Samotworzenie skryptu:</div><div></div><li>Narzędzia > "
 #~ "Samotworzenie skryptu<div style=\"font-size:20px\">Import skryptu:</"
 #~ "div><li>Plik > Import<div></div></div></body></html>"
-
-
