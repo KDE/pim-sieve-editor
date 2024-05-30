@@ -39,18 +39,16 @@ msgid "Thunderbird IMAP Settings"
 msgstr "Nastavení Thunderbird IMAP"
 
 #: importwizard/importimapsettingfinishpage.cpp:22
-#, fuzzy, kde-format
-#| msgid "IMAP settings were imported:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
-msgstr "Nastavení IMAP byla importována:"
+msgstr ""
 
 #: importwizard/importimapsettingnofoundpage.cpp:20
-#, fuzzy, kde-format
-#| msgid "No settings found to import."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "No settings found to import."
-msgstr "Nenalezeny žádná nastavení pro import."
+msgstr ""
 
 #: importwizard/importimapsettingprogresspage.cpp:63
 #, kde-format
@@ -68,12 +66,10 @@ msgid "Import settings from %1 done"
 msgstr "Import nastavení z %1 dokončen"
 
 #: importwizard/importimapsettingsearchpage.cpp:20
-#, fuzzy, kde-format
-#| msgid ""
-#| "Please select the program from which you like to import IMAP settings:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
-msgstr "Prosím zvolte program, ze kterého chcete importovat nastavení IMAP:"
+msgstr ""
 
 #: importwizard/importimapsettingwizard.cpp:28
 #, kde-format
