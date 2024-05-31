@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-05 00:38+0000\n"
-"PO-Revision-Date: 2024-03-20 13:22+0100\n"
+"PO-Revision-Date: 2024-05-30 16:57+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -182,13 +182,13 @@ msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
 "server.</b></qt>"
 msgstr ""
-"<qt> <b> Не се поддържа защита. Не се препоръчва да се свързвате с този "
+"<qt><b> Не се поддържа защита. Не се препоръчва да се свързвате с този "
 "сървър.</b></qt>"
 
 #: serversievesettings.cpp:336
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
-msgstr "<qt> <b> Не е възможно да се използва този сървър.</b></qt>"
+msgstr "<qt><b> Не е възможно да се използва този сървър.</b></qt>"
 
 #: serversievesettingsdialog.cpp:25
 #, kde-format
