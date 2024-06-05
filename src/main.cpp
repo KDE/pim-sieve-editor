@@ -61,7 +61,7 @@ int main(int argc, char **argv)
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
 #ifdef WITH_KUSERFEEDBACK
-    const QCommandLineOption feedbackOption(QStringLiteral("feedback"), i18n("Lists the available options for user feedback"));
+    const QCommandLineOption feedbackOption(QStringLiteral("feedback"), i18nc("@info:shell", "Lists the available options for user feedback"));
     parser.addOption(feedbackOption);
 #endif
     parser.process(app);
