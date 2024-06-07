@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-06 00:39+0000\n"
-"PO-Revision-Date: 2024-05-29 14:25+0200\n"
+"PO-Revision-Date: 2024-06-06 10:21+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -121,11 +121,10 @@ msgid "Maintainer"
 msgstr "Mantenitor"
 
 #: main.cpp:64
-#, fuzzy, kde-format
-#| msgid "Lists the available options for user feedback"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
-msgstr "Lista le optiones disponibile per responsa al usator"
+msgstr "Lista le optiones disponibile per responsa de usator"
 
 #: serversievelistwidget.cpp:77
 #, kde-format
