@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Stefan Asserhäll <stefan.asserhall@bredband.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-05 00:38+0000\n"
-"PO-Revision-Date: 2023-07-31 10:43+0200\n"
+"PO-Revision-Date: 2024-06-08 16:57+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -148,7 +148,7 @@ msgstr "Anonym"
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%p %"
 
 #: serversievesettings.cpp:271
 #, kde-format
@@ -156,8 +156,7 @@ msgid "Server is not defined"
 msgstr "Server är inte definierad"
 
 #: serversievesettings.cpp:271
-#, fuzzy, kde-format
-#| msgid "Check Server"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Kontrollera server"
@@ -294,8 +293,7 @@ msgid "Script was modified. Do you want to save before closing?"
 msgstr "Skriptet har ändrats. Vill du spara det innan programmet avslutas?"
 
 #: sieveeditormainwidget.cpp:609
-#, fuzzy, kde-format
-#| msgid "Close script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Close script"
 msgstr "Stäng skript"
@@ -427,11 +425,10 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "Sieve-skriptet har laddats up med lyckat resultat"
 
 #: sieveeditorpagewidget.cpp:135
-#, fuzzy, kde-format
-#| msgid "Sieve Script Upload"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
-msgstr "Sieve-skript uppladdat"
+msgstr "Sieve-skript uppladdning"
 
 #: sieveeditorpagewidget.cpp:148
 #, kde-format
@@ -445,8 +442,7 @@ msgstr ""
 "%1"
 
 #: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
-#, fuzzy, kde-format
-#| msgid "Sieve Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Sieve-fel"
@@ -466,8 +462,7 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Skriptet '%1' är nytt. Vill du spara det?"
 
 #: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
-#, fuzzy, kde-format
-#| msgid "Save Script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Spara skript"
