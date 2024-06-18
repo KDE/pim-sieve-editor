@@ -33,7 +33,6 @@ Q_SIGNALS:
     void openUrl(const QUrl &url);
 
 private:
-    Q_DISABLE_COPY(SieveEditorBookmarks)
     KBookmarkManager *m_bookmarkManager = nullptr;
     KBookmarkMenu *mBookmarkMenu = nullptr;
     QMenu *const mMenu;
