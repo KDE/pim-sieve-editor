@@ -25,13 +25,13 @@ public:
     void next() override;
 
 private:
-    void readConfig();
-    void writeConfig();
-    void initializeWizard();
-    void slotHelpClicked();
-    void slotFinishImportData();
-    void slotAddSummaryInfo(const QString &name);
-    void slotNeedToImportSettings(bool b);
+    LIBSIEVEEDITOR_NO_EXPORT void readConfig();
+    LIBSIEVEEDITOR_NO_EXPORT void writeConfig();
+    LIBSIEVEEDITOR_NO_EXPORT void initializeWizard();
+    LIBSIEVEEDITOR_NO_EXPORT void slotHelpClicked();
+    LIBSIEVEEDITOR_NO_EXPORT void slotFinishImportData();
+    LIBSIEVEEDITOR_NO_EXPORT void slotAddSummaryInfo(const QString &name);
+    LIBSIEVEEDITOR_NO_EXPORT void slotNeedToImportSettings(bool b);
     QMap<QString, AbstractImapSettingsCheckJob *> mListCheckJob;
 
     ImportImapSettingSearchPage *mSearchPage = nullptr;

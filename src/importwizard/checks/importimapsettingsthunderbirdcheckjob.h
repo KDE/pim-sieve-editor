@@ -20,12 +20,12 @@ public:
     [[nodiscard]] QString name() const override;
 
 private:
-    [[nodiscard]] bool importSettings(const QString &directory, const QString &defaultProfile);
-    [[nodiscard]] QMap<QString, QString> listProfile(QString &currentProfile, const QString &defaultSettingPath);
-    [[nodiscard]] QString defaultPath() const;
-    void insertIntoMap(const QString &line);
-    void addAuth(SieveEditorUtil::SieveServerConfig &config, const QString &accountName);
-    void encryption(SieveEditorUtil::SieveServerConfig &config, const QString &accountName);
+    [[nodiscard]] LIBSIEVEEDITOR_NO_EXPORT bool importSettings(const QString &directory, const QString &defaultProfile);
+    [[nodiscard]] LIBSIEVEEDITOR_NO_EXPORT QMap<QString, QString> listProfile(QString &currentProfile, const QString &defaultSettingPath);
+    [[nodiscard]] LIBSIEVEEDITOR_NO_EXPORT QString defaultPath() const;
+    LIBSIEVEEDITOR_NO_EXPORT void insertIntoMap(const QString &line);
+    LIBSIEVEEDITOR_NO_EXPORT void addAuth(SieveEditorUtil::SieveServerConfig &config, const QString &accountName);
+    LIBSIEVEEDITOR_NO_EXPORT void encryption(SieveEditorUtil::SieveServerConfig &config, const QString &accountName);
 
     QHash<QString, QVariant> mHashConfig;
 };

@@ -31,7 +31,7 @@ Q_SIGNALS:
     void noSettingsImported(const QString &name);
 
 private:
-    void slotImportSettingsDone(const QString &name, const SieveEditorUtil::SieveServerConfig &settings);
+    LIBSIEVEEDITOR_NO_EXPORT void slotImportSettingsDone(const QString &name, const SieveEditorUtil::SieveServerConfig &settings);
     QStringList mSelectedPrograms;
     QTextEdit *mProgressTextEdit = nullptr;
     QMap<QString, AbstractImapSettingsCheckJob *> mListCheckJob;

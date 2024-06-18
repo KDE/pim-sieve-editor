@@ -15,7 +15,6 @@ public:
     static SieveServerSettings *self();
 
 private:
-    Q_DISABLE_COPY(SieveServerSettings)
     explicit SieveServerSettings(QObject *parent = nullptr);
     friend class SieveServerSettingsPrivate;
 };

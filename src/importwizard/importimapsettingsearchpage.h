@@ -24,6 +24,6 @@ Q_SIGNALS:
     void needToImportSettings(bool);
 
 private:
-    void slotItemChanged();
+    LIBSIEVEEDITOR_NO_EXPORT void slotItemChanged();
     QListWidget *mFoundProgramList = nullptr;
 };

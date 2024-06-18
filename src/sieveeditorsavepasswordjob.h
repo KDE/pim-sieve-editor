@@ -33,7 +33,7 @@ public:
     void setName(const QString &name);
 
 private:
-    void slotPasswordWritten(QKeychain::Job *baseJob);
+    LIBSIEVEEDITOR_NO_EXPORT void slotPasswordWritten(QKeychain::Job *baseJob);
     QString mPassword;
     QString mKey;
     QString mName;

@@ -30,6 +30,5 @@ private:
     void slotDeleteServer();
     void slotItemSelectionChanged();
 
-private:
     Ui::SieveEditorConfigureServerWidget *const ui;
 };

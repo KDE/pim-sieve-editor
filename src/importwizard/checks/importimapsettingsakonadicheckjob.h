@@ -23,10 +23,10 @@ public:
 
 private:
     [[nodiscard]] inline bool resourceCanHaveSieveSupport(const QString &filename) const;
-    void loadSieveServerSettings();
-    void slotImportNextServerSieveDone(const SieveEditorUtil::SieveServerConfig &config, const QString &filename);
-    void importNextServerSieve();
-    void importSettings(const QString &directory, const QString &filename);
+    LIBSIEVEEDITOR_NO_EXPORT void loadSieveServerSettings();
+    LIBSIEVEEDITOR_NO_EXPORT void slotImportNextServerSieveDone(const SieveEditorUtil::SieveServerConfig &config, const QString &filename);
+    LIBSIEVEEDITOR_NO_EXPORT void importNextServerSieve();
+    LIBSIEVEEDITOR_NO_EXPORT void importSettings(const QString &directory, const QString &filename);
     QMultiMap<QString, QString> mSieveServerLst;
     QMultiMap<QString, QString>::const_iterator mSieveServerMapIterator;
 };
