@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: $2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:39+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2014-02-01 00:37+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: none\n"
@@ -246,12 +246,14 @@ msgstr ""
 #: sieveeditorconfigureserverpage.cpp:20
 #, fuzzy, kde-format
 #| msgid "Configure"
+msgctxt "@action:button"
 msgid "Configure…"
 msgstr "Konfiguriši"
 
 #: sieveeditorconfigureserverpage.cpp:25
 #, fuzzy, kde-format
 #| msgid "Modify Settings"
+msgctxt "@action:button"
 msgid "Import Sieve Settings…"
 msgstr "Izmijeni postavke"
 

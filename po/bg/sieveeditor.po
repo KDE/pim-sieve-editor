@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:39+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2024-06-07 10:06+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -228,12 +228,16 @@ msgid "User Feedback"
 msgstr "Обратна връзка"
 
 #: sieveeditorconfigureserverpage.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
+msgctxt "@action:button"
 msgid "Configure…"
 msgstr "Конфигуриране…"
 
 #: sieveeditorconfigureserverpage.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import Sieve Settings…"
+msgctxt "@action:button"
 msgid "Import Sieve Settings…"
 msgstr "Импортиране на настройки за Sieve…"
 

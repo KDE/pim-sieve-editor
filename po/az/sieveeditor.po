@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:39+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2023-05-29 19:03+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -240,12 +240,14 @@ msgstr "İstifadəçi rəyi"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Configure"
+msgctxt "@action:button"
 msgid "Configure…"
 msgstr "Tənzimləyin"
 
 #: sieveeditorconfigureserverpage.cpp:25
 #, fuzzy, kde-format
 #| msgid "Import Sieve Settings:"
+msgctxt "@action:button"
 msgid "Import Sieve Settings…"
 msgstr "Süzgəcləmə ayarları idxal edin:"
 

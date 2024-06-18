@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:39+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2022-03-25 09:54+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -242,12 +242,14 @@ msgstr "Reacções do Utilizador"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Configure"
+msgctxt "@action:button"
 msgid "Configure…"
 msgstr "Configurar"
 
 #: sieveeditorconfigureserverpage.cpp:25
 #, fuzzy, kde-format
 #| msgid "Import Sieve Settings:"
+msgctxt "@action:button"
 msgid "Import Sieve Settings…"
 msgstr "Importar a Configuração do Sieve:"
 

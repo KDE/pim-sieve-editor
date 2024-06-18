@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:39+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2024-06-06 05:12+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -229,12 +229,16 @@ msgid "User Feedback"
 msgstr "მომხარებლის უკუკავშირი"
 
 #: sieveeditorconfigureserverpage.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
+msgctxt "@action:button"
 msgid "Configure…"
 msgstr "მორგება…"
 
 #: sieveeditorconfigureserverpage.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import Sieve Settings…"
+msgctxt "@action:button"
 msgid "Import Sieve Settings…"
 msgstr "Sieve-ის პარამეტრების შემოტანა…"
 
