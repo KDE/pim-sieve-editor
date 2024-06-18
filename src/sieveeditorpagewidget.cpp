@@ -17,7 +17,7 @@
 
 SieveEditorPageWidget::SieveEditorPageWidget(QWidget *parent)
     : QWidget(parent)
-    , mSieveEditorWidget(new KSieveUi::SieveEditorWidget(false))
+    , mSieveEditorWidget(new KSieveUi::SieveEditorWidget(false, this))
 {
     auto vbox = new QVBoxLayout(this);
     connect(mSieveEditorWidget, &KSieveUi::SieveEditorWidget::valueChanged, this, &SieveEditorPageWidget::slotValueChanged);
