@@ -11,7 +11,6 @@
 #include "sieveeditorbookmarks.h"
 #include "sieveeditorcentralwidget.h"
 #include "sieveeditorconfiguredialog.h"
-#include "sieveeditorglobalconfig.h"
 #include "sieveeditormainwidget.h"
 #include "sievepurposemenuwidget.h"
 #include <PimCommon/KActionMenuChangeCase>
