@@ -8,7 +8,6 @@
 using namespace Qt::Literals::StringLiterals;
 
 #include "sieveeditor_debug.h"
-#include "sieveserversettings.h"
 
 #include <KConfig>
 #include <KSharedConfig>

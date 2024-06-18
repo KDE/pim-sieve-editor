@@ -7,7 +7,6 @@
 #include "serversievelistwidget.h"
 #include "readserversieveconfigjob.h"
 #include "serversievesettingsdialog.h"
-#include "sieveserversettings.h"
 #include <KLocalizedString>
 
 #include <QListWidgetItem>
