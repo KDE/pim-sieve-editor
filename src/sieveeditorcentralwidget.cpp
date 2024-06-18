@@ -12,10 +12,11 @@
 
 SieveEditorCentralWidget::SieveEditorCentralWidget(QWidget *parent, KActionCollection *ac)
     : QStackedWidget(parent)
+    , mConfigureWidget(new SieveEditorConfigureServerPage(this))
+    , mSieveEditorMainWidget(new SieveEditorMainWidget(ac, this))
     , mPurposeMenuMessageWidget(new PimCommon::PurposeMenuMessageWidget(this))
     , mMainWidget(new QWidget)
 {
-    mConfigureWidget = new SieveEditorConfigureServerPage;
     connect(mConfigureWidget, &SieveEditorConfigureServerPage::configureClicked, this, &SieveEditorCentralWidget::configureClicked);
     connect(mConfigureWidget, &SieveEditorConfigureServerPage::importSieveSettings, this, &SieveEditorCentralWidget::importSieveSettings);
     addWidget(mConfigureWidget);
@@ -23,8 +24,6 @@ SieveEditorCentralWidget::SieveEditorCentralWidget(QWidget *parent, KActionColle
     auto mainWidgetLayout = new QVBoxLayout(mMainWidget);
     mainWidgetLayout->setContentsMargins({});
     mainWidgetLayout->setSpacing(0);
-
-    mSieveEditorMainWidget = new SieveEditorMainWidget(ac);
 
     mPurposeMenuMessageWidget->setPosition(KMessageWidget::Header);
     mainWidgetLayout->addWidget(mPurposeMenuMessageWidget);

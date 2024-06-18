@@ -30,13 +30,13 @@ static const char mySieveEditorMainWidgetConfigGroupName[] = "SieveEditorMainWid
 }
 SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *parent)
     : QSplitter(parent)
+    , mTabWidget(new SieveEditorTabWidget(ac, this))
+    , mScriptManagerWidget(new SieveEditorScriptManagerWidget(this))
+    , mStackedWidget(new QStackedWidget(this))
+    , mEditorEmptyLabel(new SieveEditorEmptyTabWidgetLabel(this))
 {
-    mStackedWidget = new QStackedWidget(this);
     mStackedWidget->setObjectName("stackedwidget"_L1);
 
-    mEditorEmptyLabel = new SieveEditorEmptyTabWidgetLabel;
-
-    mTabWidget = new SieveEditorTabWidget(ac);
     connect(mTabWidget, &SieveEditorTabWidget::tabCloseRequestedIndex, this, &SieveEditorMainWidget::slotTabCloseRequested);
     connect(mTabWidget, &SieveEditorTabWidget::tabRemoveAllExclude, this, &SieveEditorMainWidget::slotTabRemoveAllExclude);
     connect(mTabWidget, &SieveEditorTabWidget::tabCloseAllTab, this, &SieveEditorMainWidget::slotTabCloseAllRequested);
@@ -45,7 +45,6 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
     mStackedWidget->addWidget(mEditorEmptyLabel);
     addWidget(mStackedWidget);
 
-    mScriptManagerWidget = new SieveEditorScriptManagerWidget;
     connect(mScriptManagerWidget, &SieveEditorScriptManagerWidget::createScriptPage, this, &SieveEditorMainWidget::slotCreateScriptPage);
     connect(mScriptManagerWidget, &SieveEditorScriptManagerWidget::updateButtons, this, &SieveEditorMainWidget::updateButtons);
     connect(mScriptManagerWidget, &SieveEditorScriptManagerWidget::scriptDeleted, this, &SieveEditorMainWidget::slotScriptDeleted);

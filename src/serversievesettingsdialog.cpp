@@ -21,12 +21,12 @@ static const char myServerSieveSettingsDialog[] = "ServerSieveSettingsDialog";
 
 ServerSieveSettingsDialog::ServerSieveSettingsDialog(QWidget *parent)
     : QDialog(parent)
+    , mServerSieveSettings(new ServerSieveSettings(this))
 {
     setWindowTitle(i18nc("@title:window", "Add Sieve Server"));
 
     auto w = new QWidget;
     auto lay = new QVBoxLayout;
-    mServerSieveSettings = new ServerSieveSettings;
     connect(mServerSieveSettings, &ServerSieveSettings::enableOkButton, this, &ServerSieveSettingsDialog::slotEnableButtonOk);
     lay->addWidget(mServerSieveSettings);
     lay->setContentsMargins({});

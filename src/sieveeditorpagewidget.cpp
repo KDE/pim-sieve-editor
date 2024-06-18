@@ -13,14 +13,13 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 
-#include "sieveeditor_debug.h"
 #include <QVBoxLayout>
 
 SieveEditorPageWidget::SieveEditorPageWidget(QWidget *parent)
     : QWidget(parent)
+    , mSieveEditorWidget(new KSieveUi::SieveEditorWidget(false))
 {
     auto vbox = new QVBoxLayout(this);
-    mSieveEditorWidget = new KSieveUi::SieveEditorWidget(false);
     connect(mSieveEditorWidget, &KSieveUi::SieveEditorWidget::valueChanged, this, &SieveEditorPageWidget::slotValueChanged);
     vbox->addWidget(mSieveEditorWidget);
     connect(mSieveEditorWidget, &KSieveUi::SieveEditorWidget::checkSyntax, this, &SieveEditorPageWidget::slotCheckSyntaxClicked);

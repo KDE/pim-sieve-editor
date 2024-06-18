@@ -95,7 +95,7 @@ private:
 private:
     void setModified(bool b);
     QUrl mCurrentURL;
-    KSieveUi::SieveEditorWidget *mSieveEditorWidget = nullptr;
+    KSieveUi::SieveEditorWidget *const mSieveEditorWidget;
     bool mWasActive = false;
     bool mIsNewScript = false;
 };

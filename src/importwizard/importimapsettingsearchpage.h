@@ -25,5 +25,5 @@ Q_SIGNALS:
 
 private:
     LIBSIEVEEDITOR_NO_EXPORT void slotItemChanged();
-    QListWidget *mFoundProgramList = nullptr;
+    QListWidget *const mFoundProgramList;
 };

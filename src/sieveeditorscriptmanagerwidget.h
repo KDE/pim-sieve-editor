@@ -44,5 +44,5 @@ private:
     void slotEditScript(const KSieveUi::ManageSieveWidget::ScriptInfo &info);
     void slotUpdateButtons(QTreeWidgetItem *item);
 
-    SieveEditorManageSieveWidget *mTreeView = nullptr;
+    SieveEditorManageSieveWidget *const mTreeView;
 };

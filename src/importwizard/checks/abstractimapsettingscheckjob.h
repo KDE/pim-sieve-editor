@@ -29,7 +29,7 @@ Q_SIGNALS:
 
 protected:
     Q_DISABLE_COPY(AbstractImapSettingsCheckJob)
-    void checkNoSettingsImported();
+    LIBSIEVEEDITOR_NO_EXPORT void checkNoSettingsImported();
     AbstractImapSettingsPassword *mPasswordImporter = nullptr;
     bool mSettingsWereImported = false;
 };

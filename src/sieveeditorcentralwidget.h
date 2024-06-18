@@ -31,8 +31,8 @@ Q_SIGNALS:
 
 private:
     void slotServerSieveFound(bool hasServer);
-    SieveEditorConfigureServerPage *mConfigureWidget = nullptr;
-    SieveEditorMainWidget *mSieveEditorMainWidget = nullptr;
+    SieveEditorConfigureServerPage *const mConfigureWidget;
+    SieveEditorMainWidget *const mSieveEditorMainWidget;
     PimCommon::PurposeMenuMessageWidget *const mPurposeMenuMessageWidget;
     QWidget *const mMainWidget;
 };

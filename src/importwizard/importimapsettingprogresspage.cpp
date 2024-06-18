@@ -15,10 +15,10 @@ using namespace Qt::Literals::StringLiterals;
 
 ImportImapSettingProgressPage::ImportImapSettingProgressPage(QWidget *parent)
     : QWidget(parent)
+    , mProgressTextEdit(new QTextEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName("mainlayout"_L1);
-    mProgressTextEdit = new QTextEdit(this);
     mProgressTextEdit->setObjectName("textedit"_L1);
     mProgressTextEdit->setReadOnly(true);
     mainLayout->addWidget(mProgressTextEdit);

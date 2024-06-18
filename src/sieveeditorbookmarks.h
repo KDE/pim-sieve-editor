@@ -34,7 +34,7 @@ Q_SIGNALS:
 
 private:
     Q_DISABLE_COPY(SieveEditorBookmarks)
-    KBookmarkManager *m_bookmarkManager;
+    KBookmarkManager *m_bookmarkManager = nullptr;
     KBookmarkMenu *mBookmarkMenu = nullptr;
     QMenu *const mMenu;
     SieveEditorMainWindow *const mMainWindow;

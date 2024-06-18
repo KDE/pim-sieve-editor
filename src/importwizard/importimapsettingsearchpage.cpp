@@ -14,6 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 
 ImportImapSettingSearchPage::ImportImapSettingSearchPage(QWidget *parent)
     : QWidget(parent)
+    , mFoundProgramList(new QListWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName("mainlayout"_L1);
@@ -21,7 +22,6 @@ ImportImapSettingSearchPage::ImportImapSettingSearchPage(QWidget *parent)
     label->setObjectName("label"_L1);
     mainLayout->addWidget(label);
 
-    mFoundProgramList = new QListWidget(this);
     mFoundProgramList->setObjectName("foundprogramlist"_L1);
     mainLayout->addWidget(mFoundProgramList);
     connect(mFoundProgramList, &QListWidget::itemChanged, this, &ImportImapSettingSearchPage::slotItemChanged);
