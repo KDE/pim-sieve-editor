@@ -14,7 +14,6 @@
 #include "sieveeditorglobalconfig.h"
 #include "sieveeditormainwidget.h"
 #include "sievepurposemenuwidget.h"
-#include "sieveserversettings.h"
 #include <PimCommon/KActionMenuChangeCase>
 #include <PimCommon/NeedUpdateVersionUtils>
 #include <PimCommon/NeedUpdateVersionWidget>

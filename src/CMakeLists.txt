@@ -47,7 +47,6 @@ target_sources(libsieveeditor PRIVATE
     sieveeditorconfigureserverwidget.cpp
     sieveeditormanagesievewidget.cpp
     sieveeditorpagewidget.cpp
-    sieveserversettings.cpp
     sieveeditortabwidget.cpp
     sieveeditorcentralwidget.cpp
     sieveeditorconfigureserverpage.cpp
@@ -60,7 +59,6 @@ target_sources(libsieveeditor PRIVATE
     sieveeditortabwidget.h
     sieveeditoremptytabwidgetlabel.h
     sieveeditormainwindow.h
-    sieveserversettings.h
     sieveeditormainwidget.h
     sieveeditorconfiguredialog.h
     readserversieveconfigjob.h
