@@ -9,7 +9,6 @@ using namespace Qt::Literals::StringLiterals;
 
 #include "sieveeditor_debug.h"
 #include "sieveeditorsavepasswordjob.h"
-#include "sieveserversettings.h"
 
 #include <KConfig>
 
