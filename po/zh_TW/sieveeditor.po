@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-06-19 00:39+0000\n"
 "PO-Revision-Date: 2024-06-09 19:07+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -66,7 +66,7 @@ msgstr "從 %1 匯入設定…"
 msgid "Import settings from %1 done"
 msgstr "從 %1 匯入設定已完成。"
 
-#: importwizard/importimapsettingsearchpage.cpp:20
+#: importwizard/importimapsettingsearchpage.cpp:21
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
@@ -125,13 +125,13 @@ msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
 msgstr "列出可用的使用者回饋選項"
 
-#: serversievelistwidget.cpp:77
+#: serversievelistwidget.cpp:76
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Settings"
 msgstr "變更設定"
 
-#: serversievelistwidget.cpp:123
+#: serversievelistwidget.cpp:122
 #, kde-format
 msgctxt "server name (username)"
 msgid "%1 (%2)"
@@ -195,7 +195,7 @@ msgstr "<qt><b>不支援任何安全協議，因此不建議連線到此伺服�
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>無法使用此伺服器。</b></qt>"
 
-#: serversievesettingsdialog.cpp:25
+#: serversievesettingsdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Sieve Server"
@@ -296,135 +296,135 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "工具 ─ 匯入 IMAP 設定"
 
-#: sieveeditormainwidget.cpp:608
+#: sieveeditormainwidget.cpp:607
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "文稿已變更。您要在關閉前先儲存嗎？"
 
-#: sieveeditormainwidget.cpp:609
+#: sieveeditormainwidget.cpp:608
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"
 msgstr "關閉文稿"
 
-#: sieveeditormainwindow.cpp:157
+#: sieveeditormainwindow.cpp:155
 #, kde-format
 msgid "Network is Up."
 msgstr "網路已連線。"
 
-#: sieveeditormainwindow.cpp:159
+#: sieveeditormainwindow.cpp:157
 #, kde-format
 msgid "Network is Down."
 msgstr "網路未連線。"
 
-#: sieveeditormainwindow.cpp:181
+#: sieveeditormainwindow.cpp:179
 #, kde-format
 msgid "Upload"
 msgstr "上傳"
 
-#: sieveeditormainwindow.cpp:184
+#: sieveeditormainwindow.cpp:182
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "新增過濾伺服器…"
 
-#: sieveeditormainwindow.cpp:188
+#: sieveeditormainwindow.cpp:186
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "刪除文稿"
 
-#: sieveeditormainwindow.cpp:194
+#: sieveeditormainwindow.cpp:192
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "建立新文稿…"
 
-#: sieveeditormainwindow.cpp:200
+#: sieveeditormainwindow.cpp:198
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "編輯文稿…"
 
-#: sieveeditormainwindow.cpp:205
+#: sieveeditormainwindow.cpp:203
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "關閉文稿"
 
-#: sieveeditormainwindow.cpp:210
+#: sieveeditormainwindow.cpp:208
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "重新整理清單"
 
-#: sieveeditormainwindow.cpp:216
+#: sieveeditormainwindow.cpp:214
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "跳至行號…"
 
-#: sieveeditormainwindow.cpp:233
+#: sieveeditormainwindow.cpp:231
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "匯入…"
 
-#: sieveeditormainwindow.cpp:239
+#: sieveeditormainwindow.cpp:237
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "分享…"
 
-#: sieveeditormainwindow.cpp:247
+#: sieveeditormainwindow.cpp:245
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "檢查拼字…"
 
-#: sieveeditormainwindow.cpp:253
+#: sieveeditormainwindow.cpp:251
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "檢查語法"
 
-#: sieveeditormainwindow.cpp:258
+#: sieveeditormainwindow.cpp:256
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "用圖形介面建立規則…"
 
-#: sieveeditormainwindow.cpp:263
+#: sieveeditormainwindow.cpp:261
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "註解"
 
-#: sieveeditormainwindow.cpp:268
+#: sieveeditormainwindow.cpp:266
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "取消註解"
 
-#: sieveeditormainwindow.cpp:296
+#: sieveeditormainwindow.cpp:294
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "書籤(&B)"
 
-#: sieveeditormainwindow.cpp:301
+#: sieveeditormainwindow.cpp:299
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "除錯過濾文稿…"
 
-#: sieveeditormainwindow.cpp:306
+#: sieveeditormainwindow.cpp:304
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "自動換行"
 
-#: sieveeditormainwindow.cpp:315
+#: sieveeditormainwindow.cpp:313
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
@@ -440,23 +440,23 @@ msgstr "沒有設定過濾的 URL"
 msgid "(Disabled) %1"
 msgstr "(已關閉) %1"
 
-#: sieveeditorpagewidget.cpp:42
+#: sieveeditorpagewidget.cpp:41
 #, kde-format
 msgid "Uploading script to server for checking it, please wait…"
 msgstr "正在上傳文稿到伺服器，請稍候…"
 
-#: sieveeditorpagewidget.cpp:135
+#: sieveeditorpagewidget.cpp:134
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "過濾文稿已經成功上傳。"
 
-#: sieveeditorpagewidget.cpp:135
+#: sieveeditorpagewidget.cpp:134
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "上傳 Sieve 文稿"
 
-#: sieveeditorpagewidget.cpp:148
+#: sieveeditorpagewidget.cpp:147
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -467,13 +467,13 @@ msgstr ""
 "伺服器回應：\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
+#: sieveeditorpagewidget.cpp:150 sieveeditorpagewidget.cpp:155
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Sieve 錯誤"
 
-#: sieveeditorpagewidget.cpp:154
+#: sieveeditorpagewidget.cpp:153
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -482,18 +482,18 @@ msgstr ""
 "上傳過濾文稿失敗。\n"
 "原因不明\n"
 
-#: sieveeditorpagewidget.cpp:166
+#: sieveeditorpagewidget.cpp:165
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "文稿 '%1' 是新的。您要儲存嗎？"
 
-#: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
+#: sieveeditorpagewidget.cpp:166 sieveeditorpagewidget.cpp:179
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "儲存文稿"
 
-#: sieveeditorpagewidget.cpp:179
+#: sieveeditorpagewidget.cpp:178
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "文稿 '%1' 已變更。您要儲存嗎？"
