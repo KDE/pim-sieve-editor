@@ -8,6 +8,7 @@
 
 #include <KPageDialog>
 class QCheckBox;
+class KConfigDialogManager;
 class SieveEditorConfigureServerWidget;
 #ifdef WITH_KUSERFEEDBACK
 namespace KUserFeedback
@@ -31,6 +32,7 @@ private:
     void loadServerSieveConfig();
     SieveEditorConfigureServerWidget *mServerWidget = nullptr;
     QCheckBox *mWrapText = nullptr;
+    KConfigDialogManager *m_configDialogManager = nullptr;
 #ifdef WITH_KUSERFEEDBACK
     KUserFeedback::FeedbackConfigWidget *mUserFeedbackWidget = nullptr;
 #endif

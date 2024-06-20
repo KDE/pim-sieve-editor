@@ -9,7 +9,6 @@ using namespace Qt::Literals::StringLiterals;
 
 #include "sieveeditorconfigureserverwidget.h"
 #include "sieveeditorglobalconfig.h"
-#include <PimCommon/ConfigureImmutableWidgetUtils>
 
 #ifdef WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
@@ -17,6 +16,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KUserFeedback/Provider>
 #endif
 
+#include <KConfigDialogManager>
 #include <KLocalizedString>
 #include <KSharedConfig>
 
@@ -35,6 +35,7 @@ static const char mySieveEditorConfigureDialog[] = "SieveEditorConfigureDialog";
 
 SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     : KPageDialog(parent)
+    , m_configDialogManager(new KConfigDialogManager(this, SieveEditorGlobalConfig::self()))
 {
     setWindowTitle(i18nc("@title:window", "Configure"));
     setFaceType(KPageDialog::List);
@@ -60,9 +61,10 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
 
     layout = new QVBoxLayout(editorWidget);
     mWrapText = new QCheckBox(i18n("Wrap Text"));
-    mWrapText->setObjectName("wraptext"_L1);
+    mWrapText->setObjectName("kcfg_WrapText"_L1);
     layout->addWidget(mWrapText);
     layout->addStretch(100);
+    m_configDialogManager->addWidget(editorWidget);
 
     auto editorPageWidgetPage = new KPageWidgetItem(editorWidget, i18n("Editor"));
     editorPageWidgetPage->setIcon(QIcon::fromTheme(QStringLiteral("accessories-text-editor")));
@@ -97,13 +99,13 @@ SieveEditorConfigureDialog::~SieveEditorConfigureDialog()
 void SieveEditorConfigureDialog::loadServerSieveConfig()
 {
     mServerWidget->readConfig();
-    PimCommon::ConfigureImmutableWidgetUtils::loadWidget(mWrapText, SieveEditorGlobalConfig::self()->wrapTextItem());
+    m_configDialogManager->updateWidgets();
 }
 
 void SieveEditorConfigureDialog::saveServerSieveConfig()
 {
     mServerWidget->writeConfig();
-    PimCommon::ConfigureImmutableWidgetUtils::saveCheckBox(mWrapText, SieveEditorGlobalConfig::self()->wrapTextItem());
+    m_configDialogManager->updateSettings();
     SieveEditorGlobalConfig::self()->save();
 #ifdef WITH_KUSERFEEDBACK
     // set current active mode + write back the config for future starts
