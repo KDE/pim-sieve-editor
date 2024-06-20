@@ -11,5 +11,5 @@ target_link_libraries(sieveeditorimportwizardtest
     KPim6::MailTransport
     KPim6::KSieveUi
     libsieveeditor
-    )
+)
 

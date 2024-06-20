@@ -75,7 +75,7 @@ set_package_properties(KF6DocTools PROPERTIES DESCRIPTION
 find_package(KF6UserFeedback ${KF_MIN_VERSION} CONFIG)
 set_package_properties(KF6::UserFeedback PROPERTIES DESCRIPTION "User Feedback lib" TYPE OPTIONAL PURPOSE "Allow to send Telemetry Information (optional).")
 
-if (NOT WIN32 AND NOT APPLE) 
+if(NOT WIN32 AND NOT APPLE) 
    find_package(KF6DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
 endif()
 
@@ -105,7 +105,7 @@ ecm_set_disabled_deprecation_versions(QT 6.7  KF 6.4.0)
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
-if (USE_UNITY_CMAKE_SUPPORT)
+if(USE_UNITY_CMAKE_SUPPORT)
     set(COMPILE_WITH_UNITY_CMAKE_SUPPORT ON)
 endif()
 
@@ -114,7 +114,7 @@ if(BUILD_TESTING)
    find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
 endif()
 add_subdirectory(src)
-if (BUILD_TESTING)
+if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
