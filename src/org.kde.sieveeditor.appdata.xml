@@ -85,7 +85,7 @@
   <summary xml:lang="zh-TW">電子郵件篩選器 Sieve 文稿的編輯器</summary>
   <developer id="org.kde">
     <name translate="no">KDE</name>
-  </developer>  
+  </developer>
   <description>
     <p>
       SieveEditor allows to edit, create, delete sieve scripts.
