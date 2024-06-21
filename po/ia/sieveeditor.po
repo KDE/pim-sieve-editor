@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-19 00:39+0000\n"
+"POT-Creation-Date: 2024-06-21 00:39+0000\n"
 "PO-Revision-Date: 2024-06-18 15:06+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -206,28 +206,28 @@ msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Adde Servitor Sieve"
 
-#: sieveeditorconfiguredialog.cpp:39
+#: sieveeditorconfiguredialog.cpp:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Configura"
 
-#: sieveeditorconfiguredialog.cpp:53
+#: sieveeditorconfiguredialog.cpp:54
 #, kde-format
 msgid "Sieve Server"
 msgstr "Servitor Sieve"
 
-#: sieveeditorconfiguredialog.cpp:62
+#: sieveeditorconfiguredialog.cpp:63
 #, kde-format
 msgid "Wrap Text"
 msgstr "Inveloppa texto"
 
-#: sieveeditorconfiguredialog.cpp:67
+#: sieveeditorconfiguredialog.cpp:69
 #, kde-format
 msgid "Editor"
 msgstr "Editor"
 
-#: sieveeditorconfiguredialog.cpp:83
+#: sieveeditorconfiguredialog.cpp:85
 #, kde-format
 msgid "User Feedback"
 msgstr "Responsa del usator"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-19 00:39+0000\n"
+"POT-Creation-Date: 2024-06-21 00:39+0000\n"
 "PO-Revision-Date: 2018-01-06 09:21+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -220,29 +220,29 @@ msgid "Add Sieve Server"
 msgstr "Dodavanje sito servera"
 
 # >> @title:window
-#: sieveeditorconfiguredialog.cpp:39
+#: sieveeditorconfiguredialog.cpp:40
 #, fuzzy, kde-format
 #| msgid "Configure"
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Podešavanje"
 
-#: sieveeditorconfiguredialog.cpp:53
+#: sieveeditorconfiguredialog.cpp:54
 #, kde-format
 msgid "Sieve Server"
 msgstr "Sito server"
 
-#: sieveeditorconfiguredialog.cpp:62
+#: sieveeditorconfiguredialog.cpp:63
 #, kde-format
 msgid "Wrap Text"
 msgstr "Prelomi tekst"
 
-#: sieveeditorconfiguredialog.cpp:67
+#: sieveeditorconfiguredialog.cpp:69
 #, kde-format
 msgid "Editor"
 msgstr "Uređivač"
 
-#: sieveeditorconfiguredialog.cpp:83
+#: sieveeditorconfiguredialog.cpp:85
 #, kde-format
 msgid "User Feedback"
 msgstr ""

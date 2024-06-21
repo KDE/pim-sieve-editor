@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-19 00:39+0000\n"
-"PO-Revision-Date: 2024-06-06 09:15+0200\n"
+"POT-Creation-Date: 2024-06-21 00:39+0000\n"
+"PO-Revision-Date: 2024-06-19 11:18+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -204,42 +204,40 @@ msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Sieve-server toevoegen"
 
-#: sieveeditorconfiguredialog.cpp:39
+#: sieveeditorconfiguredialog.cpp:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Configureren"
 
-#: sieveeditorconfiguredialog.cpp:53
+#: sieveeditorconfiguredialog.cpp:54
 #, kde-format
 msgid "Sieve Server"
 msgstr "Sieve-server"
 
-#: sieveeditorconfiguredialog.cpp:62
+#: sieveeditorconfiguredialog.cpp:63
 #, kde-format
 msgid "Wrap Text"
 msgstr "Tekst op volgende regel laten doorlopen"
 
-#: sieveeditorconfiguredialog.cpp:67
+#: sieveeditorconfiguredialog.cpp:69
 #, kde-format
 msgid "Editor"
 msgstr "Bewerker"
 
-#: sieveeditorconfiguredialog.cpp:83
+#: sieveeditorconfiguredialog.cpp:85
 #, kde-format
 msgid "User Feedback"
 msgstr "Terugkoppeling van gebruiker"
 
 #: sieveeditorconfigureserverpage.cpp:20
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure…"
 msgstr "Configureren…"
 
 #: sieveeditorconfigureserverpage.cpp:25
-#, fuzzy, kde-format
-#| msgid "Import Sieve Settings…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Import Sieve Settings…"
 msgstr "Sieve-instellingen importeren…"
