@@ -22,7 +22,7 @@ public:
     void setImapSettingsPassword(AbstractImapSettingsPassword *passwordImporter) override;
 
 private:
-    [[nodiscard]] inline bool resourceCanHaveSieveSupport(const QString &filename) const;
+    [[nodiscard]] LIBSIEVEEDITOR_NO_EXPORT inline bool resourceCanHaveSieveSupport(const QString &filename) const;
     LIBSIEVEEDITOR_NO_EXPORT void loadSieveServerSettings();
     LIBSIEVEEDITOR_NO_EXPORT void slotImportNextServerSieveDone(const SieveEditorUtil::SieveServerConfig &config, const QString &filename);
     LIBSIEVEEDITOR_NO_EXPORT void importNextServerSieve();
