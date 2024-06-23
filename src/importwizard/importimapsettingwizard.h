@@ -34,15 +34,15 @@ private:
     LIBSIEVEEDITOR_NO_EXPORT void slotNeedToImportSettings(bool b);
     QMap<QString, AbstractImapSettingsCheckJob *> mListCheckJob;
 
-    ImportImapSettingSearchPage *mSearchPage = nullptr;
+    ImportImapSettingSearchPage *const mSearchPage;
     KPageWidgetItem *mSearchPageItem = nullptr;
 
-    ImportImapSettingNoFoundPage *mNoFoundPage = nullptr;
+    ImportImapSettingNoFoundPage *const mNoFoundPage;
     KPageWidgetItem *mNoFoundPageItem = nullptr;
 
-    ImportImapSettingProgressPage *mProgressPage = nullptr;
+    ImportImapSettingProgressPage *const mProgressPage;
     KPageWidgetItem *mProgressPageItem = nullptr;
 
-    ImportImapSettingFinishPage *mFinishPage = nullptr;
+    ImportImapSettingFinishPage *const mFinishPage;
     KPageWidgetItem *mFinishPageItem = nullptr;
 };

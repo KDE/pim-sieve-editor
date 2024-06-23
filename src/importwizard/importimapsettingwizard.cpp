@@ -24,25 +24,25 @@
 
 ImportImapSettingWizard::ImportImapSettingWizard(QWidget *parent)
     : KAssistantDialog(parent)
+    , mSearchPage(new ImportImapSettingSearchPage(this))
+    , mNoFoundPage(new ImportImapSettingNoFoundPage(this))
+    , mProgressPage(new ImportImapSettingProgressPage(this))
+    , mFinishPage(new ImportImapSettingFinishPage(this))
 {
     setWindowTitle(i18nc("@title:window", "Import IMAP Settings"));
 
-    mSearchPage = new ImportImapSettingSearchPage(this);
     mSearchPageItem = new KPageWidgetItem(mSearchPage, i18n("Select Import Settings"));
     addPage(mSearchPageItem);
 
-    mNoFoundPage = new ImportImapSettingNoFoundPage(this);
     mNoFoundPageItem = new KPageWidgetItem(mNoFoundPage);
     addPage(mNoFoundPageItem);
 
-    mProgressPage = new ImportImapSettingProgressPage(this);
     mProgressPageItem = new KPageWidgetItem(mProgressPage, i18n("Import in Progress…"));
     connect(mProgressPage, &ImportImapSettingProgressPage::finished, this, &ImportImapSettingWizard::slotFinishImportData);
     connect(mProgressPage, &ImportImapSettingProgressPage::noSettingsImported, this, &ImportImapSettingWizard::slotAddSummaryInfo);
     connect(mProgressPage, &ImportImapSettingProgressPage::addSummaryInfo, this, &ImportImapSettingWizard::slotAddSummaryInfo);
     addPage(mProgressPageItem);
 
-    mFinishPage = new ImportImapSettingFinishPage(this);
     mFinishPageItem = new KPageWidgetItem(mFinishPage, i18n("Finish"));
     addPage(mFinishPageItem);
 
