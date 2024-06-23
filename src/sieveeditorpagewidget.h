@@ -91,8 +91,6 @@ private:
     void slotPutResult(KManageSieve::SieveJob *, bool success);
     void slotValueChanged(bool b);
     void slotCheckScriptJobFinished(const QString &errorMsg, bool success);
-
-private:
     void setModified(bool b);
     QUrl mCurrentURL;
     KSieveUi::SieveEditorWidget *const mSieveEditorWidget;

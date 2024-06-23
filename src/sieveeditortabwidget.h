@@ -22,7 +22,5 @@ Q_SIGNALS:
 private:
     void slotTabContextMenuRequest(const QPoint &pos);
     void slotCloseCurrentTab();
-
-private:
     void initActions(KActionCollection *ac);
 };
