@@ -180,7 +180,7 @@ QDebug operator<<(QDebug d, const SieveEditorUtil::SieveAccountSettings &setting
 
 bool SieveEditorUtil::SieveAccountSettings::operator==(const SieveEditorUtil::SieveAccountSettings &other) const
 {
-    bool result = (serverName == other.serverName) && (userName == other.userName) && (password == other.password)
+    const bool result = (serverName == other.serverName) && (userName == other.userName) && (password == other.password)
         && (authenticationType == other.authenticationType) && (port == other.port);
     if (!result) {
         qCDebug(SIEVEEDITOR_LOG) << "serverName " << serverName << " other.serverName " << other.serverName;
