@@ -31,7 +31,7 @@ private:
     void writeConfig();
     void loadServerSieveConfig();
     SieveEditorConfigureServerWidget *mServerWidget = nullptr;
-    QCheckBox *mWrapText = nullptr;
+    QCheckBox *const mWrapText;
     KConfigDialogManager *m_configDialogManager = nullptr;
 #ifdef WITH_KUSERFEEDBACK
     KUserFeedback::FeedbackConfigWidget *mUserFeedbackWidget = nullptr;
