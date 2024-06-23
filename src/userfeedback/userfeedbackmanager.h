@@ -16,11 +16,11 @@ class LIBSIEVEEDITOR_EXPORT UserFeedBackManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit UserFeedBackManager(QObject *parent = nullptr);
     static UserFeedBackManager *self();
 
     KUserFeedback::Provider *userFeedbackProvider() const;
 
 private:
+    explicit UserFeedBackManager(QObject *parent = nullptr);
     KUserFeedback::Provider *const mUserFeedbackProvider;
 };
