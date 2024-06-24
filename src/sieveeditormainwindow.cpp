@@ -336,6 +336,7 @@ void SieveEditorMainWindow::setupActions()
     auto manager = new KColorSchemeManager(this);
     ac->addAction(QStringLiteral("colorscheme_menu"), KColorSchemeMenu::createMenu(manager, this));
     mShowMenuBarAction->setChecked(SieveEditorGlobalConfig::self()->showMenuBar());
+    slotToggleMenubar(true);
 }
 
 void SieveEditorMainWindow::slotToggleMenubar(bool dontShowWarning)
