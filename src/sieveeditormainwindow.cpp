@@ -357,6 +357,7 @@ void SieveEditorMainWindow::slotToggleMenubar(bool dontShowWarning)
             menuBar()->hide();
         }
         SieveEditorGlobalConfig::self()->setShowMenuBar(mShowMenuBarAction->isChecked());
+        SieveEditorGlobalConfig::self()->save();
     }
 }
 
