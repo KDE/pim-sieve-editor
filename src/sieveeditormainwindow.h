@@ -14,7 +14,8 @@ class QLabel;
 class SieveEditorBookmarks;
 class KActionMenu;
 class KToggleFullScreenAction;
-
+class KHamburgerMenu;
+class KToggleAction;
 namespace PimCommon
 {
 class KActionMenuChangeCase;
@@ -55,6 +56,8 @@ private:
     [[nodiscard]] LIBSIEVEEDITOR_NO_EXPORT QString currentText() const;
     LIBSIEVEEDITOR_NO_EXPORT void slotFullScreen(bool t);
     LIBSIEVEEDITOR_NO_EXPORT void writeConfig();
+    LIBSIEVEEDITOR_NO_EXPORT void slotToggleMenubar(bool dontShowWarning);
+    LIBSIEVEEDITOR_NO_EXPORT void updateHamburgerMenu();
 
     SieveEditorCentralWidget *mMainWidget = nullptr;
     QAction *mDeleteScript = nullptr;
@@ -93,5 +96,7 @@ private:
     SieveEditorBookmarks *mSieveEditorBookmarks = nullptr;
     KActionMenu *mBookmarkMenu = nullptr;
     KToggleFullScreenAction *mShowFullScreenAction = nullptr;
+    KHamburgerMenu *mHamburgerMenu = nullptr;
+    KToggleAction *mShowMenuBarAction = nullptr;
     bool mNetworkIsDown = false;
 };

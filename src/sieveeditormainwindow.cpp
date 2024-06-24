@@ -5,12 +5,12 @@
 */
 
 #include "sieveeditormainwindow.h"
-
 #include "importwizard/importimapsettingwizard.h"
 #include "serversievesettingsdialog.h"
 #include "sieveeditorbookmarks.h"
 #include "sieveeditorcentralwidget.h"
 #include "sieveeditorconfiguredialog.h"
+#include "sieveeditorglobalconfig.h"
 #include "sieveeditormainwidget.h"
 #include "sievepurposemenuwidget.h"
 #include <PimCommon/KActionMenuChangeCase>
@@ -25,8 +25,10 @@
 #include <KColorSchemeMenu>
 #include <KConfigGroup>
 #include <KLocalizedString>
+#include <KMessageBox>
 #include <KStandardAction>
 #include <KToggleFullScreenAction>
+#include <KToolBar>
 #include <QVBoxLayout>
 
 #include <KColorSchemeManager>
@@ -308,8 +310,21 @@ void SieveEditorMainWindow::setupActions()
 
     mPrintAction = KStandardAction::print(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotPrint, ac);
 
-    mPrintPreviewAction = KStandardAction::printPreview(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotPrintPreview, ac);
+    mShowMenuBarAction = KStandardAction::showMenubar(this, &SieveEditorMainWindow::slotToggleMenubar, actionCollection());
 
+    mPrintPreviewAction = KStandardAction::printPreview(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotPrintPreview, ac);
+    if (menuBar()) {
+        mHamburgerMenu = KStandardAction::hamburgerMenu(nullptr, nullptr, actionCollection());
+        mHamburgerMenu->setShowMenuBarAction(mShowMenuBarAction);
+        mHamburgerMenu->setMenuBar(menuBar());
+        connect(mHamburgerMenu, &KHamburgerMenu::aboutToShowMenu, this, [this]() {
+            updateHamburgerMenu();
+            // Immediately disconnect. We only need to run this once, but on demand.
+            // NOTE: The nullptr at the end disconnects all connections between
+            // q and mHamburgerMenu's aboutToShowMenu signal.
+            disconnect(mHamburgerMenu, &KHamburgerMenu::aboutToShowMenu, this, nullptr);
+        });
+    }
     act = new QAction(i18nc("@action", "Import IMAP Settings…"), this);
     ac->addAction(QStringLiteral("import_imap_settings"), act);
     connect(act, &QAction::triggered, this, &SieveEditorMainWindow::slotImportImapSettings);
@@ -320,6 +335,40 @@ void SieveEditorMainWindow::setupActions()
 
     auto manager = new KColorSchemeManager(this);
     ac->addAction(QStringLiteral("colorscheme_menu"), KColorSchemeMenu::createMenu(manager, this));
+    mShowMenuBarAction->setChecked(SieveEditorGlobalConfig::self()->showMenuBar());
+}
+
+void SieveEditorMainWindow::slotToggleMenubar(bool dontShowWarning)
+{
+    if (menuBar()) {
+        if (mShowMenuBarAction->isChecked()) {
+            menuBar()->show();
+        } else {
+            if (!dontShowWarning && (!toolBar()->isVisible() || !toolBar()->actions().contains(mHamburgerMenu))) {
+                const QString accel = mShowMenuBarAction->shortcut().toString(QKeySequence::NativeText);
+                KMessageBox::information(this,
+                                         i18n("<qt>This will hide the menu bar completely."
+                                              " You can show it again by typing %1.</qt>",
+                                              accel),
+                                         i18n("Hide menu bar"),
+                                         QStringLiteral("HideMenuBarWarning"));
+            }
+            menuBar()->hide();
+        }
+        SieveEditorGlobalConfig::self()->setShowMenuBar(mShowMenuBarAction->isChecked());
+    }
+}
+
+void SieveEditorMainWindow::updateHamburgerMenu()
+{
+    delete mHamburgerMenu->menu();
+    auto menu = new QMenu(this);
+
+    menu->addAction(actionCollection()->action(KStandardAction::name(KStandardAction::Print)));
+    menu->addAction(actionCollection()->action(KStandardAction::name(KStandardAction::PrintPreview)));
+    menu->addSeparator();
+    menu->addAction(actionCollection()->action(KStandardAction::name(KStandardAction::Quit)));
+    mHamburgerMenu->setMenu(menu);
 }
 
 void SieveEditorMainWindow::slotImportImapSettings()
