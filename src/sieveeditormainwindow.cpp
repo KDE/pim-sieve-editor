@@ -366,10 +366,10 @@ void SieveEditorMainWindow::updateHamburgerMenu()
     delete mHamburgerMenu->menu();
     auto menu = new QMenu(this);
 
-    menu->addAction(actionCollection()->action(KStandardAction::name(KStandardAction::Print)));
-    menu->addAction(actionCollection()->action(KStandardAction::name(KStandardAction::PrintPreview)));
+    menu->addAction(actionCollection()->action(QStringLiteral("add_server_sieve")));
     menu->addSeparator();
-    menu->addAction(actionCollection()->action(KStandardAction::name(KStandardAction::Quit)));
+    menu->addAction(actionCollection()->action(QStringLiteral("create_new_script")));
+    menu->addSeparator();
     mHamburgerMenu->setMenu(menu);
 }
 
