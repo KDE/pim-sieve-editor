@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-21 00:39+0000\n"
+"POT-Creation-Date: 2024-06-24 00:39+0000\n"
 "PO-Revision-Date: 2024-06-18 09:20+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -73,18 +73,18 @@ msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr "Izberite program, iz katerega želite uvoziti nastavitve IMAP:"
 
-#: importwizard/importimapsettingwizard.cpp:28
+#: importwizard/importimapsettingwizard.cpp:32
 #, kde-format
 msgctxt "@title:window"
 msgid "Import IMAP Settings"
 msgstr "Uvozi nastavitve IMAP"
 
-#: importwizard/importimapsettingwizard.cpp:31
+#: importwizard/importimapsettingwizard.cpp:34
 #, kde-format
 msgid "Select Import Settings"
 msgstr "Izberite nastavitve uvoza"
 
-#: importwizard/importimapsettingwizard.cpp:39
+#: importwizard/importimapsettingwizard.cpp:40
 #, kde-format
 msgid "Import in Progress…"
 msgstr "Uvažanje je v teku…"
@@ -205,21 +205,21 @@ msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Dodaj strežnik Sieve"
 
-#: sieveeditorconfiguredialog.cpp:40
+#: sieveeditorconfiguredialog.cpp:38
+#, kde-format
+msgid "Wrap Text"
+msgstr "Prelomi besedilo"
+
+#: sieveeditorconfiguredialog.cpp:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Nastavi"
 
-#: sieveeditorconfiguredialog.cpp:54
+#: sieveeditorconfiguredialog.cpp:55
 #, kde-format
 msgid "Sieve Server"
 msgstr "Strežnik Sieve"
-
-#: sieveeditorconfiguredialog.cpp:63
-#, kde-format
-msgid "Wrap Text"
-msgstr "Prelomi besedilo"
 
 #: sieveeditorconfiguredialog.cpp:69
 #, kde-format

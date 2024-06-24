@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-21 00:39+0000\n"
+"POT-Creation-Date: 2024-06-24 00:39+0000\n"
 "PO-Revision-Date: 2024-06-19 22:33+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -73,18 +73,18 @@ msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr "Bonvolu elekti la programon el kiu vi ŝatas importi IMAP-agordojn:"
 
-#: importwizard/importimapsettingwizard.cpp:28
+#: importwizard/importimapsettingwizard.cpp:32
 #, kde-format
 msgctxt "@title:window"
 msgid "Import IMAP Settings"
 msgstr "Importi IMAP-agordojn"
 
-#: importwizard/importimapsettingwizard.cpp:31
+#: importwizard/importimapsettingwizard.cpp:34
 #, kde-format
 msgid "Select Import Settings"
 msgstr "Elekti Import-agordojn"
 
-#: importwizard/importimapsettingwizard.cpp:39
+#: importwizard/importimapsettingwizard.cpp:40
 #, kde-format
 msgid "Import in Progress…"
 msgstr "Enporto en progreso…"
@@ -205,21 +205,21 @@ msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Aldoni Sieve-servilon"
 
-#: sieveeditorconfiguredialog.cpp:40
+#: sieveeditorconfiguredialog.cpp:38
+#, kde-format
+msgid "Wrap Text"
+msgstr "Envolvi Tekston"
+
+#: sieveeditorconfiguredialog.cpp:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Agordi"
 
-#: sieveeditorconfiguredialog.cpp:54
+#: sieveeditorconfiguredialog.cpp:55
 #, kde-format
 msgid "Sieve Server"
 msgstr "Sieve-Servilo"
-
-#: sieveeditorconfiguredialog.cpp:63
-#, kde-format
-msgid "Wrap Text"
-msgstr "Envolvi Tekston"
 
 #: sieveeditorconfiguredialog.cpp:69
 #, kde-format
