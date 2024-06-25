@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-24 00:39+0000\n"
+"POT-Creation-Date: 2024-06-25 00:39+0000\n"
 "PO-Revision-Date: 2024-06-18 12:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -305,128 +305,140 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "Betiği Kapat"
 
-#: sieveeditormainwindow.cpp:155
+#: sieveeditormainwindow.cpp:157
 #, kde-format
 msgid "Network is Up."
 msgstr "Ağ Çalışıyor."
 
-#: sieveeditormainwindow.cpp:157
+#: sieveeditormainwindow.cpp:159
 #, kde-format
 msgid "Network is Down."
 msgstr "Ağ Kesildi."
 
-#: sieveeditormainwindow.cpp:179
+#: sieveeditormainwindow.cpp:181
 #, kde-format
 msgid "Upload"
 msgstr "Yükle"
 
-#: sieveeditormainwindow.cpp:182
+#: sieveeditormainwindow.cpp:184
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Sieve Sunucusu Ekle…"
 
-#: sieveeditormainwindow.cpp:186
+#: sieveeditormainwindow.cpp:188
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Betiği Sil"
 
-#: sieveeditormainwindow.cpp:192
+#: sieveeditormainwindow.cpp:194
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Yeni Betik Oluştur…"
 
-#: sieveeditormainwindow.cpp:198
+#: sieveeditormainwindow.cpp:200
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Betiği Düzenle…"
 
-#: sieveeditormainwindow.cpp:203
+#: sieveeditormainwindow.cpp:205
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Betiği Devre Dışı Bırak"
 
-#: sieveeditormainwindow.cpp:208
+#: sieveeditormainwindow.cpp:210
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Listeyi Yenile"
 
-#: sieveeditormainwindow.cpp:214
+#: sieveeditormainwindow.cpp:216
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Satıra Git…"
 
-#: sieveeditormainwindow.cpp:231
+#: sieveeditormainwindow.cpp:233
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "İçe Aktar…"
 
-#: sieveeditormainwindow.cpp:237
+#: sieveeditormainwindow.cpp:239
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Paylaş…"
 
-#: sieveeditormainwindow.cpp:245
+#: sieveeditormainwindow.cpp:247
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Yazım Denetimi Yap…"
 
-#: sieveeditormainwindow.cpp:251
+#: sieveeditormainwindow.cpp:253
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Sözdizimi Denetle"
 
-#: sieveeditormainwindow.cpp:256
+#: sieveeditormainwindow.cpp:258
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Grafiksel Olarak Kurallar Oluştur…"
 
-#: sieveeditormainwindow.cpp:261
+#: sieveeditormainwindow.cpp:263
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Yorum Yap"
 
-#: sieveeditormainwindow.cpp:266
+#: sieveeditormainwindow.cpp:268
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Yorumu Kaldır"
 
-#: sieveeditormainwindow.cpp:294
+#: sieveeditormainwindow.cpp:296
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "Y&er İmleri"
 
-#: sieveeditormainwindow.cpp:299
+#: sieveeditormainwindow.cpp:301
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Sieve Betiği Hata Ayıklaması…"
 
-#: sieveeditormainwindow.cpp:304
+#: sieveeditormainwindow.cpp:306
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Sözcük Kaydırma"
 
-#: sieveeditormainwindow.cpp:313
+#: sieveeditormainwindow.cpp:328
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "IMAP Ayarları İçe Aktar…"
+
+#: sieveeditormainwindow.cpp:351
+#, kde-format
+msgid ""
+"<qt>This will hide the menu bar completely. You can show it again by typing "
+"%1.</qt>"
+msgstr ""
+
+#: sieveeditormainwindow.cpp:354
+#, kde-format
+msgid "Hide menu bar"
+msgstr ""
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -537,6 +549,12 @@ msgstr "Ayar&lar"
 #, kde-format
 msgid "Tools"
 msgstr "Araçlar"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: sieveeditorui.rc:61
+#, kde-format
+msgid "Main Toolbar"
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: ui/serversievesettings.ui:37
