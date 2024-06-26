@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:39+0000\n"
-"PO-Revision-Date: 2024-06-06 12:19+0200\n"
+"PO-Revision-Date: 2024-06-25 12:37+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -439,11 +439,13 @@ msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 msgstr ""
+"<qt>Això ocultarà completament la barra de menús. La podeu tornar a mostrar "
+"prement %1.</qt>"
 
 #: sieveeditormainwindow.cpp:354
 #, kde-format
 msgid "Hide menu bar"
-msgstr ""
+msgstr "Oculta la barra de menús"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -560,7 +562,7 @@ msgstr "Eines"
 #: sieveeditorui.rc:61
 #, kde-format
 msgid "Main Toolbar"
-msgstr ""
+msgstr "Barra d'eines principal"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: ui/serversievesettings.ui:37
@@ -599,7 +601,7 @@ msgid ""
 msgstr ""
 "El port del servidor va canviar quan «ManageSieve» es va convertir a un "
 "estàndard RFC complet. Les implementacions antigues del servidor segueixen "
-"usant el port 2000, mentre que un servidor conforme amb el nou estàndard "
+"usant el port 2000, mentre que un servidor conforme amb l'estàndard nou "
 "només es pot accedir a través del port 4190."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
