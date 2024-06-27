@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:39+0000\n"
-"PO-Revision-Date: 2024-06-08 11:36+0400\n"
+"PO-Revision-Date: 2024-06-26 18:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -228,15 +228,13 @@ msgid "User Feedback"
 msgstr "مشاركة بياناتك"
 
 #: sieveeditorconfigureserverpage.cpp:20
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure…"
 msgstr "اضبط…"
 
 #: sieveeditorconfigureserverpage.cpp:25
-#, fuzzy, kde-format
-#| msgid "Import Sieve Settings…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Import Sieve Settings…"
 msgstr "استورد إعدادات «سِف»…"
@@ -435,12 +433,12 @@ msgstr "استيراد إعدادات IMAP…"
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
-msgstr ""
+msgstr "<qt>سيُخفي هذا شريط القوائم بالكامل. يمكنك إظهاره ثانيةً بكتابة %1.</qt>"
 
 #: sieveeditormainwindow.cpp:354
 #, kde-format
 msgid "Hide menu bar"
-msgstr ""
+msgstr "أخفِ شريط القوائم"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -556,7 +554,7 @@ msgstr "أدوات"
 #: sieveeditorui.rc:61
 #, kde-format
 msgid "Main Toolbar"
-msgstr ""
+msgstr "شريط الأدوات الرئيسي"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: ui/serversievesettings.ui:37

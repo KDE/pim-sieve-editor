@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:39+0000\n"
-"PO-Revision-Date: 2024-06-18 09:20+0200\n"
+"PO-Revision-Date: 2024-06-26 11:54+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -328,7 +328,7 @@ msgstr "Pošlji"
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
-msgstr "Dodaj strežnik Sieve..."
+msgstr "Dodaj strežnik Sieve…"
 
 #: sieveeditormainwindow.cpp:188
 #, kde-format
@@ -340,13 +340,13 @@ msgstr "Izbriši skript"
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
-msgstr "Ustvari nov skript..."
+msgstr "Ustvari nov skript…"
 
 #: sieveeditormainwindow.cpp:200
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
-msgstr "Uredi skript..."
+msgstr "Uredi skript…"
 
 #: sieveeditormainwindow.cpp:205
 #, kde-format
@@ -364,25 +364,25 @@ msgstr "Osveži seznam"
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
-msgstr "Pojdi v vrstico..."
+msgstr "Pojdi v vrstico…"
 
 #: sieveeditormainwindow.cpp:233
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
-msgstr "Uvozi..."
+msgstr "Uvozi…"
 
 #: sieveeditormainwindow.cpp:239
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
-msgstr "Deli..."
+msgstr "Deli…"
 
 #: sieveeditormainwindow.cpp:247
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
-msgstr "Preveri črkovanje..."
+msgstr "Preveri črkovanje…"
 
 #: sieveeditormainwindow.cpp:253
 #, kde-format
@@ -394,7 +394,7 @@ msgstr "Preveri skladnjo"
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
-msgstr "Ustvari pravila v grafičnem načinu..."
+msgstr "Ustvari pravila v grafičnem načinu…"
 
 #: sieveeditormainwindow.cpp:263
 #, kde-format
@@ -418,7 +418,7 @@ msgstr "Zaznamki"
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
-msgstr "Razhrošči skript Sieve..."
+msgstr "Razhrošči skript Sieve…"
 
 #: sieveeditormainwindow.cpp:306
 #, kde-format
@@ -430,7 +430,7 @@ msgstr "Zvijanje besed"
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
-msgstr "Uvozi nastavitve IMAP..."
+msgstr "Uvozi nastavitve IMAP…"
 
 #: sieveeditormainwindow.cpp:351
 #, kde-format
@@ -438,11 +438,13 @@ msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 msgstr ""
+"<qt>To bo popolnoma skrilo menijsko vrstico. Ponovno jo lahko prikažete "
+"tako, da vnesete %1.</qt>"
 
 #: sieveeditormainwindow.cpp:354
 #, kde-format
 msgid "Hide menu bar"
-msgstr ""
+msgstr "Skrij menijsko vrstico"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -558,7 +560,7 @@ msgstr "Orodja"
 #: sieveeditorui.rc:61
 #, kde-format
 msgid "Main Toolbar"
-msgstr ""
+msgstr "Glavna orodna vrstica"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: ui/serversievesettings.ui:37
