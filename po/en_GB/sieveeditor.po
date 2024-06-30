@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:39+0000\n"
-"PO-Revision-Date: 2024-06-22 13:07+0100\n"
+"PO-Revision-Date: 2024-06-29 11:28+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -434,11 +434,13 @@ msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 msgstr ""
+"<qt>This will hide the menu bar completely. You can show it again by typing "
+"%1.</qt>"
 
 #: sieveeditormainwindow.cpp:354
 #, kde-format
 msgid "Hide menu bar"
-msgstr ""
+msgstr "Hide menu bar"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -554,7 +556,7 @@ msgstr "Tools"
 #: sieveeditorui.rc:61
 #, kde-format
 msgid "Main Toolbar"
-msgstr ""
+msgstr "Main Toolbar"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: ui/serversievesettings.ui:37
