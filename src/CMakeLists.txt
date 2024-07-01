@@ -138,13 +138,11 @@ target_link_libraries(sieveeditor
     KF6::XmlGui
     KF6::I18n
     ${libsieveeditor_userfeedback_LIB}
+    KF6::IconThemes
 )
 if(NOT WIN32 AND NOT APPLE)
     target_link_libraries(sieveeditor KF6::DBusAddons)
 endif()    	
-if(TARGET KF6::IconThemes)
-    target_link_libraries(sieveeditor KF6::IconThemes)
-endif()
 install(TARGETS sieveeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(PROGRAMS org.kde.sieveeditor.desktop DESTINATION ${KDE_INSTALL_APPDIR})
