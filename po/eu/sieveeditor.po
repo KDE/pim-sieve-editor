@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:39+0000\n"
-"PO-Revision-Date: 2024-03-23 22:35+0100\n"
+"PO-Revision-Date: 2024-07-11 12:59+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,15 +41,13 @@ msgid "Thunderbird IMAP Settings"
 msgstr "Thunderbird-en IMAP ezarpenak"
 
 #: importwizard/importimapsettingfinishpage.cpp:22
-#, fuzzy, kde-format
-#| msgid "IMAP settings were imported:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
 msgstr "IMAP ezarpenak inportatu dira:"
 
 #: importwizard/importimapsettingnofoundpage.cpp:20
-#, fuzzy, kde-format
-#| msgid "No settings found to import."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "Ez da inportatzeko ezarpenik aurkitu."
@@ -60,8 +58,7 @@ msgid "No settings found."
 msgstr "Ez da ezarpenik aurkitu."
 
 #: importwizard/importimapsettingprogresspage.cpp:70
-#, fuzzy, kde-format
-#| msgid "Import settings from %1..."
+#, kde-format
 msgid "Import settings from %1…"
 msgstr "Inportatu ezarpenak %1(e)tik..."
 
@@ -71,9 +68,7 @@ msgid "Import settings from %1 done"
 msgstr "Ezarpenak %1(e)tik inportatzea egin da"
 
 #: importwizard/importimapsettingsearchpage.cpp:21
-#, fuzzy, kde-format
-#| msgid ""
-#| "Please select the program from which you like to import IMAP settings:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr ""
@@ -91,8 +86,7 @@ msgid "Select Import Settings"
 msgstr "Hautatu inportatzeko ezarpenak"
 
 #: importwizard/importimapsettingwizard.cpp:40
-#, fuzzy, kde-format
-#| msgid "Import in Progress..."
+#, kde-format
 msgid "Import in Progress…"
 msgstr "Inportatzen ari da..."
 
@@ -117,8 +111,7 @@ msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Copyright © 2013-%1 sieveeditor egileak"
 
 #: main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -129,11 +122,11 @@ msgid "Maintainer"
 msgstr "Arduraduna"
 
 #: main.cpp:64
-#, fuzzy, kde-format
-#| msgid "Lists the available options for user feedback"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
-msgstr "Erabiltzaileen erreakzioetarako aukera erabilgarriak zerrendatzen ditu"
+msgstr ""
+"Erabiltzailearen atzera-elikaduraren aukera erabilgarriak zerrendatzen ditu"
 
 #: serversievelistwidget.cpp:76
 #, kde-format
@@ -242,19 +235,16 @@ msgid "User Feedback"
 msgstr "Erabiltzaileen erreakzioa"
 
 #: sieveeditorconfigureserverpage.cpp:20
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure…"
-msgstr "Konfiguratu"
+msgstr "Konfiguratu..."
 
 #: sieveeditorconfigureserverpage.cpp:25
-#, fuzzy, kde-format
-#| msgid "Import Sieve Settings:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Import Sieve Settings…"
-msgstr "Inportatu «Sieve» ezarpenak:"
+msgstr "Inportatu «Sieve» ezarpenak..."
 
 #: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
@@ -338,100 +328,85 @@ msgid "Upload"
 msgstr "Zama-igo"
 
 #: sieveeditormainwindow.cpp:184
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Sieve Server"
+#, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
-msgstr "Gehitu «Sieve» zerbitzaria"
+msgstr "Gehitu «Sieve» zerbitzaria..."
 
 #: sieveeditormainwindow.cpp:188
-#, fuzzy, kde-format
-#| msgid "Delete Script"
+#, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Ezabatu gidoia"
 
 #: sieveeditormainwindow.cpp:194
-#, fuzzy, kde-format
-#| msgid "Create New Script..."
+#, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Sortu gidoi berria..."
 
 #: sieveeditormainwindow.cpp:200
-#, fuzzy, kde-format
-#| msgid "Edit Script..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Editatu gidoia..."
 
 #: sieveeditormainwindow.cpp:205
-#, fuzzy, kde-format
-#| msgid "Deactivate Script"
+#, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Desaktibatu gidoia"
 
 #: sieveeditormainwindow.cpp:210
-#, fuzzy, kde-format
-#| msgid "Refresh List"
+#, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Berritu zerrenda"
 
 #: sieveeditormainwindow.cpp:216
-#, fuzzy, kde-format
-#| msgid "Go to Line..."
+#, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Joan ... lerrora"
 
 #: sieveeditormainwindow.cpp:233
-#, fuzzy, kde-format
-#| msgid "Import..."
+#, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "Inportatu..."
 
 #: sieveeditormainwindow.cpp:239
-#, fuzzy, kde-format
-#| msgid "Share..."
+#, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Partekatu..."
 
 #: sieveeditormainwindow.cpp:247
-#, fuzzy, kde-format
-#| msgid "Check Spelling..."
+#, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
-msgstr "Egiaztatu ortografia..."
+msgstr "Ortografia aztertu..."
 
 #: sieveeditormainwindow.cpp:253
-#, fuzzy, kde-format
-#| msgid "Check Syntax"
+#, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
-msgstr "Egiaztatu sintaxia"
+msgstr "Sintaxia aztertu"
 
 #: sieveeditormainwindow.cpp:258
-#, fuzzy, kde-format
-#| msgid "Create Rules Graphically:"
+#, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
-msgstr "Sortu arauak grafikoki:"
+msgstr "Sortu arauak grafikoki..."
 
 #: sieveeditormainwindow.cpp:263
-#, fuzzy, kde-format
-#| msgid "Comment"
+#, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Iruzkina"
 
 #: sieveeditormainwindow.cpp:268
-#, fuzzy, kde-format
-#| msgid "Uncomment"
+#, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Kendu iruzkin marka"
@@ -443,26 +418,22 @@ msgid "&Bookmarks"
 msgstr "&Laster-markak"
 
 #: sieveeditormainwindow.cpp:301
-#, fuzzy, kde-format
-#| msgid "Debug Sieve Script..."
+#, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Araztu «Sieve» gidoia..."
 
 #: sieveeditormainwindow.cpp:306
-#, fuzzy, kde-format
-#| msgid "Wordwrap"
+#, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Itzulbiratzea"
 
 #: sieveeditormainwindow.cpp:328
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Import IMAP Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
-msgstr "Inportatu IMAP ezarpenak"
+msgstr "Inportatu IMAP ezarpenak..."
 
 #: sieveeditormainwindow.cpp:351
 #, kde-format
@@ -470,11 +441,13 @@ msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 msgstr ""
+"<qt>Honek menu-barra erabat ezkutatuko du. %1 tekleatuta berriz erakutsi "
+"dezakezu.</qt>"
 
 #: sieveeditormainwindow.cpp:354
 #, kde-format
 msgid "Hide menu bar"
-msgstr ""
+msgstr "Ezkutatu menu-barra"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -487,8 +460,7 @@ msgid "(Disabled) %1"
 msgstr "(Ezgaituta) %1"
 
 #: sieveeditorpagewidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Uploading script to server for checking it, please wait..."
+#, kde-format
 msgid "Uploading script to server for checking it, please wait…"
 msgstr "Gidoia egiaztatzeko zerbitzarira zama-igotzen, itxoin mesedez..."
 
@@ -591,7 +563,7 @@ msgstr "Tresnak"
 #: sieveeditorui.rc:61
 #, kde-format
 msgid "Main Toolbar"
-msgstr ""
+msgstr "Tresna-barra nagusia"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: ui/serversievesettings.ui:37
@@ -806,12 +778,11 @@ msgstr "Hutsik"
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Gehitu…"
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgid "Modify…"
 msgstr "Aldatu..."
 
