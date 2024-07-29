@@ -35,7 +35,7 @@ static const char mySieveEditorConfigureDialog[] = "SieveEditorConfigureDialog";
 
 SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     : KPageDialog(parent)
-    , mWrapText(new QCheckBox(i18n("Wrap Text"), this))
+    , mWrapText(new QCheckBox(i18nc("@option:check", "Wrap Text"), this))
     , m_configDialogManager(new KConfigDialogManager(this, SieveEditorGlobalConfig::self()))
 {
     setWindowTitle(i18nc("@title:window", "Configure"));
