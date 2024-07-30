@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2024-07-27 21:33+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -205,7 +205,9 @@ msgid "Add Sieve Server"
 msgstr "Sieve kiszolgáló hozzáadása"
 
 #: sieveeditorconfiguredialog.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Wrap Text"
+msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr "Sortöréssel több sorba"
 

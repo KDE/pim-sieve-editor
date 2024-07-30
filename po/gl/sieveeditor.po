@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2024-06-27 21:04+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -204,7 +204,9 @@ msgid "Add Sieve Server"
 msgstr "Engadir un servidor de Sieve"
 
 #: sieveeditorconfiguredialog.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Wrap Text"
+msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr "Dividir o texto"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2024-06-25 15:02+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -201,7 +201,9 @@ msgid "Add Sieve Server"
 msgstr "הוספת שרת Sieve"
 
 #: sieveeditorconfiguredialog.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Wrap Text"
+msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr "גלישת טקסט"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2022-03-25 09:54+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -213,7 +213,9 @@ msgid "Add Sieve Server"
 msgstr "Adicionar um Servidor de Sieve"
 
 #: sieveeditorconfiguredialog.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Wrap Text"
+msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr "Repartir o Texto"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2024-06-25 07:13+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -208,7 +208,9 @@ msgid "Add Sieve Server"
 msgstr "Додавання сервера фільтрування"
 
 #: sieveeditorconfiguredialog.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Wrap Text"
+msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr "Перенесення рядків"
 
