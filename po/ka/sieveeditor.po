@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2024-06-25 05:19+0200\n"
+"PO-Revision-Date: 2024-07-30 06:28+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -203,11 +203,10 @@ msgid "Add Sieve Server"
 msgstr "Sieve-ის სერვერის დამატება"
 
 #: sieveeditorconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Wrap Text"
+#, kde-format
 msgctxt "@option:check"
 msgid "Wrap Text"
-msgstr "ტექსტს გადატანა"
+msgstr "ტექსტის გადატანა"
 
 #: sieveeditorconfiguredialog.cpp:41
 #, kde-format

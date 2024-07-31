@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2024-06-28 16:51+0200\n"
+"PO-Revision-Date: 2024-07-30 21:06+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -206,8 +206,7 @@ msgid "Add Sieve Server"
 msgstr "Aldoni Sieve-servilon"
 
 #: sieveeditorconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Wrap Text"
+#, kde-format
 msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr "Envolvi Tekston"
