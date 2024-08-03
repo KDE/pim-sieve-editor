@@ -200,8 +200,7 @@ msgid "Add Sieve Server"
 msgstr "添加 Sieve 服务器"
 
 #: sieveeditorconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Wrap Text"
+#, kde-format
 msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr "文本换行"
