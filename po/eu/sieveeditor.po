@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-11 12:59+0200\n"
+"PO-Revision-Date: 2024-08-03 11:04+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -209,11 +209,10 @@ msgid "Add Sieve Server"
 msgstr "Gehitu «Sieve» zerbitzaria"
 
 #: sieveeditorconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Wrap Text"
+#, kde-format
 msgctxt "@option:check"
 msgid "Wrap Text"
-msgstr "Testua itzulbiratu"
+msgstr "Testu itzulbira"
 
 #: sieveeditorconfiguredialog.cpp:41
 #, kde-format
@@ -447,8 +446,7 @@ msgstr ""
 "dezakezu.</qt>"
 
 #: sieveeditormainwindow.cpp:354
-#, fuzzy, kde-format
-#| msgid "Hide menu bar"
+#, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
 msgstr "Ezkutatu menu-barra"
