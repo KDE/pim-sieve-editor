@@ -37,7 +37,6 @@ int main(int argc, char **argv)
 #endif
     QApplication app(argc, argv);
     app.setDesktopFileName(QStringLiteral("org.kde.sieveeditor"));
-    KCrash::initialize();
 #if HAVE_STYLE_MANAGER
     KStyleManager::initStyle();
 #else // !HAVE_STYLE_MANAGER
@@ -57,6 +56,7 @@ int main(int argc, char **argv)
 
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("sieveeditor")));
     KAboutData::setApplicationData(aboutData);
+    KCrash::initialize();
 
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
