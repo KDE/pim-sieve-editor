@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:39+0000\n"
+"POT-Creation-Date: 2024-08-10 02:40+0000\n"
 "PO-Revision-Date: 2020-05-12 10:54+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -97,30 +97,30 @@ msgstr "Import käib ..."
 msgid "Finish"
 msgstr "Lõpetamine"
 
-#: main.cpp:51
+#: main.cpp:50
 #, kde-format
 msgid "KSieve Editor"
 msgstr "KSieve redaktor"
 
-#: main.cpp:53
+#: main.cpp:52
 #, kde-format
 msgid "Sieve Editor"
 msgstr "Sieve redaktor"
 
-#: main.cpp:55
+#: main.cpp:54
 #, fuzzy, kde-format
 #| msgid "Copyright © 2013-2020 sieveeditor authors"
 msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Autoriõigus © 2013-2020: sieveeditori autorid"
 
-#: main.cpp:56
+#: main.cpp:55
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:56
+#: main.cpp:55
 #, kde-format
 msgid "Maintainer"
 msgstr "Hooldaja"
