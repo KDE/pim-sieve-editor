@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2024-08-10 00:42+0000\n"
 "PO-Revision-Date: 2014-08-13 23:53+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -98,30 +98,30 @@ msgstr ""
 msgid "Finish"
 msgstr ""
 
-#: main.cpp:51
+#: main.cpp:50
 #, kde-format
 msgid "KSieve Editor"
 msgstr "KSieve-Editor"
 
-#: main.cpp:53
+#: main.cpp:52
 #, kde-format
 msgid "Sieve Editor"
 msgstr "Sieve-Editor"
 
-#: main.cpp:55
+#: main.cpp:54
 #, fuzzy, kde-format
 #| msgid "Copyright © 2013, 2014 sieveeditor authors"
 msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Copyright © 2013, 2014 de Schrieverslüüd vun Sieveeditor"
 
-#: main.cpp:56
+#: main.cpp:55
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:56
+#: main.cpp:55
 #, kde-format
 msgid "Maintainer"
 msgstr "Pleger"
