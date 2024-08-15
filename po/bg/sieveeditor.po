@@ -1,18 +1,18 @@
-# SPDX-FileCopyrightText: 2022, 2023 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-19 01:34+0000\n"
-"PO-Revision-Date: 2023-09-30 09:51+0200\n"
+"POT-Creation-Date: 2024-08-10 00:42+0000\n"
+"PO-Revision-Date: 2024-08-07 11:19+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: \n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -34,95 +34,100 @@ msgstr "Настройки на IMAP за Akonadi"
 msgid "Thunderbird IMAP Settings"
 msgstr "Настройки на IMAP за Thunderbird"
 
-#: importwizard/importimapsettingfinishpage.cpp:20
+#: importwizard/importimapsettingfinishpage.cpp:22
 #, kde-format
+msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
-msgstr "Импортирани настройки на IMAP:"
+msgstr "Импортирани са настройки на IMAP:"
 
-#: importwizard/importimapsettingnofoundpage.cpp:18
+#: importwizard/importimapsettingnofoundpage.cpp:20
 #, kde-format
+msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "Няма намерени настройки за импортиране."
 
-#: importwizard/importimapsettingprogresspage.cpp:61
+#: importwizard/importimapsettingprogresspage.cpp:63
 #, kde-format
 msgid "No settings found."
 msgstr "Няма намерени настройки."
 
-#: importwizard/importimapsettingprogresspage.cpp:68
-#, kde-format
-msgid "Import settings from %1..."
-msgstr "Импортиране на настройки от %1..."
-
 #: importwizard/importimapsettingprogresspage.cpp:70
+#, kde-format
+msgid "Import settings from %1…"
+msgstr "Импортиране на настройки от %1…"
+
+#: importwizard/importimapsettingprogresspage.cpp:72
 #, kde-format
 msgid "Import settings from %1 done"
 msgstr "Импортирането на настройки от %1 е готово"
 
-#: importwizard/importimapsettingsearchpage.cpp:19
+#: importwizard/importimapsettingsearchpage.cpp:21
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr ""
 "Моля, изберете програмата, от която искате да импортирате настройки за IMAP:"
 
-#: importwizard/importimapsettingwizard.cpp:28
+#: importwizard/importimapsettingwizard.cpp:32
 #, kde-format
 msgctxt "@title:window"
 msgid "Import IMAP Settings"
 msgstr "Импортиране на настройки за IMAP"
 
-#: importwizard/importimapsettingwizard.cpp:31
+#: importwizard/importimapsettingwizard.cpp:34
 #, kde-format
 msgid "Select Import Settings"
 msgstr "Избиране на настройки за импортиране"
 
-#: importwizard/importimapsettingwizard.cpp:39
+#: importwizard/importimapsettingwizard.cpp:40
 #, kde-format
-msgid "Import in Progress..."
-msgstr "Извършва се импортиране..."
+msgid "Import in Progress…"
+msgstr "Извършва се импортиране…"
 
 #: importwizard/importimapsettingwizard.cpp:46
 #, kde-format
 msgid "Finish"
 msgstr "Завършено"
 
-#: main.cpp:30
+#: main.cpp:50
 #, kde-format
 msgid "KSieve Editor"
 msgstr "KSieve редактор"
 
-#: main.cpp:32
+#: main.cpp:52
 #, kde-format
 msgid "Sieve Editor"
 msgstr "Sieve редактор"
 
-#: main.cpp:34
+#: main.cpp:54
 #, kde-format
 msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Copyright © 2013-%1 sieveeditor authors"
 
-#: main.cpp:35
+#: main.cpp:55
 #, kde-format
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:35
+#: main.cpp:55
 #, kde-format
 msgid "Maintainer"
 msgstr "Поддръжка"
 
-#: main.cpp:43
+#: main.cpp:64
 #, kde-format
+msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
 msgstr "Списък на наличните опции за обратна връзка от потребителите"
 
-#: serversievelistwidget.cpp:77
+#: serversievelistwidget.cpp:76
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Settings"
 msgstr "Промяна на настройките"
 
-#: serversievelistwidget.cpp:123
+#: serversievelistwidget.cpp:122
 #, kde-format
 msgctxt "server name (username)"
 msgid "%1 (%2)"
@@ -142,89 +147,98 @@ msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Анонимно"
 
-#: serversievesettings.cpp:268
+#: serversievesettings.cpp:80
+#, kde-format
+msgctxt "Percent value; %p is the value, % is the percent sign"
+msgid "%p%"
+msgstr "%p%"
+
+#: serversievesettings.cpp:271
 #, kde-format
 msgid "Server is not defined"
 msgstr "Сървърът не е дефиниран"
 
-#: serversievesettings.cpp:268
+#: serversievesettings.cpp:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Проверка на сървъра"
 
-#: serversievesettings.cpp:311
+#: serversievesettings.cpp:314
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr ""
 "Не може да се осъществи връзка със сървъра, моля, проверете адреса на "
 "сървъра."
 
-#: serversievesettings.cpp:323
+#: serversievesettings.cpp:326
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<qt><b>TLS се поддържа и препоръчва.</b></qt>"
 
-#: serversievesettings.cpp:326
+#: serversievesettings.cpp:329
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<qt><b> SSL се поддържа и препоръчва.</b></qt>"
 
-#: serversievesettings.cpp:330
+#: serversievesettings.cpp:333
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
 "server.</b></qt>"
 msgstr ""
-"<qt> <b> Не се поддържа защита. Не се препоръчва да се свързвате с този "
+"<qt><b> Не се поддържа защита. Не се препоръчва да се свързвате с този "
 "сървър.</b></qt>"
 
-#: serversievesettings.cpp:333
+#: serversievesettings.cpp:336
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
-msgstr "<qt> <b> Не е възможно да се използва този сървър.</b></qt>"
+msgstr "<qt><b> Не е възможно да се използва този сървър.</b></qt>"
 
-#: serversievesettingsdialog.cpp:25
+#: serversievesettingsdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Добавяне на сървър за Sieve"
 
-#: sieveeditorconfiguredialog.cpp:37
+#: sieveeditorconfiguredialog.cpp:38
+#, kde-format
+msgctxt "@option:check"
+msgid "Wrap Text"
+msgstr "Пренасяне на текст"
+
+#: sieveeditorconfiguredialog.cpp:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Конфигуриране"
 
-#: sieveeditorconfiguredialog.cpp:51
+#: sieveeditorconfiguredialog.cpp:55
 #, kde-format
 msgid "Sieve Server"
 msgstr "Sieve сървър"
 
-#: sieveeditorconfiguredialog.cpp:60
-#, kde-format
-msgid "Wrap Text"
-msgstr "Пренасяне на текст"
-
-#: sieveeditorconfiguredialog.cpp:65
+#: sieveeditorconfiguredialog.cpp:69
 #, kde-format
 msgid "Editor"
 msgstr "Редактор"
 
-#: sieveeditorconfiguredialog.cpp:81
+#: sieveeditorconfiguredialog.cpp:85
 #, kde-format
 msgid "User Feedback"
 msgstr "Обратна връзка"
 
-#: sieveeditorconfigureserverpage.cpp:19
+#: sieveeditorconfigureserverpage.cpp:20
 #, kde-format
-msgid "Configure..."
-msgstr "Конфигуриране..."
+msgctxt "@action:button"
+msgid "Configure…"
+msgstr "Конфигуриране…"
 
-#: sieveeditorconfigureserverpage.cpp:24
+#: sieveeditorconfigureserverpage.cpp:25
 #, kde-format
-msgid "Import Sieve Settings..."
-msgstr "Импортиране на настройки за Sieve..."
+msgctxt "@action:button"
+msgid "Import Sieve Settings…"
+msgstr "Импортиране на настройки за Sieve…"
 
 #: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
@@ -281,12 +295,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Инструменти > Импортиране на настройки за IMAP"
 
-#: sieveeditormainwidget.cpp:606
+#: sieveeditormainwidget.cpp:607
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Скриптът беше променен. Искате ли да го запазите преди затваряне?"
 
-#: sieveeditormainwidget.cpp:607
+#: sieveeditormainwidget.cpp:608
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"
@@ -309,71 +323,85 @@ msgstr "Качване"
 
 #: sieveeditormainwindow.cpp:184
 #, kde-format
-msgid "Add Sieve Server..."
-msgstr "Добавяне на сървър за Sieve..."
+msgctxt "@action"
+msgid "Add Sieve Server…"
+msgstr "Добавяне на сървър за Sieve…"
 
 #: sieveeditormainwindow.cpp:188
 #, kde-format
+msgctxt "@action"
 msgid "Delete Script"
 msgstr "Изтриване на скрипт"
 
 #: sieveeditormainwindow.cpp:194
 #, kde-format
-msgid "Create New Script..."
-msgstr "Създаване на нов скрипт..."
+msgctxt "@action"
+msgid "Create New Script…"
+msgstr "Създаване на нов скрипт…"
 
 #: sieveeditormainwindow.cpp:200
 #, kde-format
-msgid "Edit Script..."
-msgstr "Редактиране на скрипт..."
+msgctxt "@action"
+msgid "Edit Script…"
+msgstr "Редактиране на скрипт…"
 
 #: sieveeditormainwindow.cpp:205
 #, kde-format
+msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Деактивиране на скрипт"
 
 #: sieveeditormainwindow.cpp:210
 #, kde-format
+msgctxt "@action"
 msgid "Refresh List"
 msgstr "Обновяване на списъка"
 
 #: sieveeditormainwindow.cpp:216
 #, kde-format
-msgid "Go to Line..."
-msgstr "Отиване на ред..."
+msgctxt "@action"
+msgid "Go to Line…"
+msgstr "Отиване на ред…"
 
 #: sieveeditormainwindow.cpp:233
 #, kde-format
-msgid "Import..."
-msgstr "Импортиране..."
+msgctxt "@action"
+msgid "Import…"
+msgstr "Импортиране…"
 
 #: sieveeditormainwindow.cpp:239
 #, kde-format
-msgid "Share..."
-msgstr "Споделяне..."
+msgctxt "@action"
+msgid "Share…"
+msgstr "Споделяне…"
 
 #: sieveeditormainwindow.cpp:247
 #, kde-format
-msgid "Check Spelling..."
-msgstr "Проверка на правописа..."
+msgctxt "@action"
+msgid "Check Spelling…"
+msgstr "Проверка на правописа…"
 
 #: sieveeditormainwindow.cpp:253
 #, kde-format
+msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Проверка на синтаксиса"
 
 #: sieveeditormainwindow.cpp:258
 #, kde-format
-msgid "Create Rules Graphically..."
-msgstr "Графично създаване на правила..."
+msgctxt "@action"
+msgid "Create Rules Graphically…"
+msgstr "Графично създаване на правила…"
 
 #: sieveeditormainwindow.cpp:263
 #, kde-format
+msgctxt "@action"
 msgid "Comment"
 msgstr "Коментар"
 
 #: sieveeditormainwindow.cpp:268
 #, kde-format
+msgctxt "@action"
 msgid "Uncomment"
 msgstr "Премахване на коментар"
 
@@ -385,18 +413,36 @@ msgstr "&Отметки"
 
 #: sieveeditormainwindow.cpp:301
 #, kde-format
-msgid "Debug Sieve Script..."
-msgstr "Откриване на грешки в Sieve скрипт..."
+msgctxt "@action"
+msgid "Debug Sieve Script…"
+msgstr "Отстраняване на грешки в Sieve скрипт…"
 
 #: sieveeditormainwindow.cpp:306
 #, kde-format
+msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Пренасяне на думи"
 
-#: sieveeditormainwindow.cpp:315
+#: sieveeditormainwindow.cpp:328
 #, kde-format
-msgid "Import IMAP Settings..."
-msgstr "Импортиране на настройки за IMAP..."
+msgctxt "@action"
+msgid "Import IMAP Settings…"
+msgstr "Импортиране на настройки за IMAP…"
+
+#: sieveeditormainwindow.cpp:351
+#, kde-format
+msgid ""
+"<qt>This will hide the menu bar completely. You can show it again by typing "
+"%1.</qt>"
+msgstr ""
+"<qt>Това напълно ще скрие менюто. Можете да го накарате да се покаже отново "
+"като въведете: %1.</qt>"
+
+#: sieveeditormainwindow.cpp:354
+#, kde-format
+msgctxt "@title:window"
+msgid "Hide menu bar"
+msgstr "Скриване на меню лентата"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -408,23 +454,23 @@ msgstr "Не е конфигуриран адрес на Sieve"
 msgid "(Disabled) %1"
 msgstr "(Деактивирано) %1"
 
-#: sieveeditorpagewidget.cpp:42
+#: sieveeditorpagewidget.cpp:41
 #, kde-format
-msgid "Uploading script to server for checking it, please wait..."
-msgstr "Качване на скрипт на сървъра за проверка, моля, изчакайте..."
+msgid "Uploading script to server for checking it, please wait…"
+msgstr "Качване на скрипт на сървъра за проверка, моля, изчакайте…"
 
-#: sieveeditorpagewidget.cpp:135
+#: sieveeditorpagewidget.cpp:134
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "Скриптът на Sieve беше качен успешно."
 
-#: sieveeditorpagewidget.cpp:135
+#: sieveeditorpagewidget.cpp:134
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Качване на скрипт на Sieve"
 
-#: sieveeditorpagewidget.cpp:148
+#: sieveeditorpagewidget.cpp:147
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -435,13 +481,13 @@ msgstr ""
 "Отговор на сървъра:\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
+#: sieveeditorpagewidget.cpp:150 sieveeditorpagewidget.cpp:155
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Грешка в Sieve"
 
-#: sieveeditorpagewidget.cpp:154
+#: sieveeditorpagewidget.cpp:153
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -450,18 +496,18 @@ msgstr ""
 "Качването на Sieve скрипта е неуспешно.\n"
 "неизвестна причина\n"
 
-#: sieveeditorpagewidget.cpp:166
+#: sieveeditorpagewidget.cpp:165
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Скриптът \"%1 \" е нов. Искате ли да го запазите?"
 
-#: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
+#: sieveeditorpagewidget.cpp:166 sieveeditorpagewidget.cpp:179
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Запазване на скрипт"
 
-#: sieveeditorpagewidget.cpp:179
+#: sieveeditorpagewidget.cpp:178
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "Скриптът \"%1\" бе променен. Искате ли да го запазите?"
@@ -507,6 +553,12 @@ msgstr "&Настройки"
 #, kde-format
 msgid "Tools"
 msgstr "Инструменти"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: sieveeditorui.rc:61
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Главна лента с инструменти"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: ui/serversievesettings.ui:37
@@ -718,14 +770,14 @@ msgstr "Празно"
 #. i18n: ectx: property (text), widget (QPushButton, addServer)
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
-msgid "Add..."
-msgstr "Добавяне..."
+msgid "Add…"
+msgstr "Добавяне…"
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
 #, kde-format
-msgid "Modify..."
-msgstr "Промяна..."
+msgid "Modify…"
+msgstr "Промяна…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
 #: ui/sieveeditorconfigureserverwidget.ui:43

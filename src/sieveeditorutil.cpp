@@ -1,13 +1,14 @@
 /*
-   SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "sieveeditorutil.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "sieveeditor_debug.h"
 #include "sieveeditorsavepasswordjob.h"
-#include "sieveserversettings.h"
 
 #include <KConfig>
 
@@ -100,7 +101,7 @@ QString SieveEditorUtil::sievePasswordIdentifier(const QString &userName, const 
 
 QString SieveEditorUtil::imapPasswordIdentifier(const QString &userName, const QString &serverName)
 {
-    return QLatin1String("Imap") + userName + QLatin1Char('@') + serverName;
+    return "Imap"_L1 + userName + QLatin1Char('@') + serverName;
 }
 
 void SieveEditorUtil::writeSieveSettings(const KSharedConfigPtr &cfg, const SieveEditorUtil::SieveServerConfig &conf, int index)
@@ -179,7 +180,7 @@ QDebug operator<<(QDebug d, const SieveEditorUtil::SieveAccountSettings &setting
 
 bool SieveEditorUtil::SieveAccountSettings::operator==(const SieveEditorUtil::SieveAccountSettings &other) const
 {
-    bool result = (serverName == other.serverName) && (userName == other.userName) && (password == other.password)
+    const bool result = (serverName == other.serverName) && (userName == other.userName) && (password == other.password)
         && (authenticationType == other.authenticationType) && (port == other.port);
     if (!result) {
         qCDebug(SIEVEEDITOR_LOG) << "serverName " << serverName << " other.serverName " << other.serverName;

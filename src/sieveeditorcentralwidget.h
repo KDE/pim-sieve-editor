@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2014-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2014-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -31,8 +31,8 @@ Q_SIGNALS:
 
 private:
     void slotServerSieveFound(bool hasServer);
-    SieveEditorConfigureServerPage *mConfigureWidget = nullptr;
-    SieveEditorMainWidget *mSieveEditorMainWidget = nullptr;
+    SieveEditorConfigureServerPage *const mConfigureWidget;
+    SieveEditorMainWidget *const mSieveEditorMainWidget;
     PimCommon::PurposeMenuMessageWidget *const mPurposeMenuMessageWidget;
     QWidget *const mMainWidget;
 };

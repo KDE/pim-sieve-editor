@@ -1,10 +1,12 @@
 /*
-   SPDX-FileCopyrightText: 2016-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2016-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "importimapsettingprogresspage.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "checks/abstractimapsettingscheckjob.h"
 #include "sieveeditor_debug.h"
 #include <KLocalizedString>
@@ -13,11 +15,11 @@
 
 ImportImapSettingProgressPage::ImportImapSettingProgressPage(QWidget *parent)
     : QWidget(parent)
+    , mProgressTextEdit(new QTextEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
-    mProgressTextEdit = new QTextEdit(this);
-    mProgressTextEdit->setObjectName(QLatin1StringView("textedit"));
+    mainLayout->setObjectName("mainlayout"_L1);
+    mProgressTextEdit->setObjectName("textedit"_L1);
     mProgressTextEdit->setReadOnly(true);
     mainLayout->addWidget(mProgressTextEdit);
 }
@@ -65,7 +67,7 @@ void ImportImapSettingProgressPage::start()
 
 void ImportImapSettingProgressPage::slotImportSettingsDone(const QString &name, const SieveEditorUtil::SieveServerConfig &settings)
 {
-    const QString str{i18n("Import settings from %1...", name)};
+    const QString str{i18n("Import settings from %1…", name)};
     addProgressInfo(str);
     const QString summaryStr{i18n("Import settings from %1 done", name)};
     Q_EMIT addSummaryInfo(summaryStr);

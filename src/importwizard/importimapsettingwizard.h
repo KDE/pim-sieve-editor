@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2016-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2016-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -25,24 +25,24 @@ public:
     void next() override;
 
 private:
-    void readConfig();
-    void writeConfig();
-    void initializeWizard();
-    void slotHelpClicked();
-    void slotFinishImportData();
-    void slotAddSummaryInfo(const QString &name);
-    void slotNeedToImportSettings(bool b);
+    LIBSIEVEEDITOR_NO_EXPORT void readConfig();
+    LIBSIEVEEDITOR_NO_EXPORT void writeConfig();
+    LIBSIEVEEDITOR_NO_EXPORT void initializeWizard();
+    LIBSIEVEEDITOR_NO_EXPORT void slotHelpClicked();
+    LIBSIEVEEDITOR_NO_EXPORT void slotFinishImportData();
+    LIBSIEVEEDITOR_NO_EXPORT void slotAddSummaryInfo(const QString &name);
+    LIBSIEVEEDITOR_NO_EXPORT void slotNeedToImportSettings(bool b);
     QMap<QString, AbstractImapSettingsCheckJob *> mListCheckJob;
 
-    ImportImapSettingSearchPage *mSearchPage = nullptr;
+    ImportImapSettingSearchPage *const mSearchPage;
     KPageWidgetItem *mSearchPageItem = nullptr;
 
-    ImportImapSettingNoFoundPage *mNoFoundPage = nullptr;
+    ImportImapSettingNoFoundPage *const mNoFoundPage;
     KPageWidgetItem *mNoFoundPageItem = nullptr;
 
-    ImportImapSettingProgressPage *mProgressPage = nullptr;
+    ImportImapSettingProgressPage *const mProgressPage;
     KPageWidgetItem *mProgressPageItem = nullptr;
 
-    ImportImapSettingFinishPage *mFinishPage = nullptr;
+    ImportImapSettingFinishPage *const mFinishPage;
     KPageWidgetItem *mFinishPageItem = nullptr;
 };

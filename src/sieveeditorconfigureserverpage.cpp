@@ -1,10 +1,11 @@
 /*
-   SPDX-FileCopyrightText: 2014-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2014-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "sieveeditorconfigureserverpage.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 
@@ -16,13 +17,13 @@ SieveEditorConfigureServerPage::SieveEditorConfigureServerPage(QWidget *parent)
 {
     auto hbox = new QHBoxLayout(this);
     hbox->addStretch(1);
-    auto button = new QPushButton(i18n("Configure..."));
-    button->setObjectName(QLatin1StringView("configure_button"));
+    auto button = new QPushButton(i18nc("@action:button", "Configure…"), this);
+    button->setObjectName("configure_button"_L1);
     button->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     connect(button, &QAbstractButton::clicked, this, &SieveEditorConfigureServerPage::configureClicked);
 
-    auto importSieveSettingsButton = new QPushButton(i18n("Import Sieve Settings..."));
-    importSieveSettingsButton->setObjectName(QLatin1StringView("import_sieve_settings_button"));
+    auto importSieveSettingsButton = new QPushButton(i18nc("@action:button", "Import Sieve Settings…"));
+    importSieveSettingsButton->setObjectName("import_sieve_settings_button"_L1);
     importSieveSettingsButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     connect(importSieveSettingsButton, &QAbstractButton::clicked, this, &SieveEditorConfigureServerPage::importSieveSettings);
 

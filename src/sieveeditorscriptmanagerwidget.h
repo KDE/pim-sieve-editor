@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -44,6 +44,5 @@ private:
     void slotEditScript(const KSieveUi::ManageSieveWidget::ScriptInfo &info);
     void slotUpdateButtons(QTreeWidgetItem *item);
 
-private:
-    SieveEditorManageSieveWidget *mTreeView = nullptr;
+    SieveEditorManageSieveWidget *const mTreeView;
 };

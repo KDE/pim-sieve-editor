@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2015-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -7,7 +7,6 @@
 #include "sieveeditorbookmarks.h"
 #include "sieveeditormainwindow.h"
 #include <KActionCollection>
-#include <KBookmarkManager>
 #include <KBookmarkMenu>
 #include <QDir>
 #include <QMenu>
@@ -28,7 +27,6 @@ SieveEditorBookmarks::SieveEditorBookmarks(SieveEditorMainWindow *mainWindow, KA
     }
 
     m_bookmarkManager = new KBookmarkManager(bookmarkFile, this);
-    m_bookmarkManager->setUpdate(true);
 
     mBookmarkMenu = new KBookmarkMenu(m_bookmarkManager, this, mMenu);
     collection->addActions(mMenu->actions());

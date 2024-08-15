@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-19 01:34+0000\n"
-"PO-Revision-Date: 2023-12-20 11:22\n"
+"POT-Creation-Date: 2024-08-10 00:42+0000\n"
+"PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -37,94 +37,99 @@ msgstr "Akonadi IMAP 设置"
 msgid "Thunderbird IMAP Settings"
 msgstr "Thunderbird IMAP 设置"
 
-#: importwizard/importimapsettingfinishpage.cpp:20
+#: importwizard/importimapsettingfinishpage.cpp:22
 #, kde-format
+msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
 msgstr "IMAP 设置已导入："
 
-#: importwizard/importimapsettingnofoundpage.cpp:18
+#: importwizard/importimapsettingnofoundpage.cpp:20
 #, kde-format
+msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "没有找到要导入的设置。"
 
-#: importwizard/importimapsettingprogresspage.cpp:61
+#: importwizard/importimapsettingprogresspage.cpp:63
 #, kde-format
 msgid "No settings found."
 msgstr "没有找到设置。"
 
-#: importwizard/importimapsettingprogresspage.cpp:68
-#, kde-format
-msgid "Import settings from %1..."
-msgstr "从 %1 导入设置..."
-
 #: importwizard/importimapsettingprogresspage.cpp:70
+#, kde-format
+msgid "Import settings from %1…"
+msgstr ""
+
+#: importwizard/importimapsettingprogresspage.cpp:72
 #, kde-format
 msgid "Import settings from %1 done"
 msgstr "从 %1 导入设置完成"
 
-#: importwizard/importimapsettingsearchpage.cpp:19
+#: importwizard/importimapsettingsearchpage.cpp:21
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr "请选择要导入 IMAP 设置的程序："
 
-#: importwizard/importimapsettingwizard.cpp:28
+#: importwizard/importimapsettingwizard.cpp:32
 #, kde-format
 msgctxt "@title:window"
 msgid "Import IMAP Settings"
 msgstr "导入 IMAP 设置"
 
-#: importwizard/importimapsettingwizard.cpp:31
+#: importwizard/importimapsettingwizard.cpp:34
 #, kde-format
 msgid "Select Import Settings"
 msgstr "选择导入设置"
 
-#: importwizard/importimapsettingwizard.cpp:39
+#: importwizard/importimapsettingwizard.cpp:40
 #, kde-format
-msgid "Import in Progress..."
-msgstr "导入进行中..."
+msgid "Import in Progress…"
+msgstr ""
 
 #: importwizard/importimapsettingwizard.cpp:46
 #, kde-format
 msgid "Finish"
 msgstr "完成"
 
-#: main.cpp:30
+#: main.cpp:50
 #, kde-format
 msgid "KSieve Editor"
 msgstr "KSieve 过滤编辑器"
 
-#: main.cpp:32
+#: main.cpp:52
 #, kde-format
 msgid "Sieve Editor"
 msgstr "过滤编辑器"
 
-#: main.cpp:34
+#: main.cpp:54
 #, kde-format
 msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Copyright © 2013-%1 sieveeditor authors"
 
-#: main.cpp:35
+#: main.cpp:55
 #, kde-format
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:35
+#: main.cpp:55
 #, kde-format
 msgid "Maintainer"
 msgstr "维护者"
 
-#: main.cpp:43
+#: main.cpp:64
 #, kde-format
+msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
 msgstr "列出用户反馈的可用选项"
 
-#: serversievelistwidget.cpp:77
+#: serversievelistwidget.cpp:76
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Settings"
 msgstr "修改设置"
 
-#: serversievelistwidget.cpp:123
+#: serversievelistwidget.cpp:122
 #, kde-format
 msgctxt "server name (username)"
 msgid "%1 (%2)"
@@ -144,85 +149,94 @@ msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "匿名"
 
-#: serversievesettings.cpp:268
+#: serversievesettings.cpp:80
+#, kde-format
+msgctxt "Percent value; %p is the value, % is the percent sign"
+msgid "%p%"
+msgstr "%p%"
+
+#: serversievesettings.cpp:271
 #, kde-format
 msgid "Server is not defined"
 msgstr "服务器未定义"
 
-#: serversievesettings.cpp:268
+#: serversievesettings.cpp:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "检查服务器"
 
-#: serversievesettings.cpp:311
+#: serversievesettings.cpp:314
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr "无法连接到服务器，请验证服务器地址。"
 
-#: serversievesettings.cpp:323
+#: serversievesettings.cpp:326
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<qt><b>TLS 是支持且受推荐的。</b></qt>"
 
-#: serversievesettings.cpp:326
+#: serversievesettings.cpp:329
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<qt><b>SSL 是支持且受推荐的。</b></qt>"
 
-#: serversievesettings.cpp:330
+#: serversievesettings.cpp:333
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
 "server.</b></qt>"
 msgstr "<qt><b>找不到安全连接方式。不推荐您连接到此服务器。</b></qt>"
 
-#: serversievesettings.cpp:333
+#: serversievesettings.cpp:336
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>无法使用此服务器。</b></qt>"
 
-#: serversievesettingsdialog.cpp:25
+#: serversievesettingsdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "添加 Sieve 服务器"
 
-#: sieveeditorconfiguredialog.cpp:37
+#: sieveeditorconfiguredialog.cpp:38
+#, kde-format
+msgctxt "@option:check"
+msgid "Wrap Text"
+msgstr "文本换行"
+
+#: sieveeditorconfiguredialog.cpp:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "配置"
 
-#: sieveeditorconfiguredialog.cpp:51
+#: sieveeditorconfiguredialog.cpp:55
 #, kde-format
 msgid "Sieve Server"
 msgstr "Sieve 服务器"
 
-#: sieveeditorconfiguredialog.cpp:60
-#, kde-format
-msgid "Wrap Text"
-msgstr "文本换行"
-
-#: sieveeditorconfiguredialog.cpp:65
+#: sieveeditorconfiguredialog.cpp:69
 #, kde-format
 msgid "Editor"
 msgstr "编辑器"
 
-#: sieveeditorconfiguredialog.cpp:81
+#: sieveeditorconfiguredialog.cpp:85
 #, kde-format
 msgid "User Feedback"
 msgstr "用户反馈"
 
-#: sieveeditorconfigureserverpage.cpp:19
+#: sieveeditorconfigureserverpage.cpp:20
 #, kde-format
-msgid "Configure..."
-msgstr "配置..."
+msgctxt "@action:button"
+msgid "Configure…"
+msgstr ""
 
-#: sieveeditorconfigureserverpage.cpp:24
+#: sieveeditorconfigureserverpage.cpp:25
 #, kde-format
-msgid "Import Sieve Settings..."
-msgstr "导入 Sieve 设置..."
+msgctxt "@action:button"
+msgid "Import Sieve Settings…"
+msgstr ""
 
 #: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
@@ -279,12 +293,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "工具 > 导入 IMAP 设置"
 
-#: sieveeditormainwidget.cpp:606
+#: sieveeditormainwidget.cpp:607
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "脚本已修改。您想要在关闭前保存吗？"
 
-#: sieveeditormainwidget.cpp:607
+#: sieveeditormainwidget.cpp:608
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"
@@ -307,71 +321,85 @@ msgstr "上传"
 
 #: sieveeditormainwindow.cpp:184
 #, kde-format
-msgid "Add Sieve Server..."
-msgstr "添加 Sieve 服务器..."
+msgctxt "@action"
+msgid "Add Sieve Server…"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:188
 #, kde-format
+msgctxt "@action"
 msgid "Delete Script"
 msgstr "删除脚本"
 
 #: sieveeditormainwindow.cpp:194
 #, kde-format
-msgid "Create New Script..."
-msgstr "创建新脚本..."
+msgctxt "@action"
+msgid "Create New Script…"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:200
 #, kde-format
-msgid "Edit Script..."
-msgstr "编辑脚本..."
+msgctxt "@action"
+msgid "Edit Script…"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:205
 #, kde-format
+msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "取消激活脚本"
 
 #: sieveeditormainwindow.cpp:210
 #, kde-format
+msgctxt "@action"
 msgid "Refresh List"
 msgstr "刷新列表"
 
 #: sieveeditormainwindow.cpp:216
 #, kde-format
-msgid "Go to Line..."
-msgstr "转到行..."
+msgctxt "@action"
+msgid "Go to Line…"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:233
 #, kde-format
-msgid "Import..."
-msgstr "导入..."
+msgctxt "@action"
+msgid "Import…"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:239
 #, kde-format
-msgid "Share..."
-msgstr "共享..."
+msgctxt "@action"
+msgid "Share…"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:247
 #, kde-format
-msgid "Check Spelling..."
-msgstr "检查拼写..."
+msgctxt "@action"
+msgid "Check Spelling…"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:253
 #, kde-format
+msgctxt "@action"
 msgid "Check Syntax"
 msgstr "检查语法"
 
 #: sieveeditormainwindow.cpp:258
 #, kde-format
-msgid "Create Rules Graphically..."
-msgstr "以图形方式创建规则..."
+msgctxt "@action"
+msgid "Create Rules Graphically…"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:263
 #, kde-format
+msgctxt "@action"
 msgid "Comment"
 msgstr "注释"
 
 #: sieveeditormainwindow.cpp:268
 #, kde-format
+msgctxt "@action"
 msgid "Uncomment"
 msgstr "去注释"
 
@@ -383,18 +411,34 @@ msgstr "书签(&B)"
 
 #: sieveeditormainwindow.cpp:301
 #, kde-format
-msgid "Debug Sieve Script..."
-msgstr "调试 Sieve 脚本..."
+msgctxt "@action"
+msgid "Debug Sieve Script…"
+msgstr ""
 
 #: sieveeditormainwindow.cpp:306
 #, kde-format
+msgctxt "@action"
 msgid "Wordwrap"
 msgstr "自动换行"
 
-#: sieveeditormainwindow.cpp:315
+#: sieveeditormainwindow.cpp:328
 #, kde-format
-msgid "Import IMAP Settings..."
-msgstr "导入 IMAP 设置..."
+msgctxt "@action"
+msgid "Import IMAP Settings…"
+msgstr ""
+
+#: sieveeditormainwindow.cpp:351
+#, kde-format
+msgid ""
+"<qt>This will hide the menu bar completely. You can show it again by typing "
+"%1.</qt>"
+msgstr ""
+
+#: sieveeditormainwindow.cpp:354
+#, kde-format
+msgctxt "@title:window"
+msgid "Hide menu bar"
+msgstr ""
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -406,23 +450,23 @@ msgstr "没有配置过滤 URL"
 msgid "(Disabled) %1"
 msgstr "(已禁用) %1"
 
-#: sieveeditorpagewidget.cpp:42
+#: sieveeditorpagewidget.cpp:41
 #, kde-format
-msgid "Uploading script to server for checking it, please wait..."
-msgstr "正在将脚本上传到服务器以检查，请稍候..."
+msgid "Uploading script to server for checking it, please wait…"
+msgstr ""
 
-#: sieveeditorpagewidget.cpp:135
+#: sieveeditorpagewidget.cpp:134
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "过滤脚本已成功上传。"
 
-#: sieveeditorpagewidget.cpp:135
+#: sieveeditorpagewidget.cpp:134
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "上传过滤脚本"
 
-#: sieveeditorpagewidget.cpp:148
+#: sieveeditorpagewidget.cpp:147
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -433,13 +477,13 @@ msgstr ""
 "服务器回应：\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
+#: sieveeditorpagewidget.cpp:150 sieveeditorpagewidget.cpp:155
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Sieve 错误"
 
-#: sieveeditorpagewidget.cpp:154
+#: sieveeditorpagewidget.cpp:153
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -448,18 +492,18 @@ msgstr ""
 "上传 Sieve 脚本失败。\n"
 "原因未知\n"
 
-#: sieveeditorpagewidget.cpp:166
+#: sieveeditorpagewidget.cpp:165
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "脚本“%1”是新建的。您想要保存它吗？"
 
-#: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
+#: sieveeditorpagewidget.cpp:166 sieveeditorpagewidget.cpp:179
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "保存脚本"
 
-#: sieveeditorpagewidget.cpp:179
+#: sieveeditorpagewidget.cpp:178
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "脚本“%1”已修改。您想要保存它吗？"
@@ -505,6 +549,12 @@ msgstr "设置(&S)"
 #, kde-format
 msgid "Tools"
 msgstr "工具"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: sieveeditorui.rc:61
+#, kde-format
+msgid "Main Toolbar"
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: ui/serversievesettings.ui:37
@@ -713,14 +763,14 @@ msgstr "空"
 #. i18n: ectx: property (text), widget (QPushButton, addServer)
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
-msgid "Add..."
-msgstr "添加..."
+msgid "Add…"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
 #, kde-format
-msgid "Modify..."
-msgstr "修改..."
+msgid "Modify…"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
 #: ui/sieveeditorconfigureserverwidget.ui:43

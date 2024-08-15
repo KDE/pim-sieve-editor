@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2016-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2016-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -31,9 +31,9 @@ Q_SIGNALS:
     void noSettingsImported(const QString &name);
 
 private:
-    void slotImportSettingsDone(const QString &name, const SieveEditorUtil::SieveServerConfig &settings);
+    LIBSIEVEEDITOR_NO_EXPORT void slotImportSettingsDone(const QString &name, const SieveEditorUtil::SieveServerConfig &settings);
     QStringList mSelectedPrograms;
-    QTextEdit *mProgressTextEdit = nullptr;
+    QTextEdit *const mProgressTextEdit;
     QMap<QString, AbstractImapSettingsCheckJob *> mListCheckJob;
     bool mSettingsFound = false;
 };

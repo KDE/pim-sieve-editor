@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -102,14 +102,12 @@ private:
     void slotTabCloseRequested(int index);
     void slotTabRemoveAllExclude(int index);
     void slotTabCloseAllRequested();
-
-private:
     void updateStackedWidget();
     QWidget *hasExistingPage(const QUrl &url);
     QColor mModifiedScriptColor;
     QColor mScriptColor;
-    SieveEditorTabWidget *mTabWidget = nullptr;
-    SieveEditorScriptManagerWidget *mScriptManagerWidget = nullptr;
-    QStackedWidget *mStackedWidget = nullptr;
-    SieveEditorEmptyTabWidgetLabel *mEditorEmptyLabel = nullptr;
+    SieveEditorTabWidget *const mTabWidget;
+    SieveEditorScriptManagerWidget *const mScriptManagerWidget;
+    QStackedWidget *const mStackedWidget;
+    SieveEditorEmptyTabWidgetLabel *const mEditorEmptyLabel;
 };

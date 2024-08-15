@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -77,8 +77,11 @@ ServerSieveSettings::ServerSieveSettings(QWidget *parent)
     ui->testInfo->clear();
     ui->testInfo->hide();
     ui->testProgress->hide();
-    ui->password->setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
-    ui->imapPassword->setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
+    ui->testProgress->setFormat(i18nc("Percent value; %p is the value, % is the percent sign", "%p%"));
+    ui->password->setRevealPasswordMode(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")) ? KPassword::RevealMode::OnlyNew
+                                                                                                           : KPassword::RevealMode::Never);
+    ui->imapPassword->setRevealPasswordMode(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")) ? KPassword::RevealMode::OnlyNew
+                                                                                                               : KPassword::RevealMode::Never);
 
     ui->safeImapGroup->setId(ui->noRadio, KSieveCore::SieveImapAccountSettings::Unencrypted);
     ui->safeImapGroup->setId(ui->sslRadio, KSieveCore::SieveImapAccountSettings::SSLorTLS);

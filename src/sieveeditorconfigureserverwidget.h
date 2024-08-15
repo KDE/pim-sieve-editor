@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -30,6 +30,5 @@ private:
     void slotDeleteServer();
     void slotItemSelectionChanged();
 
-private:
     Ui::SieveEditorConfigureServerWidget *const ui;
 };

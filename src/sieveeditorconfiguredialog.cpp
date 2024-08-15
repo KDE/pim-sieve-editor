@@ -1,13 +1,14 @@
 /*
-   SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "sieveeditorconfiguredialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "sieveeditorconfigureserverwidget.h"
 #include "sieveeditorglobalconfig.h"
-#include <PimCommon/ConfigureImmutableWidgetUtils>
 
 #ifdef WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
@@ -15,6 +16,7 @@
 #include <KUserFeedback/Provider>
 #endif
 
+#include <KConfigDialogManager>
 #include <KLocalizedString>
 #include <KSharedConfig>
 
@@ -33,6 +35,8 @@ static const char mySieveEditorConfigureDialog[] = "SieveEditorConfigureDialog";
 
 SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     : KPageDialog(parent)
+    , mWrapText(new QCheckBox(i18nc("@option:check", "Wrap Text"), this))
+    , m_configDialogManager(new KConfigDialogManager(this, SieveEditorGlobalConfig::self()))
 {
     setWindowTitle(i18nc("@title:window", "Configure"));
     setFaceType(KPageDialog::List);
@@ -54,13 +58,13 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
 
     // Editor page
     auto editorWidget = new QWidget;
-    editorWidget->setObjectName(QLatin1StringView("editorwidget"));
+    editorWidget->setObjectName("editorwidget"_L1);
 
     layout = new QVBoxLayout(editorWidget);
-    mWrapText = new QCheckBox(i18n("Wrap Text"));
-    mWrapText->setObjectName(QLatin1StringView("wraptext"));
+    mWrapText->setObjectName("kcfg_WrapText"_L1);
     layout->addWidget(mWrapText);
     layout->addStretch(100);
+    m_configDialogManager->addWidget(editorWidget);
 
     auto editorPageWidgetPage = new KPageWidgetItem(editorWidget, i18n("Editor"));
     editorPageWidgetPage->setIcon(QIcon::fromTheme(QStringLiteral("accessories-text-editor")));
@@ -69,7 +73,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     // UserFeedBack config
 #ifdef WITH_KUSERFEEDBACK
     auto userFeedBackWidget = new QWidget;
-    userFeedBackWidget->setObjectName(QLatin1StringView("userFeedBackWidget"));
+    userFeedBackWidget->setObjectName("userFeedBackWidget"_L1);
 
     mUserFeedbackWidget = new KUserFeedback::FeedbackConfigWidget(this);
 
@@ -95,13 +99,13 @@ SieveEditorConfigureDialog::~SieveEditorConfigureDialog()
 void SieveEditorConfigureDialog::loadServerSieveConfig()
 {
     mServerWidget->readConfig();
-    PimCommon::ConfigureImmutableWidgetUtils::loadWidget(mWrapText, SieveEditorGlobalConfig::self()->wrapTextItem());
+    m_configDialogManager->updateWidgets();
 }
 
 void SieveEditorConfigureDialog::saveServerSieveConfig()
 {
     mServerWidget->writeConfig();
-    PimCommon::ConfigureImmutableWidgetUtils::saveCheckBox(mWrapText, SieveEditorGlobalConfig::self()->wrapTextItem());
+    m_configDialogManager->updateSettings();
     SieveEditorGlobalConfig::self()->save();
 #ifdef WITH_KUSERFEEDBACK
     // set current active mode + write back the config for future starts
@@ -114,14 +118,14 @@ void SieveEditorConfigureDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(600, 400));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(mySieveEditorConfigureDialog));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(mySieveEditorConfigureDialog));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void SieveEditorConfigureDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(mySieveEditorConfigureDialog));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(mySieveEditorConfigureDialog));
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }

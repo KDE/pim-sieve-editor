@@ -1,10 +1,12 @@
 /*
-   SPDX-FileCopyrightText: 2016-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2016-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "importimapsettingfinishpage.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KLocalizedString>
 #include <QLabel>
 #include <QTextEdit>
@@ -15,13 +17,13 @@ ImportImapSettingFinishPage::ImportImapSettingFinishPage(QWidget *parent)
     , mTextEdit(new QTextEdit(this))
 {
     auto mainlayout = new QVBoxLayout(this);
-    mainlayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainlayout->setObjectName("mainlayout"_L1);
 
-    auto label = new QLabel(i18n("IMAP settings were imported:"), this);
-    label->setObjectName(QLatin1StringView("label"));
+    auto label = new QLabel(i18nc("@label:textbox", "IMAP settings were imported:"), this);
+    label->setObjectName("label"_L1);
     mainlayout->addWidget(label);
 
-    mTextEdit->setObjectName(QLatin1StringView("textedit"));
+    mTextEdit->setObjectName("textedit"_L1);
     mTextEdit->setAcceptRichText(true);
     mTextEdit->setReadOnly(true);
     mainlayout->addWidget(mTextEdit);

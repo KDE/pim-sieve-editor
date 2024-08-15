@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2016-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2016-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -28,7 +28,7 @@ void ImportImapSettingsAkonadiCheckJobTest::initTestCase()
 
 void ImportImapSettingsAkonadiCheckJobTest::shouldHaveSettingsFiles()
 {
-    qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/config1")).toLatin1().constData());
+    qputenv("XDG_CONFIG_DIRS", QString(QLatin1StringView(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/config1")).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
     job.setImapSettingsPassword(new ImportImapSettingsPasswordTest);
     QVERIFY(job.settingsCanBeImported());
@@ -36,7 +36,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldHaveSettingsFiles()
 
 void ImportImapSettingsAkonadiCheckJobTest::shouldHaveNotSettingsFiles()
 {
-    qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/noconfig")).toLatin1().constData());
+    qputenv("XDG_CONFIG_DIRS", QString(QLatin1StringView(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/noconfig")).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
     job.setImapSettingsPassword(new ImportImapSettingsPasswordTest);
     QVERIFY(!job.settingsCanBeImported());
@@ -44,7 +44,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldHaveNotSettingsFiles()
 
 void ImportImapSettingsAkonadiCheckJobTest::shouldHaveSettingsFilesImap()
 {
-    qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/config2")).toLatin1().constData());
+    qputenv("XDG_CONFIG_DIRS", QString(QLatin1StringView(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/config2")).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
     job.setImapSettingsPassword(new ImportImapSettingsPasswordTest);
     QVERIFY(job.settingsCanBeImported());
@@ -52,7 +52,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldHaveSettingsFilesImap()
 
 void ImportImapSettingsAkonadiCheckJobTest::shouldHaveSettingsFilesMbox()
 {
-    qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/config3")).toLatin1().constData());
+    qputenv("XDG_CONFIG_DIRS", QString(QLatin1StringView(IMPORTWIZARD_DATA_DIR) + QStringLiteral("/config/config3")).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
     job.setImapSettingsPassword(new ImportImapSettingsPasswordTest);
     QVERIFY(!job.settingsCanBeImported());
@@ -75,7 +75,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldHaveImportSettings()
     QFETCH(QString, directory);
     QFETCH(int, nbsignals);
     QFETCH(int, nbSignalsNoSettingsFound);
-    qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + directory).toLatin1().constData());
+    qputenv("XDG_CONFIG_DIRS", QString(QLatin1StringView(IMPORTWIZARD_DATA_DIR) + directory).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
     job.setImapSettingsPassword(new ImportImapSettingsPasswordTest);
     QVERIFY(job.settingsCanBeImported());
@@ -168,7 +168,7 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings()
     QFETCH(QString, directory);
     QFETCH(QString, name);
     QFETCH(SieveEditorUtil::SieveServerConfig, settings);
-    qputenv("XDG_CONFIG_DIRS", QString(QLatin1String(IMPORTWIZARD_DATA_DIR) + directory).toLatin1().constData());
+    qputenv("XDG_CONFIG_DIRS", QString(QLatin1StringView(IMPORTWIZARD_DATA_DIR) + directory).toLatin1().constData());
     ImportImapSettingsAkonadiCheckJob job;
     job.setImapSettingsPassword(new ImportImapSettingsPasswordTest);
     QVERIFY(job.settingsCanBeImported());

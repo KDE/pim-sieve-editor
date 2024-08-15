@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -14,7 +14,8 @@ class QLabel;
 class SieveEditorBookmarks;
 class KActionMenu;
 class KToggleFullScreenAction;
-
+class KHamburgerMenu;
+class KToggleAction;
 namespace PimCommon
 {
 class KActionMenuChangeCase;
@@ -33,28 +34,30 @@ protected:
     void closeEvent(QCloseEvent *e) override;
 
 private:
-    void slotConfigure();
-    void slotAddServerSieve();
-    void slotCreateNewScript();
-    void slotDeleteScript();
-    void slotUpdateButtons(bool newScriptAction, bool editScriptAction, bool deleteScriptAction, bool desactivateScriptAction);
-    void slotEditScript();
-    void slotDesactivateScript();
-    void slotRefreshList();
-    void slotUploadScript();
-    void slotUpdateActions();
-    void slotSystemNetworkOnlineStateChanged(bool state);
-    void slotUndoAvailable(bool);
-    void slotRedoAvailable(bool);
-    void slotCopyAvailable(bool b);
-    void slotOpenBookmarkUrl(const QUrl &url);
-    void slotImportImapSettings();
-    void initStatusBar();
-    void readConfig();
-    void setupActions();
-    [[nodiscard]] QString currentText() const;
-    void slotFullScreen(bool t);
-    void writeConfig();
+    LIBSIEVEEDITOR_NO_EXPORT void slotConfigure();
+    LIBSIEVEEDITOR_NO_EXPORT void slotAddServerSieve();
+    LIBSIEVEEDITOR_NO_EXPORT void slotCreateNewScript();
+    LIBSIEVEEDITOR_NO_EXPORT void slotDeleteScript();
+    LIBSIEVEEDITOR_NO_EXPORT void slotUpdateButtons(bool newScriptAction, bool editScriptAction, bool deleteScriptAction, bool desactivateScriptAction);
+    LIBSIEVEEDITOR_NO_EXPORT void slotEditScript();
+    LIBSIEVEEDITOR_NO_EXPORT void slotDesactivateScript();
+    LIBSIEVEEDITOR_NO_EXPORT void slotRefreshList();
+    LIBSIEVEEDITOR_NO_EXPORT void slotUploadScript();
+    LIBSIEVEEDITOR_NO_EXPORT void slotUpdateActions();
+    LIBSIEVEEDITOR_NO_EXPORT void slotSystemNetworkOnlineStateChanged(bool state);
+    LIBSIEVEEDITOR_NO_EXPORT void slotUndoAvailable(bool);
+    LIBSIEVEEDITOR_NO_EXPORT void slotRedoAvailable(bool);
+    LIBSIEVEEDITOR_NO_EXPORT void slotCopyAvailable(bool b);
+    LIBSIEVEEDITOR_NO_EXPORT void slotOpenBookmarkUrl(const QUrl &url);
+    LIBSIEVEEDITOR_NO_EXPORT void slotImportImapSettings();
+    LIBSIEVEEDITOR_NO_EXPORT void initStatusBar();
+    LIBSIEVEEDITOR_NO_EXPORT void readConfig();
+    LIBSIEVEEDITOR_NO_EXPORT void setupActions();
+    [[nodiscard]] LIBSIEVEEDITOR_NO_EXPORT QString currentText() const;
+    LIBSIEVEEDITOR_NO_EXPORT void slotFullScreen(bool t);
+    LIBSIEVEEDITOR_NO_EXPORT void writeConfig();
+    LIBSIEVEEDITOR_NO_EXPORT void slotToggleMenubar(bool dontShowWarning);
+    LIBSIEVEEDITOR_NO_EXPORT void updateHamburgerMenu();
 
     SieveEditorCentralWidget *mMainWidget = nullptr;
     QAction *mDeleteScript = nullptr;
@@ -93,5 +96,7 @@ private:
     SieveEditorBookmarks *mSieveEditorBookmarks = nullptr;
     KActionMenu *mBookmarkMenu = nullptr;
     KToggleFullScreenAction *mShowFullScreenAction = nullptr;
+    KHamburgerMenu *mHamburgerMenu = nullptr;
+    KToggleAction *mShowMenuBarAction = nullptr;
     bool mNetworkIsDown = false;
 };

@@ -1,10 +1,12 @@
 /*
-   SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "sieveeditormainwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "sieveeditoremptytabwidgetlabel.h"
 #include "sieveeditorpagewidget.h"
 #include "sieveeditorscriptmanagerwidget.h"
@@ -28,13 +30,13 @@ static const char mySieveEditorMainWidgetConfigGroupName[] = "SieveEditorMainWid
 }
 SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *parent)
     : QSplitter(parent)
+    , mTabWidget(new SieveEditorTabWidget(ac, this))
+    , mScriptManagerWidget(new SieveEditorScriptManagerWidget(this))
+    , mStackedWidget(new QStackedWidget(this))
+    , mEditorEmptyLabel(new SieveEditorEmptyTabWidgetLabel(this))
 {
-    mStackedWidget = new QStackedWidget(this);
-    mStackedWidget->setObjectName(QLatin1StringView("stackedwidget"));
+    mStackedWidget->setObjectName("stackedwidget"_L1);
 
-    mEditorEmptyLabel = new SieveEditorEmptyTabWidgetLabel;
-
-    mTabWidget = new SieveEditorTabWidget(ac);
     connect(mTabWidget, &SieveEditorTabWidget::tabCloseRequestedIndex, this, &SieveEditorMainWidget::slotTabCloseRequested);
     connect(mTabWidget, &SieveEditorTabWidget::tabRemoveAllExclude, this, &SieveEditorMainWidget::slotTabRemoveAllExclude);
     connect(mTabWidget, &SieveEditorTabWidget::tabCloseAllTab, this, &SieveEditorMainWidget::slotTabCloseAllRequested);
@@ -43,7 +45,6 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
     mStackedWidget->addWidget(mEditorEmptyLabel);
     addWidget(mStackedWidget);
 
-    mScriptManagerWidget = new SieveEditorScriptManagerWidget;
     connect(mScriptManagerWidget, &SieveEditorScriptManagerWidget::createScriptPage, this, &SieveEditorMainWidget::slotCreateScriptPage);
     connect(mScriptManagerWidget, &SieveEditorScriptManagerWidget::updateButtons, this, &SieveEditorMainWidget::updateButtons);
     connect(mScriptManagerWidget, &SieveEditorScriptManagerWidget::scriptDeleted, this, &SieveEditorMainWidget::slotScriptDeleted);
@@ -54,7 +55,7 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
     setChildrenCollapsible(false);
     QList<int> splitterSizes;
     splitterSizes << 80 << 20;
-    KConfigGroup myGroup(KSharedConfig::openStateConfig(), QLatin1String(mySieveEditorMainWidgetConfigGroupName));
+    KConfigGroup myGroup(KSharedConfig::openStateConfig(), QLatin1StringView(mySieveEditorMainWidgetConfigGroupName));
     setSizes(myGroup.readEntry("mainSplitter", splitterSizes));
     updateStackedWidget();
 }
@@ -62,7 +63,7 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
 SieveEditorMainWidget::~SieveEditorMainWidget()
 {
     disconnect(mScriptManagerWidget, &SieveEditorScriptManagerWidget::updateButtons, this, &SieveEditorMainWidget::updateButtons);
-    KConfigGroup myGroup(KSharedConfig::openStateConfig(), QLatin1String(mySieveEditorMainWidgetConfigGroupName));
+    KConfigGroup myGroup(KSharedConfig::openStateConfig(), QLatin1StringView(mySieveEditorMainWidgetConfigGroupName));
     myGroup.writeEntry("mainSplitter", sizes());
     myGroup.sync();
 }

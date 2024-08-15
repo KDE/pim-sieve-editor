@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2014-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2014-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -91,11 +91,9 @@ private:
     void slotPutResult(KManageSieve::SieveJob *, bool success);
     void slotValueChanged(bool b);
     void slotCheckScriptJobFinished(const QString &errorMsg, bool success);
-
-private:
     void setModified(bool b);
     QUrl mCurrentURL;
-    KSieveUi::SieveEditorWidget *mSieveEditorWidget = nullptr;
+    KSieveUi::SieveEditorWidget *const mSieveEditorWidget;
     bool mWasActive = false;
     bool mIsNewScript = false;
 };

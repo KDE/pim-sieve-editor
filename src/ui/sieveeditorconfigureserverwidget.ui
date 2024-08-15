@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-   SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
    SPDX-License-Identifier: GPL-2.0-or-later
 -->
 <ui version="4.0">
@@ -26,14 +26,14 @@
      <item>
       <widget class="QPushButton" name="addServer">
        <property name="text">
-        <string>Add...</string>
+        <string>Add…</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="modifyServer">
        <property name="text">
-        <string>Modify...</string>
+        <string>Modify…</string>
        </property>
       </widget>
      </item>

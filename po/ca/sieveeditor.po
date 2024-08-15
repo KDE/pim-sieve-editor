@@ -1,16 +1,16 @@
 # Translation of sieveeditor.po to Catalan
-# Copyright (C) 2014-2023 This_file_is_part_of_KDE
+# Copyright (C) 2014-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020.
-# Josep M. Ferrer <txemaq@gmail.com>, 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-19 01:34+0000\n"
-"PO-Revision-Date: 2023-09-25 09:36+0200\n"
+"POT-Creation-Date: 2024-08-10 00:42+0000\n"
+"PO-Revision-Date: 2024-08-02 12:46+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,95 +41,100 @@ msgstr "Importa la configuració de l'Akonadi"
 msgid "Thunderbird IMAP Settings"
 msgstr "Importa la configuració del Thunderbird"
 
-#: importwizard/importimapsettingfinishpage.cpp:20
+#: importwizard/importimapsettingfinishpage.cpp:22
 #, kde-format
+msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
 msgstr "La configuració de l'IMAP ha estat importada:"
 
-#: importwizard/importimapsettingnofoundpage.cpp:18
+#: importwizard/importimapsettingnofoundpage.cpp:20
 #, kde-format
+msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "No s'ha trobat cap configuració a importar."
 
-#: importwizard/importimapsettingprogresspage.cpp:61
+#: importwizard/importimapsettingprogresspage.cpp:63
 #, kde-format
 msgid "No settings found."
 msgstr "No s'ha trobat cap configuració."
 
-#: importwizard/importimapsettingprogresspage.cpp:68
-#, kde-format
-msgid "Import settings from %1..."
-msgstr "Importa la configuració des de %1..."
-
 #: importwizard/importimapsettingprogresspage.cpp:70
+#, kde-format
+msgid "Import settings from %1…"
+msgstr "Importa la configuració des de %1…"
+
+#: importwizard/importimapsettingprogresspage.cpp:72
 #, kde-format
 msgid "Import settings from %1 done"
 msgstr "S'ha realitzat la importació de la configuració des de %1"
 
-#: importwizard/importimapsettingsearchpage.cpp:19
+#: importwizard/importimapsettingsearchpage.cpp:21
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr ""
 "Seleccioneu el programa des del qual voleu importar la configuració IMAP:"
 
-#: importwizard/importimapsettingwizard.cpp:28
+#: importwizard/importimapsettingwizard.cpp:32
 #, kde-format
 msgctxt "@title:window"
 msgid "Import IMAP Settings"
 msgstr "Importació de la configuració de l'IMAP"
 
-#: importwizard/importimapsettingwizard.cpp:31
+#: importwizard/importimapsettingwizard.cpp:34
 #, kde-format
 msgid "Select Import Settings"
 msgstr "Selecciona la configuració a importar"
 
-#: importwizard/importimapsettingwizard.cpp:39
+#: importwizard/importimapsettingwizard.cpp:40
 #, kde-format
-msgid "Import in Progress..."
-msgstr "La importació es troba en curs..."
+msgid "Import in Progress…"
+msgstr "Importació en curs…"
 
 #: importwizard/importimapsettingwizard.cpp:46
 #, kde-format
 msgid "Finish"
 msgstr "Finalitza"
 
-#: main.cpp:30
+#: main.cpp:50
 #, kde-format
 msgid "KSieve Editor"
 msgstr "Editor KSieve"
 
-#: main.cpp:32
+#: main.cpp:52
 #, kde-format
 msgid "Sieve Editor"
 msgstr "Editor de «Sieve»"
 
-#: main.cpp:34
+#: main.cpp:54
 #, kde-format
 msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Copyright © 2013-%1, els autors del «sieveeditor»"
 
-#: main.cpp:35
+#: main.cpp:55
 #, kde-format
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:35
+#: main.cpp:55
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantenidor"
 
-#: main.cpp:43
+#: main.cpp:64
 #, kde-format
+msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
 msgstr "Llista les opcions disponibles per als comentaris dels usuaris"
 
-#: serversievelistwidget.cpp:77
+#: serversievelistwidget.cpp:76
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Settings"
 msgstr "Modificació de l'arranjament"
 
-#: serversievelistwidget.cpp:123
+#: serversievelistwidget.cpp:122
 #, kde-format
 msgctxt "server name (username)"
 msgid "%1 (%2)"
@@ -149,33 +154,39 @@ msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anònim"
 
-#: serversievesettings.cpp:268
+#: serversievesettings.cpp:80
+#, kde-format
+msgctxt "Percent value; %p is the value, % is the percent sign"
+msgid "%p%"
+msgstr "%p%"
+
+#: serversievesettings.cpp:271
 #, kde-format
 msgid "Server is not defined"
 msgstr "No s'ha definit el servidor"
 
-#: serversievesettings.cpp:268
+#: serversievesettings.cpp:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Comprova el servidor"
 
-#: serversievesettings.cpp:311
+#: serversievesettings.cpp:314
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr "No s'ha pogut connectar amb el servidor, verifiqueu la seva adreça."
 
-#: serversievesettings.cpp:323
+#: serversievesettings.cpp:326
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<qt><b>TLS està acceptat i recomanat.</b></qt>"
 
-#: serversievesettings.cpp:326
+#: serversievesettings.cpp:329
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<qt><b>SSL està acceptat i recomanat.</b></qt>"
 
-#: serversievesettings.cpp:330
+#: serversievesettings.cpp:333
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
@@ -184,52 +195,55 @@ msgstr ""
 "<qt><b>No està acceptat cap mètode de seguretat. No és recomanable connectar "
 "a aquest servidor.</b></qt>"
 
-#: serversievesettings.cpp:333
+#: serversievesettings.cpp:336
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>No és possible usar aquest servidor.</b></qt>"
 
-#: serversievesettingsdialog.cpp:25
+#: serversievesettingsdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Afegeix un servidor de «Sieve»"
 
-#: sieveeditorconfiguredialog.cpp:37
+#: sieveeditorconfiguredialog.cpp:38
+#, kde-format
+msgctxt "@option:check"
+msgid "Wrap Text"
+msgstr "Ajusta el text"
+
+#: sieveeditorconfiguredialog.cpp:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Configuració"
 
-#: sieveeditorconfiguredialog.cpp:51
+#: sieveeditorconfiguredialog.cpp:55
 #, kde-format
 msgid "Sieve Server"
 msgstr "Servidor de «Sieve»"
 
-#: sieveeditorconfiguredialog.cpp:60
-#, kde-format
-msgid "Wrap Text"
-msgstr "Ajusta el text"
-
-#: sieveeditorconfiguredialog.cpp:65
+#: sieveeditorconfiguredialog.cpp:69
 #, kde-format
 msgid "Editor"
 msgstr "Editor"
 
-#: sieveeditorconfiguredialog.cpp:81
+#: sieveeditorconfiguredialog.cpp:85
 #, kde-format
 msgid "User Feedback"
 msgstr "Comentaris de l'usuari"
 
-#: sieveeditorconfigureserverpage.cpp:19
+#: sieveeditorconfigureserverpage.cpp:20
 #, kde-format
-msgid "Configure..."
-msgstr "Configura..."
+msgctxt "@action:button"
+msgid "Configure…"
+msgstr "Configura…"
 
-#: sieveeditorconfigureserverpage.cpp:24
+#: sieveeditorconfigureserverpage.cpp:25
 #, kde-format
-msgid "Import Sieve Settings..."
-msgstr "Importa la configuració de «Sieve»..."
+msgctxt "@action:button"
+msgid "Import Sieve Settings…"
+msgstr "Importa la configuració de «Sieve»…"
 
 #: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
@@ -286,12 +300,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Eines > Importa la configuració de l'IMAP"
 
-#: sieveeditormainwidget.cpp:606
+#: sieveeditormainwidget.cpp:607
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "L'script ha canviat. Voleu desar-lo abans de tancar?"
 
-#: sieveeditormainwidget.cpp:607
+#: sieveeditormainwidget.cpp:608
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"
@@ -314,71 +328,85 @@ msgstr "Pujada"
 
 #: sieveeditormainwindow.cpp:184
 #, kde-format
-msgid "Add Sieve Server..."
-msgstr "Afegeix un servidor de «Sieve»..."
+msgctxt "@action"
+msgid "Add Sieve Server…"
+msgstr "Afegeix un servidor de «Sieve»…"
 
 #: sieveeditormainwindow.cpp:188
 #, kde-format
+msgctxt "@action"
 msgid "Delete Script"
 msgstr "Suprimeix l'script"
 
 #: sieveeditormainwindow.cpp:194
 #, kde-format
-msgid "Create New Script..."
-msgstr "Crea un script nou..."
+msgctxt "@action"
+msgid "Create New Script…"
+msgstr "Crea un script nou…"
 
 #: sieveeditormainwindow.cpp:200
 #, kde-format
-msgid "Edit Script..."
-msgstr "Edita un script..."
+msgctxt "@action"
+msgid "Edit Script…"
+msgstr "Edita un script…"
 
 #: sieveeditormainwindow.cpp:205
 #, kde-format
+msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Desactiva un script"
 
 #: sieveeditormainwindow.cpp:210
 #, kde-format
+msgctxt "@action"
 msgid "Refresh List"
 msgstr "Actualitza la llista"
 
 #: sieveeditormainwindow.cpp:216
 #, kde-format
-msgid "Go to Line..."
-msgstr "Ves a la línia..."
+msgctxt "@action"
+msgid "Go to Line…"
+msgstr "Ves a la línia…"
 
 #: sieveeditormainwindow.cpp:233
 #, kde-format
-msgid "Import..."
-msgstr "Importa..."
+msgctxt "@action"
+msgid "Import…"
+msgstr "Importa…"
 
 #: sieveeditormainwindow.cpp:239
 #, kde-format
-msgid "Share..."
-msgstr "Comparteix..."
+msgctxt "@action"
+msgid "Share…"
+msgstr "Comparteix…"
 
 #: sieveeditormainwindow.cpp:247
 #, kde-format
-msgid "Check Spelling..."
-msgstr "Verifica l'ortografia..."
+msgctxt "@action"
+msgid "Check Spelling…"
+msgstr "Verifica l'ortografia…"
 
 #: sieveeditormainwindow.cpp:253
 #, kde-format
+msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Comprova la sintaxi"
 
 #: sieveeditormainwindow.cpp:258
 #, kde-format
-msgid "Create Rules Graphically..."
-msgstr "Crea regles gràficament..."
+msgctxt "@action"
+msgid "Create Rules Graphically…"
+msgstr "Crea regles gràficament…"
 
 #: sieveeditormainwindow.cpp:263
 #, kde-format
+msgctxt "@action"
 msgid "Comment"
 msgstr "Comenta"
 
 #: sieveeditormainwindow.cpp:268
 #, kde-format
+msgctxt "@action"
 msgid "Uncomment"
 msgstr "Descomenta"
 
@@ -390,18 +418,36 @@ msgstr "&Punts"
 
 #: sieveeditormainwindow.cpp:301
 #, kde-format
-msgid "Debug Sieve Script..."
-msgstr "Depura l'script de «Sieve»..."
+msgctxt "@action"
+msgid "Debug Sieve Script…"
+msgstr "Depura l'script de «Sieve»…"
 
 #: sieveeditormainwindow.cpp:306
 #, kde-format
+msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Talla les paraules"
 
-#: sieveeditormainwindow.cpp:315
+#: sieveeditormainwindow.cpp:328
 #, kde-format
-msgid "Import IMAP Settings..."
-msgstr "Importa la configuració de l'IMAP..."
+msgctxt "@action"
+msgid "Import IMAP Settings…"
+msgstr "Importa la configuració de l'IMAP…"
+
+#: sieveeditormainwindow.cpp:351
+#, kde-format
+msgid ""
+"<qt>This will hide the menu bar completely. You can show it again by typing "
+"%1.</qt>"
+msgstr ""
+"<qt>Això ocultarà completament la barra de menús. La podeu tornar a mostrar "
+"prement %1.</qt>"
+
+#: sieveeditormainwindow.cpp:354
+#, kde-format
+msgctxt "@title:window"
+msgid "Hide menu bar"
+msgstr "Ocultació de la barra de menús"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -413,24 +459,24 @@ msgstr "No s'ha configurat un URL de «Sieve»"
 msgid "(Disabled) %1"
 msgstr "(Desactivat) %1"
 
-#: sieveeditorpagewidget.cpp:42
+#: sieveeditorpagewidget.cpp:41
 #, kde-format
-msgid "Uploading script to server for checking it, please wait..."
+msgid "Uploading script to server for checking it, please wait…"
 msgstr ""
-"S'està pujant l'script al servidor per a comprovar-lo, espereu un moment..."
+"S'està pujant l'script al servidor per a comprovar-lo, espereu un moment…"
 
-#: sieveeditorpagewidget.cpp:135
+#: sieveeditorpagewidget.cpp:134
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "L'script de «Sieve» s'ha pujat correctament."
 
-#: sieveeditorpagewidget.cpp:135
+#: sieveeditorpagewidget.cpp:134
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Actualització de l'script de «Sieve»"
 
-#: sieveeditorpagewidget.cpp:148
+#: sieveeditorpagewidget.cpp:147
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -441,13 +487,13 @@ msgstr ""
 "El servidor ha contestat:\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
+#: sieveeditorpagewidget.cpp:150 sieveeditorpagewidget.cpp:155
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Error de «Sieve»"
 
-#: sieveeditorpagewidget.cpp:154
+#: sieveeditorpagewidget.cpp:153
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -456,18 +502,18 @@ msgstr ""
 "Ha fallat la pujada de l'script de «Sieve».\n"
 "Motiu desconegut\n"
 
-#: sieveeditorpagewidget.cpp:166
+#: sieveeditorpagewidget.cpp:165
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "L'script «%1» és nou. Voleu desar-lo?"
 
-#: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
+#: sieveeditorpagewidget.cpp:166 sieveeditorpagewidget.cpp:179
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Desa l'script"
 
-#: sieveeditorpagewidget.cpp:179
+#: sieveeditorpagewidget.cpp:178
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "L'script «%1» ha canviat. Voleu desar-lo?"
@@ -514,6 +560,12 @@ msgstr "&Configuració"
 msgid "Tools"
 msgstr "Eines"
 
+#. i18n: ectx: ToolBar (mainToolBar)
+#: sieveeditorui.rc:61
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Barra d'eines principal"
+
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: ui/serversievesettings.ui:37
 #, kde-format
@@ -551,7 +603,7 @@ msgid ""
 msgstr ""
 "El port del servidor va canviar quan «ManageSieve» es va convertir a un "
 "estàndard RFC complet. Les implementacions antigues del servidor segueixen "
-"usant el port 2000, mentre que un servidor conforme amb el nou estàndard "
+"usant el port 2000, mentre que un servidor conforme amb l'estàndard nou "
 "només es pot accedir a través del port 4190."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
@@ -725,17 +777,35 @@ msgstr "Buit"
 #. i18n: ectx: property (text), widget (QPushButton, addServer)
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
-msgid "Add..."
-msgstr "Afegeix..."
+msgid "Add…"
+msgstr "Afegeix…"
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
 #, kde-format
-msgid "Modify..."
-msgstr "Modifica..."
+msgid "Modify…"
+msgstr "Modifica…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
 #: ui/sieveeditorconfigureserverwidget.ui:43
 #, kde-format
 msgid "Remove"
 msgstr "Elimina"
+
+#~ msgid "Configure..."
+#~ msgstr "Configura..."
+
+#~ msgid "Import Sieve Settings..."
+#~ msgstr "Importa la configuració de «Sieve»..."
+
+#~ msgid "Add Sieve Server..."
+#~ msgstr "Afegeix un servidor de «Sieve»..."
+
+#~ msgid "Create Rules Graphically..."
+#~ msgstr "Crea regles gràficament..."
+
+#~ msgid "Import IMAP Settings..."
+#~ msgstr "Importa la configuració de l'IMAP..."
+
+#~ msgid "Add..."
+#~ msgstr "Afegeix..."

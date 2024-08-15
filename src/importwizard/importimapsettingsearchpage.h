@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2016-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2016-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -24,6 +24,6 @@ Q_SIGNALS:
     void needToImportSettings(bool);
 
 private:
-    void slotItemChanged();
-    QListWidget *mFoundProgramList = nullptr;
+    LIBSIEVEEDITOR_NO_EXPORT void slotItemChanged();
+    QListWidget *const mFoundProgramList;
 };

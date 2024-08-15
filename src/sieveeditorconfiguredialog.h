@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -8,6 +8,7 @@
 
 #include <KPageDialog>
 class QCheckBox;
+class KConfigDialogManager;
 class SieveEditorConfigureServerWidget;
 #ifdef WITH_KUSERFEEDBACK
 namespace KUserFeedback
@@ -30,7 +31,8 @@ private:
     void writeConfig();
     void loadServerSieveConfig();
     SieveEditorConfigureServerWidget *mServerWidget = nullptr;
-    QCheckBox *mWrapText = nullptr;
+    QCheckBox *const mWrapText;
+    KConfigDialogManager *m_configDialogManager = nullptr;
 #ifdef WITH_KUSERFEEDBACK
     KUserFeedback::FeedbackConfigWidget *mUserFeedbackWidget = nullptr;
 #endif

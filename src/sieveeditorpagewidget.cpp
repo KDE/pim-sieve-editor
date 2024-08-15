@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2014-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2014-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -13,14 +13,13 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 
-#include "sieveeditor_debug.h"
 #include <QVBoxLayout>
 
 SieveEditorPageWidget::SieveEditorPageWidget(QWidget *parent)
     : QWidget(parent)
+    , mSieveEditorWidget(new KSieveUi::SieveEditorWidget(false, this))
 {
     auto vbox = new QVBoxLayout(this);
-    mSieveEditorWidget = new KSieveUi::SieveEditorWidget(false);
     connect(mSieveEditorWidget, &KSieveUi::SieveEditorWidget::valueChanged, this, &SieveEditorPageWidget::slotValueChanged);
     vbox->addWidget(mSieveEditorWidget);
     connect(mSieveEditorWidget, &KSieveUi::SieveEditorWidget::checkSyntax, this, &SieveEditorPageWidget::slotCheckSyntaxClicked);
@@ -39,7 +38,7 @@ void SieveEditorPageWidget::slotCheckSyntaxClicked()
     if (script.isEmpty()) {
         return;
     }
-    mSieveEditorWidget->addNormalMessage(i18n("Uploading script to server for checking it, please wait..."));
+    mSieveEditorWidget->addNormalMessage(i18n("Uploading script to server for checking it, please wait…"));
 
     auto checkScriptJob = new KSieveCore::CheckScriptJob(this);
     connect(checkScriptJob, &KSieveCore::CheckScriptJob::finished, this, &SieveEditorPageWidget::slotCheckScriptJobFinished);

@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 configure_file(sieveeditor-version.h.in ${CMAKE_CURRENT_BINARY_DIR}/sieveeditor-version.h @ONLY)
 
@@ -12,7 +12,7 @@ target_sources(libsieveeditor PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/importimapsettingnofoundpage.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/importimapsettingprogresspage.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/importimapsettingfinishpage.cpp
-    )
+)
 
 target_sources(libsieveeditor PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/checks/importimapsettingsakonadicheckjob.cpp
@@ -20,18 +20,18 @@ target_sources(libsieveeditor PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/checks/abstractimapsettingscheckjob.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/checks/abstractimapsettingspassword.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/checks/importimapsettingsakonadipassword.cpp
-    )
+)
 
-if (TARGET KF6::UserFeedbackWidgets)
+if(TARGET KF6::UserFeedbackWidgets)
     add_definitions(-DWITH_KUSERFEEDBACK)
 endif()
 
 
-if (TARGET KF6::UserFeedbackWidgets)
+if(TARGET KF6::UserFeedbackWidgets)
     target_sources(libsieveeditor PRIVATE
         userfeedback/userfeedbackmanager.cpp
         userfeedback/userfeedbackmanager.h
-        )
+)
 endif()
 
 
@@ -47,7 +47,6 @@ target_sources(libsieveeditor PRIVATE
     sieveeditorconfigureserverwidget.cpp
     sieveeditormanagesievewidget.cpp
     sieveeditorpagewidget.cpp
-    sieveserversettings.cpp
     sieveeditortabwidget.cpp
     sieveeditorcentralwidget.cpp
     sieveeditorconfigureserverpage.cpp
@@ -60,7 +59,6 @@ target_sources(libsieveeditor PRIVATE
     sieveeditortabwidget.h
     sieveeditoremptytabwidgetlabel.h
     sieveeditormainwindow.h
-    sieveserversettings.h
     sieveeditormainwidget.h
     sieveeditorconfiguredialog.h
     readserversieveconfigjob.h
@@ -93,20 +91,20 @@ target_sources(libsieveeditor PRIVATE
 ki18n_wrap_ui(libsieveeditor
     ui/serversievesettings.ui
     ui/sieveeditorconfigureserverwidget.ui
-    )
+)
 ecm_qt_declare_logging_category(libsieveeditor HEADER sieveeditor_debug.h
 	IDENTIFIER SIEVEEDITOR_LOG 
 	CATEGORY_NAME org.kde.pim.sieveeditor 
 	OLD_CATEGORY_NAMES log_sieveeditor 
 	DESCRIPTION "sieveeditor (sieveeditor)" EXPORT SIEVEEDITOR)
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(libsieveeditor PROPERTIES UNITY_BUILD ON)
 endif()
 generate_export_header(libsieveeditor BASE_NAME libsieveeditor)
 
 set(libsieveeditor_userfeedback_LIB)
-if (TARGET KF6::UserFeedbackWidgets)
+if(TARGET KF6::UserFeedbackWidgets)
     set(libsieveeditor_userfeedback_LIB KF6::UserFeedbackWidgets)
 endif()
 
@@ -122,16 +120,16 @@ target_link_libraries(libsieveeditor
     KPim6::KSieveUi
     KPim6::KManageSieve
     ${libsieveeditor_userfeedback_LIB}
-    )
+)
 target_link_libraries(libsieveeditor PRIVATE qt6keychain)
 
 set_target_properties(libsieveeditor
     PROPERTIES OUTPUT_NAME sieveeditor VERSION ${KDEPIM_LIB_VERSION} SOVERSION ${KDEPIM_LIB_SOVERSION}
-    )
+)
 
 set(sieveeditor_SRCS main.cpp)
 
-add_executable(sieveeditor ${sieveeditor_SRCS} )
+add_executable(sieveeditor ${sieveeditor_SRCS})
 
 target_link_libraries(sieveeditor
     KF6::CoreAddons
@@ -139,10 +137,12 @@ target_link_libraries(sieveeditor
     libsieveeditor
     KF6::XmlGui
     KF6::I18n
-    KF6::DBusAddons
     ${libsieveeditor_userfeedback_LIB}
-    )
-
+    KF6::IconThemes
+)
+if(NOT WIN32 AND NOT APPLE)
+    target_link_libraries(sieveeditor KF6::DBusAddons)
+endif()    	
 install(TARGETS sieveeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(PROGRAMS org.kde.sieveeditor.desktop DESTINATION ${KDE_INSTALL_APPDIR})
@@ -152,7 +152,7 @@ install(FILES settings/sieveeditorglobalconfig.kcfg DESTINATION ${KDE_INSTALL_KC
 install(TARGETS libsieveeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 
-if (BUILD_TESTING)
+if(BUILD_TESTING)
     add_subdirectory(importwizard/autotests)
     add_subdirectory(importwizard/tests)
 endif()
@@ -160,3 +160,4 @@ endif()
 install(FILES org.kde.sieveeditor.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 ecm_qt_install_logging_categories(EXPORT SIEVEEDITOR FILE sieveeditor.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
+add_subdirectory(icons)

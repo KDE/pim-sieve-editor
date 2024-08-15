@@ -2,22 +2,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Xosé <xosecalvo@gmail.com>, 2014.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016.
-# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2023, 2024 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-19 01:34+0000\n"
-"PO-Revision-Date: 2023-09-30 12:43+0200\n"
+"POT-Creation-Date: 2024-08-10 00:42+0000\n"
+"PO-Revision-Date: 2024-08-03 12:18+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -39,50 +39,53 @@ msgstr "Configuración de IMAP de Akonadi"
 msgid "Thunderbird IMAP Settings"
 msgstr "Configuración de IMAP de Thunderbird"
 
-#: importwizard/importimapsettingfinishpage.cpp:20
+#: importwizard/importimapsettingfinishpage.cpp:22
 #, kde-format
+msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
 msgstr "Importouse a configuración de IMAP:"
 
-#: importwizard/importimapsettingnofoundpage.cpp:18
+#: importwizard/importimapsettingnofoundpage.cpp:20
 #, kde-format
+msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "Non se atopou ningunha configuración para importar."
 
-#: importwizard/importimapsettingprogresspage.cpp:61
+#: importwizard/importimapsettingprogresspage.cpp:63
 #, kde-format
 msgid "No settings found."
 msgstr "Non se atopou ningunha configuración."
 
-#: importwizard/importimapsettingprogresspage.cpp:68
+#: importwizard/importimapsettingprogresspage.cpp:70
 #, kde-format
-msgid "Import settings from %1..."
+msgid "Import settings from %1…"
 msgstr "Importar configuracións de %1…"
 
-#: importwizard/importimapsettingprogresspage.cpp:70
+#: importwizard/importimapsettingprogresspage.cpp:72
 #, kde-format
 msgid "Import settings from %1 done"
 msgstr "Importar configuracións de %1: feito."
 
-#: importwizard/importimapsettingsearchpage.cpp:19
+#: importwizard/importimapsettingsearchpage.cpp:21
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr "Seleccione o programa do que quere importar a configuración de IMAP:"
 
-#: importwizard/importimapsettingwizard.cpp:28
+#: importwizard/importimapsettingwizard.cpp:32
 #, kde-format
 msgctxt "@title:window"
 msgid "Import IMAP Settings"
 msgstr "Importar unha configuración de IMAP"
 
-#: importwizard/importimapsettingwizard.cpp:31
+#: importwizard/importimapsettingwizard.cpp:34
 #, kde-format
 msgid "Select Import Settings"
 msgstr "Seleccione a configuración de importación"
 
-#: importwizard/importimapsettingwizard.cpp:39
+#: importwizard/importimapsettingwizard.cpp:40
 #, kde-format
-msgid "Import in Progress..."
+msgid "Import in Progress…"
 msgstr "Importación en progreso…"
 
 #: importwizard/importimapsettingwizard.cpp:46
@@ -90,43 +93,45 @@ msgstr "Importación en progreso…"
 msgid "Finish"
 msgstr "Rematar"
 
-#: main.cpp:30
+#: main.cpp:50
 #, kde-format
 msgid "KSieve Editor"
 msgstr "Editor de KSieve"
 
-#: main.cpp:32
+#: main.cpp:52
 #, kde-format
 msgid "Sieve Editor"
 msgstr "Editor de Sieve"
 
-#: main.cpp:34
+#: main.cpp:54
 #, kde-format
 msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "© 2013-%1 Persoas autoras de sieveeditor"
 
-#: main.cpp:35
+#: main.cpp:55
 #, kde-format
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:35
+#: main.cpp:55
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantemento."
 
-#: main.cpp:43
+#: main.cpp:64
 #, kde-format
+msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
 msgstr "Lista todas as opcións dispoñíbeis de comentarios"
 
-#: serversievelistwidget.cpp:77
+#: serversievelistwidget.cpp:76
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Settings"
 msgstr "Modificar a configuración"
 
-#: serversievelistwidget.cpp:123
+#: serversievelistwidget.cpp:122
 #, kde-format
 msgctxt "server name (username)"
 msgid "%1 (%2)"
@@ -146,33 +151,39 @@ msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anónimo"
 
-#: serversievesettings.cpp:268
+#: serversievesettings.cpp:80
+#, kde-format
+msgctxt "Percent value; %p is the value, % is the percent sign"
+msgid "%p%"
+msgstr "%p%"
+
+#: serversievesettings.cpp:271
 #, kde-format
 msgid "Server is not defined"
 msgstr "O servidor non está definido"
 
-#: serversievesettings.cpp:268
+#: serversievesettings.cpp:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Comprobar o servidor"
 
-#: serversievesettings.cpp:311
+#: serversievesettings.cpp:314
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr "Non é posíbel conectar co servidor; verifique o enderezo do servidor."
 
-#: serversievesettings.cpp:323
+#: serversievesettings.cpp:326
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<qt><b>TLS permítese e recoméndase.</b></qt>"
 
-#: serversievesettings.cpp:326
+#: serversievesettings.cpp:329
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<qt><b>SSL permítese e recoméndase.</b></qt>"
 
-#: serversievesettings.cpp:330
+#: serversievesettings.cpp:333
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
@@ -181,51 +192,54 @@ msgstr ""
 "<qt><b>Non se admite ningún tipo de seguridade. Non se recomenda ligar con "
 "este servidor.</b></qt>"
 
-#: serversievesettings.cpp:333
+#: serversievesettings.cpp:336
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>Non é posíbel usar este servidor.</b></qt>"
 
-#: serversievesettingsdialog.cpp:25
+#: serversievesettingsdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Engadir un servidor de Sieve"
 
-#: sieveeditorconfiguredialog.cpp:37
+#: sieveeditorconfiguredialog.cpp:38
+#, kde-format
+msgctxt "@option:check"
+msgid "Wrap Text"
+msgstr "Dividir o texto."
+
+#: sieveeditorconfiguredialog.cpp:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Configurar"
 
-#: sieveeditorconfiguredialog.cpp:51
+#: sieveeditorconfiguredialog.cpp:55
 #, kde-format
 msgid "Sieve Server"
 msgstr "Servidor de Sieve"
 
-#: sieveeditorconfiguredialog.cpp:60
-#, kde-format
-msgid "Wrap Text"
-msgstr "Dividir o texto"
-
-#: sieveeditorconfiguredialog.cpp:65
+#: sieveeditorconfiguredialog.cpp:69
 #, kde-format
 msgid "Editor"
 msgstr "Editor"
 
-#: sieveeditorconfiguredialog.cpp:81
+#: sieveeditorconfiguredialog.cpp:85
 #, kde-format
 msgid "User Feedback"
 msgstr "Comentarios"
 
-#: sieveeditorconfigureserverpage.cpp:19
+#: sieveeditorconfigureserverpage.cpp:20
 #, kde-format
-msgid "Configure..."
+msgctxt "@action:button"
+msgid "Configure…"
 msgstr "Configurar…"
 
-#: sieveeditorconfigureserverpage.cpp:24
+#: sieveeditorconfigureserverpage.cpp:25
 #, kde-format
-msgid "Import Sieve Settings..."
+msgctxt "@action:button"
+msgid "Import Sieve Settings…"
 msgstr "Importar unha configuración de Sieve…"
 
 #: sieveeditorconfigureserverwidget.cpp:59
@@ -283,12 +297,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Ferramentas → Importar unha configuración de IMAP"
 
-#: sieveeditormainwidget.cpp:606
+#: sieveeditormainwidget.cpp:607
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Modificouse o guión. Quere gardalo antes de pechar?"
 
-#: sieveeditormainwidget.cpp:607
+#: sieveeditormainwidget.cpp:608
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"
@@ -311,71 +325,85 @@ msgstr "Enviar"
 
 #: sieveeditormainwindow.cpp:184
 #, kde-format
-msgid "Add Sieve Server..."
+msgctxt "@action"
+msgid "Add Sieve Server…"
 msgstr "Engadir un servidor de Sieve…"
 
 #: sieveeditormainwindow.cpp:188
 #, kde-format
+msgctxt "@action"
 msgid "Delete Script"
 msgstr "Eliminar o guión"
 
 #: sieveeditormainwindow.cpp:194
 #, kde-format
-msgid "Create New Script..."
+msgctxt "@action"
+msgid "Create New Script…"
 msgstr "Crear un novo guión…"
 
 #: sieveeditormainwindow.cpp:200
 #, kde-format
-msgid "Edit Script..."
+msgctxt "@action"
+msgid "Edit Script…"
 msgstr "Editar o guión…"
 
 #: sieveeditormainwindow.cpp:205
 #, kde-format
+msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Desactivar o guión"
 
 #: sieveeditormainwindow.cpp:210
 #, kde-format
+msgctxt "@action"
 msgid "Refresh List"
 msgstr "Actualizar a lista"
 
 #: sieveeditormainwindow.cpp:216
 #, kde-format
-msgid "Go to Line..."
+msgctxt "@action"
+msgid "Go to Line…"
 msgstr "Ir á liña…"
 
 #: sieveeditormainwindow.cpp:233
 #, kde-format
-msgid "Import..."
+msgctxt "@action"
+msgid "Import…"
 msgstr "Importar…"
 
 #: sieveeditormainwindow.cpp:239
 #, kde-format
-msgid "Share..."
+msgctxt "@action"
+msgid "Share…"
 msgstr "Compartir…"
 
 #: sieveeditormainwindow.cpp:247
 #, kde-format
-msgid "Check Spelling..."
+msgctxt "@action"
+msgid "Check Spelling…"
 msgstr "Corrixir a ortografía…"
 
 #: sieveeditormainwindow.cpp:253
 #, kde-format
+msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Comprobar a sintaxe"
 
 #: sieveeditormainwindow.cpp:258
 #, kde-format
-msgid "Create Rules Graphically..."
+msgctxt "@action"
+msgid "Create Rules Graphically…"
 msgstr "Crear regras graficamente…"
 
 #: sieveeditormainwindow.cpp:263
 #, kde-format
+msgctxt "@action"
 msgid "Comment"
 msgstr "Comentar"
 
 #: sieveeditormainwindow.cpp:268
 #, kde-format
+msgctxt "@action"
 msgid "Uncomment"
 msgstr "Descomentar"
 
@@ -387,18 +415,34 @@ msgstr "&Marcadores"
 
 #: sieveeditormainwindow.cpp:301
 #, kde-format
-msgid "Debug Sieve Script..."
+msgctxt "@action"
+msgid "Debug Sieve Script…"
 msgstr "Depurar o guión de Sieve…"
 
 #: sieveeditormainwindow.cpp:306
 #, kde-format
+msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Axuste de palabras"
 
-#: sieveeditormainwindow.cpp:315
+#: sieveeditormainwindow.cpp:328
 #, kde-format
-msgid "Import IMAP Settings..."
+msgctxt "@action"
+msgid "Import IMAP Settings…"
 msgstr "Importar unha configuración de IMAP…"
+
+#: sieveeditormainwindow.cpp:351
+#, kde-format
+msgid ""
+"<qt>This will hide the menu bar completely. You can show it again by typing "
+"%1.</qt>"
+msgstr "<qt>Isto agocha a barra de menú. Prema %1 para amosala de novo.</qt>"
+
+#: sieveeditormainwindow.cpp:354
+#, kde-format
+msgctxt "@title:window"
+msgid "Hide menu bar"
+msgstr "Agochar a barra de menú"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -410,23 +454,23 @@ msgstr "Non hai ningún URL de Sieve configurado"
 msgid "(Disabled) %1"
 msgstr "(desactivado) %1"
 
-#: sieveeditorpagewidget.cpp:42
+#: sieveeditorpagewidget.cpp:41
 #, kde-format
-msgid "Uploading script to server for checking it, please wait..."
+msgid "Uploading script to server for checking it, please wait…"
 msgstr "Enviando o guión ao servidor para revisalo, agarde…"
 
-#: sieveeditorpagewidget.cpp:135
+#: sieveeditorpagewidget.cpp:134
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "Enviouse o guión de Sieve."
 
-#: sieveeditorpagewidget.cpp:135
+#: sieveeditorpagewidget.cpp:134
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Envío do guión de Sieve"
 
-#: sieveeditorpagewidget.cpp:148
+#: sieveeditorpagewidget.cpp:147
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -437,13 +481,13 @@ msgstr ""
 "O servidor respondeu:\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:151 sieveeditorpagewidget.cpp:156
+#: sieveeditorpagewidget.cpp:150 sieveeditorpagewidget.cpp:155
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Produciuse un erro de Sieve"
 
-#: sieveeditorpagewidget.cpp:154
+#: sieveeditorpagewidget.cpp:153
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -452,18 +496,18 @@ msgstr ""
 "Produciuse un erro ao enviar o guión de Sieve.\n"
 "Descoñécese o motivo.\n"
 
-#: sieveeditorpagewidget.cpp:166
+#: sieveeditorpagewidget.cpp:165
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "O guión «%1» é novo. Quere gardalo?"
 
-#: sieveeditorpagewidget.cpp:167 sieveeditorpagewidget.cpp:180
+#: sieveeditorpagewidget.cpp:166 sieveeditorpagewidget.cpp:179
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Gardar o guión"
 
-#: sieveeditorpagewidget.cpp:179
+#: sieveeditorpagewidget.cpp:178
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "Cambiouse o guión «%1». Quere gardalo?"
@@ -509,6 +553,12 @@ msgstr "&Configuración"
 #, kde-format
 msgid "Tools"
 msgstr "Ferramentas"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: sieveeditorui.rc:61
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Barra de ferramentas principal"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: ui/serversievesettings.ui:37
@@ -720,13 +770,13 @@ msgstr "Baleiro"
 #. i18n: ectx: property (text), widget (QPushButton, addServer)
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
-msgid "Add..."
+msgid "Add…"
 msgstr "Engadir…"
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
 #, kde-format
-msgid "Modify..."
+msgid "Modify…"
 msgstr "Modificar…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
@@ -735,13 +785,29 @@ msgstr "Modificar…"
 msgid "Remove"
 msgstr "Retirar"
 
+#~ msgid "Configure..."
+#~ msgstr "Configurar…"
+
+#~ msgid "Import Sieve Settings..."
+#~ msgstr "Importar unha configuración de Sieve…"
+
+#~ msgid "Add Sieve Server..."
+#~ msgstr "Engadir un servidor de Sieve…"
+
+#~ msgid "Share..."
+#~ msgstr "Compartir…"
+
+#~ msgid "Create Rules Graphically..."
+#~ msgstr "Crear regras graficamente…"
+
+#~ msgid "Import IMAP Settings..."
+#~ msgstr "Importar unha configuración de IMAP…"
+
+#~ msgid "Add..."
+#~ msgstr "Engadir…"
+
 #~ msgid "Close wallet when close application"
 #~ msgstr "Pechar a carteira ao pechar a aplicación"
-
-#, fuzzy
-#~| msgid "Share..."
-#~ msgid "Share"
-#~ msgstr "Compartir…"
 
 #~ msgctxt "Reset the zoom"
 #~ msgid "Reset"

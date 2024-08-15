@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2016-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2016-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -22,11 +22,11 @@ public:
     void setImapSettingsPassword(AbstractImapSettingsPassword *passwordImporter) override;
 
 private:
-    [[nodiscard]] inline bool resourceCanHaveSieveSupport(const QString &filename) const;
-    void loadSieveServerSettings();
-    void slotImportNextServerSieveDone(const SieveEditorUtil::SieveServerConfig &config, const QString &filename);
-    void importNextServerSieve();
-    void importSettings(const QString &directory, const QString &filename);
+    [[nodiscard]] LIBSIEVEEDITOR_NO_EXPORT inline bool resourceCanHaveSieveSupport(const QString &filename) const;
+    LIBSIEVEEDITOR_NO_EXPORT void loadSieveServerSettings();
+    LIBSIEVEEDITOR_NO_EXPORT void slotImportNextServerSieveDone(const SieveEditorUtil::SieveServerConfig &config, const QString &filename);
+    LIBSIEVEEDITOR_NO_EXPORT void importNextServerSieve();
+    LIBSIEVEEDITOR_NO_EXPORT void importSettings(const QString &directory, const QString &filename);
     QMultiMap<QString, QString> mSieveServerLst;
     QMultiMap<QString, QString>::const_iterator mSieveServerMapIterator;
 };

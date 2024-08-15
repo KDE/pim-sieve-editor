@@ -1,11 +1,10 @@
 /*
-   SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "sieveeditormainwindow.h"
-
 #include "importwizard/importimapsettingwizard.h"
 #include "serversievesettingsdialog.h"
 #include "sieveeditorbookmarks.h"
@@ -14,7 +13,6 @@
 #include "sieveeditorglobalconfig.h"
 #include "sieveeditormainwidget.h"
 #include "sievepurposemenuwidget.h"
-#include "sieveserversettings.h"
 #include <PimCommon/KActionMenuChangeCase>
 #include <PimCommon/NeedUpdateVersionUtils>
 #include <PimCommon/NeedUpdateVersionWidget>
@@ -27,8 +25,10 @@
 #include <KColorSchemeMenu>
 #include <KConfigGroup>
 #include <KLocalizedString>
+#include <KMessageBox>
 #include <KStandardAction>
 #include <KToggleFullScreenAction>
+#include <KToolBar>
 #include <QVBoxLayout>
 
 #include <KColorSchemeManager>
@@ -71,7 +71,7 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     KSignalHandler::self()->watchSignal(SIGTERM);
     connect(KSignalHandler::self(), &KSignalHandler::signalReceived, this, [this](int signal) {
         if (signal == SIGINT || signal == SIGTERM) {
-            printf("Shutting down...\n");
+            printf("Shutting down…\n");
             close();
         }
     });
@@ -132,14 +132,14 @@ void SieveEditorMainWindow::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(800, 600));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(mySieveEditorMainWindowConfigGroupName));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(mySieveEditorMainWindowConfigGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void SieveEditorMainWindow::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(mySieveEditorMainWindowConfigGroupName));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(mySieveEditorMainWindowConfigGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }
@@ -181,39 +181,39 @@ void SieveEditorMainWindow::setupActions()
     mUploadScript->setText(i18n("Upload"));
     mUploadScript->setEnabled(false);
 
-    auto act = new QAction(i18n("Add Sieve Server..."), this);
+    auto act = new QAction(i18nc("@action", "Add Sieve Server…"), this);
     connect(act, &QAction::triggered, this, &SieveEditorMainWindow::slotAddServerSieve);
     ac->addAction(QStringLiteral("add_server_sieve"), act);
 
-    mDeleteScript = new QAction(i18n("Delete Script"), this);
+    mDeleteScript = new QAction(i18nc("@action", "Delete Script"), this);
     connect(mDeleteScript, &QAction::triggered, this, &SieveEditorMainWindow::slotDeleteScript);
     ac->addAction(QStringLiteral("delete_script"), mDeleteScript);
     ac->setDefaultShortcut(mDeleteScript, QKeySequence(Qt::Key_Delete));
     mDeleteScript->setEnabled(false);
 
-    mNewScript = new QAction(i18n("Create New Script..."), this);
+    mNewScript = new QAction(i18nc("@action", "Create New Script…"), this);
     connect(mNewScript, &QAction::triggered, this, &SieveEditorMainWindow::slotCreateNewScript);
     ac->addAction(QStringLiteral("create_new_script"), mNewScript);
     ac->setDefaultShortcut(mNewScript, QKeySequence(Qt::CTRL | Qt::Key_N));
     mNewScript->setEnabled(false);
 
-    mEditScript = new QAction(i18n("Edit Script..."), this);
+    mEditScript = new QAction(i18nc("@action", "Edit Script…"), this);
     connect(mEditScript, &QAction::triggered, this, &SieveEditorMainWindow::slotEditScript);
     ac->addAction(QStringLiteral("edit_script"), mEditScript);
     mEditScript->setEnabled(false);
 
-    mDesactivateScript = new QAction(i18n("Deactivate Script"), this);
+    mDesactivateScript = new QAction(i18nc("@action", "Deactivate Script"), this);
     connect(mDesactivateScript, &QAction::triggered, this, &SieveEditorMainWindow::slotDesactivateScript);
     ac->addAction(QStringLiteral("desactivate_script"), mDesactivateScript);
     mDesactivateScript->setEnabled(false);
 
-    mRefreshList = new QAction(i18n("Refresh List"), this);
+    mRefreshList = new QAction(i18nc("@action", "Refresh List"), this);
     connect(mRefreshList, &QAction::triggered, this, &SieveEditorMainWindow::slotRefreshList);
     ac->addAction(QStringLiteral("refresh_list"), mRefreshList);
     mRefreshList->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
     ac->setDefaultShortcut(mRefreshList, QKeySequence(Qt::Key_F5));
 
-    mGoToLine = new QAction(i18n("Go to Line..."), this);
+    mGoToLine = new QAction(i18nc("@action", "Go to Line…"), this);
     connect(mGoToLine, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotGoToLine);
     mGoToLine->setIcon(QIcon::fromTheme(QStringLiteral("go-jump")));
     ac->setDefaultShortcut(mGoToLine, QKeySequence(Qt::CTRL | Qt::Key_G));
@@ -230,13 +230,13 @@ void SieveEditorMainWindow::setupActions()
     mSelectAllAction = KStandardAction::selectAll(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotSelectAll, ac);
     mSaveAsAction = KStandardAction::saveAs(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotSaveAs, ac);
 
-    mImportAction = new QAction(i18n("Import..."), this);
+    mImportAction = new QAction(i18nc("@action", "Import…"), this);
     connect(mImportAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotImport);
     ac->addAction(QStringLiteral("import_script"), mImportAction);
     mImportAction->setEnabled(false);
 
     auto purposeMenu = new SievePurposeMenuWidget(this, this);
-    mShareAction = new QAction(i18n("Share..."), this);
+    mShareAction = new QAction(i18nc("@action", "Share…"), this);
     ac->addAction(QStringLiteral("share_script"), mShareAction);
     mShareAction->setMenu(purposeMenu->menu());
     mShareAction->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
@@ -244,28 +244,28 @@ void SieveEditorMainWindow::setupActions()
     connect(purposeMenu, &SievePurposeMenuWidget::shareError, mMainWidget, &SieveEditorCentralWidget::slotShareError);
     connect(purposeMenu, &SievePurposeMenuWidget::shareSuccess, mMainWidget, &SieveEditorCentralWidget::slotShareSuccess);
 
-    mSpellCheckAction = new QAction(i18n("Check Spelling..."), this);
+    mSpellCheckAction = new QAction(i18nc("@action", "Check Spelling…"), this);
     connect(mSpellCheckAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotCheckSpelling);
     ac->addAction(QStringLiteral("check_spelling"), mSpellCheckAction);
     mSpellCheckAction->setIcon(QIcon::fromTheme(QStringLiteral("tools-check-spelling")));
     mSpellCheckAction->setEnabled(false);
 
-    mCheckSyntaxAction = new QAction(i18n("Check Syntax"), this);
+    mCheckSyntaxAction = new QAction(i18nc("@action", "Check Syntax"), this);
     connect(mCheckSyntaxAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotCheckSyntax);
     ac->addAction(QStringLiteral("check_syntax"), mCheckSyntaxAction);
     mCheckSyntaxAction->setEnabled(false);
 
-    mCreateRulesGraphicallyAction = new QAction(i18n("Create Rules Graphically..."), this);
+    mCreateRulesGraphicallyAction = new QAction(i18nc("@action", "Create Rules Graphically…"), this);
     connect(mCreateRulesGraphicallyAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotCreateRulesGraphically);
     ac->addAction(QStringLiteral("autogenerate_script"), mCreateRulesGraphicallyAction);
     mCreateRulesGraphicallyAction->setEnabled(false);
 
-    mCommentAction = new QAction(i18n("Comment"), this);
+    mCommentAction = new QAction(i18nc("@action", "Comment"), this);
     connect(mCommentAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotComment);
     ac->addAction(QStringLiteral("comment_code"), mCommentAction);
     ac->setDefaultShortcut(mCommentAction, Qt::CTRL | Qt::Key_D);
 
-    mUncommentAction = new QAction(i18n("Uncomment"), this);
+    mUncommentAction = new QAction(i18nc("@action", "Uncomment"), this);
     connect(mUncommentAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotUncomment);
     ac->addAction(QStringLiteral("uncomment_code"), mUncommentAction);
     ac->setDefaultShortcut(mUncommentAction, Qt::CTRL | Qt::SHIFT | Qt::Key_D);
@@ -298,21 +298,34 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("bookmark"), mBookmarkMenu);
     connect(mSieveEditorBookmarks, &SieveEditorBookmarks::openUrl, this, &SieveEditorMainWindow::slotOpenBookmarkUrl);
 
-    mDebugSieveScriptAction = new QAction(i18n("Debug Sieve Script..."), this);
+    mDebugSieveScriptAction = new QAction(i18nc("@action", "Debug Sieve Script…"), this);
     connect(mDebugSieveScriptAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotDebugSieveScript);
     ac->addAction(QStringLiteral("debug_sieve"), mDebugSieveScriptAction);
     ac->setDefaultShortcut(mDebugSieveScriptAction, QKeySequence(Qt::SHIFT | Qt::ALT | Qt::Key_D));
 
-    mWrapTextAction = new QAction(i18n("Wordwrap"), this);
+    mWrapTextAction = new QAction(i18nc("@action", "Wordwrap"), this);
     mWrapTextAction->setCheckable(true);
     ac->addAction(QStringLiteral("wordwrap"), mWrapTextAction);
     connect(mWrapTextAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotWordWrap);
 
     mPrintAction = KStandardAction::print(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotPrint, ac);
 
-    mPrintPreviewAction = KStandardAction::printPreview(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotPrintPreview, ac);
+    mShowMenuBarAction = KStandardAction::showMenubar(this, &SieveEditorMainWindow::slotToggleMenubar, actionCollection());
 
-    act = new QAction(i18n("Import IMAP Settings..."), this);
+    mPrintPreviewAction = KStandardAction::printPreview(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotPrintPreview, ac);
+    if (menuBar()) {
+        mHamburgerMenu = KStandardAction::hamburgerMenu(nullptr, nullptr, actionCollection());
+        mHamburgerMenu->setShowMenuBarAction(mShowMenuBarAction);
+        mHamburgerMenu->setMenuBar(menuBar());
+        connect(mHamburgerMenu, &KHamburgerMenu::aboutToShowMenu, this, [this]() {
+            updateHamburgerMenu();
+            // Immediately disconnect. We only need to run this once, but on demand.
+            // NOTE: The nullptr at the end disconnects all connections between
+            // q and mHamburgerMenu's aboutToShowMenu signal.
+            disconnect(mHamburgerMenu, &KHamburgerMenu::aboutToShowMenu, this, nullptr);
+        });
+    }
+    act = new QAction(i18nc("@action", "Import IMAP Settings…"), this);
     ac->addAction(QStringLiteral("import_imap_settings"), act);
     connect(act, &QAction::triggered, this, &SieveEditorMainWindow::slotImportImapSettings);
 
@@ -322,6 +335,42 @@ void SieveEditorMainWindow::setupActions()
 
     auto manager = new KColorSchemeManager(this);
     ac->addAction(QStringLiteral("colorscheme_menu"), KColorSchemeMenu::createMenu(manager, this));
+    mShowMenuBarAction->setChecked(SieveEditorGlobalConfig::self()->showMenuBar());
+    slotToggleMenubar(true);
+}
+
+void SieveEditorMainWindow::slotToggleMenubar(bool dontShowWarning)
+{
+    if (menuBar()) {
+        if (mShowMenuBarAction->isChecked()) {
+            menuBar()->show();
+        } else {
+            if (!dontShowWarning && (!toolBar()->isVisible() || !toolBar()->actions().contains(mHamburgerMenu))) {
+                const QString accel = mShowMenuBarAction->shortcut().toString(QKeySequence::NativeText);
+                KMessageBox::information(this,
+                                         i18n("<qt>This will hide the menu bar completely."
+                                              " You can show it again by typing %1.</qt>",
+                                              accel),
+                                         i18nc("@title:window", "Hide menu bar"),
+                                         QStringLiteral("HideMenuBarWarning"));
+            }
+            menuBar()->hide();
+        }
+        SieveEditorGlobalConfig::self()->setShowMenuBar(mShowMenuBarAction->isChecked());
+        SieveEditorGlobalConfig::self()->save();
+    }
+}
+
+void SieveEditorMainWindow::updateHamburgerMenu()
+{
+    delete mHamburgerMenu->menu();
+    auto menu = new QMenu(this);
+
+    menu->addAction(actionCollection()->action(QStringLiteral("add_server_sieve")));
+    menu->addSeparator();
+    menu->addAction(actionCollection()->action(QStringLiteral("create_new_script")));
+    menu->addSeparator();
+    mHamburgerMenu->setMenu(menu);
 }
 
 void SieveEditorMainWindow::slotImportImapSettings()

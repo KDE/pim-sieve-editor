@@ -1,0 +1,800 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the pim-sieve-editor package.
+#
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: pim-sieve-editor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-08-10 00:42+0000\n"
+"PO-Revision-Date: 2024-08-01 08:29+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Lokalize 24.05.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "צוות התרגום של KDE ישראל"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-l10n-he@kde.org"
+
+#: importwizard/checks/importimapsettingsakonadicheckjob.cpp:152
+#, kde-format
+msgid "Akonadi IMAP Settings"
+msgstr "הגדרות IMAP של Akonadi"
+
+#: importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp:291
+#, kde-format
+msgid "Thunderbird IMAP Settings"
+msgstr "הגדרות IMAP של Thunderbird"
+
+#: importwizard/importimapsettingfinishpage.cpp:22
+#, kde-format
+msgctxt "@label:textbox"
+msgid "IMAP settings were imported:"
+msgstr "הגדרות ה־IMAP יובאו:"
+
+#: importwizard/importimapsettingnofoundpage.cpp:20
+#, kde-format
+msgctxt "@label:textbox"
+msgid "No settings found to import."
+msgstr "לא נמצאו הגדרות לייבוא."
+
+#: importwizard/importimapsettingprogresspage.cpp:63
+#, kde-format
+msgid "No settings found."
+msgstr "לא נמצאו הגדרות."
+
+#: importwizard/importimapsettingprogresspage.cpp:70
+#, kde-format
+msgid "Import settings from %1…"
+msgstr "ההגדרות מיובאות מתוך %1…"
+
+#: importwizard/importimapsettingprogresspage.cpp:72
+#, kde-format
+msgid "Import settings from %1 done"
+msgstr "ייבוא ההגדרות מתוך %1 הושלם"
+
+#: importwizard/importimapsettingsearchpage.cpp:21
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Please select the program from which you like to import IMAP settings:"
+msgstr "נא לבחור את התוכנית ממנה לייבא את הגדרות ה־IMAP:"
+
+#: importwizard/importimapsettingwizard.cpp:32
+#, kde-format
+msgctxt "@title:window"
+msgid "Import IMAP Settings"
+msgstr "ייבוא הגדרות IMAP"
+
+#: importwizard/importimapsettingwizard.cpp:34
+#, kde-format
+msgid "Select Import Settings"
+msgstr "בחירת הגדרות ייבוא"
+
+#: importwizard/importimapsettingwizard.cpp:40
+#, kde-format
+msgid "Import in Progress…"
+msgstr "הייבוא מתבצע…"
+
+#: importwizard/importimapsettingwizard.cpp:46
+#, kde-format
+msgid "Finish"
+msgstr "סיום"
+
+#: main.cpp:50
+#, kde-format
+msgid "KSieve Editor"
+msgstr "עורך KSieve"
+
+#: main.cpp:52
+#, kde-format
+msgid "Sieve Editor"
+msgstr "עורך Sieve"
+
+#: main.cpp:54
+#, kde-format
+msgid "Copyright © 2013-%1 sieveeditor authors"
+msgstr "כל הזכויות שמורות © 2013-‏%1 ליוצרי sieveeditor"
+
+#: main.cpp:55
+#, kde-format
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "לורנט מונטל"
+
+#: main.cpp:55
+#, kde-format
+msgid "Maintainer"
+msgstr "מתחזק"
+
+#: main.cpp:64
+#, kde-format
+msgctxt "@info:shell"
+msgid "Lists the available options for user feedback"
+msgstr "הצגת האפשרויות הזמינות למשוב משתמש"
+
+#: serversievelistwidget.cpp:76
+#, kde-format
+msgctxt "@title:window"
+msgid "Modify Settings"
+msgstr "שינוי הגדרות"
+
+#: serversievelistwidget.cpp:122
+#, kde-format
+msgctxt "server name (username)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
+#: serversievesettings.cpp:33 ui/serversievesettings.ui:259
+#, kde-format
+msgctxt "Authentication method"
+msgid "Clear text"
+msgstr "טקסט גלוי"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
+#: serversievesettings.cpp:35 ui/serversievesettings.ui:294
+#, kde-format
+msgctxt "Authentication method"
+msgid "Anonymous"
+msgstr "אלמוני"
+
+#: serversievesettings.cpp:80
+#, kde-format
+msgctxt "Percent value; %p is the value, % is the percent sign"
+msgid "%p%"
+msgstr "%p%"
+
+#: serversievesettings.cpp:271
+#, kde-format
+msgid "Server is not defined"
+msgstr "השרת לא מוגדר"
+
+#: serversievesettings.cpp:271
+#, kde-format
+msgctxt "@title:window"
+msgid "Check Server"
+msgstr "בדיקת השרת"
+
+#: serversievesettings.cpp:314
+#, kde-format
+msgid "Unable to connect to the server, please verify the server address."
+msgstr "לא ניתן להתחבר לשרת, נא לוודא שכתובת השרת נכונה."
+
+#: serversievesettings.cpp:326
+#, kde-format
+msgid "<qt><b>TLS is supported and recommended.</b></qt>"
+msgstr "<qt><b>יש תמיכה ב־TLS ומומלץ להשתמש בו.</b></qt>"
+
+#: serversievesettings.cpp:329
+#, kde-format
+msgid "<qt><b>SSL is supported and recommended.</b></qt>"
+msgstr "<qt><b>יש תמיכה ב־SSL ומומלץ להשתמש בו.</b></qt>"
+
+#: serversievesettings.cpp:333
+#, kde-format
+msgid ""
+"<qt><b>No security is supported. It is not recommended to connect to this "
+"server.</b></qt>"
+msgstr "<qt><b>אין תמיכה באבטחה. לא מומלץ להתחבר לשרת הזה.</b></qt>"
+
+#: serversievesettings.cpp:336
+#, kde-format
+msgid "<qt><b>It is not possible to use this server.</b></qt>"
+msgstr "<qt><b>אי אפשר להשתמש בשרת.</b></qt>"
+
+#: serversievesettingsdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Sieve Server"
+msgstr "הוספת שרת Sieve"
+
+#: sieveeditorconfiguredialog.cpp:38
+#, kde-format
+msgctxt "@option:check"
+msgid "Wrap Text"
+msgstr "גלישת טקסט"
+
+#: sieveeditorconfiguredialog.cpp:41
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure"
+msgstr "הגדרה"
+
+#: sieveeditorconfiguredialog.cpp:55
+#, kde-format
+msgid "Sieve Server"
+msgstr "שרת Sieve"
+
+#: sieveeditorconfiguredialog.cpp:69
+#, kde-format
+msgid "Editor"
+msgstr "עורך"
+
+#: sieveeditorconfiguredialog.cpp:85
+#, kde-format
+msgid "User Feedback"
+msgstr "משוב משתמש"
+
+#: sieveeditorconfigureserverpage.cpp:20
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure…"
+msgstr "הגדרה…"
+
+#: sieveeditorconfigureserverpage.cpp:25
+#, kde-format
+msgctxt "@action:button"
+msgid "Import Sieve Settings…"
+msgstr "ייבוא הגדרות Sieve…"
+
+#: sieveeditorconfigureserverwidget.cpp:59
+#, kde-format
+msgid "Do you want to remove this server '%1'?"
+msgstr "להסיר את השרת ‚%1’?"
+
+#: sieveeditorconfigureserverwidget.cpp:60
+#, kde-format
+msgctxt "@title:window"
+msgid "Remove Sieve Server"
+msgstr "הסרת שרת Sieve"
+
+#: sieveeditoremptytabwidgetlabel.cpp:25
+#, kde-format
+msgid "Import script:"
+msgstr "ייבוא סקריפט:"
+
+#: sieveeditoremptytabwidgetlabel.cpp:25
+#, kde-format
+msgctxt "Action is from file menu, import submenu"
+msgid "File > Import"
+msgstr "קובץ -> ייבוא"
+
+#: sieveeditoremptytabwidgetlabel.cpp:26
+#, kde-format
+msgid "Create Rules Graphically:"
+msgstr "יצירת כללים באופן חזותי:"
+
+#: sieveeditoremptytabwidgetlabel.cpp:26
+#, kde-format
+msgctxt "Action is from menu tools, submenu autogenerate script"
+msgid "Tools > Autogenerate script"
+msgstr "כלים > יצירת סקריפט אוטומטית"
+
+#: sieveeditoremptytabwidgetlabel.cpp:27
+#, kde-format
+msgid "Debug a script:"
+msgstr "ניפוי שגיאות בסקריפטים:"
+
+#: sieveeditoremptytabwidgetlabel.cpp:27
+#, kde-format
+msgctxt "These action in from menu tools submenu debug sieve script"
+msgid "Tools > Debug Sieve Script"
+msgstr "כלים > ניפוי שגיאות בסקריפטים"
+
+#: sieveeditoremptytabwidgetlabel.cpp:28
+#, kde-format
+msgid "Import Sieve Settings:"
+msgstr "ייבוא הגדרות Sieve:"
+
+#: sieveeditoremptytabwidgetlabel.cpp:28
+#, kde-format
+msgctxt "Action is from tools menu, import IMAP settings"
+msgid "Tools > Import IMAP settings"
+msgstr "כלים > ייבוא הגדרות IMAP"
+
+#: sieveeditormainwidget.cpp:607
+#, kde-format
+msgid "Script was modified. Do you want to save before closing?"
+msgstr "הסקריפט השתנה. לשמור לפני הסגירה?"
+
+#: sieveeditormainwidget.cpp:608
+#, kde-format
+msgctxt "@title:window"
+msgid "Close script"
+msgstr "סגירת סקריפט"
+
+#: sieveeditormainwindow.cpp:157
+#, kde-format
+msgid "Network is Up."
+msgstr "הרשת פעילה."
+
+#: sieveeditormainwindow.cpp:159
+#, kde-format
+msgid "Network is Down."
+msgstr "הרשת מנותקת."
+
+#: sieveeditormainwindow.cpp:181
+#, kde-format
+msgid "Upload"
+msgstr "העלאה"
+
+#: sieveeditormainwindow.cpp:184
+#, kde-format
+msgctxt "@action"
+msgid "Add Sieve Server…"
+msgstr "הוספת שרת Sieve…"
+
+#: sieveeditormainwindow.cpp:188
+#, kde-format
+msgctxt "@action"
+msgid "Delete Script"
+msgstr "מחיקת סקריפט"
+
+#: sieveeditormainwindow.cpp:194
+#, kde-format
+msgctxt "@action"
+msgid "Create New Script…"
+msgstr "יצירת סקריפט חדש…"
+
+#: sieveeditormainwindow.cpp:200
+#, kde-format
+msgctxt "@action"
+msgid "Edit Script…"
+msgstr "עריכת סקריפט…"
+
+#: sieveeditormainwindow.cpp:205
+#, kde-format
+msgctxt "@action"
+msgid "Deactivate Script"
+msgstr "השבתת סקריפט"
+
+#: sieveeditormainwindow.cpp:210
+#, kde-format
+msgctxt "@action"
+msgid "Refresh List"
+msgstr "רענון רשימה"
+
+#: sieveeditormainwindow.cpp:216
+#, kde-format
+msgctxt "@action"
+msgid "Go to Line…"
+msgstr "מעבר לשורה…"
+
+#: sieveeditormainwindow.cpp:233
+#, kde-format
+msgctxt "@action"
+msgid "Import…"
+msgstr "ייבוא…"
+
+#: sieveeditormainwindow.cpp:239
+#, kde-format
+msgctxt "@action"
+msgid "Share…"
+msgstr "שיתוף…"
+
+#: sieveeditormainwindow.cpp:247
+#, kde-format
+msgctxt "@action"
+msgid "Check Spelling…"
+msgstr "בדיקת איות…"
+
+#: sieveeditormainwindow.cpp:253
+#, kde-format
+msgctxt "@action"
+msgid "Check Syntax"
+msgstr "בדיקת תחביר"
+
+#: sieveeditormainwindow.cpp:258
+#, kde-format
+msgctxt "@action"
+msgid "Create Rules Graphically…"
+msgstr "יצירת כללים באופן חזותי…"
+
+#: sieveeditormainwindow.cpp:263
+#, kde-format
+msgctxt "@action"
+msgid "Comment"
+msgstr "הערה"
+
+#: sieveeditormainwindow.cpp:268
+#, kde-format
+msgctxt "@action"
+msgid "Uncomment"
+msgstr "ביטול הערה"
+
+#: sieveeditormainwindow.cpp:296
+#, kde-format
+msgctxt "@title:menu"
+msgid "&Bookmarks"
+msgstr "&סימניות"
+
+#: sieveeditormainwindow.cpp:301
+#, kde-format
+msgctxt "@action"
+msgid "Debug Sieve Script…"
+msgstr "ניפוי שגיאות בסקריפט Sieve…"
+
+#: sieveeditormainwindow.cpp:306
+#, kde-format
+msgctxt "@action"
+msgid "Wordwrap"
+msgstr "גלישת שורות"
+
+#: sieveeditormainwindow.cpp:328
+#, kde-format
+msgctxt "@action"
+msgid "Import IMAP Settings…"
+msgstr "ייבוא הגדרות IMAP…"
+
+#: sieveeditormainwindow.cpp:351
+#, kde-format
+msgid ""
+"<qt>This will hide the menu bar completely. You can show it again by typing "
+"%1.</qt>"
+msgstr ""
+"<qt>הפעולה הזת תסתיר את סרגל התפריטים לחלוטין. אפשר להציג אותו שוב בהקלדת %1."
+"</qt>"
+
+#: sieveeditormainwindow.cpp:354
+#, kde-format
+msgctxt "@title:window"
+msgid "Hide menu bar"
+msgstr "הסתרת סרגל תפריטים"
+
+#: sieveeditormanagesievewidget.cpp:37
+#, kde-format
+msgid "No Sieve URL configured"
+msgstr "לא מוגדרת כתובת Sieve"
+
+#: sieveeditormanagesievewidget.cpp:42
+#, kde-format
+msgid "(Disabled) %1"
+msgstr "(מושבת) %1"
+
+#: sieveeditorpagewidget.cpp:41
+#, kde-format
+msgid "Uploading script to server for checking it, please wait…"
+msgstr "הסקריפט נשלח לשרת לבדיקה, נא להמתין…"
+
+#: sieveeditorpagewidget.cpp:134
+#, kde-format
+msgid "The Sieve script was successfully uploaded."
+msgstr "סקריפט ה־Sieve הועלה בהצלחה."
+
+#: sieveeditorpagewidget.cpp:134
+#, kde-format
+msgctxt "@title:window"
+msgid "Sieve Script Upload"
+msgstr "העלאת סקריפט Sieve"
+
+#: sieveeditorpagewidget.cpp:147
+#, kde-format
+msgid ""
+"Uploading the Sieve script failed.\n"
+"The server responded:\n"
+"%1"
+msgstr ""
+"העלאת סקריפט ה־Sieve נכשלה.\n"
+"תגובת השרת:\n"
+"%1"
+
+#: sieveeditorpagewidget.cpp:150 sieveeditorpagewidget.cpp:155
+#, kde-format
+msgctxt "@title:window"
+msgid "Sieve Error"
+msgstr "שגיאת Sieve"
+
+#: sieveeditorpagewidget.cpp:153
+#, kde-format
+msgid ""
+"Uploading the Sieve script failed.\n"
+"unknown reason\n"
+msgstr ""
+"העלאת סקריפט ה־Sieve נכשלה.\n"
+"הסיבה לא ידועה\n"
+
+#: sieveeditorpagewidget.cpp:165
+#, kde-format
+msgid "Script '%1' is new. Do you want to save it?"
+msgstr "הסקריפט ‚%1’ הוא חדש. לשמור אותו?"
+
+#: sieveeditorpagewidget.cpp:166 sieveeditorpagewidget.cpp:179
+#, kde-format
+msgctxt "@title:window"
+msgid "Save Script"
+msgstr "שמירת סקריפט"
+
+#: sieveeditorpagewidget.cpp:178
+#, kde-format
+msgid "Script '%1' was changed. Do you want to save it ?"
+msgstr "הסקריפט ‚%1’ נערך. לשמור אותו?"
+
+#: sieveeditortabwidget.cpp:43 sieveeditortabwidget.cpp:69
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Close Tab"
+msgstr "סגירת לשונית"
+
+#: sieveeditortabwidget.cpp:47
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Close All Other Tabs"
+msgstr "סגירת כל שאר הלשוניות"
+
+#: sieveeditortabwidget.cpp:51
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Close All Tabs"
+msgstr "סגירת כל הלשוניות"
+
+#. i18n: ectx: Menu (edit)
+#: sieveeditorui.rc:23
+#, kde-format
+msgid "&Edit"
+msgstr "&עריכה"
+
+#. i18n: ectx: Menu (view)
+#: sieveeditorui.rc:36
+#, kde-format
+msgid "View"
+msgstr "תצוגה"
+
+#. i18n: ectx: Menu (settings)
+#: sieveeditorui.rc:45
+#, kde-format
+msgid "&Settings"
+msgstr "ה&גדרות"
+
+#. i18n: ectx: Menu (Tools)
+#: sieveeditorui.rc:50
+#, kde-format
+msgid "Tools"
+msgstr "כלים"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: sieveeditorui.rc:61
+#, kde-format
+msgid "Main Toolbar"
+msgstr "סרגל כלים ראשי"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: ui/serversievesettings.ui:37
+#, kde-format
+msgid "Sieve Settings"
+msgstr "הגדרות Sieve"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: ui/serversievesettings.ui:45 ui/serversievesettings.ui:319
+#, kde-format
+msgid "Server Name:"
+msgstr "שם השרת:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: ui/serversievesettings.ui:62 ui/serversievesettings.ui:336
+#, kde-format
+msgid "Username:"
+msgstr "שם משתמש:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: ui/serversievesettings.ui:79 ui/serversievesettings.ui:353
+#, kde-format
+msgid "Password:"
+msgstr "סיסמה:"
+
+#. i18n: ectx: property (text), widget (QLabel, serversievelabel)
+#: ui/serversievesettings.ui:92
+#, kde-format
+msgid ""
+"The server port changed when ManageSieve turned into a full RFC Standard. "
+"Old server implementations still use port 2000, while newer standard conform "
+"server can only be accessed via port 4190."
+msgstr ""
+"פתחת השרת השתנתה כאשר ManageSieve הפך לתקן RFC מלא. מימוש השרת הישן עדיין "
+"משתמש בפתחה 2000, בעוד שרתים שכפופים לתקן החדש נגישים בפתחה 4190 בלבד."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, label_13)
+#: ui/serversievesettings.ui:102 ui/serversievesettings.ui:231
+#, kde-format
+msgid "Port:"
+msgstr "פתחה:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label_14)
+#: ui/serversievesettings.ui:125 ui/serversievesettings.ui:251
+#, kde-format
+msgid "Authentication:"
+msgstr "אימות:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#: ui/serversievesettings.ui:141
+#, kde-format
+msgid "IMAP Settings"
+msgstr "הגדרות IMAP"
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: ui/serversievesettings.ui:147
+#, kde-format
+msgid ""
+"IMAP settings is necessary if you want to be able to list folders from "
+"server."
+msgstr "הגדרות IMAP הכרחיות כדי להציג תיקיות מהשרת."
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, safeImap)
+#: ui/serversievesettings.ui:160
+#, kde-format
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'HandelGotDLig'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-weight:600;\">SSL/TLS</span><span style=\" font-"
+"family:'Sans Serif';\"> is safe IMAP over port 993;</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-weight:600;\">STARTTLS</span><span style=\" font-"
+"family:'Sans Serif';\"> will operate on port 143 and switch to a secure "
+"connection directly after connecting;</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-weight:600;\">None</span><span style=\" font-"
+"family:'Sans Serif';\"> will connect to port 143 but not switch to a secure "
+"connection. This setting is not recommended.</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'HandelGotDLig'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-weight:600;\">SSL/TLS</span><span style=\" font-"
+"family:'Sans Serif';\"> הוא IMAP מאובטח על גבי פתחה 993;</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-weight:600;\">STARTTLS</span><span style=\" font-"
+"family:'Sans Serif';\"> יפעל מול פתחה 143 ויעבור לחיבור מאובטח מייד לאחר "
+"ההתחברות;</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-weight:600;\">אין</span><span style=\" font-"
+"family:'Sans Serif';\"> יתחבר לפתחה 143 אך לא יעבור לחיבור מאובטח. זאת הגדרה "
+"לא מומלצת.</span></p></body></html>"
+
+#. i18n: ectx: property (title), widget (QGroupBox, safeImap)
+#: ui/serversievesettings.ui:163
+#, kde-format
+msgid "Connection Settings"
+msgstr "הגדרות החיבור"
+
+#. i18n: ectx: property (text), widget (QPushButton, testButton)
+#: ui/serversievesettings.ui:175
+#, kde-format
+msgid "Auto Detect"
+msgstr "זיהוי אוטומטי"
+
+#. i18n: ectx: property (text), widget (QLabel, label_12)
+#: ui/serversievesettings.ui:187
+#, kde-format
+msgid "Encryption:"
+msgstr "הצפנה:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, noRadio)
+#: ui/serversievesettings.ui:196
+#, kde-format
+msgid "None"
+msgstr "ללא"
+
+#. i18n: ectx: property (text), widget (QRadioButton, sslRadio)
+#: ui/serversievesettings.ui:209
+#, kde-format
+msgid "SSL/TLS"
+msgstr "SSL/TLS"
+
+#. i18n: ectx: property (text), widget (QRadioButton, tlsRadio)
+#: ui/serversievesettings.ui:219
+#, kde-format
+msgid "STARTTLS"
+msgstr "STARTTLS"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
+#: ui/serversievesettings.ui:264
+#, kde-format
+msgctxt "Authentication method"
+msgid "LOGIN"
+msgstr "LOGIN"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
+#: ui/serversievesettings.ui:269
+#, kde-format
+msgctxt "Authentication method"
+msgid "PLAIN"
+msgstr "PLAIN"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
+#: ui/serversievesettings.ui:274
+#, kde-format
+msgctxt "Authentication method"
+msgid "CRAM-MD5"
+msgstr "CRAM-MD5"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
+#: ui/serversievesettings.ui:279
+#, kde-format
+msgctxt "Authentication method"
+msgid "DIGEST-MD5"
+msgstr "DIGEST-MD5"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
+#: ui/serversievesettings.ui:284
+#, kde-format
+msgctxt "Authentication method"
+msgid "NTLM"
+msgstr "NTLM"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
+#: ui/serversievesettings.ui:289
+#, kde-format
+msgctxt "Authentication method"
+msgid "GSSAPI"
+msgstr "GSSAPI"
+
+#. i18n: ectx: property (title), widget (QGroupBox, alternateServer)
+#: ui/serversievesettings.ui:307
+#, kde-format
+msgid "Alternate Server"
+msgstr "שרת חלופי"
+
+#. i18n: ectx: property (text), widget (QLabel, testInfo)
+#: ui/serversievesettings.ui:375
+#, kde-format
+msgid "Empty"
+msgstr "ריק"
+
+#. i18n: ectx: property (text), widget (QPushButton, addServer)
+#: ui/sieveeditorconfigureserverwidget.ui:29
+#, kde-format
+msgid "Add…"
+msgstr "הוספה…"
+
+#. i18n: ectx: property (text), widget (QPushButton, modifyServer)
+#: ui/sieveeditorconfigureserverwidget.ui:36
+#, kde-format
+msgid "Modify…"
+msgstr "שינוי…"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeServer)
+#: ui/sieveeditorconfigureserverwidget.ui:43
+#, kde-format
+msgid "Remove"
+msgstr "הסרה"
+
+#~ msgid "Configure..."
+#~ msgstr "הגדרה…"
+
+#~ msgid "Import Sieve Settings..."
+#~ msgstr "ייבוא הגדרות Sieve..."
+
+#~ msgid "Add Sieve Server..."
+#~ msgstr "הוספת שרת Sieve..."
+
+#~ msgid "Create Rules Graphically..."
+#~ msgstr "יצירת כללים באופן חזותי…"
+
+#~ msgid "Import IMAP Settings..."
+#~ msgstr "ייבוא הגדרות IMAP..."
+
+#~ msgid "Add..."
+#~ msgstr "הוספה…"

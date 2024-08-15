@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -60,16 +60,15 @@ Q_SIGNALS:
     void enableOkButton(bool enabled);
 
 private:
-    void slotUserServerNameChanged();
-    void slotTest();
+    LIBSIEVEEDITOR_NO_EXPORT void slotUserServerNameChanged();
+    LIBSIEVEEDITOR_NO_EXPORT void slotTest();
 
-    void slotFinished(const QList<int> &testResult);
-    void slotEncryptionRadioChanged();
+    LIBSIEVEEDITOR_NO_EXPORT void slotFinished(const QList<int> &testResult);
+    LIBSIEVEEDITOR_NO_EXPORT void slotEncryptionRadioChanged();
 
-private:
-    void populateDefaultAuthenticationOptions(QComboBox *combobox);
-    void slotSafetyChanged();
-    void populateDefaultComboBoxAuthenticationOptions();
+    LIBSIEVEEDITOR_NO_EXPORT void populateDefaultAuthenticationOptions(QComboBox *combobox);
+    LIBSIEVEEDITOR_NO_EXPORT void slotSafetyChanged();
+    LIBSIEVEEDITOR_NO_EXPORT void populateDefaultComboBoxAuthenticationOptions();
     Ui::ServerSieveSettings *const ui;
     MailTransport::ServerTest *mServerTest = nullptr;
 };

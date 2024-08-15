@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2020-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2020-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -33,7 +33,7 @@ public:
     void setName(const QString &name);
 
 private:
-    void slotPasswordWritten(QKeychain::Job *baseJob);
+    LIBSIEVEEDITOR_NO_EXPORT void slotPasswordWritten(QKeychain::Job *baseJob);
     QString mPassword;
     QString mKey;
     QString mName;

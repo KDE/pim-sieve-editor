@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2016-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2016-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -28,8 +28,7 @@ Q_SIGNALS:
     void noSettingsImported(const QString &name);
 
 protected:
-    Q_DISABLE_COPY(AbstractImapSettingsCheckJob)
-    void checkNoSettingsImported();
+    LIBSIEVEEDITOR_NO_EXPORT void checkNoSettingsImported();
     AbstractImapSettingsPassword *mPasswordImporter = nullptr;
     bool mSettingsWereImported = false;
 };

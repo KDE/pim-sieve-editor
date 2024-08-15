@@ -1,12 +1,11 @@
 /*
-   SPDX-FileCopyrightText: 2017-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2017-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "importimapsettingsakonadipassword.h"
 #include "sieveeditor_debug.h"
-#include "sieveserversettings.h"
 
 using namespace QKeychain;
 

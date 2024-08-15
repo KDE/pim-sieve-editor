@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -21,12 +21,12 @@ static const char myServerSieveSettingsDialog[] = "ServerSieveSettingsDialog";
 
 ServerSieveSettingsDialog::ServerSieveSettingsDialog(QWidget *parent)
     : QDialog(parent)
+    , mServerSieveSettings(new ServerSieveSettings(this))
 {
     setWindowTitle(i18nc("@title:window", "Add Sieve Server"));
 
     auto w = new QWidget;
     auto lay = new QVBoxLayout;
-    mServerSieveSettings = new ServerSieveSettings;
     connect(mServerSieveSettings, &ServerSieveSettings::enableOkButton, this, &ServerSieveSettingsDialog::slotEnableButtonOk);
     lay->addWidget(mServerSieveSettings);
     lay->setContentsMargins({});
@@ -55,14 +55,14 @@ void ServerSieveSettingsDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(450, 350));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myServerSieveSettingsDialog));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myServerSieveSettingsDialog));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ServerSieveSettingsDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myServerSieveSettingsDialog));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myServerSieveSettingsDialog));
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }

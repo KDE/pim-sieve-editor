@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-   SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 -->
@@ -12,6 +12,15 @@
   <group name="Editor">
     <entry name="WrapText" type="Bool">
       <default>false</default>
+    </entry>
+  </group>
+
+  <group name="Views">
+    <entry key="ShowMenuBar" type="Bool">
+      <default>true</default>
+       <!-- label and whatsthis are already provided by KStandardAction::showMenubar -->
+      <label></label>
+      <whatsthis></whatsthis>
     </entry>
   </group>
 
