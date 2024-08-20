@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-10 00:42+0000\n"
-"PO-Revision-Date: 2023-10-08 23:42+0200\n"
+"PO-Revision-Date: 2024-08-20 00:37+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -38,15 +38,13 @@ msgid "Thunderbird IMAP Settings"
 msgstr "Thunderbird IMAP 설정"
 
 #: importwizard/importimapsettingfinishpage.cpp:22
-#, fuzzy, kde-format
-#| msgid "IMAP settings were imported:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
 msgstr "IMAP 설정을 가져왔습니다:"
 
 #: importwizard/importimapsettingnofoundpage.cpp:20
-#, fuzzy, kde-format
-#| msgid "No settings found to import."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "가져올 설정이 없습니다."
@@ -57,10 +55,9 @@ msgid "No settings found."
 msgstr "설정이 없습니다."
 
 #: importwizard/importimapsettingprogresspage.cpp:70
-#, fuzzy, kde-format
-#| msgid "Import settings from %1..."
+#, kde-format
 msgid "Import settings from %1…"
-msgstr "%1에서 설정 가져오는 중..."
+msgstr "%1에서 설정 가져오는 중…"
 
 #: importwizard/importimapsettingprogresspage.cpp:72
 #, kde-format
@@ -68,9 +65,7 @@ msgid "Import settings from %1 done"
 msgstr "%1에서 설정 가져오기 완료"
 
 #: importwizard/importimapsettingsearchpage.cpp:21
-#, fuzzy, kde-format
-#| msgid ""
-#| "Please select the program from which you like to import IMAP settings:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr "IMAP 설정을 가져올 프로그램을 선택하십시오:"
@@ -87,10 +82,9 @@ msgid "Select Import Settings"
 msgstr "가져올 설정 선택"
 
 #: importwizard/importimapsettingwizard.cpp:40
-#, fuzzy, kde-format
-#| msgid "Import in Progress..."
+#, kde-format
 msgid "Import in Progress…"
-msgstr "가져오는 중..."
+msgstr "가져오는 중…"
 
 #: importwizard/importimapsettingwizard.cpp:46
 #, kde-format
@@ -113,8 +107,7 @@ msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Copyright © 2013-%1 sieveeditor authors"
 
 #: main.cpp:55
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -125,8 +118,7 @@ msgid "Maintainer"
 msgstr "관리자"
 
 #: main.cpp:64
-#, fuzzy, kde-format
-#| msgid "Lists the available options for user feedback"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
 msgstr "사용자 피드백 옵션을 표시합니다"
@@ -161,7 +153,7 @@ msgstr "익명"
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #: serversievesettings.cpp:271
 #, kde-format
@@ -210,8 +202,7 @@ msgid "Add Sieve Server"
 msgstr "Sieve 서버 추가"
 
 #: sieveeditorconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Wrap Text"
+#, kde-format
 msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr "텍스트 워드랩"
@@ -238,19 +229,16 @@ msgid "User Feedback"
 msgstr "사용자 피드백"
 
 #: sieveeditorconfigureserverpage.cpp:20
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure…"
-msgstr "설정"
+msgstr "설정…"
 
 #: sieveeditorconfigureserverpage.cpp:25
-#, fuzzy, kde-format
-#| msgid "Import Sieve Settings:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Import Sieve Settings…"
-msgstr "Sieve 설정 가져오기:"
+msgstr "Sieve 설정 가져오기…"
 
 #: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
@@ -334,100 +322,85 @@ msgid "Upload"
 msgstr "업로드"
 
 #: sieveeditormainwindow.cpp:184
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Sieve Server"
+#, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
-msgstr "Sieve 서버 추가"
+msgstr "Sieve 서버 추가…"
 
 #: sieveeditormainwindow.cpp:188
-#, fuzzy, kde-format
-#| msgid "Delete Script"
+#, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "스크립트 삭제"
 
 #: sieveeditormainwindow.cpp:194
-#, fuzzy, kde-format
-#| msgid "Create New Script..."
+#, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
-msgstr "새 스크립트 만들기..."
+msgstr "새 스크립트 만들기…"
 
 #: sieveeditormainwindow.cpp:200
-#, fuzzy, kde-format
-#| msgid "Edit Script..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
-msgstr "스크립트 편집..."
+msgstr "스크립트 편집…"
 
 #: sieveeditormainwindow.cpp:205
-#, fuzzy, kde-format
-#| msgid "Deactivate Script"
+#, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "스크립트 비활성화"
 
 #: sieveeditormainwindow.cpp:210
-#, fuzzy, kde-format
-#| msgid "Refresh List"
+#, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "목록 새로 고침"
 
 #: sieveeditormainwindow.cpp:216
-#, fuzzy, kde-format
-#| msgid "Go to Line..."
+#, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
-msgstr "줄로 이동..."
+msgstr "줄로 이동…"
 
 #: sieveeditormainwindow.cpp:233
-#, fuzzy, kde-format
-#| msgid "Import..."
+#, kde-format
 msgctxt "@action"
 msgid "Import…"
-msgstr "가져오기..."
+msgstr "가져오기…"
 
 #: sieveeditormainwindow.cpp:239
-#, fuzzy, kde-format
-#| msgid "Share..."
+#, kde-format
 msgctxt "@action"
 msgid "Share…"
-msgstr "공유..."
+msgstr "공유…"
 
 #: sieveeditormainwindow.cpp:247
-#, fuzzy, kde-format
-#| msgid "Check Spelling..."
+#, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
-msgstr "맞춤법 검사..."
+msgstr "맞춤법 검사…"
 
 #: sieveeditormainwindow.cpp:253
-#, fuzzy, kde-format
-#| msgid "Check Syntax"
+#, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "문법 검사"
 
 #: sieveeditormainwindow.cpp:258
-#, fuzzy, kde-format
-#| msgid "Create Rules Graphically:"
+#, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
-msgstr "그래픽 환경에서 규칙 생성:"
+msgstr "그래픽 환경에서 규칙 생성…"
 
 #: sieveeditormainwindow.cpp:263
-#, fuzzy, kde-format
-#| msgid "Comment"
+#, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "주석"
 
 #: sieveeditormainwindow.cpp:268
-#, fuzzy, kde-format
-#| msgid "Uncomment"
+#, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "주석 해제"
@@ -439,26 +412,22 @@ msgid "&Bookmarks"
 msgstr "책갈피(&B)"
 
 #: sieveeditormainwindow.cpp:301
-#, fuzzy, kde-format
-#| msgid "Debug Sieve Script..."
+#, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
-msgstr "Sieve 스크립트 디버그..."
+msgstr "Sieve 스크립트 디버그…"
 
 #: sieveeditormainwindow.cpp:306
-#, fuzzy, kde-format
-#| msgid "Wordwrap"
+#, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "자동 줄 바꿈"
 
 #: sieveeditormainwindow.cpp:328
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Import IMAP Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
-msgstr "IMAP 설정 가져오기"
+msgstr "IMAP 설정 가져오기…"
 
 #: sieveeditormainwindow.cpp:351
 #, kde-format
@@ -466,12 +435,13 @@ msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 msgstr ""
+"<qt>메뉴 표시줄을 완전히 숨깁니다. %1 키를 눌러서 다시 볼 수 있습니다.</qt>"
 
 #: sieveeditormainwindow.cpp:354
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
-msgstr ""
+msgstr "메뉴 표시줄 숨기기"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -484,11 +454,10 @@ msgid "(Disabled) %1"
 msgstr "(사용 안 함)%1"
 
 #: sieveeditorpagewidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Uploading script to server for checking it, please wait..."
+#, kde-format
 msgid "Uploading script to server for checking it, please wait…"
 msgstr ""
-"스크립트를 확인할 수 있도록 서버에 업로드하고 있습니다. 기다려 주십시오..."
+"스크립트를 확인할 수 있도록 서버에 업로드하고 있습니다. 기다려 주십시오…"
 
 #: sieveeditorpagewidget.cpp:134
 #, kde-format
@@ -589,7 +558,7 @@ msgstr "도구"
 #: sieveeditorui.rc:61
 #, kde-format
 msgid "Main Toolbar"
-msgstr ""
+msgstr "주 도구 모음"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: ui/serversievesettings.ui:37
@@ -801,14 +770,13 @@ msgstr "비어 있음"
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "추가…"
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgid "Modify…"
-msgstr "수정..."
+msgstr "수정…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
 #: ui/sieveeditorconfigureserverwidget.ui:43
