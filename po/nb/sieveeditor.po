@@ -58,7 +58,6 @@ msgstr ""
 
 #: importwizard/importimapsettingprogresspage.cpp:70
 #, fuzzy, kde-format
-#| msgid "Import settings from %1..."
 msgid "Import settings from %1…"
 msgstr "Importer innstillinger fra %1 …"
 
@@ -111,7 +110,6 @@ msgstr ""
 
 #: main.cpp:55
 #, fuzzy, kde-format
-#| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -233,14 +231,12 @@ msgstr ""
 
 #: sieveeditorconfigureserverpage.cpp:20
 #, fuzzy, kde-format
-#| msgid "Configure..."
 msgctxt "@action:button"
 msgid "Configure…"
 msgstr "Sett opp  …"
 
 #: sieveeditorconfigureserverpage.cpp:25
 #, fuzzy, kde-format
-#| msgid "IMAP Settings"
 msgctxt "@action:button"
 msgid "Import Sieve Settings…"
 msgstr "IMAP-innstillinger"
@@ -307,7 +303,6 @@ msgstr "Skriptet ble endret. Vil du lagre det før lukking?"
 
 #: sieveeditormainwidget.cpp:608
 #, fuzzy, kde-format
-#| msgid "Close script"
 msgctxt "@title:window"
 msgid "Close script"
 msgstr "Lukk skriptet"
@@ -329,56 +324,48 @@ msgstr ""
 
 #: sieveeditormainwindow.cpp:184
 #, fuzzy, kde-format
-#| msgid "Delete Script"
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Slett skript"
 
 #: sieveeditormainwindow.cpp:188
 #, fuzzy, kde-format
-#| msgid "Delete Script"
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Slett skript"
 
 #: sieveeditormainwindow.cpp:194
 #, fuzzy, kde-format
-#| msgid "Create New Script..."
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Opprett nytt skript …"
 
 #: sieveeditormainwindow.cpp:200
 #, fuzzy, kde-format
-#| msgid "Create New Script..."
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Opprett nytt skript …"
 
 #: sieveeditormainwindow.cpp:205
 #, fuzzy, kde-format
-#| msgid "Deactivate Script"
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Skru av skript"
 
 #: sieveeditormainwindow.cpp:210
 #, fuzzy, kde-format
-#| msgid "Refresh List"
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Oppfrisk liste"
 
 #: sieveeditormainwindow.cpp:216
 #, fuzzy, kde-format
-#| msgid "Go to Line..."
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Gå til linje …"
 
 #: sieveeditormainwindow.cpp:233
 #, fuzzy, kde-format
-#| msgid "Import..."
 msgctxt "@action"
 msgid "Import…"
 msgstr "Importer …"
@@ -391,7 +378,6 @@ msgstr ""
 
 #: sieveeditormainwindow.cpp:247
 #, fuzzy, kde-format
-#| msgid "Check Spelling..."
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Kjør stavekontroll …"
@@ -410,14 +396,12 @@ msgstr ""
 
 #: sieveeditormainwindow.cpp:263
 #, fuzzy, kde-format
-#| msgid "Comment"
 msgctxt "@action"
 msgid "Comment"
 msgstr "Kommentar"
 
 #: sieveeditormainwindow.cpp:268
 #, fuzzy, kde-format
-#| msgid "Comment"
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Kommentar"
@@ -430,7 +414,6 @@ msgstr ""
 
 #: sieveeditormainwindow.cpp:301
 #, fuzzy, kde-format
-#| msgid "Delete Script"
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Slett skript"
@@ -443,7 +426,6 @@ msgstr ""
 
 #: sieveeditormainwindow.cpp:328
 #, fuzzy, kde-format
-#| msgid "IMAP Settings"
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "IMAP-innstillinger"
@@ -482,7 +464,6 @@ msgstr "Sieve-skriptet ble lastet opp."
 
 #: sieveeditorpagewidget.cpp:134
 #, fuzzy, kde-format
-#| msgid "Sieve Script Upload"
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Last opp Sieve-skript"
@@ -497,7 +478,6 @@ msgstr ""
 
 #: sieveeditorpagewidget.cpp:150 sieveeditorpagewidget.cpp:155
 #, fuzzy, kde-format
-#| msgid "Sieve Error"
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Sieve-feil"
@@ -516,7 +496,6 @@ msgstr "Skriptet «%1» er nytt. Vil du lagre det?"
 
 #: sieveeditorpagewidget.cpp:166 sieveeditorpagewidget.cpp:179
 #, fuzzy, kde-format
-#| msgid "Deactivate Script"
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Skru av skript"
@@ -787,7 +766,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
 #, fuzzy, kde-format
-#| msgid "Modify..."
 msgid "Modify…"
 msgstr "Endre …"
 
