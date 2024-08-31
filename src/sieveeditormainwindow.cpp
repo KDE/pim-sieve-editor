@@ -6,6 +6,7 @@
 
 #include "sieveeditormainwindow.h"
 #include "importwizard/importimapsettingwizard.h"
+#include "kcolorscheme_version.h"
 #include "serversievesettingsdialog.h"
 #include "sieveeditorbookmarks.h"
 #include "sieveeditorcentralwidget.h"
@@ -333,7 +334,11 @@ void SieveEditorMainWindow::setupActions()
     ac->setDefaultShortcut(mShowFullScreenAction, Qt::Key_F11);
     connect(mShowFullScreenAction, &QAction::toggled, this, &SieveEditorMainWindow::slotFullScreen);
 
+#if KCOLORSCHEME_VERSION < QT_VERSION_CHECK(6, 6, 0)
     auto manager = new KColorSchemeManager(this);
+#else
+    auto manager = KColorSchemeManager::instance();
+#endif
     ac->addAction(QStringLiteral("colorscheme_menu"), KColorSchemeMenu::createMenu(manager, this));
     mShowMenuBarAction->setChecked(SieveEditorGlobalConfig::self()->showMenuBar());
     slotToggleMenubar(true);
