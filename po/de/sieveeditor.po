@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-10 00:42+0000\n"
+"POT-Creation-Date: 2024-09-01 00:40+0000\n"
 "PO-Revision-Date: 2024-08-28 21:54+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -310,130 +310,130 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "Skript schließen"
 
-#: sieveeditormainwindow.cpp:157
+#: sieveeditormainwindow.cpp:158
 #, kde-format
 msgid "Network is Up."
 msgstr "Das Netzwerk ist aktiviert."
 
-#: sieveeditormainwindow.cpp:159
+#: sieveeditormainwindow.cpp:160
 #, kde-format
 msgid "Network is Down."
 msgstr "Das Netzwerk ist abgeschaltet."
 
-#: sieveeditormainwindow.cpp:181
+#: sieveeditormainwindow.cpp:182
 #, kde-format
 msgid "Upload"
 msgstr "Hochladen"
 
-#: sieveeditormainwindow.cpp:184
+#: sieveeditormainwindow.cpp:185
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Sieve-Server hinzufügen …"
 
-#: sieveeditormainwindow.cpp:188
+#: sieveeditormainwindow.cpp:189
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Skript löschen"
 
-#: sieveeditormainwindow.cpp:194
+#: sieveeditormainwindow.cpp:195
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Neues Skript erstellen …"
 
-#: sieveeditormainwindow.cpp:200
+#: sieveeditormainwindow.cpp:201
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Skript bearbeiten …"
 
-#: sieveeditormainwindow.cpp:205
+#: sieveeditormainwindow.cpp:206
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Skript deaktivieren"
 
-#: sieveeditormainwindow.cpp:210
+#: sieveeditormainwindow.cpp:211
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Liste aktualisieren"
 
-#: sieveeditormainwindow.cpp:216
+#: sieveeditormainwindow.cpp:217
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Gehe zu Zeile …"
 
-#: sieveeditormainwindow.cpp:233
+#: sieveeditormainwindow.cpp:234
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "Importieren …"
 
-#: sieveeditormainwindow.cpp:239
+#: sieveeditormainwindow.cpp:240
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Teilen …"
 
-#: sieveeditormainwindow.cpp:247
+#: sieveeditormainwindow.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Rechtschreibprüfung …"
 
-#: sieveeditormainwindow.cpp:253
+#: sieveeditormainwindow.cpp:254
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Syntax überprüfen"
 
-#: sieveeditormainwindow.cpp:258
+#: sieveeditormainwindow.cpp:259
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Regeln grafisch erstellen …"
 
-#: sieveeditormainwindow.cpp:263
+#: sieveeditormainwindow.cpp:264
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Kommentar"
 
-#: sieveeditormainwindow.cpp:268
+#: sieveeditormainwindow.cpp:269
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Kommentar entfernen"
 
-#: sieveeditormainwindow.cpp:296
+#: sieveeditormainwindow.cpp:297
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Lesezeichen"
 
-#: sieveeditormainwindow.cpp:301
+#: sieveeditormainwindow.cpp:302
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Fehlersuche in Sieve-Skript …"
 
-#: sieveeditormainwindow.cpp:306
+#: sieveeditormainwindow.cpp:307
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Zeilenumbruch"
 
-#: sieveeditormainwindow.cpp:328
+#: sieveeditormainwindow.cpp:329
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "IMAP-Einstellungen importieren …"
 
-#: sieveeditormainwindow.cpp:351
+#: sieveeditormainwindow.cpp:356
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
@@ -442,7 +442,7 @@ msgstr ""
 "<qt>Hiermit wird die Menüleiste vollständig ausgeblendet. Geben Sie %1 ein, "
 "um sie wieder anzuzeigen.</qt>"
 
-#: sieveeditormainwindow.cpp:354
+#: sieveeditormainwindow.cpp:359
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"

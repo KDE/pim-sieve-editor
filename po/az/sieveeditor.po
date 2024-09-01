@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-10 00:42+0000\n"
+"POT-Creation-Date: 2024-09-01 00:40+0000\n"
 "PO-Revision-Date: 2023-05-29 19:03+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -320,22 +320,22 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "Skripti bağlayın"
 
-#: sieveeditormainwindow.cpp:157
+#: sieveeditormainwindow.cpp:158
 #, kde-format
 msgid "Network is Up."
 msgstr "İnternet şəbəki işləyir."
 
-#: sieveeditormainwindow.cpp:159
+#: sieveeditormainwindow.cpp:160
 #, kde-format
 msgid "Network is Down."
 msgstr "İnternet şəbəkəsi işləmir."
 
-#: sieveeditormainwindow.cpp:181
+#: sieveeditormainwindow.cpp:182
 #, kde-format
 msgid "Upload"
 msgstr "Yükləyin"
 
-#: sieveeditormainwindow.cpp:184
+#: sieveeditormainwindow.cpp:185
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add Sieve Server"
@@ -343,118 +343,118 @@ msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Süzgəcləmə serveri əlavə edin"
 
-#: sieveeditormainwindow.cpp:188
+#: sieveeditormainwindow.cpp:189
 #, fuzzy, kde-format
 #| msgid "Delete Script"
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Skripti silin"
 
-#: sieveeditormainwindow.cpp:194
+#: sieveeditormainwindow.cpp:195
 #, fuzzy, kde-format
 #| msgid "Create New Script..."
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Yeni skript yaradın..."
 
-#: sieveeditormainwindow.cpp:200
+#: sieveeditormainwindow.cpp:201
 #, fuzzy, kde-format
 #| msgid "Edit Script..."
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Skriptə düzəliş edin..."
 
-#: sieveeditormainwindow.cpp:205
+#: sieveeditormainwindow.cpp:206
 #, fuzzy, kde-format
 #| msgid "Deactivate Script"
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Skripti söndürün"
 
-#: sieveeditormainwindow.cpp:210
+#: sieveeditormainwindow.cpp:211
 #, fuzzy, kde-format
 #| msgid "Refresh List"
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Siyahısnı təzələyin"
 
-#: sieveeditormainwindow.cpp:216
+#: sieveeditormainwindow.cpp:217
 #, fuzzy, kde-format
 #| msgid "Go to Line..."
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Sətirə keçin..."
 
-#: sieveeditormainwindow.cpp:233
+#: sieveeditormainwindow.cpp:234
 #, fuzzy, kde-format
 #| msgid "Import..."
 msgctxt "@action"
 msgid "Import…"
 msgstr "İdxal edin..."
 
-#: sieveeditormainwindow.cpp:239
+#: sieveeditormainwindow.cpp:240
 #, fuzzy, kde-format
 #| msgid "Share..."
 msgctxt "@action"
 msgid "Share…"
 msgstr "Paylaşın..."
 
-#: sieveeditormainwindow.cpp:247
+#: sieveeditormainwindow.cpp:248
 #, fuzzy, kde-format
 #| msgid "Check Spelling..."
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Orfoqrafiya yoxlaması..."
 
-#: sieveeditormainwindow.cpp:253
+#: sieveeditormainwindow.cpp:254
 #, fuzzy, kde-format
 #| msgid "Check Syntax"
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Sintaksis yoxlaması"
 
-#: sieveeditormainwindow.cpp:258
+#: sieveeditormainwindow.cpp:259
 #, fuzzy, kde-format
 #| msgid "Create Rules Graphically:"
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Qrafik rejimdə qaydalar yaradın:"
 
-#: sieveeditormainwindow.cpp:263
+#: sieveeditormainwindow.cpp:264
 #, fuzzy, kde-format
 #| msgid "Comment"
 msgctxt "@action"
 msgid "Comment"
 msgstr "Şərh"
 
-#: sieveeditormainwindow.cpp:268
+#: sieveeditormainwindow.cpp:269
 #, fuzzy, kde-format
 #| msgid "Uncomment"
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Şərhi ləğv edin"
 
-#: sieveeditormainwindow.cpp:296
+#: sieveeditormainwindow.cpp:297
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Əlfəcinlər"
 
-#: sieveeditormainwindow.cpp:301
+#: sieveeditormainwindow.cpp:302
 #, fuzzy, kde-format
 #| msgid "Debug Sieve Script..."
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Süzgəcləmə skriptini sazlayın..."
 
-#: sieveeditormainwindow.cpp:306
+#: sieveeditormainwindow.cpp:307
 #, fuzzy, kde-format
 #| msgid "Wordwrap"
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Sətirdən sətirə keçid"
 
-#: sieveeditormainwindow.cpp:328
+#: sieveeditormainwindow.cpp:329
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Import IMAP Settings"
@@ -462,14 +462,14 @@ msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "IMAP ayarlarını idxal edin"
 
-#: sieveeditormainwindow.cpp:351
+#: sieveeditormainwindow.cpp:356
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:354
+#: sieveeditormainwindow.cpp:359
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
