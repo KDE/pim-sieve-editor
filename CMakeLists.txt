@@ -2,9 +2,9 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "6.2.1")
+set(PIM_VERSION "6.2.2")
 project( sieveeditor VERSION ${PIM_VERSION})
-set(RELEASE_SERVICE_VERSION "24.08.1")
+set(RELEASE_SERVICE_VERSION "24.08.2")
 
 
 set(KF_MIN_VERSION "6.3.0")
