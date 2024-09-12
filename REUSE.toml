@@ -1,0 +1,10 @@
+version = 1
+SPDX-PackageName = "pim-sieve-editor"
+SPDX-PackageSupplier = "Montel Laurent <montel@kde.org>"
+SPDX-PackageDownloadLocation = "https://invent.kde.org/pim/pim-sieve-editor"
+
+[[annotations]]
+path = ["src/importwizard/autotests/data/**", "MAINTAINERS", "doc/**", "src/icons/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"

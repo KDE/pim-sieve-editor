@@ -1,8 +1,0 @@
-Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: pim-sieve-editor
-Upstream-Contact: Montel Laurent <montel@kde.org>
-Source: https://invent.kde.org/pim/pim-sieve-editor
-
-Files: src/importwizard/autotests/data/* MAINTAINERS doc/* src/icons/*
-Copyright: none
-License: CC0-1.0
