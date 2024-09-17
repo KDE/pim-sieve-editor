@@ -6,7 +6,6 @@
 
 #include "sieveeditormainwindow.h"
 #include "importwizard/importimapsettingwizard.h"
-#include "kcolorscheme_version.h"
 #include "serversievesettingsdialog.h"
 #include "sieveeditorbookmarks.h"
 #include "sieveeditorcentralwidget.h"
