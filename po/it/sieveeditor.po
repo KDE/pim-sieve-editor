@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-01 00:40+0000\n"
+"POT-Creation-Date: 2024-09-18 00:41+0000\n"
 "PO-Revision-Date: 2024-08-01 22:00+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -307,130 +307,130 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "Chiudi script"
 
-#: sieveeditormainwindow.cpp:158
+#: sieveeditormainwindow.cpp:157
 #, kde-format
 msgid "Network is Up."
 msgstr "La rete è attiva."
 
-#: sieveeditormainwindow.cpp:160
+#: sieveeditormainwindow.cpp:159
 #, kde-format
 msgid "Network is Down."
 msgstr "La rete non è attiva."
 
-#: sieveeditormainwindow.cpp:182
+#: sieveeditormainwindow.cpp:181
 #, kde-format
 msgid "Upload"
 msgstr "Carica"
 
-#: sieveeditormainwindow.cpp:185
+#: sieveeditormainwindow.cpp:184
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Aggiungi server sieve…"
 
-#: sieveeditormainwindow.cpp:189
+#: sieveeditormainwindow.cpp:188
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Elimina script"
 
-#: sieveeditormainwindow.cpp:195
+#: sieveeditormainwindow.cpp:194
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Crea un nuovo script…"
 
-#: sieveeditormainwindow.cpp:201
+#: sieveeditormainwindow.cpp:200
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Modifica script…"
 
-#: sieveeditormainwindow.cpp:206
+#: sieveeditormainwindow.cpp:205
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Disattiva script"
 
-#: sieveeditormainwindow.cpp:211
+#: sieveeditormainwindow.cpp:210
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Aggiorna elenco"
 
-#: sieveeditormainwindow.cpp:217
+#: sieveeditormainwindow.cpp:216
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Vai alla riga…"
 
-#: sieveeditormainwindow.cpp:234
+#: sieveeditormainwindow.cpp:233
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "Importa…"
 
-#: sieveeditormainwindow.cpp:240
+#: sieveeditormainwindow.cpp:239
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Condividi…"
 
-#: sieveeditormainwindow.cpp:248
+#: sieveeditormainwindow.cpp:247
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Controlla l'ortografia…"
 
-#: sieveeditormainwindow.cpp:254
+#: sieveeditormainwindow.cpp:253
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Controlla la sintassi"
 
-#: sieveeditormainwindow.cpp:259
+#: sieveeditormainwindow.cpp:258
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Crea regole graficamente…"
 
-#: sieveeditormainwindow.cpp:264
+#: sieveeditormainwindow.cpp:263
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Commenta"
 
-#: sieveeditormainwindow.cpp:269
+#: sieveeditormainwindow.cpp:268
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Decommenta"
 
-#: sieveeditormainwindow.cpp:297
+#: sieveeditormainwindow.cpp:296
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "Segnali&bri"
 
-#: sieveeditormainwindow.cpp:302
+#: sieveeditormainwindow.cpp:301
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Debug script di sieve…"
 
-#: sieveeditormainwindow.cpp:307
+#: sieveeditormainwindow.cpp:306
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "A capo automatico"
 
-#: sieveeditormainwindow.cpp:329
+#: sieveeditormainwindow.cpp:328
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "Importa impostazioni IMAP…"
 
-#: sieveeditormainwindow.cpp:356
+#: sieveeditormainwindow.cpp:355
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
@@ -439,7 +439,7 @@ msgstr ""
 "<qt>Questo nasconderà completamente la barra dei menu. Potrai mostrarla "
 "nuovamente digitando %1.</qt>"
 
-#: sieveeditormainwindow.cpp:359
+#: sieveeditormainwindow.cpp:358
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"

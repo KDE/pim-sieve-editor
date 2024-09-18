@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-01 00:40+0000\n"
+"POT-Creation-Date: 2024-09-18 00:41+0000\n"
 "PO-Revision-Date: 2024-08-01 05:46+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -307,130 +307,130 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "სკრიპტის დახურვა"
 
-#: sieveeditormainwindow.cpp:158
+#: sieveeditormainwindow.cpp:157
 #, kde-format
 msgid "Network is Up."
 msgstr "ქსელი ჩაირთო."
 
-#: sieveeditormainwindow.cpp:160
+#: sieveeditormainwindow.cpp:159
 #, kde-format
 msgid "Network is Down."
 msgstr "ქსელი გაითიშა."
 
-#: sieveeditormainwindow.cpp:182
+#: sieveeditormainwindow.cpp:181
 #, kde-format
 msgid "Upload"
 msgstr "ატვირთვა"
 
-#: sieveeditormainwindow.cpp:185
+#: sieveeditormainwindow.cpp:184
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Sieve-ის სერვერის დამატება…"
 
-#: sieveeditormainwindow.cpp:189
+#: sieveeditormainwindow.cpp:188
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "სკრიპტის წაშლა"
 
-#: sieveeditormainwindow.cpp:195
+#: sieveeditormainwindow.cpp:194
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "ახალი სკრიპტის შექმნა…"
 
-#: sieveeditormainwindow.cpp:201
+#: sieveeditormainwindow.cpp:200
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "სკრიპტის ჩასწორება…"
 
-#: sieveeditormainwindow.cpp:206
+#: sieveeditormainwindow.cpp:205
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "სკრიპტის დეაქტივაცია"
 
-#: sieveeditormainwindow.cpp:211
+#: sieveeditormainwindow.cpp:210
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "სიის განახლება"
 
-#: sieveeditormainwindow.cpp:217
+#: sieveeditormainwindow.cpp:216
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "ხაზზე გადასვლა…"
 
-#: sieveeditormainwindow.cpp:234
+#: sieveeditormainwindow.cpp:233
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "შემოტანა…"
 
-#: sieveeditormainwindow.cpp:240
+#: sieveeditormainwindow.cpp:239
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "გაზიარება…"
 
-#: sieveeditormainwindow.cpp:248
+#: sieveeditormainwindow.cpp:247
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "მართლწერის შემოწმება…"
 
-#: sieveeditormainwindow.cpp:254
+#: sieveeditormainwindow.cpp:253
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "სინტაქსის შემოწმება"
 
-#: sieveeditormainwindow.cpp:259
+#: sieveeditormainwindow.cpp:258
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "წესების გრაფიკულად შექმნა…"
 
-#: sieveeditormainwindow.cpp:264
+#: sieveeditormainwindow.cpp:263
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "კომენტარი"
 
-#: sieveeditormainwindow.cpp:269
+#: sieveeditormainwindow.cpp:268
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "კომენტარის მოცილება"
 
-#: sieveeditormainwindow.cpp:297
+#: sieveeditormainwindow.cpp:296
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&სანიშნეები"
 
-#: sieveeditormainwindow.cpp:302
+#: sieveeditormainwindow.cpp:301
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Sieve-ის სკრიპტის გამართვა…"
 
-#: sieveeditormainwindow.cpp:307
+#: sieveeditormainwindow.cpp:306
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "სიტყვების გადატანა"
 
-#: sieveeditormainwindow.cpp:329
+#: sieveeditormainwindow.cpp:328
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "IMAP-ის პარამეტრების შემოტანა…"
 
-#: sieveeditormainwindow.cpp:356
+#: sieveeditormainwindow.cpp:355
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
@@ -439,7 +439,7 @@ msgstr ""
 "<qt>მენიუს ზოლი მთლიანად დაიმალება. მისი თავიდან საჩვენებლად დააწექით: %1.</"
 "qt>"
 
-#: sieveeditormainwindow.cpp:359
+#: sieveeditormainwindow.cpp:358
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"

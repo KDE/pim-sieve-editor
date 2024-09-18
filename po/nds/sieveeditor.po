@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-01 00:40+0000\n"
+"POT-Creation-Date: 2024-09-18 00:41+0000\n"
 "PO-Revision-Date: 2014-08-13 23:53+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -328,146 +328,146 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "Skript tomaken"
 
-#: sieveeditormainwindow.cpp:158
+#: sieveeditormainwindow.cpp:157
 #, kde-format
 msgid "Network is Up."
 msgstr "Na Nettwark tokoppelt"
 
-#: sieveeditormainwindow.cpp:160
+#: sieveeditormainwindow.cpp:159
 #, kde-format
 msgid "Network is Down."
 msgstr "Nettwark is nich verföögbor."
 
-#: sieveeditormainwindow.cpp:182
+#: sieveeditormainwindow.cpp:181
 #, kde-format
 msgid "Upload"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:185
+#: sieveeditormainwindow.cpp:184
 #, fuzzy, kde-format
 #| msgid "Add Server Sieve"
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Siever-Server tofögen"
 
-#: sieveeditormainwindow.cpp:189
+#: sieveeditormainwindow.cpp:188
 #, fuzzy, kde-format
 #| msgid "Delete Script"
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Skript wegdoon"
 
-#: sieveeditormainwindow.cpp:195
+#: sieveeditormainwindow.cpp:194
 #, fuzzy, kde-format
 #| msgid "Create New Script..."
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Nieg Skript opstellen ..."
 
-#: sieveeditormainwindow.cpp:201
+#: sieveeditormainwindow.cpp:200
 #, fuzzy, kde-format
 #| msgid "Edit Script"
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Skript bewerken"
 
-#: sieveeditormainwindow.cpp:206
+#: sieveeditormainwindow.cpp:205
 #, fuzzy, kde-format
 #| msgid "Deactivate Script"
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Skript utmaken"
 
-#: sieveeditormainwindow.cpp:211
+#: sieveeditormainwindow.cpp:210
 #, fuzzy, kde-format
 #| msgid "Refresh List"
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "List opfrischen"
 
-#: sieveeditormainwindow.cpp:217
+#: sieveeditormainwindow.cpp:216
 #, fuzzy, kde-format
 #| msgid "Go to Line"
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Na Reeg gahn"
 
-#: sieveeditormainwindow.cpp:234
+#: sieveeditormainwindow.cpp:233
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:240
+#: sieveeditormainwindow.cpp:239
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:248
+#: sieveeditormainwindow.cpp:247
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:254
+#: sieveeditormainwindow.cpp:253
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:259
+#: sieveeditormainwindow.cpp:258
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:264
+#: sieveeditormainwindow.cpp:263
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:269
+#: sieveeditormainwindow.cpp:268
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:297
+#: sieveeditormainwindow.cpp:296
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:302
+#: sieveeditormainwindow.cpp:301
 #, fuzzy, kde-format
 #| msgid "Create New Script..."
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Nieg Skript opstellen ..."
 
-#: sieveeditormainwindow.cpp:307
+#: sieveeditormainwindow.cpp:306
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:329
+#: sieveeditormainwindow.cpp:328
 #, fuzzy, kde-format
 #| msgid "Modify Settings"
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "Instellen ännern"
 
-#: sieveeditormainwindow.cpp:356
+#: sieveeditormainwindow.cpp:355
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:359
+#: sieveeditormainwindow.cpp:358
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
