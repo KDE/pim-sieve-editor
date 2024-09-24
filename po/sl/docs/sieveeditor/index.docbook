@@ -1,0 +1,258 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY i18n-kapplication "<application
+>Sieve Editor</application
+>">
+  <!ENTITY kappname "&i18n-kapplication;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE"
+> 
+]>
+
+<book id="sieveeditor" lang="&language;">
+
+<bookinfo id="sieveeditorinfo">
+
+<title
+>Priročnik za &i18n-kapplication;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Peter</firstname
+><surname
+>Žaucer</surname
+><affiliation
+><address
+><email
+>peter.zaucer@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>14.04.2016</date>
+<releaseinfo
+>Applications 16.04</releaseinfo>
+
+<abstract>
+<para
+>&i18n-kapplication; je urejevalnik za skripte Sieve, ki se uporabljajo za filtriranje elektronske pošte na poštnem strežniku. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sieve</keyword>
+</keywordset>
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Uvod</title>
+<para
+>&i18n-kapplication; je urejevalnik <ulink url="https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)"
+>Sieve</ulink
+> skriptov, ki se uporabljajo za filtriranje e-pošte na poštnem strežniku.</para>
+
+<sect1 id="using-kapp">
+<title
+>Uporaba &i18n-kapplication;</title>
+
+<para
+>&i18n-kapplication; ponuja &GUI; za opravljanje teh nalog:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Upravljajte svoje strežnike Sieve</para
+></listitem>
+<listitem
+><para
+>Naložite, uvozite in deaktivirajte skripte, osvežite seznam s skripti</para
+></listitem>
+<listitem
+><para
+>Ustvarite in uredite Sieve skripte</para
+></listitem>
+<listitem
+><para
+>Uvozite in delite skripte</para
+></listitem>
+<listitem
+><para
+>Preverite sintakso skripta, samodejno ustvarite skripte in skripte za odpravljanje napak</para
+></listitem>
+</itemizedlist>
+
+<para
+>&i18n-kapplication; lahko uporabljate neodvisno od Akonadija ali &kmail;a, potrebujete samo poštni strežnik s podporo za Sieve skripte.</para>
+
+<para
+>V namizju &plasma-desktop; so gesla shranjena v &kwallet5;</para>
+
+<sect2 id="first-start">
+<title
+>Prvi začetek</title>
+<para
+>Ob prvem zagonu &i18n-kapplication; se prikaže pogovorno okno za konfiguracijo strežnika.</para>
+<screenshot>
+<screeninfo
+>Konfiguracija strežnika</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="first-start.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Konfiguracija strežnika</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+<para
+>V tem pogovornem oknu lahko dodate, spremenite in odstranite svoje poštne strežnike.</para>
+<para
+>Kasneje lahko za ta opravila uporabite <menuchoice
+><guimenu
+>Datoteka</guimenu
+><guimenuitem
+>Dodaj strežnik</guimenuitem
+></menuchoice
+> ali konfiguracijsko pogovorno okno.</para>
+<para
+>Ob naslednjem zagonu &i18n-kapplication; samodejno pridobi vse razpoložljive skripte s strežnikov.</para>
+</sect2>
+
+<sect2 id="script-edit">
+<title
+>Urejanje skripta</title>
+<para
+>Urejevalnik podpira samodokončanje in označevanje sintakse.</para>
+<screenshot>
+<screeninfo
+>Urejanje skripta</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-edit.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Urejanje skripta</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="script-tools">
+<title
+>Orodja za skripte</title>
+
+<para
+>Dejanja v meniju <guimenu
+>Orodja</guimenu
+> vam omogočajo, da preverite sintakso svojih skriptov, samodejno ustvarite in razhroščite skripte.</para>
+
+<screenshot>
+<screeninfo
+>Samodejno ustvari skripte</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-tools.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Samodejno ustvari skripte</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="script-help">
+<title
+>Integrirana pomoč</title>
+
+<para
+>Uporabite lahko integrirano podporo za pomoč in kliknite z desnim klikom na ključno besedo jezika Sieve. Nato se ustrezen razdelek dokumentacije prenese z interneta in prikaže na zavihku <guilabel
+>Pomoč</guilabel
+>.</para>
+<screenshot>
+<screeninfo
+>Integrirana pomoč</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-help.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>Integrirana pomoč</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Zasluge in licenca</title>
+
+<para
+>&i18n-kapplication;</para>
+<para
+>Avtorske pravice za program 2013-2017 &Laurent.Montel; &Laurent.Montel.mail; </para>
+<para
+>Avtorske pravice za dokumentacijo &copy; &Laurent.Montel; &Laurent.Montel.mail; </para>
+
+<para
+>Prevod: Peter Žaucer<email
+>pater.zaucer@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->
