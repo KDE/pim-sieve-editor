@@ -174,10 +174,10 @@ void SieveEditorMainWindow::setupActions()
 {
     KActionCollection *ac = actionCollection();
 
-    KStandardAction::quit(this, &SieveEditorMainWindow::close, ac);
-    KStandardAction::preferences(this, &SieveEditorMainWindow::slotConfigure, ac);
+    KStandardActions::quit(this, &SieveEditorMainWindow::close, ac);
+    KStandardActions::preferences(this, &SieveEditorMainWindow::slotConfigure, ac);
 
-    mUploadScript = KStandardAction::save(this, &SieveEditorMainWindow::slotUploadScript, ac);
+    mUploadScript = KStandardActions::save(this, &SieveEditorMainWindow::slotUploadScript, ac);
     mUploadScript->setText(i18n("Upload"));
     mUploadScript->setEnabled(false);
 
@@ -220,15 +220,15 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("gotoline"), mGoToLine);
     mGoToLine->setEnabled(false);
 
-    mFindAction = KStandardAction::find(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotFind, ac);
-    mReplaceAction = KStandardAction::replace(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotReplace, ac);
-    mUndoAction = KStandardAction::undo(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotUndo, ac);
-    mRedoAction = KStandardAction::redo(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotRedo, ac);
-    mCopyAction = KStandardAction::copy(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotCopy, ac);
-    mPasteAction = KStandardAction::paste(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotPaste, ac);
-    mCutAction = KStandardAction::cut(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotCut, ac);
-    mSelectAllAction = KStandardAction::selectAll(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotSelectAll, ac);
-    mSaveAsAction = KStandardAction::saveAs(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotSaveAs, ac);
+    mFindAction = KStandardActions::find(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotFind, ac);
+    mReplaceAction = KStandardActions::replace(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotReplace, ac);
+    mUndoAction = KStandardActions::undo(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotUndo, ac);
+    mRedoAction = KStandardActions::redo(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotRedo, ac);
+    mCopyAction = KStandardActions::copy(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotCopy, ac);
+    mPasteAction = KStandardActions::paste(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotPaste, ac);
+    mCutAction = KStandardActions::cut(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotCut, ac);
+    mSelectAllAction = KStandardActions::selectAll(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotSelectAll, ac);
+    mSaveAsAction = KStandardActions::saveAs(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotSaveAs, ac);
 
     mImportAction = new QAction(i18nc("@action", "Import…"), this);
     connect(mImportAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotImport);
@@ -270,13 +270,13 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("uncomment_code"), mUncommentAction);
     ac->setDefaultShortcut(mUncommentAction, Qt::CTRL | Qt::SHIFT | Qt::Key_D);
 
-    mZoomInAction = KStandardAction::zoomIn(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotZoomIn, this);
+    mZoomInAction = KStandardActions::zoomIn(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotZoomIn, this);
     ac->addAction(QStringLiteral("zoom_in"), mZoomInAction);
 
-    mZoomOutAction = KStandardAction::zoomOut(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotZoomOut, this);
+    mZoomOutAction = KStandardActions::zoomOut(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotZoomOut, this);
     ac->addAction(QStringLiteral("zoom_out"), mZoomOutAction);
 
-    mZoomResetAction = KStandardAction::actualSize(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotZoomReset, this);
+    mZoomResetAction = KStandardActions::actualSize(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotZoomReset, this);
     ac->addAction(QStringLiteral("zoom_reset"), mZoomResetAction);
 
     mMenuChangeCaseAction = new PimCommon::KActionMenuChangeCase(this);
@@ -308,11 +308,11 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("wordwrap"), mWrapTextAction);
     connect(mWrapTextAction, &QAction::triggered, mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotWordWrap);
 
-    mPrintAction = KStandardAction::print(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotPrint, ac);
+    mPrintAction = KStandardActions::print(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotPrint, ac);
 
     mShowMenuBarAction = KStandardAction::showMenubar(this, &SieveEditorMainWindow::slotToggleMenubar, actionCollection());
 
-    mPrintPreviewAction = KStandardAction::printPreview(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotPrintPreview, ac);
+    mPrintPreviewAction = KStandardActions::printPreview(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::slotPrintPreview, ac);
     if (menuBar()) {
         mHamburgerMenu = KStandardAction::hamburgerMenu(nullptr, nullptr, actionCollection());
         mHamburgerMenu->setShowMenuBarAction(mShowMenuBarAction);
