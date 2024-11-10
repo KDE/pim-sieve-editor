@@ -12,7 +12,7 @@
 #if WITH_DBUS
 #include <KDBusService>
 #else
-#include "SingleApplication/SingleApplication"
+#include "3rdparty/SingleApplication/SingleApplication"
 #endif
 
 #include <KLocalizedString>

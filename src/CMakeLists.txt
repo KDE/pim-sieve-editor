@@ -93,7 +93,9 @@ target_sources(libsieveeditor PRIVATE
 if(NOT WITH_DBUS)
     target_sources(libsieveeditor PRIVATE
         3rdparty/SingleApplication/singleapplication.cpp
+	3rdparty/SingleApplication/singleapplication.h
         3rdparty/SingleApplication/singleapplication_p.cpp
+	3rdparty/SingleApplication/singleapplication_p.h
     )
 endif()
 
