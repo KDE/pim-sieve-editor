@@ -39,12 +39,12 @@ int main(int argc, char **argv)
 #if HAVE_KICONTHEME
     KIconTheme::initTheme();
 #endif
-#ifdef WITH_DBUS
+#if WITH_DBUS
     QApplication app(argc, argv);
+    app.setDesktopFileName(QStringLiteral("org.kde.sieveeditor"));
 #else
     SingleApplication app(argc, argv, true);
 #endif
-    app.setDesktopFileName(QStringLiteral("org.kde.sieveeditor"));
 #if HAVE_STYLE_MANAGER
     KStyleManager::initStyle();
 #else // !HAVE_STYLE_MANAGER
@@ -85,11 +85,11 @@ int main(int argc, char **argv)
 #if WITH_DBUS
     KDBusService service(KDBusService::Unique);
 #else
-    /**
-     * listen to single application messages if no DBus
-     */
-    // TODO
-    // QObject::connect(&app, &SingleApplication::receivedMessage, &app, &::remoteMessageReceived);
+    if (!app.isPrimary()) {
+        // TODO activate it
+        // activateWindow();
+        return 0;
+    }
 #endif
 
     auto mw = new SieveEditorMainWindow();

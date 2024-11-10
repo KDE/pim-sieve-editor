@@ -90,14 +90,7 @@ target_sources(libsieveeditor PRIVATE
     sievepurposemenuwidget.h
 )
 
-if(NOT WITH_DBUS)
-    target_sources(libsieveeditor PRIVATE
-        3rdparty/SingleApplication/singleapplication.cpp
-	3rdparty/SingleApplication/singleapplication.h
-        3rdparty/SingleApplication/singleapplication_p.cpp
-	3rdparty/SingleApplication/singleapplication_p.h
-    )
-endif()
+
 
 ki18n_wrap_ui(libsieveeditor
     ui/serversievesettings.ui
@@ -138,9 +131,19 @@ set_target_properties(libsieveeditor
     PROPERTIES OUTPUT_NAME sieveeditor VERSION ${KDEPIM_LIB_VERSION} SOVERSION ${KDEPIM_LIB_SOVERSION}
 )
 
-set(sieveeditor_SRCS main.cpp)
+add_executable(sieveeditor)
+target_sources(sieveeditor PRIVATE main.cpp)
 
-add_executable(sieveeditor ${sieveeditor_SRCS})
+if(NOT WITH_DBUS)
+    target_sources(sieveeditor PRIVATE
+        3rdparty/SingleApplication/singleapplication.cpp
+        3rdparty/SingleApplication/singleapplication.h
+        3rdparty/SingleApplication/singleapplication_p.cpp
+        3rdparty/SingleApplication/singleapplication_p.h
+    )
+    target_compile_definitions(sieveeditor PRIVATE -DQAPPLICATION_CLASS=QApplication)
+endif()
+
 
 target_link_libraries(sieveeditor
     KF6::CoreAddons
@@ -151,6 +154,11 @@ target_link_libraries(sieveeditor
     ${libsieveeditor_userfeedback_LIB}
     KF6::IconThemes
 )
+
+if(NOT WITH_DBUS)
+    target_link_libraries(sieveeditor
+        Qt::Network)
+endif()
 if(TARGET KF6::DBusAddons)
     target_link_libraries(sieveeditor KF6::DBusAddons)
 endif()    	
