@@ -4,6 +4,8 @@ configure_file(sieveeditor-version.h.in ${CMAKE_CURRENT_BINARY_DIR}/sieveeditor-
 
 add_library(libsieveeditor)
 
+configure_file(config-pim-sieve-editor.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-pim-sieve-editor.h @ONLY)
+
 kconfig_add_kcfg_files(libsieveeditor settings/sieveeditorglobalconfig.kcfgc)
 
 target_sources(libsieveeditor PRIVATE
@@ -88,6 +90,13 @@ target_sources(libsieveeditor PRIVATE
     sievepurposemenuwidget.h
 )
 
+if(NOT WITH_DBUS)
+    target_sources(libsieveeditor PRIVATE
+        3rdparty/SingleApplication/singleapplication.cpp
+        3rdparty/SingleApplication/singleapplication_p.cpp
+    )
+endif()
+
 ki18n_wrap_ui(libsieveeditor
     ui/serversievesettings.ui
     ui/sieveeditorconfigureserverwidget.ui
@@ -140,7 +149,7 @@ target_link_libraries(sieveeditor
     ${libsieveeditor_userfeedback_LIB}
     KF6::IconThemes
 )
-if(NOT WIN32 AND NOT APPLE)
+if(TARGET KF6::DBusAddons)
     target_link_libraries(sieveeditor KF6::DBusAddons)
 endif()    	
 install(TARGETS sieveeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

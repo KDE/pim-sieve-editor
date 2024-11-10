@@ -4,13 +4,17 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+#include "config-pim-sieve-editor.h"
 #include "sieveeditor-version.h"
 #include "sieveeditormainwindow.h"
 #include <KAboutData>
 #include <KCrash>
-#if !defined(Q_OS_WIN) && !defined(Q_OS_MACOS)
+#if WITH_DBUS
 #include <KDBusService>
+#else
+#include "SingleApplication/SingleApplication"
 #endif
+
 #include <KLocalizedString>
 #include <QApplication>
 #include <QCommandLineParser>
@@ -35,7 +39,11 @@ int main(int argc, char **argv)
 #if HAVE_KICONTHEME
     KIconTheme::initTheme();
 #endif
+#ifdef WITH_DBUS
     QApplication app(argc, argv);
+#else
+    SingleApplication app(argc, argv, true);
+#endif
     app.setDesktopFileName(QStringLiteral("org.kde.sieveeditor"));
 #if HAVE_STYLE_MANAGER
     KStyleManager::initStyle();
@@ -74,8 +82,14 @@ int main(int argc, char **argv)
     }
 #endif
 
-#if !defined(Q_OS_WIN) && !defined(Q_OS_MACOS)
+#if WITH_DBUS
     KDBusService service(KDBusService::Unique);
+#else
+    /**
+     * listen to single application messages if no DBus
+     */
+    // TODO
+    // QObject::connect(&app, &SingleApplication::receivedMessage, &app, &::remoteMessageReceived);
 #endif
 
     auto mw = new SieveEditorMainWindow();
