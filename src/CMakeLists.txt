@@ -132,7 +132,23 @@ set_target_properties(libsieveeditor
 )
 
 add_executable(sieveeditor)
-target_sources(sieveeditor PRIVATE main.cpp)
+
+# application icon, in all sizes needed to have e.g. nice Windows icons, too
+set(ICON_FILES
+  icons/sc-apps-sieveeditor.svg
+  icons/16-apps-sieveeditor.png
+  icons/22-apps-sieveeditor.png
+  icons/32-apps-sieveeditor.png
+  icons/44-apps-sieveeditor.png
+  icons/48-apps-sieveeditor.png
+  icons/64-apps-sieveeditor.png
+  icons/150-apps-sieveeditor.png
+)
+
+# Add icon files to the application's source files to have CMake bundle them in the executable.
+ecm_add_app_icon(ICONS_SOURCES ICONS ${ICON_FILES})
+target_sources(sieveeditor PRIVATE main.cpp ${ICONS_SOURCES})
+
 
 if(NOT WITH_DBUS)
     target_sources(sieveeditor PRIVATE
