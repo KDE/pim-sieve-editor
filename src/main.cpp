@@ -86,8 +86,6 @@ int main(int argc, char **argv)
     KDBusService service(KDBusService::Unique);
 #else
     if (!app.isPrimary()) {
-        // TODO activate it
-        // activateWindow();
         return 0;
     }
 #endif
