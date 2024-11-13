@@ -6,11 +6,12 @@
 
 #pragma once
 
+#include "config-pim-sieve-editor.h"
 #include <KPageDialog>
 class QCheckBox;
 class KConfigDialogManager;
 class SieveEditorConfigureServerWidget;
-#ifdef WITH_KUSERFEEDBACK
+#if WITH_KUSERFEEDBACK
 namespace KUserFeedback
 {
 class FeedbackConfigWidget;
@@ -33,7 +34,7 @@ private:
     SieveEditorConfigureServerWidget *mServerWidget = nullptr;
     QCheckBox *const mWrapText;
     KConfigDialogManager *m_configDialogManager = nullptr;
-#ifdef WITH_KUSERFEEDBACK
+#if WITH_KUSERFEEDBACK
     KUserFeedback::FeedbackConfigWidget *mUserFeedbackWidget = nullptr;
 #endif
 };

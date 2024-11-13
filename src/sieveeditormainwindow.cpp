@@ -5,6 +5,7 @@
 */
 
 #include "sieveeditormainwindow.h"
+#include "config-pim-sieve-editor.h"
 #include "importwizard/importimapsettingwizard.h"
 #include "serversievesettingsdialog.h"
 #include "sieveeditorbookmarks.h"
@@ -42,7 +43,7 @@
 #include <QPointer>
 #include <QStatusBar>
 #include <QToolButton>
-#ifdef WITH_KUSERFEEDBACK
+#if WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
 #include <KUserFeedback/NotificationPopup>
 #include <KUserFeedback/Provider>
@@ -92,7 +93,7 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
 
     mMainWidget = new SieveEditorCentralWidget(this, actionCollection());
     mainWidgetLayout->addWidget(mMainWidget);
-#ifdef WITH_KUSERFEEDBACK
+#if WITH_KUSERFEEDBACK
     // Initialize
     (void)UserFeedBackManager::self();
 #endif
@@ -117,7 +118,7 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::copyAvailable, this, &SieveEditorMainWindow::slotCopyAvailable);
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::sieveEditorTabCurrentChanged, this, &SieveEditorMainWindow::slotUpdateActions);
     mMainWidget->sieveEditorMainWidget()->refreshList();
-#ifdef WITH_KUSERFEEDBACK
+#if WITH_KUSERFEEDBACK
     auto userFeedBackNotificationPopup = new KUserFeedback::NotificationPopup(this);
     userFeedBackNotificationPopup->setFeedbackProvider(UserFeedBackManager::self()->userFeedbackProvider());
 #endif

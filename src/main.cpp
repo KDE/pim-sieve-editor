@@ -19,7 +19,7 @@
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QTextStream>
-#ifdef WITH_KUSERFEEDBACK
+#if WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
 #include <KUserFeedback/Provider>
 #endif
@@ -68,14 +68,14 @@ int main(int argc, char **argv)
 
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
-#ifdef WITH_KUSERFEEDBACK
+#if WITH_KUSERFEEDBACK
     const QCommandLineOption feedbackOption(QStringLiteral("feedback"), i18nc("@info:shell", "Lists the available options for user feedback"));
     parser.addOption(feedbackOption);
 #endif
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
-#ifdef WITH_KUSERFEEDBACK
+#if WITH_KUSERFEEDBACK
     if (parser.isSet(feedbackOption)) {
         QTextStream(stdout) << UserFeedBackManager::self()->userFeedbackProvider()->describeDataSources() << '\n';
         return 0;

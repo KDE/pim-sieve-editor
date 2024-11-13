@@ -10,7 +10,7 @@ using namespace Qt::Literals::StringLiterals;
 #include "sieveeditorconfigureserverwidget.h"
 #include "sieveeditorglobalconfig.h"
 
-#ifdef WITH_KUSERFEEDBACK
+#if WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
 #include <KUserFeedback/FeedbackConfigWidget>
 #include <KUserFeedback/Provider>
@@ -71,7 +71,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     addPage(editorPageWidgetPage);
 
     // UserFeedBack config
-#ifdef WITH_KUSERFEEDBACK
+#if WITH_KUSERFEEDBACK
     auto userFeedBackWidget = new QWidget;
     userFeedBackWidget->setObjectName("userFeedBackWidget"_L1);
 
@@ -107,7 +107,7 @@ void SieveEditorConfigureDialog::saveServerSieveConfig()
     mServerWidget->writeConfig();
     m_configDialogManager->updateSettings();
     SieveEditorGlobalConfig::self()->save();
-#ifdef WITH_KUSERFEEDBACK
+#if WITH_KUSERFEEDBACK
     // set current active mode + write back the config for future starts
     UserFeedBackManager::self()->userFeedbackProvider()->setTelemetryMode(mUserFeedbackWidget->telemetryMode());
     UserFeedBackManager::self()->userFeedbackProvider()->setSurveyInterval(mUserFeedbackWidget->surveyInterval());

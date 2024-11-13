@@ -1,5 +1,11 @@
 # SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
+
+if(TARGET KF6::UserFeedbackWidgets)
+    set(WITH_KUSERFEEDBACK true)
+endif()
+
+
 configure_file(sieveeditor-version.h.in ${CMAKE_CURRENT_BINARY_DIR}/sieveeditor-version.h @ONLY)
 
 add_library(libsieveeditor)
@@ -23,11 +29,6 @@ target_sources(libsieveeditor PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/checks/abstractimapsettingspassword.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/importwizard/checks/importimapsettingsakonadipassword.cpp
 )
-
-if(TARGET KF6::UserFeedbackWidgets)
-    add_definitions(-DWITH_KUSERFEEDBACK)
-endif()
-
 
 if(TARGET KF6::UserFeedbackWidgets)
     target_sources(libsieveeditor PRIVATE
