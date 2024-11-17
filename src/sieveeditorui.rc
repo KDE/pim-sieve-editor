@@ -3,7 +3,7 @@
   SPDX-License-Identifier: CC0-1.0
   SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
 -->
-<gui name="sieveeditor" version="24">
+<gui name="sieveeditor" version="25">
  <MenuBar>
   <Menu name="file" >
    <Action name="add_server_sieve" />
@@ -56,6 +56,13 @@
    <Separator/>
    <Action name="import_imap_settings" />
   </Menu>
+
+  <Menu name="help">
+   <text>&amp;Help</text>
+   <Action name="verify_check_version" />
+   <Separator/>
+  </Menu>
+
  </MenuBar>
 
   <ToolBar name="mainToolBar"><text>Main Toolbar</text>

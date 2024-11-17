@@ -56,6 +56,9 @@
 #endif
 #include <KWindowConfig>
 #include <QWindow>
+#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+#include <PimCommon/VerifyNewVersionWidget>
+#endif
 
 namespace
 {
@@ -63,6 +66,10 @@ static const char mySieveEditorMainWindowConfigGroupName[] = "SieveEditorMainWin
 }
 SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     : KXmlGuiWindow(parent)
+#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+    , mVerifyNewVersionWidget(new PimCommon::VerifyNewVersionWidget(this))
+#endif
+
 {
 #ifdef Q_OS_UNIX
     /**
@@ -333,6 +340,13 @@ void SieveEditorMainWindow::setupActions()
     mShowFullScreenAction = KStandardAction::fullScreen(nullptr, nullptr, this, ac);
     ac->setDefaultShortcut(mShowFullScreenAction, Qt::Key_F11);
     connect(mShowFullScreenAction, &QAction::toggled, this, &SieveEditorMainWindow::slotFullScreen);
+
+#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+    mVerifyNewVersionWidget->addOsUrlInfo(PimCommon::VerifyNewVersionWidget::OsVersion::Windows,
+                                          QStringLiteral("https://cdn.kde.org/ci-builds/pim/pim-sieve-editor"));
+    auto verifyNewVersionAction = mVerifyNewVersionWidget->verifyNewVersionAction();
+    ac->addAction(QStringLiteral("verify_check_version"), verifyNewVersionAction);
+#endif
 
     auto manager = KColorSchemeManager::instance();
     ac->addAction(QStringLiteral("colorscheme_menu"), KColorSchemeMenu::createMenu(manager, this));

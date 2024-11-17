@@ -19,6 +19,9 @@ class KToggleAction;
 namespace PimCommon
 {
 class KActionMenuChangeCase;
+#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+class VerifyNewVersionWidget;
+#endif
 }
 class LIBSIEVEEDITOR_EXPORT SieveEditorMainWindow : public KXmlGuiWindow
 {
@@ -98,5 +101,8 @@ private:
     KToggleFullScreenAction *mShowFullScreenAction = nullptr;
     KHamburgerMenu *mHamburgerMenu = nullptr;
     KToggleAction *mShowMenuBarAction = nullptr;
+#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+    PimCommon::VerifyNewVersionWidget *const mVerifyNewVersionWidget;
+#endif
     bool mNetworkIsDown = false;
 };
