@@ -79,6 +79,8 @@ find_package(KF6Crash ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6Bookmarks ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6KIO ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6XmlGui ${KF_MIN_VERSION} REQUIRED)
+find_package(KF6WindowSystem ${KF_MIN_VERSION} REQUIRED)
+
 find_package(KF6DocTools ${KF_MIN_VERSION})
 find_package(KF6I18n ${KF_MIN_VERSION})
 find_package(KF6IconThemes ${KF_MIN_VERSION} QUIET)
@@ -101,8 +103,9 @@ option(USE_DBUS "Build components using DBus" ${USE_DBUS_DEFAULT})
 if(USE_DBUS)
    set(WITH_DBUS TRUE)
    find_package(KF6DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
+else()
+   find_package(KDSingleApplication-qt6 CONFIG REQUIRED)
 endif()
-
 
 
 # Find KdepimLibs Package

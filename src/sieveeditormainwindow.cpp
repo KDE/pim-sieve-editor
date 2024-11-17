@@ -55,6 +55,7 @@
 #include <unistd.h>
 #endif
 #include <KWindowConfig>
+#include <KWindowSystem>
 #include <QWindow>
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
 #include <PimCommon/VerifyNewVersionWidget>
@@ -352,6 +353,18 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("colorscheme_menu"), KColorSchemeMenu::createMenu(manager, this));
     mShowMenuBarAction->setChecked(SieveEditorGlobalConfig::self()->showMenuBar());
     slotToggleMenubar(true);
+}
+
+void SieveEditorMainWindow::slotActivateRequested(const QStringList &arguments, const QString &workingDirectory)
+{
+    Q_UNUSED(workingDirectory)
+    // TODO arguments
+#if !defined(Q_OS_WIN) && !defined(Q_OS_MACOS)
+    KWindowSystem::updateStartupId(windowHandle());
+    KWindowSystem::activateWindow(windowHandle());
+#else
+    activateWindow();
+#endif
 }
 
 void SieveEditorMainWindow::slotToggleMenubar(bool dontShowWarning)

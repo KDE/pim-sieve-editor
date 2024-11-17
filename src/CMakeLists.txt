@@ -124,6 +124,7 @@ target_link_libraries(libsieveeditor
     KPim6::PimCommon
     KPim6::KSieveUi
     KPim6::KManageSieve
+    KF6::WindowSystem
     ${libsieveeditor_userfeedback_LIB}
 )
 target_link_libraries(libsieveeditor PRIVATE qt6keychain)
@@ -150,18 +151,6 @@ set(ICON_FILES
 ecm_add_app_icon(ICONS_SOURCES ICONS ${ICON_FILES})
 target_sources(sieveeditor PRIVATE main.cpp ${ICONS_SOURCES})
 
-
-if(NOT WITH_DBUS)
-    target_sources(sieveeditor PRIVATE
-        3rdparty/SingleApplication/singleapplication.cpp
-        3rdparty/SingleApplication/singleapplication.h
-        3rdparty/SingleApplication/singleapplication_p.cpp
-        3rdparty/SingleApplication/singleapplication_p.h
-    )
-    target_compile_definitions(sieveeditor PRIVATE -DQAPPLICATION_CLASS=QApplication)
-endif()
-
-
 target_link_libraries(sieveeditor
     KF6::CoreAddons
     KF6::Crash
@@ -170,14 +159,16 @@ target_link_libraries(sieveeditor
     KF6::I18n
     ${libsieveeditor_userfeedback_LIB}
     KF6::IconThemes
+    KF6::WindowSystem
 )
 
-if(NOT WITH_DBUS)
-    target_link_libraries(sieveeditor
-        Qt::Network)
-endif()
 if(TARGET KF6::DBusAddons)
     target_link_libraries(sieveeditor KF6::DBusAddons)
+else()
+    target_link_libraries(sieveeditor KDAB::kdsingleapplication)
+    if (NOT WIN32 AND NOT APPLE)
+        target_link_libraries(sieveeditor Qt::GuiPrivate)
+    endif()
 endif()    	
 install(TARGETS sieveeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 

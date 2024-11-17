@@ -33,6 +33,8 @@ public:
     [[nodiscard]] QString currentHelpTitle() const;
     [[nodiscard]] QUrl currentHelpUrl() const;
 
+    void slotActivateRequested(const QStringList &arguments, const QString &workingDirectory);
+
 protected:
     void closeEvent(QCloseEvent *e) override;
 
