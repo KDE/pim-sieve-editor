@@ -188,3 +188,23 @@ install(FILES org.kde.sieveeditor.appdata.xml DESTINATION ${KDE_INSTALL_METAINFO
 ecm_qt_install_logging_categories(EXPORT SIEVEEDITOR FILE sieveeditor.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 add_subdirectory(icons)
+
+# See https://cmake.org/cmake/help/v3.15/prop_tgt/MACOSX_BUNDLE_INFO_PLIST.html
+if(APPLE)
+  set_property(
+    TARGET sieveeditor
+    PROPERTY MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/data/MacOSXBundleInfo.plist.in
+  )
+
+  # These are substituted by CMake into plist.in.
+  set(MACOSX_BUNDLE_DISPLAY_NAME "SieveEditor")
+  set(MACOSX_BUNDLE_GUI_IDENTIFIER "org.kde.sieveeditor")
+  set(MACOSX_BUNDLE_BUNDLE_NAME "SieveEditor")
+  set(MACOSX_BUNDLE_DISPLAY_NAME "SieveEditor")
+  set(MACOSX_BUNDLE_INFO_STRING "SieveEditor - Sieve Editor")
+  set(MACOSX_BUNDLE_LONG_VERSION_STRING "SieveEditor ${PIM_VERSION}")
+  set(MACOSX_BUNDLE_SHORT_VERSION_STRING "${PIM_VERSION}")
+  set(MACOSX_BUNDLE_BUNDLE_VERSION "${PIM_VERSION}")
+  set(MACOSX_BUNDLE_COPYRIGHT "2013-2024 The SieveEditor Authors")
+endif()
+
