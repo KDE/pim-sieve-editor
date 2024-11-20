@@ -334,7 +334,7 @@ void SieveEditorMainWindow::setupActions()
             disconnect(mHamburgerMenu, &KHamburgerMenu::aboutToShowMenu, this, nullptr);
         });
     }
-    act = new QAction(i18nc("@action", "Import IMAP Settings…"), this);
+    act = new QAction(QIcon::fromTheme(QStringLiteral("document-import")), i18nc("@action", "Import IMAP Settings…"), this);
     ac->addAction(QStringLiteral("import_imap_settings"), act);
     connect(act, &QAction::triggered, this, &SieveEditorMainWindow::slotImportImapSettings);
 

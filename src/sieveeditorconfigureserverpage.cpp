@@ -22,7 +22,7 @@ SieveEditorConfigureServerPage::SieveEditorConfigureServerPage(QWidget *parent)
     button->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     connect(button, &QAbstractButton::clicked, this, &SieveEditorConfigureServerPage::configureClicked);
 
-    auto importSieveSettingsButton = new QPushButton(i18nc("@action:button", "Import Sieve Settings…"));
+    auto importSieveSettingsButton = new QPushButton(QIcon::fromTheme("document-import"_L1), i18nc("@action:button", "Import Sieve Settings…"));
     importSieveSettingsButton->setObjectName("import_sieve_settings_button"_L1);
     importSieveSettingsButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     connect(importSieveSettingsButton, &QAbstractButton::clicked, this, &SieveEditorConfigureServerPage::importSieveSettings);
