@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-18 00:41+0000\n"
-"PO-Revision-Date: 2024-10-10 21:41+0200\n"
+"PO-Revision-Date: 2024-11-19 20:05+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -561,7 +561,7 @@ msgstr "Eszközök"
 #: sieveeditorui.rc:61
 #, kde-format
 msgid "&Help"
-msgstr ""
+msgstr "&Súgó"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: sieveeditorui.rc:68
