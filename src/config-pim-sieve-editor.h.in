@@ -6,3 +6,4 @@
 
 #cmakedefine01 WITH_DBUS
 #cmakedefine01 WITH_KUSERFEEDBACK
+#cmakedefine01 SIEVEEDITOR_STABLE_VERSION

@@ -6,3 +6,4 @@
 
 #pragma once
 #define SIEVEEDITOR_VERSION "@KDEPIM_VERSION@"
+

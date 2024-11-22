@@ -6,6 +6,8 @@ set(PIM_VERSION "6.3.40")
 project( sieveeditor VERSION ${PIM_VERSION})
 set(RELEASE_SERVICE_VERSION "25.03.40")
 
+# Use true if stable version => we will check specific version
+set(SIEVEEDITOR_STABLE_VERSION false)
 
 set(KF_MIN_VERSION "6.7.0")
 set(QT_REQUIRED_VERSION "6.7.0")
