@@ -7,20 +7,19 @@
 #pragma once
 
 #include "libsieveeditor_export.h"
-#include <QObject>
 namespace KUserFeedback
 {
 class Provider;
 }
-class LIBSIEVEEDITOR_EXPORT UserFeedBackManager : public QObject
+class LIBSIEVEEDITOR_EXPORT UserFeedBackManager
 {
-    Q_OBJECT
 public:
+    ~UserFeedBackManager();
     static UserFeedBackManager *self();
 
     KUserFeedback::Provider *userFeedbackProvider() const;
 
 private:
-    explicit UserFeedBackManager(QObject *parent = nullptr);
+    UserFeedBackManager();
     KUserFeedback::Provider *const mUserFeedbackProvider;
 };

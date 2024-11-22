@@ -14,9 +14,8 @@
 #include <KUserFeedback/StartCountSource>
 #include <KUserFeedback/UsageTimeSource>
 
-UserFeedBackManager::UserFeedBackManager(QObject *parent)
-    : QObject(parent)
-    , mUserFeedbackProvider(new KUserFeedback::Provider(this))
+UserFeedBackManager::UserFeedBackManager()
+    : mUserFeedbackProvider(new KUserFeedback::Provider())
 {
     mUserFeedbackProvider->setProductIdentifier(QStringLiteral("org.kde.pim-sieve-editor"));
     mUserFeedbackProvider->setFeedbackServer(QUrl(QStringLiteral("https://telemetry.kde.org/")));
@@ -46,4 +45,7 @@ KUserFeedback::Provider *UserFeedBackManager::userFeedbackProvider() const
     return mUserFeedbackProvider;
 }
 
-#include "moc_userfeedbackmanager.cpp"
+UserFeedBackManager::~UserFeedBackManager()
+{
+    delete mUserFeedbackProvider;
+}
