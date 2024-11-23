@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-18 00:41+0000\n"
+"POT-Creation-Date: 2024-11-23 00:41+0000\n"
 "PO-Revision-Date: 2024-03-23 19:03-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -463,14 +463,14 @@ msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "Importar as configurações IMAP"
 
-#: sieveeditormainwindow.cpp:379
+#: sieveeditormainwindow.cpp:383
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:382
+#: sieveeditormainwindow.cpp:386
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
