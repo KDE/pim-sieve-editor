@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-23 00:41+0000\n"
+"POT-Creation-Date: 2024-11-27 00:41+0000\n"
 "PO-Revision-Date: 2024-11-18 09:00+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -96,33 +96,33 @@ msgstr "Importació en curs…"
 msgid "Finish"
 msgstr "Finalitza"
 
-#: main.cpp:66
+#: main.cpp:52
 #, kde-format
 msgid "KSieve Editor"
 msgstr "Editor KSieve"
 
-#: main.cpp:68
+#: main.cpp:54
 #, kde-format
 msgid "Sieve Editor"
 msgstr "Editor de «Sieve»"
 
-#: main.cpp:70
+#: main.cpp:56
 #, kde-format
 msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Copyright © 2013-%1, els autors del «sieveeditor»"
 
-#: main.cpp:71
+#: main.cpp:57
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:71
+#: main.cpp:57
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantenidor"
 
-#: main.cpp:80
+#: main.cpp:66
 #, kde-format
 msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
