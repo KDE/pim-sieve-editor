@@ -36,6 +36,7 @@
   <name xml:lang="pt">SieveEditor</name>
   <name xml:lang="pt-BR">Editor do Sieve</name>
   <name xml:lang="ru">SieveEditor</name>
+  <name xml:lang="sa">चलनीसम्पादक</name>
   <name xml:lang="sk">SieveEditor</name>
   <name xml:lang="sl">SieveEditor</name>
   <name xml:lang="sv">Sieveeditor</name>
@@ -75,6 +76,7 @@
   <summary xml:lang="pt">Editor de programas de filtros de e-mails em Sieve</summary>
   <summary xml:lang="pt-BR">Editor de scripts Sieve para filtro de e-mail</summary>
   <summary xml:lang="ru">Редактор сценариев правил фильтрации почтовых сообщений Sieve</summary>
+  <summary xml:lang="sa">ईमेल-छिद्रकस्य सम्पादकः Sieve scripts</summary>
   <summary xml:lang="sk">Editor e-mailového filtra Sieve skripty</summary>
   <summary xml:lang="sl">Urejevalnik za poštne skripte Sieve</summary>
   <summary xml:lang="sv">Editor av Sieve-skript för filtrering av e-post</summary>
@@ -118,6 +120,7 @@
     <p xml:lang="pt">O SieveEditor permite editar, criar e apagar programas do Sieve.</p>
     <p xml:lang="pt-BR">O Editor do Sieve permite editar, criar e excluir scripts Sieve.</p>
     <p xml:lang="ru">Редактор сценариев позволяет создавать, изменять и удалять сценарии sieve.</p>
+    <p xml:lang="sa">SieveEditor इत्यनेन sieve स्क्रिप्ट् सम्पादयितुं, निर्मातुं, विलोपयितुं च अनुमतिः भवति ।</p>
     <p xml:lang="sk">SieveEditor umožňuje upravovať, vytvárať a mazať Sieve skripty.</p>
     <p xml:lang="sl">SieveEditor dovoljuje urejanje, kreiranje in brisanje skriptov sieve.</p>
     <p xml:lang="sv">Sieveeditor gör det möjligt att redigera, skapa och ta bort Sieve-skript.</p>
