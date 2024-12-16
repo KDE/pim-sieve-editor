@@ -1,4 +1,4 @@
-# Sanskrit translations for pim-sieve-editor package.
+# Hindi translations for pim-sieve-editor package.
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the pim-sieve-editor package.
 # Kali <EMAIL@ADDRESS>, 2024.
@@ -9,179 +9,179 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:41+0000\n"
-"PO-Revision-Date: 2024-12-14 01:12+0530\n"
+"PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
-"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
-"Language: sa\n"
+"Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n>2);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "भवतः नामानि"
+msgstr "तुम्हारे नाम"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "भवतः ईमेलपत्राणि"
+msgstr "आपके ईमेल"
 
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:152
 #, kde-format
 msgid "Akonadi IMAP Settings"
-msgstr "अकोनाडी IMAP सेटिंग्स्"
+msgstr "अकोनाडी IMAP सेटिंग्स"
 
 #: importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp:291
 #, kde-format
 msgid "Thunderbird IMAP Settings"
-msgstr "Thunderbird IMAP सेटिंग्स्"
+msgstr "थंडरबर्ड IMAP सेटिंग्स"
 
 #: importwizard/importimapsettingfinishpage.cpp:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
-msgstr "IMAP सेटिंग्स् आयाताः आसन्:"
+msgstr "IMAP सेटिंग्स आयात की गईं:"
 
 #: importwizard/importimapsettingnofoundpage.cpp:20
 #, kde-format
 msgctxt "@label:textbox"
 msgid "No settings found to import."
-msgstr "आयातार्थं कोऽपि सेटिङ्ग्स् न लब्धः ।"
+msgstr "आयात करने के लिए कोई सेटिंग नहीं मिली."
 
 #: importwizard/importimapsettingprogresspage.cpp:63
 #, kde-format
 msgid "No settings found."
-msgstr "कोऽपि सेटिङ्ग्स् न प्राप्तः।"
+msgstr "कोई सेटिंग नहीं मिली."
 
 #: importwizard/importimapsettingprogresspage.cpp:70
 #, kde-format
 msgid "Import settings from %1…"
-msgstr "%1 तः सेटिङ्ग्स् आयातयन्तु..."
+msgstr "%1 से सेटिंग आयात करें…"
 
 #: importwizard/importimapsettingprogresspage.cpp:72
 #, kde-format
 msgid "Import settings from %1 done"
-msgstr "%1 तः सेटिङ्ग्स् आयातयन्तु"
+msgstr "%1 से सेटिंग आयात करें संपन्न"
 
 #: importwizard/importimapsettingsearchpage.cpp:21
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
-msgstr "कृपया यस्मात् कार्यक्रमात् IMAP सेटिंग्स् आयातयितुं रोचते तत् कार्यक्रमं चिनोतु:"
+msgstr "कृपया वह प्रोग्राम चुनें जिससे आप IMAP सेटिंग्स आयात करना चाहते हैं:"
 
 #: importwizard/importimapsettingwizard.cpp:32
 #, kde-format
 msgctxt "@title:window"
 msgid "Import IMAP Settings"
-msgstr "IMAP सेटिंग्स् आयातयन्तु"
+msgstr "IMAP सेटिंग्स आयात करें"
 
 #: importwizard/importimapsettingwizard.cpp:34
 #, kde-format
 msgid "Select Import Settings"
-msgstr "Import Settings इति चिनोतु"
+msgstr "आयात सेटिंग चुनें"
 
 #: importwizard/importimapsettingwizard.cpp:40
 #, kde-format
 msgid "Import in Progress…"
-msgstr "आयातः प्रचलति..."
+msgstr "आयात प्रगति पर है…"
 
 #: importwizard/importimapsettingwizard.cpp:46
 #, kde-format
 msgid "Finish"
-msgstr "समापन"
+msgstr "खत्म करना"
 
 #: main.cpp:52
 #, kde-format
 msgid "KSieve Editor"
-msgstr "KSieve सम्पादक"
+msgstr "के-सीव संपादक"
 
 #: main.cpp:54
 #, kde-format
 msgid "Sieve Editor"
-msgstr "चलनी सम्पादक"
+msgstr "छलनी संपादक"
 
 #: main.cpp:56
 #, kde-format
 msgid "Copyright © 2013-%1 sieveeditor authors"
-msgstr "प्रतिलिपि अधिकार © 2013-%1 sieveeditor लेखक"
+msgstr "कॉपीराइट © 2013-%1 sieveeditor लेखक"
 
 #: main.cpp:57
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
-msgstr "लॉरेण्ट् मोंटेल्"
+msgstr "लॉरेंट मोंटेल"
 
 #: main.cpp:57
 #, kde-format
 msgid "Maintainer"
-msgstr "परिपालकः"
+msgstr "मेंटेनर"
 
 #: main.cpp:66
 #, kde-format
 msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
-msgstr "उपयोक्तृप्रतिक्रियायाः कृते उपलब्धविकल्पान् सूचीबद्धं करोति"
+msgstr "उपयोगकर्ता फ़ीडबैक के लिए उपलब्ध विकल्पों की सूची बनाता है"
 
 #: serversievelistwidget.cpp:76
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Settings"
-msgstr "सेटिंग्स् परिवर्तयतु"
+msgstr "सेटिंग्स संशोधित करें"
 
 #: serversievelistwidget.cpp:122
 #, kde-format
 msgctxt "server name (username)"
 msgid "%1 (%2)"
-msgstr "%1 (%2) २."
+msgstr "%1 (%2)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
 #: serversievesettings.cpp:33 ui/serversievesettings.ui:259
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
-msgstr "पाठः स्पष्टः"
+msgstr "स्पष्ट पाठ"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
 #: serversievesettings.cpp:35 ui/serversievesettings.ui:294
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
-msgstr "अनामक"
+msgstr "गुमनाम"
 
 #: serversievesettings.cpp:80
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr "%प% ९."
+msgstr "%पी%"
 
 #: serversievesettings.cpp:271
 #, kde-format
 msgid "Server is not defined"
-msgstr "सर्वरः परिभाषितः नास्ति"
+msgstr "सर्वर परिभाषित नहीं है"
 
 #: serversievesettings.cpp:271
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
-msgstr "सर्वरं पश्यन्तु"
+msgstr "सर्वर की जाँच करें"
 
 #: serversievesettings.cpp:314
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
-msgstr "सर्वरेण सह संयोजितुं असमर्थः, कृपया सर्वरसङ्केतं सत्यापयन्तु ।"
+msgstr "सर्वर से कनेक्ट करने में असमर्थ, कृपया सर्वर पता सत्यापित करें।"
 
 #: serversievesettings.cpp:326
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
-msgstr "<qt><b>TLS समर्थितं अनुशंसितं च अस्ति।</b></qt>"
+msgstr "<qt><b>TLS समर्थित और अनुशंसित है।</b></qt>"
 
 #: serversievesettings.cpp:329
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
-msgstr "<qt><b>SSL समर्थितं अनुशंसितं च अस्ति ।</b></qt>"
+msgstr "<qt><b>SSL समर्थित और अनुशंसित है।</b></qt>"
 
 #: serversievesettings.cpp:333
 #, kde-format
@@ -189,133 +189,133 @@ msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
 "server.</b></qt>"
 msgstr ""
-"<qt><b>कोऽपि सुरक्षा समर्थिता नास्ति। अस्मिन् सर्वरेण सह सम्बद्धता न अनुशंसिता ।</b></qt>"
+"<qt><b>कोई सुरक्षा समर्थित नहीं है। इस सर्वर से कनेक्ट करना अनुशंसित नहीं है।</b></qt>"
 
 #: serversievesettings.cpp:336
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
-msgstr "<qt><b>अस्य सर्वरस्य उपयोगः न सम्भवति ।</b></qt>"
+msgstr "<qt><b>इस सर्वर का उपयोग करना संभव नहीं है.</b></qt>"
 
 #: serversievesettingsdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Sieve Server"
-msgstr "Sieve Server योजयन्तु"
+msgstr "छलनी सर्वर जोड़ें"
 
 #: sieveeditorconfiguredialog.cpp:38
 #, kde-format
 msgctxt "@option:check"
 msgid "Wrap Text"
-msgstr "पाठं लपेटयतु"
+msgstr "पाठ को आवृत करना"
 
 #: sieveeditorconfiguredialog.cpp:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
-msgstr "विन्यस्तं कुर्वन्तु"
+msgstr "कॉन्फ़िगर"
 
 #: sieveeditorconfiguredialog.cpp:55
 #, kde-format
 msgid "Sieve Server"
-msgstr "चलनी सर्वर"
+msgstr "छलनी सर्वर"
 
 #: sieveeditorconfiguredialog.cpp:69
 #, kde-format
 msgid "Editor"
-msgstr "सम्पादक"
+msgstr "संपादक"
 
 #: sieveeditorconfiguredialog.cpp:85
 #, kde-format
 msgid "User Feedback"
-msgstr "उपयोक्तृप्रतिक्रिया"
+msgstr "उपयोगकर्ता प्रतिसाद"
 
 #: sieveeditorconfigureserverpage.cpp:20
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure…"
-msgstr "विन्यस्तं कुर्वन्तु..."
+msgstr "कॉन्फ़िगर करें…"
 
 #: sieveeditorconfigureserverpage.cpp:25
 #, kde-format
 msgctxt "@action:button"
 msgid "Import Sieve Settings…"
-msgstr "चलनी सेटिंग्स् आयातयन्तु..."
+msgstr "छलनी सेटिंग्स आयात करें…"
 
 #: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
 msgid "Do you want to remove this server '%1'?"
-msgstr "किं भवान् एतत् सर्वरं '%1' अपसारयितुम् इच्छति?"
+msgstr "क्या आप इस सर्वर '%1' को हटाना चाहते हैं?"
 
 #: sieveeditorconfigureserverwidget.cpp:60
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Sieve Server"
-msgstr "चलनी सर्वरं निष्कासयन्तु"
+msgstr "छलनी सर्वर हटाएँ"
 
 #: sieveeditoremptytabwidgetlabel.cpp:25
 #, kde-format
 msgid "Import script:"
-msgstr "आयात लिपिः : १."
+msgstr "स्क्रिप्ट आयात करें:"
 
 #: sieveeditoremptytabwidgetlabel.cpp:25
 #, kde-format
 msgctxt "Action is from file menu, import submenu"
 msgid "File > Import"
-msgstr "सञ्चिका > आयातम्"
+msgstr "फ़ाइल > आयात करें"
 
 #: sieveeditoremptytabwidgetlabel.cpp:26
 #, kde-format
 msgid "Create Rules Graphically:"
-msgstr "चित्रात्मकरूपेण नियमाः रचयन्तु : १."
+msgstr "नियम ग्राफ़िक रूप से बनाएं:"
 
 #: sieveeditoremptytabwidgetlabel.cpp:26
 #, kde-format
 msgctxt "Action is from menu tools, submenu autogenerate script"
 msgid "Tools > Autogenerate script"
-msgstr "साधनानि > स्क्रिप्ट् स्वतः उत्पन्नं कुर्वन्तु"
+msgstr "उपकरण > स्क्रिप्ट स्वतः उत्पन्न करें"
 
 #: sieveeditoremptytabwidgetlabel.cpp:27
 #, kde-format
 msgid "Debug a script:"
-msgstr "स्क्रिप्ट् त्रुटिनिवारणं कुर्वन्तु : १."
+msgstr "स्क्रिप्ट डीबग करें:"
 
 #: sieveeditoremptytabwidgetlabel.cpp:27
 #, kde-format
 msgctxt "These action in from menu tools submenu debug sieve script"
 msgid "Tools > Debug Sieve Script"
-msgstr "साधनानि > छलनी स्क्रिप्ट् त्रुटिनिवारणम्"
+msgstr "उपकरण > डीबग सीव स्क्रिप्ट"
 
 #: sieveeditoremptytabwidgetlabel.cpp:28
 #, kde-format
 msgid "Import Sieve Settings:"
-msgstr "चलनी सेटिंग्स् आयातयन्तु:"
+msgstr "छलनी सेटिंग्स आयात करें:"
 
 #: sieveeditoremptytabwidgetlabel.cpp:28
 #, kde-format
 msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
-msgstr "साधनानि > IMAP सेटिंग्स् आयातयन्तु"
+msgstr "उपकरण > IMAP सेटिंग आयात करें"
 
 #: sieveeditormainwidget.cpp:607
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
-msgstr "स्क्रिप्ट् परिवर्तिता आसीत् । किं भवन्तः बन्दीकरणात् पूर्वं रक्षितुं इच्छन्ति?"
+msgstr "स्क्रिप्ट संशोधित की गई है। क्या आप बंद करने से पहले सहेजना चाहते हैं?"
 
 #: sieveeditormainwidget.cpp:608
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"
-msgstr "स्क्रिप्ट् बन्दं कुर्वन्तु"
+msgstr "स्क्रिप्ट बंद करें"
 
 #: sieveeditormainwindow.cpp:166
 #, kde-format
 msgid "Network is Up."
-msgstr "संजालम् Up अस्ति।"
+msgstr "नेटवर्क चालू है."
 
 #: sieveeditormainwindow.cpp:168
 #, kde-format
 msgid "Network is Down."
-msgstr "संजालं Down अस्ति।"
+msgstr "नेटवर्क डाउन है."
 
 #: sieveeditormainwindow.cpp:190
 #, kde-format
@@ -326,73 +326,73 @@ msgstr "अपलोड करें"
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
-msgstr "चलनी सर्वरं योजयन्तु..."
+msgstr "छलनी सर्वर जोड़ें…"
 
 #: sieveeditormainwindow.cpp:197
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
-msgstr "स्क्रिप्ट् विलोपयन्तु"
+msgstr "स्क्रिप्ट हटाएँ"
 
 #: sieveeditormainwindow.cpp:203
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
-msgstr "नवीनं स्क्रिप्ट् रचयन्तु..."
+msgstr "नई स्क्रिप्ट बनाएं…"
 
 #: sieveeditormainwindow.cpp:209
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
-msgstr "लिपि सम्पादयतु..."
+msgstr "स्क्रिप्ट संपादित करें…"
 
 #: sieveeditormainwindow.cpp:214
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
-msgstr "स्क्रिप्ट् निष्क्रियं कुर्वन्तु"
+msgstr "स्क्रिप्ट निष्क्रिय करें"
 
 #: sieveeditormainwindow.cpp:219
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
-msgstr "ताजगी सूची"
+msgstr "सूची रीफ़्रेश करें"
 
 #: sieveeditormainwindow.cpp:225
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
-msgstr "Line इत्यत्र गच्छन्तु..."
+msgstr "लाइन पर जाएं…"
 
 #: sieveeditormainwindow.cpp:242
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
-msgstr "आयात…"
+msgstr "आयात करना…"
 
 #: sieveeditormainwindow.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
-msgstr "संविभागः…"
+msgstr "शेयर करना…"
 
 #: sieveeditormainwindow.cpp:256
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
-msgstr "वर्तनीपरीक्षां कुर्वन्तु..."
+msgstr "स्पेलिंग जांचो…"
 
 #: sieveeditormainwindow.cpp:262
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
-msgstr "वाक्यविन्यासं पश्यन्तु"
+msgstr "वाक्यविन्यास जाँचें"
 
 #: sieveeditormainwindow.cpp:267
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
-msgstr "नियमाः चित्रात्मकरूपेण रचयन्तु..."
+msgstr "नियम ग्राफ़िक रूप से बनाएं…"
 
 #: sieveeditormainwindow.cpp:272
 #, kde-format
@@ -404,31 +404,31 @@ msgstr "टिप्पणी"
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
-msgstr "अटिप्पणी"
+msgstr "टिप्पणी हटाएं"
 
 #: sieveeditormainwindow.cpp:305
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
-msgstr "&पुस्तकचिह्न"
+msgstr "बुकमार्क"
 
 #: sieveeditormainwindow.cpp:310
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
-msgstr "चलनी स्क्रिप्ट् निवारणं कुर्वन्तु..."
+msgstr "डीबग छलनी स्क्रिप्ट…"
 
 #: sieveeditormainwindow.cpp:315
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
-msgstr "शब्दवेष्टनम्"
+msgstr "वर्ड रैप"
 
 #: sieveeditormainwindow.cpp:337
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
-msgstr "IMAP सेटिंग्स् आयातयन्तु..."
+msgstr "IMAP सेटिंग्स आयात करें…"
 
 #: sieveeditormainwindow.cpp:383
 #, kde-format
@@ -436,39 +436,39 @@ msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 msgstr ""
-"<qt>एतेन मेनू-पट्टिका पूर्णतया गोप्यते । %1.</qt> इति टङ्कयित्वा पुनः दर्शयितुं शक्नुवन्ति"
+"<qt>इससे मेनू बार पूरी तरह छिप जाएगा। आप %1 लिखकर इसे फिर से दिखा सकते हैं।</qt>"
 
 #: sieveeditormainwindow.cpp:386
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
-msgstr "मेनू-पट्टिकां गोपयन्तु"
+msgstr "मेनू बार छुपाएं"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
 msgid "No Sieve URL configured"
-msgstr "कोऽपि Sieve URL विन्यस्तः नास्ति"
+msgstr "कोई सीव यूआरएल कॉन्फ़िगर नहीं"
 
 #: sieveeditormanagesievewidget.cpp:42
 #, kde-format
 msgid "(Disabled) %1"
-msgstr "(अक्षमम्) %1"
+msgstr "(अक्षम) %1"
 
 #: sieveeditorpagewidget.cpp:41
 #, kde-format
 msgid "Uploading script to server for checking it, please wait…"
-msgstr "तस्य जाँचार्थं सर्वरे स्क्रिप्ट् अपलोड् करणं, कृपया प्रतीक्ष्यताम्..."
+msgstr "स्क्रिप्ट को जाँच के लिए सर्वर पर अपलोड किया जा रहा है, कृपया प्रतीक्षा करें…"
 
 #: sieveeditorpagewidget.cpp:134
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
-msgstr "Sieve स्क्रिप्ट् सफलतया अपलोड् अभवत् ।"
+msgstr "सीव स्क्रिप्ट सफलतापूर्वक अपलोड कर दी गई।"
 
 #: sieveeditorpagewidget.cpp:134
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
-msgstr "चलनी स्क्रिप्ट अपलोड"
+msgstr "छलनी स्क्रिप्ट अपलोड"
 
 #: sieveeditorpagewidget.cpp:147
 #, kde-format
@@ -476,71 +476,66 @@ msgid ""
 "Uploading the Sieve script failed.\n"
 "The server responded:\n"
 "%1"
-msgstr ""
-"Sieve स्क्रिप्ट् अपलोड् करणं विफलम् अभवत् ।\n"
-"सर्वरः प्रतिवदति स्म यत् -\n"
-"%1"
+msgstr "सीव स्क्रिप्ट अपलोड करना विफल रहा। सर्वर ने जवाब दिया: %1"
 
 #: sieveeditorpagewidget.cpp:150 sieveeditorpagewidget.cpp:155
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
-msgstr "चलनी त्रुटि"
+msgstr "छलनी त्रुटि"
 
 #: sieveeditorpagewidget.cpp:153
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
 "unknown reason\n"
-msgstr ""
-"Sieve स्क्रिप्ट् अपलोड् करणं विफलम् अभवत् ।\n"
-"अज्ञातकारणम्\n"
+msgstr "सीव स्क्रिप्ट अपलोड करना विफल रहा। अज्ञात कारण\n"
 
 #: sieveeditorpagewidget.cpp:165
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
-msgstr "'%1' इति स्क्रिप्ट् नूतना अस्ति । किं त्वं तत् रक्षितुम् इच्छसि ?"
+msgstr "स्क्रिप्ट '%1' नई है। क्या आप इसे सहेजना चाहते हैं?"
 
 #: sieveeditorpagewidget.cpp:166 sieveeditorpagewidget.cpp:179
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
-msgstr "स्क्रिप्ट् रक्षतु"
+msgstr "स्क्रिप्ट सहेजें"
 
 #: sieveeditorpagewidget.cpp:178
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
-msgstr "'%1' इति स्क्रिप्ट् परिवर्तिता । किं त्वं तत् रक्षितुम् इच्छसि ?"
+msgstr "स्क्रिप्ट '%1' बदल दी गई है। क्या आप इसे सहेजना चाहते हैं?"
 
 #: sieveeditortabwidget.cpp:43 sieveeditortabwidget.cpp:69
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Close Tab"
-msgstr "ट्याब् बन्दं कुर्वन्तु"
+msgstr "टैब बंद करें"
 
 #: sieveeditortabwidget.cpp:47
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Close All Other Tabs"
-msgstr "अन्ये सर्वे ट्याब्स् बन्दं कुर्वन्तु"
+msgstr "अन्य सभी टैब बंद करें"
 
 #: sieveeditortabwidget.cpp:51
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Close All Tabs"
-msgstr "सर्वाणि ट्याब्स् बन्दं कुर्वन्तु"
+msgstr "सभी टैब को बंद करें"
 
 #. i18n: ectx: Menu (edit)
 #: sieveeditorui.rc:23
 #, kde-format
 msgid "&Edit"
-msgstr "&सम्पादन"
+msgstr "&संपादन करना"
 
 #. i18n: ectx: Menu (view)
 #: sieveeditorui.rc:36
 #, kde-format
 msgid "View"
-msgstr "दृश्यं"
+msgstr "देखना"
 
 #. i18n: ectx: Menu (settings)
 #: sieveeditorui.rc:45
@@ -552,46 +547,46 @@ msgstr "&सेटिंग्स"
 #: sieveeditorui.rc:50
 #, kde-format
 msgid "Tools"
-msgstr "उपकरणाः"
+msgstr "औजार"
 
 #. i18n: ectx: Menu (help)
 #: sieveeditorui.rc:61
 #, kde-format
 msgid "&Help"
-msgstr "&साहाय्यम्‌"
+msgstr "&मदद"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: sieveeditorui.rc:68
 #, kde-format
 msgid "Main Toolbar"
-msgstr "मुख्य साधनपट्टी"
+msgstr "मुख्य टूलबार"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: ui/serversievesettings.ui:37
 #, kde-format
 msgid "Sieve Settings"
-msgstr "चलनी सेटिंग्स"
+msgstr "छलनी सेटिंग्स"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: ui/serversievesettings.ui:45 ui/serversievesettings.ui:319
 #, kde-format
 msgid "Server Name:"
-msgstr "सर्वरनाम : १."
+msgstr "सर्वर नाम:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ui/serversievesettings.ui:62 ui/serversievesettings.ui:336
 #, kde-format
 msgid "Username:"
-msgstr "उपयोक्तृनाम : १."
+msgstr "उपयोगकर्ता नाम:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: ui/serversievesettings.ui:79 ui/serversievesettings.ui:353
 #, kde-format
 msgid "Password:"
-msgstr "समाभाष्:"
+msgstr "पासवर्ड:"
 
 #. i18n: ectx: property (text), widget (QLabel, serversievelabel)
 #: ui/serversievesettings.ui:92
@@ -601,29 +596,29 @@ msgid ""
 "Old server implementations still use port 2000, while newer standard conform "
 "server can only be accessed via port 4190."
 msgstr ""
-"यदा ManageSieve पूर्ण RFC मानके परिणतम् तदा सर्वर पोर्ट् परिवर्तत । पुरातनसर्वर-"
-"कार्यन्वयनानि अद्यापि पोर्ट् 2000 इत्यस्य उपयोगं कुर्वन्ति, यदा तु नूतनतरं मानक-अनुरूप-सर्वरं "
-"केवलं पोर्ट् 4190 मार्गेण एव अभिगन्तुं शक्यते ।"
+"जब मैनेजसीव पूर्ण RFC मानक में बदल गया तो सर्वर पोर्ट बदल गया। पुराने सर्वर कार्यान्वयन "
+"अभी भी पोर्ट 2000 का उपयोग करते हैं, जबकि नए मानक अनुरूप सर्वर को केवल पोर्ट 4190 के "
+"माध्यम से एक्सेस किया जा सकता है।"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #: ui/serversievesettings.ui:102 ui/serversievesettings.ui:231
 #, kde-format
 msgid "Port:"
-msgstr "पोताश्रय:"
+msgstr "पत्तन:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #: ui/serversievesettings.ui:125 ui/serversievesettings.ui:251
 #, kde-format
 msgid "Authentication:"
-msgstr "प्रमाणीकरणम् : १."
+msgstr "प्रमाणीकरण:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #: ui/serversievesettings.ui:141
 #, kde-format
 msgid "IMAP Settings"
-msgstr "IMAP सेटिंग्स्"
+msgstr "आईएमएपी सेटिंग्स"
 
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #: ui/serversievesettings.ui:147
@@ -631,7 +626,7 @@ msgstr "IMAP सेटिंग्स्"
 msgid ""
 "IMAP settings is necessary if you want to be able to list folders from "
 "server."
-msgstr "यदि भवान् सर्वरतः पुटं सूचीतुं शक्नोति तर्हि IMAP सेटिंग्स् आवश्यकम् ।"
+msgstr "यदि आप सर्वर से फ़ोल्डरों को सूचीबद्ध करना चाहते हैं तो IMAP सेटिंग्स आवश्यक है।"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, safeImap)
 #: ui/serversievesettings.ui:160
@@ -667,81 +662,81 @@ msgstr ""
 "font-weight:400; font-style:normal;\"><p style=\" margin-top:0px; margin-"
 "bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
 "indent:0px;\"> <span style=\" font-family:'Sans Serif'; font-weight:600;"
-"\">SSL/TLS</span> <span style=\" font-family:'Sans Serif';\">पोर्ट् 993 इत्यस्य "
-"उपरि सुरक्षितः IMAP अस्ति;</span> </p><p style=\" margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px;\"> <span style=\" font-family:'Sans Serif'; font-weight:600;"
-"\">STARTTLS</span> <span style=\" font-family:'Sans Serif';\">पोर्ट् 143 इत्यत्र "
-"कार्यं करिष्यति तथा च संयोजनानन्तरं प्रत्यक्षतया सुरक्षितसंयोजनं प्रति स्विच् करिष्यति;</"
-"span> </p><p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; "
-"margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" "
-"font-family:'Sans Serif'; font-weight:600;\">कोऽपि</span> <span style=\" "
-"font-family:'Sans Serif';\">पोर्ट् १४३ मध्ये न संयोजयिष्यति परन्तु सुरक्षितसंयोजनं प्रति "
-"न स्विच् करिष्यति । एतत् सेटिङ्ग् न अनुशंसितम् ।</span></p></body></html>"
+"\">SSL/TLS</span> <span style=\" font-family:'Sans Serif';\">पोर्ट 993 पर "
+"सुरक्षित IMAP है;</span> </p><p style=\" margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> "
+"<span style=\" font-family:'Sans Serif'; font-weight:600;\">STARTTLS</span> "
+"<span style=\" font-family:'Sans Serif';\">पोर्ट 143 पर काम करेगा और कनेक्ट होने "
+"के बाद सीधे सुरक्षित कनेक्शन पर स्विच करेगा;</span> </p><p style=\" margin-top:0px; "
+"margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; "
+"text-indent:0px;\"> <span style=\" font-family:'Sans Serif'; font-weight:600;"
+"\">कोई भी</span> <span style=\" font-family:'Sans Serif';\">पोर्ट 143 से कनेक्ट "
+"नहीं होगा, लेकिन सुरक्षित कनेक्शन पर स्विच नहीं करेगा। यह सेटिंग अनुशंसित नहीं है।</span></"
+"p></body></html>"
 
 #. i18n: ectx: property (title), widget (QGroupBox, safeImap)
 #: ui/serversievesettings.ui:163
 #, kde-format
 msgid "Connection Settings"
-msgstr "संयोजनसेटिंग्स्"
+msgstr "कनेक्शन सेटिंग्स"
 
 #. i18n: ectx: property (text), widget (QPushButton, testButton)
 #: ui/serversievesettings.ui:175
 #, kde-format
 msgid "Auto Detect"
-msgstr "ऑटो डिटेक्ट्"
+msgstr "ऑटो का पता लगाने"
 
 #. i18n: ectx: property (text), widget (QLabel, label_12)
 #: ui/serversievesettings.ui:187
 #, kde-format
 msgid "Encryption:"
-msgstr "एन्क्रिप्शन : १."
+msgstr "कूटलेखन:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, noRadio)
 #: ui/serversievesettings.ui:196
 #, kde-format
 msgid "None"
-msgstr "न कश्चित्"
+msgstr "कोई नहीं"
 
 #. i18n: ectx: property (text), widget (QRadioButton, sslRadio)
 #: ui/serversievesettings.ui:209
 #, kde-format
 msgid "SSL/TLS"
-msgstr "SSL/TLS इति"
+msgstr "एसएसएल/टीएलएस"
 
 #. i18n: ectx: property (text), widget (QRadioButton, tlsRadio)
 #: ui/serversievesettings.ui:219
 #, kde-format
 msgid "STARTTLS"
-msgstr "STARTTLS इति"
+msgstr "STARTTLS"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
 #: ui/serversievesettings.ui:264
 #, kde-format
 msgctxt "Authentication method"
 msgid "LOGIN"
-msgstr "LOGIN इति"
+msgstr "लॉग इन करें"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
 #: ui/serversievesettings.ui:269
 #, kde-format
 msgctxt "Authentication method"
 msgid "PLAIN"
-msgstr "सम"
+msgstr "मैदान"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
 #: ui/serversievesettings.ui:274
 #, kde-format
 msgctxt "Authentication method"
 msgid "CRAM-MD5"
-msgstr "CRAM-MD5"
+msgstr "क्रैम-MD5"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
 #: ui/serversievesettings.ui:279
 #, kde-format
 msgctxt "Authentication method"
 msgid "DIGEST-MD5"
-msgstr "DIGEST-MD5"
+msgstr "डाइजेस्ट-MD5"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
 #: ui/serversievesettings.ui:284
@@ -755,7 +750,7 @@ msgstr "एनटीएलएम"
 #, kde-format
 msgctxt "Authentication method"
 msgid "GSSAPI"
-msgstr "GSSAPI"
+msgstr "जीएसएसएपीआई"
 
 #. i18n: ectx: property (title), widget (QGroupBox, alternateServer)
 #: ui/serversievesettings.ui:307
@@ -767,22 +762,22 @@ msgstr "वैकल्पिक सर्वर"
 #: ui/serversievesettings.ui:375
 #, kde-format
 msgid "Empty"
-msgstr "रिक्तम्‌"
+msgstr "खाली"
 
 #. i18n: ectx: property (text), widget (QPushButton, addServer)
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
 msgid "Add…"
-msgstr "संयोजयति…"
+msgstr "जोड़ना…"
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
 #, kde-format
 msgid "Modify…"
-msgstr "परिवर्तनं कुर्वन्तु..."
+msgstr "संशोधित करें…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
 #: ui/sieveeditorconfigureserverwidget.ui:43
 #, kde-format
 msgid "Remove"
-msgstr "अपाकरोति"
+msgstr "निकालना"
