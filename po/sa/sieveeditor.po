@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:41+0000\n"
-"PO-Revision-Date: 2024-12-14 01:12+0530\n"
+"PO-Revision-Date: 2024-12-20 22:10+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -135,7 +135,7 @@ msgstr "सेटिंग्स् परिवर्तयतु"
 #, kde-format
 msgctxt "server name (username)"
 msgid "%1 (%2)"
-msgstr "%1 (%2) २."
+msgstr "%1 (%2)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
 #: serversievesettings.cpp:33 ui/serversievesettings.ui:259
@@ -155,7 +155,7 @@ msgstr "अनामक"
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr "%प% ९."
+msgstr "%p%"
 
 #: serversievesettings.cpp:271
 #, kde-format
@@ -255,7 +255,7 @@ msgstr "चलनी सर्वरं निष्कासयन्तु"
 #: sieveeditoremptytabwidgetlabel.cpp:25
 #, kde-format
 msgid "Import script:"
-msgstr "आयात लिपिः : १."
+msgstr "आयात लिपिः :"
 
 #: sieveeditoremptytabwidgetlabel.cpp:25
 #, kde-format
@@ -266,7 +266,7 @@ msgstr "सञ्चिका > आयातम्"
 #: sieveeditoremptytabwidgetlabel.cpp:26
 #, kde-format
 msgid "Create Rules Graphically:"
-msgstr "चित्रात्मकरूपेण नियमाः रचयन्तु : १."
+msgstr "चित्रात्मकरूपेण नियमाः रचयन्तु :"
 
 #: sieveeditoremptytabwidgetlabel.cpp:26
 #, kde-format
@@ -277,7 +277,7 @@ msgstr "साधनानि > स्क्रिप्ट् स्वतः �
 #: sieveeditoremptytabwidgetlabel.cpp:27
 #, kde-format
 msgid "Debug a script:"
-msgstr "स्क्रिप्ट् त्रुटिनिवारणं कुर्वन्तु : १."
+msgstr "स्क्रिप्ट् त्रुटिनिवारणं कुर्वन्तु :"
 
 #: sieveeditoremptytabwidgetlabel.cpp:27
 #, kde-format
@@ -577,14 +577,14 @@ msgstr "चलनी सेटिंग्स"
 #: ui/serversievesettings.ui:45 ui/serversievesettings.ui:319
 #, kde-format
 msgid "Server Name:"
-msgstr "सर्वरनाम : १."
+msgstr "सर्वरनाम :"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ui/serversievesettings.ui:62 ui/serversievesettings.ui:336
 #, kde-format
 msgid "Username:"
-msgstr "उपयोक्तृनाम : १."
+msgstr "उपयोक्तृनाम :"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label_8)
@@ -617,7 +617,7 @@ msgstr "पोताश्रय:"
 #: ui/serversievesettings.ui:125 ui/serversievesettings.ui:251
 #, kde-format
 msgid "Authentication:"
-msgstr "प्रमाणीकरणम् : १."
+msgstr "प्रमाणीकरणम् :"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #: ui/serversievesettings.ui:141
@@ -695,7 +695,7 @@ msgstr "ऑटो डिटेक्ट्"
 #: ui/serversievesettings.ui:187
 #, kde-format
 msgid "Encryption:"
-msgstr "एन्क्रिप्शन : १."
+msgstr "एन्क्रिप्शन :"
 
 #. i18n: ectx: property (text), widget (QRadioButton, noRadio)
 #: ui/serversievesettings.ui:196
