@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:41+0000\n"
-"PO-Revision-Date: 2024-08-20 00:37+0200\n"
+"PO-Revision-Date: 2024-12-24 18:06+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -558,7 +558,7 @@ msgstr "도구"
 #: sieveeditorui.rc:61
 #, kde-format
 msgid "&Help"
-msgstr ""
+msgstr "도움말(&H)"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: sieveeditorui.rc:68
