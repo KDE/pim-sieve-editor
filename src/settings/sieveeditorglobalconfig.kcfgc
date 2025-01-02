@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2013-2025 Laurent Montel <montel@kde.org>
 
 File=sieveeditorglobalconfig.kcfg
 ClassName=SieveEditorGlobalConfig
