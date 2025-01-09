@@ -12,9 +12,6 @@
 
 class SieveEditorManageSieveWidget;
 class QTreeWidgetItem;
-namespace KSieveUi
-{
-}
 class SieveEditorScriptManagerWidget : public QWidget
 {
     Q_OBJECT
