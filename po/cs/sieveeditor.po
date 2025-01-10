@@ -559,7 +559,7 @@ msgstr "Nástroje"
 #: sieveeditorui.rc:61
 #, kde-format
 msgid "&Help"
-msgstr ""
+msgstr "Nápo&věda"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: sieveeditorui.rc:68
