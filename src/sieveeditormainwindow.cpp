@@ -344,7 +344,7 @@ void SieveEditorMainWindow::setupActions()
 
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
 #if SIEVEEDITOR_STABLE_VERSION
-    const QString url = QStringLiteral("https://cdn.kde.org/ci-builds/pim/pim-sieve-editor/24.12/windows/");
+    const QString url = QStringLiteral("https://cdn.kde.org/ci-builds/pim/pim-sieve-editor/25.04/windows/");
 #else
     const QString url = QStringLiteral("https://cdn.kde.org/ci-builds/pim/pim-sieve-editor/master/windows/");
 #endif
