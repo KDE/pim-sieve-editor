@@ -8,7 +8,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>SieveEditor</name>
-  <name xml:lang="ar">محرّر سِف</name>
+  <name xml:lang="ar">الغربال</name>
   <name xml:lang="az">Süzgəclər redaktoru</name>
   <name xml:lang="bg">SieveEditor</name>
   <name xml:lang="ca">SieveEditor</name>
@@ -90,7 +90,7 @@
     <p>
       SieveEditor allows to edit, create, delete sieve scripts.
     </p>
-    <p xml:lang="ar">يسمح لك محرر سف بإنشاء وتحرير وحذف سكربتات سِف</p>
+    <p xml:lang="ar">يسمح لك محرر الغربال بإنشاء وتحرير وحذف سكربتات الغربال</p>
     <p xml:lang="az">Süzgəc redaktoru, süzgəc skriptlərinə düzəliş etməyə, onları yaratmağa və silməyə imkan verir.</p>
     <p xml:lang="bg">SieveEditor позволява редактиране, създаване и изтриване на скриптове на Sieve.</p>
     <p xml:lang="ca">El SieveEditor permet editar, crear i suprimir scripts de «Sieve».</p>
