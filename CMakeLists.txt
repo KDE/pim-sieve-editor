@@ -6,6 +6,8 @@ set(PIM_VERSION "6.3.2")
 project( sieveeditor VERSION ${PIM_VERSION})
 set(RELEASE_SERVICE_VERSION "24.12.2")
 
+# Update it for each release
+set(SIEVEEDITOR_RELEASE_VERSION_DATE "25.02.03") # yy.MM.dd
 
 set(KF_MIN_VERSION "6.6.0")
 set(QT_REQUIRED_VERSION "6.7.0")
