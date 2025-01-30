@@ -10,7 +10,7 @@ configure_file(sieveeditor-version.h.in ${CMAKE_CURRENT_BINARY_DIR}/sieveeditor-
 
 add_library(libsieveeditor)
 
-configure_file(config-pim-sieve-editor.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-pim-sieve-editor.h @ONLY)
+configure_file(config-pim-sieve-editor.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-pim-sieve-editor.h)
 
 kconfig_add_kcfg_files(libsieveeditor settings/sieveeditorglobalconfig.kcfgc)
 
