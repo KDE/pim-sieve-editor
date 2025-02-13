@@ -7,7 +7,7 @@ project( sieveeditor VERSION ${PIM_VERSION})
 set(RELEASE_SERVICE_VERSION "25.03.40")
 
 # Update it for each release
-set(SIEVEEDITOR_RELEASE_VERSION_DATE "25.01.30") # yy.MM.dd
+set(SIEVEEDITOR_RELEASE_VERSION_DATE "25.04.10") # yy.MM.dd
 
 # Use true if stable version => we will check specific version
 set(SIEVEEDITOR_STABLE_VERSION false)
