@@ -1,0 +1,793 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the pim-sieve-editor package.
+#
+# SPDX-FileCopyrightText: 2025 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: pim-sieve-editor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-11-27 00:41+0000\n"
+"PO-Revision-Date: 2025-02-13 16:15+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 24.12.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Toms Trasūns"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "toms.trasuns@posteo.net"
+
+#: importwizard/checks/importimapsettingsakonadicheckjob.cpp:152
+#, kde-format
+msgid "Akonadi IMAP Settings"
+msgstr "„Akonadi“ IMAP iestatījumi"
+
+#: importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp:291
+#, kde-format
+msgid "Thunderbird IMAP Settings"
+msgstr "„Thunderbird“ IMAP iestatījumi"
+
+#: importwizard/importimapsettingfinishpage.cpp:22
+#, kde-format
+msgctxt "@label:textbox"
+msgid "IMAP settings were imported:"
+msgstr "IMAP iestatījumi ir importēti:"
+
+#: importwizard/importimapsettingnofoundpage.cpp:20
+#, kde-format
+msgctxt "@label:textbox"
+msgid "No settings found to import."
+msgstr "Nav atrasti iestatījumi, ko importēt."
+
+#: importwizard/importimapsettingprogresspage.cpp:63
+#, kde-format
+msgid "No settings found."
+msgstr "Iestatījumi nav atrasti."
+
+#: importwizard/importimapsettingprogresspage.cpp:70
+#, kde-format
+msgid "Import settings from %1…"
+msgstr "Importē iestatījumus no „%1“..."
+
+#: importwizard/importimapsettingprogresspage.cpp:72
+#, kde-format
+msgid "Import settings from %1 done"
+msgstr "Iestatījumu importēšana no „%1“ nav izdevusies"
+
+#: importwizard/importimapsettingsearchpage.cpp:21
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Please select the program from which you like to import IMAP settings:"
+msgstr "Norādiet programmu, no kuras vēlaties importēt IMAP iestatījumus:"
+
+#: importwizard/importimapsettingwizard.cpp:32
+#, kde-format
+msgctxt "@title:window"
+msgid "Import IMAP Settings"
+msgstr "Importēt IMAP iestatījumus"
+
+#: importwizard/importimapsettingwizard.cpp:34
+#, kde-format
+msgid "Select Import Settings"
+msgstr "Atlasiet iestatījumus importēšanai"
+
+#: importwizard/importimapsettingwizard.cpp:40
+#, kde-format
+msgid "Import in Progress…"
+msgstr "Notiek importēšana…"
+
+#: importwizard/importimapsettingwizard.cpp:46
+#, kde-format
+msgid "Finish"
+msgstr "Pabeigts"
+
+#: main.cpp:52
+#, kde-format
+msgid "KSieve Editor"
+msgstr "„KSieve“ redaktors"
+
+#: main.cpp:54
+#, kde-format
+msgid "Sieve Editor"
+msgstr "„Sieve“ redaktors"
+
+#: main.cpp:56
+#, kde-format
+msgid "Copyright © 2013-%1 sieveeditor authors"
+msgstr "Autortiesības © 2013—%1 „sieveeditor“ autori"
+
+#: main.cpp:57
+#, kde-format
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: main.cpp:57
+#, kde-format
+msgid "Maintainer"
+msgstr "Uzturētājs"
+
+#: main.cpp:66
+#, kde-format
+msgctxt "@info:shell"
+msgid "Lists the available options for user feedback"
+msgstr "Uzskaita pieejamās lietotāja atsauksmju opcijas"
+
+#: serversievelistwidget.cpp:76
+#, kde-format
+msgctxt "@title:window"
+msgid "Modify Settings"
+msgstr "Iestatījumu pielāgošana"
+
+#: serversievelistwidget.cpp:122
+#, kde-format
+msgctxt "server name (username)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
+#: serversievesettings.cpp:33 ui/serversievesettings.ui:259
+#, kde-format
+msgctxt "Authentication method"
+msgid "Clear text"
+msgstr "Vienkāršs teksts"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
+#: serversievesettings.cpp:35 ui/serversievesettings.ui:294
+#, kde-format
+msgctxt "Authentication method"
+msgid "Anonymous"
+msgstr "Anonīms"
+
+#: serversievesettings.cpp:80
+#, kde-format
+msgctxt "Percent value; %p is the value, % is the percent sign"
+msgid "%p%"
+msgstr "%p %"
+
+#: serversievesettings.cpp:271
+#, kde-format
+msgid "Server is not defined"
+msgstr "Serveris nav definēts"
+
+#: serversievesettings.cpp:271
+#, kde-format
+msgctxt "@title:window"
+msgid "Check Server"
+msgstr "Pārbaudīt serveri"
+
+#: serversievesettings.cpp:314
+#, kde-format
+msgid "Unable to connect to the server, please verify the server address."
+msgstr "Neizdevās pieslēgties serverim. Pārbaudiet servera adresi."
+
+#: serversievesettings.cpp:326
+#, kde-format
+msgid "<qt><b>TLS is supported and recommended.</b></qt>"
+msgstr "<qt><b>TLS ir atbalstīts un ieteicams.</b></qt>"
+
+#: serversievesettings.cpp:329
+#, kde-format
+msgid "<qt><b>SSL is supported and recommended.</b></qt>"
+msgstr "<qt><b>SSL ir atbalstīts un ieteicams.</b></qt>"
+
+#: serversievesettings.cpp:333
+#, kde-format
+msgid ""
+"<qt><b>No security is supported. It is not recommended to connect to this "
+"server.</b></qt>"
+msgstr ""
+"<qt><b>Serveris neatbalsta nekādus drošības līdzekļus. Šādam serverim "
+"pieslēgties nav ieteicams.</b></qt>"
+
+#: serversievesettings.cpp:336
+#, kde-format
+msgid "<qt><b>It is not possible to use this server.</b></qt>"
+msgstr "<qt><b>Izmantot šo serveri nav iespējams.</b></qt>"
+
+#: serversievesettingsdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Sieve Server"
+msgstr "Pievienot „Sieve“ serveri"
+
+#: sieveeditorconfiguredialog.cpp:38
+#, kde-format
+msgctxt "@option:check"
+msgid "Wrap Text"
+msgstr "Aplauzt tekstu"
+
+#: sieveeditorconfiguredialog.cpp:41
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure"
+msgstr "Konfigurēšana"
+
+#: sieveeditorconfiguredialog.cpp:55
+#, kde-format
+msgid "Sieve Server"
+msgstr "„Sieve“ serveris"
+
+#: sieveeditorconfiguredialog.cpp:69
+#, kde-format
+msgid "Editor"
+msgstr "Redaktors"
+
+#: sieveeditorconfiguredialog.cpp:85
+#, kde-format
+msgid "User Feedback"
+msgstr "Lietotāja atgriezeniskā saite"
+
+#: sieveeditorconfigureserverpage.cpp:20
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure…"
+msgstr "Konfigurēt…"
+
+#: sieveeditorconfigureserverpage.cpp:25
+#, kde-format
+msgctxt "@action:button"
+msgid "Import Sieve Settings…"
+msgstr "Importēt „Sieve“ iestatījumus…"
+
+#: sieveeditorconfigureserverwidget.cpp:59
+#, kde-format
+msgid "Do you want to remove this server '%1'?"
+msgstr "Vai vēlaties noņemt šo serveri „%1“?"
+
+#: sieveeditorconfigureserverwidget.cpp:60
+#, kde-format
+msgctxt "@title:window"
+msgid "Remove Sieve Server"
+msgstr "Noņemt „Sieve“ serveri"
+
+#: sieveeditoremptytabwidgetlabel.cpp:25
+#, kde-format
+msgid "Import script:"
+msgstr "Importēt skriptu:"
+
+#: sieveeditoremptytabwidgetlabel.cpp:25
+#, kde-format
+msgctxt "Action is from file menu, import submenu"
+msgid "File > Import"
+msgstr "Datne > Importēt"
+
+#: sieveeditoremptytabwidgetlabel.cpp:26
+#, kde-format
+msgid "Create Rules Graphically:"
+msgstr "Izveidot noteikumus grafiski:"
+
+#: sieveeditoremptytabwidgetlabel.cpp:26
+#, kde-format
+msgctxt "Action is from menu tools, submenu autogenerate script"
+msgid "Tools > Autogenerate script"
+msgstr "Rīki > Automātiski ģenerēt skriptu"
+
+#: sieveeditoremptytabwidgetlabel.cpp:27
+#, kde-format
+msgid "Debug a script:"
+msgstr "Atkļūdot skriptu:"
+
+#: sieveeditoremptytabwidgetlabel.cpp:27
+#, kde-format
+msgctxt "These action in from menu tools submenu debug sieve script"
+msgid "Tools > Debug Sieve Script"
+msgstr "Rīki > Atkļūdot „Sieve“ skriptu"
+
+#: sieveeditoremptytabwidgetlabel.cpp:28
+#, kde-format
+msgid "Import Sieve Settings:"
+msgstr "Importēt „Sieve“ iestatījumus:"
+
+#: sieveeditoremptytabwidgetlabel.cpp:28
+#, kde-format
+msgctxt "Action is from tools menu, import IMAP settings"
+msgid "Tools > Import IMAP settings"
+msgstr "Rīki > Importēt IMAP iestatījumus"
+
+#: sieveeditormainwidget.cpp:607
+#, kde-format
+msgid "Script was modified. Do you want to save before closing?"
+msgstr "Skripts ir izmainīts. Vai vēlaties pirms aizvēršanas to saglabāt?"
+
+#: sieveeditormainwidget.cpp:608
+#, kde-format
+msgctxt "@title:window"
+msgid "Close script"
+msgstr "Aizvērt skriptu"
+
+#: sieveeditormainwindow.cpp:166
+#, kde-format
+msgid "Network is Up."
+msgstr "Tīkls darbojas."
+
+#: sieveeditormainwindow.cpp:168
+#, kde-format
+msgid "Network is Down."
+msgstr "Tīkls nedarbojas."
+
+#: sieveeditormainwindow.cpp:190
+#, kde-format
+msgid "Upload"
+msgstr "Augšupielādēt"
+
+#: sieveeditormainwindow.cpp:193
+#, kde-format
+msgctxt "@action"
+msgid "Add Sieve Server…"
+msgstr "Pievienot „Sieve“ serveri…"
+
+#: sieveeditormainwindow.cpp:197
+#, kde-format
+msgctxt "@action"
+msgid "Delete Script"
+msgstr "Dzēst skriptu"
+
+#: sieveeditormainwindow.cpp:203
+#, kde-format
+msgctxt "@action"
+msgid "Create New Script…"
+msgstr "Izveidot jaunu skriptu…"
+
+#: sieveeditormainwindow.cpp:209
+#, kde-format
+msgctxt "@action"
+msgid "Edit Script…"
+msgstr "Rediģēt skriptu…"
+
+#: sieveeditormainwindow.cpp:214
+#, kde-format
+msgctxt "@action"
+msgid "Deactivate Script"
+msgstr "Deaktivēt skriptu"
+
+#: sieveeditormainwindow.cpp:219
+#, kde-format
+msgctxt "@action"
+msgid "Refresh List"
+msgstr "Pārlādēt sarakstu"
+
+#: sieveeditormainwindow.cpp:225
+#, kde-format
+msgctxt "@action"
+msgid "Go to Line…"
+msgstr "Iet uz rindu…"
+
+#: sieveeditormainwindow.cpp:242
+#, kde-format
+msgctxt "@action"
+msgid "Import…"
+msgstr "Importēt…"
+
+#: sieveeditormainwindow.cpp:248
+#, kde-format
+msgctxt "@action"
+msgid "Share…"
+msgstr "Kopīgot…"
+
+#: sieveeditormainwindow.cpp:256
+#, kde-format
+msgctxt "@action"
+msgid "Check Spelling…"
+msgstr "Pārbaudīt pareizrakstību…"
+
+#: sieveeditormainwindow.cpp:262
+#, kde-format
+msgctxt "@action"
+msgid "Check Syntax"
+msgstr "Pārbaudīt sintaksi"
+
+#: sieveeditormainwindow.cpp:267
+#, kde-format
+msgctxt "@action"
+msgid "Create Rules Graphically…"
+msgstr "Izveidot noteikumus grafiski…"
+
+#: sieveeditormainwindow.cpp:272
+#, kde-format
+msgctxt "@action"
+msgid "Comment"
+msgstr "Komentārs"
+
+#: sieveeditormainwindow.cpp:277
+#, kde-format
+msgctxt "@action"
+msgid "Uncomment"
+msgstr "Noņemt komentāru"
+
+#: sieveeditormainwindow.cpp:305
+#, kde-format
+msgctxt "@title:menu"
+msgid "&Bookmarks"
+msgstr "&Grāmatzīmes"
+
+#: sieveeditormainwindow.cpp:310
+#, kde-format
+msgctxt "@action"
+msgid "Debug Sieve Script…"
+msgstr "Atkļūdot „Sieve“ skriptu…"
+
+#: sieveeditormainwindow.cpp:315
+#, kde-format
+msgctxt "@action"
+msgid "Wordwrap"
+msgstr "Rindu aplaušana"
+
+#: sieveeditormainwindow.cpp:337
+#, kde-format
+msgctxt "@action"
+msgid "Import IMAP Settings…"
+msgstr "Importēt IMAP iestatījumus…"
+
+#: sieveeditormainwindow.cpp:383
+#, kde-format
+msgid ""
+"<qt>This will hide the menu bar completely. You can show it again by typing "
+"%1.</qt>"
+msgstr ""
+"<qt>Šī darbība pilnībā paslēps izvēlnes joslu. To varat atkal parādīt, "
+"nospiežot „%1“.</qt>"
+
+#: sieveeditormainwindow.cpp:386
+#, kde-format
+msgctxt "@title:window"
+msgid "Hide menu bar"
+msgstr "Paslēpt izvēļņu joslu"
+
+#: sieveeditormanagesievewidget.cpp:37
+#, kde-format
+msgid "No Sieve URL configured"
+msgstr "Nav konfigurēta neviena „Sieve“ URL"
+
+#: sieveeditormanagesievewidget.cpp:42
+#, kde-format
+msgid "(Disabled) %1"
+msgstr "(Izslēgts) %1"
+
+#: sieveeditorpagewidget.cpp:41
+#, kde-format
+msgid "Uploading script to server for checking it, please wait…"
+msgstr "Augšupielādē skriptu uz serveri, lai to pārbaudītu. Uzgaidiet…"
+
+#: sieveeditorpagewidget.cpp:134
+#, kde-format
+msgid "The Sieve script was successfully uploaded."
+msgstr "„Sieve“ skripts ir augšupielādēts"
+
+#: sieveeditorpagewidget.cpp:134
+#, kde-format
+msgctxt "@title:window"
+msgid "Sieve Script Upload"
+msgstr "„Sieve“ skripts ir augšupielādēts"
+
+#: sieveeditorpagewidget.cpp:147
+#, kde-format
+msgid ""
+"Uploading the Sieve script failed.\n"
+"The server responded:\n"
+"%1"
+msgstr ""
+"„Sieve“ skripta augšupielāde neizdevās.\n"
+"Serveris atbildēja:\n"
+"%1"
+
+#: sieveeditorpagewidget.cpp:150 sieveeditorpagewidget.cpp:155
+#, kde-format
+msgctxt "@title:window"
+msgid "Sieve Error"
+msgstr "„Sieve“ kļūda"
+
+#: sieveeditorpagewidget.cpp:153
+#, kde-format
+msgid ""
+"Uploading the Sieve script failed.\n"
+"unknown reason\n"
+msgstr ""
+"„Sieve“ skripta augšupielāde neizdevās.\n"
+"nezināms iemesls\n"
+
+#: sieveeditorpagewidget.cpp:165
+#, kde-format
+msgid "Script '%1' is new. Do you want to save it?"
+msgstr "Skripts „%1“ ir jauns. Vai vēlaties to saglabāt?"
+
+#: sieveeditorpagewidget.cpp:166 sieveeditorpagewidget.cpp:179
+#, kde-format
+msgctxt "@title:window"
+msgid "Save Script"
+msgstr "Saglabāt skriptu"
+
+#: sieveeditorpagewidget.cpp:178
+#, kde-format
+msgid "Script '%1' was changed. Do you want to save it ?"
+msgstr "Skripts „%1“ ir izmainīts. Vai vēlaties to saglabāt?"
+
+#: sieveeditortabwidget.cpp:43 sieveeditortabwidget.cpp:69
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Close Tab"
+msgstr "Aizvērt cilni"
+
+#: sieveeditortabwidget.cpp:47
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Close All Other Tabs"
+msgstr "Aizvērt visas pārējās cilnes"
+
+#: sieveeditortabwidget.cpp:51
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Close All Tabs"
+msgstr "Aizvērt visas cilnes"
+
+#. i18n: ectx: Menu (edit)
+#: sieveeditorui.rc:23
+#, kde-format
+msgid "&Edit"
+msgstr "&Rediģēt"
+
+#. i18n: ectx: Menu (view)
+#: sieveeditorui.rc:36
+#, kde-format
+msgid "View"
+msgstr "Skatīt"
+
+#. i18n: ectx: Menu (settings)
+#: sieveeditorui.rc:45
+#, kde-format
+msgid "&Settings"
+msgstr "&Iestatījumi"
+
+#. i18n: ectx: Menu (Tools)
+#: sieveeditorui.rc:50
+#, kde-format
+msgid "Tools"
+msgstr "Rīki"
+
+#. i18n: ectx: Menu (help)
+#: sieveeditorui.rc:61
+#, kde-format
+msgid "&Help"
+msgstr "&Palīdzība"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: sieveeditorui.rc:68
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Pamata rīkjosla"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: ui/serversievesettings.ui:37
+#, kde-format
+msgid "Sieve Settings"
+msgstr "„Sieve“ iestatījumi"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: ui/serversievesettings.ui:45 ui/serversievesettings.ui:319
+#, kde-format
+msgid "Server Name:"
+msgstr "Servera nosaukums:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: ui/serversievesettings.ui:62 ui/serversievesettings.ui:336
+#, kde-format
+msgid "Username:"
+msgstr "Lietotājvārds:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: ui/serversievesettings.ui:79 ui/serversievesettings.ui:353
+#, kde-format
+msgid "Password:"
+msgstr "Parole:"
+
+#. i18n: ectx: property (text), widget (QLabel, serversievelabel)
+#: ui/serversievesettings.ui:92
+#, kde-format
+msgid ""
+"The server port changed when ManageSieve turned into a full RFC Standard. "
+"Old server implementations still use port 2000, while newer standard conform "
+"server can only be accessed via port 4190."
+msgstr ""
+"Servera ports mainījās, kad „ManageSieve“ kļuva par pilnu RFC standartu. "
+"Vecās servera implementācijas joprojām izmanto portu „2000“, bet jaunākais "
+"standarts nosaka, ka serverim var piekļūt tikai caur portu „4190“."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, label_13)
+#: ui/serversievesettings.ui:102 ui/serversievesettings.ui:231
+#, kde-format
+msgid "Port:"
+msgstr "Ports:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label_14)
+#: ui/serversievesettings.ui:125 ui/serversievesettings.ui:251
+#, kde-format
+msgid "Authentication:"
+msgstr "Autentifikācija:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#: ui/serversievesettings.ui:141
+#, kde-format
+msgid "IMAP Settings"
+msgstr "IMAP iestatījumi"
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: ui/serversievesettings.ui:147
+#, kde-format
+msgid ""
+"IMAP settings is necessary if you want to be able to list folders from "
+"server."
+msgstr ""
+"IMAP iestatījumi ir nepieciešami, ja vēlaties no servera nolasīt mapju "
+"sarakstu."
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, safeImap)
+#: ui/serversievesettings.ui:160
+#, kde-format
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'HandelGotDLig'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-weight:600;\">SSL/TLS</span><span style=\" font-"
+"family:'Sans Serif';\"> is safe IMAP over port 993;</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-weight:600;\">STARTTLS</span><span style=\" font-"
+"family:'Sans Serif';\"> will operate on port 143 and switch to a secure "
+"connection directly after connecting;</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-weight:600;\">None</span><span style=\" font-"
+"family:'Sans Serif';\"> will connect to port 143 but not switch to a secure "
+"connection. This setting is not recommended.</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'HandelGotDLig'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-weight:600;\">SSL/TLS</span><span style=\" font-"
+"family:'Sans Serif';\"> ir drošs IMAP, lietojot portu 993;</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-weight:600;\">STARTTLS</span><span style=\" font-"
+"family:'Sans Serif';\"> darbosies ar portu 143 un pārslēgsies uz drošu "
+"savienojumu uzreiz pēc savienošanās;</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-weight:600;\">Nekas</span><span style=\" font-"
+"family:'Sans Serif';\"> savienosies ar portu 143, bet nepārslēgsies uz drošu "
+"savienojumu. Šo iestatījumu lietot neiesakām.</span></p></body></html>"
+
+#. i18n: ectx: property (title), widget (QGroupBox, safeImap)
+#: ui/serversievesettings.ui:163
+#, kde-format
+msgid "Connection Settings"
+msgstr "Savienojuma iestatījumi"
+
+#. i18n: ectx: property (text), widget (QPushButton, testButton)
+#: ui/serversievesettings.ui:175
+#, kde-format
+msgid "Auto Detect"
+msgstr "Noteikt automātiski"
+
+#. i18n: ectx: property (text), widget (QLabel, label_12)
+#: ui/serversievesettings.ui:187
+#, kde-format
+msgid "Encryption:"
+msgstr "Šifrēšana:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, noRadio)
+#: ui/serversievesettings.ui:196
+#, kde-format
+msgid "None"
+msgstr "Nekas"
+
+#. i18n: ectx: property (text), widget (QRadioButton, sslRadio)
+#: ui/serversievesettings.ui:209
+#, kde-format
+msgid "SSL/TLS"
+msgstr "SSL/TLS"
+
+#. i18n: ectx: property (text), widget (QRadioButton, tlsRadio)
+#: ui/serversievesettings.ui:219
+#, kde-format
+msgid "STARTTLS"
+msgstr "STARTTLS"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
+#: ui/serversievesettings.ui:264
+#, kde-format
+msgctxt "Authentication method"
+msgid "LOGIN"
+msgstr "LOGIN"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
+#: ui/serversievesettings.ui:269
+#, kde-format
+msgctxt "Authentication method"
+msgid "PLAIN"
+msgstr "PLAIN"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
+#: ui/serversievesettings.ui:274
+#, kde-format
+msgctxt "Authentication method"
+msgid "CRAM-MD5"
+msgstr "CRAM-MD5"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
+#: ui/serversievesettings.ui:279
+#, kde-format
+msgctxt "Authentication method"
+msgid "DIGEST-MD5"
+msgstr "DIGEST-MD5"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
+#: ui/serversievesettings.ui:284
+#, kde-format
+msgctxt "Authentication method"
+msgid "NTLM"
+msgstr "NTLM"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
+#: ui/serversievesettings.ui:289
+#, kde-format
+msgctxt "Authentication method"
+msgid "GSSAPI"
+msgstr "GSSAPI"
+
+#. i18n: ectx: property (title), widget (QGroupBox, alternateServer)
+#: ui/serversievesettings.ui:307
+#, kde-format
+msgid "Alternate Server"
+msgstr "Alternatīvais serveris"
+
+#. i18n: ectx: property (text), widget (QLabel, testInfo)
+#: ui/serversievesettings.ui:375
+#, kde-format
+msgid "Empty"
+msgstr "Tukšs"
+
+#. i18n: ectx: property (text), widget (QPushButton, addServer)
+#: ui/sieveeditorconfigureserverwidget.ui:29
+#, kde-format
+msgid "Add…"
+msgstr "Pievienot…"
+
+#. i18n: ectx: property (text), widget (QPushButton, modifyServer)
+#: ui/sieveeditorconfigureserverwidget.ui:36
+#, kde-format
+msgid "Modify…"
+msgstr "Izmainīt…"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeServer)
+#: ui/sieveeditorconfigureserverwidget.ui:43
+#, kde-format
+msgid "Remove"
+msgstr "Noņemt"
