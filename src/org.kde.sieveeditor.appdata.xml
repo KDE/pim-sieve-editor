@@ -32,6 +32,7 @@
   <name xml:lang="it">SieveEditor</name>
   <name xml:lang="ka">SieveEditor</name>
   <name xml:lang="ko">SieveEditor</name>
+  <name xml:lang="lv">SieveEditor</name>
   <name xml:lang="nl">SieveEditor</name>
   <name xml:lang="pl">EdytorSieve</name>
   <name xml:lang="pt">SieveEditor</name>
@@ -73,6 +74,7 @@
   <summary xml:lang="it">Editor di script per i filtri Sieve della posta elettronica</summary>
   <summary xml:lang="ka">ელფოსტის Sieve-ის სკრიპტების რედაქტორი</summary>
   <summary xml:lang="ko">이메일 필터 Sieve 스크립트 편집기</summary>
+  <summary xml:lang="lv">„Sieve“ e-pasta filtru skriptu redaktors</summary>
   <summary xml:lang="nl">Bewerker voor Sieve-scripts met e-mailfilters</summary>
   <summary xml:lang="pl">Edytor dla skryptów filtrów pocztowych Sieve</summary>
   <summary xml:lang="pt">Editor de programas de filtros de e-mails em Sieve</summary>
@@ -118,6 +120,7 @@
     <p xml:lang="it">SieveEditor permette di modificare, creare ed eliminare script sieve.</p>
     <p xml:lang="ka">SieveEditor საშუალებას გაძლევთ, Sieve-ის სკრიპტები ჩაასწოროთ, შექმნათ და წაშალოთ.</p>
     <p xml:lang="ko">SieveEditor에서는 Sieve 스크립트를 편집, 생성, 삭제할 수 있습니다.</p>
+    <p xml:lang="lv">„SieveEditor“ ļauj rediģēt, izveidot un dzēst „Sieve“ skriptus.</p>
     <p xml:lang="nl">SieveEditor biedt u om sieve-scripts te bewerken, aan te maken en te verwijderen.</p>
     <p xml:lang="pl">EdytorSieve umożliwia edycję, tworzenie oraz usuwanie skryptów sieve.</p>
     <p xml:lang="pt">O SieveEditor permite editar, criar e apagar programas do Sieve.</p>
