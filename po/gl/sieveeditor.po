@@ -477,7 +477,7 @@ msgid ""
 "The server responded:\n"
 "%1"
 msgstr ""
-"Produciuse un erro ao enviar o guión de Sieve.\n"
+"Produciuse un erro ao subir o guión de Sieve.\n"
 "O servidor respondeu:\n"
 "%1"
 
@@ -493,7 +493,7 @@ msgid ""
 "Uploading the Sieve script failed.\n"
 "unknown reason\n"
 msgstr ""
-"Produciuse un erro ao enviar o guión de Sieve.\n"
+"Produciuse un erro ao subir o guión de Sieve.\n"
 "Descoñécese o motivo.\n"
 
 #: sieveeditorpagewidget.cpp:165
