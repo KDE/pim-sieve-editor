@@ -6,7 +6,6 @@
 
 #include "importimapsettingsakonadicheckjob.h"
 #include "importimapsettingsakonadipassword.h"
-#include "libsieveeditor_export.h"
 #include "sieveeditor_debug.h"
 #include <KConfigGroup>
 #include <KLocalizedString>
