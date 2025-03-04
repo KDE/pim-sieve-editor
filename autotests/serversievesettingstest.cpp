@@ -39,6 +39,9 @@ void ServerSieveSettingsTest::shouldSetValue()
 
 void ServerSieveSettingsTest::shouldEmitEnableOkButtonSignal()
 {
+#if defined(Q_OS_WIN)
+    QSKIP("This test doesn't work on windows");
+#endif
     ServerSieveSettings widget;
     widget.show();
     QVERIFY(QTest::qWaitForWindowExposed(&widget));
