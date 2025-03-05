@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-27 00:41+0000\n"
+"POT-Creation-Date: 2025-03-05 00:44+0000\n"
 "PO-Revision-Date: 2024-12-04 12:27+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -34,7 +34,7 @@ msgid "Your emails"
 msgstr "aspotashev@gmail.com,gammaray@basealt.ru"
 
 # BUGME: please change to "Configure Sieve Server" --aspotashev
-#: importwizard/checks/importimapsettingsakonadicheckjob.cpp:152
+#: importwizard/checks/importimapsettingsakonadicheckjob.cpp:151
 #, kde-format
 msgid "Akonadi IMAP Settings"
 msgstr "Параметры IMAP Akonadi"

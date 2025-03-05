@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-27 00:41+0000\n"
+"POT-Creation-Date: 2025-03-05 00:44+0000\n"
 "PO-Revision-Date: 2024-11-18 09:00+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -31,7 +31,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "antonibella5@yahoo.com"
 
-#: importwizard/checks/importimapsettingsakonadicheckjob.cpp:152
+#: importwizard/checks/importimapsettingsakonadicheckjob.cpp:151
 #, kde-format
 msgid "Akonadi IMAP Settings"
 msgstr "Importa la configuració de l'Akonadi"
