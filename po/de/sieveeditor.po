@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-31 02:35+0000\n"
-"PO-Revision-Date: 2024-08-28 21:54+0200\n"
+"PO-Revision-Date: 2024-12-28 23:24+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -20,12 +20,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Burkhard Lück"
+msgstr "Deutsches KDE-Übersetzungsteam"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "lueck@hube-lueck.de"
+msgstr "kde-i18n-de@kde.org"
 
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:152
 #, kde-format
