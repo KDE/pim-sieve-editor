@@ -12,8 +12,8 @@ set(SIEVEEDITOR_RELEASE_VERSION_DATE "25.04.10") # yy.MM.dd
 # Use true if stable version => we will check specific version
 set(SIEVEEDITOR_STABLE_VERSION false)
 
-set(KF_MIN_VERSION "6.9.0")
-set(QT_REQUIRED_VERSION "6.7.0")
+set(KF_MIN_VERSION "6.11.0")
+set(QT_REQUIRED_VERSION "6.8.0")
 set(QT6KEYCHAIN_LIB_VERSION "0.14.2")
 
 find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
