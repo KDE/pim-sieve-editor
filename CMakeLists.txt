@@ -78,7 +78,7 @@ set(KIMAP_LIB_VERSION "6.3.40")
 find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network)
 
 if (Qt6Gui_VERSION VERSION_GREATER_EQUAL "6.10.0")
-    find_package(Qt6GuiPrivate ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
+    find_package(Qt6GuiPrivate ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE)
 endif()
 
 # Find KF6 package
