@@ -10,7 +10,7 @@ set(RELEASE_SERVICE_VERSION "25.03.90")
 set(SIEVEEDITOR_RELEASE_VERSION_DATE "25.04.17") # yy.MM.dd
 
 # Use true if stable version => we will check specific version
-set(SIEVEEDITOR_STABLE_VERSION false)
+set(SIEVEEDITOR_STABLE_VERSION true)
 
 set(KF_MIN_VERSION "6.9.0")
 set(QT_REQUIRED_VERSION "6.7.0")
