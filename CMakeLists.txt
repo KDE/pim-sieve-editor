@@ -2,9 +2,9 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "6.3.90")
+set(PIM_VERSION "6.4.0")
 project( sieveeditor VERSION ${PIM_VERSION})
-set(RELEASE_SERVICE_VERSION "25.03.90")
+set(RELEASE_SERVICE_VERSION "25.04.0")
 
 # Update it for each release
 set(SIEVEEDITOR_RELEASE_VERSION_DATE "25.04.17") # yy.MM.dd
@@ -56,7 +56,7 @@ autotests/*.h
 ecm_check_outbound_license(LICENSES GPL-2.0-only  FILES ${ALL_SOURCE_FILES})
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION rc)
+set(KDEPIM_DEV_VERSION)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
