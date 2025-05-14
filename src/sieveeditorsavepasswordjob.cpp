@@ -37,7 +37,7 @@ void SieveEditorSavePasswordJob::start()
         deleteLater();
         return;
     }
-    auto writeJob = new WritePasswordJob(mName, this);
+    auto writeJob = new WritePasswordJob(mName);
     connect(writeJob, &Job::finished, this, &SieveEditorSavePasswordJob::slotPasswordWritten);
     writeJob->setKey(mKey);
     writeJob->setTextData(mPassword);
