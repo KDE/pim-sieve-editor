@@ -89,6 +89,8 @@ target_sources(libsieveeditor PRIVATE
     sieveeditorconfigureserverpage.h
     sievepurposemenuwidget.cpp
     sievepurposemenuwidget.h
+    whatsnew/whatsnewtranslations.h
+    whatsnew/whatsnewtranslations.cpp
 )
 
 

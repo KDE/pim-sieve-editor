@@ -17,6 +17,8 @@
 #include <PimCommon/KActionMenuChangeCase>
 #include <PimCommon/NeedUpdateVersionUtils>
 #include <PimCommon/NeedUpdateVersionWidget>
+#include <PimCommon/WhatsNewDialog>
+#include <PimCommon/WhatsNewMessageWidget>
 
 #include <KSharedConfig>
 #include <PimCommon/NetworkManager>
@@ -61,6 +63,8 @@
 #include <PimCommon/VerifyNewVersionWidget>
 #endif
 
+#include "whatsnew/whatsnewtranslations.h"
+
 namespace
 {
 static const char mySieveEditorMainWindowConfigGroupName[] = "SieveEditorMainWindow";
@@ -96,6 +100,20 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
             auto needUpdateVersionWidget = new PimCommon::NeedUpdateVersionWidget(this);
             mainWidgetLayout->addWidget(needUpdateVersionWidget);
             needUpdateVersionWidget->setObsoleteVersion(status);
+        }
+    }
+
+    WhatsNewTranslations translations;
+    const QString newFeaturesMD5 = translations.newFeaturesMD5();
+    if (!newFeaturesMD5.isEmpty()) {
+        const bool hasNewFeature = (SieveEditorGlobalConfig::self()->previousNewFeaturesMD5() != newFeaturesMD5);
+        if (hasNewFeature) {
+            auto whatsNewMessageWidget = new PimCommon::WhatsNewMessageWidget(this);
+            whatsNewMessageWidget->setWhatsNewInfos(translations.createWhatsNewInfo());
+            whatsNewMessageWidget->setObjectName(QStringLiteral("whatsNewMessageWidget"));
+            mainWidgetLayout->addWidget(whatsNewMessageWidget);
+            SieveEditorGlobalConfig::self()->setPreviousNewFeaturesMD5(newFeaturesMD5);
+            whatsNewMessageWidget->animatedShow();
         }
     }
 
@@ -135,6 +153,14 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
 SieveEditorMainWindow::~SieveEditorMainWindow()
 {
     writeConfig();
+}
+
+void SieveEditorMainWindow::slotWhatsNew()
+{
+    WhatsNewTranslations translations;
+    PimCommon::WhatsNewDialog dlg(translations.createWhatsNewInfo(), this);
+    dlg.updateInformations();
+    dlg.exec();
 }
 
 void SieveEditorMainWindow::readConfig()
@@ -357,6 +383,10 @@ void SieveEditorMainWindow::setupActions()
     ac->addAction(QStringLiteral("colorscheme_menu"), KColorSchemeMenu::createMenu(manager, this));
     mShowMenuBarAction->setChecked(SieveEditorGlobalConfig::self()->showMenuBar());
     slotToggleMenubar(true);
+
+    auto showWhatsNewAction = new QAction(QIcon::fromTheme(QStringLiteral("sieveeditor")), i18n("What's new"), this);
+    ac->addAction(QStringLiteral("whatsnew"), showWhatsNewAction);
+    connect(showWhatsNewAction, &QAction::triggered, this, &SieveEditorMainWindow::slotWhatsNew);
 }
 
 void SieveEditorMainWindow::slotActivateRequested(const QStringList &arguments, const QString &workingDirectory)
