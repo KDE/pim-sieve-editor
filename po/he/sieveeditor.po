@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-05 00:44+0000\n"
+"POT-Creation-Date: 2025-05-20 00:43+0000\n"
 "PO-Revision-Date: 2025-01-24 09:27+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -305,130 +305,135 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "סגירת סקריפט"
 
-#: sieveeditormainwindow.cpp:166
+#: sieveeditormainwindow.cpp:192
 #, kde-format
 msgid "Network is Up."
 msgstr "הרשת פעילה."
 
-#: sieveeditormainwindow.cpp:168
+#: sieveeditormainwindow.cpp:194
 #, kde-format
 msgid "Network is Down."
 msgstr "הרשת מנותקת."
 
-#: sieveeditormainwindow.cpp:190
+#: sieveeditormainwindow.cpp:216
 #, kde-format
 msgid "Upload"
 msgstr "העלאה"
 
-#: sieveeditormainwindow.cpp:193
+#: sieveeditormainwindow.cpp:219
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "הוספת שרת Sieve…"
 
-#: sieveeditormainwindow.cpp:197
+#: sieveeditormainwindow.cpp:223
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "מחיקת סקריפט"
 
-#: sieveeditormainwindow.cpp:203
+#: sieveeditormainwindow.cpp:229
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "יצירת סקריפט חדש…"
 
-#: sieveeditormainwindow.cpp:209
+#: sieveeditormainwindow.cpp:235
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "עריכת סקריפט…"
 
-#: sieveeditormainwindow.cpp:214
+#: sieveeditormainwindow.cpp:240
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "השבתת סקריפט"
 
-#: sieveeditormainwindow.cpp:219
+#: sieveeditormainwindow.cpp:245
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "ריענון רשימה"
 
-#: sieveeditormainwindow.cpp:225
+#: sieveeditormainwindow.cpp:251
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "מעבר לשורה…"
 
-#: sieveeditormainwindow.cpp:242
+#: sieveeditormainwindow.cpp:268
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "ייבוא…"
 
-#: sieveeditormainwindow.cpp:248
+#: sieveeditormainwindow.cpp:274
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "שיתוף…"
 
-#: sieveeditormainwindow.cpp:256
+#: sieveeditormainwindow.cpp:282
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "בדיקת איות…"
 
-#: sieveeditormainwindow.cpp:262
+#: sieveeditormainwindow.cpp:288
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "בדיקת תחביר"
 
-#: sieveeditormainwindow.cpp:267
+#: sieveeditormainwindow.cpp:293
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "יצירת כללים באופן חזותי…"
 
-#: sieveeditormainwindow.cpp:272
+#: sieveeditormainwindow.cpp:298
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "הערה"
 
-#: sieveeditormainwindow.cpp:277
+#: sieveeditormainwindow.cpp:303
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "ביטול הערה"
 
-#: sieveeditormainwindow.cpp:305
+#: sieveeditormainwindow.cpp:331
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&סימניות"
 
-#: sieveeditormainwindow.cpp:310
+#: sieveeditormainwindow.cpp:336
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "ניפוי שגיאות בסקריפט Sieve…"
 
-#: sieveeditormainwindow.cpp:315
+#: sieveeditormainwindow.cpp:341
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "גלישת שורות"
 
-#: sieveeditormainwindow.cpp:337
+#: sieveeditormainwindow.cpp:363
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "ייבוא הגדרות IMAP…"
 
-#: sieveeditormainwindow.cpp:383
+#: sieveeditormainwindow.cpp:387
+#, kde-format
+msgid "What's new"
+msgstr ""
+
+#: sieveeditormainwindow.cpp:413
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
@@ -437,7 +442,7 @@ msgstr ""
 "<qt>הפעולה הזת תסתיר את סרגל התפריטים לחלוטין. אפשר להציג אותו שוב בהקלדת %1."
 "</qt>"
 
-#: sieveeditormainwindow.cpp:386
+#: sieveeditormainwindow.cpp:416
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
@@ -560,7 +565,7 @@ msgid "&Help"
 msgstr "ע&זרה"
 
 #. i18n: ectx: ToolBar (mainToolBar)
-#: sieveeditorui.rc:68
+#: sieveeditorui.rc:70
 #, kde-format
 msgid "Main Toolbar"
 msgstr "סרגל כלים ראשי"
@@ -786,6 +791,10 @@ msgstr "שינוי…"
 #, kde-format
 msgid "Remove"
 msgstr "הסרה"
+
+#: whatsnew/whatsnewtranslations.cpp:16
+msgid "Add AI Actions Support."
+msgstr ""
 
 #~ msgid "Configure..."
 #~ msgstr "הגדרה…"
