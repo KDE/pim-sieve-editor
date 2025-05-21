@@ -1,14 +1,15 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
+# Spanish translations for sieveeditor.po package.
+# Copyright (C) 2013-2025 This file is copyright:
 # This file is distributed under the same license as the pim-sieve-editor package.
 #
 # SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2018 Javier Vinal <fjvinal@gmail.com>
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: pim-sieve-editor\n"
+"Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-20 00:43+0000\n"
-"PO-Revision-Date: 2024-11-20 19:29+0100\n"
+"PO-Revision-Date: 2025-05-21 01:13+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -58,7 +59,7 @@ msgstr "No se han encontrado preferencias."
 #: importwizard/importimapsettingprogresspage.cpp:70
 #, kde-format
 msgid "Import settings from %1…"
-msgstr "Importar preferencias de %1..."
+msgstr "Importar preferencias de %1…"
 
 #: importwizard/importimapsettingprogresspage.cpp:72
 #, kde-format
@@ -87,7 +88,7 @@ msgstr "Seleccionar preferencias para importar"
 #: importwizard/importimapsettingwizard.cpp:40
 #, kde-format
 msgid "Import in Progress…"
-msgstr "Importación en curso..."
+msgstr "Importación en curso…"
 
 #: importwizard/importimapsettingwizard.cpp:46
 #, kde-format
@@ -236,13 +237,13 @@ msgstr "Comentarios del usuario"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure…"
-msgstr "Configurar..."
+msgstr "Configurar…"
 
 #: sieveeditorconfigureserverpage.cpp:25
 #, kde-format
 msgctxt "@action:button"
 msgid "Import Sieve Settings…"
-msgstr "Importar preferencias de Sieve..."
+msgstr "Importar preferencias de Sieve…"
 
 #: sieveeditorconfigureserverwidget.cpp:59
 #, kde-format
@@ -329,7 +330,7 @@ msgstr "Enviar"
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
-msgstr "Añadir servidor Sieve..."
+msgstr "Añadir servidor Sieve…"
 
 #: sieveeditormainwindow.cpp:223
 #, kde-format
@@ -341,13 +342,13 @@ msgstr "Borrar guion"
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
-msgstr "Crear nuevo guion..."
+msgstr "Crear nuevo guion…"
 
 #: sieveeditormainwindow.cpp:235
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
-msgstr "Editar guion..."
+msgstr "Editar guion…"
 
 #: sieveeditormainwindow.cpp:240
 #, kde-format
@@ -365,25 +366,25 @@ msgstr "Refrescar lista"
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
-msgstr "Ir a la línea..."
+msgstr "Ir a la línea…"
 
 #: sieveeditormainwindow.cpp:268
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
-msgstr "Importar..."
+msgstr "Importar…"
 
 #: sieveeditormainwindow.cpp:274
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
-msgstr "Compartir..."
+msgstr "Compartir…"
 
 #: sieveeditormainwindow.cpp:282
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
-msgstr "Comprobar la ortografía..."
+msgstr "Comprobar la ortografía…"
 
 #: sieveeditormainwindow.cpp:288
 #, kde-format
@@ -395,7 +396,7 @@ msgstr "Comprobar la sintaxis"
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
-msgstr "Crear reglas gráficamente..."
+msgstr "Crear reglas gráficamente…"
 
 #: sieveeditormainwindow.cpp:298
 #, kde-format
@@ -419,7 +420,7 @@ msgstr "&Marcadores"
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
-msgstr "Depurar guion de Sieve..."
+msgstr "Depurar guion de Sieve…"
 
 #: sieveeditormainwindow.cpp:341
 #, kde-format
@@ -431,12 +432,12 @@ msgstr "Ajuste de línea"
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
-msgstr "Importar preferencias de IMAP..."
+msgstr "Importar preferencias de IMAP…"
 
 #: sieveeditormainwindow.cpp:387
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "Novedades"
 
 #: sieveeditormainwindow.cpp:413
 #, kde-format
@@ -466,7 +467,7 @@ msgstr "(Desactivado) %1"
 #: sieveeditorpagewidget.cpp:41
 #, kde-format
 msgid "Uploading script to server for checking it, please wait…"
-msgstr "Enviando el guion al servidor para comprobarlo. Espere un momento..."
+msgstr "Enviando el guion al servidor para comprobarlo. Espere un momento…"
 
 #: sieveeditorpagewidget.cpp:134
 #, kde-format
@@ -788,13 +789,13 @@ msgstr "Vacía"
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
 msgid "Add…"
-msgstr "Añadir..."
+msgstr "Añadir…"
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
 #, kde-format
 msgid "Modify…"
-msgstr "Modificar..."
+msgstr "Modificar…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
 #: ui/sieveeditorconfigureserverwidget.ui:43
@@ -804,49 +805,4 @@ msgstr "Eliminar"
 
 #: whatsnew/whatsnewtranslations.cpp:16
 msgid "Add AI Actions Support."
-msgstr ""
-
-#~ msgid "Configure..."
-#~ msgstr "Configurar..."
-
-#~ msgid "Import Sieve Settings..."
-#~ msgstr "Importar preferencias de Sieve..."
-
-#~ msgid "Add Sieve Server..."
-#~ msgstr "Añadir servidor Sieve..."
-
-#~ msgid "Share..."
-#~ msgstr "Compartir..."
-
-#~ msgid "Create Rules Graphically..."
-#~ msgstr "Crear reglas gráficamente..."
-
-#~ msgid "Import IMAP Settings..."
-#~ msgstr "Importar preferencias de IMAP..."
-
-#~ msgid "Add..."
-#~ msgstr "Añadir..."
-
-#~ msgid "Close wallet when close application"
-#~ msgstr "Cerrar la cartera al cerrar la aplicación"
-
-#~ msgid "There was a problem sharing the document: %1"
-#~ msgstr "Ha habido un problema compartiendo el documento %1"
-
-#~ msgid "File was shared."
-#~ msgstr "El archivo se compartió."
-
-#~ msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
-#~ msgstr ""
-#~ "<qt>Usted puede encontrar la solicitud original en:<br /><a href='%1'>%1</"
-#~ "a> </qt>"
-
-#~ msgctxt "Reset the zoom"
-#~ msgid "Reset"
-#~ msgstr "Reiniciar"
-
-#~ msgid "&Zoom In"
-#~ msgstr "A&cercar"
-
-#~ msgid "Zoom &Out"
-#~ msgstr "A&lejar"
+msgstr "Añadir soporte para acciones de IA."

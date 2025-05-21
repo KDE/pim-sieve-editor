@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-20 00:43+0000\n"
-"PO-Revision-Date: 2024-11-18 08:46+0100\n"
+"PO-Revision-Date: 2025-05-20 07:27+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -436,7 +436,7 @@ msgstr "Uvozi nastavitve IMAP…"
 #: sieveeditormainwindow.cpp:387
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "Kaj je novega"
 
 #: sieveeditormainwindow.cpp:413
 #, kde-format
@@ -508,7 +508,7 @@ msgstr ""
 #: sieveeditorpagewidget.cpp:165
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
-msgstr "Skript »%1« je nov. Ali ga želite shraniti?"
+msgstr "Skript '%1' je nov. Ali ga želite shraniti?"
 
 #: sieveeditorpagewidget.cpp:166 sieveeditorpagewidget.cpp:179
 #, kde-format
@@ -519,7 +519,7 @@ msgstr "Shrani skript"
 #: sieveeditorpagewidget.cpp:178
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
-msgstr "Skript »%1« je bil spremenjen. Ali ga želite shraniti?"
+msgstr "Skript '%1' je bil spremenjen. Ali ga želite shraniti?"
 
 #: sieveeditortabwidget.cpp:43 sieveeditortabwidget.cpp:69
 #, kde-format
@@ -800,7 +800,7 @@ msgstr "Odstrani"
 
 #: whatsnew/whatsnewtranslations.cpp:16
 msgid "Add AI Actions Support."
-msgstr ""
+msgstr "Dodaj podporo dejavnostim umetne inteligence."
 
 #~ msgid "Configure..."
 #~ msgstr "Nastavi ..."
