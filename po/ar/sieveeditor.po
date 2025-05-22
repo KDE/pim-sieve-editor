@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-20 00:43+0000\n"
-"PO-Revision-Date: 2025-01-16 09:21+0400\n"
+"PO-Revision-Date: 2025-05-21 17:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -432,7 +432,7 @@ msgstr "استيراد إعدادات IMAP…"
 #: sieveeditormainwindow.cpp:387
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "ما الجديد"
 
 #: sieveeditormainwindow.cpp:413
 #, kde-format
@@ -777,7 +777,7 @@ msgstr "أزِل"
 
 #: whatsnew/whatsnewtranslations.cpp:16
 msgid "Add AI Actions Support."
-msgstr ""
+msgstr "إضافة دعم إجراءات الذكاء الاصطناعي."
 
 #~ msgid "Configure..."
 #~ msgstr "اضبط..."

@@ -433,7 +433,7 @@ msgstr "Importovat nastavení IMAP…"
 #: sieveeditormainwindow.cpp:387
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "Co je nového"
 
 #: sieveeditormainwindow.cpp:413
 #, kde-format
