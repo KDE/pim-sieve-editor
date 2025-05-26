@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014, 2015, 2016.
-# SPDX-FileCopyrightText: 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-20 00:43+0000\n"
-"PO-Revision-Date: 2024-12-01 14:59+0200\n"
+"PO-Revision-Date: 2025-05-25 09:06+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -433,7 +433,7 @@ msgstr "Tuo IMAP-asetukset…"
 #: sieveeditormainwindow.cpp:387
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "Mitä uutta"
 
 #: sieveeditormainwindow.cpp:413
 #, kde-format
@@ -798,7 +798,7 @@ msgstr "Poista"
 
 #: whatsnew/whatsnewtranslations.cpp:16
 msgid "Add AI Actions Support."
-msgstr ""
+msgstr "Lisätty tekoälytoimenpiteiden tuki."
 
 #~ msgid "Configure..."
 #~ msgstr "Asetukset…"
