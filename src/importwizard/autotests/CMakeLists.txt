@@ -9,10 +9,8 @@ macro(add_sieveeditor_importwizard_unittest _source _additionsource)
         NAME_PREFIX "sieveeditor-importwizard-"
         LINK_LIBRARIES Qt::Test KF6::I18n Qt::Gui Qt::Widgets
         KPim6::MailTransport KF6::ConfigCore KF6::ConfigGui KPim6::KSieveUi libsieveeditor
-)
+    )
 endmacro()
-
-
 
 add_sieveeditor_importwizard_unittest(importimapsettingsearchpagetest.cpp "")
 add_sieveeditor_importwizard_unittest(importimapsettingnofoundpagetest.cpp "")

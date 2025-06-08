@@ -10,4 +10,3 @@ path = ["src/importwizard/autotests/data/**", "MAINTAINERS", "doc/**", "src/icon
 precedence = "aggregate"
 SPDX-FileCopyrightText = "none"
 SPDX-License-Identifier = "CC0-1.0"
-

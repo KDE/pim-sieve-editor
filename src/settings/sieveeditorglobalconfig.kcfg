@@ -18,7 +18,7 @@
   <group name="General">
     <entry name="PreviousNewFeaturesMD5" type="String">
       <default></default>
-    </entry>	  
+    </entry>
   </group>
   <group name="Views">
     <entry key="ShowMenuBar" type="Bool">

@@ -2,7 +2,8 @@
 # SPDX-License-Identifier: BSD-3-Clause
 add_executable(sieveeditorimportwizardtest main.cpp)
 
-target_link_libraries(sieveeditorimportwizardtest
+target_link_libraries(
+    sieveeditorimportwizardtest
     Qt::Widgets
     KF6::WidgetsAddons
     KF6::I18n
@@ -12,4 +13,3 @@ target_link_libraries(sieveeditorimportwizardtest
     KPim6::KSieveUi
     libsieveeditor
 )
-

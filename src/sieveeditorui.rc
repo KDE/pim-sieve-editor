@@ -68,9 +68,8 @@
  </MenuBar>
 
   <ToolBar name="mainToolBar"><text>Main Toolbar</text>
-<Spacer/> 
+<Spacer/>
     <Action name="hamburger_menu"/>
   </ToolBar>
 
 </gui>
-

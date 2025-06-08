@@ -12,4 +12,3 @@ SieveSupport=true
 SieveReuseConfig=false
 SievePort=150
 SieveCustomUsername=b
-
