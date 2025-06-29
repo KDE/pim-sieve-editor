@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-20 00:43+0000\n"
-"PO-Revision-Date: 2025-05-21 17:42+0400\n"
+"PO-Revision-Date: 2025-06-28 17:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -355,7 +355,7 @@ msgstr "ألغِ تفعيل السّكربت"
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
-msgstr "أنعش القائمة"
+msgstr "حدّث القائمة"
 
 #: sieveeditormainwindow.cpp:251
 #, kde-format
