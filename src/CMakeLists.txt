@@ -5,18 +5,11 @@ if(TARGET KF6::UserFeedbackWidgets)
     set(WITH_KUSERFEEDBACK true)
 endif()
 
-configure_file(
-    sieveeditor-version.h.in
-    ${CMAKE_CURRENT_BINARY_DIR}/sieveeditor-version.h
-    @ONLY
-)
+configure_file(sieveeditor-version.h.in ${CMAKE_CURRENT_BINARY_DIR}/sieveeditor-version.h @ONLY)
 
 add_library(libsieveeditor)
 
-configure_file(
-    config-pim-sieve-editor.h.in
-    ${CMAKE_CURRENT_BINARY_DIR}/config-pim-sieve-editor.h
-)
+configure_file(config-pim-sieve-editor.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-pim-sieve-editor.h)
 
 kconfig_add_kcfg_files(libsieveeditor settings/sieveeditorglobalconfig.kcfgc)
 
@@ -118,7 +111,12 @@ ecm_qt_declare_logging_category(libsieveeditor HEADER sieveeditor_debug.h
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(libsieveeditor PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        libsieveeditor
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 generate_export_header(libsieveeditor BASE_NAME libsieveeditor)
 
@@ -146,9 +144,12 @@ target_link_libraries(libsieveeditor PRIVATE qt6keychain)
 set_target_properties(
     libsieveeditor
     PROPERTIES
-        OUTPUT_NAME sieveeditor
-        VERSION ${KDEPIM_LIB_VERSION}
-        SOVERSION ${KDEPIM_LIB_SOVERSION}
+        OUTPUT_NAME
+            sieveeditor
+        VERSION
+            ${KDEPIM_LIB_VERSION}
+        SOVERSION
+            ${KDEPIM_LIB_SOVERSION}
 )
 
 add_executable(sieveeditor)
@@ -165,7 +166,12 @@ set(ICON_FILES
 
 # Add icon files to the application's source files to have CMake bundle them in the executable.
 ecm_add_app_icon(ICONS_SOURCES ICONS ${ICON_FILES})
-target_sources(sieveeditor PRIVATE main.cpp ${ICONS_SOURCES})
+target_sources(
+    sieveeditor
+    PRIVATE
+        main.cpp
+        ${ICONS_SOURCES}
+)
 
 target_link_libraries(
     sieveeditor
@@ -187,17 +193,21 @@ else()
         target_link_libraries(sieveeditor Qt::GuiPrivate)
     endif()
 endif()
-install(TARGETS sieveeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(
+    TARGETS
+        sieveeditor
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+)
 
 install(PROGRAMS org.kde.sieveeditor.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
+install(FILES settings/sieveeditorglobalconfig.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(
-    FILES settings/sieveeditorglobalconfig.kcfg
-    DESTINATION ${KDE_INSTALL_KCFGDIR}
-)
-install(
-    TARGETS libsieveeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-    LIBRARY NAMELINK_SKIP
+    TARGETS
+        libsieveeditor
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    LIBRARY
+        NAMELINK_SKIP
 )
 
 if(BUILD_TESTING)
@@ -205,10 +215,7 @@ if(BUILD_TESTING)
     add_subdirectory(importwizard/tests)
 endif()
 
-install(
-    FILES org.kde.sieveeditor.appdata.xml
-    DESTINATION ${KDE_INSTALL_METAINFODIR}
-)
+install(FILES org.kde.sieveeditor.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 ecm_qt_install_logging_categories(EXPORT SIEVEEDITOR FILE sieveeditor.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 add_subdirectory(icons)
@@ -216,7 +223,8 @@ add_subdirectory(icons)
 # See https://cmake.org/cmake/help/v3.15/prop_tgt/MACOSX_BUNDLE_INFO_PLIST.html
 if(APPLE)
     set_property(
-        TARGET sieveeditor
+        TARGET
+            sieveeditor
         PROPERTY
             MACOSX_BUNDLE_INFO_PLIST
                 ${CMAKE_CURRENT_SOURCE_DIR}/data/MacOSXBundleInfo.plist.in

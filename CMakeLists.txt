@@ -77,9 +77,7 @@ if(DEFINED KDEPIM_DEV_VERSION)
     set(KDEPIM_DEV_VERSION " ${KDEPIM_DEV_VERSION}")
 endif()
 
-set(KDEPIM_VERSION
-    "${PIM_VERSION}${KDEPIM_DEV_VERSION} (${RELEASE_SERVICE_VERSION})"
-)
+set(KDEPIM_VERSION "${PIM_VERSION}${KDEPIM_DEV_VERSION} (${RELEASE_SERVICE_VERSION})")
 
 set(KMAILTRANSPORT_LIB_VERSION "6.4.40")
 
@@ -90,7 +88,14 @@ set(LIBKSIEVE_LIB_VERSION "6.4.40")
 set(PIMCOMMON_LIB_VERSION "6.4.40")
 set(KIMAP_LIB_VERSION "6.4.40")
 
-find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Network)
+find_package(
+    Qt6
+    ${QT_REQUIRED_VERSION}
+    CONFIG
+    REQUIRED
+        Widgets
+        Network
+)
 
 if(Qt6Gui_VERSION VERSION_GREATER_EQUAL "6.10.0")
     find_package(Qt6GuiPrivate ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE)
@@ -109,15 +114,22 @@ find_package(KF6I18n ${KF_MIN_VERSION})
 find_package(KF6IconThemes ${KF_MIN_VERSION} QUIET)
 set_package_properties(
     KF6DocTools
-    PROPERTIES DESCRIPTION "Tools to generate documentation" TYPE OPTIONAL
+    PROPERTIES
+        DESCRIPTION
+            "Tools to generate documentation"
+        TYPE
+            OPTIONAL
 )
 find_package(KF6UserFeedback ${KF_MIN_VERSION} CONFIG)
 set_package_properties(
     KF6::UserFeedback
     PROPERTIES
-        DESCRIPTION "User Feedback lib"
-        TYPE OPTIONAL
-        PURPOSE "Allow to send Telemetry Information (optional)."
+        DESCRIPTION
+            "User Feedback lib"
+        TYPE
+            OPTIONAL
+        PURPOSE
+            "Allow to send Telemetry Information (optional)."
 )
 
 # shall we use DBus?
@@ -146,21 +158,23 @@ find_package(Qt6Keychain ${QT6KEYCHAIN_LIB_VERSION} CONFIG)
 set_package_properties(
     Qt6Keychain
     PROPERTIES
-        DESCRIPTION "Provides support for secure credentials storage"
-        URL "https://github.com/frankosterfeld/qtkeychain"
-        TYPE REQUIRED
+        DESCRIPTION
+            "Provides support for secure credentials storage"
+        URL
+            "https://github.com/frankosterfeld/qtkeychain"
+        TYPE
+            REQUIRED
 )
 
-include_directories(${sieveeditor_SOURCE_DIR} ${sieveeditor_BINARY_DIR})
+include_directories(
+    ${sieveeditor_SOURCE_DIR}
+    ${sieveeditor_BINARY_DIR}
+)
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 ecm_set_disabled_deprecation_versions(QT 6.10.0  KF 6.15.0)
 
-option(
-    USE_UNITY_CMAKE_SUPPORT
-    "Use UNITY cmake support (speedup compile time)"
-    OFF
-)
+option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
 if(USE_UNITY_CMAKE_SUPPORT)
