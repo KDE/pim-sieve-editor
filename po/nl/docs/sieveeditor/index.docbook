@@ -8,8 +8,7 @@
 >">
   <!ENTITY kappname "&i18n-kapplication;">
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % Dutch "INCLUDE"
-> 
+  <!ENTITY % Dutch "INCLUDE">
 ]>
 
 <book id="sieveeditor" lang="&language;">
