@@ -594,7 +594,7 @@ msgstr "اسم المستخدم:"
 #: ui/serversievesettings.ui:79 ui/serversievesettings.ui:353
 #, kde-format
 msgid "Password:"
-msgstr "كلمة السّرّ:"
+msgstr "كلمة السر:"
 
 #. i18n: ectx: property (text), widget (QLabel, serversievelabel)
 #: ui/serversievesettings.ui:92
