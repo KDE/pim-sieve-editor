@@ -42,6 +42,7 @@ int main(int argc, char **argv)
     KIconTheme::initTheme();
     QApplication app(argc, argv);
     app.setDesktopFileName(QStringLiteral("org.kde.sieveeditor"));
+    app.setWindowIcon(QIcon::fromTheme(QStringLiteral(":/sieveeditor/sieveeditor.svg")));
 #if !WITH_DBUS
     KDSingleApplication sapp;
 #endif
@@ -56,7 +57,7 @@ int main(int argc, char **argv)
                          i18n("Copyright © 2013-%1 sieveeditor authors", QStringLiteral("2025")));
     aboutData.addAuthor(i18nc("@info:credit", "Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
 
-    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("sieveeditor")));
+    aboutData.setProgramLogo(QIcon::fromTheme(QStringLiteral(":/sieveeditor/sieveeditor.svg")));
     KAboutData::setApplicationData(aboutData);
     KCrash::initialize();
 

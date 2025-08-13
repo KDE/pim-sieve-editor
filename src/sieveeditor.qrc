@@ -7,4 +7,7 @@
     <qresource prefix="/kxmlgui5/sieveeditor">
         <file>sieveeditorui.rc</file>
     </qresource>
+    <qresource prefix="/sieveeditor">
+        <file alias="sieveeditor.svg">icons/sc-apps-sieveeditor.svg</file>
+    </qresource>
 </RCC>
