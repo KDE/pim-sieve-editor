@@ -384,7 +384,7 @@ void SieveEditorMainWindow::setupActions()
     mShowMenuBarAction->setChecked(SieveEditorGlobalConfig::self()->showMenuBar());
     slotToggleMenubar(true);
 
-    auto showWhatsNewAction = new QAction(QIcon::fromTheme(QStringLiteral("sieveeditor")), i18n("What's new"), this);
+    auto showWhatsNewAction = new QAction(QIcon::fromTheme(QStringLiteral(":/sieveeditor/sieveeditor.svg")), i18n("What's new"), this);
     ac->addAction(QStringLiteral("whatsnew"), showWhatsNewAction);
     connect(showWhatsNewAction, &QAction::triggered, this, &SieveEditorMainWindow::slotWhatsNew);
 }
