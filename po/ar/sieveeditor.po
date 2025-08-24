@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-14 00:43+0000\n"
-"PO-Revision-Date: 2025-06-28 17:30+0400\n"
+"PO-Revision-Date: 2025-08-23 08:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -249,7 +249,7 @@ msgstr "أتريد إزالة هذا الخادم ’%1‘؟"
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Sieve Server"
-msgstr "إزالة خادم الغربال"
+msgstr "أزل خادم الغربال"
 
 #: sieveeditoremptytabwidgetlabel.cpp:25
 #, kde-format
@@ -604,8 +604,8 @@ msgid ""
 "Old server implementations still use port 2000, while newer standard conform "
 "server can only be accessed via port 4190."
 msgstr ""
-"تغيّر منفذ الخادم عندما تحوّل ManageSieve إلى معيار RFC كامل. ما زالت الخواديم "
-"القديمة تستخدم المنفذ 2000، بينما لا يمكن النّفاذ إلى الخواديم التي تتّبع "
+"تغيّر منفذ الخادم عندما تحوّل ManageSieve إلى معيار RFC كامل. ما زالت الخوادم "
+"القديمة تستخدم المنفذ 2000، بينما لا يمكن النّفاذ إلى الخوادم التي تتّبع "
 "المعيار الجديد إلّا عبر المنفذ 4190."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
@@ -662,10 +662,27 @@ msgid ""
 "family:'Sans Serif';\"> will connect to port 143 but not switch to a secure "
 "connection. This setting is not recommended.</span></p></body></html>"
 msgstr ""
-"‏<emphasis>SSL/TLS</emphasis> هو IMAP آمن عبر المنفذ 993،"
-"<nl>‏<emphasis>STARTTLS</emphasis> سيعمل على المنفذ 143 وسيتحوّل إلى اتّصال آمن "
-"مباشرةً بعد الاتّصال،<nl><emphasis>بلا</emphasis> سيتّصل بالمنفذ 143 ولكن لن "
-"يتحوّل إلى اتّصال آمن. هذا الإعداد ليس مستحسنًا."
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'HandelGotDLig'; font-size:10pt; "
+"font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-weight:600;\">SSL/TLS</span><span style=\" font-"
+"family:'Sans Serif';\"> هو IMAP آمن عبر المنفذ 993،</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-weight:600;\">STARTTLS</span><span style=\" font-"
+"family:'Sans Serif';\"> سيعمل على المنفذ 143 وسيتحوّل إلى اتّصال آمن مباشرةً "
+"بعد الاتّصال،</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'Sans Serif'; font-weight:600;\">لا شيء</span><span style=\" font-"
+"family:'Sans Serif';\"> سيتّصل بالمنفذ 143 ولكن لن يتحوّل إلى اتّصال آمن. هذا "
+"الإعداد ليس مستحسنًا.</span></p></body></html>"
 
 #. i18n: ectx: property (title), widget (QGroupBox, safeImap)
 #: ui/serversievesettings.ui:163
@@ -689,7 +706,7 @@ msgstr "التّعمية:"
 #: ui/serversievesettings.ui:196
 #, kde-format
 msgid "None"
-msgstr "بلا"
+msgstr "لا شيء"
 
 #. i18n: ectx: property (text), widget (QRadioButton, sslRadio)
 #: ui/serversievesettings.ui:209
