@@ -140,6 +140,8 @@
   <url type="help">https://docs.kde.org/?application=sieveeditor</url>
   <url type="donation">https://www.kde.org/community/donations/?app=sieveeditor</url>
   <url type="vcs-browser">https://invent.kde.org/pim/pim-sieve-editor</url>
+  <url type="contact">https://go.kde.org/matrix/#/#kontact:kde.org</url>
+  <url type="contribute">https://community.kde.org/Get_Involved/</url>
   <content_rating type="oars-1.1"/>
   <provides>
     <binary>sieveeditor</binary>
