@@ -96,12 +96,12 @@ void SieveEditorUtil::writeServerSieveConfig(const QList<SieveServerConfig> &lst
 
 QString SieveEditorUtil::sievePasswordIdentifier(const QString &userName, const QString &serverName)
 {
-    return userName + QLatin1Char('@') + serverName;
+    return userName + u'@' + serverName;
 }
 
 QString SieveEditorUtil::imapPasswordIdentifier(const QString &userName, const QString &serverName)
 {
-    return "Imap"_L1 + userName + QLatin1Char('@') + serverName;
+    return "Imap"_L1 + userName + u'@' + serverName;
 }
 
 void SieveEditorUtil::writeSieveSettings(const KSharedConfigPtr &cfg, const SieveEditorUtil::SieveServerConfig &conf, int index)

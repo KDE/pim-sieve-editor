@@ -70,7 +70,7 @@ void ImportImapSettingsAkonadiCheckJob::importNextServerSieve()
 
 void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory, const QString &filename)
 {
-    const QString filePath = directory + QLatin1Char('/') + filename;
+    const QString filePath = directory + u'/' + filename;
     // qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
     if (!QFileInfo::exists(filePath)) {
         qCWarning(SIEVEEDITOR_LOG) << "Unable to open file " << filePath;

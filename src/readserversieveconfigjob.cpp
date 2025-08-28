@@ -45,7 +45,7 @@ void ReadServerSieveConfigJob::loadSettings(const QString &conf)
     mCurrentSieveServerConfig.sieveImapAccountSettings.setEncryptionMode(static_cast<KSieveCore::SieveImapAccountSettings::EncryptionMode>(
         group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(KSieveCore::SieveImapAccountSettings::SSLorTLS))));
 
-    const QString walletEntry = mCurrentSieveServerConfig.sieveSettings.userName + QLatin1Char('@') + mCurrentSieveServerConfig.sieveSettings.serverName;
+    const QString walletEntry = mCurrentSieveServerConfig.sieveSettings.userName + u'@' + mCurrentSieveServerConfig.sieveSettings.serverName;
     auto readJob = new ReadPasswordJob(SieveEditorUtil::walletFolderName(), this);
     connect(readJob, &Job::finished, this, &ReadServerSieveConfigJob::readSieveServerPasswordFinished);
     readJob->setKey(walletEntry);
@@ -72,8 +72,8 @@ void ReadServerSieveConfigJob::loadImapAccountSettings()
         && (mCurrentSieveServerConfig.sieveImapAccountSettings.serverName() != mCurrentSieveServerConfig.sieveSettings.serverName)) {
         mCurrentSieveServerConfig.useImapCustomServer = true;
 
-        const QString imapWalletEntry = "Imap"_L1 + mCurrentSieveServerConfig.sieveImapAccountSettings.userName() + QLatin1Char('@')
-            + mCurrentSieveServerConfig.sieveImapAccountSettings.serverName();
+        const QString imapWalletEntry =
+            "Imap"_L1 + mCurrentSieveServerConfig.sieveImapAccountSettings.userName() + u'@' + mCurrentSieveServerConfig.sieveImapAccountSettings.serverName();
         auto readJob = new ReadPasswordJob(SieveEditorUtil::walletFolderName(), this);
         connect(readJob, &Job::finished, this, &ReadServerSieveConfigJob::readImapPasswordFinished);
         readJob->setKey(imapWalletEntry);

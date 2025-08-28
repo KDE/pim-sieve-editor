@@ -80,7 +80,7 @@ void ImportImapSettingsThunderbirdCheckJob::start()
 
 bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &directory, const QString &defaultProfile)
 {
-    const QString filePath = directory + QLatin1Char('/') + defaultProfile + QStringLiteral("/prefs.js");
+    const QString filePath = directory + u'/' + defaultProfile + QStringLiteral("/prefs.js");
     // qCDebug(SIEVEEDITOR_LOG) << "importSettings filename:" << filePath;
     QFile file(filePath);
     if (!file.open(QIODevice::ReadOnly)) {
@@ -96,7 +96,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
                 insertIntoMap(line);
             }
         } else {
-            if (!line.startsWith(QLatin1Char('#')) && line.isEmpty() && line.startsWith("/*"_L1) && line.startsWith(" */"_L1) && line.startsWith(" *"_L1)) {
+            if (!line.startsWith(u'#') && line.isEmpty() && line.startsWith("/*"_L1) && line.startsWith(" */"_L1) && line.startsWith(" *"_L1)) {
                 qCDebug(SIEVEEDITOR_LOG) << " unstored line :" << line;
             }
         }
@@ -106,7 +106,7 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
         qCDebug(SIEVEEDITOR_LOG) << "No account found";
         return false;
     }
-    const QStringList accountList = mailAccountPreference.split(QLatin1Char(','));
+    const QStringList accountList = mailAccountPreference.split(u',');
 
     bool atLeastAnAccountFound = false;
     for (const QString &account : accountList) {
@@ -120,8 +120,8 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
             QString userName = mHashConfig.value(accountName + QStringLiteral(".userName")).toString();
             // Convert @ in username in %40
             QString userNameSieveConverted = userName;
-            userNameSieveConverted.replace(QLatin1Char('@'), QStringLiteral("%40"));
-            const QString sieveKeyServerUserName = "extensions.sieve.account."_L1 + userNameSieveConverted + QLatin1Char('@') + imapServerName;
+            userNameSieveConverted.replace(u'@', QStringLiteral("%40"));
+            const QString sieveKeyServerUserName = "extensions.sieve.account."_L1 + userNameSieveConverted + u'@' + imapServerName;
             // user_pref("extensions.sieve.account.<username>@<server>.enabled", true);
             if (mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".enabled"), false).toBool()) {
                 // TODO
@@ -250,14 +250,14 @@ void ImportImapSettingsThunderbirdCheckJob::insertIntoMap(const QString &line)
     QString newLine = line;
     newLine.remove(QStringLiteral("user_pref(\""));
     newLine.remove(QStringLiteral(");"));
-    const int pos = newLine.indexOf(QLatin1Char(','));
+    const int pos = newLine.indexOf(u',');
     QString key = newLine.left(pos);
     key.remove(key.length() - 1, 1);
     QString valueStr = newLine.right(newLine.length() - pos - 2);
-    if (valueStr.at(0) == QLatin1Char('"')) {
+    if (valueStr.at(0) == u'"') {
         valueStr.remove(0, 1);
         const int pos(valueStr.length() - 1);
-        if (valueStr.at(pos) == QLatin1Char('"')) {
+        if (valueStr.at(pos) == u'"') {
             valueStr.remove(pos, 1);
         }
         // Store as String
