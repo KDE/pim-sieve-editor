@@ -60,7 +60,7 @@ void SieveEditorUtilTest::shouldBeEqual()
     settings.password = QStringLiteral("bli");
     settings.port = 2;
     SieveEditorUtil::SieveAccountSettings settings2 = settings;
-    QVERIFY(settings == settings2);
+    QCOMPARE(settings, settings2);
 
     SieveEditorUtil::SieveAccountSettings settings3;
     settings3.serverName = QStringLiteral("foo");
@@ -70,7 +70,7 @@ void SieveEditorUtilTest::shouldBeEqual()
     QVERIFY(!(settings == settings3));
 
     settings3.port = 2;
-    QVERIFY(settings == settings3);
+    QCOMPARE(settings, settings3);
 }
 
 QTEST_APPLESS_MAIN(SieveEditorUtilTest)
