@@ -72,8 +72,7 @@ msgstr "S'ha realitzat la importació de la configuració des de %1"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
-msgstr ""
-"Seleccioneu el programa des del qual voleu importar la configuració IMAP:"
+msgstr "Trieu el programa des del qual voleu importar la configuració IMAP:"
 
 #: importwizard/importimapsettingwizard.cpp:32
 #, kde-format
@@ -84,7 +83,7 @@ msgstr "Importeu la configuració d'IMAP"
 #: importwizard/importimapsettingwizard.cpp:34
 #, kde-format
 msgid "Select Import Settings"
-msgstr "Selecciona la configuració que s'ha d'importar"
+msgstr "Tria la configuració que s'ha d'importar"
 
 #: importwizard/importimapsettingwizard.cpp:40
 #, kde-format
