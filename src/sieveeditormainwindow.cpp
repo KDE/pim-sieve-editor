@@ -106,14 +106,19 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     WhatsNewTranslations translations;
     const QString newFeaturesMD5 = translations.newFeaturesMD5();
     if (!newFeaturesMD5.isEmpty()) {
-        const bool hasNewFeature = (SieveEditorGlobalConfig::self()->previousNewFeaturesMD5() != newFeaturesMD5);
-        if (hasNewFeature) {
-            auto whatsNewMessageWidget = new PimCommon::WhatsNewMessageWidget(this);
-            whatsNewMessageWidget->setWhatsNewInfos(translations.createWhatsNewInfo());
-            whatsNewMessageWidget->setObjectName(QStringLiteral("whatsNewMessageWidget"));
-            mainWidgetLayout->addWidget(whatsNewMessageWidget);
+        const QString previousNewFeaturesMD5 = SieveEditorGlobalConfig::self()->previousNewFeaturesMD5();
+        if (!previousNewFeaturesMD5.isEmpty()) {
+            const bool hasNewFeature = (previousNewFeaturesMD5 != newFeaturesMD5);
+            if (hasNewFeature) {
+                auto whatsNewMessageWidget = new PimCommon::WhatsNewMessageWidget(this);
+                whatsNewMessageWidget->setWhatsNewInfos(translations.createWhatsNewInfo());
+                whatsNewMessageWidget->setObjectName(QStringLiteral("whatsNewMessageWidget"));
+                mainWidgetLayout->addWidget(whatsNewMessageWidget);
+                SieveEditorGlobalConfig::self()->setPreviousNewFeaturesMD5(newFeaturesMD5);
+                whatsNewMessageWidget->animatedShow();
+            }
+        } else {
             SieveEditorGlobalConfig::self()->setPreviousNewFeaturesMD5(newFeaturesMD5);
-            whatsNewMessageWidget->animatedShow();
         }
     }
 
