@@ -23,7 +23,6 @@
 #include <KSharedConfig>
 #include <PimCommon/NetworkManager>
 
-#include <KAboutData>
 #include <KActionCollection>
 #include <KColorSchemeMenu>
 #include <KConfigGroup>

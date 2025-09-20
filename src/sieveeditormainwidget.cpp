@@ -20,7 +20,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KSharedConfig>
 #include <QTabWidget>
 
-#include <QApplication>
+#include <QEvent>
 #include <QStackedWidget>
 #include <QTabBar>
 
