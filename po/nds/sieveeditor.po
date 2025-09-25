@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-21 00:43+0000\n"
+"POT-Creation-Date: 2025-09-25 00:43+0000\n"
 "PO-Revision-Date: 2014-08-13 23:53+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -811,7 +811,11 @@ msgstr "Ännern..."
 msgid "Remove"
 msgstr "Wegmaken..."
 
-#: whatsnew/whatsnewtranslations.cpp:29
+#: whatsnew/whatsnewtranslations.cpp:17
+msgid "Add AI quick Ask support."
+msgstr ""
+
+#: whatsnew/whatsnewtranslations.cpp:27
 #, kde-format
 msgid "Add AI Actions Support."
 msgstr ""

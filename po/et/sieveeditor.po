@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-21 00:43+0000\n"
+"POT-Creation-Date: 2025-09-25 00:43+0000\n"
 "PO-Revision-Date: 2020-05-12 10:54+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -833,7 +833,11 @@ msgstr "Muuda..."
 msgid "Remove"
 msgstr "Eemalda"
 
-#: whatsnew/whatsnewtranslations.cpp:29
+#: whatsnew/whatsnewtranslations.cpp:17
+msgid "Add AI quick Ask support."
+msgstr ""
+
+#: whatsnew/whatsnewtranslations.cpp:27
 #, kde-format
 msgid "Add AI Actions Support."
 msgstr ""

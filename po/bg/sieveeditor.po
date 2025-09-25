@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-21 00:43+0000\n"
+"POT-Creation-Date: 2025-09-25 00:43+0000\n"
 "PO-Revision-Date: 2025-05-20 19:33+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -796,7 +796,13 @@ msgstr "Промяна…"
 msgid "Remove"
 msgstr "Премахване"
 
-#: whatsnew/whatsnewtranslations.cpp:29
+#: whatsnew/whatsnewtranslations.cpp:17
+#, fuzzy
+#| msgid "Add AI Actions Support."
+msgid "Add AI quick Ask support."
+msgstr "Добавяне на поддръжка от ИИ"
+
+#: whatsnew/whatsnewtranslations.cpp:27
 #, kde-format
 msgid "Add AI Actions Support."
 msgstr "Добавяне на поддръжка от ИИ"

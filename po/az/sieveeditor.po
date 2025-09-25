@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-21 00:43+0000\n"
+"POT-Creation-Date: 2025-09-25 00:43+0000\n"
 "PO-Revision-Date: 2023-05-29 19:03+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -832,7 +832,11 @@ msgstr "Dəyişdirin..."
 msgid "Remove"
 msgstr "Silin"
 
-#: whatsnew/whatsnewtranslations.cpp:29
+#: whatsnew/whatsnewtranslations.cpp:17
+msgid "Add AI quick Ask support."
+msgstr ""
+
+#: whatsnew/whatsnewtranslations.cpp:27
 #, kde-format
 msgid "Add AI Actions Support."
 msgstr ""

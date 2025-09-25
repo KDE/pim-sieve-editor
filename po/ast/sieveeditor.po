@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-21 00:43+0000\n"
+"POT-Creation-Date: 2025-09-25 00:43+0000\n"
 "PO-Revision-Date: 2023-11-07 21:27+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -761,7 +761,11 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
-#: whatsnew/whatsnewtranslations.cpp:29
+#: whatsnew/whatsnewtranslations.cpp:17
+msgid "Add AI quick Ask support."
+msgstr ""
+
+#: whatsnew/whatsnewtranslations.cpp:27
 #, kde-format
 msgid "Add AI Actions Support."
 msgstr ""
