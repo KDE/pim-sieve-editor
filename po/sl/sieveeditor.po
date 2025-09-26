@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:43+0000\n"
-"PO-Revision-Date: 2025-05-20 07:27+0200\n"
+"PO-Revision-Date: 2025-09-25 06:57+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -799,10 +799,8 @@ msgid "Remove"
 msgstr "Odstrani"
 
 #: whatsnew/whatsnewtranslations.cpp:17
-#, fuzzy
-#| msgid "Add AI Actions Support."
 msgid "Add AI quick Ask support."
-msgstr "Dodaj podporo dejavnostim umetne inteligence."
+msgstr "Dodaj podporo umetne inteligence za hitra vprašanja."
 
 #: whatsnew/whatsnewtranslations.cpp:27
 #, kde-format

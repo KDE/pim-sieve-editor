@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:43+0000\n"
-"PO-Revision-Date: 2025-05-22 13:55+0900\n"
+"PO-Revision-Date: 2025-09-26 04:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 25.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -792,10 +792,8 @@ msgid "Remove"
 msgstr "移除"
 
 #: whatsnew/whatsnewtranslations.cpp:17
-#, fuzzy
-#| msgid "Add AI Actions Support."
 msgid "Add AI quick Ask support."
-msgstr "加入 AI 動作支援。"
+msgstr "加入 AI 快速詢問支援。"
 
 #: whatsnew/whatsnewtranslations.cpp:27
 #, kde-format

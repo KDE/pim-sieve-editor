@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:43+0000\n"
-"PO-Revision-Date: 2025-05-20 21:57+0300\n"
+"PO-Revision-Date: 2025-09-25 18:32+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -796,10 +796,8 @@ msgid "Remove"
 msgstr "Kaldır"
 
 #: whatsnew/whatsnewtranslations.cpp:17
-#, fuzzy
-#| msgid "Add AI Actions Support."
 msgid "Add AI quick Ask support."
-msgstr "Yapay zekâ eylemleri desteği ekle"
+msgstr "Tez yapay zekâya sorma desteği ekle"
 
 #: whatsnew/whatsnewtranslations.cpp:27
 #, kde-format
