@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:43+0000\n"
-"PO-Revision-Date: 2025-05-25 22:43+0200\n"
+"PO-Revision-Date: 2025-09-27 11:41+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -806,15 +806,13 @@ msgid "Remove"
 msgstr "Kendu"
 
 #: whatsnew/whatsnewtranslations.cpp:17
-#, fuzzy
-#| msgid "Add AI Actions Support."
 msgid "Add AI quick Ask support."
-msgstr "Gehitu AA ekintzen euskarria."
+msgstr "AAri bizkor galdetzeko euskarria gehitzea."
 
 #: whatsnew/whatsnewtranslations.cpp:27
 #, kde-format
 msgid "Add AI Actions Support."
-msgstr "Gehitu AA ekintzen euskarria."
+msgstr "AA ekintzen euskarria gehitzea."
 
 #~ msgid "Configure..."
 #~ msgstr "Konfiguratu..."
