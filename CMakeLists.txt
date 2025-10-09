@@ -98,10 +98,6 @@ find_package(
         Network
 )
 
-if(Qt6Gui_VERSION VERSION_GREATER_EQUAL "6.10.0")
-    find_package(Qt6GuiPrivate ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE)
-endif()
-
 # Find KF6 package
 find_package(KF6CoreAddons ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6Crash ${KF_MIN_VERSION} REQUIRED)
@@ -145,6 +141,9 @@ if(USE_DBUS)
     set(WITH_DBUS TRUE)
     find_package(KF6DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
 else()
+    if(Qt6Gui_VERSION VERSION_GREATER_EQUAL "6.10.0")
+        find_package(Qt6GuiPrivate ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE)
+    endif()
     find_package(KDSingleApplication-qt6 CONFIG REQUIRED)
 endif()
 
