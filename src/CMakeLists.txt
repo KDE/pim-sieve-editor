@@ -141,6 +141,10 @@ target_link_libraries(
 )
 target_link_libraries(libsieveeditor PRIVATE qt6keychain)
 
+if(HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT)
+    target_link_libraries(libsieveeditor PRIVATE KF6::TextAddonsWidgets)
+endif()
+
 set_target_properties(
     libsieveeditor
     PROPERTIES

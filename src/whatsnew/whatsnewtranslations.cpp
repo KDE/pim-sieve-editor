@@ -19,17 +19,33 @@ QList<KLazyLocalizedString> WhatsNewTranslations::lastNewFeatures() const
     return info;
 }
 
+#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+QList<TextAddonsWidgets::WhatsNewInfo> WhatsNewTranslations::createWhatsNewInfo() const
+#else
 QList<PimCommon::WhatsNewInfo> WhatsNewTranslations::createWhatsNewInfo() const
+#endif
 {
+#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+    QList<TextAddonsWidgets::WhatsNewInfo> listInfo;
+#else
     QList<PimCommon::WhatsNewInfo> listInfo;
+#endif
     {
+#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+        TextAddonsWidgets::WhatsNewInfo info;
+#else
         PimCommon::WhatsNewInfo info;
+#endif
         info.setNewFeatures({i18n("Add AI Actions Support.")});
         info.setVersion(QStringLiteral("6.5.0"));
         listInfo.append(std::move(info));
     }
     {
+#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+        TextAddonsWidgets::WhatsNewInfo info;
+#else
         PimCommon::WhatsNewInfo info;
+#endif
         QStringList lst;
         for (const KLazyLocalizedString &l : lastNewFeatures()) {
             lst += l.toString();

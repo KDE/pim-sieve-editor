@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include "config-pim-sieve-editor.h"
 #include "libsieveeditor_export.h"
 #include <KXmlGuiWindow>
 class QAction;
@@ -20,7 +21,14 @@ namespace PimCommon
 {
 class KActionMenuChangeCase;
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+namespace TextAddonsWidgets
+{
 class VerifyNewVersionWidget;
+}
+#else
+class VerifyNewVersionWidget;
+#endif
 #endif
 }
 class LIBSIEVEEDITOR_EXPORT SieveEditorMainWindow : public KXmlGuiWindow
@@ -105,7 +113,11 @@ private:
     KHamburgerMenu *mHamburgerMenu = nullptr;
     KToggleAction *mShowMenuBarAction = nullptr;
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+    TextAddonsWidgets::VerifyNewVersionWidget *const mVerifyNewVersionWidget;
+#else
     PimCommon::VerifyNewVersionWidget *const mVerifyNewVersionWidget;
+#endif
 #endif
     bool mNetworkIsDown = false;
 };

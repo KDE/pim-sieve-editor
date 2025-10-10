@@ -5,7 +5,6 @@
 */
 
 #include "sieveeditormainwindow.h"
-#include "config-pim-sieve-editor.h"
 #include "importwizard/importimapsettingwizard.h"
 #include "serversievesettingsdialog.h"
 #include "sieveeditorbookmarks.h"
@@ -15,11 +14,17 @@
 #include "sieveeditormainwidget.h"
 #include "sievepurposemenuwidget.h"
 #include <PimCommon/KActionMenuChangeCase>
+#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+#include <TextAddonsWidgets/NeedUpdateVersionUtils>
+#include <TextAddonsWidgets/NeedUpdateVersionWidget>
+#include <TextAddonsWidgets/WhatsNewDialog>
+#include <TextAddonsWidgets/WhatsNewMessageWidget>
+#else
 #include <PimCommon/NeedUpdateVersionUtils>
 #include <PimCommon/NeedUpdateVersionWidget>
 #include <PimCommon/WhatsNewDialog>
 #include <PimCommon/WhatsNewMessageWidget>
-
+#endif
 #include <KSharedConfig>
 #include <PimCommon/NetworkManager>
 
@@ -59,7 +64,11 @@
 #include <KWindowSystem>
 #include <QWindow>
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+#include <TextAddonsWidgets/VerifyNewVersionWidget>
+#else
 #include <PimCommon/VerifyNewVersionWidget>
+#endif
 #endif
 
 #include "whatsnew/whatsnewtranslations.h"
@@ -71,7 +80,11 @@ static const char mySieveEditorMainWindowConfigGroupName[] = "SieveEditorMainWin
 SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     : KXmlGuiWindow(parent)
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+#if HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+    , mVerifyNewVersionWidget(new TextAddonsWidgets::VerifyNewVersionWidget(this))
+#else
     , mVerifyNewVersionWidget(new PimCommon::VerifyNewVersionWidget(this))
+#endif
 #endif
 
 {
@@ -93,6 +106,17 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
     auto mainWidgetLayout = new QVBoxLayout(mainWidget);
     mainWidgetLayout->setContentsMargins({});
     mainWidgetLayout->setSpacing(0);
+#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+    if (TextAddonsWidgets::NeedUpdateVersionUtils::checkVersion()) {
+        const auto status =
+            TextAddonsWidgets::NeedUpdateVersionUtils::obsoleteVersionStatus(QLatin1String(SIEVEEDITOR_RELEASE_VERSION_DATE), QDate::currentDate());
+        if (status != TextAddonsWidgets::NeedUpdateVersionUtils::ObsoleteVersion::NotObsoleteYet) {
+            auto needUpdateVersionWidget = new TextAddonsWidgets::NeedUpdateVersionWidget(this);
+            mainWidgetLayout->addWidget(needUpdateVersionWidget);
+            needUpdateVersionWidget->setObsoleteVersion(status);
+        }
+    }
+#else
     if (PimCommon::NeedUpdateVersionUtils::checkVersion()) {
         const auto status = PimCommon::NeedUpdateVersionUtils::obsoleteVersionStatus(QLatin1String(SIEVEEDITOR_RELEASE_VERSION_DATE), QDate::currentDate());
         if (status != PimCommon::NeedUpdateVersionUtils::ObsoleteVersion::NotObsoleteYet) {
@@ -101,6 +125,7 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
             needUpdateVersionWidget->setObsoleteVersion(status);
         }
     }
+#endif
 
     WhatsNewTranslations translations;
     const QString newFeaturesMD5 = translations.newFeaturesMD5();
@@ -109,8 +134,13 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
         if (!previousNewFeaturesMD5.isEmpty()) {
             const bool hasNewFeature = (previousNewFeaturesMD5 != newFeaturesMD5);
             if (hasNewFeature) {
+#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+                auto whatsNewMessageWidget = new TextAddonsWidgets::WhatsNewMessageWidget(this);
+                whatsNewMessageWidget->setWhatsNewInfos(translations.createWhatsNewInfo());
+#else
                 auto whatsNewMessageWidget = new PimCommon::WhatsNewMessageWidget(this);
                 whatsNewMessageWidget->setWhatsNewInfos(translations.createWhatsNewInfo());
+#endif
                 whatsNewMessageWidget->setObjectName(QStringLiteral("whatsNewMessageWidget"));
                 mainWidgetLayout->addWidget(whatsNewMessageWidget);
                 SieveEditorGlobalConfig::self()->setPreviousNewFeaturesMD5(newFeaturesMD5);
@@ -162,7 +192,11 @@ SieveEditorMainWindow::~SieveEditorMainWindow()
 void SieveEditorMainWindow::slotWhatsNew()
 {
     WhatsNewTranslations translations;
+#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+    TextAddonsWidgets::WhatsNewDialog dlg(translations.createWhatsNewInfo(), this);
+#else
     PimCommon::WhatsNewDialog dlg(translations.createWhatsNewInfo(), this);
+#endif
     dlg.updateInformations();
     dlg.exec();
 }
@@ -378,7 +412,11 @@ void SieveEditorMainWindow::setupActions()
 #else
     const QString url = QStringLiteral("https://cdn.kde.org/ci-builds/pim/pim-sieve-editor/master/windows/");
 #endif
+#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+    mVerifyNewVersionWidget->addOsUrlInfo(TextAddonsWidgets::VerifyNewVersionWidget::OsVersion::Windows, url);
+#else
     mVerifyNewVersionWidget->addOsUrlInfo(PimCommon::VerifyNewVersionWidget::OsVersion::Windows, url);
+#endif
     auto verifyNewVersionAction = mVerifyNewVersionWidget->verifyNewVersionAction();
     ac->addAction(QStringLiteral("verify_check_version"), verifyNewVersionAction);
 #endif
@@ -393,10 +431,8 @@ void SieveEditorMainWindow::setupActions()
     connect(showWhatsNewAction, &QAction::triggered, this, &SieveEditorMainWindow::slotWhatsNew);
 }
 
-void SieveEditorMainWindow::slotActivateRequested(const QStringList &arguments, const QString &workingDirectory)
+void SieveEditorMainWindow::slotActivateRequested([[maybe_unused]] const QStringList &arguments, [[maybe_unused]] const QString &workingDirectory)
 {
-    Q_UNUSED(workingDirectory)
-    // TODO arguments
 #if !defined(Q_OS_WIN) && !defined(Q_OS_MACOS)
     KWindowSystem::updateStartupId(windowHandle());
     KWindowSystem::activateWindow(windowHandle());
