@@ -19,19 +19,19 @@ QList<KLazyLocalizedString> WhatsNewTranslations::lastNewFeatures() const
     return info;
 }
 
-#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+#if HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
 QList<TextAddonsWidgets::WhatsNewInfo> WhatsNewTranslations::createWhatsNewInfo() const
 #else
 QList<PimCommon::WhatsNewInfo> WhatsNewTranslations::createWhatsNewInfo() const
 #endif
 {
-#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+#if HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
     QList<TextAddonsWidgets::WhatsNewInfo> listInfo;
 #else
     QList<PimCommon::WhatsNewInfo> listInfo;
 #endif
     {
-#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+#if HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
         TextAddonsWidgets::WhatsNewInfo info;
 #else
         PimCommon::WhatsNewInfo info;
@@ -41,7 +41,7 @@ QList<PimCommon::WhatsNewInfo> WhatsNewTranslations::createWhatsNewInfo() const
         listInfo.append(std::move(info));
     }
     {
-#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+#if HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
         TextAddonsWidgets::WhatsNewInfo info;
 #else
         PimCommon::WhatsNewInfo info;
