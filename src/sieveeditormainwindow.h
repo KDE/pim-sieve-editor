@@ -17,16 +17,19 @@ class KActionMenu;
 class KToggleFullScreenAction;
 class KHamburgerMenu;
 class KToggleAction;
-namespace PimCommon
-{
-class KActionMenuChangeCase;
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
 #if HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
 namespace TextAddonsWidgets
 {
 class VerifyNewVersionWidget;
 }
-#else
+#endif
+#endif
+namespace PimCommon
+{
+class KActionMenuChangeCase;
+#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+#if !HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
 class VerifyNewVersionWidget;
 #endif
 #endif
