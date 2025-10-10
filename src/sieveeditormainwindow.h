@@ -21,7 +21,7 @@ namespace PimCommon
 {
 class KActionMenuChangeCase;
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
-#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+#if HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
 namespace TextAddonsWidgets
 {
 class VerifyNewVersionWidget;
@@ -113,7 +113,7 @@ private:
     KHamburgerMenu *mHamburgerMenu = nullptr;
     KToggleAction *mShowMenuBarAction = nullptr;
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
-#ifdef HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
+#if HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
     TextAddonsWidgets::VerifyNewVersionWidget *const mVerifyNewVersionWidget;
 #else
     PimCommon::VerifyNewVersionWidget *const mVerifyNewVersionWidget;
