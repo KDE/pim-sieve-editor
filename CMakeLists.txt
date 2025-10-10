@@ -88,6 +88,7 @@ set(KDEPIM_LIB_SOVERSION "6")
 set(LIBKSIEVE_LIB_VERSION "6.5.40")
 set(PIMCOMMON_LIB_VERSION "6.5.40")
 set(KIMAP_LIB_VERSION "6.5.40")
+set(KTEXTADDONS_MIN_VERSION "1.8.0")
 
 find_package(
     Qt6
@@ -128,6 +129,20 @@ set_package_properties(
         PURPOSE
             "Allow to send Telemetry Information (optional)."
 )
+
+find_package(KF6TextAddonsWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG)
+set_package_properties(
+    KF6TextAddonsWidgets
+    PROPERTIES
+        DESCRIPTION
+            "Add text addons widget"
+        TYPE
+            REQUIRED
+)
+
+if(${KF6TextAddonsWidgets_VERSION} VERSION_GREATER_EQUAL 1.8.45)
+    set(HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT TRUE)
+endif()
 
 # shall we use DBus?
 # enabled per default on Linux & BSD systems
