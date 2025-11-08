@@ -18,21 +18,14 @@ class KToggleFullScreenAction;
 class KHamburgerMenu;
 class KToggleAction;
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
-#if HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
 namespace TextAddonsWidgets
 {
 class VerifyNewVersionWidget;
 }
 #endif
-#endif
 namespace PimCommon
 {
 class KActionMenuChangeCase;
-#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
-#if !HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
-class VerifyNewVersionWidget;
-#endif
-#endif
 }
 class LIBSIEVEEDITOR_EXPORT SieveEditorMainWindow : public KXmlGuiWindow
 {
@@ -116,11 +109,7 @@ private:
     KHamburgerMenu *mHamburgerMenu = nullptr;
     KToggleAction *mShowMenuBarAction = nullptr;
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
-#if HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT
     TextAddonsWidgets::VerifyNewVersionWidget *const mVerifyNewVersionWidget;
-#else
-    PimCommon::VerifyNewVersionWidget *const mVerifyNewVersionWidget;
-#endif
 #endif
     bool mNetworkIsDown = false;
 };
