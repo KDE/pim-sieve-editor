@@ -127,7 +127,7 @@
                 {
                     "url": "https://invent.kde.org/libraries/ktextaddons.git",
                     "type": "git",
-                    "branch": "1.8"
+                    "branch": "master"
                 }
             ],
             "config-opts": [
