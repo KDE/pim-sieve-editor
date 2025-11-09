@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-11 09:07+0000\n"
+"POT-Creation-Date: 2025-11-09 00:43+0000\n"
 "PO-Revision-Date: 2025-09-25 18:32+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -306,135 +306,135 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "Betiği Kapat"
 
-#: sieveeditormainwindow.cpp:230
+#: sieveeditormainwindow.cpp:195
 #, kde-format
 msgid "Network is Up."
 msgstr "Ağ Çalışıyor."
 
-#: sieveeditormainwindow.cpp:232
+#: sieveeditormainwindow.cpp:197
 #, kde-format
 msgid "Network is Down."
 msgstr "Ağ Kesildi."
 
-#: sieveeditormainwindow.cpp:254
+#: sieveeditormainwindow.cpp:219
 #, kde-format
 msgid "Upload"
 msgstr "Yükle"
 
-#: sieveeditormainwindow.cpp:257
+#: sieveeditormainwindow.cpp:222
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Sieve Sunucusu Ekle…"
 
-#: sieveeditormainwindow.cpp:261
+#: sieveeditormainwindow.cpp:226
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Betiği Sil"
 
-#: sieveeditormainwindow.cpp:267
+#: sieveeditormainwindow.cpp:232
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Yeni Betik Oluştur…"
 
-#: sieveeditormainwindow.cpp:273
+#: sieveeditormainwindow.cpp:238
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Betiği Düzenle…"
 
-#: sieveeditormainwindow.cpp:278
+#: sieveeditormainwindow.cpp:243
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Betiği Devre Dışı Bırak"
 
-#: sieveeditormainwindow.cpp:283
+#: sieveeditormainwindow.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Listeyi Yenile"
 
-#: sieveeditormainwindow.cpp:289
+#: sieveeditormainwindow.cpp:254
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Satıra Git…"
 
-#: sieveeditormainwindow.cpp:306
+#: sieveeditormainwindow.cpp:271
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "İçe Aktar…"
 
-#: sieveeditormainwindow.cpp:312
+#: sieveeditormainwindow.cpp:277
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Paylaş…"
 
-#: sieveeditormainwindow.cpp:320
+#: sieveeditormainwindow.cpp:285
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Yazım Denetimi Yap…"
 
-#: sieveeditormainwindow.cpp:326
+#: sieveeditormainwindow.cpp:291
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Sözdizimi Denetle"
 
-#: sieveeditormainwindow.cpp:331
+#: sieveeditormainwindow.cpp:296
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Grafiksel Olarak Kurallar Oluştur…"
 
-#: sieveeditormainwindow.cpp:336
+#: sieveeditormainwindow.cpp:301
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Yorum Yap"
 
-#: sieveeditormainwindow.cpp:341
+#: sieveeditormainwindow.cpp:306
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Yorumu Kaldır"
 
-#: sieveeditormainwindow.cpp:369
+#: sieveeditormainwindow.cpp:334
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "Y&er İmleri"
 
-#: sieveeditormainwindow.cpp:374
+#: sieveeditormainwindow.cpp:339
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Sieve Betiği Hata Ayıklaması…"
 
-#: sieveeditormainwindow.cpp:379
+#: sieveeditormainwindow.cpp:344
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Sözcük Kaydırma"
 
-#: sieveeditormainwindow.cpp:401
+#: sieveeditormainwindow.cpp:366
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "IMAP Ayarları İçe Aktar…"
 
-#: sieveeditormainwindow.cpp:429
+#: sieveeditormainwindow.cpp:390
 #, kde-format
 msgid "What's new"
 msgstr "Neler yeni"
 
-#: sieveeditormainwindow.cpp:453
+#: sieveeditormainwindow.cpp:414
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
@@ -443,7 +443,7 @@ msgstr ""
 "<qt>Bu, menü çubuğunu tümüyle gizler. %1 yazarak yeniden gösterebilirsiniz.</"
 "qt>"
 
-#: sieveeditormainwindow.cpp:456
+#: sieveeditormainwindow.cpp:417
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
@@ -799,7 +799,7 @@ msgstr "Kaldır"
 msgid "Add AI quick Ask support."
 msgstr "Tez yapay zekâya sorma desteği ekle"
 
-#: whatsnew/whatsnewtranslations.cpp:39
+#: whatsnew/whatsnewtranslations.cpp:27
 #, kde-format
 msgid "Add AI Actions Support."
 msgstr "Yapay zekâ eylemleri desteği ekle"

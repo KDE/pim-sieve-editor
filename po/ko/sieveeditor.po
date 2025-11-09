@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-11 09:07+0000\n"
+"POT-Creation-Date: 2025-11-09 00:43+0000\n"
 "PO-Revision-Date: 2025-10-09 01:08+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -306,135 +306,135 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "스크립트 닫기"
 
-#: sieveeditormainwindow.cpp:230
+#: sieveeditormainwindow.cpp:195
 #, kde-format
 msgid "Network is Up."
 msgstr "네트워크 사용 가능."
 
-#: sieveeditormainwindow.cpp:232
+#: sieveeditormainwindow.cpp:197
 #, kde-format
 msgid "Network is Down."
 msgstr "네트워크 사용 불가능."
 
-#: sieveeditormainwindow.cpp:254
+#: sieveeditormainwindow.cpp:219
 #, kde-format
 msgid "Upload"
 msgstr "업로드"
 
-#: sieveeditormainwindow.cpp:257
+#: sieveeditormainwindow.cpp:222
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Sieve 서버 추가…"
 
-#: sieveeditormainwindow.cpp:261
+#: sieveeditormainwindow.cpp:226
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "스크립트 삭제"
 
-#: sieveeditormainwindow.cpp:267
+#: sieveeditormainwindow.cpp:232
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "새 스크립트 만들기…"
 
-#: sieveeditormainwindow.cpp:273
+#: sieveeditormainwindow.cpp:238
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "스크립트 편집…"
 
-#: sieveeditormainwindow.cpp:278
+#: sieveeditormainwindow.cpp:243
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "스크립트 비활성화"
 
-#: sieveeditormainwindow.cpp:283
+#: sieveeditormainwindow.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "목록 새로 고침"
 
-#: sieveeditormainwindow.cpp:289
+#: sieveeditormainwindow.cpp:254
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "줄로 이동…"
 
-#: sieveeditormainwindow.cpp:306
+#: sieveeditormainwindow.cpp:271
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "가져오기…"
 
-#: sieveeditormainwindow.cpp:312
+#: sieveeditormainwindow.cpp:277
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "공유…"
 
-#: sieveeditormainwindow.cpp:320
+#: sieveeditormainwindow.cpp:285
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "맞춤법 검사…"
 
-#: sieveeditormainwindow.cpp:326
+#: sieveeditormainwindow.cpp:291
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "문법 검사"
 
-#: sieveeditormainwindow.cpp:331
+#: sieveeditormainwindow.cpp:296
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "그래픽 환경에서 규칙 생성…"
 
-#: sieveeditormainwindow.cpp:336
+#: sieveeditormainwindow.cpp:301
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "주석"
 
-#: sieveeditormainwindow.cpp:341
+#: sieveeditormainwindow.cpp:306
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "주석 해제"
 
-#: sieveeditormainwindow.cpp:369
+#: sieveeditormainwindow.cpp:334
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "책갈피(&B)"
 
-#: sieveeditormainwindow.cpp:374
+#: sieveeditormainwindow.cpp:339
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Sieve 스크립트 디버그…"
 
-#: sieveeditormainwindow.cpp:379
+#: sieveeditormainwindow.cpp:344
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "자동 줄 바꿈"
 
-#: sieveeditormainwindow.cpp:401
+#: sieveeditormainwindow.cpp:366
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "IMAP 설정 가져오기…"
 
-#: sieveeditormainwindow.cpp:429
+#: sieveeditormainwindow.cpp:390
 #, kde-format
 msgid "What's new"
 msgstr "새로운 기능"
 
-#: sieveeditormainwindow.cpp:453
+#: sieveeditormainwindow.cpp:414
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
@@ -442,7 +442,7 @@ msgid ""
 msgstr ""
 "<qt>메뉴 표시줄을 완전히 숨깁니다. %1 키를 눌러서 다시 볼 수 있습니다.</qt>"
 
-#: sieveeditormainwindow.cpp:456
+#: sieveeditormainwindow.cpp:417
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
@@ -799,7 +799,7 @@ msgstr "삭제"
 msgid "Add AI quick Ask support."
 msgstr "AI 빠른 질문 지원을 추가했습니다."
 
-#: whatsnew/whatsnewtranslations.cpp:39
+#: whatsnew/whatsnewtranslations.cpp:27
 #, kde-format
 msgid "Add AI Actions Support."
 msgstr "AI 동작 지원을 추가했습니다."
