@@ -378,7 +378,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://invent.kde.org/pim/pim-sieve-editor.git"
+                    "url": "https://invent.kde.org/pim/pim-sieve-editor.git",
+                    "branch": "release/25.12"
                 }
             ],
             "config-opts": [
