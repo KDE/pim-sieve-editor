@@ -141,7 +141,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/pim/ksmtp.git",
-                    "branch": "master"
+                    "branch": "release/25.12"
                 }
             ],
             "config-opts": [
@@ -155,7 +155,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/pim/libkgapi.git",
-                    "branch": "master"
+                    "branch": "release/25.12"
                 }
             ],
             "config-opts": [
@@ -169,7 +169,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/pim/kmailtransport.git",
-                    "branch": "master"
+                    "branch": "release/25.12"
                 }
             ]
         },
@@ -180,7 +180,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/pim/kmime.git",
-                    "branch": "master"
+                    "branch": "release/25.12"
                 }
             ],
             "config-opts": [
@@ -194,7 +194,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/pim/akonadi.git",
-                    "branch": "master"
+                    "branch": "release/25.12"
                 }
             ],
             "config-opts": [
@@ -208,7 +208,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/pim/akonadi-mime.git",
-                    "branch": "master"
+                    "branch": "release/25.12"
                 }
             ],
             "config-opts": [
@@ -222,7 +222,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/pim/kimap.git",
-                    "branch": "master"
+                    "branch": "release/25.12"
                 }
             ],
             "config-opts": [
@@ -250,7 +250,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/pim/grantleetheme.git",
-                    "branch": "master"
+                    "branch": "release/25.12"
                 }
             ],
             "config-opts": [
@@ -264,7 +264,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/pim/akonadi-contacts.git",
-                    "branch": "master"
+                    "branch": "release/25.12"
                 }
             ],
             "config-opts": [
@@ -278,7 +278,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/pim/kldap.git",
-                    "branch": "master"
+                    "branch": "release/25.12"
                 }
             ],
             "config-opts": [
@@ -292,7 +292,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/pim/libkdepim.git",
-                    "branch": "master"
+                    "branch": "release/25.12"
                 }
             ],
             "config-opts": [
@@ -320,7 +320,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/pim/pimcommon.git",
-                    "branch": "master"
+                    "branch": "release/25.12"
                 }
             ],
             "config-opts": [
@@ -335,7 +335,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/pim/kpimtextedit.git",
-                    "branch": "master"
+                    "branch": "release/25.12"
                 }
             ],
             "config-opts": [
@@ -349,7 +349,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/pim/kidentitymanagement.git",
-                    "branch": "master"
+                    "branch": "release/25.12"
                 }
             ],
             "config-opts": [
@@ -364,7 +364,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/pim/libksieve.git",
-                    "branch": "master"
+                    "branch": "release/25.12"
                 }
             ],
             "config-opts": [
