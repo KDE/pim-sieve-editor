@@ -77,7 +77,7 @@ bool SieveEditorUtil::SieveServerConfig::operator==(const SieveEditorUtil::Sieve
 void SieveEditorUtil::writeServerSieveConfig(const QList<SieveServerConfig> &lstConfig)
 {
     KSharedConfigPtr cfg = KSharedConfig::openConfig();
-    const QRegularExpression re(QStringLiteral("^ServerSieve (.+)$"));
+    static const QRegularExpression re(QStringLiteral("^ServerSieve (.+)$"));
     // Delete Old Group
     const QStringList groups = cfg->groupList().filter(re);
     for (const QString &conf : groups) {
@@ -151,7 +151,7 @@ QString SieveEditorUtil::walletFolderName()
 void SieveEditorUtil::addServerSieveConfig(const SieveEditorUtil::SieveServerConfig &conf)
 {
     KSharedConfigPtr cfg = KSharedConfig::openConfig();
-    const QRegularExpression re(QStringLiteral("^ServerSieve (.+)$"));
+    static const QRegularExpression re(QStringLiteral("^ServerSieve (.+)$"));
     const QStringList groups = cfg->groupList().filter(re);
 
     writeSieveSettings(cfg, conf, groups.count());
