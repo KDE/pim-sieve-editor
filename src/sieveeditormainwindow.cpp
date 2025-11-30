@@ -61,7 +61,7 @@
 #endif
 
 #include "whatsnew/whatsnewtranslations.h"
-
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 static const char mySieveEditorMainWindowConfigGroupName[] = "SieveEditorMainWindow";
@@ -372,14 +372,15 @@ void SieveEditorMainWindow::setupActions()
     connect(mShowFullScreenAction, &QAction::toggled, this, &SieveEditorMainWindow::slotFullScreen);
 
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+    const QString defaultUrlPath = QStringLiteral("https://origin.cdn.kde.org/ci-builds/pim/pim-sieve-editor/");
+    const QString stableBranch = u"26.04"_s;
+    bool stableVersion = false;
 #if SIEVEEDITOR_STABLE_VERSION
-    const QString url = QStringLiteral("https://cdn.kde.org/ci-builds/pim/pim-sieve-editor/26.04/windows/");
-#else
-    const QString url = QStringLiteral("https://cdn.kde.org/ci-builds/pim/pim-sieve-editor/master/windows/");
+    stableVersion = true;
 #endif
-    mVerifyNewVersionWidget->addOsUrlInfo(TextAddonsWidgets::VerifyNewVersionWidget::OsVersion::Windows, url);
+    mVerifyNewVersionWidget->generateUrlInfo(stableBranch, defaultUrlPath, stableVersion);
     auto verifyNewVersionAction = mVerifyNewVersionWidget->verifyNewVersionAction();
-    ac->addAction(QStringLiteral("verify_check_version"), verifyNewVersionAction);
+    ac->addAction(u"verify_check_version"_s, verifyNewVersionAction);
 #endif
 
     auto manager = KColorSchemeManager::instance();
