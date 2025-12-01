@@ -811,21 +811,3 @@ msgstr "Afegeix la implementació de pregunta ràpida."
 #, kde-format
 msgid "Add AI Actions Support."
 msgstr "Afegeix la implementació d'accions IA."
-
-#~ msgid "Configure..."
-#~ msgstr "Configura..."
-
-#~ msgid "Import Sieve Settings..."
-#~ msgstr "Importa la configuració de «Sieve»..."
-
-#~ msgid "Add Sieve Server..."
-#~ msgstr "Afegeix un servidor de «Sieve»..."
-
-#~ msgid "Create Rules Graphically..."
-#~ msgstr "Crea regles gràficament..."
-
-#~ msgid "Import IMAP Settings..."
-#~ msgstr "Importa la configuració de l'IMAP..."
-
-#~ msgid "Add..."
-#~ msgstr "Afegeix..."
