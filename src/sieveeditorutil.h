@@ -46,5 +46,6 @@ void writeSieveSettings(const KSharedConfigPtr &cfg, const SieveEditorUtil::Siev
 [[nodiscard]] QString walletFolderName();
 }
 Q_DECLARE_TYPEINFO(SieveEditorUtil::SieveServerConfig, Q_RELOCATABLE_TYPE);
+class QDebug;
 LIBSIEVEEDITOR_TESTS_EXPORT QDebug operator<<(QDebug d, const SieveEditorUtil::SieveAccountSettings &settings);
 LIBSIEVEEDITOR_TESTS_EXPORT QDebug operator<<(QDebug d, const SieveEditorUtil::SieveServerConfig &settings);

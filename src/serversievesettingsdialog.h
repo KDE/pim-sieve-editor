@@ -6,10 +6,13 @@
 
 #pragma once
 
-#include "sieveeditorutil.h"
 #include <QDialog>
 class ServerSieveSettings;
 class QPushButton;
+namespace SieveEditorUtil
+{
+struct SieveServerConfig;
+}
 class ServerSieveSettingsDialog : public QDialog
 {
     Q_OBJECT
