@@ -12,7 +12,7 @@ set(SIEVEEDITOR_RELEASE_VERSION_DATE "26.03.10") # yy.MM.dd
 # Use true if stable version => we will check specific version
 set(SIEVEEDITOR_STABLE_VERSION false)
 
-set(KF_MIN_VERSION "6.19.0")
+set(KF_MIN_VERSION "6.20.0")
 set(QT_REQUIRED_VERSION "6.9.0")
 set(QT6KEYCHAIN_LIB_VERSION "0.15.0")
 set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
