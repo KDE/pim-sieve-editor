@@ -131,7 +131,7 @@ find_package(KF6XmlGui ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6WindowSystem ${KF_MIN_VERSION} REQUIRED)
 
 find_package(KF6DocTools ${KF_MIN_VERSION})
-find_package(KF6I18n ${KF_MIN_VERSION})
+find_package(KF6I18n ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6IconThemes ${KF_MIN_VERSION} QUIET)
 set_package_properties(
     KF6DocTools
