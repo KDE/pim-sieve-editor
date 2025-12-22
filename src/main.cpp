@@ -9,6 +9,9 @@
 #include "sieveeditormainwindow.h"
 #include <KAboutData>
 #include <KCrash>
+#include <KIconTheme>
+#include <KLocalizedString>
+#include <KStyleManager>
 #if WITH_DBUS
 #include <KDBusService>
 #else
@@ -24,7 +27,6 @@
 #endif
 #endif
 
-#include <KLocalizedString>
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QTextStream>
@@ -32,10 +34,6 @@
 #include "userfeedback/userfeedbackmanager.h"
 #include <KUserFeedback/Provider>
 #endif
-
-#include <KIconTheme>
-
-#include <KStyleManager>
 
 int main(int argc, char **argv)
 {
