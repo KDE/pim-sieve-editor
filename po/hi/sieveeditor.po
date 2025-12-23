@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:43+0000\n"
+"POT-Creation-Date: 2025-12-23 00:42+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -93,33 +93,33 @@ msgstr "आयात प्रगति पर है…"
 msgid "Finish"
 msgstr "खत्म करना"
 
-#: main.cpp:53
+#: main.cpp:51
 #, kde-format
 msgid "KSieve Editor"
 msgstr "के-सीव संपादक"
 
-#: main.cpp:55
+#: main.cpp:53
 #, kde-format
 msgid "Sieve Editor"
 msgstr "छलनी संपादक"
 
-#: main.cpp:57
+#: main.cpp:55
 #, kde-format
 msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "कॉपीराइट © 2013-%1 sieveeditor लेखक"
 
-#: main.cpp:58
+#: main.cpp:56
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "लॉरेंट मोंटेल"
 
-#: main.cpp:58
+#: main.cpp:56
 #, kde-format
 msgid "Maintainer"
 msgstr "मेंटेनर"
 
-#: main.cpp:67
+#: main.cpp:65
 #, kde-format
 msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
