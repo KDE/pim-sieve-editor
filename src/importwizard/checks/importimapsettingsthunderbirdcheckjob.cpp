@@ -256,9 +256,9 @@ void ImportImapSettingsThunderbirdCheckJob::insertIntoMap(const QString &line)
     QString valueStr = newLine.right(newLine.length() - pos - 2);
     if (valueStr.at(0) == u'"') {
         valueStr.remove(0, 1);
-        const int pos(valueStr.length() - 1);
-        if (valueStr.at(pos) == u'"') {
-            valueStr.remove(pos, 1);
+        const int positionDoubleQuote(valueStr.length() - 1);
+        if (valueStr.at(positionDoubleQuote) == u'"') {
+            valueStr.remove(positionDoubleQuote, 1);
         }
         // Store as String
         mHashConfig.insert(key, valueStr);
