@@ -508,7 +508,6 @@ void SieveEditorMainWindow::closeEvent(QCloseEvent *e)
 {
     if (mMainWidget->sieveEditorMainWidget()->needToSaveScript()) {
         e->ignore();
-        return;
     } else {
         e->accept();
     }
