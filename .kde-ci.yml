@@ -20,3 +20,4 @@ Options:
  require-passing-tests-on: ['@all']
  tests-run-in-parallel: True
  cmake-options: '-DWARNINGS_AS_ERRORS=ON'
+ enable-lsan: True
