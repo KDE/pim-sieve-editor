@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Giovanni Sora <g.sora@tioscali.it>, 2014.
-# SPDX-FileCopyrightText: 2014, 2020, 2021, 2022, 2023, 2024, 2025 G.Sora <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2014, 2020, 2021, 2022, 2023, 2024, 2025, 2026 G.Sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:41+0000\n"
-"PO-Revision-Date: 2025-05-27 14:55+0200\n"
+"PO-Revision-Date: 2026-02-05 16:18+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -804,10 +804,8 @@ msgid "Remove"
 msgstr "Remove"
 
 #: whatsnew/whatsnewtranslations.cpp:17
-#, fuzzy
-#| msgid "Add AI Actions Support."
 msgid "Add AI quick Ask support."
-msgstr "Adde supporto de Actiones de IA (AI)"
+msgstr "Adde supporto de Demanda rapide de IA (AI)"
 
 #: whatsnew/whatsnewtranslations.cpp:39
 #, kde-format
