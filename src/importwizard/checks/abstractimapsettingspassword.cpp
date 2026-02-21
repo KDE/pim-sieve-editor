@@ -13,11 +13,10 @@ AbstractImapSettingsPassword::AbstractImapSettingsPassword(QObject *parent)
 
 AbstractImapSettingsPassword::~AbstractImapSettingsPassword() = default;
 
-void AbstractImapSettingsPassword::importPasswords(const SieveEditorUtil::SieveServerConfig &config, const QString &filename, bool reuseImapSettings)
+void AbstractImapSettingsPassword::importPasswords([[maybe_unused]] const SieveEditorUtil::SieveServerConfig &config,
+                                                   [[maybe_unused]] const QString &filename,
+                                                   [[maybe_unused]] bool reuseImapSettings)
 {
-    Q_UNUSED(config)
-    Q_UNUSED(filename)
-    Q_UNUSED(reuseImapSettings)
 }
 
 #include "moc_abstractimapsettingspassword.cpp"

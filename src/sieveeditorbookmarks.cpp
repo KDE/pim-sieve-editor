@@ -41,10 +41,8 @@ QMenu *SieveEditorBookmarks::menu() const
     return mMenu;
 }
 
-void SieveEditorBookmarks::openBookmark(const KBookmark &bm, Qt::MouseButtons mb, Qt::KeyboardModifiers km)
+void SieveEditorBookmarks::openBookmark(const KBookmark &bm, [[maybe_unused]] Qt::MouseButtons mb, [[maybe_unused]] Qt::KeyboardModifiers km)
 {
-    Q_UNUSED(mb)
-    Q_UNUSED(km)
     Q_EMIT openUrl(bm.url());
 }
 

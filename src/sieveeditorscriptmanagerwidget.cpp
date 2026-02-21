@@ -27,9 +27,8 @@ SieveEditorScriptManagerWidget::SieveEditorScriptManagerWidget(QWidget *parent)
 
 SieveEditorScriptManagerWidget::~SieveEditorScriptManagerWidget() = default;
 
-void SieveEditorScriptManagerWidget::slotUpdateButtons(QTreeWidgetItem *item)
+void SieveEditorScriptManagerWidget::slotUpdateButtons([[maybe_unused]] QTreeWidgetItem *item)
 {
-    Q_UNUSED(item)
     bool newScriptAction;
     bool editScriptAction;
     bool deleteScriptAction;
