@@ -18,3 +18,5 @@ TextAutoGenerateText::TextAutoGenerateTextToolInternalJob *SieveEditorToolIntern
     Q_UNUSED(toolName);
     return {};
 }
+
+#include "moc_sieveeditortoolinternalinterface.cpp"
