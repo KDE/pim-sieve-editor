@@ -104,6 +104,8 @@ if(HAVE_SIEVEEDITOR_TEXTAUTOGENERATE_INTERNAL_TOOLS)
         PRIVATE
             sieveeditortoolinternalinterface.h
             sieveeditortoolinternalinterface.cpp
+            internaltoolsjob/addnewscripttoolinternaljob.h
+            internaltoolsjob/addnewscripttoolinternaljob.cpp
     )
 endif()
 
