@@ -1,0 +1,21 @@
+[
+    {
+        "function": {
+            "description": "This tools allows to create a new script sieve",
+            "name": "create_new_script",
+            "parameters": {
+                "properties": {
+                    "title": {
+                        "description": "Name of script",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "title"
+                ],
+                "type": "object"
+            }
+        },
+        "type": "function"
+    }
+]

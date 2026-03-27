@@ -47,6 +47,7 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
 
 #if HAVE_SIEVEEDITOR_TEXTAUTOGENERATE_INTERNAL_TOOLS
     auto interface = new SieveEditorToolInternalInterface(this);
+    interface->loadInternalTools(u":/internaltools/sieveeditor-internal-tools.json"_s);
     mManager->setTextAutoGenerateTextToolInternalInterface(interface);
 #endif
 

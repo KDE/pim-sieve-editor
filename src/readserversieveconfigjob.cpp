@@ -5,7 +5,6 @@
 */
 
 #include "readserversieveconfigjob.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "sieveeditor_debug.h"
 
@@ -14,6 +13,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QRegularExpression>
 
 using namespace QKeychain;
+using namespace Qt::Literals::StringLiterals;
 
 ReadServerSieveConfigJob::ReadServerSieveConfigJob(QObject *parent)
     : QObject(parent)

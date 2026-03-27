@@ -1,13 +1,11 @@
-<!DOCTYPE RCC>
-<!--
-    SPDX-FileCopyrightText: 2014-2026 Laurent Montel <montel@kde.org>
-    SPDX-License-Identifier: CC0-1.0
--->
-<RCC version="1.0">
+<RCC>
     <qresource prefix="/kxmlgui5/sieveeditor">
         <file>sieveeditorui.rc</file>
     </qresource>
     <qresource prefix="/sieveeditor">
         <file alias="sieveeditor.svg">icons/sc-apps-sieveeditor.svg</file>
+    </qresource>
+    <qresource prefix="/internaltools">
+        <file alias="sieveeditor-internal-tools.json">data/sieveeditor-internal-tools.json</file>
     </qresource>
 </RCC>
