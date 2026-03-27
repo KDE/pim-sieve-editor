@@ -5,13 +5,13 @@
 */
 
 #include "sieveeditormainwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "sieveeditoremptytabwidgetlabel.h"
 #include "sieveeditorpagewidget.h"
 #include "sieveeditorscriptmanagerwidget.h"
 #include "sieveeditortabwidget.h"
 #include <KSieveUi/SieveEditor>
+#include <TextAutoGenerateText/TextAutoGenerateManager>
 
 #include <KColorScheme>
 #include <KConfigGroup>
@@ -24,6 +24,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStackedWidget>
 #include <QTabBar>
 
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 static const char mySieveEditorMainWidgetConfigGroupName[] = "SieveEditorMainWidget";
@@ -34,6 +35,9 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
     , mScriptManagerWidget(new SieveEditorScriptManagerWidget(this))
     , mStackedWidget(new QStackedWidget(this))
     , mEditorEmptyLabel(new SieveEditorEmptyTabWidgetLabel(this))
+#if HAVE_TEXT_AUTOGENERATE_TEXT
+    , mManager(new TextAutoGenerateText::TextAutoGenerateManager(this))
+#endif
 {
     mStackedWidget->setObjectName("stackedwidget"_L1);
 
@@ -121,6 +125,9 @@ void SieveEditorMainWidget::slotCreateScriptPage(const KSieveUi::ManageSieveWidg
         mTabWidget->setCurrentWidget(page);
     } else {
         auto editor = new SieveEditorPageWidget;
+#if HAVE_TEXT_AUTOGENERATE_TEXT
+        editor->setTextAutoGenerateManager(mManager);
+#endif
         connect(editor, &SieveEditorPageWidget::refreshList, this, &SieveEditorMainWidget::updateScriptList);
         connect(editor, &SieveEditorPageWidget::scriptModified, this, &SieveEditorMainWidget::slotScriptModified);
         connect(editor, &SieveEditorPageWidget::modeEditorChanged, this, &SieveEditorMainWidget::modeEditorChanged);

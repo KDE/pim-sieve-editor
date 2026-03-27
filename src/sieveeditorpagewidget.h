@@ -5,6 +5,7 @@
 */
 
 #pragma once
+#include "config-pim-sieve-editor.h"
 #include <KSieveUi/ManageSieveWidget>
 #include <KSieveUi/SieveEditorWidget>
 #include <QUrl>
@@ -17,7 +18,12 @@ namespace KSieveUi
 {
 class SieveEditorWidget;
 }
-
+#if HAVE_TEXT_AUTOGENERATE_TEXT
+namespace TextAutoGenerateText
+{
+class TextAutoGenerateManager;
+}
+#endif
 class SieveEditorPageWidget : public QWidget
 {
     Q_OBJECT
@@ -75,6 +81,9 @@ public:
     bool isTextEditor() const;
     void renameScriptName(const QString &newName);
     [[nodiscard]] bool uploadScriptAndCloseTab(int index);
+#if HAVE_TEXT_AUTOGENERATE_TEXT
+    void setTextAutoGenerateManager(TextAutoGenerateText::TextAutoGenerateManager *manager);
+#endif
 Q_SIGNALS:
     void refreshList();
     void scriptModified(bool, SieveEditorPageWidget *);

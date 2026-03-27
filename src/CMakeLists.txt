@@ -139,6 +139,11 @@ target_link_libraries(
         KF6::WindowSystem
         ${libsieveeditor_userfeedback_LIB}
 )
+
+if(TARGET KF6::TextAutoGenerateText)
+    target_link_libraries(libsieveeditor PRIVATE KF6::TextAutoGenerateText)
+endif()
+
 target_link_libraries(libsieveeditor PRIVATE qt6keychain)
 
 target_link_libraries(libsieveeditor PRIVATE KF6::TextAddonsWidgets)

@@ -32,6 +32,13 @@ SieveEditorPageWidget::SieveEditorPageWidget(QWidget *parent)
 
 SieveEditorPageWidget::~SieveEditorPageWidget() = default;
 
+#if HAVE_TEXT_AUTOGENERATE_TEXT
+void SieveEditorPageWidget::setTextAutoGenerateManager(TextAutoGenerateText::TextAutoGenerateManager *manager)
+{
+    mSieveEditorWidget->setTextAutoGenerateManager(manager);
+}
+#endif
+
 void SieveEditorPageWidget::slotCheckSyntaxClicked()
 {
     const QString script = mSieveEditorWidget->script();

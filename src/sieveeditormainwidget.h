@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include "config-pim-sieve-editor.h"
 #include <KSieveUi/ManageSieveWidget>
 #include <KSieveUi/SieveEditorWidget>
 #include <QSplitter>
@@ -110,4 +111,7 @@ private:
     SieveEditorScriptManagerWidget *const mScriptManagerWidget;
     QStackedWidget *const mStackedWidget;
     SieveEditorEmptyTabWidgetLabel *const mEditorEmptyLabel;
+#if HAVE_TEXT_AUTOGENERATE_TEXT
+    TextAutoGenerateText::TextAutoGenerateManager *const mManager;
+#endif
 };
