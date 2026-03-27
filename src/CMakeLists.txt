@@ -98,6 +98,14 @@ target_sources(
         whatsnew/whatsnewtranslations.h
         whatsnew/whatsnewtranslations.cpp
 )
+if(HAVE_TEXTAUTOGENERATE_INTERNAL_TOOLS)
+    target_sources(
+        libsieveeditor
+        PRIVATE
+            sieveeditortoolinternalinterface.h
+            sieveeditortoolinternalinterface.cpp
+    )
+endif()
 
 ki18n_wrap_ui(libsieveeditor
     ui/serversievesettings.ui
@@ -207,7 +215,7 @@ install(
         ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
-install(PROGRAMS org.kde.sieveeditor.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(PROGRAMS data/org.kde.sieveeditor.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 install(FILES settings/sieveeditorglobalconfig.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(
@@ -223,7 +231,7 @@ if(BUILD_TESTING)
     add_subdirectory(importwizard/tests)
 endif()
 
-install(FILES org.kde.sieveeditor.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+install(FILES data/org.kde.sieveeditor.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 ecm_qt_install_logging_categories(EXPORT SIEVEEDITOR FILE sieveeditor.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 add_subdirectory(icons)
