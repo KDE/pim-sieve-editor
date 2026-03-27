@@ -15,4 +15,6 @@ SieveEditorToolInternalInterface::~SieveEditorToolInternalInterface() = default;
 
 TextAutoGenerateText::TextAutoGenerateTextToolInternalJob *SieveEditorToolInternalInterface::callTool(const QByteArray &toolName)
 {
+    Q_UNUSED(toolName);
+    return {};
 }

@@ -24,6 +24,10 @@
 #include <QStackedWidget>
 #include <QTabBar>
 
+#if HAVE_SIEVEEDITOR_TEXTAUTOGENERATE_INTERNAL_TOOLS
+#include "sieveeditortoolinternalinterface.h"
+#endif
+
 using namespace Qt::Literals::StringLiterals;
 namespace
 {
@@ -40,6 +44,11 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
 #endif
 {
     mStackedWidget->setObjectName("stackedwidget"_L1);
+
+#if HAVE_SIEVEEDITOR_TEXTAUTOGENERATE_INTERNAL_TOOLS
+    auto interface = new SieveEditorToolInternalInterface(this);
+    mManager->setTextAutoGenerateTextToolInternalInterface(interface);
+#endif
 
     connect(mTabWidget, &SieveEditorTabWidget::tabCloseRequestedIndex, this, &SieveEditorMainWidget::slotTabCloseRequested);
     connect(mTabWidget, &SieveEditorTabWidget::tabRemoveAllExclude, this, &SieveEditorMainWidget::slotTabRemoveAllExclude);

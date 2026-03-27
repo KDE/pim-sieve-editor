@@ -98,7 +98,7 @@ target_sources(
         whatsnew/whatsnewtranslations.h
         whatsnew/whatsnewtranslations.cpp
 )
-if(HAVE_TEXTAUTOGENERATE_INTERNAL_TOOLS)
+if(HAVE_SIEVEEDITOR_TEXTAUTOGENERATE_INTERNAL_TOOLS)
     target_sources(
         libsieveeditor
         PRIVATE
