@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-23 00:42+0000\n"
+"POT-Creation-Date: 2026-03-28 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -293,12 +293,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "工具 > 导入 IMAP 设置"
 
-#: sieveeditormainwidget.cpp:607
+#: sieveeditormainwidget.cpp:624
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "脚本已修改。您想要在关闭前保存吗？"
 
-#: sieveeditormainwidget.cpp:608
+#: sieveeditormainwidget.cpp:625
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"
@@ -455,23 +455,23 @@ msgstr "没有配置过滤 URL"
 msgid "(Disabled) %1"
 msgstr "(已禁用) %1"
 
-#: sieveeditorpagewidget.cpp:41
+#: sieveeditorpagewidget.cpp:48
 #, kde-format
 msgid "Uploading script to server for checking it, please wait…"
 msgstr ""
 
-#: sieveeditorpagewidget.cpp:134
+#: sieveeditorpagewidget.cpp:141
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "过滤脚本已成功上传。"
 
-#: sieveeditorpagewidget.cpp:134
+#: sieveeditorpagewidget.cpp:141
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "上传过滤脚本"
 
-#: sieveeditorpagewidget.cpp:147
+#: sieveeditorpagewidget.cpp:154
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -482,13 +482,13 @@ msgstr ""
 "服务器回应：\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:150 sieveeditorpagewidget.cpp:155
+#: sieveeditorpagewidget.cpp:157 sieveeditorpagewidget.cpp:162
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Sieve 错误"
 
-#: sieveeditorpagewidget.cpp:153
+#: sieveeditorpagewidget.cpp:160
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -497,18 +497,18 @@ msgstr ""
 "上传 Sieve 脚本失败。\n"
 "原因未知\n"
 
-#: sieveeditorpagewidget.cpp:165
+#: sieveeditorpagewidget.cpp:172
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "脚本“%1”是新建的。您想要保存它吗？"
 
-#: sieveeditorpagewidget.cpp:166 sieveeditorpagewidget.cpp:179
+#: sieveeditorpagewidget.cpp:173 sieveeditorpagewidget.cpp:186
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "保存脚本"
 
-#: sieveeditorpagewidget.cpp:178
+#: sieveeditorpagewidget.cpp:185
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "脚本“%1”已修改。您想要保存它吗？"

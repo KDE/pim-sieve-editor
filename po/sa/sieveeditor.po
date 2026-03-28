@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-23 00:42+0000\n"
+"POT-Creation-Date: 2026-03-28 00:45+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -296,12 +296,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "साधनानि > IMAP सेटिंग्स् आयातयन्तु"
 
-#: sieveeditormainwidget.cpp:607
+#: sieveeditormainwidget.cpp:624
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "स्क्रिप्ट् परिवर्तिता आसीत् । किं भवन्तः बन्दीकरणात् पूर्वं रक्षितुं इच्छन्ति?"
 
-#: sieveeditormainwidget.cpp:608
+#: sieveeditormainwidget.cpp:625
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"
@@ -459,23 +459,23 @@ msgstr "कोऽपि Sieve URL विन्यस्तः नास्ति
 msgid "(Disabled) %1"
 msgstr "(अक्षमम्) %1"
 
-#: sieveeditorpagewidget.cpp:41
+#: sieveeditorpagewidget.cpp:48
 #, kde-format
 msgid "Uploading script to server for checking it, please wait…"
 msgstr "तस्य जाँचार्थं सर्वरे स्क्रिप्ट् अपलोड् करणं, कृपया प्रतीक्ष्यताम्..."
 
-#: sieveeditorpagewidget.cpp:134
+#: sieveeditorpagewidget.cpp:141
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "Sieve स्क्रिप्ट् सफलतया अपलोड् अभवत् ।"
 
-#: sieveeditorpagewidget.cpp:134
+#: sieveeditorpagewidget.cpp:141
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "चलनी स्क्रिप्ट अपलोड"
 
-#: sieveeditorpagewidget.cpp:147
+#: sieveeditorpagewidget.cpp:154
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -486,13 +486,13 @@ msgstr ""
 "सर्वरः प्रतिवदति स्म यत् -\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:150 sieveeditorpagewidget.cpp:155
+#: sieveeditorpagewidget.cpp:157 sieveeditorpagewidget.cpp:162
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "चलनी त्रुटि"
 
-#: sieveeditorpagewidget.cpp:153
+#: sieveeditorpagewidget.cpp:160
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -501,18 +501,18 @@ msgstr ""
 "Sieve स्क्रिप्ट् अपलोड् करणं विफलम् अभवत् ।\n"
 "अज्ञातकारणम्\n"
 
-#: sieveeditorpagewidget.cpp:165
+#: sieveeditorpagewidget.cpp:172
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "'%1' इति स्क्रिप्ट् नूतना अस्ति । किं त्वं तत् रक्षितुम् इच्छसि ?"
 
-#: sieveeditorpagewidget.cpp:166 sieveeditorpagewidget.cpp:179
+#: sieveeditorpagewidget.cpp:173 sieveeditorpagewidget.cpp:186
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "स्क्रिप्ट् रक्षतु"
 
-#: sieveeditorpagewidget.cpp:178
+#: sieveeditorpagewidget.cpp:185
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "'%1' इति स्क्रिप्ट् परिवर्तिता । किं त्वं तत् रक्षितुम् इच्छसि ?"
