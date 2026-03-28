@@ -2,15 +2,15 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 cmake_minimum_required(VERSION 3.27)
-set(PIM_VERSION "6.6.90")
+set(PIM_VERSION "6.7.0")
 project(sieveeditor VERSION ${PIM_VERSION})
-set(RELEASE_SERVICE_VERSION "26.03.90")
+set(RELEASE_SERVICE_VERSION "26.04.0")
 
 # Update it for each release
-set(SIEVEEDITOR_RELEASE_VERSION_DATE "26.03.26") # yy.MM.dd
+set(SIEVEEDITOR_RELEASE_VERSION_DATE "26.04.10") # yy.MM.dd
 
 # Use true if stable version => we will check specific version
-set(SIEVEEDITOR_STABLE_VERSION false)
+set(SIEVEEDITOR_STABLE_VERSION true)
 
 set(KF_MIN_VERSION "6.22.0")
 set(QT_REQUIRED_VERSION "6.9.0")
