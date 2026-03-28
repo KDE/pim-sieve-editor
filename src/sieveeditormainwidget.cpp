@@ -49,6 +49,7 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
     auto interface = new SieveEditorToolInternalInterface(this);
     interface->loadInternalTools(u":/internaltools/sieveeditor-internal-tools.json"_s);
     mManager->setTextAutoGenerateTextToolInternalInterface(interface);
+    mManager->setHaveInsertText(true);
     connect(mManager, &TextAutoGenerateText::TextAutoGenerateManager::insertBlockCode, this, &SieveEditorMainWidget::slotInsertBlockCode);
 #endif
 
