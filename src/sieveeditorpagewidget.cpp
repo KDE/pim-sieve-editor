@@ -39,6 +39,12 @@ void SieveEditorPageWidget::setTextAutoGenerateManager(TextAutoGenerateText::Tex
 }
 #endif
 
+void SieveEditorPageWidget::insertText(const QString &str)
+{
+    Q_UNUSED(str);
+    // TODO mSieveEditorWidget->insertText(str);
+}
+
 void SieveEditorPageWidget::slotCheckSyntaxClicked()
 {
     const QString script = mSieveEditorWidget->script();

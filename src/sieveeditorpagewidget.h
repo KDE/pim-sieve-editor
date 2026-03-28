@@ -84,6 +84,7 @@ public:
 #if HAVE_TEXT_AUTOGENERATE_TEXT
     void setTextAutoGenerateManager(TextAutoGenerateText::TextAutoGenerateManager *manager);
 #endif
+    void insertText(const QString &str);
 Q_SIGNALS:
     void refreshList();
     void scriptModified(bool, SieveEditorPageWidget *);

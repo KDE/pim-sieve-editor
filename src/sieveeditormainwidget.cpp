@@ -49,6 +49,7 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
     auto interface = new SieveEditorToolInternalInterface(this);
     interface->loadInternalTools(u":/internaltools/sieveeditor-internal-tools.json"_s);
     mManager->setTextAutoGenerateTextToolInternalInterface(interface);
+    connect(mManager, &TextAutoGenerateText::TextAutoGenerateManager::insertBlockCode, this, &SieveEditorMainWidget::slotInsertBlockCode);
 #endif
 
     connect(mTabWidget, &SieveEditorTabWidget::tabCloseRequestedIndex, this, &SieveEditorMainWidget::slotTabCloseRequested);
@@ -80,6 +81,17 @@ SieveEditorMainWidget::~SieveEditorMainWidget()
     KConfigGroup myGroup(KSharedConfig::openStateConfig(), QLatin1StringView(mySieveEditorMainWidgetConfigGroupName));
     myGroup.writeEntry("mainSplitter", sizes());
     myGroup.sync();
+}
+
+void SieveEditorMainWidget::slotInsertBlockCode(const QString &str)
+{
+    QWidget *w = mTabWidget->currentWidget();
+    if (w) {
+        auto page = qobject_cast<SieveEditorPageWidget *>(w);
+        if (page) {
+            page->insertText(str);
+        }
+    }
 }
 
 QWidget *SieveEditorMainWidget::hasExistingPage(const QUrl &url)

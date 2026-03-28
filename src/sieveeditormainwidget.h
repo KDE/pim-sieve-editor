@@ -104,6 +104,7 @@ private:
     void slotTabRemoveAllExclude(int index);
     void slotTabCloseAllRequested();
     void updateStackedWidget();
+    void slotInsertBlockCode(const QString &str);
     QWidget *hasExistingPage(const QUrl &url);
     QColor mModifiedScriptColor;
     QColor mScriptColor;
