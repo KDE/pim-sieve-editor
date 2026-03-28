@@ -41,8 +41,7 @@ void SieveEditorPageWidget::setTextAutoGenerateManager(TextAutoGenerateText::Tex
 
 void SieveEditorPageWidget::insertText(const QString &str)
 {
-    Q_UNUSED(str);
-    // TODO mSieveEditorWidget->insertText(str);
+    mSieveEditorWidget->insertText(str);
 }
 
 void SieveEditorPageWidget::slotCheckSyntaxClicked()
