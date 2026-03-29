@@ -5,7 +5,8 @@
 */
 
 #include "sieveeditortoolinternalinterface.h"
-
+#include "internaltoolsjob/addnewscripttoolinternaljob.h"
+using namespace Qt::Literals::StringLiterals;
 SieveEditorToolInternalInterface::SieveEditorToolInternalInterface(QObject *parent)
     : TextAutoGenerateText::TextAutoGenerateTextToolInternalInterface{parent}
 {
@@ -15,8 +16,12 @@ SieveEditorToolInternalInterface::~SieveEditorToolInternalInterface() = default;
 
 TextAutoGenerateText::TextAutoGenerateTextToolInternalJob *SieveEditorToolInternalInterface::callTool(const QByteArray &toolName)
 {
-    Q_UNUSED(toolName);
-    return {};
+    TextAutoGenerateText::TextAutoGenerateTextToolInternalJob *job = nullptr;
+    if (toolName == AddNewScriptToolInternalJob::toolId()) {
+        job = new AddNewScriptToolInternalJob(this);
+    }
+    // TODO
+    return job;
 }
 
 #include "moc_sieveeditortoolinternalinterface.cpp"

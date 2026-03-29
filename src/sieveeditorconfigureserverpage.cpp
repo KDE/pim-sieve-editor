@@ -5,13 +5,12 @@
 */
 
 #include "sieveeditorconfigureserverpage.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 
 #include <QHBoxLayout>
 #include <QPushButton>
-
+using namespace Qt::Literals::StringLiterals;
 SieveEditorConfigureServerPage::SieveEditorConfigureServerPage(QWidget *parent)
     : QWidget(parent)
 {
