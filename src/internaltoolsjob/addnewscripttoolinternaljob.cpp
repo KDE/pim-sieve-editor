@@ -27,3 +27,5 @@ void AddNewScriptToolInternalJob::start()
 {
     // TODO
 }
+
+#include "moc_addnewscripttoolinternaljob.cpp"
