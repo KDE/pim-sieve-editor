@@ -69,9 +69,8 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
     connect(this, &SieveEditorMainWidget::updateScriptList, mScriptManagerWidget, &SieveEditorScriptManagerWidget::slotRefreshList);
     addWidget(mScriptManagerWidget);
     setChildrenCollapsible(false);
-    QList<int> splitterSizes;
-    splitterSizes << 80 << 20;
-    KConfigGroup myGroup(KSharedConfig::openStateConfig(), QLatin1StringView(mySieveEditorMainWidgetConfigGroupName));
+    const QList<int> splitterSizes{80, 20};
+    const KConfigGroup myGroup(KSharedConfig::openStateConfig(), QLatin1StringView(mySieveEditorMainWidgetConfigGroupName));
     setSizes(myGroup.readEntry("mainSplitter", splitterSizes));
     updateStackedWidget();
 }
