@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-28 00:45+0000\n"
+"POT-Creation-Date: 2026-03-29 00:44+0000\n"
 "PO-Revision-Date: 2020-05-12 10:54+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -309,12 +309,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Tööriistad > IMAP seadistuste import"
 
-#: sieveeditormainwidget.cpp:624
+#: sieveeditormainwidget.cpp:637
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Skripti on muudetud. Kas soovid selle enne sulgemist salvestada?"
 
-#: sieveeditormainwidget.cpp:625
+#: sieveeditormainwidget.cpp:638
 #, fuzzy, kde-format
 #| msgid "Close script"
 msgctxt "@title:window"
@@ -491,25 +491,25 @@ msgstr "Sieve URL-i pole seadistatud"
 msgid "(Disabled) %1"
 msgstr "(Keelatud) %1"
 
-#: sieveeditorpagewidget.cpp:48
+#: sieveeditorpagewidget.cpp:53
 #, fuzzy, kde-format
 #| msgid "Uploading script to server for checking it, please wait..."
 msgid "Uploading script to server for checking it, please wait…"
 msgstr "Skripti üleslaadimine serverisse selle kontrollimiseks, palun oota..."
 
-#: sieveeditorpagewidget.cpp:141
+#: sieveeditorpagewidget.cpp:146
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "Sieve skript laaditi edukalt üles."
 
-#: sieveeditorpagewidget.cpp:141
+#: sieveeditorpagewidget.cpp:146
 #, fuzzy, kde-format
 #| msgid "Sieve Script Upload"
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Sieve skripti üleslaadimine"
 
-#: sieveeditorpagewidget.cpp:154
+#: sieveeditorpagewidget.cpp:159
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -520,14 +520,14 @@ msgstr ""
 "Server vastas:\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:157 sieveeditorpagewidget.cpp:162
+#: sieveeditorpagewidget.cpp:162 sieveeditorpagewidget.cpp:167
 #, fuzzy, kde-format
 #| msgid "Sieve Error"
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Sieve tõrge"
 
-#: sieveeditorpagewidget.cpp:160
+#: sieveeditorpagewidget.cpp:165
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -536,19 +536,19 @@ msgstr ""
 "Sieve skripti üleslaadimine nurjus.\n"
 "Põhjus pole teada\n"
 
-#: sieveeditorpagewidget.cpp:172
+#: sieveeditorpagewidget.cpp:177
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Skript \"%1\" on uus. Kas salvestada see?"
 
-#: sieveeditorpagewidget.cpp:173 sieveeditorpagewidget.cpp:186
+#: sieveeditorpagewidget.cpp:178 sieveeditorpagewidget.cpp:191
 #, fuzzy, kde-format
 #| msgid "Share Script..."
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Jaga skripti ..."
 
-#: sieveeditorpagewidget.cpp:185
+#: sieveeditorpagewidget.cpp:190
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "Skripti \"%1\" on muudetud. Kas salvestada see?"

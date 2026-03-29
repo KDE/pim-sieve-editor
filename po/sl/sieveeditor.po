@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-28 00:45+0000\n"
+"POT-Creation-Date: 2026-03-29 00:44+0000\n"
 "PO-Revision-Date: 2025-09-25 06:57+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -299,12 +299,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Orodja > Uvozi nastavitve IMAP"
 
-#: sieveeditormainwidget.cpp:624
+#: sieveeditormainwidget.cpp:637
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Skript je bil spremenjen. Ali ga želite shraniti pred zapiranjem?"
 
-#: sieveeditormainwidget.cpp:625
+#: sieveeditormainwidget.cpp:638
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"
@@ -463,23 +463,23 @@ msgstr "Nastavljenega ni nobenega URL-ja za Sieve"
 msgid "(Disabled) %1"
 msgstr "(Onemogočeno) %1"
 
-#: sieveeditorpagewidget.cpp:48
+#: sieveeditorpagewidget.cpp:53
 #, kde-format
 msgid "Uploading script to server for checking it, please wait…"
 msgstr "Pošiljanje skripta na strežnik za preverjanje, počakajte…"
 
-#: sieveeditorpagewidget.cpp:141
+#: sieveeditorpagewidget.cpp:146
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "Skript Sieve je bil uspešno poslan."
 
-#: sieveeditorpagewidget.cpp:141
+#: sieveeditorpagewidget.cpp:146
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Pošiljanje skripta Sieve"
 
-#: sieveeditorpagewidget.cpp:154
+#: sieveeditorpagewidget.cpp:159
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -490,13 +490,13 @@ msgstr ""
 "Strežnik je odgovoril:\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:157 sieveeditorpagewidget.cpp:162
+#: sieveeditorpagewidget.cpp:162 sieveeditorpagewidget.cpp:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Napaka programa Sieve"
 
-#: sieveeditorpagewidget.cpp:160
+#: sieveeditorpagewidget.cpp:165
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -505,18 +505,18 @@ msgstr ""
 "Pošiljanje skripta Sieve ni uspelo.\n"
 "Vzrok ni znan\n"
 
-#: sieveeditorpagewidget.cpp:172
+#: sieveeditorpagewidget.cpp:177
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Skript '%1' je nov. Ali ga želite shraniti?"
 
-#: sieveeditorpagewidget.cpp:173 sieveeditorpagewidget.cpp:186
+#: sieveeditorpagewidget.cpp:178 sieveeditorpagewidget.cpp:191
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Shrani skript"
 
-#: sieveeditorpagewidget.cpp:185
+#: sieveeditorpagewidget.cpp:190
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "Skript '%1' je bil spremenjen. Ali ga želite shraniti?"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-28 00:45+0000\n"
+"POT-Creation-Date: 2026-03-29 00:44+0000\n"
 "PO-Revision-Date: 2025-09-25 16:42+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -300,12 +300,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Herramientas> Importar preferencias de IMAP"
 
-#: sieveeditormainwidget.cpp:624
+#: sieveeditormainwidget.cpp:637
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "El guion se ha modificado. ¿Desea guardarlo antes de cerrar?"
 
-#: sieveeditormainwidget.cpp:625
+#: sieveeditormainwidget.cpp:638
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"
@@ -464,23 +464,23 @@ msgstr "No hay URL de Sieve configurada"
 msgid "(Disabled) %1"
 msgstr "(Desactivado) %1"
 
-#: sieveeditorpagewidget.cpp:48
+#: sieveeditorpagewidget.cpp:53
 #, kde-format
 msgid "Uploading script to server for checking it, please wait…"
 msgstr "Enviando el guion al servidor para comprobarlo. Espere un momento…"
 
-#: sieveeditorpagewidget.cpp:141
+#: sieveeditorpagewidget.cpp:146
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "El guion de Sieve se ha enviado correctamente."
 
-#: sieveeditorpagewidget.cpp:141
+#: sieveeditorpagewidget.cpp:146
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Envío de guion de Sieve"
 
-#: sieveeditorpagewidget.cpp:154
+#: sieveeditorpagewidget.cpp:159
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -491,13 +491,13 @@ msgstr ""
 "El servidor ha respondido:\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:157 sieveeditorpagewidget.cpp:162
+#: sieveeditorpagewidget.cpp:162 sieveeditorpagewidget.cpp:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Error de Sieve"
 
-#: sieveeditorpagewidget.cpp:160
+#: sieveeditorpagewidget.cpp:165
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -506,18 +506,18 @@ msgstr ""
 "El envío del guion de Sieve ha fallado.\n"
 "Motivo desconocido\n"
 
-#: sieveeditorpagewidget.cpp:172
+#: sieveeditorpagewidget.cpp:177
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "El guion «%1» es nuevo. ¿Desea guardarlo?"
 
-#: sieveeditorpagewidget.cpp:173 sieveeditorpagewidget.cpp:186
+#: sieveeditorpagewidget.cpp:178 sieveeditorpagewidget.cpp:191
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Guardar guion"
 
-#: sieveeditorpagewidget.cpp:185
+#: sieveeditorpagewidget.cpp:190
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "El guion «%1» ha cambiado. ¿Desea guardarlo?"
