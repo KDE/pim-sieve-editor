@@ -22,3 +22,8 @@ QByteArray AddNewScriptToolInternalJob::toolId()
 {
     return "create_new_script"_ba;
 }
+
+void AddNewScriptToolInternalJob::start()
+{
+    // TODO
+}

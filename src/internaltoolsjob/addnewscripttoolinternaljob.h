@@ -15,4 +15,6 @@ public:
     ~AddNewScriptToolInternalJob() override;
     [[nodiscard]] QByteArray toolName() const override;
     [[nodiscard]] static QByteArray toolId();
+
+    void start() override;
 };
