@@ -27,6 +27,14 @@ QByteArray AddNewScriptToolInternalJob::toolId()
 void AddNewScriptToolInternalJob::start()
 {
     if (mSieveEditorMainWidget) {
+        const QStringList lst = requiredArguments();
+        for (const auto &arg : lst) {
+            for (const auto &resultTool : std::as_const(mToolArguments)) {
+                if (resultTool.keyTool == arg) {
+                    // TODO
+                }
+            }
+        }
         // TODO
     } else {
         deleteLater();
