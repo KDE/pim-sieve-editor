@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-29 00:44+0000\n"
+"POT-Creation-Date: 2026-03-30 00:44+0000\n"
 "PO-Revision-Date: 2024-12-28 23:24+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -232,13 +232,13 @@ msgstr "Editor"
 msgid "User Feedback"
 msgstr "Benutzer-Feedback"
 
-#: sieveeditorconfigureserverpage.cpp:20
+#: sieveeditorconfigureserverpage.cpp:19
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure…"
 msgstr "Einrichten …"
 
-#: sieveeditorconfigureserverpage.cpp:25
+#: sieveeditorconfigureserverpage.cpp:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Import Sieve Settings…"
@@ -299,12 +299,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Extras > IMAP-Einstellungen importieren"
 
-#: sieveeditormainwidget.cpp:637
+#: sieveeditormainwidget.cpp:636
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Das Skript wurde geändert. Möchten Sie es vor dem Schließen speichern?"
 
-#: sieveeditormainwidget.cpp:638
+#: sieveeditormainwidget.cpp:637
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"
