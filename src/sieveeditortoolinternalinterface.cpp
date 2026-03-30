@@ -21,8 +21,9 @@ TextAutoGenerateText::TextAutoGenerateTextToolInternalJob *SieveEditorToolIntern
     TextAutoGenerateText::TextAutoGenerateTextToolInternalJob *job = nullptr;
     if (toolName == AddNewScriptToolInternalJob::toolId()) {
         job = new AddNewScriptToolInternalJob(mSieveEditorMainWidget, this);
+    } else {
+        qCWarning(SIEVEEDITOR_LOG) << "Impossible to find tool " << toolName;
     }
-    qCWarning(SIEVEEDITOR_LOG) << "Impossible to find tool " << toolName;
     // TODO
     return job;
 }
