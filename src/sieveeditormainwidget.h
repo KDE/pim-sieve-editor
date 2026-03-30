@@ -37,7 +37,7 @@ public:
 
     QTabWidget *tabWidget() const;
 
-    KSieveUi::SieveEditorWidget::EditorMode pageMode() const;
+    [[nodiscard]] KSieveUi::SieveEditorWidget::EditorMode pageMode() const;
     [[nodiscard]] bool isUndoAvailable() const;
     [[nodiscard]] bool isRedoAvailable() const;
     [[nodiscard]] bool isWordWrap() const;

@@ -46,7 +46,7 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
     mStackedWidget->setObjectName("stackedwidget"_L1);
 
 #if HAVE_SIEVEEDITOR_TEXTAUTOGENERATE_INTERNAL_TOOLS
-    auto interface = new SieveEditorToolInternalInterface(this);
+    auto interface = new SieveEditorToolInternalInterface(this, this);
     interface->loadInternalTools(u":/internaltools/sieveeditor-internal-tools.json"_s);
     mManager->setTextAutoGenerateTextToolInternalInterface(interface);
     mManager->setHaveInsertText(true);

@@ -6,9 +6,11 @@
 
 #include "sieveeditortoolinternalinterface.h"
 #include "internaltoolsjob/addnewscripttoolinternaljob.h"
+#include "sieveeditor_debug.h"
 using namespace Qt::Literals::StringLiterals;
-SieveEditorToolInternalInterface::SieveEditorToolInternalInterface(QObject *parent)
+SieveEditorToolInternalInterface::SieveEditorToolInternalInterface(SieveEditorMainWidget *sieveEditorMainWidget, QObject *parent)
     : TextAutoGenerateText::TextAutoGenerateTextToolInternalInterface{parent}
+    , mSieveEditorMainWidget(sieveEditorMainWidget)
 {
 }
 
@@ -18,8 +20,9 @@ TextAutoGenerateText::TextAutoGenerateTextToolInternalJob *SieveEditorToolIntern
 {
     TextAutoGenerateText::TextAutoGenerateTextToolInternalJob *job = nullptr;
     if (toolName == AddNewScriptToolInternalJob::toolId()) {
-        job = new AddNewScriptToolInternalJob(this);
+        job = new AddNewScriptToolInternalJob(mSieveEditorMainWidget, this);
     }
+    qCWarning(SIEVEEDITOR_LOG) << "Impossible to find tool " << toolName;
     // TODO
     return job;
 }

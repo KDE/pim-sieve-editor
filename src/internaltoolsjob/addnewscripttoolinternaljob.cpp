@@ -6,8 +6,9 @@
 
 #include "addnewscripttoolinternaljob.h"
 using namespace Qt::Literals::StringLiterals;
-AddNewScriptToolInternalJob::AddNewScriptToolInternalJob(QObject *parent)
+AddNewScriptToolInternalJob::AddNewScriptToolInternalJob(SieveEditorMainWidget *sieveEditorMainWidget, QObject *parent)
     : TextAutoGenerateText::TextAutoGenerateTextToolInternalJob{parent}
+    , mSieveEditorMainWidget(sieveEditorMainWidget)
 {
 }
 
@@ -25,6 +26,11 @@ QByteArray AddNewScriptToolInternalJob::toolId()
 
 void AddNewScriptToolInternalJob::start()
 {
+    if (mSieveEditorMainWidget) {
+        // TODO
+    } else {
+        deleteLater();
+    }
     // TODO
 }
 

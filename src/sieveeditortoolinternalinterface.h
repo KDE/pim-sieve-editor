@@ -6,13 +6,16 @@
 
 #pragma once
 #include <TextAutoGenerateText/TextAutoGenerateTextToolInternalInterface>
-
+class SieveEditorMainWidget;
 class SieveEditorToolInternalInterface : public TextAutoGenerateText::TextAutoGenerateTextToolInternalInterface
 {
     Q_OBJECT
 public:
-    explicit SieveEditorToolInternalInterface(QObject *parent = nullptr);
+    explicit SieveEditorToolInternalInterface(SieveEditorMainWidget *sieveEditorMainWidget, QObject *parent = nullptr);
     ~SieveEditorToolInternalInterface() override;
 
     [[nodiscard]] TextAutoGenerateText::TextAutoGenerateTextToolInternalJob *callTool(const QByteArray &toolName) override;
+
+private:
+    SieveEditorMainWidget *const mSieveEditorMainWidget;
 };
