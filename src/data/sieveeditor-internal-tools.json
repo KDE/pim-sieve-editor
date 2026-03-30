@@ -1,7 +1,7 @@
 [
     {
         "function": {
-            "description": "This tools allows to create a new script sieve",
+            "description": "This tools allows to create a new sieve script (only sieve script)",
             "name": "create_new_script",
             "parameters": {
                 "properties": {
