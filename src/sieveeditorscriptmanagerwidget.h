@@ -24,6 +24,8 @@ public:
     void desactivateScript();
     void refreshList();
 
+    void addNewScript(const QString &title);
+
 Q_SIGNALS:
     void createScriptPage(const KSieveUi::ManageSieveWidget::ScriptInfo &info, bool isNewScript);
     void updateButtons(bool newScriptAction, bool editScriptAction, bool deleteScriptAction, bool desactivateScriptAction);

@@ -34,13 +34,13 @@ void AddNewScriptToolInternalJob::start()
         for (const auto &resultTool : std::as_const(mToolArguments)) {
             if (resultTool.keyTool == "title"_L1) {
                 title = resultTool.value;
-                mSieveEditorMainWidget->createNewScript(); // TODO add title
+                mSieveEditorMainWidget->addNewScript(title);
             } else {
                 qCWarning(SIEVEEDITOR_LOG) << "Invalid json tools result:" << resultTool.keyTool;
             }
         }
         const TextAutoGenerateText::TextAutoGenerateTextToolInternalJob::TextToolPluginInfo info{
-            .content = i18n("Create New Sieve Script named %1", title),
+            .content = i18n("Create New Sieve Script named \"%1\"", title),
             .messageUuid = mMessageUuid,
             .chatId = mChatId,
             .toolIdentifier = mToolIdentifier,

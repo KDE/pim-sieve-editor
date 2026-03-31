@@ -50,6 +50,7 @@ public:
     [[nodiscard]] bool isTextEditor() const;
     [[nodiscard]] QString currentText() const;
     void forceCloseTab(int index);
+    void addNewScript(const QString &title);
 public Q_SLOTS:
     void slotDebugSieveScript();
     void slotGoToLine();

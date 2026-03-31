@@ -82,4 +82,9 @@ void SieveEditorScriptManagerWidget::refreshList()
     mTreeView->slotRefresh();
 }
 
+void SieveEditorScriptManagerWidget::addNewScript(const QString &title)
+{
+    mTreeView->addNewScript(title);
+}
+
 #include "moc_sieveeditorscriptmanagerwidget.cpp"

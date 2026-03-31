@@ -627,6 +627,11 @@ void SieveEditorMainWidget::forceCloseTab(int index)
     }
 }
 
+void SieveEditorMainWidget::addNewScript(const QString &title)
+{
+    mScriptManagerWidget->addNewScript(title);
+}
+
 void SieveEditorMainWidget::slotTabCloseRequested(int index)
 {
     auto page = qobject_cast<SieveEditorPageWidget *>(mTabWidget->widget(index));
