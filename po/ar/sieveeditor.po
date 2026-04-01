@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-30 00:44+0000\n"
+"POT-Creation-Date: 2026-04-01 00:46+0000\n"
 "PO-Revision-Date: 2025-10-05 10:26+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -92,6 +92,13 @@ msgstr "يجري الاستيراد...…"
 #, kde-format
 msgid "Finish"
 msgstr "أنهِ"
+
+#: internaltoolsjob/addnewscripttoolinternaljob.cpp:43
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Create New Script…"
+msgid "Create New Sieve Script named \"%1\""
+msgstr "أنشئ سكربتًا جديدًا…"
 
 #: main.cpp:51
 #, kde-format
@@ -295,12 +302,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "أدوات > استورد إعدادات IMAP"
 
-#: sieveeditormainwidget.cpp:636
+#: sieveeditormainwidget.cpp:641
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "لم يُعدّل السّكربت. أتريد الحفظ قبل الإغلاق؟"
 
-#: sieveeditormainwidget.cpp:637
+#: sieveeditormainwidget.cpp:642
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-30 00:44+0000\n"
+"POT-Creation-Date: 2026-04-01 00:46+0000\n"
 "PO-Revision-Date: 2025-11-11 18:59+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -91,6 +91,13 @@ msgstr "Notiek importēšana…"
 #, kde-format
 msgid "Finish"
 msgstr "Pabeigts"
+
+#: internaltoolsjob/addnewscripttoolinternaljob.cpp:43
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Create New Script…"
+msgid "Create New Sieve Script named \"%1\""
+msgstr "Izveidot jaunu skriptu…"
 
 #: main.cpp:51
 #, kde-format
@@ -296,12 +303,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Rīki > Importēt IMAP iestatījumus"
 
-#: sieveeditormainwidget.cpp:636
+#: sieveeditormainwidget.cpp:641
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Skripts ir izmainīts. Vai vēlaties pirms aizvēršanas to saglabāt?"
 
-#: sieveeditormainwidget.cpp:637
+#: sieveeditormainwidget.cpp:642
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"

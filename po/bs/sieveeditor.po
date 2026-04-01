@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: $2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-30 00:44+0000\n"
+"POT-Creation-Date: 2026-04-01 00:46+0000\n"
 "PO-Revision-Date: 2014-02-01 00:37+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: none\n"
@@ -99,6 +99,12 @@ msgstr ""
 #, kde-format
 msgid "Finish"
 msgstr ""
+
+#: internaltoolsjob/addnewscripttoolinternaljob.cpp:43
+#, fuzzy, kde-format
+#| msgid "Create New Script..."
+msgid "Create New Sieve Script named \"%1\""
+msgstr "Kreiraj novu skriptu..."
 
 #: main.cpp:51
 #, fuzzy, kde-format
@@ -319,13 +325,13 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr ""
 
-#: sieveeditormainwidget.cpp:636
+#: sieveeditormainwidget.cpp:641
 #, fuzzy, kde-format
 #| msgid "Script '%1' was changed. Do you want to save it ?"
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Skripra „%1“ je izmijenjena. Želite li da jr snimite?"
 
-#: sieveeditormainwidget.cpp:637
+#: sieveeditormainwidget.cpp:642
 #, fuzzy, kde-format
 #| msgid "Delete Script"
 msgctxt "@title:window"

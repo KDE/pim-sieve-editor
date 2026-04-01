@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-30 00:44+0000\n"
+"POT-Creation-Date: 2026-04-01 00:46+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -92,6 +92,13 @@ msgstr "आयात प्रगति पर है…"
 #, kde-format
 msgid "Finish"
 msgstr "खत्म करना"
+
+#: internaltoolsjob/addnewscripttoolinternaljob.cpp:43
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Create New Script…"
+msgid "Create New Sieve Script named \"%1\""
+msgstr "नई स्क्रिप्ट बनाएं…"
 
 #: main.cpp:51
 #, kde-format
@@ -296,12 +303,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "उपकरण > IMAP सेटिंग आयात करें"
 
-#: sieveeditormainwidget.cpp:636
+#: sieveeditormainwidget.cpp:641
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "स्क्रिप्ट संशोधित की गई है। क्या आप बंद करने से पहले सहेजना चाहते हैं?"
 
-#: sieveeditormainwidget.cpp:637
+#: sieveeditormainwidget.cpp:642
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-30 00:44+0000\n"
+"POT-Creation-Date: 2026-04-01 00:46+0000\n"
 "PO-Revision-Date: 2014-08-13 23:53+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -97,6 +97,12 @@ msgstr ""
 #, kde-format
 msgid "Finish"
 msgstr ""
+
+#: internaltoolsjob/addnewscripttoolinternaljob.cpp:43
+#, fuzzy, kde-format
+#| msgid "Create New Script..."
+msgid "Create New Sieve Script named \"%1\""
+msgstr "Nieg Skript opstellen ..."
 
 #: main.cpp:51
 #, kde-format
@@ -316,12 +322,12 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr ""
 
-#: sieveeditormainwidget.cpp:636
+#: sieveeditormainwidget.cpp:641
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Dat Skript wöör ännert. Wullt Du dat ehr't Tomaken sekern?"
 
-#: sieveeditormainwidget.cpp:637
+#: sieveeditormainwidget.cpp:642
 #, fuzzy, kde-format
 #| msgid "Close script"
 msgctxt "@title:window"
