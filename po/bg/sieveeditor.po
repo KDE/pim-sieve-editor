@@ -1,10 +1,10 @@
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-01 00:46+0000\n"
-"PO-Revision-Date: 2025-09-26 15:37+0200\n"
+"PO-Revision-Date: 2026-04-03 00:51+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -90,11 +90,9 @@ msgid "Finish"
 msgstr "Завършено"
 
 #: internaltoolsjob/addnewscripttoolinternaljob.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Create New Script…"
+#, kde-format
 msgid "Create New Sieve Script named \"%1\""
-msgstr "Създаване на нов скрипт…"
+msgstr "Създаване на нов скрипт на Sieve \"%1\""
 
 #: main.cpp:51
 #, kde-format
