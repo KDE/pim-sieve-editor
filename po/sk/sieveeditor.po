@@ -13,8 +13,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -37,15 +37,13 @@ msgid "Thunderbird IMAP Settings"
 msgstr "Nastavenia IMAP Thunderbirdu"
 
 #: importwizard/importimapsettingfinishpage.cpp:22
-#, fuzzy, kde-format
-#| msgid "IMAP settings were imported:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
 msgstr "IMAP nastavenia sa importovali:"
 
 #: importwizard/importimapsettingnofoundpage.cpp:20
-#, fuzzy, kde-format
-#| msgid "No settings found to import."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "Nenašli sa nastavenia na import."
@@ -56,8 +54,7 @@ msgid "No settings found."
 msgstr "Nenašli sa nastavenia."
 
 #: importwizard/importimapsettingprogresspage.cpp:70
-#, fuzzy, kde-format
-#| msgid "Import settings from %1..."
+#, kde-format
 msgid "Import settings from %1…"
 msgstr "Importovať nastavenia z %1..."
 
@@ -67,9 +64,7 @@ msgid "Import settings from %1 done"
 msgstr "Import nastavení z %1 hotový"
 
 #: importwizard/importimapsettingsearchpage.cpp:21
-#, fuzzy, kde-format
-#| msgid ""
-#| "Please select the program from which you like to import IMAP settings:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr "Prosím, vyberte program, z ktorého chcete importovať IMAP nastavenia:"
@@ -86,8 +81,7 @@ msgid "Select Import Settings"
 msgstr "Vybrať nastavenia importu"
 
 #: importwizard/importimapsettingwizard.cpp:40
-#, fuzzy, kde-format
-#| msgid "Import in Progress..."
+#, kde-format
 msgid "Import in Progress…"
 msgstr "Import prebieha..."
 
@@ -97,10 +91,9 @@ msgid "Finish"
 msgstr "Dokončiť"
 
 #: internaltoolsjob/addnewscripttoolinternaljob.cpp:43
-#, fuzzy, kde-format
-#| msgid "Create New Script..."
+#, kde-format
 msgid "Create New Sieve Script named \"%1\""
-msgstr "Vytvoriť nový skript..."
+msgstr ""
 
 #: main.cpp:51
 #, kde-format
@@ -118,8 +111,7 @@ msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Copyright © 2013-%1 Autori sieveeditor"
 
 #: main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -130,8 +122,7 @@ msgid "Maintainer"
 msgstr "Správca"
 
 #: main.cpp:65
-#, fuzzy, kde-format
-#| msgid "Lists the available options for user feedback"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
 msgstr "Uvádza dostupné možnosti spätnej väzby od používateľov"
@@ -166,7 +157,7 @@ msgstr "Anonym"
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #: serversievesettings.cpp:271
 #, kde-format
@@ -174,8 +165,7 @@ msgid "Server is not defined"
 msgstr "Server nie je definovaný"
 
 #: serversievesettings.cpp:271
-#, fuzzy, kde-format
-#| msgid "Check Server"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Skontrolovať server"
@@ -216,8 +206,7 @@ msgid "Add Sieve Server"
 msgstr "Pridať Sieve server"
 
 #: sieveeditorconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Wrap Text"
+#, kde-format
 msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr "Zalomiť text"
@@ -244,16 +233,13 @@ msgid "User Feedback"
 msgstr "Používateľská odozva"
 
 #: sieveeditorconfigureserverpage.cpp:19
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure…"
-msgstr "Nastaviť"
+msgstr "Nastaviť…"
 
 #: sieveeditorconfigureserverpage.cpp:24
-#, fuzzy, kde-format
-#| msgid "Import Sieve Settings:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Import Sieve Settings…"
 msgstr "Importovať nastavenia Sieve:"
@@ -319,8 +305,7 @@ msgid "Script was modified. Do you want to save before closing?"
 msgstr "Skript sa zmenil. Chcete ho uložiť pred zatvorením?"
 
 #: sieveeditormainwidget.cpp:642
-#, fuzzy, kde-format
-#| msgid "Close script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Close script"
 msgstr "Zavrieť skript"
@@ -341,100 +326,85 @@ msgid "Upload"
 msgstr "Nahrať"
 
 #: sieveeditormainwindow.cpp:223
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Sieve Server"
+#, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Pridať Sieve server"
 
 #: sieveeditormainwindow.cpp:227
-#, fuzzy, kde-format
-#| msgid "Delete Script"
+#, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Vymazať skript"
 
 #: sieveeditormainwindow.cpp:233
-#, fuzzy, kde-format
-#| msgid "Create New Script..."
+#, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Vytvoriť nový skript..."
 
 #: sieveeditormainwindow.cpp:239
-#, fuzzy, kde-format
-#| msgid "Edit Script..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Upraviť skript..."
 
 #: sieveeditormainwindow.cpp:244
-#, fuzzy, kde-format
-#| msgid "Deactivate Script"
+#, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Deaktivovať skript"
 
 #: sieveeditormainwindow.cpp:249
-#, fuzzy, kde-format
-#| msgid "Refresh List"
+#, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Obnoviť zoznam"
 
 #: sieveeditormainwindow.cpp:255
-#, fuzzy, kde-format
-#| msgid "Go to Line..."
+#, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Prejsť na riadok..."
 
 #: sieveeditormainwindow.cpp:272
-#, fuzzy, kde-format
-#| msgid "Import..."
+#, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "Importovať..."
 
 #: sieveeditormainwindow.cpp:278
-#, fuzzy, kde-format
-#| msgid "Share..."
+#, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Zdieľať..."
 
 #: sieveeditormainwindow.cpp:286
-#, fuzzy, kde-format
-#| msgid "Check Spelling..."
+#, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Kontrola pravopisu..."
 
 #: sieveeditormainwindow.cpp:292
-#, fuzzy, kde-format
-#| msgid "Check Syntax"
+#, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Skontrolovať syntax"
 
 #: sieveeditormainwindow.cpp:297
-#, fuzzy, kde-format
-#| msgid "Create Rules Graphically:"
+#, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Vytvoriť pravidlá graficky:"
 
 #: sieveeditormainwindow.cpp:302
-#, fuzzy, kde-format
-#| msgid "Comment"
+#, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Komentár"
 
 #: sieveeditormainwindow.cpp:307
-#, fuzzy, kde-format
-#| msgid "Uncomment"
+#, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Odkomentovať"
@@ -446,23 +416,19 @@ msgid "&Bookmarks"
 msgstr "&Záložky"
 
 #: sieveeditormainwindow.cpp:340
-#, fuzzy, kde-format
-#| msgid "Debug Sieve Script..."
+#, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Ladiť Sieve skript...."
 
 #: sieveeditormainwindow.cpp:345
-#, fuzzy, kde-format
-#| msgid "Wordwrap"
+#, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Zalamovanie slov"
 
 #: sieveeditormainwindow.cpp:367
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Import IMAP Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "Importovať nastavenia IMAP"
@@ -470,7 +436,7 @@ msgstr "Importovať nastavenia IMAP"
 #: sieveeditormainwindow.cpp:392
 #, kde-format
 msgid "What's new"
-msgstr ""
+msgstr "What's new"
 
 #: sieveeditormainwindow.cpp:416
 #, kde-format
@@ -478,12 +444,14 @@ msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 msgstr ""
+"<qt>This will hide the menu bar completely. Môžete show it again by typing "
+"%1.</qt>"
 
 #: sieveeditormainwindow.cpp:419
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
-msgstr ""
+msgstr "Hide menu bar"
 
 #: sieveeditormanagesievewidget.cpp:37
 #, kde-format
@@ -496,8 +464,7 @@ msgid "(Disabled) %1"
 msgstr "(Zakázané) %1"
 
 #: sieveeditorpagewidget.cpp:53
-#, fuzzy, kde-format
-#| msgid "Uploading script to server for checking it, please wait..."
+#, kde-format
 msgid "Uploading script to server for checking it, please wait…"
 msgstr "Nahrávanie skriptu na server na kontrolu, prosím čakajte..."
 
@@ -507,8 +474,7 @@ msgid "The Sieve script was successfully uploaded."
 msgstr "Sieve skript bol úspešne nahraný."
 
 #: sieveeditorpagewidget.cpp:146
-#, fuzzy, kde-format
-#| msgid "Sieve Script Upload"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Nahranie Sieve skriptu"
@@ -525,8 +491,7 @@ msgstr ""
 "%1"
 
 #: sieveeditorpagewidget.cpp:162 sieveeditorpagewidget.cpp:167
-#, fuzzy, kde-format
-#| msgid "Sieve Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Chyba Sieve"
@@ -546,8 +511,7 @@ msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Skript '%1' je nový. Chcete ho uložiť?"
 
 #: sieveeditorpagewidget.cpp:178 sieveeditorpagewidget.cpp:191
-#, fuzzy, kde-format
-#| msgid "Share Script..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Zdieľať skript..."
@@ -603,13 +567,13 @@ msgstr "Nástroje"
 #: sieveeditorui.rc:61
 #, kde-format
 msgid "&Help"
-msgstr ""
+msgstr "&Pomocník"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: sieveeditorui.rc:70
 #, kde-format
 msgid "Main Toolbar"
-msgstr ""
+msgstr "Hlavný panel nástrojov"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: ui/serversievesettings.ui:37
@@ -823,14 +787,13 @@ msgstr "Prázdne"
 #: ui/sieveeditorconfigureserverwidget.ui:29
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Pridať…"
 
 #. i18n: ectx: property (text), widget (QPushButton, modifyServer)
 #: ui/sieveeditorconfigureserverwidget.ui:36
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgid "Modify…"
-msgstr "Upraviť..."
+msgstr "Upraviť…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeServer)
 #: ui/sieveeditorconfigureserverwidget.ui:43
@@ -840,12 +803,12 @@ msgstr "Odstrániť"
 
 #: whatsnew/whatsnewtranslations.cpp:17
 msgid "Add AI quick Ask support."
-msgstr ""
+msgstr "Add AI quick Ask support."
 
 #: whatsnew/whatsnewtranslations.cpp:27
 #, kde-format
 msgid "Add AI Actions Support."
-msgstr ""
+msgstr "Add AI Actions Support."
 
 #~ msgid "Configure..."
 #~ msgstr "Nastaviť..."
