@@ -93,7 +93,7 @@ msgstr "Dokončiť"
 #: internaltoolsjob/addnewscripttoolinternaljob.cpp:43
 #, kde-format
 msgid "Create New Sieve Script named \"%1\""
-msgstr ""
+msgstr "Vytvoriť nový Sieve skript s názvom „%1\""
 
 #: main.cpp:51
 #, kde-format
