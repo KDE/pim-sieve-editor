@@ -8,10 +8,7 @@
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/build-${presetName}",
             "installDir": "$env{KF6}",
-            "hidden": true,
-            "cacheVariables": {
-                "BUILD_QCH": "ON"
-            }
+            "hidden": true
         },
         {
             "name": "dev-mold",
@@ -59,6 +56,9 @@
         {
             "name": "unity",
             "displayName": "Build with CMake unity support.",
+            "cacheVariables": {
+                "USE_UNITY_CMAKE_SUPPORT": "ON"
+            },
             "inherits": [
                 "dev"
             ]
