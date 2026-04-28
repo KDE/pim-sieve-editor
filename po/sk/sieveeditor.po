@@ -439,8 +439,8 @@ msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 msgstr ""
-"<qt>This will hide the menu bar completely. Môžete show it again by typing "
-"%1.</qt>"
+"<qt>Toto úplne skryje panel ponuky. Môžete ho znova zobraziť stlačením %1.</"
+"qt>"
 
 #: sieveeditormainwindow.cpp:419
 #, kde-format
