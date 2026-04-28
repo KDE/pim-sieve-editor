@@ -172,7 +172,8 @@
                 }
             ],
             "config-opts": [
-                "-DBUILD_TESTING=OFF"
+                "-DBUILD_TESTING=OFF",
+                "-DBUILD_PYTHON_BINDINGS=OFF"
             ]
         },
         {
