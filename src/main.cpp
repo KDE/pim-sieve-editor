@@ -6,6 +6,7 @@
 
 #include "config-pim-sieve-editor.h"
 #include "sieveeditor-version.h"
+#include "sieveeditorcommandlineparser.h"
 #include "sieveeditormainwindow.h"
 #include <KAboutData>
 #include <KCrash>
@@ -60,16 +61,13 @@ int main(int argc, char **argv)
     KCrash::initialize();
 
     QCommandLineParser parser;
+    SieveEditorCommandLineParser commandLineParser(&parser);
     aboutData.setupCommandLine(&parser);
-#if WITH_KUSERFEEDBACK
-    const QCommandLineOption feedbackOption(QStringLiteral("feedback"), i18nc("@info:shell", "Lists the available options for user feedback"));
-    parser.addOption(feedbackOption);
-#endif
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
 #if WITH_KUSERFEEDBACK
-    if (parser.isSet(feedbackOption)) {
+    if (parser.isSet(commandLineParser.optionParserFromEnum(SieveEditorCommandLineParser::OptionParser::FeedBack))) {
         QTextStream(stdout) << UserFeedBackManager::self()->userFeedbackProvider()->describeDataSources() << '\n';
         return 0;
     }
