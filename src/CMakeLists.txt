@@ -213,3 +213,7 @@ if(APPLE)
     set(MACOSX_BUNDLE_BUNDLE_VERSION "${PIM_VERSION}")
     set(MACOSX_BUNDLE_COPYRIGHT "2013-2026 The SieveEditor Authors")
 endif()
+
+if(BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()

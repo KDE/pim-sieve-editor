@@ -31,8 +31,6 @@ file(
     GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES
     src/*.cpp
     src/*.h
-    autotests/*.cpp
-    autotests/*.h
 )
 if(EXISTS "${PROJECT_SOURCE_DIR}/.git/")
     set(GIT_SOURCE_TARBALL TRUE)
@@ -102,8 +100,6 @@ file(
     GLOB_RECURSE ALL_SOURCE_FILES
     src/*.cpp
     src/*.h
-    autotests/*.cpp
-    autotests/*.h
 )
 ecm_check_outbound_license(LICENSES GPL-2.0-only  FILES ${ALL_SOURCE_FILES})
 
@@ -278,9 +274,6 @@ if(WARNINGS_AS_ERRORS)
 endif()
 
 add_subdirectory(src)
-if(BUILD_TESTING)
-    add_subdirectory(autotests)
-endif()
 if(GIT_SOURCE_TARBALL)
     if(DEFINED kde_configure_git_pre_commit_hook)
         kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
