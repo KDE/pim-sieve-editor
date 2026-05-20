@@ -13,6 +13,7 @@
 #include <KIconTheme>
 #include <KLocalizedString>
 #include <KStyleManager>
+#include <QTimer>
 #if WITH_DBUS
 #include <KDBusService>
 #else
@@ -123,6 +124,10 @@ int main(int argc, char **argv)
 #endif
 
     mw->show();
+
+    if (parser.isSet(SieveEditorCommandLineParser::optionParserFromEnum(SieveEditorCommandLineParser::OptionParser::SelfTest))) {
+        QTimer::singleShot(std::chrono::milliseconds(250), &app, &QCoreApplication::quit);
+    }
     const int val = app.exec();
     return val;
 }
