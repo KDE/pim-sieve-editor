@@ -97,6 +97,8 @@ target_sources(
         sievepurposemenuwidget.h
         whatsnew/whatsnewtranslations.h
         whatsnew/whatsnewtranslations.cpp
+        sieveeditorcommandlineparser.h
+        sieveeditorcommandlineparser.cpp
 )
 if(HAVE_SIEVEEDITOR_TEXTAUTOGENERATE_INTERNAL_TOOLS)
     target_sources(
