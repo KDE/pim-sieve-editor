@@ -171,54 +171,6 @@ set_target_properties(
             ${KDEPIM_LIB_SOVERSION}
 )
 
-add_executable(sieveeditor)
-
-# application icon, in all sizes needed to have e.g. nice Windows icons, too
-set(ICON_FILES
-    icons/sc-apps-sieveeditor.svg
-    icons/16-apps-sieveeditor.png
-    icons/22-apps-sieveeditor.png
-    icons/32-apps-sieveeditor.png
-    icons/48-apps-sieveeditor.png
-    icons/64-apps-sieveeditor.png
-)
-
-# Add icon files to the application's source files to have CMake bundle them in the executable.
-set(ICONS_SOURCES)
-ecm_add_app_icon(ICONS_SOURCES ICONS ${ICON_FILES})
-target_sources(
-    sieveeditor
-    PRIVATE
-        main.cpp
-        ${ICONS_SOURCES}
-)
-
-target_link_libraries(
-    sieveeditor
-    KF6::CoreAddons
-    KF6::Crash
-    libsieveeditor
-    KF6::XmlGui
-    KF6::I18n
-    ${libsieveeditor_userfeedback_LIB}
-    KF6::IconThemes
-    KF6::WindowSystem
-)
-
-if(TARGET KF6::DBusAddons)
-    target_link_libraries(sieveeditor KF6::DBusAddons)
-else()
-    target_link_libraries(sieveeditor KDAB::kdsingleapplication)
-    if(NOT WIN32 AND NOT APPLE)
-        target_link_libraries(sieveeditor Qt::GuiPrivate)
-    endif()
-endif()
-install(
-    TARGETS
-        sieveeditor
-        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-)
-
 install(PROGRAMS data/org.kde.sieveeditor.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 install(FILES settings/sieveeditorglobalconfig.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
@@ -238,7 +190,7 @@ endif()
 install(FILES data/org.kde.sieveeditor.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 ecm_qt_install_logging_categories(EXPORT SIEVEEDITOR FILE sieveeditor.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
-add_subdirectory(icons)
+add_subdirectory(apps)
 
 # See https://cmake.org/cmake/help/v3.15/prop_tgt/MACOSX_BUNDLE_INFO_PLIST.html
 if(APPLE)

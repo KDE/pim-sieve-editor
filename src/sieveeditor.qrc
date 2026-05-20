@@ -8,7 +8,7 @@
         <file>sieveeditorui.rc</file>
     </qresource>
     <qresource prefix="/sieveeditor">
-        <file alias="sieveeditor.svg">icons/sc-apps-sieveeditor.svg</file>
+        <file alias="sieveeditor.svg">apps/icons/sc-apps-sieveeditor.svg</file>
     </qresource>
     <qresource prefix="/internaltools">
         <file alias="sieveeditor-internal-tools.json">data/sieveeditor-internal-tools.json</file>
