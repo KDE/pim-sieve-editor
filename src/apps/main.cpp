@@ -13,6 +13,7 @@
 #include <KIconTheme>
 #include <KLocalizedString>
 #include <KStyleManager>
+#include <QPointer>
 #include <QTimer>
 #if WITH_DBUS
 #include <KDBusService>
@@ -97,7 +98,7 @@ int main(int argc, char **argv)
         return 0;
     }
 #endif
-    auto mw = new SieveEditorMainWindow();
+    QPointer<SieveEditorMainWindow> mw{new SieveEditorMainWindow()};
 #if WITH_DBUS
     QObject::connect(&service, &KDBusService::activateRequested, mw, &SieveEditorMainWindow::slotActivateRequested);
 #else
@@ -126,8 +127,12 @@ int main(int argc, char **argv)
     mw->show();
 
     if (parser.isSet(SieveEditorCommandLineParser::optionParserFromEnum(SieveEditorCommandLineParser::OptionParser::SelfTest))) {
-        QTimer::singleShot(std::chrono::milliseconds(250), &app, &QCoreApplication::quit);
+        QTimer::singleShot(std::chrono::milliseconds(250), &app, [mw, &app]() {
+            delete mw;
+            app.quit();
+        });
     }
     const int val = app.exec();
+    delete mw;
     return val;
 }
