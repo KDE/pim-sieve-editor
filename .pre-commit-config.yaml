@@ -5,6 +5,10 @@
 
 exclude: (^po/|.desktop|Messages.sh)
 repos:
+ - repo: https://github.com/fsfe/reuse-tool
+   rev: v6.2.0
+   hooks:
+    - id: reuse-lint-file
  - repo: https://github.com/pre-commit/pre-commit-hooks
    rev: v6.0.0
    hooks:
