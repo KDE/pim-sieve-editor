@@ -13,7 +13,9 @@ repos:
    rev: v6.0.0
    hooks:
     - id: trailing-whitespace
+      exclude: .*.patch$
     - id: end-of-file-fixer
+      exclude: .*.patch$
     - id: check-added-large-files
     - id: check-case-conflict
     - id: check-xml
