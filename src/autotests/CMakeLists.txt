@@ -47,3 +47,4 @@ macro(add_sieveserver_unittest _source)
 endmacro()
 
 add_sieveserver_unittest( sieveeditorconfigureserverpagetest.cpp)
+add_sieveserver_unittest(sieveeditorcommandlineparsertest.cpp)
