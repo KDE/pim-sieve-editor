@@ -48,3 +48,9 @@ endmacro()
 
 add_sieveserver_unittest( sieveeditorconfigureserverpagetest.cpp)
 add_sieveserver_unittest(sieveeditorcommandlineparsertest.cpp)
+
+add_test(
+    NAME sieveeditor-self-test
+    COMMAND
+        sieveeditor --self-test
+)
