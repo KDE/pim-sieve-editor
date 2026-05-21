@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-21 00:45+0000\n"
 "PO-Revision-Date: 2014-08-13 23:53+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -26,6 +26,34 @@ msgstr "Sönke Dibbern"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de"
+
+#: apps/main.cpp:54
+#, kde-format
+msgid "KSieve Editor"
+msgstr "KSieve-Editor"
+
+#: apps/main.cpp:56
+#, kde-format
+msgid "Sieve Editor"
+msgstr "Sieve-Editor"
+
+#: apps/main.cpp:58
+#, fuzzy, kde-format
+#| msgid "Copyright © 2013, 2014 sieveeditor authors"
+msgid "Copyright © 2013-%1 sieveeditor authors"
+msgstr "Copyright © 2013, 2014 de Schrieverslüüd vun Sieveeditor"
+
+#: apps/main.cpp:59
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: apps/main.cpp:59
+#, kde-format
+msgid "Maintainer"
+msgstr "Pleger"
 
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:151
 #, fuzzy, kde-format
@@ -103,40 +131,6 @@ msgstr ""
 #| msgid "Create New Script..."
 msgid "Create New Sieve Script named \"%1\""
 msgstr "Nieg Skript opstellen ..."
-
-#: main.cpp:51
-#, kde-format
-msgid "KSieve Editor"
-msgstr "KSieve-Editor"
-
-#: main.cpp:53
-#, kde-format
-msgid "Sieve Editor"
-msgstr "Sieve-Editor"
-
-#: main.cpp:55
-#, fuzzy, kde-format
-#| msgid "Copyright © 2013, 2014 sieveeditor authors"
-msgid "Copyright © 2013-%1 sieveeditor authors"
-msgstr "Copyright © 2013, 2014 de Schrieverslüüd vun Sieveeditor"
-
-#: main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
-msgctxt "@info:credit"
-msgid "Laurent Montel"
-msgstr "Laurent Montel"
-
-#: main.cpp:56
-#, kde-format
-msgid "Maintainer"
-msgstr "Pleger"
-
-#: main.cpp:65
-#, kde-format
-msgctxt "@info:shell"
-msgid "Lists the available options for user feedback"
-msgstr ""
 
 #: serversievelistwidget.cpp:76
 #, fuzzy, kde-format
@@ -216,6 +210,12 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Siever-Server tofögen"
+
+#: sieveeditorcommandlineparser.cpp:22
+#, kde-format
+msgctxt "@info:shell"
+msgid "Lists the available options for user feedback"
+msgstr ""
 
 #: sieveeditorconfiguredialog.cpp:38
 #, kde-format

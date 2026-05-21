@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-21 00:45+0000\n"
 "PO-Revision-Date: 2026-04-03 19:31+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -32,6 +32,32 @@ msgstr "Александр Поташев,Олеся Герасименко"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "aspotashev@gmail.com,gammaray@basealt.ru"
+
+#: apps/main.cpp:54
+#, kde-format
+msgid "KSieve Editor"
+msgstr "Редактор фильтров Sieve от KDE"
+
+#: apps/main.cpp:56
+#, kde-format
+msgid "Sieve Editor"
+msgstr "Редактор фильтров Sieve"
+
+#: apps/main.cpp:58
+#, kde-format
+msgid "Copyright © 2013-%1 sieveeditor authors"
+msgstr "© Авторы редактора фильтров Sieve, 2013–%1"
+
+#: apps/main.cpp:59
+#, kde-format
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: apps/main.cpp:59
+#, kde-format
+msgid "Maintainer"
+msgstr "Сопровождающий"
 
 # BUGME: please change to "Configure Sieve Server" --aspotashev
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:151
@@ -104,38 +130,6 @@ msgstr "Готово"
 #, kde-format
 msgid "Create New Sieve Script named \"%1\""
 msgstr "Создание сценария Sieve с именем «%1»"
-
-#: main.cpp:51
-#, kde-format
-msgid "KSieve Editor"
-msgstr "Редактор фильтров Sieve от KDE"
-
-#: main.cpp:53
-#, kde-format
-msgid "Sieve Editor"
-msgstr "Редактор фильтров Sieve"
-
-#: main.cpp:55
-#, kde-format
-msgid "Copyright © 2013-%1 sieveeditor authors"
-msgstr "© Авторы редактора фильтров Sieve, 2013–%1"
-
-#: main.cpp:56
-#, kde-format
-msgctxt "@info:credit"
-msgid "Laurent Montel"
-msgstr "Laurent Montel"
-
-#: main.cpp:56
-#, kde-format
-msgid "Maintainer"
-msgstr "Сопровождающий"
-
-#: main.cpp:65
-#, kde-format
-msgctxt "@info:shell"
-msgid "Lists the available options for user feedback"
-msgstr "Доступные варианты обратной связи."
 
 # BUGME: please change to "Configure Sieve Server" --aspotashev
 #: serversievelistwidget.cpp:76
@@ -215,6 +209,12 @@ msgstr "<qt><b>Невозможно использовать этот серве
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Добавление сервера Sieve"
+
+#: sieveeditorcommandlineparser.cpp:22
+#, kde-format
+msgctxt "@info:shell"
+msgid "Lists the available options for user feedback"
+msgstr "Доступные варианты обратной связи."
 
 #: sieveeditorconfiguredialog.cpp:38
 #, kde-format

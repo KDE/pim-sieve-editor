@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-21 00:45+0000\n"
 "PO-Revision-Date: 2026-04-01 07:06+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -29,6 +29,32 @@ msgstr "Andrej Mernik,Matjaž Jeran"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "andrejm@ubuntu.si,matjaz.jeran@amis.net"
+
+#: apps/main.cpp:54
+#, kde-format
+msgid "KSieve Editor"
+msgstr "Urejevalnik KSieve"
+
+#: apps/main.cpp:56
+#, kde-format
+msgid "Sieve Editor"
+msgstr "Urejevalnik Sieve"
+
+#: apps/main.cpp:58
+#, kde-format
+msgid "Copyright © 2013-%1 sieveeditor authors"
+msgstr "Copyright © 2013-%1 avtorji programa sieveeditor"
+
+#: apps/main.cpp:59
+#, kde-format
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: apps/main.cpp:59
+#, kde-format
+msgid "Maintainer"
+msgstr "Vzdrževalec"
 
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:151
 #, kde-format
@@ -98,39 +124,6 @@ msgstr "Zaključi"
 #, kde-format
 msgid "Create New Sieve Script named \"%1\""
 msgstr "Ustvari novi Sieve skript \"%1\""
-
-#: main.cpp:51
-#, kde-format
-msgid "KSieve Editor"
-msgstr "Urejevalnik KSieve"
-
-#: main.cpp:53
-#, kde-format
-msgid "Sieve Editor"
-msgstr "Urejevalnik Sieve"
-
-#: main.cpp:55
-#, kde-format
-msgid "Copyright © 2013-%1 sieveeditor authors"
-msgstr "Copyright © 2013-%1 avtorji programa sieveeditor"
-
-#: main.cpp:56
-#, kde-format
-msgctxt "@info:credit"
-msgid "Laurent Montel"
-msgstr "Laurent Montel"
-
-#: main.cpp:56
-#, kde-format
-msgid "Maintainer"
-msgstr "Vzdrževalec"
-
-#: main.cpp:65
-#, kde-format
-msgctxt "@info:shell"
-msgid "Lists the available options for user feedback"
-msgstr ""
-"Prikaže seznam razpoložljivih možnosti za povratne informacije uporabnikov"
 
 #: serversievelistwidget.cpp:76
 #, kde-format
@@ -209,6 +202,13 @@ msgstr "<qt><b>Tega strežnika ni mogoče uporabiti.</b></qt>"
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Dodaj strežnik Sieve"
+
+#: sieveeditorcommandlineparser.cpp:22
+#, kde-format
+msgctxt "@info:shell"
+msgid "Lists the available options for user feedback"
+msgstr ""
+"Prikaže seznam razpoložljivih možnosti za povratne informacije uporabnikov"
 
 #: sieveeditorconfiguredialog.cpp:38
 #, kde-format

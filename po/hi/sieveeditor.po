@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-21 00:45+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -28,6 +28,32 @@ msgstr "तुम्हारे नाम"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "आपके ईमेल"
+
+#: apps/main.cpp:54
+#, kde-format
+msgid "KSieve Editor"
+msgstr "के-सीव संपादक"
+
+#: apps/main.cpp:56
+#, kde-format
+msgid "Sieve Editor"
+msgstr "छलनी संपादक"
+
+#: apps/main.cpp:58
+#, kde-format
+msgid "Copyright © 2013-%1 sieveeditor authors"
+msgstr "कॉपीराइट © 2013-%1 sieveeditor लेखक"
+
+#: apps/main.cpp:59
+#, kde-format
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "लॉरेंट मोंटेल"
+
+#: apps/main.cpp:59
+#, kde-format
+msgid "Maintainer"
+msgstr "मेंटेनर"
 
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:151
 #, kde-format
@@ -99,38 +125,6 @@ msgstr "खत्म करना"
 #| msgid "Create New Script…"
 msgid "Create New Sieve Script named \"%1\""
 msgstr "नई स्क्रिप्ट बनाएं…"
-
-#: main.cpp:51
-#, kde-format
-msgid "KSieve Editor"
-msgstr "के-सीव संपादक"
-
-#: main.cpp:53
-#, kde-format
-msgid "Sieve Editor"
-msgstr "छलनी संपादक"
-
-#: main.cpp:55
-#, kde-format
-msgid "Copyright © 2013-%1 sieveeditor authors"
-msgstr "कॉपीराइट © 2013-%1 sieveeditor लेखक"
-
-#: main.cpp:56
-#, kde-format
-msgctxt "@info:credit"
-msgid "Laurent Montel"
-msgstr "लॉरेंट मोंटेल"
-
-#: main.cpp:56
-#, kde-format
-msgid "Maintainer"
-msgstr "मेंटेनर"
-
-#: main.cpp:65
-#, kde-format
-msgctxt "@info:shell"
-msgid "Lists the available options for user feedback"
-msgstr "उपयोगकर्ता फ़ीडबैक के लिए उपलब्ध विकल्पों की सूची बनाता है"
 
 #: serversievelistwidget.cpp:76
 #, kde-format
@@ -208,6 +202,12 @@ msgstr "<qt><b>इस सर्वर का उपयोग करना सं
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "छलनी सर्वर जोड़ें"
+
+#: sieveeditorcommandlineparser.cpp:22
+#, kde-format
+msgctxt "@info:shell"
+msgid "Lists the available options for user feedback"
+msgstr "उपयोगकर्ता फ़ीडबैक के लिए उपलब्ध विकल्पों की सूची बनाता है"
 
 #: sieveeditorconfiguredialog.cpp:38
 #, kde-format

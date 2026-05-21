@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-21 00:45+0000\n"
 "PO-Revision-Date: 2025-11-11 18:59+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -27,6 +27,32 @@ msgstr "Toms Trasūns"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "toms.trasuns@posteo.net"
+
+#: apps/main.cpp:54
+#, kde-format
+msgid "KSieve Editor"
+msgstr "„KSieve“ redaktors"
+
+#: apps/main.cpp:56
+#, kde-format
+msgid "Sieve Editor"
+msgstr "„Sieve“ redaktors"
+
+#: apps/main.cpp:58
+#, kde-format
+msgid "Copyright © 2013-%1 sieveeditor authors"
+msgstr "Autortiesības © 2013—%1 „sieveeditor“ autori"
+
+#: apps/main.cpp:59
+#, kde-format
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: apps/main.cpp:59
+#, kde-format
+msgid "Maintainer"
+msgstr "Uzturētājs"
 
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:151
 #, kde-format
@@ -98,38 +124,6 @@ msgstr "Pabeigts"
 #| msgid "Create New Script…"
 msgid "Create New Sieve Script named \"%1\""
 msgstr "Izveidot jaunu skriptu…"
-
-#: main.cpp:51
-#, kde-format
-msgid "KSieve Editor"
-msgstr "„KSieve“ redaktors"
-
-#: main.cpp:53
-#, kde-format
-msgid "Sieve Editor"
-msgstr "„Sieve“ redaktors"
-
-#: main.cpp:55
-#, kde-format
-msgid "Copyright © 2013-%1 sieveeditor authors"
-msgstr "Autortiesības © 2013—%1 „sieveeditor“ autori"
-
-#: main.cpp:56
-#, kde-format
-msgctxt "@info:credit"
-msgid "Laurent Montel"
-msgstr "Laurent Montel"
-
-#: main.cpp:56
-#, kde-format
-msgid "Maintainer"
-msgstr "Uzturētājs"
-
-#: main.cpp:65
-#, kde-format
-msgctxt "@info:shell"
-msgid "Lists the available options for user feedback"
-msgstr "Uzskaita pieejamās lietotāja atsauksmju opcijas"
 
 #: serversievelistwidget.cpp:76
 #, kde-format
@@ -208,6 +202,12 @@ msgstr "<qt><b>Izmantot šo serveri nav iespējams.</b></qt>"
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Pievienot „Sieve“ serveri"
+
+#: sieveeditorcommandlineparser.cpp:22
+#, kde-format
+msgctxt "@info:shell"
+msgid "Lists the available options for user feedback"
+msgstr "Uzskaita pieejamās lietotāja atsauksmju opcijas"
 
 #: sieveeditorconfiguredialog.cpp:38
 #, kde-format

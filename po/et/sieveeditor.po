@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-21 00:45+0000\n"
 "PO-Revision-Date: 2020-05-12 10:54+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -26,6 +26,34 @@ msgstr "Marek Laane"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "qiilaq69@gmail.com"
+
+#: apps/main.cpp:54
+#, kde-format
+msgid "KSieve Editor"
+msgstr "KSieve redaktor"
+
+#: apps/main.cpp:56
+#, kde-format
+msgid "Sieve Editor"
+msgstr "Sieve redaktor"
+
+#: apps/main.cpp:58
+#, fuzzy, kde-format
+#| msgid "Copyright © 2013-2020 sieveeditor authors"
+msgid "Copyright © 2013-%1 sieveeditor authors"
+msgstr "Autoriõigus © 2013-2020: sieveeditori autorid"
+
+#: apps/main.cpp:59
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: apps/main.cpp:59
+#, kde-format
+msgid "Maintainer"
+msgstr "Hooldaja"
 
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:151
 #, kde-format
@@ -102,41 +130,6 @@ msgstr "Lõpetamine"
 #| msgid "Create New Script..."
 msgid "Create New Sieve Script named \"%1\""
 msgstr "Loo uus skript..."
-
-#: main.cpp:51
-#, kde-format
-msgid "KSieve Editor"
-msgstr "KSieve redaktor"
-
-#: main.cpp:53
-#, kde-format
-msgid "Sieve Editor"
-msgstr "Sieve redaktor"
-
-#: main.cpp:55
-#, fuzzy, kde-format
-#| msgid "Copyright © 2013-2020 sieveeditor authors"
-msgid "Copyright © 2013-%1 sieveeditor authors"
-msgstr "Autoriõigus © 2013-2020: sieveeditori autorid"
-
-#: main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
-msgctxt "@info:credit"
-msgid "Laurent Montel"
-msgstr "Laurent Montel"
-
-#: main.cpp:56
-#, kde-format
-msgid "Maintainer"
-msgstr "Hooldaja"
-
-#: main.cpp:65
-#, fuzzy, kde-format
-#| msgid "Lists the available options for user feedback"
-msgctxt "@info:shell"
-msgid "Lists the available options for user feedback"
-msgstr "Kasutaja tagasiside saadaolevate valikute loend"
 
 #: serversievelistwidget.cpp:76
 #, kde-format
@@ -216,6 +209,13 @@ msgstr "<qt><b>Seda serverit ei ole võimalik kasutada.</b></qt>"
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Sieve serveri lisamine"
+
+#: sieveeditorcommandlineparser.cpp:22
+#, fuzzy, kde-format
+#| msgid "Lists the available options for user feedback"
+msgctxt "@info:shell"
+msgid "Lists the available options for user feedback"
+msgstr "Kasutaja tagasiside saadaolevate valikute loend"
 
 #: sieveeditorconfiguredialog.cpp:38
 #, fuzzy, kde-format

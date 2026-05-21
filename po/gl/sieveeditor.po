@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-21 00:45+0000\n"
 "PO-Revision-Date: 2025-05-21 08:53+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -28,6 +28,32 @@ msgstr "Xosé Calvo"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xosecalvo@gmail.com"
+
+#: apps/main.cpp:54
+#, kde-format
+msgid "KSieve Editor"
+msgstr "Editor de KSieve"
+
+#: apps/main.cpp:56
+#, kde-format
+msgid "Sieve Editor"
+msgstr "Editor de Sieve"
+
+#: apps/main.cpp:58
+#, kde-format
+msgid "Copyright © 2013-%1 sieveeditor authors"
+msgstr "© 2013-%1 Persoas autoras de sieveeditor"
+
+#: apps/main.cpp:59
+#, kde-format
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: apps/main.cpp:59
+#, kde-format
+msgid "Maintainer"
+msgstr "Mantemento."
 
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:151
 #, kde-format
@@ -99,38 +125,6 @@ msgstr "Rematar"
 #| msgid "Create New Script…"
 msgid "Create New Sieve Script named \"%1\""
 msgstr "Crear un novo guión…"
-
-#: main.cpp:51
-#, kde-format
-msgid "KSieve Editor"
-msgstr "Editor de KSieve"
-
-#: main.cpp:53
-#, kde-format
-msgid "Sieve Editor"
-msgstr "Editor de Sieve"
-
-#: main.cpp:55
-#, kde-format
-msgid "Copyright © 2013-%1 sieveeditor authors"
-msgstr "© 2013-%1 Persoas autoras de sieveeditor"
-
-#: main.cpp:56
-#, kde-format
-msgctxt "@info:credit"
-msgid "Laurent Montel"
-msgstr "Laurent Montel"
-
-#: main.cpp:56
-#, kde-format
-msgid "Maintainer"
-msgstr "Mantemento."
-
-#: main.cpp:65
-#, kde-format
-msgctxt "@info:shell"
-msgid "Lists the available options for user feedback"
-msgstr "Lista todas as opcións dispoñíbeis de comentarios"
 
 #: serversievelistwidget.cpp:76
 #, kde-format
@@ -209,6 +203,12 @@ msgstr "<qt><b>Non é posíbel usar este servidor.</b></qt>"
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Engadir un servidor de Sieve"
+
+#: sieveeditorcommandlineparser.cpp:22
+#, kde-format
+msgctxt "@info:shell"
+msgid "Lists the available options for user feedback"
+msgstr "Lista todas as opcións dispoñíbeis de comentarios"
 
 #: sieveeditorconfiguredialog.cpp:38
 #, kde-format

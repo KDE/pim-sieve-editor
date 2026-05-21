@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-21 00:45+0000\n"
 "PO-Revision-Date: 2026-04-07 21:34+0200\n"
 "Last-Translator: Libor Filípek <filipek.libor@protonmail.com>\n"
 "Language-Team: \n"
@@ -28,6 +28,32 @@ msgstr "Vít Pelčák,Libor Filípek"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "vit@pelcak.org,libor.filipek@gmail.com"
+
+#: apps/main.cpp:54
+#, kde-format
+msgid "KSieve Editor"
+msgstr "Editor KSieve"
+
+#: apps/main.cpp:56
+#, kde-format
+msgid "Sieve Editor"
+msgstr "Editor Sieve"
+
+#: apps/main.cpp:58
+#, kde-format
+msgid "Copyright © 2013-%1 sieveeditor authors"
+msgstr "Autorská práva © 2013-%1 Vývojáři sieveeditor"
+
+#: apps/main.cpp:59
+#, kde-format
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: apps/main.cpp:59
+#, kde-format
+msgid "Maintainer"
+msgstr "Správce"
 
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:151
 #, kde-format
@@ -97,38 +123,6 @@ msgstr "Dokončit"
 #, kde-format
 msgid "Create New Sieve Script named \"%1\""
 msgstr "Vytvořte nový skript Sieve s názvem \"%1\""
-
-#: main.cpp:51
-#, kde-format
-msgid "KSieve Editor"
-msgstr "Editor KSieve"
-
-#: main.cpp:53
-#, kde-format
-msgid "Sieve Editor"
-msgstr "Editor Sieve"
-
-#: main.cpp:55
-#, kde-format
-msgid "Copyright © 2013-%1 sieveeditor authors"
-msgstr "Autorská práva © 2013-%1 Vývojáři sieveeditor"
-
-#: main.cpp:56
-#, kde-format
-msgctxt "@info:credit"
-msgid "Laurent Montel"
-msgstr "Laurent Montel"
-
-#: main.cpp:56
-#, kde-format
-msgid "Maintainer"
-msgstr "Správce"
-
-#: main.cpp:65
-#, kde-format
-msgctxt "@info:shell"
-msgid "Lists the available options for user feedback"
-msgstr "Seznam dostupných voleb pro uživatelskou zpětnou vazbu"
 
 #: serversievelistwidget.cpp:76
 #, kde-format
@@ -207,6 +201,12 @@ msgstr "<qt><b>Nelze použít tento server.</b></qt>"
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Přidat server Sieve"
+
+#: sieveeditorcommandlineparser.cpp:22
+#, kde-format
+msgctxt "@info:shell"
+msgid "Lists the available options for user feedback"
+msgstr "Seznam dostupných voleb pro uživatelskou zpětnou vazbu"
 
 #: sieveeditorconfiguredialog.cpp:38
 #, kde-format

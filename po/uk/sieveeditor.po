@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-21 00:45+0000\n"
 "PO-Revision-Date: 2026-04-01 08:36+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -29,6 +29,32 @@ msgstr "Юрій Чорноіван"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
+
+#: apps/main.cpp:54
+#, kde-format
+msgid "KSieve Editor"
+msgstr "Редактор фільтрів KSieve"
+
+#: apps/main.cpp:56
+#, kde-format
+msgid "Sieve Editor"
+msgstr "Редактор фільтрів"
+
+#: apps/main.cpp:58
+#, kde-format
+msgid "Copyright © 2013-%1 sieveeditor authors"
+msgstr "© Автори sieveeditor, 2013–%1"
+
+#: apps/main.cpp:59
+#, kde-format
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: apps/main.cpp:59
+#, kde-format
+msgid "Maintainer"
+msgstr "Супровідник"
 
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:151
 #, kde-format
@@ -99,38 +125,6 @@ msgstr "Завершення"
 #, kde-format
 msgid "Create New Sieve Script named \"%1\""
 msgstr "Створити скрип фільтрування з назвою «%1»"
-
-#: main.cpp:51
-#, kde-format
-msgid "KSieve Editor"
-msgstr "Редактор фільтрів KSieve"
-
-#: main.cpp:53
-#, kde-format
-msgid "Sieve Editor"
-msgstr "Редактор фільтрів"
-
-#: main.cpp:55
-#, kde-format
-msgid "Copyright © 2013-%1 sieveeditor authors"
-msgstr "© Автори sieveeditor, 2013–%1"
-
-#: main.cpp:56
-#, kde-format
-msgctxt "@info:credit"
-msgid "Laurent Montel"
-msgstr "Laurent Montel"
-
-#: main.cpp:56
-#, kde-format
-msgid "Maintainer"
-msgstr "Супровідник"
-
-#: main.cpp:65
-#, kde-format
-msgctxt "@info:shell"
-msgid "Lists the available options for user feedback"
-msgstr "Показати доступні варіанти для відгуків користувача"
 
 #: serversievelistwidget.cpp:76
 #, kde-format
@@ -211,6 +205,12 @@ msgstr "<qt><b>Використання цього сервера неможли
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Додавання сервера фільтрування"
+
+#: sieveeditorcommandlineparser.cpp:22
+#, kde-format
+msgctxt "@info:shell"
+msgid "Lists the available options for user feedback"
+msgstr "Показати доступні варіанти для відгуків користувача"
 
 #: sieveeditorconfiguredialog.cpp:38
 #, kde-format

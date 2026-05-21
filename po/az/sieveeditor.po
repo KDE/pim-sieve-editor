@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-21 00:45+0000\n"
 "PO-Revision-Date: 2023-05-29 19:03+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -26,6 +26,33 @@ msgstr "Xəyyam Qocayev"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xxmn77@gmail.com"
+
+#: apps/main.cpp:54
+#, kde-format
+msgid "KSieve Editor"
+msgstr "KSieve süzgəc redaktoru"
+
+#: apps/main.cpp:56
+#, kde-format
+msgid "Sieve Editor"
+msgstr "Süzgəclər redaktoru"
+
+#: apps/main.cpp:58
+#, kde-format
+msgid "Copyright © 2013-%1 sieveeditor authors"
+msgstr "© 2013-%1 sieveeditor müəllifləri"
+
+#: apps/main.cpp:59
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: apps/main.cpp:59
+#, kde-format
+msgid "Maintainer"
+msgstr "Himayəçi"
 
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:151
 #, kde-format
@@ -102,40 +129,6 @@ msgstr "Başa çatdı"
 #| msgid "Create New Script..."
 msgid "Create New Sieve Script named \"%1\""
 msgstr "Yeni skript yaradın..."
-
-#: main.cpp:51
-#, kde-format
-msgid "KSieve Editor"
-msgstr "KSieve süzgəc redaktoru"
-
-#: main.cpp:53
-#, kde-format
-msgid "Sieve Editor"
-msgstr "Süzgəclər redaktoru"
-
-#: main.cpp:55
-#, kde-format
-msgid "Copyright © 2013-%1 sieveeditor authors"
-msgstr "© 2013-%1 sieveeditor müəllifləri"
-
-#: main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
-msgctxt "@info:credit"
-msgid "Laurent Montel"
-msgstr "Laurent Montel"
-
-#: main.cpp:56
-#, kde-format
-msgid "Maintainer"
-msgstr "Himayəçi"
-
-#: main.cpp:65
-#, fuzzy, kde-format
-#| msgid "Lists the available options for user feedback"
-msgctxt "@info:shell"
-msgid "Lists the available options for user feedback"
-msgstr "İstifadəçi rəyi üçün əlçatan parametrlərin siyahısı"
 
 #: serversievelistwidget.cpp:76
 #, kde-format
@@ -215,6 +208,13 @@ msgstr "<qt><b>Bu serverə qoşulmaq mümkün deyil.</b></qt>"
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Süzgəcləmə serveri əlavə edin"
+
+#: sieveeditorcommandlineparser.cpp:22
+#, fuzzy, kde-format
+#| msgid "Lists the available options for user feedback"
+msgctxt "@info:shell"
+msgid "Lists the available options for user feedback"
+msgstr "İstifadəçi rəyi üçün əlçatan parametrlərin siyahısı"
 
 #: sieveeditorconfiguredialog.cpp:38
 #, fuzzy, kde-format

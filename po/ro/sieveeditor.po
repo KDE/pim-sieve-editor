@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-21 00:45+0000\n"
 "PO-Revision-Date: 2020-09-08 19:22+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -27,6 +27,33 @@ msgstr ""
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
+
+#: apps/main.cpp:54
+#, kde-format
+msgid "KSieve Editor"
+msgstr ""
+
+#: apps/main.cpp:56
+#, kde-format
+msgid "Sieve Editor"
+msgstr "Redactor Sieve"
+
+#: apps/main.cpp:58
+#, kde-format
+msgid "Copyright © 2013-%1 sieveeditor authors"
+msgstr ""
+
+#: apps/main.cpp:59
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: apps/main.cpp:59
+#, kde-format
+msgid "Maintainer"
+msgstr "Responsabil"
 
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:151
 #, fuzzy, kde-format
@@ -101,39 +128,6 @@ msgstr ""
 #| msgid "Create New Script..."
 msgid "Create New Sieve Script named \"%1\""
 msgstr "Creează script nou..."
-
-#: main.cpp:51
-#, kde-format
-msgid "KSieve Editor"
-msgstr ""
-
-#: main.cpp:53
-#, kde-format
-msgid "Sieve Editor"
-msgstr "Redactor Sieve"
-
-#: main.cpp:55
-#, kde-format
-msgid "Copyright © 2013-%1 sieveeditor authors"
-msgstr ""
-
-#: main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
-msgctxt "@info:credit"
-msgid "Laurent Montel"
-msgstr "Laurent Montel"
-
-#: main.cpp:56
-#, kde-format
-msgid "Maintainer"
-msgstr "Responsabil"
-
-#: main.cpp:65
-#, kde-format
-msgctxt "@info:shell"
-msgid "Lists the available options for user feedback"
-msgstr ""
 
 #: serversievelistwidget.cpp:76
 #, fuzzy, kde-format
@@ -213,6 +207,12 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Adaugă server Sieve"
+
+#: sieveeditorcommandlineparser.cpp:22
+#, kde-format
+msgctxt "@info:shell"
+msgid "Lists the available options for user feedback"
+msgstr ""
 
 #: sieveeditorconfiguredialog.cpp:38
 #, kde-format

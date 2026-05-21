@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-01 00:46+0000\n"
+"POT-Creation-Date: 2026-05-21 00:45+0000\n"
 "PO-Revision-Date: 2025-09-26 13:53+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -26,6 +26,32 @@ msgstr "Stefan Asserhäll"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "stefan.asserhall@gmail.com"
+
+#: apps/main.cpp:54
+#, kde-format
+msgid "KSieve Editor"
+msgstr "KSieve-editor"
+
+#: apps/main.cpp:56
+#, kde-format
+msgid "Sieve Editor"
+msgstr "Sieve-editor"
+
+#: apps/main.cpp:58
+#, kde-format
+msgid "Copyright © 2013-%1 sieveeditor authors"
+msgstr "Copyright © 2013-%1 Upphovsmännen till Sieve-editor"
+
+#: apps/main.cpp:59
+#, kde-format
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: apps/main.cpp:59
+#, kde-format
+msgid "Maintainer"
+msgstr "Underhåll"
 
 #: importwizard/checks/importimapsettingsakonadicheckjob.cpp:151
 #, kde-format
@@ -97,38 +123,6 @@ msgstr "Slutför"
 #| msgid "Create New Script…"
 msgid "Create New Sieve Script named \"%1\""
 msgstr "Skapa nytt skript…"
-
-#: main.cpp:51
-#, kde-format
-msgid "KSieve Editor"
-msgstr "KSieve-editor"
-
-#: main.cpp:53
-#, kde-format
-msgid "Sieve Editor"
-msgstr "Sieve-editor"
-
-#: main.cpp:55
-#, kde-format
-msgid "Copyright © 2013-%1 sieveeditor authors"
-msgstr "Copyright © 2013-%1 Upphovsmännen till Sieve-editor"
-
-#: main.cpp:56
-#, kde-format
-msgctxt "@info:credit"
-msgid "Laurent Montel"
-msgstr "Laurent Montel"
-
-#: main.cpp:56
-#, kde-format
-msgid "Maintainer"
-msgstr "Underhåll"
-
-#: main.cpp:65
-#, kde-format
-msgctxt "@info:shell"
-msgid "Lists the available options for user feedback"
-msgstr "Lista tillgängliga alternativ för användaråterkoppling"
 
 #: serversievelistwidget.cpp:76
 #, kde-format
@@ -207,6 +201,12 @@ msgstr "<qt><b>Det är inte möjligt att använda den här servern.</b></qt>"
 msgctxt "@title:window"
 msgid "Add Sieve Server"
 msgstr "Lägg till Sieve på server"
+
+#: sieveeditorcommandlineparser.cpp:22
+#, kde-format
+msgctxt "@info:shell"
+msgid "Lists the available options for user feedback"
+msgstr "Lista tillgängliga alternativ för användaråterkoppling"
 
 #: sieveeditorconfiguredialog.cpp:38
 #, kde-format
