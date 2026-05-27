@@ -155,11 +155,23 @@
     <release version="6.6.3" date="2026-03-05"/>
     <release version="6.6.2" date="2026-02-05"/>
     <release version="6.6.1" date="2026-01-08"/>
-    <release version="6.6.0" date="2025-12-11"/>
+    <release version="6.6.0" date="2025-12-11">
+      <description>
+        <ul>
+          <li>Add AI quick Ask support.</li>
+        </ul>
+      </description>
+    </release>
     <release version="6.5.3" date="2025-11-06"/>
     <release version="6.5.2" date="2025-10-09"/>
     <release version="6.5.1" date="2025-09-11"/>
-    <release version="6.5.0" date="2025-08-14"/>
+    <release version="6.5.0" date="2025-08-14">
+      <description>
+        <ul>
+          <li>Add AI Actions Support.</li>
+        </ul>
+      </description>
+    </release>
     <release version="6.4.3" date="2025-07-03"/>
     <release version="6.4.2" date="2025-06-05"/>
     <release version="6.4.1" date="2025-05-08"/>
