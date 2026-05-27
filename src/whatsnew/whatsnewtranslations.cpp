@@ -13,9 +13,7 @@ WhatsNewTranslations::~WhatsNewTranslations() = default;
 // Use by newFeaturesMD5
 QList<KLazyLocalizedString> WhatsNewTranslations::lastNewFeatures() const
 {
-    const QList<KLazyLocalizedString> info{
-        kli18n("Add AI quick Ask support."),
-    };
+    const QList<KLazyLocalizedString> info{};
     return info;
 }
 
@@ -30,12 +28,18 @@ QList<TextAddonsWidgets::WhatsNewInfo> WhatsNewTranslations::createWhatsNewInfo(
     }
     {
         TextAddonsWidgets::WhatsNewInfo info;
+        info.setNewFeatures({i18n("Add AI quick Ask support.")});
+        info.setVersion(QStringLiteral("6.6.0"));
+        listInfo.append(std::move(info));
+    }
+    {
+        TextAddonsWidgets::WhatsNewInfo info;
         QStringList lst;
         for (const KLazyLocalizedString &l : lastNewFeatures()) {
             lst += l.toString();
         }
         info.setNewFeatures(lst);
-        info.setVersion(QStringLiteral("6.6.0"));
+        info.setVersion(QStringLiteral("6.8.0"));
         listInfo.append(std::move(info));
     }
     return listInfo;
