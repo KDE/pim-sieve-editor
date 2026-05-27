@@ -111,12 +111,11 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
 
     QString newFeaturesMD5;
 #if HAVE_WHATSNEWSNGSUPPORT
-    /*
     const KAboutData aboutData = KAboutData::fromAppStreamForApplication();
-    if (!aboutData.releases().isEmpty()) {
-        newFeaturesMD5 = aboutData.releases().constFirst().untranslatedDescription();
+    mReleasesInfo = aboutData.releases();
+    if (!mReleasesInfo.isEmpty()) {
+        newFeaturesMD5 = mReleasesInfo.constFirst().untranslatedDescription();
     }
-    */
 #else
 
     WhatsNewTranslations translations;
@@ -129,6 +128,7 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
             if (hasNewFeature) {
 #if HAVE_WHATSNEWSNGSUPPORT
                 auto whatsNewMessageWidget = new TextAddonsWidgets::WhatsNewMessageNgWidget(this);
+                whatsNewMessageWidget->setReleases(mReleasesInfo);
                 whatsNewMessageWidget->setObjectName(u"whatsNewMessageWidget"_s);
                 mainWidgetLayout->addWidget(whatsNewMessageWidget);
                 SieveEditorGlobalConfig::self()->setPreviousNewFeaturesMD5(newFeaturesMD5);
@@ -190,6 +190,7 @@ void SieveEditorMainWindow::slotWhatsNew()
 {
 #if HAVE_WHATSNEWSNGSUPPORT
     TextAddonsWidgets::WhatsNewNgDialog dlg(this);
+    dlg.setReleases(mReleasesInfo);
     dlg.exec();
 #else
 

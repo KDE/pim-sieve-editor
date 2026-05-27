@@ -17,6 +17,10 @@ class KActionMenu;
 class KToggleFullScreenAction;
 class KHamburgerMenu;
 class KToggleAction;
+#if HAVE_WHATSNEWSNGSUPPORT
+#include <KAboutData>
+#endif
+
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
 namespace TextAddonsWidgets
 {
@@ -110,6 +114,9 @@ private:
     KToggleAction *mShowMenuBarAction = nullptr;
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
     TextAddonsWidgets::VerifyNewVersionWidget *const mVerifyNewVersionWidget;
+#endif
+#if HAVE_WHATSNEWSNGSUPPORT
+    QList<KAboutRelease> mReleasesInfo;
 #endif
     bool mNetworkIsDown = false;
 };
