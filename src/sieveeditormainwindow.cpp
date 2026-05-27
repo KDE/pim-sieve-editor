@@ -5,6 +5,7 @@
 */
 
 #include "sieveeditormainwindow.h"
+#include "config-pim-sieve-editor.h"
 #include "importwizard/importimapsettingwizard.h"
 #include "serversievesettingsdialog.h"
 #include "sieveeditorbookmarks.h"
@@ -19,8 +20,15 @@
 #include <PimCommon/NetworkManager>
 #include <TextAddonsWidgets/NeedUpdateVersionUtils>
 #include <TextAddonsWidgets/NeedUpdateVersionWidget>
+#if HAVE_WHATSNEWSNGSUPPORT
+#include <KAboutData>
+#include <TextAddonsWidgets/WhatsNewMessageNgWidget>
+#include <TextAddonsWidgets/WhatsNewNgDialog>
+#else
+#include "whatsnew/whatsnewtranslations.h"
 #include <TextAddonsWidgets/WhatsNewDialog>
 #include <TextAddonsWidgets/WhatsNewMessageWidget>
+#endif
 
 #include <KActionCollection>
 #include <KColorSchemeMenu>
@@ -61,7 +69,6 @@
 #include <TextAddonsWidgets/VerifyNewVersionWidget>
 #endif
 
-#include "whatsnew/whatsnewtranslations.h"
 using namespace Qt::Literals::StringLiterals;
 namespace
 {
@@ -102,19 +109,39 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
         }
     }
 
+    QString newFeaturesMD5;
+#if HAVE_WHATSNEWSNGSUPPORT
+    /*
+    const KAboutData aboutData = KAboutData::fromAppStreamForApplication();
+    if (!aboutData.releases().isEmpty()) {
+        newFeaturesMD5 = aboutData.releases().constFirst().untranslatedDescription();
+    }
+    */
+#else
+
     WhatsNewTranslations translations;
-    const QString newFeaturesMD5 = translations.newFeaturesMD5();
+    newFeaturesMD5 = translations.newFeaturesMD5();
+#endif
     if (!newFeaturesMD5.isEmpty()) {
         const QString previousNewFeaturesMD5 = SieveEditorGlobalConfig::self()->previousNewFeaturesMD5();
         if (!previousNewFeaturesMD5.isEmpty()) {
             const bool hasNewFeature = (previousNewFeaturesMD5 != newFeaturesMD5);
             if (hasNewFeature) {
+#if HAVE_WHATSNEWSNGSUPPORT
+                auto whatsNewMessageWidget = new TextAddonsWidgets::WhatsNewMessageNgWidget(this);
+                whatsNewMessageWidget->setObjectName(u"whatsNewMessageWidget"_s);
+                mainWidgetLayout->addWidget(whatsNewMessageWidget);
+                SieveEditorGlobalConfig::self()->setPreviousNewFeaturesMD5(newFeaturesMD5);
+                whatsNewMessageWidget->animatedShow();
+#else
+
                 auto whatsNewMessageWidget = new TextAddonsWidgets::WhatsNewMessageWidget(this);
                 whatsNewMessageWidget->setWhatsNewInfos(translations.createWhatsNewInfo());
                 whatsNewMessageWidget->setObjectName(QStringLiteral("whatsNewMessageWidget"));
                 mainWidgetLayout->addWidget(whatsNewMessageWidget);
                 SieveEditorGlobalConfig::self()->setPreviousNewFeaturesMD5(newFeaturesMD5);
                 whatsNewMessageWidget->animatedShow();
+#endif
             }
         } else {
             SieveEditorGlobalConfig::self()->setPreviousNewFeaturesMD5(newFeaturesMD5);
@@ -161,10 +188,16 @@ SieveEditorMainWindow::~SieveEditorMainWindow()
 
 void SieveEditorMainWindow::slotWhatsNew()
 {
+#if HAVE_WHATSNEWSNGSUPPORT
+    TextAddonsWidgets::WhatsNewNgDialog dlg(this);
+    dlg.exec();
+#else
+
     WhatsNewTranslations translations;
     TextAddonsWidgets::WhatsNewDialog dlg(translations.createWhatsNewInfo(), this);
     dlg.updateInformations();
     dlg.exec();
+#endif
 }
 
 void SieveEditorMainWindow::readConfig()

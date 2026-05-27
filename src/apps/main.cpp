@@ -37,7 +37,7 @@
 #include "userfeedback/userfeedbackmanager.h"
 #include <KUserFeedback/Provider>
 #endif
-
+using namespace Qt::Literals::StringLiterals;
 int main(int argc, char **argv)
 {
     KIconTheme::initTheme();
@@ -57,7 +57,8 @@ int main(int argc, char **argv)
                          KAboutLicense::GPL_V2,
                          i18n("Copyright © 2013-%1 sieveeditor authors", QStringLiteral("2026")));
     aboutData.addAuthor(i18nc("@info:credit", "Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
-
+    aboutData.setOrganizationDomain("kde.org"_ba);
+    aboutData.setProductName("sieveeditor"_ba);
     aboutData.setProgramLogo(QIcon::fromTheme(QStringLiteral(":/sieveeditor/sieveeditor.svg")));
     KAboutData::setApplicationData(aboutData);
     KCrash::initialize();
