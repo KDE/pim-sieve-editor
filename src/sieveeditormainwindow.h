@@ -35,7 +35,11 @@ class LIBSIEVEEDITOR_EXPORT SieveEditorMainWindow : public KXmlGuiWindow
 {
     Q_OBJECT
 public:
-    explicit SieveEditorMainWindow(QWidget *parent = nullptr);
+    explicit SieveEditorMainWindow(
+#if HAVE_WHATSNEWSNGSUPPORT
+        const QList<KAboutRelease> &releases,
+#endif
+        QWidget *parent = nullptr);
     ~SieveEditorMainWindow() override;
 
     [[nodiscard]] QString currentHelpTitle() const;

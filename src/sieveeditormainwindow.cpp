@@ -23,6 +23,7 @@
 #if HAVE_WHATSNEWSNGSUPPORT
 #include <TextAddonsWidgets/WhatsNewMessageNgWidget>
 #include <TextAddonsWidgets/WhatsNewNgDialog>
+#include <TextAddonsWidgets/WhatsNewNgUtils>
 #else
 #include "whatsnew/whatsnewtranslations.h"
 #include <TextAddonsWidgets/WhatsNewDialog>
@@ -73,7 +74,11 @@ namespace
 {
 static const char mySieveEditorMainWindowConfigGroupName[] = "SieveEditorMainWindow";
 }
-SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
+SieveEditorMainWindow::SieveEditorMainWindow(
+#if HAVE_WHATSNEWSNGSUPPORT
+    const QList<KAboutRelease> &releases,
+#endif
+    QWidget *parent)
     : KXmlGuiWindow(parent)
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
     , mVerifyNewVersionWidget(new TextAddonsWidgets::VerifyNewVersionWidget(this))
@@ -110,10 +115,9 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
 
     QString newFeaturesMD5;
 #if HAVE_WHATSNEWSNGSUPPORT
-    const KAboutData aboutData = KAboutData::fromAppStreamForApplication();
-    mReleasesInfo = aboutData.releases();
+    mReleasesInfo = releases;
     if (!mReleasesInfo.isEmpty()) {
-        newFeaturesMD5 = mReleasesInfo.constFirst().untranslatedDescription();
+        newFeaturesMD5 = TextAddonsWidgets::WhatsNewNgUtils::createMD5(mReleasesInfo.constFirst().untranslatedDescription());
     }
 #else
     WhatsNewTranslations translations;
