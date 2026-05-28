@@ -21,7 +21,6 @@
 #include <TextAddonsWidgets/NeedUpdateVersionUtils>
 #include <TextAddonsWidgets/NeedUpdateVersionWidget>
 #if HAVE_WHATSNEWSNGSUPPORT
-#include <KAboutData>
 #include <TextAddonsWidgets/WhatsNewMessageNgWidget>
 #include <TextAddonsWidgets/WhatsNewNgDialog>
 #else
