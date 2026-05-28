@@ -116,7 +116,6 @@ SieveEditorMainWindow::SieveEditorMainWindow(QWidget *parent)
         newFeaturesMD5 = mReleasesInfo.constFirst().untranslatedDescription();
     }
 #else
-
     WhatsNewTranslations translations;
     newFeaturesMD5 = translations.newFeaturesMD5();
 #endif
