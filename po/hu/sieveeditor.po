@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:45+0000\n"
+"POT-Creation-Date: 2026-05-29 00:44+0000\n"
 "PO-Revision-Date: 2025-11-07 21:27+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -29,28 +29,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ulysses@fsf.hu"
 
-#: apps/main.cpp:54
-#, kde-format
-msgid "KSieve Editor"
-msgstr "KSieve szerkesztő"
-
-#: apps/main.cpp:56
-#, kde-format
-msgid "Sieve Editor"
-msgstr "Sieve szerkesztő"
-
-#: apps/main.cpp:58
+#: apps/main.cpp:54 apps/main.cpp:63
 #, kde-format
 msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "Copyright © A sieveeditor szerzői, 2013-%1."
 
 #: apps/main.cpp:59
 #, kde-format
+msgid "KSieve Editor"
+msgstr "KSieve szerkesztő"
+
+#: apps/main.cpp:61
+#, kde-format
+msgid "Sieve Editor"
+msgstr "Sieve szerkesztő"
+
+#: apps/main.cpp:65
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: apps/main.cpp:59
+#: apps/main.cpp:65
 #, kde-format
 msgid "Maintainer"
 msgstr "Karbantartó"
@@ -316,135 +316,135 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "Szkript bezárása"
 
-#: sieveeditormainwindow.cpp:230
+#: sieveeditormainwindow.cpp:232
 #, kde-format
 msgid "Network is Up."
 msgstr "A hálózat elindult."
 
-#: sieveeditormainwindow.cpp:232
+#: sieveeditormainwindow.cpp:234
 #, kde-format
 msgid "Network is Down."
 msgstr "A hálózat leállt."
 
-#: sieveeditormainwindow.cpp:254
+#: sieveeditormainwindow.cpp:256
 #, kde-format
 msgid "Upload"
 msgstr "Feltöltés"
 
-#: sieveeditormainwindow.cpp:257
+#: sieveeditormainwindow.cpp:259
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Sieve kiszolgáló hozzáadása…"
 
-#: sieveeditormainwindow.cpp:261
+#: sieveeditormainwindow.cpp:263
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Parancsfájl törlése"
 
-#: sieveeditormainwindow.cpp:267
+#: sieveeditormainwindow.cpp:269
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Új parancsfájl létrehozása…"
 
-#: sieveeditormainwindow.cpp:273
+#: sieveeditormainwindow.cpp:275
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Parancsfájl szerkesztése…"
 
-#: sieveeditormainwindow.cpp:278
+#: sieveeditormainwindow.cpp:280
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Parancsfájl deaktiválása"
 
-#: sieveeditormainwindow.cpp:283
+#: sieveeditormainwindow.cpp:285
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Lista frissítése"
 
-#: sieveeditormainwindow.cpp:289
+#: sieveeditormainwindow.cpp:291
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Ugrás sorra…"
 
-#: sieveeditormainwindow.cpp:306
+#: sieveeditormainwindow.cpp:308
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "Importálás…"
 
-#: sieveeditormainwindow.cpp:312
+#: sieveeditormainwindow.cpp:314
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Megosztás…"
 
-#: sieveeditormainwindow.cpp:320
+#: sieveeditormainwindow.cpp:322
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Helyesírás-ellenőrzés…"
 
-#: sieveeditormainwindow.cpp:326
+#: sieveeditormainwindow.cpp:328
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Szintaxis-ellenőrzés"
 
-#: sieveeditormainwindow.cpp:331
+#: sieveeditormainwindow.cpp:333
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Szabályok készítése grafikusan…"
 
-#: sieveeditormainwindow.cpp:336
+#: sieveeditormainwindow.cpp:338
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Megjegyzéssé tétel"
 
-#: sieveeditormainwindow.cpp:341
+#: sieveeditormainwindow.cpp:343
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Megjegyzéssé tétel visszavonása"
 
-#: sieveeditormainwindow.cpp:369
+#: sieveeditormainwindow.cpp:371
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Könyvjelzők"
 
-#: sieveeditormainwindow.cpp:374
+#: sieveeditormainwindow.cpp:376
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Sieve parancsfájl hibakeresése…"
 
-#: sieveeditormainwindow.cpp:379
+#: sieveeditormainwindow.cpp:381
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Szótördelés"
 
-#: sieveeditormainwindow.cpp:401
+#: sieveeditormainwindow.cpp:403
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "IMAP beállítások importálása…"
 
-#: sieveeditormainwindow.cpp:426
+#: sieveeditormainwindow.cpp:428
 #, kde-format
 msgid "What's new"
 msgstr "Újdonságok"
 
-#: sieveeditormainwindow.cpp:450
+#: sieveeditormainwindow.cpp:452
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
@@ -453,7 +453,7 @@ msgstr ""
 "<qt>Teljesen elrejti a menüsávot. Ezzel a paranccsal állítható vissza: %1.</"
 "qt>"
 
-#: sieveeditormainwindow.cpp:453
+#: sieveeditormainwindow.cpp:455
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
