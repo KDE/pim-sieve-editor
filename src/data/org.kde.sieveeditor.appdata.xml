@@ -159,6 +159,17 @@
       <description>
         <ul>
           <li>Add AI quick Ask support.</li>
+          <li xml:lang="bg">Добавяне на поддръжка за бързо запитване на ИИ.</li>
+          <li xml:lang="ca">Afegeix la implementació de pregunta ràpida.</li>
+          <li xml:lang="ca-valencia">Afig la implementació de pregunta ràpida.</li>
+          <li xml:lang="es">Añadir compatibilidad con pregunta rápida de IA.</li>
+          <li xml:lang="he">הוספת תמיכה בשאלות מהירות מול בינה מלאכותית.</li>
+          <li xml:lang="ka">დაემატა ხი-ისთვის სწრაფი კითხვის დასმის მხარდაჭერა.</li>
+          <li xml:lang="nl">Ondersteuning snel vragen van AI toevoegen.</li>
+          <li xml:lang="pt-BR">Adicionado suporte a perguntas rápidas para IA.</li>
+          <li xml:lang="sl">Doda podporo za hitra vprašanja z umetno inteligenco.</li>
+          <li xml:lang="tr">Yapay zekâya tez sorma desteği</li>
+          <li xml:lang="uk">Додано підтримку швидких питань до ШІ.</li>
         </ul>
       </description>
     </release>
@@ -169,6 +180,17 @@
       <description>
         <ul>
           <li>Add AI Actions Support.</li>
+          <li xml:lang="bg">Добавяне на поддръжка от ИИ</li>
+          <li xml:lang="ca">Afegeix la implementació d'accions IA.</li>
+          <li xml:lang="ca-valencia">Afig la implementació d'accions IA.</li>
+          <li xml:lang="es">Añadir compatibilidad con acciones de IA.</li>
+          <li xml:lang="he">הוספת תמיכה בפעולות בינה מלאכותית.</li>
+          <li xml:lang="ka">დაემატა ხი-ის ქმედებების მხარდაჭერა.</li>
+          <li xml:lang="nl">Ondersteuning voor AI-acties toevoegen.</li>
+          <li xml:lang="pt-BR">Adicionado suporte a ações de IA.</li>
+          <li xml:lang="sl">Doda podporo za dejanja umetne inteligence.</li>
+          <li xml:lang="tr">Yapay zekâ eylemleri desteği</li>
+          <li xml:lang="uk">Додано підтримку дій з ШІ.</li>
         </ul>
       </description>
     </release>
