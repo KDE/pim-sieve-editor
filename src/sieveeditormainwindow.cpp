@@ -134,6 +134,7 @@ SieveEditorMainWindow::SieveEditorMainWindow(
                 whatsNewMessageWidget->setObjectName(u"whatsNewMessageWidget"_s);
                 mainWidgetLayout->addWidget(whatsNewMessageWidget);
                 SieveEditorGlobalConfig::self()->setPreviousNewFeaturesMD5(newFeaturesMD5);
+                SieveEditorGlobalConfig::self()->save();
                 whatsNewMessageWidget->animatedShow();
 #else
 
@@ -142,11 +143,13 @@ SieveEditorMainWindow::SieveEditorMainWindow(
                 whatsNewMessageWidget->setObjectName(QStringLiteral("whatsNewMessageWidget"));
                 mainWidgetLayout->addWidget(whatsNewMessageWidget);
                 SieveEditorGlobalConfig::self()->setPreviousNewFeaturesMD5(newFeaturesMD5);
+                SieveEditorGlobalConfig::self()->save();
                 whatsNewMessageWidget->animatedShow();
 #endif
             }
         } else {
             SieveEditorGlobalConfig::self()->setPreviousNewFeaturesMD5(newFeaturesMD5);
+            SieveEditorGlobalConfig::self()->save();
         }
     }
 
