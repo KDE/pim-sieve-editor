@@ -43,6 +43,7 @@
   <name xml:lang="sl">SieveEditor</name>
   <name xml:lang="sv">Sieveeditor</name>
   <name xml:lang="tr">Sieve Düzenleyicisi</name>
+  <name xml:lang="ug">Sieve تەھرىرلىگۈچ</name>
   <name xml:lang="uk">Редактор фільтрів</name>
   <name xml:lang="zh-CN">SieveEditor</name>
   <name xml:lang="zh-TW">篩選器編輯器</name>
@@ -84,6 +85,7 @@
   <summary xml:lang="sl">Urejevalnik za poštne skripte Sieve</summary>
   <summary xml:lang="sv">Editor av Sieve-skript för filtrering av e-post</summary>
   <summary xml:lang="tr">E-posta süzgeci Sieve betikleri için düzenleyici</summary>
+  <summary xml:lang="ug">ئېلخەت سۈزگۈچ Sieve قوليازمىسى تەھرىرلىگۈچ</summary>
   <summary xml:lang="uk">Редактор скриптів фільтрування електронної пошти</summary>
   <summary xml:lang="zh-CN">电子邮件过滤器 Sieve 脚本编辑器</summary>
   <summary xml:lang="zh-TW">電子郵件篩選器 Sieve 文稿的編輯器</summary>
@@ -129,6 +131,7 @@
     <p xml:lang="sl">SieveEditor dovoljuje urejanje, kreiranje in brisanje skriptov sieve.</p>
     <p xml:lang="sv">Sieveeditor gör det möjligt att redigera, skapa och ta bort Sieve-skript.</p>
     <p xml:lang="tr">Sieve Düzenleyicisi, Sieve betikleri düzenlemenize, oluşturmanıza ve silmenize olanak tanır.</p>
+    <p xml:lang="ug">Sieve تەھرىرلىگۈچ Sieve قوليازمىسىنى تەھرىرلەش، قۇرۇش ۋە ئۆچۈرۈشكە ئىشلىتىلىدۇ.</p>
     <p xml:lang="uk">За допомогою редактора фільтрів ви зможете редагувати, створювати та вилучати скрипти фільтрування пошти.</p>
     <p xml:lang="zh-CN">SieveEditor 可用于编辑，创建，及删除 sieve 脚本。</p>
     <p xml:lang="zh-TW">篩選器編輯器允許編輯、建立和刪除篩選器指令碼。</p>
