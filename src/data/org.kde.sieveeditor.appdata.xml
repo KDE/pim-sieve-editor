@@ -163,9 +163,11 @@
       <description>
         <ul>
           <li>Add AI quick Ask support.</li>
+          <li xml:lang="ar">إضافة دعم سؤال سريع بالذكاء الاصطناعي.</li>
           <li xml:lang="bg">Добавяне на поддръжка за бързо запитване на ИИ.</li>
           <li xml:lang="ca">Afegeix la implementació de pregunta ràpida.</li>
           <li xml:lang="ca-valencia">Afig la implementació de pregunta ràpida.</li>
+          <li xml:lang="cs">Přidat podporu pro rychlé dotazy pomocí AI.</li>
           <li xml:lang="es">Añadir compatibilidad con pregunta rápida de IA.</li>
           <li xml:lang="fr">Ajouter la prise en charge de l'IA « Quick Ask ».</li>
           <li xml:lang="he">הוספת תמיכה בשאלות מהירות מול בינה מלאכותית.</li>
@@ -187,9 +189,11 @@
       <description>
         <ul>
           <li>Add AI Actions Support.</li>
+          <li xml:lang="ar">إضافة دعم إجراءات الذكاء الاصطناعي.</li>
           <li xml:lang="bg">Добавяне на поддръжка от ИИ</li>
           <li xml:lang="ca">Afegeix la implementació d'accions IA.</li>
           <li xml:lang="ca-valencia">Afig la implementació d'accions IA.</li>
+          <li xml:lang="cs">Přidat podporu pro akce AI.</li>
           <li xml:lang="es">Añadir compatibilidad con acciones de IA.</li>
           <li xml:lang="fr">Ajouter la prise en charge des actions d'IA.</li>
           <li xml:lang="he">הוספת תמיכה בפעולות בינה מלאכותית.</li>
