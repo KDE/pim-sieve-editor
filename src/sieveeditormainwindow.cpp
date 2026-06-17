@@ -231,6 +231,7 @@ void SieveEditorMainWindow::initStatusBar()
 
 void SieveEditorMainWindow::slotSystemNetworkOnlineStateChanged(bool state)
 {
+    mNetworkIsDown = !state;
     if (state) {
         mStatusBarInfo->setText(i18n("Network is Up."));
     } else {
