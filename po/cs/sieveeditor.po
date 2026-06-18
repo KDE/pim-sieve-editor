@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-02 00:45+0000\n"
+"POT-Creation-Date: 2026-06-18 00:44+0000\n"
 "PO-Revision-Date: 2026-04-07 21:34+0200\n"
 "Last-Translator: Libor Filípek <filipek.libor@protonmail.com>\n"
 "Language-Team: \n"
@@ -313,135 +313,135 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "Zavřít skript"
 
-#: sieveeditormainwindow.cpp:235
+#: sieveeditormainwindow.cpp:236
 #, kde-format
 msgid "Network is Up."
 msgstr "Síť běží."
 
-#: sieveeditormainwindow.cpp:237
+#: sieveeditormainwindow.cpp:238
 #, kde-format
 msgid "Network is Down."
 msgstr "Síť neběží."
 
-#: sieveeditormainwindow.cpp:259
+#: sieveeditormainwindow.cpp:260
 #, kde-format
 msgid "Upload"
 msgstr "Odeslat"
 
-#: sieveeditormainwindow.cpp:262
+#: sieveeditormainwindow.cpp:263
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Přidat server Sieve…"
 
-#: sieveeditormainwindow.cpp:266
+#: sieveeditormainwindow.cpp:267
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Smazat skript"
 
-#: sieveeditormainwindow.cpp:272
+#: sieveeditormainwindow.cpp:273
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Vytvořit nový skript…"
 
-#: sieveeditormainwindow.cpp:278
+#: sieveeditormainwindow.cpp:279
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Upravit skript…"
 
-#: sieveeditormainwindow.cpp:283
+#: sieveeditormainwindow.cpp:284
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Deaktivovat skript"
 
-#: sieveeditormainwindow.cpp:288
+#: sieveeditormainwindow.cpp:289
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Obnovit seznam"
 
-#: sieveeditormainwindow.cpp:294
+#: sieveeditormainwindow.cpp:295
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Přejít na řádek…"
 
-#: sieveeditormainwindow.cpp:311
+#: sieveeditormainwindow.cpp:312
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "Importovat…"
 
-#: sieveeditormainwindow.cpp:317
+#: sieveeditormainwindow.cpp:318
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Sdílet…"
 
-#: sieveeditormainwindow.cpp:325
+#: sieveeditormainwindow.cpp:326
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Zkontrolovat pravopis…"
 
-#: sieveeditormainwindow.cpp:331
+#: sieveeditormainwindow.cpp:332
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Zkontrolovat syntaxi"
 
-#: sieveeditormainwindow.cpp:336
+#: sieveeditormainwindow.cpp:337
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Vytvořit pravidla graficky…"
 
-#: sieveeditormainwindow.cpp:341
+#: sieveeditormainwindow.cpp:342
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Komentovat"
 
-#: sieveeditormainwindow.cpp:346
+#: sieveeditormainwindow.cpp:347
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Odkomentovat"
 
-#: sieveeditormainwindow.cpp:374
+#: sieveeditormainwindow.cpp:375
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Záložky"
 
-#: sieveeditormainwindow.cpp:379
+#: sieveeditormainwindow.cpp:380
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Ladit skript Sieve…"
 
-#: sieveeditormainwindow.cpp:384
+#: sieveeditormainwindow.cpp:385
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Zalamování slov"
 
-#: sieveeditormainwindow.cpp:406
+#: sieveeditormainwindow.cpp:407
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "Importovat nastavení IMAP…"
 
-#: sieveeditormainwindow.cpp:431
+#: sieveeditormainwindow.cpp:432
 #, kde-format
 msgid "What's new"
 msgstr "Co je nového"
 
-#: sieveeditormainwindow.cpp:455
+#: sieveeditormainwindow.cpp:456
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
@@ -450,7 +450,7 @@ msgstr ""
 "<qt>Toto úplně skryje panel nabídky. Můžete ji opětovně zobrazit pomocí %1.</"
 "qt>"
 
-#: sieveeditormainwindow.cpp:458
+#: sieveeditormainwindow.cpp:459
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"

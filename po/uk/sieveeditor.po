@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-02 00:45+0000\n"
+"POT-Creation-Date: 2026-06-18 00:44+0000\n"
 "PO-Revision-Date: 2026-04-01 08:36+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -317,135 +317,135 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "Закриття скрипту"
 
-#: sieveeditormainwindow.cpp:235
+#: sieveeditormainwindow.cpp:236
 #, kde-format
 msgid "Network is Up."
 msgstr "Мережа працює."
 
-#: sieveeditormainwindow.cpp:237
+#: sieveeditormainwindow.cpp:238
 #, kde-format
 msgid "Network is Down."
 msgstr "Мережу вимкнено."
 
-#: sieveeditormainwindow.cpp:259
+#: sieveeditormainwindow.cpp:260
 #, kde-format
 msgid "Upload"
 msgstr "Вивантажити"
 
-#: sieveeditormainwindow.cpp:262
+#: sieveeditormainwindow.cpp:263
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Додати сервер фільтрування…"
 
-#: sieveeditormainwindow.cpp:266
+#: sieveeditormainwindow.cpp:267
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Вилучити скрипт"
 
-#: sieveeditormainwindow.cpp:272
+#: sieveeditormainwindow.cpp:273
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Створити новий скрипт…"
 
-#: sieveeditormainwindow.cpp:278
+#: sieveeditormainwindow.cpp:279
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Змінити скрипт…"
 
-#: sieveeditormainwindow.cpp:283
+#: sieveeditormainwindow.cpp:284
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Вимкнути скрипт"
 
-#: sieveeditormainwindow.cpp:288
+#: sieveeditormainwindow.cpp:289
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Оновити список"
 
-#: sieveeditormainwindow.cpp:294
+#: sieveeditormainwindow.cpp:295
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Перейти до рядка…"
 
-#: sieveeditormainwindow.cpp:311
+#: sieveeditormainwindow.cpp:312
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "Імпортувати…"
 
-#: sieveeditormainwindow.cpp:317
+#: sieveeditormainwindow.cpp:318
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Оприлюднити…"
 
-#: sieveeditormainwindow.cpp:325
+#: sieveeditormainwindow.cpp:326
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Перевірити правопис…"
 
-#: sieveeditormainwindow.cpp:331
+#: sieveeditormainwindow.cpp:332
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Перевірити синтаксис"
 
-#: sieveeditormainwindow.cpp:336
+#: sieveeditormainwindow.cpp:337
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Створення правил у графічному режимі:"
 
-#: sieveeditormainwindow.cpp:341
+#: sieveeditormainwindow.cpp:342
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Закоментувати"
 
-#: sieveeditormainwindow.cpp:346
+#: sieveeditormainwindow.cpp:347
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Розкоментувати"
 
-#: sieveeditormainwindow.cpp:374
+#: sieveeditormainwindow.cpp:375
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Закладки"
 
-#: sieveeditormainwindow.cpp:379
+#: sieveeditormainwindow.cpp:380
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Діагностика скрипту фільтрування…"
 
-#: sieveeditormainwindow.cpp:384
+#: sieveeditormainwindow.cpp:385
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Перенесення рядків"
 
-#: sieveeditormainwindow.cpp:406
+#: sieveeditormainwindow.cpp:407
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "Імпортування параметрів IMAP…"
 
-#: sieveeditormainwindow.cpp:431
+#: sieveeditormainwindow.cpp:432
 #, kde-format
 msgid "What's new"
 msgstr "Що нового?"
 
-#: sieveeditormainwindow.cpp:455
+#: sieveeditormainwindow.cpp:456
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
@@ -454,7 +454,7 @@ msgstr ""
 "<qt>За допомогою цього пункту можна повністю сховати смужку меню. Наказати "
 "програмі знову показувати цю смужку можна клавіатурним скороченням %1.</qt>"
 
-#: sieveeditormainwindow.cpp:458
+#: sieveeditormainwindow.cpp:459
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"

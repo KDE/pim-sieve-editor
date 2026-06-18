@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-02 00:45+0000\n"
+"POT-Creation-Date: 2026-06-18 00:44+0000\n"
 "PO-Revision-Date: 2026-04-08 23:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -311,142 +311,142 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "關閉文稿"
 
-#: sieveeditormainwindow.cpp:235
+#: sieveeditormainwindow.cpp:236
 #, kde-format
 msgid "Network is Up."
 msgstr "網路已連線。"
 
-#: sieveeditormainwindow.cpp:237
+#: sieveeditormainwindow.cpp:238
 #, kde-format
 msgid "Network is Down."
 msgstr "網路未連線。"
 
-#: sieveeditormainwindow.cpp:259
+#: sieveeditormainwindow.cpp:260
 #, kde-format
 msgid "Upload"
 msgstr "上傳"
 
-#: sieveeditormainwindow.cpp:262
+#: sieveeditormainwindow.cpp:263
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "新增過濾伺服器…"
 
-#: sieveeditormainwindow.cpp:266
+#: sieveeditormainwindow.cpp:267
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "刪除文稿"
 
-#: sieveeditormainwindow.cpp:272
+#: sieveeditormainwindow.cpp:273
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "建立新文稿…"
 
-#: sieveeditormainwindow.cpp:278
+#: sieveeditormainwindow.cpp:279
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "編輯文稿…"
 
-#: sieveeditormainwindow.cpp:283
+#: sieveeditormainwindow.cpp:284
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "關閉文稿"
 
-#: sieveeditormainwindow.cpp:288
+#: sieveeditormainwindow.cpp:289
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "重新整理清單"
 
-#: sieveeditormainwindow.cpp:294
+#: sieveeditormainwindow.cpp:295
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "跳至行號…"
 
-#: sieveeditormainwindow.cpp:311
+#: sieveeditormainwindow.cpp:312
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "匯入…"
 
-#: sieveeditormainwindow.cpp:317
+#: sieveeditormainwindow.cpp:318
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "分享…"
 
-#: sieveeditormainwindow.cpp:325
+#: sieveeditormainwindow.cpp:326
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "檢查拼字…"
 
-#: sieveeditormainwindow.cpp:331
+#: sieveeditormainwindow.cpp:332
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "檢查語法"
 
-#: sieveeditormainwindow.cpp:336
+#: sieveeditormainwindow.cpp:337
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "用圖形介面建立規則…"
 
-#: sieveeditormainwindow.cpp:341
+#: sieveeditormainwindow.cpp:342
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "註解"
 
-#: sieveeditormainwindow.cpp:346
+#: sieveeditormainwindow.cpp:347
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "取消註解"
 
-#: sieveeditormainwindow.cpp:374
+#: sieveeditormainwindow.cpp:375
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "書籤(&B)"
 
-#: sieveeditormainwindow.cpp:379
+#: sieveeditormainwindow.cpp:380
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "除錯過濾文稿…"
 
-#: sieveeditormainwindow.cpp:384
+#: sieveeditormainwindow.cpp:385
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "自動換行"
 
-#: sieveeditormainwindow.cpp:406
+#: sieveeditormainwindow.cpp:407
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "匯入 IMAP 設定…"
 
-#: sieveeditormainwindow.cpp:431
+#: sieveeditormainwindow.cpp:432
 #, kde-format
 msgid "What's new"
 msgstr "新功能"
 
-#: sieveeditormainwindow.cpp:455
+#: sieveeditormainwindow.cpp:456
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 msgstr "<qt>這會完全隱藏選單列。您可以按下 %1 重新顯示選單列。</qt>"
 
-#: sieveeditormainwindow.cpp:458
+#: sieveeditormainwindow.cpp:459
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
