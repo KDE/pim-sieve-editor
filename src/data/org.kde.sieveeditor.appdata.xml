@@ -180,6 +180,7 @@
           <li xml:lang="sl">Doda podporo za hitra vprašanja z umetno inteligenco.</li>
           <li xml:lang="tr">Yapay zekâya tez sorma desteği</li>
           <li xml:lang="uk">Додано підтримку швидких питань до ШІ.</li>
+          <li xml:lang="zh-TW">加入 AI 快速詢問支援。</li>
         </ul>
       </description>
     </release>
@@ -207,6 +208,7 @@
           <li xml:lang="sl">Doda podporo za dejanja umetne inteligence.</li>
           <li xml:lang="tr">Yapay zekâ eylemleri desteği</li>
           <li xml:lang="uk">Додано підтримку дій з ШІ.</li>
+          <li xml:lang="zh-TW">加入 AI 動作支援。</li>
         </ul>
       </description>
     </release>
