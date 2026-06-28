@@ -148,20 +148,6 @@
             ]
         },
         {
-            "name": "kmime",
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://invent.kde.org/pim/kmime.git",
-                    "branch": "master"
-                }
-            ],
-            "config-opts": [
-                "-DBUILD_TESTING=OFF"
-            ]
-        },
-        {
             "name": "akonadi",
             "buildsystem": "cmake-ninja",
             "sources": [
