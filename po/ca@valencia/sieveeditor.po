@@ -264,7 +264,7 @@ msgstr "Script que s'ha d'importar:"
 #, kde-format
 msgctxt "Action is from file menu, import submenu"
 msgid "File > Import"
-msgstr "Fitxer -> Importa"
+msgstr "Fitxer → Importa"
 
 #: sieveeditoremptytabwidgetlabel.cpp:26
 #, kde-format
@@ -275,7 +275,7 @@ msgstr "Crea regles gràficament:"
 #, kde-format
 msgctxt "Action is from menu tools, submenu autogenerate script"
 msgid "Tools > Autogenerate script"
-msgstr "Eines -> Autogenera l'script"
+msgstr "Eines → Autogenera l'script"
 
 #: sieveeditoremptytabwidgetlabel.cpp:27
 #, kde-format
@@ -286,7 +286,7 @@ msgstr "Depura un script:"
 #, kde-format
 msgctxt "These action in from menu tools submenu debug sieve script"
 msgid "Tools > Debug Sieve Script"
-msgstr "Eines -> Depura l'script de «Sieve»"
+msgstr "Eines → Depura l'script de «Sieve»"
 
 #: sieveeditoremptytabwidgetlabel.cpp:28
 #, kde-format
