@@ -49,19 +49,10 @@ int main(int argc, char **argv)
 #endif
     KStyleManager::initStyle();
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("sieveeditor"));
-#if HAVE_WHATSNEWSNGSUPPORT
     KAboutData aboutData = KAboutData::fromAppStreamForApplication();
     aboutData.setCopyrightStatement(i18n("Copyright © 2013-%1 sieveeditor authors", QStringLiteral("2026")));
     aboutData.setVersion(SIEVEEDITOR_VERSION);
     aboutData.setComponentName(u"sieveeditor"_s);
-#else
-    KAboutData aboutData(QStringLiteral("sieveeditor"),
-                         i18n("KSieve Editor"),
-                         QStringLiteral(SIEVEEDITOR_VERSION),
-                         i18n("Sieve Editor"),
-                         KAboutLicense::GPL_V2,
-                         i18n("Copyright © 2013-%1 sieveeditor authors", QStringLiteral("2026")));
-#endif
     aboutData.addAuthor(i18nc("@info:credit", "Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
     aboutData.setOrganizationDomain("kde.org"_ba);
     aboutData.setProductName("sieveeditor"_ba);
@@ -105,11 +96,7 @@ int main(int argc, char **argv)
         return 0;
     }
 #endif
-    QPointer<SieveEditorMainWindow> mw{new SieveEditorMainWindow(
-#if HAVE_WHATSNEWSNGSUPPORT
-        aboutData.releases()
-#endif
-            )};
+    QPointer<SieveEditorMainWindow> mw{new SieveEditorMainWindow(aboutData.releases())};
 #if WITH_DBUS
     QObject::connect(&service, &KDBusService::activateRequested, mw, &SieveEditorMainWindow::slotActivateRequested);
 #else

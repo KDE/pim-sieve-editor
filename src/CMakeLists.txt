@@ -100,16 +100,14 @@ target_sources(
         sieveeditorcommandlineparser.h
         sieveeditorcommandlineparser.cpp
 )
-if(HAVE_SIEVEEDITOR_TEXTAUTOGENERATE_INTERNAL_TOOLS)
-    target_sources(
-        libsieveeditor
-        PRIVATE
-            sieveeditortoolinternalinterface.h
-            sieveeditortoolinternalinterface.cpp
-            internaltoolsjob/addnewscripttoolinternaljob.h
-            internaltoolsjob/addnewscripttoolinternaljob.cpp
-    )
-endif()
+target_sources(
+    libsieveeditor
+    PRIVATE
+        sieveeditortoolinternalinterface.h
+        sieveeditortoolinternalinterface.cpp
+        internaltoolsjob/addnewscripttoolinternaljob.h
+        internaltoolsjob/addnewscripttoolinternaljob.cpp
+)
 
 ki18n_wrap_ui(libsieveeditor
     ui/serversievesettings.ui

@@ -12,7 +12,7 @@ set(SIEVEEDITOR_RELEASE_VERSION_DATE "26.07.10") # yy.MM.dd
 # Use true if stable version => we will check specific version
 set(SIEVEEDITOR_STABLE_VERSION false)
 
-set(KF_MIN_VERSION "6.25.0")
+set(KF_MIN_VERSION "6.26.0")
 set(QT_REQUIRED_VERSION "6.9.0")
 set(QT6KEYCHAIN_LIB_VERSION "0.15.0")
 
@@ -172,17 +172,6 @@ set_package_properties(
             REQUIRED
 )
 
-if(
-    ${KF6CoreAddons_VERSION}
-        VERSION_GREATER_EQUAL
-        6.26.0
-    AND ${KF6TextAddonsWidgets_VERSION}
-        VERSION_GREATER_EQUAL
-        2.0.69
-)
-    set(HAVE_WHATSNEWSNGSUPPORT TRUE)
-endif()
-
 # shall we use DBus?
 # enabled per default on Linux & BSD systems
 set(USE_DBUS_DEFAULT OFF)
@@ -240,11 +229,6 @@ endif()
 
 if(TARGET KF6::TextAutoGenerateText)
     set(HAVE_TEXT_AUTOGENERATE_TEXT TRUE)
-    if(${KF6TextAutoGenerateText_VERSION} VERSION_GREATER_EQUAL 2.0.50)
-        if(OPTION_ADD_INTERNAL_PLUGIN)
-            set(HAVE_SIEVEEDITOR_TEXTAUTOGENERATE_INTERNAL_TOOLS TRUE)
-        endif()
-    endif()
 endif()
 
 include_directories(

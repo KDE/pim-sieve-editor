@@ -17,9 +17,7 @@ class KActionMenu;
 class KToggleFullScreenAction;
 class KHamburgerMenu;
 class KToggleAction;
-#if HAVE_WHATSNEWSNGSUPPORT
 #include <KAboutData>
-#endif
 
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
 namespace TextAddonsWidgets
@@ -35,11 +33,7 @@ class LIBSIEVEEDITOR_EXPORT SieveEditorMainWindow : public KXmlGuiWindow
 {
     Q_OBJECT
 public:
-    explicit SieveEditorMainWindow(
-#if HAVE_WHATSNEWSNGSUPPORT
-        const QList<KAboutRelease> &releases,
-#endif
-        QWidget *parent = nullptr);
+    explicit SieveEditorMainWindow(const QList<KAboutRelease> &releases, QWidget *parent = nullptr);
     ~SieveEditorMainWindow() override;
 
     [[nodiscard]] QString currentHelpTitle() const;
@@ -119,8 +113,6 @@ private:
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
     TextAddonsWidgets::VerifyNewVersionWidget *const mVerifyNewVersionWidget;
 #endif
-#if HAVE_WHATSNEWSNGSUPPORT
     QList<KAboutRelease> mReleasesInfo;
-#endif
     bool mNetworkIsDown = false;
 };
