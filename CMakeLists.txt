@@ -2,9 +2,9 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 cmake_minimum_required(VERSION 3.29)
-set(PIM_VERSION "6.7.40")
+set(PIM_VERSION "6.8.40")
 project(sieveeditor VERSION ${PIM_VERSION})
-set(RELEASE_SERVICE_VERSION "26.07.40")
+set(RELEASE_SERVICE_VERSION "26.11.40")
 
 # Update it for each release
 set(SIEVEEDITOR_RELEASE_VERSION_DATE "26.07.10") # yy.MM.dd
@@ -120,7 +120,7 @@ set(KDEPIM_LIB_SOVERSION "6")
 set(LIBKSIEVE_LIB_VERSION "6.7.43")
 set(PIMCOMMON_LIB_VERSION "6.7.40")
 set(KIMAP_LIB_VERSION "6.7.40")
-set(KTEXTADDONS_MIN_VERSION "2.0.2")
+set(KTEXTADDONS_MIN_VERSION "2.1.0")
 
 find_package(
     Qt6
