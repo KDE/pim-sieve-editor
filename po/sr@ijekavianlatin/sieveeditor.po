@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-18 00:44+0000\n"
+"POT-Creation-Date: 2026-07-07 00:44+0000\n"
 "PO-Revision-Date: 2018-01-06 09:21+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -28,30 +28,20 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "caslav.ilic@gmx.net"
 
-#: apps/main.cpp:54 apps/main.cpp:63
+#: apps/main.cpp:53
 #, fuzzy, kde-format
 #| msgid "Copyright © 2013-2018 sieveeditor authors"
 msgid "Copyright © 2013-%1 sieveeditor authors"
 msgstr "© 2013–2018, autori sito uređivača"
 
-#: apps/main.cpp:59
-#, kde-format
-msgid "KSieve Editor"
-msgstr "Sito uređivač"
-
-#: apps/main.cpp:61
-#, kde-format
-msgid "Sieve Editor"
-msgstr "Sito uređivač"
-
-#: apps/main.cpp:65
+#: apps/main.cpp:56
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Loren Montel"
 
-#: apps/main.cpp:65
+#: apps/main.cpp:56
 #, kde-format
 msgid "Maintainer"
 msgstr "Održavalac"
@@ -326,35 +316,35 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Alatke > Uvezi IMAP postavke"
 
-#: sieveeditormainwidget.cpp:641
+#: sieveeditormainwidget.cpp:637
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Skripta je izmenjena. Želite li da je sačuvate pre zatvaranja?"
 
 # >> @title:window
-#: sieveeditormainwidget.cpp:642
+#: sieveeditormainwidget.cpp:638
 #, fuzzy, kde-format
 #| msgid "Close script"
 msgctxt "@title:window"
 msgid "Close script"
 msgstr "Zatvaranje skripte"
 
-#: sieveeditormainwindow.cpp:236
+#: sieveeditormainwindow.cpp:202
 #, kde-format
 msgid "Network is Up."
 msgstr "Mreža je aktivna"
 
-#: sieveeditormainwindow.cpp:238
+#: sieveeditormainwindow.cpp:204
 #, kde-format
 msgid "Network is Down."
 msgstr "Mreža je nedostupna"
 
-#: sieveeditormainwindow.cpp:260
+#: sieveeditormainwindow.cpp:226
 #, kde-format
 msgid "Upload"
 msgstr "Otpremi"
 
-#: sieveeditormainwindow.cpp:263
+#: sieveeditormainwindow.cpp:229
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add Sieve Server"
@@ -362,28 +352,28 @@ msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Dodavanje sito servera"
 
-#: sieveeditormainwindow.cpp:267
+#: sieveeditormainwindow.cpp:233
 #, fuzzy, kde-format
 #| msgid "Delete Script"
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Obriši skriptu"
 
-#: sieveeditormainwindow.cpp:273
+#: sieveeditormainwindow.cpp:239
 #, fuzzy, kde-format
 #| msgid "Create New Script..."
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Napravi novu skriptu..."
 
-#: sieveeditormainwindow.cpp:279
+#: sieveeditormainwindow.cpp:245
 #, fuzzy, kde-format
 #| msgid "Edit Script..."
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Uredi skriptu..."
 
-#: sieveeditormainwindow.cpp:284
+#: sieveeditormainwindow.cpp:250
 #, fuzzy, kde-format
 #| msgid "Deactivate Script"
 msgctxt "@action"
@@ -391,83 +381,83 @@ msgid "Deactivate Script"
 msgstr "Deaktiviraj skriptu"
 
 # skip-rule: t-list_tg
-#: sieveeditormainwindow.cpp:289
+#: sieveeditormainwindow.cpp:255
 #, fuzzy, kde-format
 #| msgid "Refresh List"
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Osvježi spisak"
 
-#: sieveeditormainwindow.cpp:295
+#: sieveeditormainwindow.cpp:261
 #, fuzzy, kde-format
 #| msgid "Go to Line..."
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Idi na red..."
 
-#: sieveeditormainwindow.cpp:312
+#: sieveeditormainwindow.cpp:278
 #, fuzzy, kde-format
 #| msgid "Import..."
 msgctxt "@action"
 msgid "Import…"
 msgstr "Uvezi..."
 
-#: sieveeditormainwindow.cpp:318
+#: sieveeditormainwindow.cpp:284
 #, fuzzy, kde-format
 #| msgid "Share..."
 msgctxt "@action"
 msgid "Share…"
 msgstr "Deli..."
 
-#: sieveeditormainwindow.cpp:326
+#: sieveeditormainwindow.cpp:292
 #, fuzzy, kde-format
 #| msgid "Check Spelling..."
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Proveri pravopis..."
 
-#: sieveeditormainwindow.cpp:332
+#: sieveeditormainwindow.cpp:298
 #, fuzzy, kde-format
 #| msgid "Check Syntax"
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Proveri sintaksu"
 
-#: sieveeditormainwindow.cpp:337
+#: sieveeditormainwindow.cpp:303
 #, fuzzy, kde-format
 #| msgid "Create Rules Graphically:"
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Sastavi pravila grafički:"
 
-#: sieveeditormainwindow.cpp:342
+#: sieveeditormainwindow.cpp:308
 #, fuzzy, kde-format
 #| msgid "Comment"
 msgctxt "@action"
 msgid "Comment"
 msgstr "Zakomentariši"
 
-#: sieveeditormainwindow.cpp:347
+#: sieveeditormainwindow.cpp:313
 #, fuzzy, kde-format
 #| msgid "Uncomment"
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Otkomentariši"
 
-#: sieveeditormainwindow.cpp:375
+#: sieveeditormainwindow.cpp:341
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Obilježivači"
 
-#: sieveeditormainwindow.cpp:380
+#: sieveeditormainwindow.cpp:346
 #, fuzzy, kde-format
 #| msgid "Debug Sieve Script..."
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Ispravljaj sito skriptu..."
 
-#: sieveeditormainwindow.cpp:385
+#: sieveeditormainwindow.cpp:351
 #, fuzzy, kde-format
 #| msgid "Wordwrap"
 msgctxt "@action"
@@ -475,26 +465,26 @@ msgid "Wordwrap"
 msgstr "Prelom teksta"
 
 # >> @title:window
-#: sieveeditormainwindow.cpp:407
+#: sieveeditormainwindow.cpp:373
 #, fuzzy, kde-format
 #| msgid "Import IMAP Settings"
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "Uvoz postavki IMAP‑a"
 
-#: sieveeditormainwindow.cpp:432
+#: sieveeditormainwindow.cpp:398
 #, kde-format
 msgid "What's new"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:456
+#: sieveeditormainwindow.cpp:422
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:459
+#: sieveeditormainwindow.cpp:425
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
@@ -848,6 +838,12 @@ msgstr ""
 #, kde-format
 msgid "Add AI quick Ask support."
 msgstr ""
+
+#~ msgid "KSieve Editor"
+#~ msgstr "Sito uređivač"
+
+#~ msgid "Sieve Editor"
+#~ msgstr "Sito uređivač"
 
 #~ msgid "Configure..."
 #~ msgstr "Podesi..."
