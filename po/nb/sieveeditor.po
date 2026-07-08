@@ -792,9 +792,3 @@ msgstr ""
 #, kde-format
 msgid "Add AI quick Ask support."
 msgstr ""
-
-#~ msgid "KSieve Editor"
-#~ msgstr "KSieve-redigerer"
-
-#~ msgid "Sieve Editor"
-#~ msgstr "Sieve-redigering"
