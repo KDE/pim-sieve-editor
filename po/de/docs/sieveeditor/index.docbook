@@ -63,7 +63,7 @@
 
 <abstract>
 <para
->&i18n-kapplication; ist ein Editor für Sieve-Skripte, die auf einem Server zur Filterung von E-Mails benutzt werden. </para>
+>&i18n-kapplication; ist ein Editor für Sieve-Skripte, die auf einem Server zur Filterung von E-Mails verwendet werden. </para>
 </abstract>
 
 <keywordset>
@@ -80,7 +80,7 @@
 <para
 >&i18n-kapplication; ist ein Editor für <ulink url="https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)"
 >Sieve</ulink
->-Skripte, die auf einem Server zur Filterung von E-Mails benutzt werden.</para>
+>-Skripte, die auf einem Server zur Filterung von E-Mails verwendet werden.</para>
 
 <sect1 id="using-kapp">
 <title
@@ -113,7 +113,7 @@
 </itemizedlist>
 
 <para
->&i18n-kapplication; kann unabhängig von Akonadi oder &kmail; verwendet werden, Sie brauchen nur einen E-Mail-Server, der Sieve-Skripts unterstützt.</para>
+>&i18n-kapplication; kann unabhängig von Akonadi oder &kmail; verwendet werden, Sie benötigen nur einen E-Mail-Server, der Sieve-Skripts unterstützt.</para>
 
 <para
 >Im &plasma-desktop; werden die Passwörter in &kwallet5; gespeichert</para>
@@ -145,7 +145,7 @@
 ><guimenuitem
 >Server hinzufügen</guimenuitem
 ></menuchoice
-> oder den Einrichtungsdialog für diese Aufgabe benutzen.</para>
+> oder den Einrichtungsdialog für diese Aufgabe verwenden.</para>
 <para
 >Beim nächsten Start von &i18n-kapplication; werden alle vorhandenen Skripte von den definierten Servern geholt.</para>
 </sect2>

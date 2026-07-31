@@ -608,7 +608,7 @@ msgid ""
 "server can only be accessed via port 4190."
 msgstr ""
 "Der Serverport wurde geändert, als „Managesieve“ als vollständiger RFC-"
-"Standard veröffentlicht wurde. Alte Server-Implementationen benutzen immer "
+"Standard veröffentlicht wurde. Alte Server-Implementationen verwenden immer "
 "noch den Port 2000, während neuere standardkonforme Server nur über den Port "
 "4190 erreicht werden können."
 
