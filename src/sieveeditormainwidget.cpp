@@ -45,10 +45,11 @@ SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *par
 
     auto interface = new SieveEditorToolInternalInterface(this, this);
     interface->loadInternalTools(u":/internaltools/sieveeditor-internal-tools.json"_s);
+#if HAVE_TEXT_AUTOGENERATE_TEXT
     mManager->setTextAutoGenerateTextToolInternalInterface(interface);
     mManager->setHaveInsertText(true);
     connect(mManager, &TextAutoGenerateText::TextAutoGenerateManager::insertBlockCode, this, &SieveEditorMainWidget::slotInsertBlockCode);
-
+#endif
     connect(mTabWidget, &SieveEditorTabWidget::tabCloseRequestedIndex, this, &SieveEditorMainWidget::slotTabCloseRequested);
     connect(mTabWidget, &SieveEditorTabWidget::tabRemoveAllExclude, this, &SieveEditorMainWidget::slotTabRemoveAllExclude);
     connect(mTabWidget, &SieveEditorTabWidget::tabCloseAllTab, this, &SieveEditorMainWidget::slotTabCloseAllRequested);
