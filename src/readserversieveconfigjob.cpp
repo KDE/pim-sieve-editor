@@ -28,7 +28,7 @@ void ReadServerSieveConfigJob::loadSettings(const QString &conf)
     KSharedConfigPtr cfg = KSharedConfig::openConfig();
     KConfigGroup group = cfg->group(conf);
     // Sieve Account Settings
-    mCurrentSieveServerConfig.sieveSettings.port = group.readEntry(QStringLiteral("Port"), 0);
+    mCurrentSieveServerConfig.sieveSettings.port = group.readEntry(QStringLiteral("Port"), -1);
     mCurrentSieveServerConfig.sieveSettings.serverName = group.readEntry(QStringLiteral("ServerName"));
     mCurrentSieveServerConfig.sieveSettings.userName = group.readEntry(QStringLiteral("UserName"));
     mCurrentSieveServerConfig.enabled = group.readEntry(QStringLiteral("Enabled"), true);
@@ -36,7 +36,7 @@ void ReadServerSieveConfigJob::loadSettings(const QString &conf)
         group.readEntry(QStringLiteral("Authentication"), static_cast<int>(MailTransport::Transport::EnumAuthenticationType::PLAIN)));
 
     // Imap Account Settings
-    mCurrentSieveServerConfig.sieveImapAccountSettings.setPort(group.readEntry(QStringLiteral("ImapPort"), 0));
+    mCurrentSieveServerConfig.sieveImapAccountSettings.setPort(group.readEntry(QStringLiteral("ImapPort"), -1));
     mCurrentSieveServerConfig.sieveImapAccountSettings.setServerName(group.readEntry(QStringLiteral("ImapServerName")));
     mCurrentSieveServerConfig.sieveImapAccountSettings.setUserName(group.readEntry(QStringLiteral("ImapUserName")));
     mCurrentSieveServerConfig.sieveImapAccountSettings.setAuthenticationType(static_cast<KSieveCore::SieveImapAccountSettings::AuthenticationMode>(
