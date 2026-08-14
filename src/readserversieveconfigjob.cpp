@@ -105,7 +105,7 @@ void ReadServerSieveConfigJob::readImapPasswordFinished(QKeychain::Job *baseJob)
 void ReadServerSieveConfigJob::start()
 {
     KSharedConfigPtr cfg = KSharedConfig::openConfig();
-    QRegularExpression re(QStringLiteral("^ServerSieve (.+)$"));
+    static const QRegularExpression re(QStringLiteral("^ServerSieve (.+)$"));
     mGroupsConfigs = cfg->groupList().filter(re);
 
     slotReadNextConfig();
