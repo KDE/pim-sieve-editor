@@ -115,12 +115,12 @@ void SieveEditorPageWidget::slotGetResult(KManageSieve::SieveJob *, bool success
     mSieveEditorWidget->setModified(false);
 }
 
-bool SieveEditorPageWidget::uploadScriptAndCloseTab(int index)
+bool SieveEditorPageWidget::uploadScriptAndCloseTab()
 {
     if (mSieveEditorWidget->isModified()) {
         KManageSieve::SieveJob *job = KManageSieve::SieveJob::put(mCurrentURL, mSieveEditorWidget->script(), mWasActive, mWasActive);
         job->setProperty("showuploadinformation", true);
-        job->setProperty("tabIndex", index);
+        job->setProperty("closeTab", true);
         connect(job, &KManageSieve::SieveJob::result, this, &SieveEditorPageWidget::slotPutResult);
         return true;
     }
@@ -148,9 +148,8 @@ void SieveEditorPageWidget::slotPutResult(KManageSieve::SieveJob *job, bool succ
         mIsNewScript = false;
         mSieveEditorWidget->updateOriginalScript();
         mSieveEditorWidget->setModified(false);
-        if (job->property("tabIndex").isValid()) {
-            const int index = job->property("tabIndex").toInt();
-            Q_EMIT requestCloseTab(index);
+        if (job->property("closeTab").isValid()) {
+            Q_EMIT requestCloseTab(this);
         }
     } else {
         const QString msg = job->errorString();

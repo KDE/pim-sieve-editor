@@ -52,7 +52,7 @@ public:
     [[nodiscard]] bool printSupportEnabled() const;
     [[nodiscard]] bool isTextEditor() const;
     [[nodiscard]] QString currentText() const;
-    void forceCloseTab(int index);
+    void forceCloseTab(SieveEditorPageWidget *page);
     void addNewScript(const QString &title);
 public Q_SLOTS:
     void slotDebugSieveScript();

@@ -80,7 +80,7 @@ public:
     bool printSupportEnabled() const;
     bool isTextEditor() const;
     void renameScriptName(const QString &newName);
-    [[nodiscard]] bool uploadScriptAndCloseTab(int index);
+    [[nodiscard]] bool uploadScriptAndCloseTab();
 #if HAVE_TEXT_AUTOGENERATE_TEXT
     void setTextAutoGenerateManager(TextAutoGenerateText::TextAutoGenerateManager *manager);
 #endif
@@ -93,7 +93,7 @@ Q_SIGNALS:
     void redoAvailable(bool);
     void copyAvailable(bool);
     void sieveEditorTabCurrentChanged();
-    void requestCloseTab(int index);
+    void requestCloseTab(SieveEditorPageWidget *);
 
 private:
     void slotGetResult(KManageSieve::SieveJob *, bool success, const QString &script, bool isActive);

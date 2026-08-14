@@ -614,12 +614,14 @@ void SieveEditorMainWidget::updatePaletteColor()
     mModifiedScriptColor = scheme.foreground(KColorScheme::NegativeText).color();
 }
 
-void SieveEditorMainWidget::forceCloseTab(int index)
+void SieveEditorMainWidget::forceCloseTab(SieveEditorPageWidget *page)
 {
-    auto page = qobject_cast<SieveEditorPageWidget *>(mTabWidget->widget(index));
     if (page) {
-        mTabWidget->removeTab(index);
-        delete page;
+        const int index = mTabWidget->indexOf(page);
+        if (index != -1) {
+            mTabWidget->removeTab(index);
+        }
+        page->deleteLater();
         updateStackedWidget();
     }
 }
@@ -641,7 +643,7 @@ void SieveEditorMainWidget::slotTabCloseRequested(int index)
                                                                      KStandardGuiItem::close(),
                                                                      KStandardGuiItem::cancel());
             if (result == KMessageBox::ButtonCode::PrimaryAction) {
-                if (page->uploadScriptAndCloseTab(index)) {
+                if (page->uploadScriptAndCloseTab()) {
                     return;
                 }
             } else if (result == KMessageBox::Cancel) {
