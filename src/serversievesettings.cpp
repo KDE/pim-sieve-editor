@@ -55,9 +55,10 @@ static MailTransport::Transport::EnumAuthenticationType getCurrentAuthMode(QComb
 static void setCurrentAuthMode(QComboBox *authCombo, MailTransport::Transport::EnumAuthenticationType authtype)
 {
     // qCDebug(SIEVEEDITOR_LOG) << "setting authcombo: " << authenticationModeString( authtype );
-    int index = authCombo->findData(authtype);
+    const int index = authCombo->findData(authtype);
     if (index == -1) {
         qCWarning(SIEVEEDITOR_LOG) << "desired authmode not in the combo";
+        return;
     }
     // qCDebug(SIEVEEDITOR_LOG) << "found corresponding index: " << index << "with data" << authenticationModeString(
     // (MailTransport::Transport::EnumAuthenticationType) authCombo->itemData( index ).toInt() );
@@ -387,7 +388,8 @@ void ServerSieveSettings::slotSafetyChanged()
         qCDebug(SIEVEEDITOR_LOG) << "safeImapGroup: starttls";
         break;
     default:
-        qFatal("Shouldn't happen");
+        qCWarning(SIEVEEDITOR_LOG) << "Shouldn't happen";
+        return;
     }
 
     ui->imapAuthenticationCombo->clear();
