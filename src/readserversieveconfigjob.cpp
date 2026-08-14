@@ -92,11 +92,14 @@ void ReadServerSieveConfigJob::loadImapAccountSettings()
 void ReadServerSieveConfigJob::readImapPasswordFinished(QKeychain::Job *baseJob)
 {
     auto job = qobject_cast<ReadPasswordJob *>(baseJob);
-    Q_ASSERT(job);
-    if (!job->error()) {
-        mCurrentSieveServerConfig.sieveImapAccountSettings.setPassword(job->textData());
+    if (job) {
+        if (!job->error()) {
+            mCurrentSieveServerConfig.sieveImapAccountSettings.setPassword(job->textData());
+        } else {
+            qCWarning(SIEVEEDITOR_LOG) << "We have an error during reading password (imap) " << job->errorString();
+        }
     } else {
-        qCWarning(SIEVEEDITOR_LOG) << "We have an error during reading password (imap) " << job->errorString();
+        qCWarning(SIEVEEDITOR_LOG) << "We have an error during reading password (imap) job is null";
     }
     mLstConfig.append(mCurrentSieveServerConfig);
     Q_EMIT loadNextConfig();
