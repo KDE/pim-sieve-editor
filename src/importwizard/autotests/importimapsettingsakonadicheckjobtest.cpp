@@ -127,6 +127,8 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings2.sieveSettings.serverName = QStringLiteral("bla.foo.com"); // TODO
     settings2.sieveSettings.password = QStringLiteral("password_custom_sieve_imap");
     settings2.sieveSettings.port = 150;
+    // The imap account can't be rebuilt from the sieve settings: it must be stored as a custom one.
+    settings2.useImapCustomServer = true;
 
     QTest::newRow("usecustomsieveconfig") << QStringLiteral("/config/usecustomsieveconfig") << QStringLiteral("akonadi_kolab_resource_0rc") << settings2;
 
@@ -141,6 +143,8 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings3.sieveSettings.password = QStringLiteral("password_custom_sieve_imap");
     settings3.sieveSettings.serverName = QStringLiteral("bla.foo.com"); // TODO
     settings3.sieveSettings.port = 150;
+    // The imap account can't be rebuilt from the sieve settings: it must be stored as a custom one.
+    settings3.useImapCustomServer = true;
 
     QTest::newRow("usecustomsieveconfig2") << QStringLiteral("/config/usecustomsieveconfig2") << QStringLiteral("akonadi_kolab_resource_0rc") << settings3;
 
@@ -155,6 +159,8 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings4.sieveSettings.password = QStringLiteral("password_custom_sieve_imap");
     settings4.sieveSettings.serverName = QStringLiteral("bla.foo.com"); // TODO
     settings4.sieveSettings.port = 150;
+    // The imap account can't be rebuilt from the sieve settings: it must be stored as a custom one.
+    settings4.useImapCustomServer = true;
 
     QTest::newRow("usecustomsieveconfig3") << QStringLiteral("/config/usecustomsieveconfig3") << QStringLiteral("akonadi_kolab_resource_0rc") << settings4;
 
@@ -169,6 +175,8 @@ void ImportImapSettingsAkonadiCheckJobTest::shouldImportSieveSettings_data()
     settings5.sieveSettings.serverName = QStringLiteral("bla.foo.com"); // TODO
     settings5.sieveSettings.password = QStringLiteral("password_custom_sieve_imap");
     settings5.sieveSettings.port = 150;
+    // The imap account can't be rebuilt from the sieve settings: it must be stored as a custom one.
+    settings5.useImapCustomServer = true;
 
     QTest::newRow("usecustomsieveconfig4") << QStringLiteral("/config/usecustomsieveconfig4") << QStringLiteral("akonadi_kolab_resource_0rc") << settings5;
 }

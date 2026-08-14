@@ -125,6 +125,11 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
             config.sieveSettings.serverName = imapServerName; // FIXME
             // TODO
         }
+        // When the sieve settings are not reused from the imap ones the imap account is a
+        // separate one and must be stored as a custom imap server.
+        config.useImapCustomServer = (config.sieveImapAccountSettings.serverName() != config.sieveSettings.serverName)
+            || (config.sieveImapAccountSettings.userName() != config.sieveSettings.userName);
+
         Q_ASSERT_X(mPasswordImporter, "Missing mPasswordImporter", "You must create a mPasswordImporter");
         mPasswordImporter->importPasswords(config, filename, reuseImapSettings);
     } else {

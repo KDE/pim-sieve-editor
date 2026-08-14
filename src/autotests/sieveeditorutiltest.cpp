@@ -25,6 +25,8 @@ void SieveEditorUtilTest::shouldHaveDefaultValue()
     QCOMPARE(config.sieveSettings.port, -1);
     QVERIFY(config.enabled);
     QVERIFY(!config.useImapCustomServer);
+    // Without a server name we can't build an url
+    QVERIFY(config.url().isEmpty());
 }
 
 void SieveEditorUtilTest::shouldTestSieveAccountSettingsDefaultValue()

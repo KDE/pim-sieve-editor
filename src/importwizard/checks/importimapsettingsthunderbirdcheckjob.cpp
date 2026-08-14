@@ -169,6 +169,11 @@ bool ImportImapSettingsThunderbirdCheckJob::importSettings(const QString &direct
                 config.sieveImapAccountSettings.setUserName(userName);
                 config.sieveImapAccountSettings.setServerName(imapServerName);
 
+                // The sieve host name/user name can be overridden, in this case the imap
+                // account is a separate one and must be stored as a custom imap server.
+                config.useImapCustomServer = (config.sieveImapAccountSettings.serverName() != config.sieveSettings.serverName)
+                    || (config.sieveImapAccountSettings.userName() != config.sieveSettings.userName);
+
                 if (config.isValid()) {
                     atLeastAnAccountFound = true;
                     Q_EMIT importSetting(name, config);

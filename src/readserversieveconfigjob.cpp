@@ -13,7 +13,6 @@
 #include <QRegularExpression>
 
 using namespace QKeychain;
-using namespace Qt::Literals::StringLiterals;
 
 ReadServerSieveConfigJob::ReadServerSieveConfigJob(QObject *parent)
     : QObject(parent)
@@ -44,8 +43,10 @@ void ReadServerSieveConfigJob::loadSettings(const QString &conf)
         group.readEntry(QStringLiteral("ImapAuthentication"), static_cast<int>(KSieveCore::SieveImapAccountSettings::Plain))));
     mCurrentSieveServerConfig.sieveImapAccountSettings.setEncryptionMode(static_cast<KSieveCore::SieveImapAccountSettings::EncryptionMode>(
         group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(KSieveCore::SieveImapAccountSettings::SSLorTLS))));
+    mCurrentSieveServerConfig.useImapCustomServer = group.readEntry(QStringLiteral("useImapCustomServer"), false);
 
-    const QString walletEntry = mCurrentSieveServerConfig.sieveSettings.userName + u'@' + mCurrentSieveServerConfig.sieveSettings.serverName;
+    const QString walletEntry =
+        SieveEditorUtil::sievePasswordIdentifier(mCurrentSieveServerConfig.sieveSettings.userName, mCurrentSieveServerConfig.sieveSettings.serverName);
     auto readJob = new ReadPasswordJob(SieveEditorUtil::walletFolderName(), this);
     connect(readJob, &Job::finished, this, &ReadServerSieveConfigJob::readSieveServerPasswordFinished);
     readJob->setKey(walletEntry);
@@ -67,13 +68,12 @@ void ReadServerSieveConfigJob::readSieveServerPasswordFinished(QKeychain::Job *b
 
 void ReadServerSieveConfigJob::loadImapAccountSettings()
 {
-    if (!mCurrentSieveServerConfig.sieveImapAccountSettings.userName().isEmpty() && !mCurrentSieveServerConfig.sieveImapAccountSettings.serverName().isEmpty()
-        && (mCurrentSieveServerConfig.sieveImapAccountSettings.userName() != mCurrentSieveServerConfig.sieveSettings.userName)
-        && (mCurrentSieveServerConfig.sieveImapAccountSettings.serverName() != mCurrentSieveServerConfig.sieveSettings.serverName)) {
-        mCurrentSieveServerConfig.useImapCustomServer = true;
-
-        const QString imapWalletEntry =
-            "Imap"_L1 + mCurrentSieveServerConfig.sieveImapAccountSettings.userName() + u'@' + mCurrentSieveServerConfig.sieveImapAccountSettings.serverName();
+    // A custom imap server can use the same user name (or the same host) as the sieve one,
+    // so rely on the stored value and not on a comparison against the sieve settings.
+    if (mCurrentSieveServerConfig.useImapCustomServer && !mCurrentSieveServerConfig.sieveImapAccountSettings.userName().isEmpty()
+        && !mCurrentSieveServerConfig.sieveImapAccountSettings.serverName().isEmpty()) {
+        const QString imapWalletEntry = SieveEditorUtil::imapPasswordIdentifier(mCurrentSieveServerConfig.sieveImapAccountSettings.userName(),
+                                                                                mCurrentSieveServerConfig.sieveImapAccountSettings.serverName());
         auto readJob = new ReadPasswordJob(SieveEditorUtil::walletFolderName(), this);
         connect(readJob, &Job::finished, this, &ReadServerSieveConfigJob::readImapPasswordFinished);
         readJob->setKey(imapWalletEntry);

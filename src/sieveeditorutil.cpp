@@ -23,7 +23,13 @@ using namespace QKeychain;
 
 QUrl SieveEditorUtil::SieveServerConfig::url() const
 {
+    if (sieveSettings.serverName.isEmpty()) {
+        // Without a server name there is nothing to connect to. Return an empty url
+        // so that callers can detect a non-configured account.
+        return {};
+    }
     QUrl u;
+    u.setScheme(u"sieve"_s);
     u.setHost(sieveSettings.serverName);
     u.setUserName(sieveSettings.userName);
     u.setPassword(sieveSettings.password);
@@ -127,10 +133,12 @@ void SieveEditorUtil::writeSieveSettings(const KSharedConfigPtr &cfg, const Siev
     group.writeEntry(QStringLiteral("ImapAuthentication"), static_cast<int>(conf.sieveImapAccountSettings.authenticationType()));
     group.writeEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(conf.sieveImapAccountSettings.encryptionMode()));
 
-    if ((conf.sieveImapAccountSettings.serverName() != conf.sieveSettings.serverName)
-        && (conf.sieveImapAccountSettings.userName() != conf.sieveSettings.userName) && !conf.sieveImapAccountSettings.serverName().isEmpty()
-        && !conf.sieveImapAccountSettings.userName().isEmpty()) {
-        group.writeEntry(QStringLiteral("useImapCustomServer"), true);
+    // Don't compare the imap server name/user name against the sieve ones: a custom imap
+    // server can perfectly use the same user name (or the same host) as the sieve one.
+    const bool useImapCustomServer =
+        conf.useImapCustomServer && !conf.sieveImapAccountSettings.serverName().isEmpty() && !conf.sieveImapAccountSettings.userName().isEmpty();
+    group.writeEntry(QStringLiteral("useImapCustomServer"), useImapCustomServer);
+    if (useImapCustomServer) {
         group.writeEntry(QStringLiteral("ImapServerName"), conf.sieveImapAccountSettings.serverName());
         group.writeEntry(QStringLiteral("ImapUserName"), conf.sieveImapAccountSettings.userName());
         const QString imapWalletEntry = imapPasswordIdentifier(conf.sieveImapAccountSettings.userName(), conf.sieveImapAccountSettings.serverName());
@@ -140,6 +148,10 @@ void SieveEditorUtil::writeSieveSettings(const KSharedConfigPtr &cfg, const Siev
         writeImapSettingJob->setPassword(conf.sieveImapAccountSettings.password());
         writeImapSettingJob->setKey(imapWalletEntry);
         writeImapSettingJob->start();
+    } else {
+        // Make sure that we don't keep a previously stored custom imap server.
+        group.deleteEntry(QStringLiteral("ImapServerName"));
+        group.deleteEntry(QStringLiteral("ImapUserName"));
     }
 }
 
