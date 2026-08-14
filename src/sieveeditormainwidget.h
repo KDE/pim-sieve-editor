@@ -18,7 +18,10 @@ class SieveEditorScriptManagerWidget;
 class SieveEditorPageWidget;
 class SieveEditorEmptyTabWidgetLabel;
 class KActionCollection;
-
+namespace TextAutoGenerateText
+{
+class TextAutoGenerateManager;
+}
 class SieveEditorMainWidget : public QSplitter
 {
     Q_OBJECT
