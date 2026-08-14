@@ -447,16 +447,25 @@ void SieveEditorMainWindow::slotUploadScript()
 
 void SieveEditorMainWindow::slotDesactivateScript()
 {
+    if (mNetworkIsDown) {
+        return;
+    }
     mMainWidget->sieveEditorMainWidget()->desactivateScript();
 }
 
 void SieveEditorMainWindow::slotEditScript()
 {
+    if (mNetworkIsDown) {
+        return;
+    }
     mMainWidget->sieveEditorMainWidget()->editScript();
 }
 
 void SieveEditorMainWindow::slotCreateNewScript()
 {
+    if (mNetworkIsDown) {
+        return;
+    }
     mMainWidget->sieveEditorMainWidget()->createNewScript();
 }
 
