@@ -29,27 +29,38 @@ QByteArray AddNewScriptToolInternalJob::toolId()
 
 void AddNewScriptToolInternalJob::start()
 {
-    if (mSieveEditorMainWidget) {
-        QString title;
-        for (const auto &resultTool : std::as_const(mToolArguments)) {
-            if (resultTool.keyTool == "title"_L1) {
-                title = resultTool.value;
-                mSieveEditorMainWidget->addNewScript(title);
-            } else {
-                qCWarning(SIEVEEDITOR_LOG) << "Invalid json tools result:" << resultTool.keyTool;
-            }
-        }
-        const TextAutoGenerateText::TextAutoGenerateTextToolInternalJob::TextToolPluginInfo info{
-            .content = i18n("Create New Sieve Script named \"%1\"", title),
-            .messageUuid = mMessageUuid,
-            .chatId = mChatId,
-            .toolIdentifier = mToolIdentifier,
-            .attachementInfoList = {},
-        };
-        Q_EMIT finished(info);
-    } else {
-        qCWarning(SIEVEEDITOR_LOG) << "mSieveEditorMainWidget is not settings. It's a bug";
+    if (!canStart()) {
+        qCWarning(SIEVEEDITOR_LOG) << "Impossible to start AddNewScriptToolInternalJob";
+        emitFinished(i18n("Impossible to create a new sieve script: invalid arguments."));
+        return;
     }
+    if (!mSieveEditorMainWidget) {
+        qCWarning(SIEVEEDITOR_LOG) << "mSieveEditorMainWidget is not set. It's a bug";
+        emitFinished(i18n("Impossible to create a new sieve script."));
+        return;
+    }
+    QString title;
+    for (const auto &resultTool : std::as_const(mToolArguments)) {
+        if (resultTool.keyTool == "title"_L1) {
+            title = resultTool.value;
+            mSieveEditorMainWidget->addNewScript(title);
+        } else {
+            qCWarning(SIEVEEDITOR_LOG) << "Invalid json tools result:" << resultTool.keyTool;
+        }
+    }
+    emitFinished(i18n("Create New Sieve Script named \"%1\"", title));
+}
+
+void AddNewScriptToolInternalJob::emitFinished(const QString &content)
+{
+    const TextAutoGenerateText::TextAutoGenerateTextToolInternalJob::TextToolPluginInfo info{
+        .content = content,
+        .messageUuid = mMessageUuid,
+        .chatId = mChatId,
+        .toolIdentifier = mToolIdentifier,
+        .attachementInfoList = {},
+    };
+    Q_EMIT finished(info);
     deleteLater();
 }
 

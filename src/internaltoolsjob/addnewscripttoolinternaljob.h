@@ -19,5 +19,6 @@ public:
     void start() override;
 
 private:
+    void emitFinished(const QString &content);
     SieveEditorMainWidget *const mSieveEditorMainWidget;
 };
