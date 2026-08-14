@@ -64,10 +64,6 @@
 #endif
 
 using namespace Qt::Literals::StringLiterals;
-namespace
-{
-static const char mySieveEditorMainWindowConfigGroupName[] = "SieveEditorMainWindow";
-}
 SieveEditorMainWindow::SieveEditorMainWindow(const QList<KAboutRelease> &releases, QWidget *parent)
     : KXmlGuiWindow(parent)
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
