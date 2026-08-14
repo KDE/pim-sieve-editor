@@ -139,7 +139,6 @@ SieveEditorMainWindow::SieveEditorMainWindow(const QList<KAboutRelease> &release
     setCentralWidget(mainWidget);
     setupActions();
     setupGUI();
-    readConfig();
     initStatusBar();
     connect(PimCommon::NetworkManager::self(),
             &PimCommon::NetworkManager::networkStatusChanged,
@@ -160,32 +159,13 @@ SieveEditorMainWindow::SieveEditorMainWindow(const QList<KAboutRelease> &release
 #endif
 }
 
-SieveEditorMainWindow::~SieveEditorMainWindow()
-{
-    writeConfig();
-}
+SieveEditorMainWindow::~SieveEditorMainWindow() = default;
 
 void SieveEditorMainWindow::slotWhatsNew()
 {
     TextAddonsWidgets::WhatsNewNgDialog dlg(this);
     dlg.setReleases(mReleasesInfo);
     dlg.exec();
-}
-
-void SieveEditorMainWindow::readConfig()
-{
-    create(); // ensure a window is created
-    windowHandle()->resize(QSize(800, 600));
-    const KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(mySieveEditorMainWindowConfigGroupName));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
-}
-
-void SieveEditorMainWindow::writeConfig()
-{
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(mySieveEditorMainWindowConfigGroupName));
-    KWindowConfig::saveWindowSize(windowHandle(), group);
-    group.sync();
 }
 
 void SieveEditorMainWindow::initStatusBar()
@@ -514,9 +494,9 @@ void SieveEditorMainWindow::closeEvent(QCloseEvent *e)
 {
     if (mMainWidget->sieveEditorMainWidget()->needToSaveScript()) {
         e->ignore();
-    } else {
-        e->accept();
+        return;
     }
+    KXmlGuiWindow::closeEvent(e);
 }
 
 void SieveEditorMainWindow::slotConfigure()

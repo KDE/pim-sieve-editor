@@ -62,11 +62,9 @@ private:
     LIBSIEVEEDITOR_NO_EXPORT void slotOpenBookmarkUrl(const QUrl &url);
     LIBSIEVEEDITOR_NO_EXPORT void slotImportImapSettings();
     LIBSIEVEEDITOR_NO_EXPORT void initStatusBar();
-    LIBSIEVEEDITOR_NO_EXPORT void readConfig();
     LIBSIEVEEDITOR_NO_EXPORT void setupActions();
     [[nodiscard]] LIBSIEVEEDITOR_NO_EXPORT QString currentText() const;
     LIBSIEVEEDITOR_NO_EXPORT void slotFullScreen(bool t);
-    LIBSIEVEEDITOR_NO_EXPORT void writeConfig();
     LIBSIEVEEDITOR_NO_EXPORT void slotToggleMenubar(bool dontShowWarning);
     LIBSIEVEEDITOR_NO_EXPORT void updateHamburgerMenu();
     LIBSIEVEEDITOR_NO_EXPORT void slotWhatsNew();
