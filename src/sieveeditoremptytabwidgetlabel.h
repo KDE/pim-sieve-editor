@@ -6,10 +6,10 @@
 
 #pragma once
 
-#include <QLabel>
 #include <QList>
+#include <QWidget>
 
-class SieveEditorEmptyTabWidgetLabel : public QLabel
+class SieveEditorEmptyTabWidgetLabel : public QWidget
 {
     Q_OBJECT
 public:
@@ -30,6 +30,5 @@ private:
         QString menuInfo;
     };
 
-    void addInfo(QString &placeholderText, const QList<placeHolderTextInfo> &map);
-    void init();
+    static void addInfo(QString &placeholderText, const QList<placeHolderTextInfo> &map);
 };

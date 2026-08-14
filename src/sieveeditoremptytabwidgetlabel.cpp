@@ -6,21 +6,20 @@
 
 #include "sieveeditoremptytabwidgetlabel.h"
 #include <KLocalizedString>
+#include <QHBoxLayout>
+#include <QLabel>
 
 SieveEditorEmptyTabWidgetLabel::SieveEditorEmptyTabWidgetLabel(QWidget *parent)
-    : QLabel(parent)
+    : QWidget(parent)
 {
-    init();
-}
+    auto mainLayout = new QHBoxLayout(this);
+    mainLayout->setContentsMargins({});
 
-SieveEditorEmptyTabWidgetLabel::~SieveEditorEmptyTabWidgetLabel() = default;
+    auto label = new QLabel(this);
 
-void SieveEditorEmptyTabWidgetLabel::init()
-{
-    // TODO improve text
     QString placeholderText = QStringLiteral(
         "<html><body style=\"color:#909090; font-size:14px\">"
-        "<div align='center'>");
+        "<div align='left'>");
     const QList<placeHolderTextInfo> map{
         placeHolderTextInfo(i18n("Import script:"), i18nc("Action is from file menu, import submenu", "File > Import")),
         placeHolderTextInfo(i18n("Create Rules Graphically:"), i18nc("Action is from menu tools, submenu autogenerate script", "Tools > Autogenerate script")),
@@ -31,19 +30,23 @@ void SieveEditorEmptyTabWidgetLabel::init()
         "<div></div>"
         "</div>"
         "</body></html>");
-    setTextFormat(Qt::RichText);
-    setText(placeholderText);
+    label->setTextFormat(Qt::RichText);
+    label->setText(placeholderText);
+    mainLayout->addWidget(label, 0, Qt::AlignHCenter);
 }
+
+SieveEditorEmptyTabWidgetLabel::~SieveEditorEmptyTabWidgetLabel() = default;
 
 void SieveEditorEmptyTabWidgetLabel::addInfo(QString &placeholderText, const QList<placeHolderTextInfo> &map)
 {
-    for (int i = 0; i < map.size(); ++i) {
+    placeholderText += QStringLiteral("<ul>");
+    for (const placeHolderTextInfo &info : map) {
         placeholderText += QStringLiteral(
-                               "<div style=\"font-size:20px\">%1</div>"
-                               "<div></div>"
-                               "<li>%2")
-                               .arg(map.at(i).text, map.at(i).menuInfo);
+                               "<li><div style=\"font-size:20px\">%1</div>"
+                               "<div>%2</div></li>")
+                               .arg(info.text.toHtmlEscaped(), info.menuInfo.toHtmlEscaped());
     }
+    placeholderText += QStringLiteral("</ul>");
 }
 
 #include "moc_sieveeditoremptytabwidgetlabel.cpp"
