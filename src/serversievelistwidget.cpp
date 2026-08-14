@@ -76,7 +76,9 @@ void ServerSieveListWidget::modifyServerConfig()
     dlg->setWindowTitle(i18nc("@title:window", "Modify Settings"));
     dlg->setServerSieveConfig(serverSieveListItem->serverConfig());
     if (dlg->exec()) {
-        serverSieveListItem->setServerConfig(dlg->serverSieveConfig());
+        SieveEditorUtil::SieveServerConfig newConfig = dlg->serverSieveConfig();
+        newConfig.enabled = (serverSieveListItem->checkState() == Qt::Checked);
+        serverSieveListItem->setServerConfig(newConfig);
     }
     delete dlg;
 }
@@ -99,6 +101,7 @@ void ServerSieveListWidget::addServerConfig()
     QPointer<ServerSieveSettingsDialog> dlg = new ServerSieveSettingsDialog(this);
     if (dlg->exec()) {
         auto item = new ServerSieveListWidgetItem(this);
+
         item->setServerConfig(dlg->serverSieveConfig());
     }
     delete dlg;
