@@ -45,6 +45,13 @@ void ReadServerSieveConfigJob::loadSettings(const QString &conf)
         group.readEntry(QStringLiteral("ImapEncrypt"), static_cast<int>(KSieveCore::SieveImapAccountSettings::SSLorTLS))));
     mCurrentSieveServerConfig.useImapCustomServer = group.readEntry(QStringLiteral("useImapCustomServer"), false);
 
+    if (mCurrentSieveServerConfig.sieveSettings.userName.isEmpty() && mCurrentSieveServerConfig.sieveSettings.serverName.isEmpty()) {
+        // Nothing was configured for this account: there is no password stored for it,
+        // so don't query the keychain with an empty identifier.
+        loadImapAccountSettings();
+        return;
+    }
+
     const QString walletEntry =
         SieveEditorUtil::sievePasswordIdentifier(mCurrentSieveServerConfig.sieveSettings.userName, mCurrentSieveServerConfig.sieveSettings.serverName);
     auto readJob = new ReadPasswordJob(SieveEditorUtil::walletFolderName(), this);
