@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-07 00:44+0000\n"
+"POT-Creation-Date: 2026-08-15 00:47+0000\n"
 "PO-Revision-Date: 2024-12-28 23:24+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -43,12 +43,12 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "Betreuer"
 
-#: importwizard/checks/importimapsettingsakonadicheckjob.cpp:151
+#: importwizard/checks/importimapsettingsakonadicheckjob.cpp:156
 #, kde-format
 msgid "Akonadi IMAP Settings"
 msgstr "Akonadi-IMAP-Einstellungen"
 
-#: importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp:291
+#: importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp:296
 #, kde-format
 msgid "Thunderbird IMAP Settings"
 msgstr "Thunderbird-IMAP-Einstellungen"
@@ -109,7 +109,17 @@ msgstr "Importvorgang läuft …"
 msgid "Finish"
 msgstr "Fertigstellen"
 
-#: internaltoolsjob/addnewscripttoolinternaljob.cpp:43
+#: internaltoolsjob/addnewscripttoolinternaljob.cpp:34
+#, kde-format
+msgid "Impossible to create a new sieve script: invalid arguments."
+msgstr ""
+
+#: internaltoolsjob/addnewscripttoolinternaljob.cpp:39
+#, kde-format
+msgid "Impossible to create a new sieve script."
+msgstr ""
+
+#: internaltoolsjob/addnewscripttoolinternaljob.cpp:51
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Create New Script…"
@@ -122,7 +132,7 @@ msgctxt "@title:window"
 msgid "Modify Settings"
 msgstr "Einstellungen bearbeiten"
 
-#: serversievelistwidget.cpp:122
+#: serversievelistwidget.cpp:125
 #, kde-format
 msgctxt "server name (username)"
 msgid "%1 (%2)"
@@ -142,41 +152,41 @@ msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anonym"
 
-#: serversievesettings.cpp:80
+#: serversievesettings.cpp:81
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr "%p %"
 
-#: serversievesettings.cpp:271
+#: serversievesettings.cpp:272
 #, kde-format
 msgid "Server is not defined"
 msgstr "Kein Server definiert"
 
-#: serversievesettings.cpp:271
+#: serversievesettings.cpp:272
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Server"
 msgstr "Server überprüfen"
 
-#: serversievesettings.cpp:314
+#: serversievesettings.cpp:315
 #, kde-format
 msgid "Unable to connect to the server, please verify the server address."
 msgstr ""
 "Es kann keine Verbindung mit dem Server hergestellt werden. Überprüfen Sie "
 "die Serveradresse."
 
-#: serversievesettings.cpp:326
+#: serversievesettings.cpp:327
 #, kde-format
 msgid "<qt><b>TLS is supported and recommended.</b></qt>"
 msgstr "<qt><b>TLS wird unterstützt und empfohlen.</b></qt>"
 
-#: serversievesettings.cpp:329
+#: serversievesettings.cpp:330
 #, kde-format
 msgid "<qt><b>SSL is supported and recommended.</b></qt>"
 msgstr "<qt><b>SSL wird unterstützt und empfohlen.</b></qt>"
 
-#: serversievesettings.cpp:333
+#: serversievesettings.cpp:334
 #, kde-format
 msgid ""
 "<qt><b>No security is supported. It is not recommended to connect to this "
@@ -185,7 +195,7 @@ msgstr ""
 "<qt><b>Es werden keine Sicherheitsmechanismen unterstützt. Eine Verbindung "
 "mit diesem Server wird nicht empfohlen.</b></qt>"
 
-#: serversievesettings.cpp:336
+#: serversievesettings.cpp:337
 #, kde-format
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>Es ist nicht möglich, diesen Server zu verwenden.</b></qt>"
@@ -252,190 +262,190 @@ msgctxt "@title:window"
 msgid "Remove Sieve Server"
 msgstr "Sieve-Server entfernen"
 
-#: sieveeditoremptytabwidgetlabel.cpp:25
+#: sieveeditoremptytabwidgetlabel.cpp:24
 #, kde-format
 msgid "Import script:"
 msgstr "Skript importieren:"
 
-#: sieveeditoremptytabwidgetlabel.cpp:25
+#: sieveeditoremptytabwidgetlabel.cpp:24
 #, kde-format
 msgctxt "Action is from file menu, import submenu"
 msgid "File > Import"
 msgstr "Datei > Import"
 
-#: sieveeditoremptytabwidgetlabel.cpp:26
+#: sieveeditoremptytabwidgetlabel.cpp:25
 #, kde-format
 msgid "Create Rules Graphically:"
 msgstr "Regeln grafisch erstellen:"
 
-#: sieveeditoremptytabwidgetlabel.cpp:26
+#: sieveeditoremptytabwidgetlabel.cpp:25
 #, kde-format
 msgctxt "Action is from menu tools, submenu autogenerate script"
 msgid "Tools > Autogenerate script"
 msgstr "Extras > Skript automatisch erstellen"
 
-#: sieveeditoremptytabwidgetlabel.cpp:27
+#: sieveeditoremptytabwidgetlabel.cpp:26
 #, kde-format
 msgid "Debug a script:"
 msgstr "Fehlersuche in Sieve-Skript:"
 
-#: sieveeditoremptytabwidgetlabel.cpp:27
+#: sieveeditoremptytabwidgetlabel.cpp:26
 #, kde-format
 msgctxt "These action in from menu tools submenu debug sieve script"
 msgid "Tools > Debug Sieve Script"
 msgstr "Extras > Fehlersuche in Sieve-Skript"
 
-#: sieveeditoremptytabwidgetlabel.cpp:28
+#: sieveeditoremptytabwidgetlabel.cpp:27
 #, kde-format
 msgid "Import Sieve Settings:"
 msgstr "Sieve-Einstellungen importieren:"
 
-#: sieveeditoremptytabwidgetlabel.cpp:28
+#: sieveeditoremptytabwidgetlabel.cpp:27
 #, kde-format
 msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Extras > IMAP-Einstellungen importieren"
 
-#: sieveeditormainwidget.cpp:637
+#: sieveeditormainwidget.cpp:640
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Das Skript wurde geändert. Möchten Sie es vor dem Schließen speichern?"
 
-#: sieveeditormainwidget.cpp:638
+#: sieveeditormainwidget.cpp:641
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"
 msgstr "Skript schließen"
 
-#: sieveeditormainwindow.cpp:202
+#: sieveeditormainwindow.cpp:178
 #, kde-format
 msgid "Network is Up."
 msgstr "Das Netzwerk ist aktiviert."
 
-#: sieveeditormainwindow.cpp:204
+#: sieveeditormainwindow.cpp:180
 #, kde-format
 msgid "Network is Down."
 msgstr "Das Netzwerk ist abgeschaltet."
 
-#: sieveeditormainwindow.cpp:226
+#: sieveeditormainwindow.cpp:202
 #, kde-format
 msgid "Upload"
 msgstr "Hochladen"
 
-#: sieveeditormainwindow.cpp:229
+#: sieveeditormainwindow.cpp:205
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Sieve-Server hinzufügen …"
 
-#: sieveeditormainwindow.cpp:233
+#: sieveeditormainwindow.cpp:209
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Skript löschen"
 
-#: sieveeditormainwindow.cpp:239
+#: sieveeditormainwindow.cpp:215
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Neues Skript erstellen …"
 
-#: sieveeditormainwindow.cpp:245
+#: sieveeditormainwindow.cpp:221
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Skript bearbeiten …"
 
-#: sieveeditormainwindow.cpp:250
+#: sieveeditormainwindow.cpp:226
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Skript deaktivieren"
 
-#: sieveeditormainwindow.cpp:255
+#: sieveeditormainwindow.cpp:231
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Liste aktualisieren"
 
-#: sieveeditormainwindow.cpp:261
+#: sieveeditormainwindow.cpp:237
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Gehe zu Zeile …"
 
-#: sieveeditormainwindow.cpp:278
+#: sieveeditormainwindow.cpp:254
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "Importieren …"
 
-#: sieveeditormainwindow.cpp:284
+#: sieveeditormainwindow.cpp:260
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Teilen …"
 
-#: sieveeditormainwindow.cpp:292
+#: sieveeditormainwindow.cpp:268
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Rechtschreibprüfung …"
 
-#: sieveeditormainwindow.cpp:298
+#: sieveeditormainwindow.cpp:274
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Syntax überprüfen"
 
-#: sieveeditormainwindow.cpp:303
+#: sieveeditormainwindow.cpp:279
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Regeln grafisch erstellen …"
 
-#: sieveeditormainwindow.cpp:308
+#: sieveeditormainwindow.cpp:284
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Kommentar"
 
-#: sieveeditormainwindow.cpp:313
+#: sieveeditormainwindow.cpp:289
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Kommentar entfernen"
 
-#: sieveeditormainwindow.cpp:341
+#: sieveeditormainwindow.cpp:317
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Lesezeichen"
 
-#: sieveeditormainwindow.cpp:346
+#: sieveeditormainwindow.cpp:322
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Fehlersuche in Sieve-Skript …"
 
-#: sieveeditormainwindow.cpp:351
+#: sieveeditormainwindow.cpp:327
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Zeilenumbruch"
 
-#: sieveeditormainwindow.cpp:373
+#: sieveeditormainwindow.cpp:349
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "IMAP-Einstellungen importieren …"
 
-#: sieveeditormainwindow.cpp:398
+#: sieveeditormainwindow.cpp:374
 #, kde-format
 msgid "What's new"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:422
+#: sieveeditormainwindow.cpp:398
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
@@ -444,7 +454,7 @@ msgstr ""
 "<qt>Hiermit wird die Menüleiste vollständig ausgeblendet. Geben Sie %1 ein, "
 "um sie wieder anzuzeigen.</qt>"
 
-#: sieveeditormainwindow.cpp:425
+#: sieveeditormainwindow.cpp:401
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
@@ -476,7 +486,7 @@ msgctxt "@title:window"
 msgid "Sieve Script Upload"
 msgstr "Hochladen des Sieve-Skripts"
 
-#: sieveeditorpagewidget.cpp:159
+#: sieveeditorpagewidget.cpp:158
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -487,13 +497,13 @@ msgstr ""
 "Die Antwort des Servers lautet:\n"
 "%1"
 
-#: sieveeditorpagewidget.cpp:162 sieveeditorpagewidget.cpp:167
+#: sieveeditorpagewidget.cpp:161 sieveeditorpagewidget.cpp:166
 #, kde-format
 msgctxt "@title:window"
 msgid "Sieve Error"
 msgstr "Sieve-Fehler"
 
-#: sieveeditorpagewidget.cpp:165
+#: sieveeditorpagewidget.cpp:164
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -502,23 +512,23 @@ msgstr ""
 "Hochladen des Sieve-Scripts ist fehlgeschlagen.\n"
 "Unbekannte Ursache\n"
 
-#: sieveeditorpagewidget.cpp:177
+#: sieveeditorpagewidget.cpp:176
 #, kde-format
 msgid "Script '%1' is new. Do you want to save it?"
 msgstr "Das Skript „%1“ ist neu. Möchten Sie es speichern?"
 
-#: sieveeditorpagewidget.cpp:178 sieveeditorpagewidget.cpp:191
+#: sieveeditorpagewidget.cpp:177 sieveeditorpagewidget.cpp:190
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Script"
 msgstr "Skript speichern"
 
-#: sieveeditorpagewidget.cpp:190
+#: sieveeditorpagewidget.cpp:189
 #, kde-format
 msgid "Script '%1' was changed. Do you want to save it ?"
 msgstr "Das Skript „%1“ wurde geändert. Möchten Sie es speichern?"
 
-#: sieveeditortabwidget.cpp:43 sieveeditortabwidget.cpp:69
+#: sieveeditortabwidget.cpp:43 sieveeditortabwidget.cpp:68
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Close Tab"
