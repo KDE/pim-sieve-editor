@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-15 00:47+0000\n"
-"PO-Revision-Date: 2026-04-01 04:10+0200\n"
+"PO-Revision-Date: 2026-08-15 04:32+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -111,12 +111,12 @@ msgstr "დასრულება"
 #: internaltoolsjob/addnewscripttoolinternaljob.cpp:34
 #, kde-format
 msgid "Impossible to create a new sieve script: invalid arguments."
-msgstr ""
+msgstr "ახალი Sieve-ის სკრიპტის შექმნა შეუძლებელია: არასწორი არგუმენტები."
 
 #: internaltoolsjob/addnewscripttoolinternaljob.cpp:39
 #, kde-format
 msgid "Impossible to create a new sieve script."
-msgstr ""
+msgstr "ახალი Sieve-ის სკრიპტის შექმნა შეუძლებელია."
 
 #: internaltoolsjob/addnewscripttoolinternaljob.cpp:51
 #, kde-format

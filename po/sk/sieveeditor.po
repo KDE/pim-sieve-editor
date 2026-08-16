@@ -109,12 +109,12 @@ msgstr "Dokončiť"
 #: internaltoolsjob/addnewscripttoolinternaljob.cpp:34
 #, kde-format
 msgid "Impossible to create a new sieve script: invalid arguments."
-msgstr ""
+msgstr "Nie je možné vytvoriť nový Sieve skript: neplatné argumenty."
 
 #: internaltoolsjob/addnewscripttoolinternaljob.cpp:39
 #, kde-format
 msgid "Impossible to create a new sieve script."
-msgstr ""
+msgstr "Nie je možné vytvoriť nový Sieve skript."
 
 #: internaltoolsjob/addnewscripttoolinternaljob.cpp:51
 #, kde-format
