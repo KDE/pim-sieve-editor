@@ -2,12 +2,12 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 cmake_minimum_required(VERSION 3.29)
-set(PIM_VERSION "6.8.0")
+set(PIM_VERSION "6.8.1")
 project(sieveeditor VERSION ${PIM_VERSION})
 set(RELEASE_SERVICE_VERSION "26.08.1")
 
 # Update it for each release
-set(SIEVEEDITOR_RELEASE_VERSION_DATE "26.08.20") # yy.MM.dd
+set(SIEVEEDITOR_RELEASE_VERSION_DATE "26.09.10") # yy.MM.dd
 
 # Use true if stable version => we will check specific version
 set(SIEVEEDITOR_STABLE_VERSION true)
