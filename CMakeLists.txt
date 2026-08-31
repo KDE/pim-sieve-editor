@@ -275,6 +275,8 @@ if(WARNINGS_AS_ERRORS)
     endif()
 endif()
 
+option(ENABLE_PCH "Enable Precompiled Headers support" ON)
+
 add_subdirectory(src)
 if(GIT_SOURCE_TARBALL)
     if(DEFINED kde_configure_git_pre_commit_hook)

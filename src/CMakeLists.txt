@@ -13,6 +13,22 @@ configure_file(config-pim-sieve-editor.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-p
 
 kconfig_add_kcfg_files(libsieveeditor settings/sieveeditorglobalconfig.kcfgc)
 
+if(ENABLE_PCH)
+    target_precompile_headers(
+        libsieveeditor
+        PRIVATE
+            <QObject>
+            <QWidget>
+            <QLabel>
+            <QPushButton>
+            <KLocalizedString>
+            <KSharedConfig>
+            <KConfigGroup>
+            <QVBoxLayout>
+            <QHBoxLayout>
+    )
+endif()
+
 target_sources(
     libsieveeditor
     PRIVATE
