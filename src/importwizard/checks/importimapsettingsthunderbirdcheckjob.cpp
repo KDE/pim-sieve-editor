@@ -31,7 +31,8 @@ QMap<QString, QString> ImportImapSettingsThunderbirdCheckJob::listProfile(QStrin
     if (QFileInfo::exists(thunderbirdPath)) {
         // ini file.
         KConfig config(thunderbirdPath);
-        const QStringList profileList = config.groupList().filter(QRegularExpression(QStringLiteral("Profile\\d+")));
+        static const QRegularExpression profileRegex(QStringLiteral("Profile\\d+"));
+        const QStringList profileList = config.groupList().filter(profileRegex);
         const bool uniqProfile = (profileList.count() == 1);
         if (uniqProfile) {
             KConfigGroup group = config.group(profileList.at(0));
