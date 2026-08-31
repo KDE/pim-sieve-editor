@@ -26,10 +26,11 @@ bool SieveEditorManageSieveWidget::refreshList()
 {
     bool noImapFound = true;
     SieveTreeWidgetItem *last = nullptr;
+    const QIcon networkServerIcon = QIcon::fromTheme(QStringLiteral("network-server"));
     for (const SieveEditorUtil::SieveServerConfig &conf : std::as_const(mSieveServerSettings)) {
         last = new SieveTreeWidgetItem(treeView(), last);
         last->setText(0, conf.sieveSettings.serverName + QStringLiteral(" (%1)").arg(conf.sieveSettings.userName));
-        last->setIcon(0, QIcon::fromTheme(QStringLiteral("network-server")));
+        last->setIcon(0, networkServerIcon);
 
         const QUrl u = conf.url();
         if (u.isEmpty()) {
