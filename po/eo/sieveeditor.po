@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-15 00:47+0000\n"
+"POT-Creation-Date: 2026-09-01 00:47+0000\n"
 "PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -51,7 +51,7 @@ msgstr "Prizorganto"
 msgid "Akonadi IMAP Settings"
 msgstr "Akonadi IMAP-agordoj"
 
-#: importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp:296
+#: importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp:298
 #, kde-format
 msgid "Thunderbird IMAP Settings"
 msgstr "Thunderbird IMAP-agordoj"
@@ -127,13 +127,13 @@ msgstr ""
 msgid "Create New Sieve Script named \"%1\""
 msgstr "Krei Novan Skripton…"
 
-#: serversievelistwidget.cpp:76
+#: serversievelistwidget.cpp:77
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Settings"
 msgstr "Modifi Agordojn"
 
-#: serversievelistwidget.cpp:125
+#: serversievelistwidget.cpp:126
 #, kde-format
 msgctxt "server name (username)"
 msgid "%1 (%2)"
@@ -460,12 +460,12 @@ msgctxt "@title:window"
 msgid "Hide menu bar"
 msgstr "Kaŝa menubreton"
 
-#: sieveeditormanagesievewidget.cpp:37
+#: sieveeditormanagesievewidget.cpp:38
 #, kde-format
 msgid "No Sieve URL configured"
 msgstr "Neniu Sieve-URL agordita"
 
-#: sieveeditormanagesievewidget.cpp:42
+#: sieveeditormanagesievewidget.cpp:43
 #, kde-format
 msgid "(Disabled) %1"
 msgstr "(Malŝaltita) %1"

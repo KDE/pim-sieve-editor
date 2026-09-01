@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-15 00:47+0000\n"
+"POT-Creation-Date: 2026-09-01 00:47+0000\n"
 "PO-Revision-Date: 2023-05-29 19:03+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -49,7 +49,7 @@ msgstr "Himayəçi"
 msgid "Akonadi IMAP Settings"
 msgstr "Akonadi IMAP ayarları"
 
-#: importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp:296
+#: importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp:298
 #, kde-format
 msgid "Thunderbird IMAP Settings"
 msgstr "Thunderbird IMAP ayarları"
@@ -130,13 +130,13 @@ msgstr ""
 msgid "Create New Sieve Script named \"%1\""
 msgstr "Yeni skript yaradın..."
 
-#: serversievelistwidget.cpp:76
+#: serversievelistwidget.cpp:77
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Settings"
 msgstr "Prametrləri dəyişin"
 
-#: serversievelistwidget.cpp:125
+#: serversievelistwidget.cpp:126
 #, kde-format
 msgctxt "server name (username)"
 msgid "%1 (%2)"
@@ -486,12 +486,12 @@ msgctxt "@title:window"
 msgid "Hide menu bar"
 msgstr ""
 
-#: sieveeditormanagesievewidget.cpp:37
+#: sieveeditormanagesievewidget.cpp:38
 #, kde-format
 msgid "No Sieve URL configured"
 msgstr "Tənzimlənmiş süzgəcləmə URL-u yoxdur"
 
-#: sieveeditormanagesievewidget.cpp:42
+#: sieveeditormanagesievewidget.cpp:43
 #, kde-format
 msgid "(Disabled) %1"
 msgstr "(Söndürülüb) %1"

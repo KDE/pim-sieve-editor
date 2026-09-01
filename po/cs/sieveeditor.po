@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-15 00:47+0000\n"
+"POT-Creation-Date: 2026-09-01 00:47+0000\n"
 "PO-Revision-Date: 2026-08-16 11:49+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -50,7 +50,7 @@ msgstr "Správce"
 msgid "Akonadi IMAP Settings"
 msgstr "Nastavení Akonadi IMAP"
 
-#: importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp:296
+#: importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp:298
 #, kde-format
 msgid "Thunderbird IMAP Settings"
 msgstr "Nastavení Thunderbird IMAP"
@@ -124,13 +124,13 @@ msgstr "Nelze vytvořit nový skript pro sieve."
 msgid "Create New Sieve Script named \"%1\""
 msgstr "Vytvořte nový skript Sieve s názvem \"%1\""
 
-#: serversievelistwidget.cpp:76
+#: serversievelistwidget.cpp:77
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Settings"
 msgstr "Upravit nastavení"
 
-#: serversievelistwidget.cpp:125
+#: serversievelistwidget.cpp:126
 #, kde-format
 msgctxt "server name (username)"
 msgid "%1 (%2)"
@@ -456,12 +456,12 @@ msgctxt "@title:window"
 msgid "Hide menu bar"
 msgstr "Skrýt nabídku"
 
-#: sieveeditormanagesievewidget.cpp:37
+#: sieveeditormanagesievewidget.cpp:38
 #, kde-format
 msgid "No Sieve URL configured"
 msgstr "Není nastavena žádná URL adresa Sieve"
 
-#: sieveeditormanagesievewidget.cpp:42
+#: sieveeditormanagesievewidget.cpp:43
 #, kde-format
 msgid "(Disabled) %1"
 msgstr "(Zakázáno) %1"

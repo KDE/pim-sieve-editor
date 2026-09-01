@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-15 00:47+0000\n"
+"POT-Creation-Date: 2026-09-01 00:47+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -48,7 +48,7 @@ msgstr "维护者"
 msgid "Akonadi IMAP Settings"
 msgstr "Akonadi IMAP 设置"
 
-#: importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp:296
+#: importwizard/checks/importimapsettingsthunderbirdcheckjob.cpp:298
 #, kde-format
 msgid "Thunderbird IMAP Settings"
 msgstr "Thunderbird IMAP 设置"
@@ -122,13 +122,13 @@ msgstr "无法创建新的 sieve 脚本。"
 msgid "Create New Sieve Script named \"%1\""
 msgstr "创建名为“%1”的新 Sieve 脚本"
 
-#: serversievelistwidget.cpp:76
+#: serversievelistwidget.cpp:77
 #, kde-format
 msgctxt "@title:window"
 msgid "Modify Settings"
 msgstr "修改设置"
 
-#: serversievelistwidget.cpp:125
+#: serversievelistwidget.cpp:126
 #, kde-format
 msgctxt "server name (username)"
 msgid "%1 (%2)"
@@ -450,12 +450,12 @@ msgctxt "@title:window"
 msgid "Hide menu bar"
 msgstr "隐藏菜单栏"
 
-#: sieveeditormanagesievewidget.cpp:37
+#: sieveeditormanagesievewidget.cpp:38
 #, kde-format
 msgid "No Sieve URL configured"
 msgstr "没有配置过滤 URL"
 
-#: sieveeditormanagesievewidget.cpp:42
+#: sieveeditormanagesievewidget.cpp:43
 #, kde-format
 msgid "(Disabled) %1"
 msgstr "(已禁用) %1"
