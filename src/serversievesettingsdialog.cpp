@@ -13,6 +13,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 
 namespace
 {
@@ -53,18 +54,24 @@ ServerSieveSettingsDialog::~ServerSieveSettingsDialog()
 
 void ServerSieveSettingsDialog::readConfig()
 {
+#if TEXTADDONSWIDGETS_VERSION >= QT_VERSION_CHECK(2, 1, 49)
+    TextAddonsWidgets::LoadDialogSizeUtils::manageDialogSize(this, QLatin1StringView(myServerSieveSettingsDialog), QSize(450, 350));
+#else
     create(); // ensure a window is created
     windowHandle()->resize(QSize(450, 350));
     const KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myServerSieveSettingsDialog));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
+#endif
 }
 
 void ServerSieveSettingsDialog::writeConfig()
 {
+#if TEXTADDONSWIDGETS_VERSION < QT_VERSION_CHECK(2, 1, 49)
     KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myServerSieveSettingsDialog));
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
+#endif
 }
 
 void ServerSieveSettingsDialog::slotEnableButtonOk(bool b)

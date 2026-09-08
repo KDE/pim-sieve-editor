@@ -21,6 +21,7 @@
 #include <KWindowConfig>
 #include <QPushButton>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 
 ImportImapSettingWizard::ImportImapSettingWizard(QWidget *parent)
     : KAssistantDialog(parent)
@@ -119,18 +120,24 @@ void ImportImapSettingWizard::next()
 
 void ImportImapSettingWizard::readConfig()
 {
+#if TEXTADDONSWIDGETS_VERSION >= QT_VERSION_CHECK(2, 1, 49)
+    TextAddonsWidgets::LoadDialogSizeUtils::manageDialogSize(this, QStringLiteral("ImportImapSettingWizard"), QSize(600, 400));
+#else
     create(); // ensure a window is created
     windowHandle()->resize(QSize(600, 400));
-    const KConfigGroup group(KSharedConfig::openStateConfig(), QStringLiteral("SieveEditorConfigureDialog"));
+    const KConfigGroup group(KSharedConfig::openStateConfig(), QStringLiteral("ImportImapSettingWizard"));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
+#endif
 }
 
 void ImportImapSettingWizard::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QStringLiteral("SieveEditorConfigureDialog"));
+#if TEXTADDONSWIDGETS_VERSION < QT_VERSION_CHECK(2, 1, 49)
+    KConfigGroup group(KSharedConfig::openStateConfig(), QStringLiteral("ImportImapSettingWizard"));
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
+#endif
 }
 
 void ImportImapSettingWizard::slotFinishImportData()
