@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-01 00:47+0000\n"
+"POT-Creation-Date: 2026-09-09 00:51+0000\n"
 "PO-Revision-Date: 2022-04-15 19:14+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -85,23 +85,23 @@ msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr "Prosím, vyberte program, z ktorého chcete importovať IMAP nastavenia:"
 
-#: importwizard/importimapsettingwizard.cpp:32
+#: importwizard/importimapsettingwizard.cpp:33
 #, kde-format
 msgctxt "@title:window"
 msgid "Import IMAP Settings"
 msgstr "Importovať nastavenia IMAP"
 
-#: importwizard/importimapsettingwizard.cpp:34
+#: importwizard/importimapsettingwizard.cpp:35
 #, kde-format
 msgid "Select Import Settings"
 msgstr "Vybrať nastavenia importu"
 
-#: importwizard/importimapsettingwizard.cpp:40
+#: importwizard/importimapsettingwizard.cpp:41
 #, kde-format
 msgid "Import in Progress…"
 msgstr "Import prebieha..."
 
-#: importwizard/importimapsettingwizard.cpp:46
+#: importwizard/importimapsettingwizard.cpp:47
 #, kde-format
 msgid "Finish"
 msgstr "Dokončiť"
@@ -193,7 +193,7 @@ msgstr ""
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>Nie je možné použiť tento server.</b></qt>"
 
-#: serversievesettingsdialog.cpp:26
+#: serversievesettingsdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Sieve Server"
@@ -205,29 +205,29 @@ msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
 msgstr "Uvádza dostupné možnosti spätnej väzby od používateľov"
 
-#: sieveeditorconfiguredialog.cpp:38
+#: sieveeditorconfiguredialog.cpp:39
 #, kde-format
 msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr "Zalomiť text"
 
-#: sieveeditorconfiguredialog.cpp:41
+#: sieveeditorconfiguredialog.cpp:42
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Nastaviť"
 
-#: sieveeditorconfiguredialog.cpp:55
+#: sieveeditorconfiguredialog.cpp:56
 #, kde-format
 msgid "Sieve Server"
 msgstr "Sieve server"
 
-#: sieveeditorconfiguredialog.cpp:69
+#: sieveeditorconfiguredialog.cpp:70
 #, kde-format
 msgid "Editor"
 msgstr "Editor"
 
-#: sieveeditorconfiguredialog.cpp:85
+#: sieveeditorconfiguredialog.cpp:86
 #, kde-format
 msgid "User Feedback"
 msgstr "Používateľská odozva"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-01 00:47+0000\n"
+"POT-Creation-Date: 2026-09-09 00:51+0000\n"
 "PO-Revision-Date: 2014-08-13 23:53+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -94,24 +94,24 @@ msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr ""
 
-#: importwizard/importimapsettingwizard.cpp:32
+#: importwizard/importimapsettingwizard.cpp:33
 #, fuzzy, kde-format
 #| msgid "Modify Settings"
 msgctxt "@title:window"
 msgid "Import IMAP Settings"
 msgstr "Instellen ännern"
 
-#: importwizard/importimapsettingwizard.cpp:34
+#: importwizard/importimapsettingwizard.cpp:35
 #, kde-format
 msgid "Select Import Settings"
 msgstr ""
 
-#: importwizard/importimapsettingwizard.cpp:40
+#: importwizard/importimapsettingwizard.cpp:41
 #, kde-format
 msgid "Import in Progress…"
 msgstr ""
 
-#: importwizard/importimapsettingwizard.cpp:46
+#: importwizard/importimapsettingwizard.cpp:47
 #, kde-format
 msgid "Finish"
 msgstr ""
@@ -204,7 +204,7 @@ msgstr ""
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr ""
 
-#: serversievesettingsdialog.cpp:26
+#: serversievesettingsdialog.cpp:27
 #, fuzzy, kde-format
 #| msgid "Add Server Sieve"
 msgctxt "@title:window"
@@ -217,32 +217,32 @@ msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
 msgstr ""
 
-#: sieveeditorconfiguredialog.cpp:38
+#: sieveeditorconfiguredialog.cpp:39
 #, kde-format
 msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr ""
 
-#: sieveeditorconfiguredialog.cpp:41
+#: sieveeditorconfiguredialog.cpp:42
 #, fuzzy, kde-format
 #| msgid "Configure"
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Instellen"
 
-#: sieveeditorconfiguredialog.cpp:55
+#: sieveeditorconfiguredialog.cpp:56
 #, fuzzy, kde-format
 #| msgid "Server Sieve"
 msgid "Sieve Server"
 msgstr "Sieve-Server"
 
-#: sieveeditorconfiguredialog.cpp:69
+#: sieveeditorconfiguredialog.cpp:70
 #, fuzzy, kde-format
 #| msgid "&Edit"
 msgid "Editor"
 msgstr "&Bewerken"
 
-#: sieveeditorconfiguredialog.cpp:85
+#: sieveeditorconfiguredialog.cpp:86
 #, kde-format
 msgid "User Feedback"
 msgstr ""

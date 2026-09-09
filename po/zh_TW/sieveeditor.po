@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-01 00:47+0000\n"
+"POT-Creation-Date: 2026-09-09 00:51+0000\n"
 "PO-Revision-Date: 2026-04-08 23:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -88,23 +88,23 @@ msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
 msgstr "請選擇您要匯入 IMAP 設定的程式："
 
-#: importwizard/importimapsettingwizard.cpp:32
+#: importwizard/importimapsettingwizard.cpp:33
 #, kde-format
 msgctxt "@title:window"
 msgid "Import IMAP Settings"
 msgstr "匯入 IMAP 設定"
 
-#: importwizard/importimapsettingwizard.cpp:34
+#: importwizard/importimapsettingwizard.cpp:35
 #, kde-format
 msgid "Select Import Settings"
 msgstr "選擇匯入設定"
 
-#: importwizard/importimapsettingwizard.cpp:40
+#: importwizard/importimapsettingwizard.cpp:41
 #, kde-format
 msgid "Import in Progress…"
 msgstr "匯入中…"
 
-#: importwizard/importimapsettingwizard.cpp:46
+#: importwizard/importimapsettingwizard.cpp:47
 #, kde-format
 msgid "Finish"
 msgstr "完成"
@@ -194,7 +194,7 @@ msgstr "<qt><b>不支援任何安全協議，因此不建議連線到此伺服�
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>無法使用此伺服器。</b></qt>"
 
-#: serversievesettingsdialog.cpp:26
+#: serversievesettingsdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Sieve Server"
@@ -206,29 +206,29 @@ msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
 msgstr "列出可用的使用者回饋選項"
 
-#: sieveeditorconfiguredialog.cpp:38
+#: sieveeditorconfiguredialog.cpp:39
 #, kde-format
 msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr "文字折行"
 
-#: sieveeditorconfiguredialog.cpp:41
+#: sieveeditorconfiguredialog.cpp:42
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "設定"
 
-#: sieveeditorconfiguredialog.cpp:55
+#: sieveeditorconfiguredialog.cpp:56
 #, kde-format
 msgid "Sieve Server"
 msgstr "過濾伺服器"
 
-#: sieveeditorconfiguredialog.cpp:69
+#: sieveeditorconfiguredialog.cpp:70
 #, kde-format
 msgid "Editor"
 msgstr "編輯器"
 
-#: sieveeditorconfiguredialog.cpp:85
+#: sieveeditorconfiguredialog.cpp:86
 #, kde-format
 msgid "User Feedback"
 msgstr "使用者回饋"
