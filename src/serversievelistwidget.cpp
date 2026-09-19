@@ -42,7 +42,7 @@ void ServerSieveListWidget::writeConfig()
     QList<SieveEditorUtil::SieveServerConfig> lstServerConfig;
     lstServerConfig.reserve(count());
     for (int i = 0; i < count(); ++i) {
-        auto serverSieveItem = static_cast<ServerSieveListWidgetItem *>(item(i));
+        auto serverSieveItem = dynamic_cast<ServerSieveListWidgetItem *>(item(i));
         if (serverSieveItem) {
             SieveEditorUtil::SieveServerConfig config = serverSieveItem->serverConfig();
             config.enabled = (serverSieveItem->checkState() == Qt::Checked);
