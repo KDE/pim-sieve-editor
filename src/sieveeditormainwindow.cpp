@@ -526,7 +526,6 @@ void SieveEditorMainWindow::slotAddServerSieve()
 void SieveEditorMainWindow::slotUpdateActions()
 {
     const bool hasPage = (mMainWidget->sieveEditorMainWidget()->tabWidget()->count() > 0);
-    mUploadScript->setEnabled(hasPage);
     const bool editActionEnabled = (hasPage && mMainWidget->sieveEditorMainWidget()->isTextEditor());
     const bool hasActionInHtmlModeToo = (hasPage && mMainWidget->sieveEditorMainWidget()->pageMode() == KSieveUi::SieveEditorWidget::TextMode);
     mGoToLine->setEnabled(editActionEnabled);
