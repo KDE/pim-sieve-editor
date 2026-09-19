@@ -26,6 +26,7 @@ public:
 Q_SIGNALS:
     void importSetting(const QString &name, const SieveEditorUtil::SieveServerConfig &settings);
     void noSettingsImported(const QString &name);
+    void jobFinished();
 
 protected:
     LIBSIEVEEDITOR_NO_EXPORT void checkNoSettingsImported();

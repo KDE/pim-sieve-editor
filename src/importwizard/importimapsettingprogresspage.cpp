@@ -53,16 +53,40 @@ void ImportImapSettingProgressPage::start()
         Q_EMIT finished();
         return;
     }
+    mSettingsFound = false;
+    mNumberJobFinished = 0;
+
+    QList<AbstractImapSettingsCheckJob *> jobs;
+    jobs.reserve(mSelectedPrograms.count());
     for (const QString &prg : std::as_const(mSelectedPrograms)) {
-        AbstractImapSettingsCheckJob *job = mListCheckJob.value(prg);
+        if (auto job = mListCheckJob.value(prg)) {
+            jobs << job;
+        } else {
+            qCWarning(SIEVEEDITOR_LOG) << "No check job for" << prg;
+        }
+    }
+    if (jobs.isEmpty()) {
+        addProgressInfo(i18n("No settings found."));
+        Q_EMIT finished();
+        return;
+    }
+    mNumberJobToFinish = jobs.count();
+    for (AbstractImapSettingsCheckJob *job : std::as_const(jobs)) {
         connect(job, &AbstractImapSettingsCheckJob::importSetting, this, &ImportImapSettingProgressPage::slotImportSettingsDone);
         connect(job, &AbstractImapSettingsCheckJob::noSettingsImported, this, &ImportImapSettingProgressPage::noSettingsImported);
+        connect(job, &AbstractImapSettingsCheckJob::jobFinished, this, &ImportImapSettingProgressPage::slotJobFinished);
         job->start();
     }
-    if (!mSettingsFound) {
-        addProgressInfo(i18n("No settings found."));
+}
+
+void ImportImapSettingProgressPage::slotJobFinished()
+{
+    if (++mNumberJobFinished == mNumberJobToFinish) {
+        if (!mSettingsFound) {
+            addProgressInfo(i18n("No settings found."));
+        }
+        Q_EMIT finished();
     }
-    Q_EMIT finished();
 }
 
 void ImportImapSettingProgressPage::slotImportSettingsDone(const QString &name, const SieveEditorUtil::SieveServerConfig &settings)
