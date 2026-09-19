@@ -111,8 +111,6 @@ target_sources(
         sieveeditorconfigureserverpage.h
         sievepurposemenuwidget.cpp
         sievepurposemenuwidget.h
-        whatsnew/whatsnewtranslations.h
-        whatsnew/whatsnewtranslations.cpp
         sieveeditorcommandlineparser.h
         sieveeditorcommandlineparser.cpp
 )
