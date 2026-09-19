@@ -132,7 +132,11 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
         config.useImapCustomServer = (config.sieveImapAccountSettings.serverName() != config.sieveSettings.serverName)
             || (config.sieveImapAccountSettings.userName() != config.sieveSettings.userName);
 
-        Q_ASSERT_X(mPasswordImporter, "Missing mPasswordImporter", "You must create a mPasswordImporter");
+        if (!mPasswordImporter) {
+            qCWarning(SIEVEEDITOR_LOG) << "Missing mPasswordImporter, skipping" << filename;
+            importNextServerSieve();
+            return;
+        }
         mPasswordImporter->importPasswords(config, filename, reuseImapSettings);
     } else {
         importNextServerSieve();
