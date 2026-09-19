@@ -55,6 +55,8 @@ void ImportImapSettingsAkonadiCheckJob::loadSieveServerSettings()
     mSieveServerMapIterator = mSieveServerLst.constBegin();
     if (mSieveServerMapIterator != mSieveServerLst.constEnd()) {
         importSettings(mSieveServerMapIterator.key(), mSieveServerMapIterator.value());
+    } else {
+        checkNoSettingsImported();
     }
 }
 
