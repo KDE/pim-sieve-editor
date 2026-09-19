@@ -15,7 +15,6 @@
 #include "sieveeditormainwidget.h"
 #include "sieveeditorutil.h"
 #include "sievepurposemenuwidget.h"
-#include <KSharedConfig>
 #include <PimCommon/KActionMenuChangeCase>
 #include <PimCommon/NetworkManager>
 #include <TextAddonsWidgets/NeedUpdateVersionUtils>
@@ -26,7 +25,6 @@
 
 #include <KActionCollection>
 #include <KColorSchemeMenu>
-#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KStandardAction>
@@ -56,9 +54,7 @@
 #include <csignal>
 #include <unistd.h>
 #endif
-#include <KWindowConfig>
 #include <KWindowSystem>
-#include <QWindow>
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
 #include <TextAddonsWidgets/VerifyNewVersionWidget>
 #endif
