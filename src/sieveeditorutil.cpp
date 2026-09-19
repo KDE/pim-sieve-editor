@@ -184,7 +184,7 @@ QDebug operator<<(QDebug d, const SieveEditorUtil::SieveAccountSettings &setting
 {
     d << "serverName " << settings.serverName;
     d << "userName " << settings.userName;
-    d << "password " << settings.password;
+    // d << "password " << settings.password;
     d << "authenticationType " << settings.authenticationType;
     d << "port " << settings.port;
     return d;
@@ -197,7 +197,7 @@ bool SieveEditorUtil::SieveAccountSettings::operator==(const SieveEditorUtil::Si
     if (!result) {
         qCDebug(SIEVEEDITOR_LOG) << "serverName " << serverName << " other.serverName " << other.serverName;
         qCDebug(SIEVEEDITOR_LOG) << "userName " << userName << " other.userName " << other.userName;
-        qCDebug(SIEVEEDITOR_LOG) << "password " << password << " other.password " << other.password;
+        // qCDebug(SIEVEEDITOR_LOG) << "password " << password << " other.password " << other.password;
         qCDebug(SIEVEEDITOR_LOG) << "authenticationType " << authenticationType << " other.authenticationType " << other.authenticationType;
         qCDebug(SIEVEEDITOR_LOG) << "port " << port << " other.port " << other.port;
     }
