@@ -157,7 +157,13 @@
       <description>
         <ul>
           <li>Fix importwizard (in some case it didn't finish)</li>
+          <li xml:lang="ca">Corregeix «importwizard» (en algun cas no finalitzava)</li>
+          <li xml:lang="cs">Oprava průvodce importem (v některých případech se nedokončil)</li>
           <li xml:lang="ka">გასწორდა შემოტანის ოსტატი (ზოგიერთ შემთხვევაში ის მუშაობას არ ასრულებდა)</li>
+          <li xml:lang="pt-BR">Corrigido o assistente de importação (em alguns casos, ele não concluía)</li>
+          <li xml:lang="sl">Popravi čarovnika za uvoz (v nekaterih primerih se ni zaključil)</li>
+          <li xml:lang="sv">Rätta importguiden (i vissa fall avslutades den inte)</li>
+          <li xml:lang="uk">Виправлено майстер імпортування (у деяких випадках він не міг завершити роботу)</li>
         </ul>
       </description>
     </release>
