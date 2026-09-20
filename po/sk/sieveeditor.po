@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-09 00:51+0000\n"
+"POT-Creation-Date: 2026-09-20 00:47+0000\n"
 "PO-Revision-Date: 2022-04-15 19:14+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -42,7 +42,7 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "Správca"
 
-#: importwizard/checks/importimapsettingsakonadicheckjob.cpp:156
+#: importwizard/checks/importimapsettingsakonadicheckjob.cpp:162
 #, kde-format
 msgid "Akonadi IMAP Settings"
 msgstr "Nastavenia Akonadi IMAP"
@@ -64,17 +64,18 @@ msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "Nenašli sa nastavenia na import."
 
-#: importwizard/importimapsettingprogresspage.cpp:63
+#: importwizard/importimapsettingprogresspage.cpp:69
+#: importwizard/importimapsettingprogresspage.cpp:86
 #, kde-format
 msgid "No settings found."
 msgstr "Nenašli sa nastavenia."
 
-#: importwizard/importimapsettingprogresspage.cpp:70
+#: importwizard/importimapsettingprogresspage.cpp:94
 #, kde-format
 msgid "Import settings from %1…"
 msgstr "Importovať nastavenia z %1..."
 
-#: importwizard/importimapsettingprogresspage.cpp:72
+#: importwizard/importimapsettingprogresspage.cpp:96
 #, kde-format
 msgid "Import settings from %1 done"
 msgstr "Import nastavení z %1 hotový"
@@ -310,135 +311,135 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "Zavrieť skript"
 
-#: sieveeditormainwindow.cpp:178
+#: sieveeditormainwindow.cpp:174
 #, kde-format
 msgid "Network is Up."
 msgstr "Sieť je zapnutá."
 
-#: sieveeditormainwindow.cpp:180
+#: sieveeditormainwindow.cpp:176
 #, kde-format
 msgid "Network is Down."
 msgstr "Sieť je vypnutá."
 
-#: sieveeditormainwindow.cpp:202
+#: sieveeditormainwindow.cpp:198
 #, kde-format
 msgid "Upload"
 msgstr "Nahrať"
 
-#: sieveeditormainwindow.cpp:205
+#: sieveeditormainwindow.cpp:201
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Pridať Sieve server"
 
-#: sieveeditormainwindow.cpp:209
+#: sieveeditormainwindow.cpp:205
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Vymazať skript"
 
-#: sieveeditormainwindow.cpp:215
+#: sieveeditormainwindow.cpp:211
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Vytvoriť nový skript..."
 
-#: sieveeditormainwindow.cpp:221
+#: sieveeditormainwindow.cpp:217
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Upraviť skript..."
 
-#: sieveeditormainwindow.cpp:226
+#: sieveeditormainwindow.cpp:222
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Deaktivovať skript"
 
-#: sieveeditormainwindow.cpp:231
+#: sieveeditormainwindow.cpp:227
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Obnoviť zoznam"
 
-#: sieveeditormainwindow.cpp:237
+#: sieveeditormainwindow.cpp:233
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Prejsť na riadok..."
 
-#: sieveeditormainwindow.cpp:254
+#: sieveeditormainwindow.cpp:250
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "Importovať..."
 
-#: sieveeditormainwindow.cpp:260
+#: sieveeditormainwindow.cpp:256
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Zdieľať..."
 
-#: sieveeditormainwindow.cpp:268
+#: sieveeditormainwindow.cpp:264
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Kontrola pravopisu..."
 
-#: sieveeditormainwindow.cpp:274
+#: sieveeditormainwindow.cpp:270
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Skontrolovať syntax"
 
-#: sieveeditormainwindow.cpp:279
+#: sieveeditormainwindow.cpp:275
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Vytvoriť pravidlá graficky:"
 
-#: sieveeditormainwindow.cpp:284
+#: sieveeditormainwindow.cpp:280
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Komentár"
 
-#: sieveeditormainwindow.cpp:289
+#: sieveeditormainwindow.cpp:285
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Odkomentovať"
 
-#: sieveeditormainwindow.cpp:317
+#: sieveeditormainwindow.cpp:313
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Záložky"
 
-#: sieveeditormainwindow.cpp:322
+#: sieveeditormainwindow.cpp:318
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Ladiť Sieve skript...."
 
-#: sieveeditormainwindow.cpp:327
+#: sieveeditormainwindow.cpp:323
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Zalamovanie slov"
 
-#: sieveeditormainwindow.cpp:349
+#: sieveeditormainwindow.cpp:345
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "Importovať nastavenia IMAP"
 
-#: sieveeditormainwindow.cpp:374
+#: sieveeditormainwindow.cpp:370
 #, kde-format
 msgid "What's new"
 msgstr "What's new"
 
-#: sieveeditormainwindow.cpp:398
+#: sieveeditormainwindow.cpp:394
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
@@ -447,7 +448,7 @@ msgstr ""
 "<qt>Toto úplne skryje panel ponuky. Môžete ho znova zobraziť stlačením %1.</"
 "qt>"
 
-#: sieveeditormainwindow.cpp:401
+#: sieveeditormainwindow.cpp:397
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
@@ -801,15 +802,11 @@ msgstr "Upraviť…"
 msgid "Remove"
 msgstr "Odstrániť"
 
-#: whatsnew/whatsnewtranslations.cpp:25
-#, kde-format
-msgid "Add AI Actions Support."
-msgstr "Add AI Actions Support."
+#~ msgid "Add AI Actions Support."
+#~ msgstr "Add AI Actions Support."
 
-#: whatsnew/whatsnewtranslations.cpp:31
-#, kde-format
-msgid "Add AI quick Ask support."
-msgstr "Add AI quick Ask support."
+#~ msgid "Add AI quick Ask support."
+#~ msgstr "Add AI quick Ask support."
 
 #~ msgid "KSieve Editor"
 #~ msgstr "Editor KSieve"

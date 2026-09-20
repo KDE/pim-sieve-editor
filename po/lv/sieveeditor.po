@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-09 00:51+0000\n"
+"POT-Creation-Date: 2026-09-20 00:47+0000\n"
 "PO-Revision-Date: 2025-11-11 18:59+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "Uzturētājs"
 
-#: importwizard/checks/importimapsettingsakonadicheckjob.cpp:156
+#: importwizard/checks/importimapsettingsakonadicheckjob.cpp:162
 #, kde-format
 msgid "Akonadi IMAP Settings"
 msgstr "„Akonadi“ IMAP iestatījumi"
@@ -66,17 +66,18 @@ msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "Nav atrasti iestatījumi, ko importēt."
 
-#: importwizard/importimapsettingprogresspage.cpp:63
+#: importwizard/importimapsettingprogresspage.cpp:69
+#: importwizard/importimapsettingprogresspage.cpp:86
 #, kde-format
 msgid "No settings found."
 msgstr "Iestatījumi nav atrasti."
 
-#: importwizard/importimapsettingprogresspage.cpp:70
+#: importwizard/importimapsettingprogresspage.cpp:94
 #, kde-format
 msgid "Import settings from %1…"
 msgstr "Importē iestatījumus no „%1“..."
 
-#: importwizard/importimapsettingprogresspage.cpp:72
+#: importwizard/importimapsettingprogresspage.cpp:96
 #, kde-format
 msgid "Import settings from %1 done"
 msgstr "Iestatījumu importēšana no „%1“ nav izdevusies"
@@ -314,135 +315,135 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "Aizvērt skriptu"
 
-#: sieveeditormainwindow.cpp:178
+#: sieveeditormainwindow.cpp:174
 #, kde-format
 msgid "Network is Up."
 msgstr "Tīkls darbojas."
 
-#: sieveeditormainwindow.cpp:180
+#: sieveeditormainwindow.cpp:176
 #, kde-format
 msgid "Network is Down."
 msgstr "Tīkls nedarbojas."
 
-#: sieveeditormainwindow.cpp:202
+#: sieveeditormainwindow.cpp:198
 #, kde-format
 msgid "Upload"
 msgstr "Augšupielādēt"
 
-#: sieveeditormainwindow.cpp:205
+#: sieveeditormainwindow.cpp:201
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Pievienot „Sieve“ serveri…"
 
-#: sieveeditormainwindow.cpp:209
+#: sieveeditormainwindow.cpp:205
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Dzēst skriptu"
 
-#: sieveeditormainwindow.cpp:215
+#: sieveeditormainwindow.cpp:211
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Izveidot jaunu skriptu…"
 
-#: sieveeditormainwindow.cpp:221
+#: sieveeditormainwindow.cpp:217
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Rediģēt skriptu…"
 
-#: sieveeditormainwindow.cpp:226
+#: sieveeditormainwindow.cpp:222
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Deaktivēt skriptu"
 
-#: sieveeditormainwindow.cpp:231
+#: sieveeditormainwindow.cpp:227
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Pārlādēt sarakstu"
 
-#: sieveeditormainwindow.cpp:237
+#: sieveeditormainwindow.cpp:233
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Iet uz rindu…"
 
-#: sieveeditormainwindow.cpp:254
+#: sieveeditormainwindow.cpp:250
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "Importēt…"
 
-#: sieveeditormainwindow.cpp:260
+#: sieveeditormainwindow.cpp:256
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Kopīgot…"
 
-#: sieveeditormainwindow.cpp:268
+#: sieveeditormainwindow.cpp:264
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Pārbaudīt pareizrakstību…"
 
-#: sieveeditormainwindow.cpp:274
+#: sieveeditormainwindow.cpp:270
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Pārbaudīt sintaksi"
 
-#: sieveeditormainwindow.cpp:279
+#: sieveeditormainwindow.cpp:275
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Izveidot noteikumus grafiski…"
 
-#: sieveeditormainwindow.cpp:284
+#: sieveeditormainwindow.cpp:280
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Komentārs"
 
-#: sieveeditormainwindow.cpp:289
+#: sieveeditormainwindow.cpp:285
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Noņemt komentāru"
 
-#: sieveeditormainwindow.cpp:317
+#: sieveeditormainwindow.cpp:313
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Grāmatzīmes"
 
-#: sieveeditormainwindow.cpp:322
+#: sieveeditormainwindow.cpp:318
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Atkļūdot „Sieve“ skriptu…"
 
-#: sieveeditormainwindow.cpp:327
+#: sieveeditormainwindow.cpp:323
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Rindu aplaušana"
 
-#: sieveeditormainwindow.cpp:349
+#: sieveeditormainwindow.cpp:345
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "Importēt IMAP iestatījumus…"
 
-#: sieveeditormainwindow.cpp:374
+#: sieveeditormainwindow.cpp:370
 #, kde-format
 msgid "What's new"
 msgstr "Kas jauns"
 
-#: sieveeditormainwindow.cpp:398
+#: sieveeditormainwindow.cpp:394
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
@@ -451,7 +452,7 @@ msgstr ""
 "<qt>Šī darbība pilnībā paslēps izvēlnes joslu. To varat atkal parādīt, "
 "nospiežot „%1“.</qt>"
 
-#: sieveeditormainwindow.cpp:401
+#: sieveeditormainwindow.cpp:397
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
@@ -804,15 +805,11 @@ msgstr "Izmainīt…"
 msgid "Remove"
 msgstr "Noņemt"
 
-#: whatsnew/whatsnewtranslations.cpp:25
-#, kde-format
-msgid "Add AI Actions Support."
-msgstr "Pievienot MI darbību atbalstu."
+#~ msgid "Add AI Actions Support."
+#~ msgstr "Pievienot MI darbību atbalstu."
 
-#: whatsnew/whatsnewtranslations.cpp:31
-#, kde-format
-msgid "Add AI quick Ask support."
-msgstr "Pievienot MI ātrā jautājuma atbalstu."
+#~ msgid "Add AI quick Ask support."
+#~ msgstr "Pievienot MI ātrā jautājuma atbalstu."
 
 #~ msgid "KSieve Editor"
 #~ msgstr "„KSieve“ redaktors"
