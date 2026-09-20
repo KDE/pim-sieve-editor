@@ -157,6 +157,7 @@
       <description>
         <ul>
           <li>Fix importwizard (in some case it didn't finish)</li>
+          <li xml:lang="ka">გასწორდა შემოტანის ოსტატი (ზოგიერთ შემთხვევაში ის მუშაობას არ ასრულებდა)</li>
         </ul>
       </description>
     </release>
