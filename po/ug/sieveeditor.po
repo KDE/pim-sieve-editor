@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 00:47+0000\n"
-"PO-Revision-Date: 2026-06-01 17:40-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -37,7 +37,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
-msgstr "Laurent Montel"
+msgstr ""
 
 #: apps/main.cpp:56
 #, kde-format
@@ -134,7 +134,7 @@ msgstr ""
 #, kde-format
 msgctxt "server name (username)"
 msgid "%1 (%2)"
-msgstr "%1 (%2)"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, imapAuthenticationCombo)
 #: serversievesettings.cpp:33 ui/serversievesettings.ui:259
@@ -154,7 +154,7 @@ msgstr "ئاتسىز"
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr "%p%"
+msgstr ""
 
 #: serversievesettings.cpp:272
 #, kde-format
@@ -212,7 +212,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Wrap Text"
-msgstr ""
+msgstr "ئۆزلۈكىدىن قۇر ئالماشتۇر"
 
 #: sieveeditorconfiguredialog.cpp:42
 #, kde-format
@@ -447,8 +447,6 @@ msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 msgstr ""
-"<qt>بۇ مەشغۇلات تىزىملىك بالداقنى پۈتۈنلەي يوشۇرىدۇ. %1 نى بېسىپ قايتا "
-"كۆرسىتەلەيسىز.</qt>"
 
 #: sieveeditormainwindow.cpp:397
 #, kde-format
