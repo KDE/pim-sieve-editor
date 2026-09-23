@@ -801,9 +801,3 @@ msgstr "Промяна…"
 #, kde-format
 msgid "Remove"
 msgstr "Премахване"
-
-#~ msgid "Add AI Actions Support."
-#~ msgstr "Добавяне на поддръжка от ИИ"
-
-#~ msgid "Add AI quick Ask support."
-#~ msgstr "Добавяне на поддръжка за бързо запитване на ИИ."
