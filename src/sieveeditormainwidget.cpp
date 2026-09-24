@@ -155,9 +155,11 @@ void SieveEditorMainWidget::slotCreateScriptPage(const KSieveUi::ManageSieveWidg
         connect(editor, &SieveEditorPageWidget::copyAvailable, this, &SieveEditorMainWidget::copyAvailable);
         connect(editor, &SieveEditorPageWidget::sieveEditorTabCurrentChanged, this, &SieveEditorMainWidget::sieveEditorTabCurrentChanged);
         connect(editor, &SieveEditorPageWidget::requestCloseTab, this, &SieveEditorMainWidget::forceCloseTab);
+        connect(editor, &SieveEditorPageWidget::success, this, &SieveEditorMainWidget::success);
         editor->setIsNewScript(isNewScript);
         editor->loadScript(info);
-        mTabWidget->addTab(editor, info.currentUrl.fileName());
+        const int index = mTabWidget->addTab(editor, info.currentUrl.fileName());
+        mTabWidget->setTabToolTip(index, info.sieveImapAccountSettings.serverName());
         mTabWidget->setCurrentWidget(editor);
         if (isNewScript) {
             editor->uploadScript(false, true);

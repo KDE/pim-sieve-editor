@@ -93,6 +93,7 @@ Q_SIGNALS:
     void redoAvailable(bool);
     void copyAvailable(bool);
     void sieveEditorTabCurrentChanged();
+    void success(const QString &msg);
 
 protected:
     [[nodiscard]] bool event(QEvent *e) override;

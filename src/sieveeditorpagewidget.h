@@ -94,6 +94,7 @@ Q_SIGNALS:
     void copyAvailable(bool);
     void sieveEditorTabCurrentChanged();
     void requestCloseTab(SieveEditorPageWidget *);
+    void success(const QString &msg);
 
 private:
     void slotGetResult(KManageSieve::SieveJob *, bool success, const QString &script, bool isActive);

@@ -136,14 +136,14 @@ void SieveEditorPageWidget::uploadScript(bool showInformation, bool forceSave)
     }
 }
 
-void SieveEditorPageWidget::slotPutResult(KManageSieve::SieveJob *job, bool success)
+void SieveEditorPageWidget::slotPutResult(KManageSieve::SieveJob *job, bool putSuccess)
 {
     if (mIsNewScript) {
         Q_EMIT refreshList();
     }
-    if (success) {
+    if (putSuccess) {
         if (job->property("showuploadinformation").toBool()) {
-            KMessageBox::information(this, i18n("The Sieve script was successfully uploaded."), i18nc("@title:window", "Sieve Script Upload"));
+            Q_EMIT success(i18n("The Sieve script was successfully uploaded."));
         }
         mIsNewScript = false;
         mSieveEditorWidget->updateOriginalScript();

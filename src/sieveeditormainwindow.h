@@ -68,6 +68,7 @@ private:
     LIBSIEVEEDITOR_NO_EXPORT void slotToggleMenubar(bool dontShowWarning);
     LIBSIEVEEDITOR_NO_EXPORT void updateHamburgerMenu();
     LIBSIEVEEDITOR_NO_EXPORT void slotWhatsNew();
+    LIBSIEVEEDITOR_NO_EXPORT void slotSuccess(const QString &msg);
 
     SieveEditorCentralWidget *mMainWidget = nullptr;
     QAction *mDeleteScript = nullptr;

@@ -144,6 +144,7 @@ SieveEditorMainWindow::SieveEditorMainWindow(const QList<KAboutRelease> &release
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::redoAvailable, this, &SieveEditorMainWindow::slotRedoAvailable);
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::copyAvailable, this, &SieveEditorMainWindow::slotCopyAvailable);
     connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::sieveEditorTabCurrentChanged, this, &SieveEditorMainWindow::slotUpdateActions);
+    connect(mMainWidget->sieveEditorMainWidget(), &SieveEditorMainWidget::success, this, &SieveEditorMainWindow::slotSuccess);
     mMainWidget->sieveEditorMainWidget()->refreshList();
 #if WITH_KUSERFEEDBACK
     auto userFeedBackNotificationPopup = new KUserFeedback::NotificationPopup(this);
@@ -152,6 +153,11 @@ SieveEditorMainWindow::SieveEditorMainWindow(const QList<KAboutRelease> &release
 }
 
 SieveEditorMainWindow::~SieveEditorMainWindow() = default;
+
+void SieveEditorMainWindow::slotSuccess(const QString &msg)
+{
+    statusBar()->showMessage(msg, 3000);
+}
 
 void SieveEditorMainWindow::slotWhatsNew()
 {
