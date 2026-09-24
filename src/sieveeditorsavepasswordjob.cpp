@@ -19,7 +19,7 @@ SieveEditorSavePasswordJob::~SieveEditorSavePasswordJob() = default;
 
 bool SieveEditorSavePasswordJob::canStart() const
 {
-    return !mName.isEmpty() && !mPassword.isEmpty() && !mKey.isEmpty();
+    return !mName.isEmpty() && !mKey.isEmpty();
 }
 
 void SieveEditorSavePasswordJob::start()
@@ -30,9 +30,6 @@ void SieveEditorSavePasswordJob::start()
         }
         if (mKey.isEmpty()) {
             qCWarning(SIEVEEDITOR_LOG) << "Error missing key";
-        }
-        if (mPassword.isEmpty()) {
-            qCWarning(SIEVEEDITOR_LOG) << "Error missing password";
         }
         deleteLater();
         return;
