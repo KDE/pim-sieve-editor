@@ -157,6 +157,7 @@
       <description>
         <ul>
           <li>Fix importwizard (in some case it didn't finish)</li>
+          <li xml:lang="ar">إصلاح معالج الاستيراد (في بعض الحالات لم يكتمل)</li>
           <li xml:lang="bg">Корекция на помощника за импортиране (в някои случаи не приключваше)</li>
           <li xml:lang="ca">Corregeix «importwizard» (en algun cas no finalitzava)</li>
           <li xml:lang="ca-valencia">Corregix «importwizard» (en algun cas no finalitzava)</li>
