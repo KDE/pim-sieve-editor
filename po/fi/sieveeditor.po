@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 00:47+0000\n"
+"POT-Creation-Date: 2026-09-25 00:47+0000\n"
 "PO-Revision-Date: 2025-11-02 16:23+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -304,146 +304,146 @@ msgctxt "Action is from tools menu, import IMAP settings"
 msgid "Tools > Import IMAP settings"
 msgstr "Työkalut > Tuo IMAP-asetukset"
 
-#: sieveeditormainwidget.cpp:640
+#: sieveeditormainwidget.cpp:642
 #, kde-format
 msgid "Script was modified. Do you want to save before closing?"
 msgstr "Komentojonoa on muutettu. Haluatko tallentaa sen ennen sulkemista?"
 
-#: sieveeditormainwidget.cpp:641
+#: sieveeditormainwidget.cpp:643
 #, kde-format
 msgctxt "@title:window"
 msgid "Close script"
 msgstr "Sulje skripti"
 
-#: sieveeditormainwindow.cpp:174
+#: sieveeditormainwindow.cpp:180
 #, kde-format
 msgid "Network is Up."
 msgstr "Verkkoyhteydessä."
 
-#: sieveeditormainwindow.cpp:176
+#: sieveeditormainwindow.cpp:182
 #, kde-format
 msgid "Network is Down."
 msgstr "Ei verkkoyhteyttä."
 
-#: sieveeditormainwindow.cpp:198
+#: sieveeditormainwindow.cpp:204
 #, kde-format
 msgid "Upload"
 msgstr "Lähetä"
 
-#: sieveeditormainwindow.cpp:201
+#: sieveeditormainwindow.cpp:207
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Lisää Sieve-palvelin…"
 
-#: sieveeditormainwindow.cpp:205
+#: sieveeditormainwindow.cpp:211
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Poista skripti"
 
-#: sieveeditormainwindow.cpp:211
+#: sieveeditormainwindow.cpp:217
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Luo uusi skripti…"
 
-#: sieveeditormainwindow.cpp:217
+#: sieveeditormainwindow.cpp:223
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Muokkaa skriptiä…"
 
-#: sieveeditormainwindow.cpp:222
+#: sieveeditormainwindow.cpp:228
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Passivoi skripti"
 
-#: sieveeditormainwindow.cpp:227
+#: sieveeditormainwindow.cpp:233
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Virkistä luettelo"
 
-#: sieveeditormainwindow.cpp:233
+#: sieveeditormainwindow.cpp:239
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Siirry riville…"
 
-#: sieveeditormainwindow.cpp:250
+#: sieveeditormainwindow.cpp:256
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "Tuo…"
 
-#: sieveeditormainwindow.cpp:256
+#: sieveeditormainwindow.cpp:262
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Jaa…"
 
-#: sieveeditormainwindow.cpp:264
+#: sieveeditormainwindow.cpp:270
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Tarkista oikeinkirjoitus…"
 
-#: sieveeditormainwindow.cpp:270
+#: sieveeditormainwindow.cpp:276
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Tarkista syntaksi"
 
-#: sieveeditormainwindow.cpp:275
+#: sieveeditormainwindow.cpp:281
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Luo säännöt graafisesti…"
 
-#: sieveeditormainwindow.cpp:280
+#: sieveeditormainwindow.cpp:286
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Kommentti"
 
-#: sieveeditormainwindow.cpp:285
+#: sieveeditormainwindow.cpp:291
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Poista kommentista"
 
-#: sieveeditormainwindow.cpp:313
+#: sieveeditormainwindow.cpp:319
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Kirjanmerkit"
 
-#: sieveeditormainwindow.cpp:318
+#: sieveeditormainwindow.cpp:324
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Paikanna Sieve-skriptin virheet…"
 
-#: sieveeditormainwindow.cpp:323
+#: sieveeditormainwindow.cpp:329
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Rivitys"
 
-#: sieveeditormainwindow.cpp:345
+#: sieveeditormainwindow.cpp:351
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "Tuo IMAP-asetukset…"
 
-#: sieveeditormainwindow.cpp:370
+#: sieveeditormainwindow.cpp:376
 #, kde-format
 msgid "What's new"
 msgstr "Mitä uutta"
 
-#: sieveeditormainwindow.cpp:394
+#: sieveeditormainwindow.cpp:400
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
@@ -452,7 +452,7 @@ msgstr ""
 "<qt>Tämä piilottaa valikkorivin kokonaan. Saat sen uudelleen näkyviin "
 "painamalla %1.</qt>"
 
-#: sieveeditormainwindow.cpp:397
+#: sieveeditormainwindow.cpp:403
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
@@ -477,12 +477,6 @@ msgstr "Lähetetään skriptiä palvelimelle tarkistettavaksi, odota…"
 #, kde-format
 msgid "The Sieve script was successfully uploaded."
 msgstr "Sieve-komentojono onnistuttiin lähettämään."
-
-#: sieveeditorpagewidget.cpp:146
-#, kde-format
-msgctxt "@title:window"
-msgid "Sieve Script Upload"
-msgstr "Sieve-skriptin lähetys"
 
 #: sieveeditorpagewidget.cpp:158
 #, kde-format
@@ -803,6 +797,10 @@ msgstr "Muuta…"
 #, kde-format
 msgid "Remove"
 msgstr "Poista"
+
+#~ msgctxt "@title:window"
+#~ msgid "Sieve Script Upload"
+#~ msgstr "Sieve-skriptin lähetys"
 
 #~ msgid "Add AI Actions Support."
 #~ msgstr "Lisätty tekoälytoimenpiteiden tuki."
