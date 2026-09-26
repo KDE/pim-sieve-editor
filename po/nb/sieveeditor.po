@@ -787,8 +787,3 @@ msgstr "Endre …"
 #, kde-format
 msgid "Remove"
 msgstr ""
-
-#, fuzzy
-#~ msgctxt "@title:window"
-#~ msgid "Sieve Script Upload"
-#~ msgstr "Last opp Sieve-skript"
