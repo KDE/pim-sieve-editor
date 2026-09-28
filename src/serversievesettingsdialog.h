@@ -38,7 +38,6 @@ public:
 private:
     void slotEnableButtonOk(bool);
     void readConfig();
-    void writeConfig();
     ServerSieveSettings *const mServerSieveSettings;
     QPushButton *mOkButton = nullptr;
 };

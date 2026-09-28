@@ -128,7 +128,7 @@ set(KDEPIM_LIB_SOVERSION "6")
 set(LIBKSIEVE_LIB_VERSION "6.8.40")
 set(PIMCOMMON_LIB_VERSION "6.8.40")
 set(KIMAP_LIB_VERSION "6.8.40")
-set(KTEXTADDONS_MIN_VERSION "2.1.2")
+set(KTEXTADDONS_MIN_VERSION "2.2.0")
 
 find_package(
     Qt6
@@ -217,11 +217,9 @@ set_package_properties(
             REQUIRED
 )
 
-set(KTEXTADDONS_WITH_TEXTAUTOGENERATETEXT_VERSION "${KTEXTADDONS_MIN_VERSION}")
-
 option(OPTION_ADD_AUTOGENERATETEXT "Add support for autogenerate text plugin" ON)
 if(OPTION_ADD_AUTOGENERATETEXT)
-    find_package(KF6TextAutoGenerateText ${KTEXTADDONS_WITH_TEXTAUTOGENERATETEXT_VERSION} CONFIG)
+    find_package(KF6TextAutoGenerateText ${KTEXTADDONS_MIN_VERSION} CONFIG)
     set_package_properties(
         KF6TextAutoGenerateText
         PROPERTIES

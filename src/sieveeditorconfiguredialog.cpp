@@ -18,15 +18,11 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <KConfigDialogManager>
 #include <KLocalizedString>
-#include <KSharedConfig>
 
-#include <KConfigGroup>
-#include <KWindowConfig>
 #include <QCheckBox>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
-#include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
 
 namespace
@@ -92,10 +88,7 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     readConfig();
 }
 
-SieveEditorConfigureDialog::~SieveEditorConfigureDialog()
-{
-    writeConfig();
-}
+SieveEditorConfigureDialog::~SieveEditorConfigureDialog() = default;
 
 void SieveEditorConfigureDialog::loadServerSieveConfig()
 {
@@ -117,24 +110,7 @@ void SieveEditorConfigureDialog::saveServerSieveConfig()
 
 void SieveEditorConfigureDialog::readConfig()
 {
-#if TEXTADDONSWIDGETS_VERSION >= QT_VERSION_CHECK(2, 1, 49)
     TextAddonsWidgets::LoadDialogSizeUtils::manageDialogSize(this, QLatin1StringView(mySieveEditorConfigureDialog), QSize(600, 400));
-#else
-    create(); // ensure a window is created
-    windowHandle()->resize(QSize(600, 400));
-    const KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(mySieveEditorConfigureDialog));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
-#endif
-}
-
-void SieveEditorConfigureDialog::writeConfig()
-{
-#if TEXTADDONSWIDGETS_VERSION < QT_VERSION_CHECK(2, 1, 49)
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(mySieveEditorConfigureDialog));
-    KWindowConfig::saveWindowSize(windowHandle(), group);
-    group.sync();
-#endif
 }
 
 #include "moc_sieveeditorconfiguredialog.cpp"

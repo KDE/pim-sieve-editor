@@ -26,7 +26,6 @@ public:
 
 private:
     LIBSIEVEEDITOR_NO_EXPORT void readConfig();
-    LIBSIEVEEDITOR_NO_EXPORT void writeConfig();
     LIBSIEVEEDITOR_NO_EXPORT void initializeWizard();
     LIBSIEVEEDITOR_NO_EXPORT void slotHelpClicked();
     LIBSIEVEEDITOR_NO_EXPORT void slotFinishImportData();

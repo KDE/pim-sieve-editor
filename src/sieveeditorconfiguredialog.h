@@ -29,7 +29,6 @@ public:
 
 private:
     void readConfig();
-    void writeConfig();
     void loadServerSieveConfig();
     SieveEditorConfigureServerWidget *mServerWidget = nullptr;
     QCheckBox *const mWrapText;
