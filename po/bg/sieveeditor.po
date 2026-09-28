@@ -795,7 +795,3 @@ msgstr "Промяна…"
 #, kde-format
 msgid "Remove"
 msgstr "Премахване"
-
-#~ msgctxt "@title:window"
-#~ msgid "Sieve Script Upload"
-#~ msgstr "Качване на скрипт на Sieve"
