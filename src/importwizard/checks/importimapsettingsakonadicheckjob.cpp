@@ -23,7 +23,7 @@ ImportImapSettingsAkonadiCheckJob::~ImportImapSettingsAkonadiCheckJob() = defaul
 
 bool ImportImapSettingsAkonadiCheckJob::resourceCanHaveSieveSupport(const QString &filename) const
 {
-    return filename.startsWith("akonadi_kolab_resource"_L1) || filename.startsWith("akonadi_imap_resource"_L1);
+    return filename.startsWith("akonadi_imap_resource"_L1);
 }
 
 void ImportImapSettingsAkonadiCheckJob::start()
@@ -80,17 +80,16 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
         return;
     }
     SieveEditorUtil::SieveServerConfig config;
-    const bool isKolabSettings = filePath.contains("/akonadi_kolab_resource"_L1);
     KSharedConfigPtr resourceConfig = KSharedConfig::openConfig(filePath);
 
     KConfigGroup sieveGroup = resourceConfig->group(QStringLiteral("siever"));
-    const bool hasSieveSupport = sieveGroup.readEntry(QStringLiteral("SieveSupport"), isKolabSettings ? true : false);
+    const bool hasSieveSupport = sieveGroup.readEntry(QStringLiteral("SieveSupport"), false);
     if (hasSieveSupport) {
         bool reuseImapSettings = sieveGroup.readEntry(QStringLiteral("SieveReuseConfig"), true);
         KConfigGroup networkGroup = resourceConfig->group(QStringLiteral("network"));
         const QString userName = networkGroup.readEntry(QStringLiteral("UserName"), QString());
         const QString imapServerName = networkGroup.readEntry(QStringLiteral("ImapServer"), QString());
-        const int imapPort = networkGroup.readEntry(QStringLiteral("ImapPort"), isKolabSettings ? 143 : 993);
+        const int imapPort = networkGroup.readEntry(QStringLiteral("ImapPort"), 993);
         config.sieveImapAccountSettings.setUserName(userName);
         config.sieveImapAccountSettings.setServerName(imapServerName);
         config.sieveImapAccountSettings.setPort(imapPort);
@@ -104,11 +103,7 @@ void ImportImapSettingsAkonadiCheckJob::importSettings(const QString &directory,
         } else if (encryption == "None"_L1) {
             config.sieveImapAccountSettings.setEncryptionMode(KSieveCore::SieveImapAccountSettings::EncryptionMode::Unencrypted);
         } else if (encryption.isEmpty()) { // Default value
-            if (isKolabSettings) {
-                config.sieveImapAccountSettings.setEncryptionMode(KSieveCore::SieveImapAccountSettings::EncryptionMode::STARTTLS);
-            } else {
-                config.sieveImapAccountSettings.setEncryptionMode(KSieveCore::SieveImapAccountSettings::EncryptionMode::Unencrypted);
-            }
+            config.sieveImapAccountSettings.setEncryptionMode(KSieveCore::SieveImapAccountSettings::EncryptionMode::Unencrypted);
         } else {
             qCWarning(SIEVEEDITOR_LOG) << "Unknown encryption mode " << encryption;
         }
