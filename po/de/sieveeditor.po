@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-25 00:47+0000\n"
+"POT-Creation-Date: 2026-09-29 00:46+0000\n"
 "PO-Revision-Date: 2024-12-28 23:24+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -89,23 +89,23 @@ msgstr ""
 "Bitte wählen Sie das Programm, aus dem Sie die IMAP-Einstellungen "
 "importieren möchten:"
 
-#: importwizard/importimapsettingwizard.cpp:33
+#: importwizard/importimapsettingwizard.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Import IMAP Settings"
 msgstr "IMAP-Einstellungen importieren"
 
-#: importwizard/importimapsettingwizard.cpp:35
+#: importwizard/importimapsettingwizard.cpp:31
 #, kde-format
 msgid "Select Import Settings"
 msgstr "Import-Einstellungen auswählen"
 
-#: importwizard/importimapsettingwizard.cpp:41
+#: importwizard/importimapsettingwizard.cpp:37
 #, kde-format
 msgid "Import in Progress…"
 msgstr "Importvorgang läuft …"
 
-#: importwizard/importimapsettingwizard.cpp:47
+#: importwizard/importimapsettingwizard.cpp:43
 #, kde-format
 msgid "Finish"
 msgstr "Fertigstellen"
@@ -201,7 +201,7 @@ msgstr ""
 msgid "<qt><b>It is not possible to use this server.</b></qt>"
 msgstr "<qt><b>Es ist nicht möglich, diesen Server zu verwenden.</b></qt>"
 
-#: serversievesettingsdialog.cpp:27
+#: serversievesettingsdialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Sieve Server"
@@ -213,29 +213,29 @@ msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
 msgstr "Zeigt die verfügbaren Einstellungen zum Benutzer-Feedback an"
 
-#: sieveeditorconfiguredialog.cpp:39
+#: sieveeditorconfiguredialog.cpp:35
 #, kde-format
 msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr "Text umbrechen"
 
-#: sieveeditorconfiguredialog.cpp:42
+#: sieveeditorconfiguredialog.cpp:38
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Einrichten"
 
-#: sieveeditorconfiguredialog.cpp:56
+#: sieveeditorconfiguredialog.cpp:52
 #, kde-format
 msgid "Sieve Server"
 msgstr "Sieve-Server"
 
-#: sieveeditorconfiguredialog.cpp:70
+#: sieveeditorconfiguredialog.cpp:66
 #, kde-format
 msgid "Editor"
 msgstr "Editor"
 
-#: sieveeditorconfiguredialog.cpp:86
+#: sieveeditorconfiguredialog.cpp:82
 #, kde-format
 msgid "User Feedback"
 msgstr "Benutzer-Feedback"
