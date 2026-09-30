@@ -168,6 +168,7 @@
           <li xml:lang="he">תוקן אשף הייבוא (בחלק מהמקרים הוא לא סיים)</li>
           <li xml:lang="it">Correzione della procedura guidata di importazione (in alcuni casi non terminava)</li>
           <li xml:lang="ka">გასწორდა შემოტანის ოსტატი (ზოგიერთ შემთხვევაში ის მუშაობას არ ასრულებდა)</li>
+          <li xml:lang="ko">가져오기 마법사 수리(일부 경우에 완료될 수 없음)</li>
           <li xml:lang="nl">Importassistent hersteld (in sommige gevallen werd deze niet voltooid)</li>
           <li xml:lang="pt-BR">Corrigido o assistente de importação (em alguns casos, ele não concluía)</li>
           <li xml:lang="ru">Исправлена работа ImportWizard (в некоторых случаях импорт не завершался);</li>
