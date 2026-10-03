@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014, 2015, 2016.
-# SPDX-FileCopyrightText: 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-29 00:46+0000\n"
-"PO-Revision-Date: 2025-11-02 16:23+0200\n"
+"PO-Revision-Date: 2026-08-30 22:59+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -112,19 +112,17 @@ msgstr "Valmis"
 #: internaltoolsjob/addnewscripttoolinternaljob.cpp:34
 #, kde-format
 msgid "Impossible to create a new sieve script: invalid arguments."
-msgstr ""
+msgstr "Mahdotonta luoda uutta Sieve-skriptiä: virheelliset parametrit."
 
 #: internaltoolsjob/addnewscripttoolinternaljob.cpp:39
 #, kde-format
 msgid "Impossible to create a new sieve script."
-msgstr ""
+msgstr "Mahdotonta luoda uutta Sieve-skriptiä."
 
 #: internaltoolsjob/addnewscripttoolinternaljob.cpp:51
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Create New Script…"
+#, kde-format
 msgid "Create New Sieve Script named \"%1\""
-msgstr "Luo uusi skripti…"
+msgstr "Luo uusi Sieve-skripti nimelle ”%1”…"
 
 #: serversievelistwidget.cpp:77
 #, kde-format
