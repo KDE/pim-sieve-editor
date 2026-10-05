@@ -11,6 +11,9 @@
 class QCheckBox;
 class KConfigDialogManager;
 class SieveEditorConfigureServerWidget;
+#if HAVE_SPEECH_TO_TEXT
+class SieveEditorConfigureSpeechToTextWidget;
+#endif
 #if WITH_KUSERFEEDBACK
 namespace KUserFeedback
 {
@@ -35,5 +38,8 @@ private:
     KConfigDialogManager *m_configDialogManager = nullptr;
 #if WITH_KUSERFEEDBACK
     KUserFeedback::FeedbackConfigWidget *mUserFeedbackWidget = nullptr;
+#endif
+#if HAVE_SPEECH_TO_TEXT
+    SieveEditorConfigureSpeechToTextWidget *mSpeechToTextWidget = nullptr;
 #endif
 };

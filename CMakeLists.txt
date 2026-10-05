@@ -121,6 +121,7 @@ set(LIBKSIEVE_LIB_VERSION "6.8.40")
 set(PIMCOMMON_LIB_VERSION "6.8.40")
 set(KIMAP_LIB_VERSION "6.8.40")
 set(KTEXTADDONS_MIN_VERSION "2.2.0")
+set(KTEXTADDONS_WITH_SPEECH_TO_TEXT_VERSION "2.2.1")
 
 find_package(
     Qt6
@@ -227,6 +228,19 @@ endif()
 
 if(TARGET KF6::TextAutoGenerateText)
     set(HAVE_TEXT_AUTOGENERATE_TEXT TRUE)
+endif()
+
+find_package(KF6TextSpeechToText ${KTEXTADDONS_WITH_SPEECH_TO_TEXT_VERSION} CONFIG)
+set_package_properties(
+    KF6TextSpeechToText
+    PROPERTIES
+        DESCRIPTION
+            "Add support for speech to text (ktextaddons)"
+        TYPE
+            OPTIONAL
+)
+if(TARGET KF6::TextSpeechToText)
+    set(HAVE_SPEECH_TO_TEXT TRUE)
 endif()
 
 include_directories(

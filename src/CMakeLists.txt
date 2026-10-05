@@ -168,6 +168,16 @@ if(TARGET KF6::TextAutoGenerateText)
     target_link_libraries(libsieveeditor PRIVATE KF6::TextAutoGenerateText)
 endif()
 
+if(HAVE_SPEECH_TO_TEXT)
+    target_sources(
+        libsieveeditor
+        PRIVATE
+            sieveeditorconfigurespeechtotextwidget.cpp
+            sieveeditorconfigurespeechtotextwidget.h
+    )
+    target_link_libraries(libsieveeditor PRIVATE KF6::TextSpeechToText)
+endif()
+
 target_link_libraries(libsieveeditor PRIVATE qt6keychain)
 
 target_link_libraries(libsieveeditor PRIVATE KF6::TextAddonsWidgets)

@@ -48,6 +48,10 @@ endmacro()
 
 add_sieveserver_unittest( sieveeditorconfigureserverpagetest.cpp)
 add_sieveserver_unittest(sieveeditorcommandlineparsertest.cpp)
+if(HAVE_SPEECH_TO_TEXT)
+    add_sieveserver_unittest(sieveeditorconfigurespeechtotextwidgettest.cpp)
+    target_link_libraries(sieveeditorconfigurespeechtotextwidgettest KF6::TextSpeechToText)
+endif()
 
 add_test(
     NAME sieveeditor-self-test

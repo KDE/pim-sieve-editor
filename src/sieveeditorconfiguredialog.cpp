@@ -8,6 +8,9 @@
 
 #include "sieveeditorconfigureserverwidget.h"
 #include "sieveeditorglobalconfig.h"
+#if HAVE_SPEECH_TO_TEXT
+#include "sieveeditorconfigurespeechtotextwidget.h"
+#endif
 
 #if WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
@@ -68,6 +71,16 @@ SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
     editorPageWidgetPage->setIcon(QIcon::fromTheme(QStringLiteral("accessories-text-editor")));
     addPage(editorPageWidgetPage);
 
+#if HAVE_SPEECH_TO_TEXT
+    // Accessibility page
+    mSpeechToTextWidget = new SieveEditorConfigureSpeechToTextWidget;
+    mSpeechToTextWidget->setObjectName("speechToTextWidget"_L1);
+
+    auto accessibilityPageWidgetPage = new KPageWidgetItem(mSpeechToTextWidget, i18n("Accessibility"));
+    accessibilityPageWidgetPage->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-accessibility")));
+    addPage(accessibilityPageWidgetPage);
+#endif
+
     // UserFeedBack config
 #if WITH_KUSERFEEDBACK
     auto userFeedBackWidget = new QWidget;
@@ -95,12 +108,18 @@ void SieveEditorConfigureDialog::loadServerSieveConfig()
 {
     mServerWidget->readConfig();
     m_configDialogManager->updateWidgets();
+#if HAVE_SPEECH_TO_TEXT
+    mSpeechToTextWidget->load();
+#endif
 }
 
 void SieveEditorConfigureDialog::saveServerSieveConfig()
 {
     mServerWidget->writeConfig();
     m_configDialogManager->updateSettings();
+#if HAVE_SPEECH_TO_TEXT
+    mSpeechToTextWidget->save();
+#endif
     SieveEditorGlobalConfig::self()->save();
 #if WITH_KUSERFEEDBACK
     // set current active mode + write back the config for future starts
