@@ -5,7 +5,6 @@
 */
 
 #include "sieveeditorutil.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "sieveeditor_debug.h"
 #include "sieveeditorsavepasswordjob.h"
@@ -19,6 +18,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QUrlQuery>
 
 #include <qt6keychain/keychain.h>
+using namespace Qt::Literals::StringLiterals;
 using namespace QKeychain;
 
 QUrl SieveEditorUtil::SieveServerConfig::url() const

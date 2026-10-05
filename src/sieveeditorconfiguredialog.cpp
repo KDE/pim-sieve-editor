@@ -5,7 +5,6 @@
 */
 
 #include "sieveeditorconfiguredialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "sieveeditorconfigureserverwidget.h"
 #include "sieveeditorglobalconfig.h"
@@ -24,6 +23,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {

@@ -5,13 +5,14 @@
 */
 
 #include "importimapsettingprogresspage.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "checks/abstractimapsettingscheckjob.h"
 #include "sieveeditor_debug.h"
 #include <KLocalizedString>
 #include <QTextEdit>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 ImportImapSettingProgressPage::ImportImapSettingProgressPage(QWidget *parent)
     : QWidget(parent)

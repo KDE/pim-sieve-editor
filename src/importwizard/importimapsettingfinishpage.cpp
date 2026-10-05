@@ -5,12 +5,13 @@
 */
 
 #include "importimapsettingfinishpage.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 #include <QLabel>
 #include <QTextEdit>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 ImportImapSettingFinishPage::ImportImapSettingFinishPage(QWidget *parent)
     : QWidget(parent)

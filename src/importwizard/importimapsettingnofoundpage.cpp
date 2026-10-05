@@ -5,11 +5,12 @@
 */
 
 #include "importimapsettingnofoundpage.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 #include <QLabel>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 ImportImapSettingNoFoundPage::ImportImapSettingNoFoundPage(QWidget *parent)
     : QWidget(parent)
