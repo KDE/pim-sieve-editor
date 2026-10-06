@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-29 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:49+0000\n"
 "PO-Revision-Date: 2026-09-06 20:05+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -61,36 +61,36 @@ msgstr "Параметры IMAP Akonadi"
 msgid "Thunderbird IMAP Settings"
 msgstr "Параметры IMAP Thunderbird"
 
-#: importwizard/importimapsettingfinishpage.cpp:22
+#: importwizard/importimapsettingfinishpage.cpp:23
 #, kde-format
 msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
 msgstr "Импортированы параметры IMAP:"
 
-#: importwizard/importimapsettingnofoundpage.cpp:20
+#: importwizard/importimapsettingnofoundpage.cpp:21
 #, kde-format
 msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "Не найдены параметры для импорта."
 
-#: importwizard/importimapsettingprogresspage.cpp:69
-#: importwizard/importimapsettingprogresspage.cpp:86
+#: importwizard/importimapsettingprogresspage.cpp:70
+#: importwizard/importimapsettingprogresspage.cpp:87
 #, kde-format
 msgid "No settings found."
 msgstr "Параметры не найдены."
 
 # BUGME: please change to "Configure Sieve Server" --aspotashev
-#: importwizard/importimapsettingprogresspage.cpp:94
+#: importwizard/importimapsettingprogresspage.cpp:95
 #, kde-format
 msgid "Import settings from %1…"
 msgstr "Импорт параметров из %1…"
 
-#: importwizard/importimapsettingprogresspage.cpp:96
+#: importwizard/importimapsettingprogresspage.cpp:97
 #, kde-format
 msgid "Import settings from %1 done"
 msgstr "Завершён импорт параметров из %1"
 
-#: importwizard/importimapsettingsearchpage.cpp:21
+#: importwizard/importimapsettingsearchpage.cpp:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
@@ -217,29 +217,34 @@ msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
 msgstr "Доступные варианты обратной связи."
 
-#: sieveeditorconfiguredialog.cpp:35
+#: sieveeditorconfiguredialog.cpp:39
 #, kde-format
 msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr "Переносить по словам"
 
-#: sieveeditorconfiguredialog.cpp:38
+#: sieveeditorconfiguredialog.cpp:42
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Настройка"
 
-#: sieveeditorconfiguredialog.cpp:52
+#: sieveeditorconfiguredialog.cpp:56
 #, kde-format
 msgid "Sieve Server"
 msgstr "Серверы Sieve"
 
-#: sieveeditorconfiguredialog.cpp:66
+#: sieveeditorconfiguredialog.cpp:70
 #, kde-format
 msgid "Editor"
 msgstr "Редактор"
 
-#: sieveeditorconfiguredialog.cpp:82
+#: sieveeditorconfiguredialog.cpp:79
+#, kde-format
+msgid "Accessibility"
+msgstr ""
+
+#: sieveeditorconfiguredialog.cpp:96
 #, kde-format
 msgid "User Feedback"
 msgstr "Обратная связь"
@@ -267,6 +272,12 @@ msgstr "Удалить сервер Sieve «%1» из списка?"
 msgctxt "@title:window"
 msgid "Remove Sieve Server"
 msgstr "Удаление сервера Sieve"
+
+#: sieveeditorconfigurespeechtotextwidget.cpp:21
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable Speech To Text"
+msgstr ""
 
 #: sieveeditoremptytabwidgetlabel.cpp:24
 #, kde-format

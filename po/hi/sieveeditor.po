@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-29 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:49+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -55,35 +55,35 @@ msgstr "अकोनाडी IMAP सेटिंग्स"
 msgid "Thunderbird IMAP Settings"
 msgstr "थंडरबर्ड IMAP सेटिंग्स"
 
-#: importwizard/importimapsettingfinishpage.cpp:22
+#: importwizard/importimapsettingfinishpage.cpp:23
 #, kde-format
 msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
 msgstr "IMAP सेटिंग्स आयात की गईं:"
 
-#: importwizard/importimapsettingnofoundpage.cpp:20
+#: importwizard/importimapsettingnofoundpage.cpp:21
 #, kde-format
 msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "आयात करने के लिए कोई सेटिंग नहीं मिली."
 
-#: importwizard/importimapsettingprogresspage.cpp:69
-#: importwizard/importimapsettingprogresspage.cpp:86
+#: importwizard/importimapsettingprogresspage.cpp:70
+#: importwizard/importimapsettingprogresspage.cpp:87
 #, kde-format
 msgid "No settings found."
 msgstr "कोई सेटिंग नहीं मिली."
 
-#: importwizard/importimapsettingprogresspage.cpp:94
+#: importwizard/importimapsettingprogresspage.cpp:95
 #, kde-format
 msgid "Import settings from %1…"
 msgstr "%1 से सेटिंग आयात करें…"
 
-#: importwizard/importimapsettingprogresspage.cpp:96
+#: importwizard/importimapsettingprogresspage.cpp:97
 #, kde-format
 msgid "Import settings from %1 done"
 msgstr "%1 से सेटिंग आयात करें संपन्न"
 
-#: importwizard/importimapsettingsearchpage.cpp:21
+#: importwizard/importimapsettingsearchpage.cpp:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
@@ -210,29 +210,34 @@ msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
 msgstr "उपयोगकर्ता फ़ीडबैक के लिए उपलब्ध विकल्पों की सूची बनाता है"
 
-#: sieveeditorconfiguredialog.cpp:35
+#: sieveeditorconfiguredialog.cpp:39
 #, kde-format
 msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr "पाठ को आवृत करना"
 
-#: sieveeditorconfiguredialog.cpp:38
+#: sieveeditorconfiguredialog.cpp:42
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "कॉन्फ़िगर"
 
-#: sieveeditorconfiguredialog.cpp:52
+#: sieveeditorconfiguredialog.cpp:56
 #, kde-format
 msgid "Sieve Server"
 msgstr "छलनी सर्वर"
 
-#: sieveeditorconfiguredialog.cpp:66
+#: sieveeditorconfiguredialog.cpp:70
 #, kde-format
 msgid "Editor"
 msgstr "संपादक"
 
-#: sieveeditorconfiguredialog.cpp:82
+#: sieveeditorconfiguredialog.cpp:79
+#, kde-format
+msgid "Accessibility"
+msgstr ""
+
+#: sieveeditorconfiguredialog.cpp:96
 #, kde-format
 msgid "User Feedback"
 msgstr "उपयोगकर्ता प्रतिसाद"
@@ -259,6 +264,12 @@ msgstr "क्या आप इस सर्वर '%1' को हटाना �
 msgctxt "@title:window"
 msgid "Remove Sieve Server"
 msgstr "छलनी सर्वर हटाएँ"
+
+#: sieveeditorconfigurespeechtotextwidget.cpp:21
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable Speech To Text"
+msgstr ""
 
 #: sieveeditoremptytabwidgetlabel.cpp:24
 #, kde-format

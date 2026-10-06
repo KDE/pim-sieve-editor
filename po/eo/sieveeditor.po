@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-29 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:49+0000\n"
 "PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -56,35 +56,35 @@ msgstr "Akonadi IMAP-agordoj"
 msgid "Thunderbird IMAP Settings"
 msgstr "Thunderbird IMAP-agordoj"
 
-#: importwizard/importimapsettingfinishpage.cpp:22
+#: importwizard/importimapsettingfinishpage.cpp:23
 #, kde-format
 msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
 msgstr "IMAP-agordoj estis importitaj:"
 
-#: importwizard/importimapsettingnofoundpage.cpp:20
+#: importwizard/importimapsettingnofoundpage.cpp:21
 #, kde-format
 msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "Neniuj agordoj trovitaj por importi."
 
-#: importwizard/importimapsettingprogresspage.cpp:69
-#: importwizard/importimapsettingprogresspage.cpp:86
+#: importwizard/importimapsettingprogresspage.cpp:70
+#: importwizard/importimapsettingprogresspage.cpp:87
 #, kde-format
 msgid "No settings found."
 msgstr "Neniuj agordoj trovitaj."
 
-#: importwizard/importimapsettingprogresspage.cpp:94
+#: importwizard/importimapsettingprogresspage.cpp:95
 #, kde-format
 msgid "Import settings from %1…"
 msgstr "Enporti agordojn de %1…"
 
-#: importwizard/importimapsettingprogresspage.cpp:96
+#: importwizard/importimapsettingprogresspage.cpp:97
 #, kde-format
 msgid "Import settings from %1 done"
 msgstr "Enporti agordojn de %1 farita"
 
-#: importwizard/importimapsettingsearchpage.cpp:21
+#: importwizard/importimapsettingsearchpage.cpp:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Please select the program from which you like to import IMAP settings:"
@@ -213,29 +213,34 @@ msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
 msgstr "Listigas la disponeblajn elekteblojn por uzant-sugestoj"
 
-#: sieveeditorconfiguredialog.cpp:35
+#: sieveeditorconfiguredialog.cpp:39
 #, kde-format
 msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr "Envolvi Tekston"
 
-#: sieveeditorconfiguredialog.cpp:38
+#: sieveeditorconfiguredialog.cpp:42
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Agordi"
 
-#: sieveeditorconfiguredialog.cpp:52
+#: sieveeditorconfiguredialog.cpp:56
 #, kde-format
 msgid "Sieve Server"
 msgstr "Sieve-Servilo"
 
-#: sieveeditorconfiguredialog.cpp:66
+#: sieveeditorconfiguredialog.cpp:70
 #, kde-format
 msgid "Editor"
 msgstr "Redaktoro"
 
-#: sieveeditorconfiguredialog.cpp:82
+#: sieveeditorconfiguredialog.cpp:79
+#, kde-format
+msgid "Accessibility"
+msgstr ""
+
+#: sieveeditorconfiguredialog.cpp:96
 #, kde-format
 msgid "User Feedback"
 msgstr "Uzanto-Reago"
@@ -262,6 +267,12 @@ msgstr "Ĉu vi volas forigi ĉi tiun servilon '%1'?"
 msgctxt "@title:window"
 msgid "Remove Sieve Server"
 msgstr "Forigi Sieve Server"
+
+#: sieveeditorconfigurespeechtotextwidget.cpp:21
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable Speech To Text"
+msgstr ""
 
 #: sieveeditoremptytabwidgetlabel.cpp:24
 #, kde-format

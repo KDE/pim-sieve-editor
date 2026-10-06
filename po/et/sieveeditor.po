@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-29 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:49+0000\n"
 "PO-Revision-Date: 2020-05-12 10:54+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -55,38 +55,38 @@ msgstr "Akonadi IMAP seadistused"
 msgid "Thunderbird IMAP Settings"
 msgstr "Thunderbirdi IMAP seadistused"
 
-#: importwizard/importimapsettingfinishpage.cpp:22
+#: importwizard/importimapsettingfinishpage.cpp:23
 #, fuzzy, kde-format
 #| msgid "IMAP settings were imported:"
 msgctxt "@label:textbox"
 msgid "IMAP settings were imported:"
 msgstr "Imporditi IMAP seadistused:"
 
-#: importwizard/importimapsettingnofoundpage.cpp:20
+#: importwizard/importimapsettingnofoundpage.cpp:21
 #, fuzzy, kde-format
 #| msgid "No settings found to import."
 msgctxt "@label:textbox"
 msgid "No settings found to import."
 msgstr "Ei leitud seadistusi, mida importida"
 
-#: importwizard/importimapsettingprogresspage.cpp:69
-#: importwizard/importimapsettingprogresspage.cpp:86
+#: importwizard/importimapsettingprogresspage.cpp:70
+#: importwizard/importimapsettingprogresspage.cpp:87
 #, kde-format
 msgid "No settings found."
 msgstr "Seadistusi ei leitud."
 
-#: importwizard/importimapsettingprogresspage.cpp:94
+#: importwizard/importimapsettingprogresspage.cpp:95
 #, fuzzy, kde-format
 #| msgid "Import settings from %1..."
 msgid "Import settings from %1…"
 msgstr "Seadistuste import asukohast %1 ..."
 
-#: importwizard/importimapsettingprogresspage.cpp:96
+#: importwizard/importimapsettingprogresspage.cpp:97
 #, kde-format
 msgid "Import settings from %1 done"
 msgstr "Seadistuste import asukohast %1 tehtud"
 
-#: importwizard/importimapsettingsearchpage.cpp:21
+#: importwizard/importimapsettingsearchpage.cpp:22
 #, fuzzy, kde-format
 #| msgid ""
 #| "Please select the program from which you like to import IMAP settings:"
@@ -218,30 +218,35 @@ msgctxt "@info:shell"
 msgid "Lists the available options for user feedback"
 msgstr "Kasutaja tagasiside saadaolevate valikute loend"
 
-#: sieveeditorconfiguredialog.cpp:35
+#: sieveeditorconfiguredialog.cpp:39
 #, fuzzy, kde-format
 #| msgid "Wrap Text"
 msgctxt "@option:check"
 msgid "Wrap Text"
 msgstr "Teksti murdmine"
 
-#: sieveeditorconfiguredialog.cpp:38
+#: sieveeditorconfiguredialog.cpp:42
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure"
 msgstr "Seadistamine"
 
-#: sieveeditorconfiguredialog.cpp:52
+#: sieveeditorconfiguredialog.cpp:56
 #, kde-format
 msgid "Sieve Server"
 msgstr "Sieve server"
 
-#: sieveeditorconfiguredialog.cpp:66
+#: sieveeditorconfiguredialog.cpp:70
 #, kde-format
 msgid "Editor"
 msgstr "Redaktor"
 
-#: sieveeditorconfiguredialog.cpp:82
+#: sieveeditorconfiguredialog.cpp:79
+#, kde-format
+msgid "Accessibility"
+msgstr ""
+
+#: sieveeditorconfiguredialog.cpp:96
 #, kde-format
 msgid "User Feedback"
 msgstr "Kasutaja tagasiside"
@@ -271,6 +276,12 @@ msgstr "Kas eemaldada server \"%1\"?"
 msgctxt "@title:window"
 msgid "Remove Sieve Server"
 msgstr "Sieve serveri eemaldamine"
+
+#: sieveeditorconfigurespeechtotextwidget.cpp:21
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable Speech To Text"
+msgstr ""
 
 #: sieveeditoremptytabwidgetlabel.cpp:24
 #, kde-format
