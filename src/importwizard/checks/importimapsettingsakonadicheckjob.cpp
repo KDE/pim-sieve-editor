@@ -5,7 +5,7 @@
 */
 
 #include "importimapsettingsakonadicheckjob.h"
-#include "importimapsettingsakonadipassword.h"
+#include "abstractimapsettingspassword.h"
 #include "sieveeditor_debug.h"
 #include <KConfigGroup>
 #include <KLocalizedString>

@@ -17,9 +17,7 @@
 #include <QRegularExpression>
 #include <QUrlQuery>
 
-#include <qt6keychain/keychain.h>
 using namespace Qt::Literals::StringLiterals;
-using namespace QKeychain;
 
 QUrl SieveEditorUtil::SieveServerConfig::url() const
 {

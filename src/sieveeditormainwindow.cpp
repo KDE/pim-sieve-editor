@@ -52,7 +52,6 @@
 #ifdef Q_OS_UNIX
 #include <KSignalHandler>
 #include <csignal>
-#include <unistd.h>
 #endif
 #include <KWindowSystem>
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
