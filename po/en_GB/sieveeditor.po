@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:49+0000\n"
+"POT-Creation-Date: 2026-10-07 00:50+0000\n"
 "PO-Revision-Date: 2024-11-23 12:12+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -325,135 +325,135 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "Close script"
 
-#: sieveeditormainwindow.cpp:180
+#: sieveeditormainwindow.cpp:179
 #, kde-format
 msgid "Network is Up."
 msgstr "Network is Up."
 
-#: sieveeditormainwindow.cpp:182
+#: sieveeditormainwindow.cpp:181
 #, kde-format
 msgid "Network is Down."
 msgstr "Network is Down."
 
-#: sieveeditormainwindow.cpp:204
+#: sieveeditormainwindow.cpp:203
 #, kde-format
 msgid "Upload"
 msgstr "Upload"
 
-#: sieveeditormainwindow.cpp:207
+#: sieveeditormainwindow.cpp:206
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Add Sieve Server…"
 
-#: sieveeditormainwindow.cpp:211
+#: sieveeditormainwindow.cpp:210
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Delete Script"
 
-#: sieveeditormainwindow.cpp:217
+#: sieveeditormainwindow.cpp:216
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Create New Script…"
 
-#: sieveeditormainwindow.cpp:223
+#: sieveeditormainwindow.cpp:222
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Edit Script…"
 
-#: sieveeditormainwindow.cpp:228
+#: sieveeditormainwindow.cpp:227
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Deactivate Script"
 
-#: sieveeditormainwindow.cpp:233
+#: sieveeditormainwindow.cpp:232
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Refresh List"
 
-#: sieveeditormainwindow.cpp:239
+#: sieveeditormainwindow.cpp:238
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Go to Line…"
 
-#: sieveeditormainwindow.cpp:256
+#: sieveeditormainwindow.cpp:255
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "Import…"
 
-#: sieveeditormainwindow.cpp:262
+#: sieveeditormainwindow.cpp:261
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Share…"
 
-#: sieveeditormainwindow.cpp:270
+#: sieveeditormainwindow.cpp:269
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Check Spelling…"
 
-#: sieveeditormainwindow.cpp:276
+#: sieveeditormainwindow.cpp:275
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Check Syntax"
 
-#: sieveeditormainwindow.cpp:281
+#: sieveeditormainwindow.cpp:280
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Create Rules Graphically…"
 
-#: sieveeditormainwindow.cpp:286
+#: sieveeditormainwindow.cpp:285
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Comment"
 
-#: sieveeditormainwindow.cpp:291
+#: sieveeditormainwindow.cpp:290
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Uncomment"
 
-#: sieveeditormainwindow.cpp:319
+#: sieveeditormainwindow.cpp:318
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Bookmarks"
 
-#: sieveeditormainwindow.cpp:324
+#: sieveeditormainwindow.cpp:323
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Debug Sieve Script…"
 
-#: sieveeditormainwindow.cpp:329
+#: sieveeditormainwindow.cpp:328
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Wordwrap"
 
-#: sieveeditormainwindow.cpp:351
+#: sieveeditormainwindow.cpp:350
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "Import IMAP Settings…"
 
-#: sieveeditormainwindow.cpp:376
+#: sieveeditormainwindow.cpp:375
 #, kde-format
 msgid "What's new"
 msgstr ""
 
-#: sieveeditormainwindow.cpp:400
+#: sieveeditormainwindow.cpp:399
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
@@ -462,7 +462,7 @@ msgstr ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 
-#: sieveeditormainwindow.cpp:403
+#: sieveeditormainwindow.cpp:402
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"

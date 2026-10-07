@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:49+0000\n"
-"PO-Revision-Date: 2026-08-15 12:26+0200\n"
+"POT-Creation-Date: 2026-10-07 00:50+0000\n"
+"PO-Revision-Date: 2026-10-06 09:38+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -237,7 +237,7 @@ msgstr "Editor"
 #: sieveeditorconfiguredialog.cpp:79
 #, kde-format
 msgid "Accessibility"
-msgstr ""
+msgstr "Accessibilitat"
 
 #: sieveeditorconfiguredialog.cpp:96
 #, kde-format
@@ -271,7 +271,7 @@ msgstr "Elimina el servidor de «Sieve»"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable Speech To Text"
-msgstr ""
+msgstr "Activa la veu a text"
 
 #: sieveeditoremptytabwidgetlabel.cpp:24
 #, kde-format
@@ -328,135 +328,135 @@ msgctxt "@title:window"
 msgid "Close script"
 msgstr "Tanca l'script"
 
-#: sieveeditormainwindow.cpp:180
+#: sieveeditormainwindow.cpp:179
 #, kde-format
 msgid "Network is Up."
 msgstr "La xarxa està activa."
 
-#: sieveeditormainwindow.cpp:182
+#: sieveeditormainwindow.cpp:181
 #, kde-format
 msgid "Network is Down."
 msgstr "La xarxa està inactiva."
 
-#: sieveeditormainwindow.cpp:204
+#: sieveeditormainwindow.cpp:203
 #, kde-format
 msgid "Upload"
 msgstr "Pujada"
 
-#: sieveeditormainwindow.cpp:207
+#: sieveeditormainwindow.cpp:206
 #, kde-format
 msgctxt "@action"
 msgid "Add Sieve Server…"
 msgstr "Afegeix un servidor de «Sieve»…"
 
-#: sieveeditormainwindow.cpp:211
+#: sieveeditormainwindow.cpp:210
 #, kde-format
 msgctxt "@action"
 msgid "Delete Script"
 msgstr "Suprimeix l'script"
 
-#: sieveeditormainwindow.cpp:217
+#: sieveeditormainwindow.cpp:216
 #, kde-format
 msgctxt "@action"
 msgid "Create New Script…"
 msgstr "Crea un script nou…"
 
-#: sieveeditormainwindow.cpp:223
+#: sieveeditormainwindow.cpp:222
 #, kde-format
 msgctxt "@action"
 msgid "Edit Script…"
 msgstr "Edita un script…"
 
-#: sieveeditormainwindow.cpp:228
+#: sieveeditormainwindow.cpp:227
 #, kde-format
 msgctxt "@action"
 msgid "Deactivate Script"
 msgstr "Desactiva un script"
 
-#: sieveeditormainwindow.cpp:233
+#: sieveeditormainwindow.cpp:232
 #, kde-format
 msgctxt "@action"
 msgid "Refresh List"
 msgstr "Actualitza la llista"
 
-#: sieveeditormainwindow.cpp:239
+#: sieveeditormainwindow.cpp:238
 #, kde-format
 msgctxt "@action"
 msgid "Go to Line…"
 msgstr "Ves a la línia…"
 
-#: sieveeditormainwindow.cpp:256
+#: sieveeditormainwindow.cpp:255
 #, kde-format
 msgctxt "@action"
 msgid "Import…"
 msgstr "Importa…"
 
-#: sieveeditormainwindow.cpp:262
+#: sieveeditormainwindow.cpp:261
 #, kde-format
 msgctxt "@action"
 msgid "Share…"
 msgstr "Comparteix…"
 
-#: sieveeditormainwindow.cpp:270
+#: sieveeditormainwindow.cpp:269
 #, kde-format
 msgctxt "@action"
 msgid "Check Spelling…"
 msgstr "Verifica l'ortografia…"
 
-#: sieveeditormainwindow.cpp:276
+#: sieveeditormainwindow.cpp:275
 #, kde-format
 msgctxt "@action"
 msgid "Check Syntax"
 msgstr "Comprova la sintaxi"
 
-#: sieveeditormainwindow.cpp:281
+#: sieveeditormainwindow.cpp:280
 #, kde-format
 msgctxt "@action"
 msgid "Create Rules Graphically…"
 msgstr "Crea regles gràficament…"
 
-#: sieveeditormainwindow.cpp:286
+#: sieveeditormainwindow.cpp:285
 #, kde-format
 msgctxt "@action"
 msgid "Comment"
 msgstr "Comenta"
 
-#: sieveeditormainwindow.cpp:291
+#: sieveeditormainwindow.cpp:290
 #, kde-format
 msgctxt "@action"
 msgid "Uncomment"
 msgstr "Descomenta"
 
-#: sieveeditormainwindow.cpp:319
+#: sieveeditormainwindow.cpp:318
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Bookmarks"
 msgstr "&Punts"
 
-#: sieveeditormainwindow.cpp:324
+#: sieveeditormainwindow.cpp:323
 #, kde-format
 msgctxt "@action"
 msgid "Debug Sieve Script…"
 msgstr "Depura l'script de «Sieve»…"
 
-#: sieveeditormainwindow.cpp:329
+#: sieveeditormainwindow.cpp:328
 #, kde-format
 msgctxt "@action"
 msgid "Wordwrap"
 msgstr "Talla les paraules"
 
-#: sieveeditormainwindow.cpp:351
+#: sieveeditormainwindow.cpp:350
 #, kde-format
 msgctxt "@action"
 msgid "Import IMAP Settings…"
 msgstr "Importa la configuració de l'IMAP…"
 
-#: sieveeditormainwindow.cpp:376
+#: sieveeditormainwindow.cpp:375
 #, kde-format
 msgid "What's new"
 msgstr "Què hi ha de nou"
 
-#: sieveeditormainwindow.cpp:400
+#: sieveeditormainwindow.cpp:399
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
@@ -465,7 +465,7 @@ msgstr ""
 "<qt>Això ocultarà completament la barra de menús. La podeu tornar a mostrar "
 "prement %1.</qt>"
 
-#: sieveeditormainwindow.cpp:403
+#: sieveeditormainwindow.cpp:402
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide menu bar"
