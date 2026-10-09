@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-07 00:50+0000\n"
-"PO-Revision-Date: 2026-08-16 09:00+0200\n"
+"PO-Revision-Date: 2026-10-07 10:10+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 26.07.90\n"
+"X-Generator: Lokalize 26.08.1\n"
 "X-Text-Markup: kde4\n"
 
 #, kde-format
@@ -245,7 +245,7 @@ msgstr "Éditeur"
 #: sieveeditorconfiguredialog.cpp:79
 #, kde-format
 msgid "Accessibility"
-msgstr ""
+msgstr "Accessibilité"
 
 #: sieveeditorconfiguredialog.cpp:96
 #, kde-format
@@ -279,7 +279,7 @@ msgstr "Enlever le serveur Sieve"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable Speech To Text"
-msgstr ""
+msgstr "Activer la reconnaissance vocale"
 
 #: sieveeditoremptytabwidgetlabel.cpp:24
 #, kde-format
