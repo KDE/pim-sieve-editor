@@ -6,7 +6,7 @@ Dependencies:
    'require':
     'frameworks/extra-cmake-modules': 'Frameworks/6.24'
     'frameworks/kuserfeedback': 'Frameworks/6.24'
-    'pim/kimap': '@same'
+    'frameworks/kimap': '@same'
     'pim/kmailtransport': '@same'
     'pim/libksieve': '@same'
     'pim/pimcommon': '@same'
@@ -14,7 +14,7 @@ Dependencies:
     'third-party/qtkeychain': '@latest-kf6'
     'frameworks/kiconthemes': 'Frameworks/6.24'
     'frameworks/kwindowsystem': 'Frameworks/6.24'
-    'libraries/ktextaddons': '@latest-kf6'
+    'libraries/ktextaddons': '1.9'
 
 Options:
  require-passing-tests-on: ['@all']
