@@ -6,7 +6,7 @@ Dependencies:
    'require':
     'frameworks/extra-cmake-modules': 'Frameworks/6.24'
     'frameworks/kuserfeedback': 'Frameworks/6.24'
-    'frameworks/kimap': '@same'
+    'pim/kimap': '@same'
     'pim/kmailtransport': '@same'
     'pim/libksieve': '@same'
     'pim/pimcommon': '@same'
