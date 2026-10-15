@@ -23,7 +23,6 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
-#include <QWindow>
 #include <kdsingleapplication.h>
 #if !defined(Q_OS_WIN) && !defined(Q_OS_MACOS) && !defined(Q_OS_HAIKU)
 #include <private/qtx11extras_p.h>
@@ -32,6 +31,7 @@
 
 #include <QApplication>
 #include <QCommandLineParser>
+#include <QIcon>
 #include <QTextStream>
 #if WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"

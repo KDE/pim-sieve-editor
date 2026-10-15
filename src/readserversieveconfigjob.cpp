@@ -8,9 +8,10 @@
 
 #include "sieveeditor_debug.h"
 
-#include <KConfig>
+#include <KConfigGroup>
 #include <KSharedConfig>
 #include <QRegularExpression>
+#include <qt6keychain/keychain.h>
 
 using namespace QKeychain;
 

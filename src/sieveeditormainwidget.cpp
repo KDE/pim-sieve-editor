@@ -10,7 +10,6 @@
 #include "sieveeditorpagewidget.h"
 #include "sieveeditorscriptmanagerwidget.h"
 #include "sieveeditortabwidget.h"
-#include <KSieveUi/SieveEditor>
 #include <TextAutoGenerateText/TextAutoGenerateManager>
 
 #include <KColorScheme>
@@ -18,7 +17,6 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KSharedConfig>
-#include <QTabWidget>
 
 #include <QEvent>
 #include <QStackedWidget>

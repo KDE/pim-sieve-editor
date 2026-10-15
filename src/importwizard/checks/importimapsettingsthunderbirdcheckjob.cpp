@@ -11,7 +11,9 @@
 #include <KLocalizedString>
 #include <QDir>
 #include <QFile>
+#include <QFileInfo>
 #include <QRegularExpression>
+#include <QTextStream>
 using namespace Qt::Literals::StringLiterals;
 
 LIBSIEVEEDITOR_EXPORT QString sieveeditor_thunderbird_default_toplevel_path = QDir::homePath() + "/.thunderbird/"_L1;

@@ -9,6 +9,7 @@
 #include "sieveeditorutil.h"
 
 #include "libsieveeditor_private_export.h"
+#include <QObject>
 class LIBSIEVEEDITOR_TESTS_EXPORT AbstractImapSettingsPassword : public QObject
 {
     Q_OBJECT

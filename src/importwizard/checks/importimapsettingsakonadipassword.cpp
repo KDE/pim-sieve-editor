@@ -6,6 +6,7 @@
 
 #include "importimapsettingsakonadipassword.h"
 #include "sieveeditor_debug.h"
+#include <qt6keychain/keychain.h>
 
 using namespace QKeychain;
 

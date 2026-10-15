@@ -8,7 +8,10 @@
 
 #include "abstractimapsettingspassword.h"
 
-#include <qt6keychain/keychain.h>
+namespace QKeychain
+{
+class Job;
+}
 
 class ImportImapSettingsAkonadiPassword : public AbstractImapSettingsPassword
 {

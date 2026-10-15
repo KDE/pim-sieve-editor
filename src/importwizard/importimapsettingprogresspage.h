@@ -7,12 +7,16 @@
 #pragma once
 
 #include "libsieveeditor_private_export.h"
-#include "sieveeditorutil.h"
 #include <QMap>
+#include <QStringList>
 #include <QWidget>
 
 class QTextEdit;
 class AbstractImapSettingsCheckJob;
+namespace SieveEditorUtil
+{
+struct SieveServerConfig;
+}
 class LIBSIEVEEDITOR_TESTS_EXPORT ImportImapSettingProgressPage : public QWidget
 {
     Q_OBJECT

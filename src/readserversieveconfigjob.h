@@ -8,7 +8,10 @@
 
 #include "sieveeditorutil.h"
 #include <QObject>
-#include <qt6keychain/keychain.h>
+namespace QKeychain
+{
+class Job;
+}
 class ReadServerSieveConfigJob : public QObject
 {
     Q_OBJECT

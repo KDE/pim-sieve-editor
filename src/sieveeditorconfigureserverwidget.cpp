@@ -5,7 +5,6 @@
 */
 
 #include "sieveeditorconfigureserverwidget.h"
-#include "serversievesettingsdialog.h"
 #include "ui_sieveeditorconfigureserverwidget.h"
 
 #include <KLocalizedString>

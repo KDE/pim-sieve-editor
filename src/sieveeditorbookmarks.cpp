@@ -7,6 +7,7 @@
 #include "sieveeditorbookmarks.h"
 #include "sieveeditormainwindow.h"
 #include <KActionCollection>
+#include <KBookmarkManager>
 #include <KBookmarkMenu>
 #include <QDir>
 #include <QMenu>

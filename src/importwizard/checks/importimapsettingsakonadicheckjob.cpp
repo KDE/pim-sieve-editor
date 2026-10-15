@@ -11,7 +11,7 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <QDir>
-#include <QFile>
+#include <QFileInfo>
 #include <QStandardPaths>
 using namespace Qt::Literals::StringLiterals;
 ImportImapSettingsAkonadiCheckJob::ImportImapSettingsAkonadiCheckJob(QObject *parent)

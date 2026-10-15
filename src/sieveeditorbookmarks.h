@@ -6,11 +6,11 @@
 
 #pragma once
 
-#include <KBookmarkManager>
 #include <KBookmarkOwner>
 
 #include <QObject>
 
+class KBookmarkManager;
 class KBookmarkMenu;
 class QMenu;
 class KActionCollection;

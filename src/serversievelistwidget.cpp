@@ -9,7 +9,6 @@
 #include "serversievesettingsdialog.h"
 #include <KLocalizedString>
 
-#include <QListWidgetItem>
 #include <QPointer>
 
 #include <qt6keychain/keychain.h>

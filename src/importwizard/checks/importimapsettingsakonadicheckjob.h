@@ -8,6 +8,7 @@
 
 #include "abstractimapsettingscheckjob.h"
 #include "libsieveeditor_private_export.h"
+#include <QMultiMap>
 class LIBSIEVEEDITOR_TESTS_EXPORT ImportImapSettingsAkonadiCheckJob : public AbstractImapSettingsCheckJob
 {
     Q_OBJECT

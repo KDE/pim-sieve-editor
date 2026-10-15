@@ -14,10 +14,6 @@ namespace KManageSieve
 {
 class SieveJob;
 }
-namespace KSieveUi
-{
-class SieveEditorWidget;
-}
 #if HAVE_TEXT_AUTOGENERATE_TEXT
 namespace TextAutoGenerateText
 {

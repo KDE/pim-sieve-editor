@@ -8,6 +8,9 @@
 
 #include "abstractimapsettingscheckjob.h"
 #include "libsieveeditor_private_export.h"
+#include <QHash>
+#include <QMap>
+#include <QVariant>
 class LIBSIEVEEDITOR_TESTS_EXPORT ImportImapSettingsThunderbirdCheckJob : public AbstractImapSettingsCheckJob
 {
     Q_OBJECT

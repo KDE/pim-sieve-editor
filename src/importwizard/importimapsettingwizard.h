@@ -8,6 +8,7 @@
 
 #include "libsieveeditor_export.h"
 #include <KAssistantDialog>
+#include <QMap>
 
 class ImportImapSettingSearchPage;
 class ImportImapSettingNoFoundPage;

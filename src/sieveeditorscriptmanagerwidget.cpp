@@ -8,7 +8,6 @@
 #include "sieveeditormanagesievewidget.h"
 
 #include <QHBoxLayout>
-#include <QTreeWidget>
 
 SieveEditorScriptManagerWidget::SieveEditorScriptManagerWidget(QWidget *parent)
     : QWidget(parent)

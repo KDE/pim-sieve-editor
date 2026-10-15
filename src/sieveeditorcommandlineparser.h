@@ -7,6 +7,7 @@
 #include "config-pim-sieve-editor.h"
 #include "libsieveeditor_export.h"
 #include <QString>
+#include <cstdint>
 class QCommandLineParser;
 class LIBSIEVEEDITOR_EXPORT SieveEditorCommandLineParser
 {

@@ -23,7 +23,7 @@
 
 #include <QCheckBox>
 #include <QDialogButtonBox>
-#include <QPushButton>
+#include <QIcon>
 #include <QVBoxLayout>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
 

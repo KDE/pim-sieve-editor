@@ -8,6 +8,7 @@
 
 #include "libsieveeditor_export.h"
 #include "libsieveeditor_private_export.h"
+#include <KSharedConfig>
 #include <KSieveCore/SieveImapAccountSettings>
 #include <MailTransport/Transport>
 #include <QString>

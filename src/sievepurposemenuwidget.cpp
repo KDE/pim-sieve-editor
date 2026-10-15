@@ -5,7 +5,6 @@
 */
 #include "sievepurposemenuwidget.h"
 #include "sieveeditormainwidget.h"
-#include <KSieveUi/SieveEditorWidget>
 
 SievePurposeMenuWidget::SievePurposeMenuWidget(QWidget *parentWidget, QObject *parent)
     : PimCommon::PurposeMenuWidget(parentWidget, parent)

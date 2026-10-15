@@ -35,6 +35,7 @@
 #include <KColorSchemeManager>
 #include <QAction>
 #include <QCloseEvent>
+#include <QDate>
 #include <QFontDatabase>
 #include <QIcon>
 #include <QLabel>
@@ -46,12 +47,12 @@
 #if WITH_KUSERFEEDBACK
 #include "userfeedback/userfeedbackmanager.h"
 #include <KUserFeedback/NotificationPopup>
-#include <KUserFeedback/Provider>
 #endif
 // signal handler for SIGINT & SIGTERM
 #ifdef Q_OS_UNIX
 #include <KSignalHandler>
 #include <csignal>
+#include <cstdio>
 #endif
 #include <KWindowSystem>
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
