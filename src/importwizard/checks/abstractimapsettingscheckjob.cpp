@@ -19,7 +19,13 @@ AbstractImapSettingsCheckJob::~AbstractImapSettingsCheckJob()
 
 void AbstractImapSettingsCheckJob::setImapSettingsPassword(AbstractImapSettingsPassword *passwordImporter)
 {
+    if (mPasswordImporter != passwordImporter) {
+        delete mPasswordImporter;
+    }
     mPasswordImporter = passwordImporter;
+    if (mPasswordImporter) {
+        mPasswordImporter->setParent(this);
+    }
 }
 
 void AbstractImapSettingsCheckJob::checkNoSettingsImported()

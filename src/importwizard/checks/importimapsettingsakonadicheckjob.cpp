@@ -164,8 +164,14 @@ QString ImportImapSettingsAkonadiCheckJob::name() const
 
 void ImportImapSettingsAkonadiCheckJob::setImapSettingsPassword(AbstractImapSettingsPassword *passwordImporter)
 {
+    if (mPasswordImporter != passwordImporter) {
+        delete mPasswordImporter;
+    }
     mPasswordImporter = passwordImporter;
-    connect(mPasswordImporter, &AbstractImapSettingsPassword::importPasswordDone, this, &ImportImapSettingsAkonadiCheckJob::slotImportNextServerSieveDone);
+    if (mPasswordImporter) {
+        mPasswordImporter->setParent(this);
+        connect(mPasswordImporter, &AbstractImapSettingsPassword::importPasswordDone, this, &ImportImapSettingsAkonadiCheckJob::slotImportNextServerSieveDone);
+    }
 }
 
 #include "moc_importimapsettingsakonadicheckjob.cpp"
