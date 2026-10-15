@@ -15,7 +15,7 @@
 
 namespace
 {
-static const char myServerSieveSettingsDialog[] = "ServerSieveSettingsDialog";
+const char myServerSieveSettingsDialog[] = "ServerSieveSettingsDialog";
 }
 
 ServerSieveSettingsDialog::ServerSieveSettingsDialog(QWidget *parent)

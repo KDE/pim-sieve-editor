@@ -27,7 +27,7 @@
 using namespace Qt::Literals::StringLiterals;
 namespace
 {
-static const char mySieveEditorMainWidgetConfigGroupName[] = "SieveEditorMainWidget";
+const char mySieveEditorMainWidgetConfigGroupName[] = "SieveEditorMainWidget";
 }
 SieveEditorMainWidget::SieveEditorMainWidget(KActionCollection *ac, QWidget *parent)
     : QSplitter(parent)

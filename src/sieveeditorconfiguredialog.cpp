@@ -31,7 +31,7 @@ using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
-static const char mySieveEditorConfigureDialog[] = "SieveEditorConfigureDialog";
+const char mySieveEditorConfigureDialog[] = "SieveEditorConfigureDialog";
 }
 
 SieveEditorConfigureDialog::SieveEditorConfigureDialog(QWidget *parent)
