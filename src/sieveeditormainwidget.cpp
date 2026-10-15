@@ -631,7 +631,7 @@ void SieveEditorMainWidget::addNewScript(const QString &title)
     mScriptManagerWidget->addNewScript(title);
 }
 
-void SieveEditorMainWidget::slotTabCloseRequested(int index)
+bool SieveEditorMainWidget::slotTabCloseRequested(int index)
 {
     auto page = qobject_cast<SieveEditorPageWidget *>(mTabWidget->widget(index));
     if (page) {
@@ -644,22 +644,25 @@ void SieveEditorMainWidget::slotTabCloseRequested(int index)
                                                                      KStandardGuiItem::cancel());
             if (result == KMessageBox::ButtonCode::PrimaryAction) {
                 if (page->uploadScriptAndCloseTab()) {
-                    return;
+                    return true;
                 }
             } else if (result == KMessageBox::Cancel) {
-                return;
+                return false;
             }
         }
         mTabWidget->removeTab(index);
         delete page;
     }
     updateStackedWidget();
+    return true;
 }
 
 void SieveEditorMainWidget::slotTabCloseAllRequested()
 {
     for (int i = mTabWidget->count() - 1; i >= 0; --i) {
-        slotTabCloseRequested(i);
+        if (!slotTabCloseRequested(i)) {
+            break;
+        }
     }
 }
 
@@ -669,7 +672,9 @@ void SieveEditorMainWidget::slotTabRemoveAllExclude(int index)
         if (i == index) {
             continue;
         }
-        slotTabCloseRequested(i);
+        if (!slotTabCloseRequested(i)) {
+            break;
+        }
     }
 }
 

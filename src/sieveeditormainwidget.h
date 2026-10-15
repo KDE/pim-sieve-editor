@@ -105,7 +105,7 @@ private:
     void slotScriptModified(bool modified, SieveEditorPageWidget *page);
     void slotGeneralPaletteChanged();
     void updatePaletteColor();
-    void slotTabCloseRequested(int index);
+    [[nodiscard]] bool slotTabCloseRequested(int index);
     void slotTabRemoveAllExclude(int index);
     void slotTabCloseAllRequested();
     void updateStackedWidget();
