@@ -25,7 +25,6 @@ ImportImapSettingFinishPage::ImportImapSettingFinishPage(QWidget *parent)
     mainlayout->addWidget(label);
 
     mTextEdit->setObjectName("textedit"_L1);
-    mTextEdit->setAcceptRichText(true);
     mTextEdit->setReadOnly(true);
     mainlayout->addWidget(mTextEdit);
 }
