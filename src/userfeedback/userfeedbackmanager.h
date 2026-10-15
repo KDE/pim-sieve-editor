@@ -7,6 +7,9 @@
 #pragma once
 
 #include "libsieveeditor_export.h"
+
+#include <QtClassHelperMacros>
+
 namespace KUserFeedback
 {
 class Provider;
