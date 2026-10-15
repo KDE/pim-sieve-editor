@@ -22,4 +22,5 @@ public:
 private:
     UserFeedBackManager();
     KUserFeedback::Provider *const mUserFeedbackProvider;
+    Q_DISABLE_COPY_MOVE(UserFeedBackManager)
 };
