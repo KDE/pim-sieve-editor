@@ -231,7 +231,7 @@ msgstr "Editor"
 #: sieveeditorconfiguredialog.cpp:79
 #, kde-format
 msgid "Accessibility"
-msgstr ""
+msgstr "Prístupnosť"
 
 #: sieveeditorconfiguredialog.cpp:96
 #, kde-format
@@ -265,7 +265,7 @@ msgstr "Odstrániť Sieve server"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable Speech To Text"
-msgstr ""
+msgstr "Povoliť prevod reči na text"
 
 #: sieveeditoremptytabwidgetlabel.cpp:24
 #, kde-format
