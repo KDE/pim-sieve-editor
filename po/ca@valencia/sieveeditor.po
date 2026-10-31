@@ -34,7 +34,7 @@ msgstr "antonibella5@yahoo.com"
 #: apps/main.cpp:54 apps/main.cpp:63
 #, kde-format
 msgid "Copyright © 2013-%1 sieveeditor authors"
-msgstr "Copyright © 2013-%1, els autors de «sieveeditor»"
+msgstr "Drets d'autoria © 2013-%1, els autors de «sieveeditor»"
 
 #: apps/main.cpp:59
 #, kde-format
