@@ -3,13 +3,13 @@
 #
 # Balázs Úr <urbalazs@gmail.com>, 2014.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2020, 2021.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kristof Kiszel <kiszel.kristof@gmail.com>
+# SPDX-FileCopyrightText: 2021-2026 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-18 00:44+0000\n"
-"PO-Revision-Date: 2025-11-07 21:27+0100\n"
+"PO-Revision-Date: 2026-11-01 22:35+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -121,11 +121,9 @@ msgid "Finish"
 msgstr "Befejezés"
 
 #: internaltoolsjob/addnewscripttoolinternaljob.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Create New Script…"
+#, kde-format
 msgid "Create New Sieve Script named \"%1\""
-msgstr "Új parancsfájl létrehozása…"
+msgstr "Új Sieve szkript létrehozása „%1” néven"
 
 #: serversievelistwidget.cpp:76
 #, kde-format
