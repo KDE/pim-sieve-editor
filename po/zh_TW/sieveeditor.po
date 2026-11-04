@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:49+0000\n"
-"PO-Revision-Date: 2026-09-15 14:06+0900\n"
+"PO-Revision-Date: 2026-11-03 19:57+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -232,7 +232,7 @@ msgstr "編輯器"
 #: sieveeditorconfiguredialog.cpp:79
 #, kde-format
 msgid "Accessibility"
-msgstr ""
+msgstr "無障礙輔助"
 
 #: sieveeditorconfiguredialog.cpp:96
 #, kde-format
@@ -266,7 +266,7 @@ msgstr "移除過濾伺服器"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable Speech To Text"
-msgstr ""
+msgstr "啟用語音轉文字"
 
 #: sieveeditoremptytabwidgetlabel.cpp:24
 #, kde-format
