@@ -197,7 +197,7 @@
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/frameworks/ktexttemplate.git",
-                    "tag": "v6.0.0"
+                    "tag": "v6.30.0"
                 }
             ],
             "config-opts": [
