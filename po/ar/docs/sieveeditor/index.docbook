@@ -1,0 +1,257 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY i18n-kapplication "<application
+>محرّر الغربال</application
+>">
+  <!ENTITY kappname "&i18n-kapplication;">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Arabic "INCLUDE">
+]>
+
+<book id="sieveeditor" lang="&language;">
+
+<bookinfo id="sieveeditorinfo">
+
+<title
+>دليل محرّر الغربال</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>لوران مونتال</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2016-04-14</date>
+<releaseinfo
+>تطبيقات 16.04</releaseinfo>
+
+<abstract>
+<para
+>&i18n-kapplication; هو محرر لنصوص Sieve المستخدمة لتصفية البريد الإلكتروني على خادم بريد. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>غربال</keyword>
+</keywordset>
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>مقدمة</title>
+<para
+>&i18n-kapplication; هو محرر لنصوص <ulink url="https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)"
+>Sieve</ulink
+> المستخدمة لتصفية البريد الإلكتروني على خادم بريد.</para>
+
+<sect1 id="using-kapp">
+<title
+>استخدام محرّر الغربال</title>
+
+<para
+>يوفر &i18n-kapplication; واجهة مستخدم رسومية لأداء هذه المهام:</para>
+
+<itemizedlist>
+<listitem
+><para
+>إدارة خوادم Sieve الخاصة بك</para
+></listitem>
+<listitem
+><para
+>رفع النصوص واستيرادها وإلغاء تنشيطها، تحديث القائمة بالنصوص</para
+></listitem>
+<listitem
+><para
+>إنشاء وتحرير نصوص Sieve</para
+></listitem>
+<listitem
+><para
+>استيراد النصوص ومشاركتها</para
+></listitem>
+<listitem
+><para
+>التحقق من بناء النص، التوليد الآلي للنصوص وتنقيحها</para
+></listitem>
+</itemizedlist>
+
+<para
+>يمكن استخدام &i18n-kapplication; بشكل مستقل عن Akonadi أو &kmail;، تحتاج فقط إلى خادم بريد يدعم نصوص Sieve.</para>
+
+<para
+>في &plasma-desktop; تُخزَّن كلمات المرور في &kwallet5;</para>
+
+<sect2 id="first-start">
+<title
+>التشغيل الأول</title>
+<para
+>عند أول تشغيل لـ &i18n-kapplication; يُعرض حوار تهيئة الخادم.</para>
+<screenshot>
+<screeninfo
+>ضبط الخادم</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="first-start.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>ضبط الخادم</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+<para
+>في هذا الحوار يمكنك إضافة خوادم البريد الخاصة بك وتعديلها وإزالتها.</para>
+<para
+>لاحقًا يمكنك استخدام <menuchoice
+><guimenu
+>ملف</guimenu
+><guimenuitem
+>أضف خادمًا</guimenuitem
+></menuchoice
+> أو حوار التهيئة لهذه المهام.</para>
+<para
+>عند التشغيل التالي، يجلب &i18n-kapplication; آليًا جميع النصوص المتاحة من الخوادم.</para>
+</sect2>
+
+<sect2 id="script-edit">
+<title
+>تحرير النص</title>
+<para
+>يدعم المحرر الإكمال التلقائي وتمييز التركيب.</para>
+<screenshot>
+<screeninfo
+>تحرير النص</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-edit.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>تحرير النص</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="script-tools">
+<title
+>أدوات النص</title>
+
+<para
+>تمكنك الإجراءات في قائمة <guimenu
+>أدوات</guimenu
+> من التحقق من بناء نصوصك، والتوليد الآلي للنصوص وتنقيحها.</para>
+
+<screenshot>
+<screeninfo
+>توليد النصوص آليًا</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-tools.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>توليد النصوص آليًا</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="script-help">
+<title
+>مساعدة مدمجة</title>
+
+<para
+>يمكنك استخدام دعم المساعدة المدمجة والنقر بزر الفأرة الأيمن على كلمة رئيسية من لغة Sieve. ثم يُنزَّل القسم المقابل من التوثيق من الإنترنت ويُعرض في لسان <guilabel
+>مساعدة</guilabel
+>.</para>
+<screenshot>
+<screeninfo
+>مساعدة مدمجة</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="script-help.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase
+>مساعدة مدمجة</phrase>
+          </textobject>
+        </mediaobject>
+</screenshot>
+</sect2>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+
+<title
+>الحقوق والترخيص</title>
+
+<para
+>&i18n-kapplication;</para>
+<para
+>حقوق نشر البرنامج 2013-2017 &Laurent.Montel; &Laurent.Montel.mail; </para>
+<para
+>حقوق ملكية التوثيق © لمؤلفه &Laurent.Montel; &Laurent.Montel.mail; </para>
+
+<para
+>الترجمة: زايد السعيدي <email
+>zayed.alsaidi@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->
