@@ -164,6 +164,8 @@ target_link_libraries(
         KPim6::KManageSieve
         KF6::WindowSystem
         ${libsieveeditor_userfeedback_LIB}
+        qt6keychain
+        KF6::TextAddonsWidgets
 )
 
 if(TARGET KF6::TextAutoGenerateText)
@@ -179,10 +181,6 @@ if(HAVE_SPEECH_TO_TEXT)
     )
     target_link_libraries(libsieveeditor PRIVATE KF6::TextSpeechToText)
 endif()
-
-target_link_libraries(libsieveeditor PRIVATE qt6keychain)
-
-target_link_libraries(libsieveeditor PRIVATE KF6::TextAddonsWidgets)
 
 set_target_properties(
     libsieveeditor
