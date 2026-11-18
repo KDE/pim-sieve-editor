@@ -49,6 +49,13 @@
   <name xml:lang="zh-TW">篩選器編輯器</name>
   <url type="homepage">https://kde.org</url>
   <launchable type="desktop-id">org.kde.sieveeditor.desktop</launchable>
+  <keywords>
+    <keyword translate="no">Sieve</keyword>
+    <keyword translate="no">ManageSieve</keyword>
+    <keyword>email filter</keyword>
+    <keyword>mail</keyword>
+    <keyword>script</keyword>
+  </keywords>
   <summary>Editor for email filter Sieve scripts</summary>
   <summary xml:lang="ar">محرر سكربتات ترشيح عناوين البريد الإلكتروني</summary>
   <summary xml:lang="az">E-poçtların süzgəcləmə skriptləri üçün redaktor</summary>
