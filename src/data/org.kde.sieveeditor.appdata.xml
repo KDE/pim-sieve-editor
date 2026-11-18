@@ -146,6 +146,10 @@
   <provides>
     <binary>sieveeditor</binary>
   </provides>
+  <branding>
+    <color type="primary" scheme_preference="light">#cdecfc</color>
+    <color type="primary" scheme_preference="dark">#135b8a</color>
+  </branding>
   <screenshots>
     <screenshot type="default">
       <image>https://cdn.kde.org/screenshots/sieveeditor/sieveeditor.png</image>
