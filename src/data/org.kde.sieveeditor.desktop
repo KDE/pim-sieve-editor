@@ -141,6 +141,7 @@ Comment[uk]=Редагувати фільтри IMAP
 Comment[zh_CN]=编辑 IMAP 过滤器
 Comment[zh_TW]=編輯 IMAP 篩選器
 Categories=Qt;KDE;Office;Network;X-KDE-Sieve;
+Keywords=Sieve;ManageSieve;email filter;mail;script;
 InitialPreference=10
 SingleMainWindow=true
 Version=1.5
