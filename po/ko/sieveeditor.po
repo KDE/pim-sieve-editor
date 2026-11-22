@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-08 02:59+0000\n"
-"PO-Revision-Date: 2026-09-29 00:19+0200\n"
+"PO-Revision-Date: 2026-11-22 00:35+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -232,7 +232,7 @@ msgstr "편집기"
 #: sieveeditorconfiguredialog.cpp:79
 #, kde-format
 msgid "Accessibility"
-msgstr ""
+msgstr "접근성"
 
 #: sieveeditorconfiguredialog.cpp:96
 #, kde-format
@@ -266,7 +266,7 @@ msgstr "원격 Sieve 서버"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable Speech To Text"
-msgstr ""
+msgstr "텍스트 읽어주기 활성화"
 
 #: sieveeditoremptytabwidgetlabel.cpp:24
 #, kde-format
