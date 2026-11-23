@@ -189,6 +189,7 @@
           <li xml:lang="sv">Rätta importguiden (i vissa fall avslutades den inte)</li>
           <li xml:lang="tr">İçe aktarma sihirbazı onarıldı (bazı durumlarda tamamlanamıyordu).</li>
           <li xml:lang="uk">Виправлено майстер імпортування (у деяких випадках він не міг завершити роботу)</li>
+          <li xml:lang="zh-CN">修复导入向导 (有些情况下向导无法完成)</li>
           <li xml:lang="zh-TW">修正匯入精靈（有些情況它會沒辦法結束）</li>
         </ul>
       </description>
