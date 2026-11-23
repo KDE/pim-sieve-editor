@@ -230,7 +230,7 @@ msgstr "编辑器"
 #: sieveeditorconfiguredialog.cpp:79
 #, kde-format
 msgid "Accessibility"
-msgstr ""
+msgstr "无障碍辅助"
 
 #: sieveeditorconfiguredialog.cpp:96
 #, kde-format
@@ -264,7 +264,7 @@ msgstr "移除 Sieve 服务器"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable Speech To Text"
-msgstr ""
+msgstr "启用语音到文本"
 
 #: sieveeditoremptytabwidgetlabel.cpp:24
 #, kde-format
@@ -799,13 +799,3 @@ msgstr "修改…"
 #, kde-format
 msgid "Remove"
 msgstr "移除"
-
-#~ msgctxt "@title:window"
-#~ msgid "Sieve Script Upload"
-#~ msgstr "上传过滤脚本"
-
-#~ msgid "Add AI Actions Support."
-#~ msgstr "添加 AI 操作支持。"
-
-#~ msgid "Add AI quick Ask support."
-#~ msgstr "添加 AI 快速提问支持。"
