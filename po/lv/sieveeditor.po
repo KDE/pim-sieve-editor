@@ -1,14 +1,14 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the pim-sieve-editor package.
 #
-# SPDX-FileCopyrightText: 2025 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2025-2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: pim-sieve-editor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-08 02:59+0000\n"
-"PO-Revision-Date: 2025-11-11 18:59+0200\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2026-11-24 14:49+0200\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -112,19 +112,17 @@ msgstr "Pabeigts"
 #: internaltoolsjob/addnewscripttoolinternaljob.cpp:34
 #, kde-format
 msgid "Impossible to create a new sieve script: invalid arguments."
-msgstr ""
+msgstr "Nav iespējams izveidot jaunu „Sieve“ skriptu: nederīgi parametri."
 
 #: internaltoolsjob/addnewscripttoolinternaljob.cpp:39
 #, kde-format
 msgid "Impossible to create a new sieve script."
-msgstr ""
+msgstr "Nav iespējams izveidot jaunu „Sieve“ skriptu."
 
 #: internaltoolsjob/addnewscripttoolinternaljob.cpp:51
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Create New Script…"
+#, kde-format
 msgid "Create New Sieve Script named \"%1\""
-msgstr "Izveidot jaunu skriptu…"
+msgstr "Izveidot jaunu „Sieve“ skriptu ar nosaukumu „%1“"
 
 #: serversievelistwidget.cpp:76
 #, kde-format
@@ -235,7 +233,7 @@ msgstr "Redaktors"
 #: sieveeditorconfiguredialog.cpp:79
 #, kde-format
 msgid "Accessibility"
-msgstr ""
+msgstr "Piekļūstamība"
 
 #: sieveeditorconfiguredialog.cpp:96
 #, kde-format
@@ -269,7 +267,7 @@ msgstr "Noņemt „Sieve“ serveri"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable Speech To Text"
-msgstr ""
+msgstr "Ieslēgt runas pārvēršanu tekstā"
 
 #: sieveeditoremptytabwidgetlabel.cpp:24
 #, kde-format
