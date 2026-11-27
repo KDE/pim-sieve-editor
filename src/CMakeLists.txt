@@ -209,7 +209,7 @@ if(BUILD_TESTING)
     add_subdirectory(importwizard/tests)
 endif()
 
-install(FILES data/org.kde.sieveeditor.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+install(FILES data/org.kde.sieveeditor.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 ecm_qt_install_logging_categories(EXPORT SIEVEEDITOR FILE sieveeditor.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 add_subdirectory(apps)
