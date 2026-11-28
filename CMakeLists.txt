@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 cmake_minimum_required(VERSION 3.29)
-set(PIM_VERSION "6.8.90")
+set(PIM_VERSION "6.9.0")
 project(sieveeditor VERSION ${PIM_VERSION})
 
 option(USE_MOLD_LINKER "Use the mold linker when available (much faster link times)" ON)
@@ -12,10 +12,10 @@ if(USE_MOLD_LINKER AND NOT DEFINED CMAKE_LINKER_TYPE)
         set(CMAKE_LINKER_TYPE MOLD)
     endif()
 endif()
-set(RELEASE_SERVICE_VERSION "26.11.90")
+set(RELEASE_SERVICE_VERSION "26.12.0")
 
 # Update it for each release
-set(SIEVEEDITOR_RELEASE_VERSION_DATE "26.11.26") # yy.MM.dd
+set(SIEVEEDITOR_RELEASE_VERSION_DATE "26.12.10") # yy.MM.dd
 
 # Use true if stable version => we will check specific version
 set(SIEVEEDITOR_STABLE_VERSION true)
@@ -111,7 +111,7 @@ file(
 ecm_check_outbound_license(LICENSES GPL-2.0-only  FILES ${ALL_SOURCE_FILES})
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION rc)
+set(KDEPIM_DEV_VERSION)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
